@@ -1,0 +1,7871 @@
+fileFormatVersion: 2
+guid: 49d7580cc61ad4046aba1c04bfa28d85
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 1
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 63
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jim_afee_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3392
+        width: 36
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3ff165c7e786541aef60e9a2960ab5
+      internalID: -1728189704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 3392
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4b6234541454a40a3b4d74c1064512
+      internalID: -2099549119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 3392
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b702b120cf36fb46a598749c36e8980
+      internalID: -258516183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 3392
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b399e95b415a0574d93264df56c58530
+      internalID: -608637521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 3392
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95b0d3ac47c1c54cae828968c0d5420
+      internalID: 21696177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3392
+        width: 52
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87c4f27012b88546930d109f24b2579
+      internalID: -281773725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3392
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f0f5caa2d022045bd8e253248b88a8
+      internalID: -1330924092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3329
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f1af00470789f41b74a9d8b725f43e
+      internalID: 260473756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 3329
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f5b84187d98ef4caf98c5ff86814e8
+      internalID: 652796111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 3329
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8fde23f98fecb4f9900854b74a78f9
+      internalID: -935502776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 3329
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e9d1e246750174cbaa90492a3c5e70
+      internalID: -1228567651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3329
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f509266580e90854897d0dcad60223e7
+      internalID: -1282642378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 3329
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9ee378151e30f449ba83e3c5aac969
+      internalID: 1669360713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3329
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d96f0950e411743a8363fa7e7d32b2
+      internalID: 1242324680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3264
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3845b8b362571f4983fe2ea5a35372c
+      internalID: 478922209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 3264
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc61095d8af0524e9a1b6df5f20a7eb
+      internalID: 1772949387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3264
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e57a84ff05ab340ad1346182350dce
+      internalID: -942968856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 3264
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e561431e6243d0643831364fc8a79034
+      internalID: -255389813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 3264
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96c483a709cf6f47bce6857fd044d28
+      internalID: 2142614748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3264
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b75da1a6d0a1c44a4a55296747039f
+      internalID: 1190665290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3264
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8454739b2cffc33409c1c1716197e4b3
+      internalID: 952258396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3200
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb313ef55cd93e4288b396dda9d2c4a
+      internalID: -784726882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 3200
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d03262f4ee791419ecc78eb25908a6
+      internalID: 674592659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 3200
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78e8de503903e84ead6981b02c994d9
+      internalID: -2123399932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 3200
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97af8ad57290506448ea01d6053b88e0
+      internalID: 62535382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 3200
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb69f352261aec4dac07897817fd111
+      internalID: -2118795038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3200
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8c17a6c987c7f4f8c1bc233c0412bf
+      internalID: -1195536358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3200
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5d6cf55fadaff4cbcd6e9404ff1965
+      internalID: 1271872662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3136
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97c0c77a29b22945ac1cb385dc38381
+      internalID: -311930224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 3135
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fba05db50423c4c879cf775a1d3729
+      internalID: 1534300855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 3135
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3106949f5ed834794dc1435f192fd9
+      internalID: -1184159261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 3135
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c629fd7e8842b3b459c5fbf7d50caede
+      internalID: 1368211680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3135
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b42dfd3da1d19c48ba131746516a30f
+      internalID: -1407515045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 3135
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aae689900d151f4abbe769495250c38
+      internalID: 965325172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3135
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9245fa3ce042c4346a66edb89aa7e8b3
+      internalID: -245083764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_35
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 3135
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140e36a83ed48dc4291c6bea6ad7dfe2
+      internalID: 210662738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3072
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a61885f62d0eb4c8cc453913b0792b
+      internalID: 1705477026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3072
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129167cb2a1978a45b6d933a7dd238eb
+      internalID: -1596856535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3072
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90e17badaca32b43aee2b5cf062cffb
+      internalID: -375630156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 3072
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b7259fd6e7f9b42b0f3ac6ac9ed419
+      internalID: -383698045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_40
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 3072
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7362a58cb219e447a8998f31b54b0b7
+      internalID: -393615718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_41
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 3072
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df979b4e202175488c2321b7f8fe38e
+      internalID: -42595228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_42
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3072
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc1efce7db56d24b9d70ceeed0aabb1
+      internalID: 484722152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_43
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 3072
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f67ade1af5fc746bd5ed5c4375a0b6
+      internalID: -1804101929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_44
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3008
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7613741eb2ca14891ea75582d4db9c
+      internalID: 1916884172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3010
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba405b51ae11e742a3e25a9f789ee16
+      internalID: -152334482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3010
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa739e1455ab9f46ac221cf54a1dbf0
+      internalID: 179197282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_47
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 3010
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c68aa8f5f1227d4ea00d1d5351fe941
+      internalID: -59336768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_48
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3010
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20f0b39b77cd434eb624e8728f9e18b
+      internalID: 503451568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_49
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 3010
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e38eb05d62033c4084eb19d6fecd9dd
+      internalID: -1551513701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_50
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 3010
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bcbc839815c19479e9562e09f705ef
+      internalID: -584279131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_51
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 3010
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cae438a6d0d82549b7a83ca27499617
+      internalID: 1216324745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_52
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2944
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d2f983fda068b45bcd1239b181a521
+      internalID: -2067604284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_53
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2944
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccfb4259ad95e249b61a3acfb49a93d
+      internalID: 2021786230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_54
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2944
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee320f5ed8014e4190669dc1e5cc4bd
+      internalID: 166042983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_55
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2944
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04d2e36159c6de4e8355f8d4b19c1a2
+      internalID: 920246031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_56
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2944
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0562b2c0e9134504aa506b07220b076c
+      internalID: -826578994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_57
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2944
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88de3d7a4671abf48982d2b4629a691d
+      internalID: -791090030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_58
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 2944
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dc3e7ab99ecef40926b7515e25c15d
+      internalID: -1353554350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_59
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2944
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9645d06fa02c02449a5aa20c360ea718
+      internalID: 1362576721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_60
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2881
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cc38c8cc7556841b230254b995cc81
+      internalID: 1154536378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_61
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 2881
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634bf1f58ef23f84f90afa39d2f5036e
+      internalID: -939836576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_62
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2880
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770b5d60253c51b4b949eab608fdb435
+      internalID: 163480070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_63
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2879
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08d4084668ffb24c8090f18ed4efbaf
+      internalID: 448031195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_64
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2880
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8594b28f96d9844da8afcb99f8d7225
+      internalID: -745322098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_65
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2881
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db72d780d3099624eb77f2ed96e696f3
+      internalID: 1799641611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_66
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2880
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a03aa523552a54e9ae60b9acc9440b
+      internalID: -713372814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_67
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2879
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7fad2cd62daa04488cefae95f33c34
+      internalID: -927708184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_68
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 2880
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59b8a02ccadb1b4f9898b640400e011
+      internalID: -2099715143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_69
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2816
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6283e8901afe7ab45b10f5e37c6d17a9
+      internalID: 88550265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_70
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2816
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b724ed132abfe54429a6381db26ad723
+      internalID: 1473449156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_71
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 2817
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc474914d13a7b645badebfe27c0c7e9
+      internalID: 305850465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_72
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2817
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328687e9eade0254d9d1d794d913621d
+      internalID: 1686650549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_73
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2816
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37fc8d153910b445b674cfd2bee0a5a
+      internalID: 845015268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_74
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2816
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7023197431e40f547a39a5123b330539
+      internalID: -1151905936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_75
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2816
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b76a8bfe01c5943b6f55be665171c8
+      internalID: -275625495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_76
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2816
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e61fbc9aaab0d4db18eff79d1fc0cc
+      internalID: 592016177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_77
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 2816
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f72de4dd78dec4caaffd9ac0ee64ab
+      internalID: -776373067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_78
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2751
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7570579001ec344a8d575d7cc75adf3
+      internalID: -1205884171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_79
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2751
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cded263071db9489e0e7987d02f2e3
+      internalID: -1639895984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_80
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2751
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2175cbd46c215394da0cbd28ec4b53a7
+      internalID: -276530157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_81
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2751
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc29fd1940043d44191774cfce91fdcb
+      internalID: -421290567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_82
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2751
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e91aadcbda8874c883dbe21e4f445e
+      internalID: -1024132557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_83
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 2751
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de5b0fa13a3fe9429eab1d72b17f9e9
+      internalID: -1113259380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_84
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2751
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86dfa388342281458bfc09441d2cc40
+      internalID: 1820723814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_85
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2751
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9bb29069022284bab294d79b948ec8
+      internalID: 1568830809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_86
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2751
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbe2a8dc5fc811458fcdbf77d733c29
+      internalID: -1427269700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_87
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2687
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f04a98a83c9d924daeaeb660eb94f7a
+      internalID: 1453903132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_88
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2687
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e64e7115fb4c604e82d8cb28efc386c
+      internalID: -2027880932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_89
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2689
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dc53234ac009f489035eeb39f33e0d
+      internalID: -1916704965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_90
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2689
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030ab517dbfe5ee479a6d312296a8d82
+      internalID: -953458188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_91
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2687
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1631513ba18c0524ab88561efa4beb27
+      internalID: 1684831314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_92
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2687
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72430697a370f9e4c90319eab63dd2ee
+      internalID: -173394954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_93
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2687
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ae5d462e8c49440b60e44a0eaf1cba
+      internalID: -1499532812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_94
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2687
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac4ccb5eb91908498488a16ea1086e7
+      internalID: 251863006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_95
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2687
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cc248bfbf045544b9258ed68e8c83b
+      internalID: 1362274464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_96
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2623
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407b69419ad4ca64ca76b114ac0c4dc0
+      internalID: 1157784219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_97
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 2623
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1397ddb4e03a1f42aaa7021d38bf8a1
+      internalID: -1433720577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_98
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2623
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755d170a0828fce4b920d2eced28124a
+      internalID: -27257542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_99
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2623
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082e6837df4a27b419b7ec7f6a6c37f7
+      internalID: -998964466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_100
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2623
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee94d2c5618ec14a9d5dc11c983fd35
+      internalID: -893788339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_101
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2623
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaf0104ce2afee4893b22e419b69240
+      internalID: -1957449371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_102
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2559
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3989332338c5d4b9878790fa3dd9eb
+      internalID: 1698173740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_103
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2559
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca61e5bda9149b84aa245db4a75f4b8b
+      internalID: -921622770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_104
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2559
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06383fbb8ce4cd14382d2dd11bdf1137
+      internalID: -1662464706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_105
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2559
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae80ac18892d5349912e5b5c7b1e254
+      internalID: -2069629468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_106
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2559
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8bc447199e42546b20de1e888920d0
+      internalID: 1885844295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_107
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 2559
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf451f7bdbb8e942930b39fca7715aa
+      internalID: 591923506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_108
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2497
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7af78858ba3c894080b797fa89268b7
+      internalID: -2020548066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_109
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2497
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906cb341dd7e0eb49aa6a62dcc0e72e5
+      internalID: -216843935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_110
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2497
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a7a4efd41d894489362960da0f260b
+      internalID: 808383700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_111
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2497
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5998b063b858eb4438309f59d8669369
+      internalID: -918992112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_112
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2497
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f1a78ae9e9fcb4fad25338e53a336e
+      internalID: 1766233758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_113
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2497
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46cfe6b608c6fa4e9e251a06227c701
+      internalID: -671059959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_114
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2433
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15ff7ab66683874f9e6581ff0c0bcc3
+      internalID: -1043602442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_115
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2433
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf893b4f92cccc459017fe7108ec205
+      internalID: -611413344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2433
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92013bfd93347d48bc09b778667e4fd
+      internalID: 361276756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_117
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2433
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b37a6be8842c849a293ebecca4e77b
+      internalID: 1661507517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_118
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2433
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9796ed74617f5cb449a13f138f128b5c
+      internalID: -693868705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_119
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2433
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b96980c417a674498e8dc5441b9a375
+      internalID: -1133080136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_120
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 2368
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1adcaeb42958bcc44a81c8d596349160
+      internalID: 708056258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_121
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 2366
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8bcb7f444062a40b90832d1dc9d2cf
+      internalID: -567282865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_122
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2366
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cf4d112fc3c534188d18de3b186337
+      internalID: -1689726733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_123
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2366
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd20db6115fef0488c1d554a57fe510
+      internalID: -411396395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_124
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2366
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0375f310553d044a9542d357e72c560
+      internalID: 294103875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_125
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2366
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df73971154b7cb4eb23fc871f707f18
+      internalID: 491307154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_126
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2366
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c0316890ff3074893197b39cd85976
+      internalID: -6655300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_127
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2366
+        width: 35
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89e1f22a5151f648a7b33bf4b44ae00
+      internalID: 475154010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_128
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 2366
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4b1c24e9d9af341985c16a08c0d975
+      internalID: 893280323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_129
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2366
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9df8b26861f33e4da2b138f9343b3bb
+      internalID: -1919634167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_130
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2366
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a1d25b7e201424c8b9168879f8bda2
+      internalID: 1068975754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_131
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2366
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c10f7647be0324a9cb0d3c13c7be4e
+      internalID: -2143094728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_132
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 2366
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a201b84a83d034d9bf6543f21bdd6c
+      internalID: 1735562670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_133
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2304
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def7a26a53d91e84c899f17444747f98
+      internalID: -1746271164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_134
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2304
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b5d2b35687a464da3380de9b3fa1da
+      internalID: -1603642334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_135
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2304
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f51954d49054d4e871acf26960d574
+      internalID: 1326851892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_136
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2304
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42be0beb4606d84b982d2bb72448867
+      internalID: 2011752880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_137
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 2304
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b65a1ae1c96e6945b20e8f991990e65
+      internalID: 522797428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_138
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2304
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88aff3ff40f6edd47b5223cb311b223c
+      internalID: 630204508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_139
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2304
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794dbb39238fec54db8a6a3128d5c7c5
+      internalID: -1337349222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_140
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 2304
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3712773caf2ca419f376ed87f6763d
+      internalID: -1196914971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_141
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2304
+        width: 43
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709f099681082754d862a1f43190c2e5
+      internalID: 773012721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_142
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 2304
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b96382578097264faf76fb9e7654354
+      internalID: 1319395004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_143
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 2304
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8f3c0f30e82cf44b5de7cf15cfd48c
+      internalID: 1511592521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_144
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 2304
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cb3fe14bb9d2042a5bb42175a5c328
+      internalID: 899920109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_145
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 2304
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b7175df7176704f8903838515fa5b5
+      internalID: 1774355329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_146
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2240
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2068ec2f70b3f42bbeaf250a8e2ad4
+      internalID: 71198930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_147
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2240
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c2190f506bdad4598f3a48582db5e6
+      internalID: -1281330570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_148
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2240
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfc965a537c8ca4ca1049ceac0a0034
+      internalID: 1420656683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_149
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2240
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0b474b0044edb4393f74f96486293d
+      internalID: -1673036781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2240
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5ce199988e3084f8e534c294167722
+      internalID: 1406209114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_151
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2240
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdf18159f2a7d44a9511a88b0fd4711
+      internalID: -2013932958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_152
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2240
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a172425d3c19ea4aa894aceacd70cf2
+      internalID: 1223755166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_153
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2240
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b5f6c9104b2b441a409b9031155b94
+      internalID: -784318284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_154
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2240
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127e703e9ceed2b4a8700d7a7dcd04ef
+      internalID: -1105526703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_155
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2240
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5dc5763c7d28140828b7762973fa0a
+      internalID: 1457403451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_156
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2240
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5a575a520c0424b9a06e3703c6965b
+      internalID: 50588642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_157
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2240
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b47efe3cfd3d140a63ce7e4167e962
+      internalID: 653961225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_158
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2240
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732c3c1cfb1540442bc4996ee1c83967
+      internalID: -685339712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_159
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2176
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac77df5130d419e48b93aaee6ad0a150
+      internalID: 1860376791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_160
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 2176
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03641e4f791618d48907dcb10d39145c
+      internalID: 283961367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_161
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2176
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc5d5e6564ff794381077c115e91112
+      internalID: -689078446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_162
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2176
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2b824bbefa0434ca20ed2d793e0a2f
+      internalID: 2070167471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_163
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2176
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e138bceb7b0af354cb827e2bc5107455
+      internalID: 248932753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_164
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2176
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9ee3b6bcfc1644585097cada2a4742
+      internalID: 1363749394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_165
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2176
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8b7c86d96754c40a9c0486dd442287
+      internalID: 207789600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_166
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2176
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a002aca0ecc3b2849a1fb64990b5c672
+      internalID: -1655474824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_167
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2176
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8583c23e75ceadf47ba8bc1dc329c530
+      internalID: -1095890312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_168
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2176
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5065a1317c24e24c89e12338e7206c6
+      internalID: 1376757308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_169
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2176
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac980db0ad81a34a857253a8230f37a
+      internalID: -499859461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_170
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 2176
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3933b7a8111dcf4dbea73afb608d19c
+      internalID: 1930982401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_171
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2176
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ddf3d9ef000f345b784f17ee99f632
+      internalID: 1300083402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_172
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2112
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0289542dee9894442aeed1efab99da2c
+      internalID: -324773378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_173
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2112
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fe3d22446fbc94685f0bdb1a7210a8
+      internalID: 1354220756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_174
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2112
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a8b4d2538393740aca5537f9a7ce12
+      internalID: -660038207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_175
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2114
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a9f6b831260cc47ab1acbcee08a889
+      internalID: -169456432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_176
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2114
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3bf8aafa7e7d84b9fa38c9b900e687
+      internalID: -1881119522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_177
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2110
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2702cd6b6fa834b93aa42991c4f8bf
+      internalID: -666066420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_178
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2049
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6366c10042fd6f4c9b8a2d5e7a7089e
+      internalID: -414219474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_179
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2048
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28d67ef351ad57438cd397ba13f34a0
+      internalID: 614083661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_180
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2051
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8ca33ca902ecc4f935bb1e7dcb5340
+      internalID: -1352959725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_181
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2049
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489ae8734950b56468c8251f66987037
+      internalID: -194976120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_182
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2048
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34801f1faa060e749adb5cbc492acaa4
+      internalID: -2086582700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_183
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2051
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd74efe0870747488170a6fb04b255e
+      internalID: -2043448164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_184
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1984
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9977e2edaa9f5648aca9fbca86af66f
+      internalID: 1730918549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_185
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1984
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345185dcfd4f2834aa8df24f5252f023
+      internalID: 815790063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_186
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1920
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28050360dbbd2049aa68cb871eb4715
+      internalID: -532515663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_187
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1920
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a60c5255939b06478424e78dab800a1
+      internalID: 1160655614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_188
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1855
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93f3439f6011d54b992652e445b51e4
+      internalID: -577787426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_189
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1855
+        width: 35
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3aa871689bf764794ab961d8fd392e
+      internalID: -1557443677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_190
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1791
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1f69aa2663edc41872c4f320ab6ccf
+      internalID: 777259262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_191
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1791
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bccaba95ceb78140a300033b3a0659f
+      internalID: 1883563067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_192
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1727
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b24c1206ee41d499dbe0d88e2c29ab
+      internalID: 1356411894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_193
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1727
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961a454d6be6401489cd62d44e991d05
+      internalID: 1964907511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_194
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1729
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7373535e0bf6642b62f9d81597fcca
+      internalID: -318249272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_195
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1736
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3dd03b46e5047044883b4853e780b01
+      internalID: -577053134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_196
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1732
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2700cd6720f8843992934aec89cbff
+      internalID: -1401511531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_197
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1664
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65d7f835c5d21344a4279b5894a89ab
+      internalID: 640970581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_198
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1664
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f127149bcc5281d468d7d0947675c796
+      internalID: 440891318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_199
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1666
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cd4073e52616146857cd2413eadbef
+      internalID: 304529742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_200
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1666
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7beec180633e154697fa9db8a7f47f4
+      internalID: -662579958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_201
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1664
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9511981e0a5b74d96efebe7211b1a2
+      internalID: -1413806787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_202
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1601
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edc173845718094990a81ce70599ace
+      internalID: -124305035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_203
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1601
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b907fc17ead0bf84186e12bf289b045e
+      internalID: 1457417358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_204
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1602
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604611ca2a4bedd4a980d09348a801ae
+      internalID: -1568789846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_205
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1606
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3b5712b0e27c04798ac8bed97d533a
+      internalID: -1505887642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_206
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1602
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fda4daaf3ee934e9a668aa68f39695
+      internalID: -2122126946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_207
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1536
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b72f49a7b6b1834b837f543861d6703
+      internalID: 1816689395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_208
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1536
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1003c1a9575d374595171b965c29e92
+      internalID: 1766945469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_209
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1538
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bffd665a95955643afcef7e0871c7f8
+      internalID: 1067907612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_210
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1538
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53931910290ef3c4a85073c9d7b55771
+      internalID: -1460557292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_211
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1536
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc02aee54cee3204bafbb31bc210a45e
+      internalID: 904164188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_212
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1472
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01566c244ce3ca9439d03f24fab540f9
+      internalID: 1706110596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_213
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1472
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363179867f3e0a348a14070087da5b38
+      internalID: -1587410112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_214
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1482
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1779bd8954f4260449b4aba47b960cd3
+      internalID: 671297707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_215
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1408
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d3e2f4536975e48b3127de66efec20
+      internalID: -1463795726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_216
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1408
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89de380cadf56184083577526480fe17
+      internalID: -260880780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_217
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1410
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228980d706e35934f98e11126bfd1f81
+      internalID: 399573279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_218
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1344
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536edf4803badec45923b3273314aece
+      internalID: 229146123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_219
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1344
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d2c916fb22c3947946620a67175af3
+      internalID: 932912960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_220
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1344
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7700e48979d874588cee98c2fc8abe
+      internalID: -158581858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_221
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1282
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a12c818897964949badb14f763e167a
+      internalID: -45691840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_222
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1280
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc05b7e390171d46a3acd78dcca0b3c
+      internalID: 438747854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_223
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1282
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda8085e5ee4476488b653c25b228671
+      internalID: 948498529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_224
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1216
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de05d3b5dd7c7df4c90c834cc9dbfa4f
+      internalID: -50586268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_225
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1216
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2f02e3263b9a5408355bcf5939ff5b
+      internalID: -1333944545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_226
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1216
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0608f70b7ced04da4a5de515735314
+      internalID: -1068318564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_227
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1152
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b84d31280bb8644b4b17d34df2628f
+      internalID: 788379676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_228
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1152
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160ed3cd1493aa2499dae6480983601a
+      internalID: -1589192335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_229
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1152
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa3fcfc59270da43aef5cdd54a8af2c
+      internalID: -1990003423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_230
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1088
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fdfe876b2f3224b907e9ef363d7000
+      internalID: 79032250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_231
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1088
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86961bde61857de4db495f462d823f6a
+      internalID: -899859091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_232
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1088
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032ceb2f50a0af5479c18a9b16cd9e2a
+      internalID: -444607537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_233
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1023
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5e270e9acd16245ad60e43d0990c30
+      internalID: -1855657239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_234
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1023
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c56b2c3cf1c9424da402a8d0e096d8b
+      internalID: 1016703585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_235
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1024
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d209218c7b0d6141b221be389862ebf
+      internalID: 159548798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_236
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 961
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442b3b12e71b28f49912f55694e37eab
+      internalID: 1641770902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_237
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 958
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f42e230fc97dc045bbc0dc6d2365562
+      internalID: -488556602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_238
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 958
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c001451851887ea47834402fb11e605f
+      internalID: 1624246609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_239
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 958
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70be332657b6f1c4d92855ec1cf1fedf
+      internalID: 989985422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_240
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 961
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b79360c59d56144a14fdd0c37348d2
+      internalID: -286024258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_241
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 958
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a5e1956c5856240971c4bbf932378d
+      internalID: 606382572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_242
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 958
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dff0a2b2320f67488b9c6412b2f7288
+      internalID: -1512002878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_243
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 958
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1019081751b934ca87288aa292dcac
+      internalID: 542313580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_244
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 895
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984d813dea5749b43beb47051a52ae74
+      internalID: -1042080867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_245
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 895
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c4af2cb407133439b9b6a1d60a285e
+      internalID: -1651737758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_246
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 895
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e16603017b938a428ba648e08984f21
+      internalID: -1157731904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_247
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 899
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacaa06ba889d2b41bf0b3a11b6112fd
+      internalID: 1152787442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_248
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 895
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38240836ea8e01b479cc58841fdefd1b
+      internalID: -1160546677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_249
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 895
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb21e65073bb894469b2b41910819e3a
+      internalID: -153586885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_250
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 895
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1ee938283ab51409f5a46871329962
+      internalID: -277951615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_251
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 897
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277ad6f478048a043a00abeacab3a9f3
+      internalID: 319675630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_252
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 829
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4c96e39f0e8704190ccbd418e49144
+      internalID: -414092090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_253
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 829
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38cacc3f605abc478f6c4f6cc95bbb8
+      internalID: -218464279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_254
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 831
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949a446626d99914f99d8800d0da5db3
+      internalID: 2061275881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_255
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 834
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0af050ba92019d40abddcc058af26e8
+      internalID: -135407644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_256
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 829
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6fe58f678d56548bcc576717b02039
+      internalID: -1523953780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_257
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 829
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a2da8deda022d41bc97405d758001a
+      internalID: 953465658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_258
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 831
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3d43b7caebe6641a54af550a1ccc1c
+      internalID: 186689748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_259
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 834
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7402e9ec05bf85d4b8c78191f59ba28e
+      internalID: 179391915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_260
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 769
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabc655f366c8a0468e758e9b12db90c
+      internalID: 425568724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_261
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 767
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fb999891ec9b648a1f6c22b2c3f185
+      internalID: -69628856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_262
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 767
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7ab6f505025c84a9313d916a767b08
+      internalID: 1089123594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_263
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 770
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2961ca63b7ffe8c488bfbad0ea7ee39b
+      internalID: 1222750207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_264
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 769
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f3097e6567c0148ad1b4ba5d429d32
+      internalID: 142199772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_265
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 767
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb073172bfe4eaf4e875f65b377fc371
+      internalID: 44483250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_266
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 767
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db142e992e84baf46b88d9e8076d2679
+      internalID: 136253701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_267
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 769
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f36865ed6b71cc4dbd297b590f7d92d
+      internalID: -1422873269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_268
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 705
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d691bc30f09ff840839b93b0c16cc1b
+      internalID: -488325623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_269
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 705
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e616a61afcc61f44a5012560f5acb26
+      internalID: -1115935474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_270
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 640
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2416210ddc8c2dc4f919bb7123105b52
+      internalID: -1097232874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_271
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 640
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdfb252275c96f438bde1ac57d64fc6
+      internalID: -1057965087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_272
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 575
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3835f6268d07e69459478bbe60fcad31
+      internalID: -774906200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_273
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 575
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4455495e68c359440968db7e1eb1839d
+      internalID: 548872947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_274
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 512
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bc651b30fae304193a5c727855916c
+      internalID: 1524892889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_275
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 512
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281296d548b0c4a4f8678cf4cc298c0f
+      internalID: -1647224775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_276
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 446
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef5f1e51bd9c2046ba0e31465d8f899
+      internalID: -1307746566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_277
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 448
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4f141376914e14ca1c7df7d37f4746
+      internalID: 1108371189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_278
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 448
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72954d3931b40642b37a9cab0efb17e
+      internalID: 1825502625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_279
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 448
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd17e298e8c444468767796ed6fe8d5
+      internalID: -55302126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_280
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 448
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b39d461045bece459b5e568517717da
+      internalID: 1125841033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_281
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 448
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae5c59a9df6df746ac22138a3b08359
+      internalID: -233165243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_282
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 448
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d0c7321cfb4034eabcc4f8d50891c5
+      internalID: 922271314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_283
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 448
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b19ea066a3cdc64282034f7a6b570d3
+      internalID: 380006091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_284
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 448
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c702dba32f04134b8bebd5384ca40ca
+      internalID: -401027032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_285
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 448
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885f95dc6bf594b448a54bb959047fe6
+      internalID: 635806159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_286
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 448
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdaa11f6b0dd65f42b7af7a9dda266ce
+      internalID: -1890911457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_287
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 448
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b5ca7638ecb454f89cc0011bcc0d45
+      internalID: -1776437443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_288
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 448
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1bced5d710a5d48835e1a2a7557991
+      internalID: 861706038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_289
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 384
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7612739450f868f4bb09726e4bf08d7a
+      internalID: 1748609613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_290
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 384
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de68103d521bdbc45a5a068bac88df13
+      internalID: -1406810865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_291
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 384
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7207e2c1c6d3e4e8a0c14545f853e7
+      internalID: -1315299010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_292
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 384
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef83fd0510000b34385745ecd5660bcd
+      internalID: -1752371963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_293
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 384
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9a075839f04ae4db2abf97605653ef
+      internalID: -1603301596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_294
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 384
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1eeae3b32aadb2458bc33f91627dfc7
+      internalID: 1079662224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_295
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 384
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027c901b42f3cd74a9e13f539ddc4606
+      internalID: -217141873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_296
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 384
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613131fcb72b0d84eb862d7cd65db2cc
+      internalID: 1459397246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_297
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 384
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400f072ca27fd0f4e8748412c8e6df80
+      internalID: -21465372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_298
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 384
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0103732cab3777142a856f7e9caf40bf
+      internalID: 35443209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_299
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 384
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378e684922fe4b6468f132f0d45b2cd9
+      internalID: 1867428166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_300
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 384
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ef70be7852e884294ddca380ec9144
+      internalID: 521651068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_301
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 384
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c21bd1304dbb5448a155658e21abb95
+      internalID: -796128434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_302
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 318
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37632512210f1404a8e23ce83f677b32
+      internalID: -1844236676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_303
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 318
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b0e3be1be95b84296320d3380df1ed
+      internalID: -621899851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_304
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 318
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09946f977f2092d46b1203e09c3ef7e2
+      internalID: -356128864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_305
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 318
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eef9aed8e8e76040a24249d4de8dcff
+      internalID: 1525175682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_306
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 318
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7641ebf501eccc8489eb3c919d74d315
+      internalID: 680169490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_307
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 318
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f0a296757f3624ba6d25fab67a3f7f
+      internalID: -1472467211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_308
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 318
+        width: 34
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4a3fcba1129c34ea092274d48eff2f
+      internalID: -1781630830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_309
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 318
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f53d27c782dba4e9215425f5a05d78
+      internalID: 1630068499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_310
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 318
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188b057bdee05404fbe6ffcfc301b6a8
+      internalID: 199769327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_311
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 318
+        width: 36
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcf69f5d6c7775429897423dc3448e9
+      internalID: -1993302815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_312
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 318
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74a3f007aa10004e83c00323a0fef7f
+      internalID: -2108811157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_313
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 318
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826c1b869d8d4a04aaced0c6996e639d
+      internalID: 155519314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_314
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 318
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfc43b732e1a5e449106f247cde3ba2
+      internalID: 1377080762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_315
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 256
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b1173e084d5f4428bdc2eb26a57569
+      internalID: -1685949602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_316
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0b34d642a2f1f47ba17db8baae70a0
+      internalID: -427298722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_317
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 256
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a0e6d44b7bc1349bd984f4a6125f7a
+      internalID: 1190796310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_318
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 256
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61617339de1a6b44fae525120873a471
+      internalID: -1611329896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_319
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 256
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e75fff80438eea45b3caf3130079040
+      internalID: -751911878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_320
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 256
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779cc1c80cc6d2041bf0325bb1e6fbeb
+      internalID: 1239699965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_321
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 256
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f68ec817290f1d4094fac275f02d135
+      internalID: -1124034588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_322
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 256
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249ca0c7d065f2e4cbfd72cc1b2a9cc0
+      internalID: 73684058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_323
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 256
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d42001d49f73b48bb5a66d585a64fc
+      internalID: 1764359405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_324
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 256
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb417e28ac3406441b8123e242cb8b55
+      internalID: 1900848535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_325
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 256
+        width: 35
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c0bd93d057d3247b1c7a0b9256aac7
+      internalID: 187980718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_326
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 256
+        width: 35
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0870330d865e744e9dd5f475d6198ed
+      internalID: -110543950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_327
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 256
+        width: 35
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c506f46680f34949bbdb652d1f28bb3
+      internalID: -702248615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_328
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 192
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea02ff68fc8bf9e45b52d972465e947d
+      internalID: 1341125332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_329
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 192
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b9bef1eb35ba24f8399d8d7efe101d
+      internalID: 424260877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_330
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 193
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7e78ab148e6834eabdbea9d0483f45
+      internalID: -1018958770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_331
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 193
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b97012da7c46346a5044203c25aec9
+      internalID: -1359822185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_332
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 193
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402cc5e72ff1328438ac67b1d14b7c55
+      internalID: -1945705804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_333
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 192
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a264bec0668503f449e07176c6644f5e
+      internalID: -116233460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_334
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 127
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c8f82d306d04c4fb38186d72636dca
+      internalID: -1815197081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_335
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 127
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377cde5dfa2d3e74495798c6a3b07469
+      internalID: -1565439066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_336
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 127
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53718dd82d2d15945a3a1c8f0fc5e274
+      internalID: -529856566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_337
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 127
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c520a74f520ec14d8d2324a3c4450e4
+      internalID: -728759706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_338
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 127
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6117ede613da24a8812af19c91f90a
+      internalID: -1184007321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_339
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 127
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c696762ad001b744f95b148dfb8ba24e
+      internalID: -860571259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_340
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 63
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b8e0e33f58d91409f0bb45a27fbfad
+      internalID: 688816094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_341
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 63
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773fc0193e49a7543af6cb25284afdf0
+      internalID: 518958061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_342
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 63
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d59b3dfca593640bde296a58a61ea2
+      internalID: -976169609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_343
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 63
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd2909cf996f464a9ceb6181bec9454
+      internalID: -1598324692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_344
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 63
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7f02af0a0cc8a4cad6831c46565e42
+      internalID: -1326426263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_345
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 63
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8289c45f5daad439a263b767efa5f4
+      internalID: -1633048817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_346
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799d1fe1a7db96b41b6a49e4f749e926
+      internalID: -1505245885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_347
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cf4c994bd893d4880b827c657eb87b
+      internalID: -1023266835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_348
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0491be1074296534bbf74e2bbdf11077
+      internalID: 725099579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_349
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4287db9d1294954984b947480b6f369
+      internalID: 403154127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_350
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 0
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3ac210fd3ce864b9a74196469b5935
+      internalID: -715782917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_afee_sprite_351
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062b44ea56921b44aa15b803f6bea529
+      internalID: -1142718720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      jim_afee_sprite_0: -1728189704
+      jim_afee_sprite_1: -2099549119
+      jim_afee_sprite_10: -1228567651
+      jim_afee_sprite_100: -893788339
+      jim_afee_sprite_101: -1957449371
+      jim_afee_sprite_102: 1698173740
+      jim_afee_sprite_103: -921622770
+      jim_afee_sprite_104: -1662464706
+      jim_afee_sprite_105: -2069629468
+      jim_afee_sprite_106: 1885844295
+      jim_afee_sprite_107: 591923506
+      jim_afee_sprite_108: -2020548066
+      jim_afee_sprite_109: -216843935
+      jim_afee_sprite_11: -1282642378
+      jim_afee_sprite_110: 808383700
+      jim_afee_sprite_111: -918992112
+      jim_afee_sprite_112: 1766233758
+      jim_afee_sprite_113: -671059959
+      jim_afee_sprite_114: -1043602442
+      jim_afee_sprite_115: -611413344
+      jim_afee_sprite_116: 361276756
+      jim_afee_sprite_117: 1661507517
+      jim_afee_sprite_118: -693868705
+      jim_afee_sprite_119: -1133080136
+      jim_afee_sprite_12: 1669360713
+      jim_afee_sprite_120: 708056258
+      jim_afee_sprite_121: -567282865
+      jim_afee_sprite_122: -1689726733
+      jim_afee_sprite_123: -411396395
+      jim_afee_sprite_124: 294103875
+      jim_afee_sprite_125: 491307154
+      jim_afee_sprite_126: -6655300
+      jim_afee_sprite_127: 475154010
+      jim_afee_sprite_128: 893280323
+      jim_afee_sprite_129: -1919634167
+      jim_afee_sprite_13: 1242324680
+      jim_afee_sprite_130: 1068975754
+      jim_afee_sprite_131: -2143094728
+      jim_afee_sprite_132: 1735562670
+      jim_afee_sprite_133: -1746271164
+      jim_afee_sprite_134: -1603642334
+      jim_afee_sprite_135: 1326851892
+      jim_afee_sprite_136: 2011752880
+      jim_afee_sprite_137: 522797428
+      jim_afee_sprite_138: 630204508
+      jim_afee_sprite_139: -1337349222
+      jim_afee_sprite_14: 478922209
+      jim_afee_sprite_140: -1196914971
+      jim_afee_sprite_141: 773012721
+      jim_afee_sprite_142: 1319395004
+      jim_afee_sprite_143: 1511592521
+      jim_afee_sprite_144: 899920109
+      jim_afee_sprite_145: 1774355329
+      jim_afee_sprite_146: 71198930
+      jim_afee_sprite_147: -1281330570
+      jim_afee_sprite_148: 1420656683
+      jim_afee_sprite_149: -1673036781
+      jim_afee_sprite_15: 1772949387
+      jim_afee_sprite_150: 1406209114
+      jim_afee_sprite_151: -2013932958
+      jim_afee_sprite_152: 1223755166
+      jim_afee_sprite_153: -784318284
+      jim_afee_sprite_154: -1105526703
+      jim_afee_sprite_155: 1457403451
+      jim_afee_sprite_156: 50588642
+      jim_afee_sprite_157: 653961225
+      jim_afee_sprite_158: -685339712
+      jim_afee_sprite_159: 1860376791
+      jim_afee_sprite_16: -942968856
+      jim_afee_sprite_160: 283961367
+      jim_afee_sprite_161: -689078446
+      jim_afee_sprite_162: 2070167471
+      jim_afee_sprite_163: 248932753
+      jim_afee_sprite_164: 1363749394
+      jim_afee_sprite_165: 207789600
+      jim_afee_sprite_166: -1655474824
+      jim_afee_sprite_167: -1095890312
+      jim_afee_sprite_168: 1376757308
+      jim_afee_sprite_169: -499859461
+      jim_afee_sprite_17: -255389813
+      jim_afee_sprite_170: 1930982401
+      jim_afee_sprite_171: 1300083402
+      jim_afee_sprite_172: -324773378
+      jim_afee_sprite_173: 1354220756
+      jim_afee_sprite_174: -660038207
+      jim_afee_sprite_175: -169456432
+      jim_afee_sprite_176: -1881119522
+      jim_afee_sprite_177: -666066420
+      jim_afee_sprite_178: -414219474
+      jim_afee_sprite_179: 614083661
+      jim_afee_sprite_18: 2142614748
+      jim_afee_sprite_180: -1352959725
+      jim_afee_sprite_181: -194976120
+      jim_afee_sprite_182: -2086582700
+      jim_afee_sprite_183: -2043448164
+      jim_afee_sprite_184: 1730918549
+      jim_afee_sprite_185: 815790063
+      jim_afee_sprite_186: -532515663
+      jim_afee_sprite_187: 1160655614
+      jim_afee_sprite_188: -577787426
+      jim_afee_sprite_189: -1557443677
+      jim_afee_sprite_19: 1190665290
+      jim_afee_sprite_190: 777259262
+      jim_afee_sprite_191: 1883563067
+      jim_afee_sprite_192: 1356411894
+      jim_afee_sprite_193: 1964907511
+      jim_afee_sprite_194: -318249272
+      jim_afee_sprite_195: -577053134
+      jim_afee_sprite_196: -1401511531
+      jim_afee_sprite_197: 640970581
+      jim_afee_sprite_198: 440891318
+      jim_afee_sprite_199: 304529742
+      jim_afee_sprite_2: -258516183
+      jim_afee_sprite_20: 952258396
+      jim_afee_sprite_200: -662579958
+      jim_afee_sprite_201: -1413806787
+      jim_afee_sprite_202: -124305035
+      jim_afee_sprite_203: 1457417358
+      jim_afee_sprite_204: -1568789846
+      jim_afee_sprite_205: -1505887642
+      jim_afee_sprite_206: -2122126946
+      jim_afee_sprite_207: 1816689395
+      jim_afee_sprite_208: 1766945469
+      jim_afee_sprite_209: 1067907612
+      jim_afee_sprite_21: -784726882
+      jim_afee_sprite_210: -1460557292
+      jim_afee_sprite_211: 904164188
+      jim_afee_sprite_212: 1706110596
+      jim_afee_sprite_213: -1587410112
+      jim_afee_sprite_214: 671297707
+      jim_afee_sprite_215: -1463795726
+      jim_afee_sprite_216: -260880780
+      jim_afee_sprite_217: 399573279
+      jim_afee_sprite_218: 229146123
+      jim_afee_sprite_219: 932912960
+      jim_afee_sprite_22: 674592659
+      jim_afee_sprite_220: -158581858
+      jim_afee_sprite_221: -45691840
+      jim_afee_sprite_222: 438747854
+      jim_afee_sprite_223: 948498529
+      jim_afee_sprite_224: -50586268
+      jim_afee_sprite_225: -1333944545
+      jim_afee_sprite_226: -1068318564
+      jim_afee_sprite_227: 788379676
+      jim_afee_sprite_228: -1589192335
+      jim_afee_sprite_229: -1990003423
+      jim_afee_sprite_23: -2123399932
+      jim_afee_sprite_230: 79032250
+      jim_afee_sprite_231: -899859091
+      jim_afee_sprite_232: -444607537
+      jim_afee_sprite_233: -1855657239
+      jim_afee_sprite_234: 1016703585
+      jim_afee_sprite_235: 159548798
+      jim_afee_sprite_236: 1641770902
+      jim_afee_sprite_237: -488556602
+      jim_afee_sprite_238: 1624246609
+      jim_afee_sprite_239: 989985422
+      jim_afee_sprite_24: 62535382
+      jim_afee_sprite_240: -286024258
+      jim_afee_sprite_241: 606382572
+      jim_afee_sprite_242: -1512002878
+      jim_afee_sprite_243: 542313580
+      jim_afee_sprite_244: -1042080867
+      jim_afee_sprite_245: -1651737758
+      jim_afee_sprite_246: -1157731904
+      jim_afee_sprite_247: 1152787442
+      jim_afee_sprite_248: -1160546677
+      jim_afee_sprite_249: -153586885
+      jim_afee_sprite_25: -2118795038
+      jim_afee_sprite_250: -277951615
+      jim_afee_sprite_251: 319675630
+      jim_afee_sprite_252: -414092090
+      jim_afee_sprite_253: -218464279
+      jim_afee_sprite_254: 2061275881
+      jim_afee_sprite_255: -135407644
+      jim_afee_sprite_256: -1523953780
+      jim_afee_sprite_257: 953465658
+      jim_afee_sprite_258: 186689748
+      jim_afee_sprite_259: 179391915
+      jim_afee_sprite_26: -1195536358
+      jim_afee_sprite_260: 425568724
+      jim_afee_sprite_261: -69628856
+      jim_afee_sprite_262: 1089123594
+      jim_afee_sprite_263: 1222750207
+      jim_afee_sprite_264: 142199772
+      jim_afee_sprite_265: 44483250
+      jim_afee_sprite_266: 136253701
+      jim_afee_sprite_267: -1422873269
+      jim_afee_sprite_268: -488325623
+      jim_afee_sprite_269: -1115935474
+      jim_afee_sprite_27: 1271872662
+      jim_afee_sprite_270: -1097232874
+      jim_afee_sprite_271: -1057965087
+      jim_afee_sprite_272: -774906200
+      jim_afee_sprite_273: 548872947
+      jim_afee_sprite_274: 1524892889
+      jim_afee_sprite_275: -1647224775
+      jim_afee_sprite_276: -1307746566
+      jim_afee_sprite_277: 1108371189
+      jim_afee_sprite_278: 1825502625
+      jim_afee_sprite_279: -55302126
+      jim_afee_sprite_28: -311930224
+      jim_afee_sprite_280: 1125841033
+      jim_afee_sprite_281: -233165243
+      jim_afee_sprite_282: 922271314
+      jim_afee_sprite_283: 380006091
+      jim_afee_sprite_284: -401027032
+      jim_afee_sprite_285: 635806159
+      jim_afee_sprite_286: -1890911457
+      jim_afee_sprite_287: -1776437443
+      jim_afee_sprite_288: 861706038
+      jim_afee_sprite_289: 1748609613
+      jim_afee_sprite_29: 1534300855
+      jim_afee_sprite_290: -1406810865
+      jim_afee_sprite_291: -1315299010
+      jim_afee_sprite_292: -1752371963
+      jim_afee_sprite_293: -1603301596
+      jim_afee_sprite_294: 1079662224
+      jim_afee_sprite_295: -217141873
+      jim_afee_sprite_296: 1459397246
+      jim_afee_sprite_297: -21465372
+      jim_afee_sprite_298: 35443209
+      jim_afee_sprite_299: 1867428166
+      jim_afee_sprite_3: -608637521
+      jim_afee_sprite_30: -1184159261
+      jim_afee_sprite_300: 521651068
+      jim_afee_sprite_301: -796128434
+      jim_afee_sprite_302: -1844236676
+      jim_afee_sprite_303: -621899851
+      jim_afee_sprite_304: -356128864
+      jim_afee_sprite_305: 1525175682
+      jim_afee_sprite_306: 680169490
+      jim_afee_sprite_307: -1472467211
+      jim_afee_sprite_308: -1781630830
+      jim_afee_sprite_309: 1630068499
+      jim_afee_sprite_31: 1368211680
+      jim_afee_sprite_310: 199769327
+      jim_afee_sprite_311: -1993302815
+      jim_afee_sprite_312: -2108811157
+      jim_afee_sprite_313: 155519314
+      jim_afee_sprite_314: 1377080762
+      jim_afee_sprite_315: -1685949602
+      jim_afee_sprite_316: -427298722
+      jim_afee_sprite_317: 1190796310
+      jim_afee_sprite_318: -1611329896
+      jim_afee_sprite_319: -751911878
+      jim_afee_sprite_32: -1407515045
+      jim_afee_sprite_320: 1239699965
+      jim_afee_sprite_321: -1124034588
+      jim_afee_sprite_322: 73684058
+      jim_afee_sprite_323: 1764359405
+      jim_afee_sprite_324: 1900848535
+      jim_afee_sprite_325: 187980718
+      jim_afee_sprite_326: -110543950
+      jim_afee_sprite_327: -702248615
+      jim_afee_sprite_328: 1341125332
+      jim_afee_sprite_329: 424260877
+      jim_afee_sprite_33: 965325172
+      jim_afee_sprite_330: -1018958770
+      jim_afee_sprite_331: -1359822185
+      jim_afee_sprite_332: -1945705804
+      jim_afee_sprite_333: -116233460
+      jim_afee_sprite_334: -1815197081
+      jim_afee_sprite_335: -1565439066
+      jim_afee_sprite_336: -529856566
+      jim_afee_sprite_337: -728759706
+      jim_afee_sprite_338: -1184007321
+      jim_afee_sprite_339: -860571259
+      jim_afee_sprite_34: -245083764
+      jim_afee_sprite_340: 688816094
+      jim_afee_sprite_341: 518958061
+      jim_afee_sprite_342: -976169609
+      jim_afee_sprite_343: -1598324692
+      jim_afee_sprite_344: -1326426263
+      jim_afee_sprite_345: -1633048817
+      jim_afee_sprite_346: -1505245885
+      jim_afee_sprite_347: -1023266835
+      jim_afee_sprite_348: 725099579
+      jim_afee_sprite_349: 403154127
+      jim_afee_sprite_35: 210662738
+      jim_afee_sprite_350: -715782917
+      jim_afee_sprite_351: -1142718720
+      jim_afee_sprite_36: 1705477026
+      jim_afee_sprite_37: -1596856535
+      jim_afee_sprite_38: -375630156
+      jim_afee_sprite_39: -383698045
+      jim_afee_sprite_4: 21696177
+      jim_afee_sprite_40: -393615718
+      jim_afee_sprite_41: -42595228
+      jim_afee_sprite_42: 484722152
+      jim_afee_sprite_43: -1804101929
+      jim_afee_sprite_44: 1916884172
+      jim_afee_sprite_45: -152334482
+      jim_afee_sprite_46: 179197282
+      jim_afee_sprite_47: -59336768
+      jim_afee_sprite_48: 503451568
+      jim_afee_sprite_49: -1551513701
+      jim_afee_sprite_5: -281773725
+      jim_afee_sprite_50: -584279131
+      jim_afee_sprite_51: 1216324745
+      jim_afee_sprite_52: -2067604284
+      jim_afee_sprite_53: 2021786230
+      jim_afee_sprite_54: 166042983
+      jim_afee_sprite_55: 920246031
+      jim_afee_sprite_56: -826578994
+      jim_afee_sprite_57: -791090030
+      jim_afee_sprite_58: -1353554350
+      jim_afee_sprite_59: 1362576721
+      jim_afee_sprite_6: -1330924092
+      jim_afee_sprite_60: 1154536378
+      jim_afee_sprite_61: -939836576
+      jim_afee_sprite_62: 163480070
+      jim_afee_sprite_63: 448031195
+      jim_afee_sprite_64: -745322098
+      jim_afee_sprite_65: 1799641611
+      jim_afee_sprite_66: -713372814
+      jim_afee_sprite_67: -927708184
+      jim_afee_sprite_68: -2099715143
+      jim_afee_sprite_69: 88550265
+      jim_afee_sprite_7: 260473756
+      jim_afee_sprite_70: 1473449156
+      jim_afee_sprite_71: 305850465
+      jim_afee_sprite_72: 1686650549
+      jim_afee_sprite_73: 845015268
+      jim_afee_sprite_74: -1151905936
+      jim_afee_sprite_75: -275625495
+      jim_afee_sprite_76: 592016177
+      jim_afee_sprite_77: -776373067
+      jim_afee_sprite_78: -1205884171
+      jim_afee_sprite_79: -1639895984
+      jim_afee_sprite_8: 652796111
+      jim_afee_sprite_80: -276530157
+      jim_afee_sprite_81: -421290567
+      jim_afee_sprite_82: -1024132557
+      jim_afee_sprite_83: -1113259380
+      jim_afee_sprite_84: 1820723814
+      jim_afee_sprite_85: 1568830809
+      jim_afee_sprite_86: -1427269700
+      jim_afee_sprite_87: 1453903132
+      jim_afee_sprite_88: -2027880932
+      jim_afee_sprite_89: -1916704965
+      jim_afee_sprite_9: -935502776
+      jim_afee_sprite_90: -953458188
+      jim_afee_sprite_91: 1684831314
+      jim_afee_sprite_92: -173394954
+      jim_afee_sprite_93: -1499532812
+      jim_afee_sprite_94: 251863006
+      jim_afee_sprite_95: 1362274464
+      jim_afee_sprite_96: 1157784219
+      jim_afee_sprite_97: -1433720577
+      jim_afee_sprite_98: -27257542
+      jim_afee_sprite_99: -998964466
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
