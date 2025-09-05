@@ -32,9 +32,6 @@ public class PlayerCollider : MonoBehaviour
         }
 
 
-
-
-
         if (x != 0)
         {
             if (x < 0)

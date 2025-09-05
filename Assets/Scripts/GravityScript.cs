@@ -13,7 +13,7 @@ public class GravityScript : MonoBehaviour
     void Start()
     {
 
-
+        rbGr = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
