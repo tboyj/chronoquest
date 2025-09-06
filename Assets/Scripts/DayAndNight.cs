@@ -18,22 +18,17 @@ public class DayAndNight : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (timeInDay < 0.005f && timeInDay >= -360f)
-        {
             float multiplier = lightCurve.Evaluate(timeInDay);
-            timeInDay += 1 * rotationSpeed * multiplier;
+            timeInDay += rotationSpeed * multiplier;
+        if (timeInDay <= -360f)
+        {
+            DaysHandler.daysLived++;
+            timeInDay += 360f;
 
         }
-        else
-        {
-            if (timeInDay >= 0.005f)
-            {
-                DaysHandler.daysLived++;
-            }
-            timeInDay = -360f;
-        }
+
         sunBody.rotation = Quaternion.Euler(timeInDay, -90f, -90f);
 
     }

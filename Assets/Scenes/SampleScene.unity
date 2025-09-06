@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4043837, g: 0.36163196, b: 0.25177148, a: 1}
+  m_IndirectSpecularColor: {r: 0.27893347, g: 0.18399413, b: 0.068008095, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 421225736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 0, z: 0}
+  m_LocalPosition: {x: -0.17, y: -0.217, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -534,10 +534,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -793,7 +793,7 @@ Transform:
   m_GameObject: {fileID: 772882159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6, y: 0.565, z: 0}
+  m_LocalPosition: {x: 3.6, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1269,7 +1269,7 @@ Rigidbody:
   m_GameObject: {fileID: 1045520950}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0.15
+  m_Drag: 4
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1389,14 +1389,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionDetector:
     serializedVersion: 2
-    m_Bits: 0
-  speed: 1.5
-  shiftUp: 0.35
-  maxSpeed: {x: 10, y: 10, z: 10}
+    m_Bits: 8
+  moveForce: 4
+  shiftMultiplier: 1.5
+  maxSpeed: 2
   rb: {fileID: 1045520952}
   sprite: {fileID: 716004963}
   raycastPos: {fileID: 421225737}
-  raycastPos2: {fileID: 613909948}
 --- !u!45 &1045520958
 Skybox:
   m_ObjectHideFlags: 0
@@ -1814,13 +1813,12 @@ MonoBehaviour:
   collisionDetector:
     serializedVersion: 2
     m_Bits: 0
-  speed: 1.5
-  shiftUp: 0
-  maxSpeed: {x: 0, y: 0, z: 0}
+  moveForce: 10
+  shiftMultiplier: 1.5
+  maxSpeed: 5
   rb: {fileID: 0}
   sprite: {fileID: 0}
   raycastPos: {fileID: 0}
-  raycastPos2: {fileID: 0}
 --- !u!54 &1626360300
 Rigidbody:
   m_ObjectHideFlags: 0
