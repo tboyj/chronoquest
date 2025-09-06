@@ -8,7 +8,7 @@ public class DelayedCamScript : MonoBehaviour
 {
     // Start is called before the first frame update
     private Vector3 offset = new Vector3(0, .75f, -1.75f);
-    public float smoothTime = .15f;
+    public float smoothTime = .075f;
     private Vector3 velocity = Vector3.zero;
     [SerializeField] private Transform target;
 
