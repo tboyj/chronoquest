@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &421225736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 421225737}
+  m_Layer: 0
+  m_Name: Raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &421225737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421225736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 716004962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421763339
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +260,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421763339}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &613909947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613909948}
+  m_Layer: 0
+  m_Name: Raycast (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &613909948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613909947}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.17, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 716004962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623296812
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +637,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0.000011920929}
   m_LocalScale: {x: 3.125, y: 1.754386, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 421225737}
+  - {fileID: 613909948}
   m_Father: {fileID: 1045520956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &716004963
@@ -642,7 +706,7 @@ GameObject:
   - component: {fileID: 772882162}
   - component: {fileID: 772882161}
   - component: {fileID: 772882160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1205,8 +1269,8 @@ Rigidbody:
   m_GameObject: {fileID: 1045520950}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.15
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1323,11 +1387,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead4aebee4e1fa44ca0c7bde0f08be88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionDetector:
+    serializedVersion: 2
+    m_Bits: 0
   speed: 1.5
-  shiftUp: 0.5
-  rayDistance: 0.02
+  shiftUp: 0.35
+  maxSpeed: {x: 10, y: 10, z: 10}
   rb: {fileID: 1045520952}
   sprite: {fileID: 716004963}
+  raycastPos: {fileID: 421225737}
+  raycastPos2: {fileID: 613909948}
 --- !u!45 &1045520958
 Skybox:
   m_ObjectHideFlags: 0
@@ -1742,11 +1811,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead4aebee4e1fa44ca0c7bde0f08be88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionDetector:
+    serializedVersion: 2
+    m_Bits: 0
   speed: 1.5
   shiftUp: 0
-  rayDistance: 0
-  rb: {fileID: 1626360300}
-  sprite: {fileID: 716004963}
+  maxSpeed: {x: 0, y: 0, z: 0}
+  rb: {fileID: 0}
+  sprite: {fileID: 0}
+  raycastPos: {fileID: 0}
+  raycastPos2: {fileID: 0}
 --- !u!54 &1626360300
 Rigidbody:
   m_ObjectHideFlags: 0
