@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerCollider : MonoBehaviour
 {
     public LayerMask collisionDetector;
-    public float moveForce = 4f;       // movement force strength
-    public float shiftMultiplier = 1.5f; // sprint multiplier
+    public float moveForce = 3.95f;       // movement force strength
+    public float shiftMultiplier = 1.25f; // sprint multiplier
     public float maxSpeed = 2f;         // max horizontal speed
     // public float jumpForce = 5f;        // optional: jump
     public Rigidbody rb;
@@ -31,9 +31,13 @@ public class PlayerCollider : MonoBehaviour
         float currentForce = moveForce;
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            currentForce *= shiftMultiplier;
+            shiftMultiplier = 1.25f;
         }
-
+        else
+        {
+            shiftMultiplier = 1;
+        }
+        currentForce *= shiftMultiplier;
         // Apply movement force
         MoveWithForce(movement, currentForce);
 

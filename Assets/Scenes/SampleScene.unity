@@ -1269,8 +1269,8 @@ Rigidbody:
   m_GameObject: {fileID: 1045520950}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 4
-  m_AngularDrag: 0
+  m_Drag: 4.15
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1390,8 +1390,8 @@ MonoBehaviour:
   collisionDetector:
     serializedVersion: 2
     m_Bits: 8
-  moveForce: 4
-  shiftMultiplier: 1.5
+  moveForce: 3.95
+  shiftMultiplier: 1.25
   maxSpeed: 2
   rb: {fileID: 1045520952}
   sprite: {fileID: 716004963}
