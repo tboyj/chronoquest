@@ -9,9 +9,9 @@ public class DayAndNight : MonoBehaviour
     public Transform sunBody;
     public AnimationCurve lightCurve;
     public Light lightForSky;
-    [Range(-360f, 0.01f)]
+    [Range(-360f, 0.005f)]
     public float timeInDay;
-    private float rotationSpeed = .02f;
+    private float rotationSpeed = .005f;
     void Start()
     {
         
@@ -20,7 +20,7 @@ public class DayAndNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeInDay < 0.01f && timeInDay >= -360f)
+        if (timeInDay < 0.005f && timeInDay >= -360f)
         {
             float multiplier = lightCurve.Evaluate(timeInDay);
             timeInDay += 1 * rotationSpeed * multiplier;
@@ -28,7 +28,7 @@ public class DayAndNight : MonoBehaviour
         }
         else
         {
-            if (timeInDay >= 0.01f)
+            if (timeInDay >= 0.005f)
             {
                 DaysHandler.daysLived++;
             }
