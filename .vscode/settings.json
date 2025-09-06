@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "chronoquest.sln"
+    "dotnet.defaultSolution": "chronoquest.sln",
+    "FSharp.suggestGitignore": false
 }

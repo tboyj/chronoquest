@@ -31,7 +31,9 @@ public class PlayerCollider : MonoBehaviour
         Ray rayBackward = new Ray(transform.position, -transform.forward * rayDistance);
         Debug.DrawRay(transform.position, -transform.forward * rayDistance, Color.blue);
 
-        if (rayForward.hit)
+        if (rayForward.hit) {
+            
+        }
 
         rb.velocity = movement * speed;
         if (Input.GetKey(KeyCode.LeftShift)) // Stamina & running
