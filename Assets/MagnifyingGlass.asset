@@ -10,8 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff5402f46aa682b4d8e1c1d5d79c2559, type: 3}
-  m_Name: NewItem
+  m_Name: MagnifyingGlass
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  texture: {fileID: 0}
-  itemName: Test
+  prefab: {fileID: 2961246136862446188, guid: 37f75017b34e9e844b2ac2a8b1256751, type: 3}
+  category: 3
+  sprite: {fileID: 0}
+  itemName: Jim's Magnifying Glass
+  rarity: 5
+  description: This is Jim's magnifying glass. Press Q near something that needs
+    a closer look.
+  canBeDropped: 0
+  canBeGiven: 0
