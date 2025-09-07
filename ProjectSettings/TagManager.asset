@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TemporaryStuff
+  - TimeCube
   layers:
   - Default
   - TransparentFX

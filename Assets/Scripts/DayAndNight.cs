@@ -14,6 +14,7 @@ public class DayAndNight : MonoBehaviour
     public float timeInDay;
     private float rotationSpeed = .005f;
     public TextMeshProUGUI timeText;
+    public GameObject timeCube;
     void Start()
     {
         timeText.text = "00:00";
@@ -52,7 +53,7 @@ public class DayAndNight : MonoBehaviour
         timeText.text =  hNotMil+ ":" + minutes.ToString("00")+" "+amOrPm;
         if (timeInDay >= 0.005f)
         {
-            DaysHandler.daysLived++;
+            timeCube.GetComponent<TimeCube>().daysLived++;
             timeInDay = -360f;
         }
 
