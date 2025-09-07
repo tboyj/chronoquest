@@ -10,14 +10,16 @@ public class DayAndNight : MonoBehaviour
     public Transform sunBody;
     public AnimationCurve lightCurve;
     public Light lightForSky;
-    [Range(-360f, 0.005f)]
+    [Range(-90f, 270f)]
     public float timeInDay;
     private float rotationSpeed = .005f;
     public TextMeshProUGUI timeText;
     public GameObject timeCube;
     void Start()
     {
-        timeText.text = "00:00";
+        timeText.text = "06:00";
+        timeInDay = 0f;
+        gameObject.transform.rotation = Quaternion.Euler(0, -90f, -90f);
     }
 
     // Update is called once per frame
@@ -27,34 +29,26 @@ public class DayAndNight : MonoBehaviour
         string amOrPm = "AM";
         float multiplier = lightCurve.Evaluate(timeInDay);
         timeInDay += rotationSpeed * multiplier;
-        int hours = Mathf.FloorToInt((timeInDay + 360f) / 15f) + 6;
-        int minutes = Mathf.FloorToInt((((timeInDay + 360f) / 15f) + 6 - hours) * 60f);
-        if (hours % 13 == 0 && hours % 24 != 0)
+        int hours = Mathf.FloorToInt((timeInDay + 90f) / 15f);
+        int minutes = Mathf.FloorToInt((((timeInDay + 90f) / 15f) - hours) * 60f);
+
+        hours = (hours + 24) % 24; // Ensure hours is always 0-23
+        int displayHour = hours;
+        if (displayHour >= 12)
         {
-            isPM = true;
-        }
-        else if (hours % 24 == 0)
-        {
-            isPM = false;
-        }
-        hours %= 24;
-        string hNotMil = hours.ToString("00");
-        if (hours == 0)
-        {
-            hNotMil = "01";
-        }
-        if (isPM)
-        {
-            hNotMil = (hours - 12).ToString("00");
             amOrPm = "PM";
+            if (displayHour > 12)
+                displayHour -= 12;
         }
-        else
-            amOrPm = "AM";
-        timeText.text =  hNotMil+ ":" + minutes.ToString("00")+" "+amOrPm;
-        if (timeInDay >= 0.005f)
+        if (displayHour == 0)
+            displayHour = 12;
+        
+        string hNotMil = displayHour.ToString("00");
+        timeText.text = hNotMil + ":" + minutes.ToString("00") + " " + amOrPm;
+        if (timeInDay >= 270f)
         {
-            timeCube.GetComponent<TimeCube>().daysLived++;
-            timeInDay = -360f;
+            timeCube.GetComponent<TimeCube>().addDayToCalendar();
+            timeInDay = -90f;
         }
 
         sunBody.rotation = Quaternion.Euler(timeInDay, -90f, -90f);

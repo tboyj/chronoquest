@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,7 +29,10 @@ public class TimeCube : MonoBehaviour
     public bool isAD;
     public string sceneName;
     public string reformattedDate;
-    public int daysLived;
+
+    public TextMeshProUGUI dateText;
+
+
     void Start()
     {
         sceneName = gameObject.scene.name;
@@ -54,6 +58,12 @@ public class TimeCube : MonoBehaviour
                 Debug.LogError("Unknown scene: " + sceneName);
                 break;
         }
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
         if (currYear < 0)
         {
             isAD = false;
@@ -62,13 +72,29 @@ public class TimeCube : MonoBehaviour
         {
             isAD = true;
         }
-        
+        reformattedDate = currMonth.ToString("00") + "/" + currDay.ToString("00") + "/" + Mathf.Abs(currYear).ToString() + (isAD ? " AD" : " BC");
+        // For testing purposes, you can uncomment the line below to see the date in the console
+        dateText.text = reformattedDate;
     }
-
-
-    // Update is called once per frame
-    void Update()
+    public void addDayToCalendar()
     {
-        
+        // Implement your logic here, for example:
+        currDay++;
+        if (currDay > 30) // Simplified month length
+        {
+            currDay = 1;
+            currMonth++;
+            if (currMonth > 12)
+            {
+                currMonth = 1;
+                currYear++;
+                if (currYear == 0) // There is no year 0
+                {
+                    currYear = 1;
+                }
+            }
+        }
+
+        Debug.Log("A new day has been added to the calendar.");
     }
 }
