@@ -23,36 +23,40 @@ public class PlayerCollider : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");
+        if (Time.timeScale > 0)
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float z = Input.GetAxisRaw("Vertical");
 
-        Vector3 movement = new Vector3(x, 0, z).normalized;
+            Vector3 movement = new Vector3(x, 0, z).normalized;
 
-        float currentForce = moveForce;
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            shiftMultiplier = 1.25f;
-        }
-        else
-        {
-            shiftMultiplier = 1;
-        }
-        currentForce *= shiftMultiplier;
-        // Apply movement force
-        MoveWithForce(movement, currentForce);
+            float currentForce = moveForce;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                shiftMultiplier = 1.25f;
+            }
+            else
+            {
+                shiftMultiplier = 1;
+            }
+            currentForce *= shiftMultiplier;
+            // Apply movement force
+            MoveWithForce(movement, currentForce);
 
-        // Flip sprite
-        if (x > 0)
-        {
-            sprite.flipX = false;
-        }
-        else if (x < 0)
-        {
-            sprite.flipX = true;
+            // Flip sprite
+
+                if (x > 0)
+                {
+                    sprite.flipX = false;
+                }
+                else if (x < 0)
+                {
+                    sprite.flipX = true;
+                }
         }
 
         // Debug: ground ray
-        Debug.DrawRay(raycastPos.position, -transform.up * 0.1f, Color.red);
+            Debug.DrawRay(raycastPos.position, -transform.up * 0.1f, Color.red);
 
         // Example jump (optional)
         // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())

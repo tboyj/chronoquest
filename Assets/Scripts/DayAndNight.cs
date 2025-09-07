@@ -25,7 +25,6 @@ public class DayAndNight : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        bool isPM = false;
         string amOrPm = "AM";
         float multiplier = lightCurve.Evaluate(timeInDay);
         timeInDay += rotationSpeed * multiplier;
