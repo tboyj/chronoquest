@@ -16,8 +16,15 @@ public class InventorySlotGUI : MonoBehaviour
     void Start()
     {
         slot = transform.GetComponent<InventorySlot>();
-        itemImage.sprite = slot.item?.sprite;
-        quantityText.text = slot.quantity > 1 ? "x" + slot.quantity : "";
+        foreach (Transform childTransform in slot.transform)
+        {
+            if (childTransform.name.Contains("Holder"))
+            {
+                itemImage = childTransform.GetComponent<Image>();
+            }
+        }
+
+        quantityText = slot.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
