@@ -8,6 +8,7 @@ public enum ItemRarity {Common, Uncommon, Rare, Epic, Legendary, Exotic};
 
 public class ItemStorable : ScriptableObject
 {
+
     public GameObject prefab;
     public ItemCategory category;
     

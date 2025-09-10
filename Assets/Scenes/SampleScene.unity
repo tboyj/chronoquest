@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 12012878}
   - component: {fileID: 12012877}
   - component: {fileID: 12012876}
+  - component: {fileID: 12012879}
   m_Layer: 5
   m_Name: slot15
   m_TagString: Inventory
@@ -175,11 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 317387700}
-  quantityText: {fileID: 1246278935}
+  quantity: 0
 --- !u!114 &12012877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +215,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12012874}
   m_CullTransparentMesh: 1
+--- !u!114 &12012879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12012874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &12325917
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +796,7 @@ GameObject:
   - component: {fileID: 92789677}
   - component: {fileID: 92789676}
   - component: {fileID: 92789675}
+  - component: {fileID: 92789678}
   m_Layer: 5
   m_Name: slot2
   m_TagString: Hotbar
@@ -824,11 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 4
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 1015280163}
-  quantityText: {fileID: 55432739}
+  quantity: 0
 --- !u!114 &92789676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +876,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92789673}
   m_CullTransparentMesh: 1
+--- !u!114 &92789678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92789673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &145582934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1401,7 @@ GameObject:
   - component: {fileID: 271232791}
   - component: {fileID: 271232790}
   - component: {fileID: 271232789}
+  - component: {fileID: 271232792}
   m_Layer: 5
   m_Name: slot2
   m_TagString: Inventory
@@ -1417,11 +1442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 681730917}
-  quantityText: {fileID: 809533466}
+  quantity: 0
 --- !u!114 &271232790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,6 +1481,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271232787}
   m_CullTransparentMesh: 1
+--- !u!114 &271232792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271232787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &290548052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1642,7 @@ GameObject:
   - component: {fileID: 291653901}
   - component: {fileID: 291653900}
   - component: {fileID: 291653899}
+  - component: {fileID: 291653902}
   m_Layer: 5
   m_Name: slot18
   m_TagString: Inventory
@@ -1646,11 +1683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 735732860}
-  quantityText: {fileID: 45409846}
+  quantity: 0
 --- !u!114 &291653900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,6 +1722,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291653897}
   m_CullTransparentMesh: 1
+--- !u!114 &291653902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291653897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &298321415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,6 +1825,7 @@ GameObject:
   - component: {fileID: 305920497}
   - component: {fileID: 305920496}
   - component: {fileID: 305920495}
+  - component: {fileID: 305920498}
   m_Layer: 5
   m_Name: slot4
   m_TagString: Hotbar
@@ -1818,10 +1867,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   quantity: 0
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 0}
-  quantityText: {fileID: 0}
 --- !u!114 &305920496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1860,6 +1905,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305920493}
   m_CullTransparentMesh: 1
+--- !u!114 &305920498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305920493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &317387698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +2008,7 @@ GameObject:
   - component: {fileID: 325085054}
   - component: {fileID: 325085053}
   - component: {fileID: 325085052}
+  - component: {fileID: 325085055}
   m_Layer: 5
   m_Name: slot1
   m_TagString: Hotbar
@@ -1988,11 +2049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 06a7f18d2b525c348bf350837ffb345d, type: 2}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 1031589138}
-  quantityText: {fileID: 2119988843}
+  quantity: 0
 --- !u!114 &325085053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2031,6 +2088,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325085050}
   m_CullTransparentMesh: 1
+--- !u!114 &325085055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325085050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &325405451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2115,7 @@ GameObject:
   - component: {fileID: 325405455}
   - component: {fileID: 325405454}
   - component: {fileID: 325405453}
+  - component: {fileID: 325405456}
   m_Layer: 5
   m_Name: slot3
   m_TagString: Hotbar
@@ -2084,10 +2157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   quantity: 0
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 0}
-  quantityText: {fileID: 0}
 --- !u!114 &325405454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,6 +2195,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325405451}
   m_CullTransparentMesh: 1
+--- !u!114 &325405456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325405451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &360097710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2222,7 @@ GameObject:
   - component: {fileID: 360097714}
   - component: {fileID: 360097713}
   - component: {fileID: 360097712}
+  - component: {fileID: 360097715}
   m_Layer: 5
   m_Name: slot13
   m_TagString: Inventory
@@ -2178,11 +2263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 70681692}
-  quantityText: {fileID: 1704242722}
+  quantity: 0
 --- !u!114 &360097713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2221,6 +2302,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360097710}
   m_CullTransparentMesh: 1
+--- !u!114 &360097715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360097710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &362396479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,6 +3245,7 @@ GameObject:
   - component: {fileID: 560747572}
   - component: {fileID: 560747571}
   - component: {fileID: 560747570}
+  - component: {fileID: 560747573}
   m_Layer: 5
   m_Name: slot12
   m_TagString: Inventory
@@ -3189,11 +3286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 298321417}
-  quantityText: {fileID: 1366120358}
+  quantity: 0
 --- !u!114 &560747571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3232,6 +3325,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560747568}
   m_CullTransparentMesh: 1
+--- !u!114 &560747573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560747568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &567879131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,7 +3792,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1507127993}
-  - {fileID: 1970659796}
   m_Father: {fileID: 1977216186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4229,6 +4336,7 @@ GameObject:
   - component: {fileID: 699588133}
   - component: {fileID: 699588132}
   - component: {fileID: 699588131}
+  - component: {fileID: 699588134}
   m_Layer: 5
   m_Name: slot3
   m_TagString: Inventory
@@ -4269,11 +4377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
-  quantity: 49
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 1898632058}
-  quantityText: {fileID: 1583926299}
+  quantity: 1
 --- !u!114 &699588132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4312,6 +4416,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699588129}
   m_CullTransparentMesh: 1
+--- !u!114 &699588134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699588129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5306,6 +5425,7 @@ GameObject:
   - component: {fileID: 908500516}
   - component: {fileID: 908500515}
   - component: {fileID: 908500514}
+  - component: {fileID: 908500517}
   m_Layer: 5
   m_Name: slot7
   m_TagString: Inventory
@@ -5346,11 +5466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 170735196}
-  quantityText: {fileID: 1954269150}
+  quantity: 0
 --- !u!114 &908500515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5389,6 +5505,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908500512}
   m_CullTransparentMesh: 1
+--- !u!114 &908500517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908500512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &945111894
 GameObject:
   m_ObjectHideFlags: 0
@@ -5812,6 +5943,7 @@ GameObject:
   - component: {fileID: 1028092158}
   - component: {fileID: 1028092157}
   - component: {fileID: 1028092156}
+  - component: {fileID: 1028092159}
   m_Layer: 5
   m_Name: slot5
   m_TagString: Inventory
@@ -5851,12 +5983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe9fbcfa60a3d440a3005cffbd7141b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 836736192}
-  quantityText: {fileID: 1825116902}
+  item: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
+  quantity: 66
 --- !u!114 &1028092157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5895,6 +6023,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028092154}
   m_CullTransparentMesh: 1
+--- !u!114 &1028092159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028092154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1031589136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6152,8 +6295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f63296bcbc1a884d9391e8f59707229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: []
   panels: []
   inventoriesRoot: {fileID: 633381273}
+  hotbarTransform: {fileID: 1860769224}
+  itemTest: {fileID: 11400000, guid: 06a7f18d2b525c348bf350837ffb345d, type: 2}
 --- !u!114 &1045520960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6517,6 +6663,7 @@ GameObject:
   - component: {fileID: 1203281002}
   - component: {fileID: 1203281001}
   - component: {fileID: 1203281003}
+  - component: {fileID: 1203281004}
   m_Layer: 5
   m_Name: slot1
   m_TagString: Inventory
@@ -6594,12 +6741,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe9fbcfa60a3d440a3005cffbd7141b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 1078759312}
-  quantityText: {fileID: 290548054}
+  item: {fileID: 11400000, guid: 06a7f18d2b525c348bf350837ffb345d, type: 2}
+  quantity: 0
+--- !u!114 &1203281004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203280999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1246278933
 GameObject:
   m_ObjectHideFlags: 0
@@ -6746,6 +6904,7 @@ GameObject:
   - component: {fileID: 1316606684}
   - component: {fileID: 1316606683}
   - component: {fileID: 1316606682}
+  - component: {fileID: 1316606685}
   m_Layer: 5
   m_Name: slot10
   m_TagString: Inventory
@@ -6786,11 +6945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 386966528}
-  quantityText: {fileID: 676052609}
+  quantity: 0
 --- !u!114 &1316606683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6829,6 +6984,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316606680}
   m_CullTransparentMesh: 1
+--- !u!114 &1316606685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316606680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1318218675
 GameObject:
   m_ObjectHideFlags: 0
@@ -7366,6 +7536,7 @@ GameObject:
   - component: {fileID: 1479128257}
   - component: {fileID: 1479128256}
   - component: {fileID: 1479128255}
+  - component: {fileID: 1479128258}
   m_Layer: 5
   m_Name: slot16
   m_TagString: Inventory
@@ -7406,11 +7577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 945111896}
-  quantityText: {fileID: 2073329101}
+  quantity: 0
 --- !u!114 &1479128256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7449,6 +7616,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479128253}
   m_CullTransparentMesh: 1
+--- !u!114 &1479128258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479128253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1482038953
 GameObject:
   m_ObjectHideFlags: 0
@@ -7536,6 +7718,7 @@ GameObject:
   - component: {fileID: 1487841114}
   - component: {fileID: 1487841113}
   - component: {fileID: 1487841112}
+  - component: {fileID: 1487841115}
   m_Layer: 5
   m_Name: slot4
   m_TagString: Inventory
@@ -7576,11 +7759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 362396481}
-  quantityText: {fileID: 837013975}
+  quantity: 0
 --- !u!114 &1487841113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7619,6 +7798,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487841110}
   m_CullTransparentMesh: 1
+--- !u!114 &1487841115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487841110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1496721896
 GameObject:
   m_ObjectHideFlags: 0
@@ -8077,6 +8271,7 @@ GameObject:
   - component: {fileID: 1609786765}
   - component: {fileID: 1609786764}
   - component: {fileID: 1609786763}
+  - component: {fileID: 1609786766}
   m_Layer: 5
   m_Name: slot14
   m_TagString: Inventory
@@ -8117,11 +8312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 448885250}
-  quantityText: {fileID: 363765183}
+  quantity: 0
 --- !u!114 &1609786764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8160,6 +8351,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609786761}
   m_CullTransparentMesh: 1
+--- !u!114 &1609786766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609786761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1704242720
 GameObject:
   m_ObjectHideFlags: 0
@@ -8381,6 +8587,7 @@ GameObject:
   - component: {fileID: 1808120551}
   - component: {fileID: 1808120550}
   - component: {fileID: 1808120549}
+  - component: {fileID: 1808120552}
   m_Layer: 5
   m_Name: slot11
   m_TagString: Inventory
@@ -8421,11 +8628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 988576649}
-  quantityText: {fileID: 25676902}
+  quantity: 0
 --- !u!114 &1808120550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8464,6 +8667,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808120547}
   m_CullTransparentMesh: 1
+--- !u!114 &1808120552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808120547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1815465268
 GameObject:
   m_ObjectHideFlags: 0
@@ -8498,6 +8716,7 @@ RectTransform:
   - {fileID: 780529481}
   - {fileID: 982954534}
   - {fileID: 1860769224}
+  - {fileID: 1960845202}
   m_Father: {fileID: 1318218679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8651,6 +8870,7 @@ GameObject:
   - component: {fileID: 1855735437}
   - component: {fileID: 1855735436}
   - component: {fileID: 1855735435}
+  - component: {fileID: 1855735438}
   m_Layer: 5
   m_Name: slot6
   m_TagString: Inventory
@@ -8691,11 +8911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 224407195}
-  quantityText: {fileID: 655317125}
+  quantity: 0
 --- !u!114 &1855735436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8734,6 +8950,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855735433}
   m_CullTransparentMesh: 1
+--- !u!114 &1855735438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855735433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1860769223
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,7 +8995,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1960845202}
   - {fileID: 325085051}
   - {fileID: 92789674}
   - {fileID: 325405452}
@@ -8960,6 +9190,7 @@ GameObject:
   - component: {fileID: 1870518127}
   - component: {fileID: 1870518126}
   - component: {fileID: 1870518125}
+  - component: {fileID: 1870518128}
   m_Layer: 5
   m_Name: slot9
   m_TagString: Inventory
@@ -9000,11 +9231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 2111865980}
-  quantityText: {fileID: 145582936}
+  quantity: 0
 --- !u!114 &1870518126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9043,6 +9270,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870518123}
   m_CullTransparentMesh: 1
+--- !u!114 &1870518128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870518123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1898632056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9354,17 +9596,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960845201}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 429767708}
-  m_Father: {fileID: 1860769224}
+  m_Father: {fileID: 1815465269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
+  m_AnchoredPosition: {x: -196, y: -262}
   m_SizeDelta: {x: 50, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1960845203
@@ -9461,41 +9703,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960845201}
   m_CullTransparentMesh: 1
---- !u!1 &1970659795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1970659796}
-  m_Layer: 5
-  m_Name: Panel2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1970659796
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970659795}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 633381273}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1975292047
 GameObject:
   m_ObjectHideFlags: 0
@@ -9508,6 +9715,7 @@ GameObject:
   - component: {fileID: 1975292051}
   - component: {fileID: 1975292050}
   - component: {fileID: 1975292049}
+  - component: {fileID: 1975292052}
   m_Layer: 5
   m_Name: slot8
   m_TagString: Inventory
@@ -9548,11 +9756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 201725475}
-  quantityText: {fileID: 1863464784}
+  quantity: 0
 --- !u!114 &1975292050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9591,6 +9795,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975292047}
   m_CullTransparentMesh: 1
+--- !u!114 &1975292052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975292047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &1977216185
 GameObject:
   m_ObjectHideFlags: 0
@@ -9682,6 +9901,7 @@ GameObject:
   - component: {fileID: 2017282504}
   - component: {fileID: 2017282503}
   - component: {fileID: 2017282502}
+  - component: {fileID: 2017282505}
   m_Layer: 5
   m_Name: slot17
   m_TagString: Inventory
@@ -9722,11 +9942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  quantity: 1
-  hoverEnabledFilled: 0
-  hotbarSlot: 0
-  itemImage: {fileID: 12325919}
-  quantityText: {fileID: 631034846}
+  quantity: 0
 --- !u!114 &2017282503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9765,6 +9981,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017282500}
   m_CullTransparentMesh: 1
+--- !u!114 &2017282505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017282500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b85e92fdc17b14e89c766f48303810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 0}
+  itemImage: {fileID: 0}
+  quantityText: {fileID: 0}
 --- !u!1 &2044045347
 GameObject:
   m_ObjectHideFlags: 0

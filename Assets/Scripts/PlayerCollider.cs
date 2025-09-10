@@ -18,7 +18,7 @@ public class PlayerCollider : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true; // stops rigidbody from tipping over
-        rb.useGravity = true;     // enable gravity
+        rb.useGravity = true;     // enables gravity
     }
 
     void Update()
@@ -40,10 +40,9 @@ public class PlayerCollider : MonoBehaviour
                 shiftMultiplier = 1;
             }
             currentForce *= shiftMultiplier;
-            // Apply movement force
+
             MoveWithForce(movement, currentForce);
 
-            // Flip sprite
 
                 if (x > 0)
                 {
@@ -55,7 +54,6 @@ public class PlayerCollider : MonoBehaviour
                 }
         }
 
-        // Debug: ground ray
             Debug.DrawRay(raycastPos.position, -transform.up * 0.1f, Color.red);
 
         // Example jump (optional)
@@ -80,8 +78,5 @@ public class PlayerCollider : MonoBehaviour
         }
     }
 
-    // bool IsGrounded()
-    // {
-    //     return Physics.Raycast(raycastPos.position, Vector3.down, 0.2f, collisionDetector);
-    // }
+
 }
