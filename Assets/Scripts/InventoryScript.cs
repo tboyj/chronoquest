@@ -1,37 +1,50 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class InventoryScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public List<ItemStorable> items = new List<ItemStorable>();
+    public static List<InventorySlot> inventory = new List<InventorySlot>();
+    public List<RectTransform> panels = new List<RectTransform>();
+    public Transform inventoriesRoot;
     
-    public void AddItem(ItemStorable item)
+    public void AddItem(InventorySlot item)
     {
-        items.Add(item);
+        inventory.Add(item);
     }
 
-    public void RemoveItem(ItemStorable item)
+    public void RemoveItem(InventorySlot item)
     {
-        items.Remove(item);
+        inventory.Remove(item);
     }
+
     void Start()
     {
-        
-        
+        ScanInventory();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+            
+
 
     }
 
-
+    void ScanInventory()
+    {
+        foreach (Transform panel in inventoriesRoot)
+        {
+            foreach (Transform slot in panel)
+            {
+                
+            }
+        }
+    }
 }
 

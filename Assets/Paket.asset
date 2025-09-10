@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff5402f46aa682b4d8e1c1d5d79c2559, type: 3}
-  m_Name: MagnifyingGlass
+  m_Name: Paket
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2961246136862446188, guid: 37f75017b34e9e844b2ac2a8b1256751, type: 3}
-  category: 3
-  sprite: {fileID: 21300000, guid: c897f71cfe2b78743a0b689e8aff0de2, type: 3}
-  itemName: Jim's Magnifying Glass
-  id: 0
-  maxStackSize: 1
+  prefab: {fileID: 2961246136862446188, guid: c825d0d1b80792b44b4106e0e8060f13, type: 3}
+  category: 7
+  sprite: {fileID: 21300000, guid: c6396ebe703a73b4493845793919e71c, type: 3}
+  itemName: Paket Home Phoenix
+  id: 1
+  maxStackSize: 9999
+  stackable: 1
   rarity: 5
-  description: This is Jim's magnifying glass. Press Q near something that needs
-    a closer look.
+  description: DEVELOPER TEST
   canBeDropped: 0
   canBeGiven: 0

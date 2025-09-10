@@ -14,6 +14,9 @@ public class ItemStorable : ScriptableObject
     public Sprite sprite;
     
     public string itemName;
+    public int id;
+    public int maxStackSize;
+    public bool stackable;
     public ItemRarity rarity;
     public string description;
     public bool canBeDropped;
