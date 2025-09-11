@@ -8,54 +8,92 @@ using UnityEngine.UIElements;
 
 public class InventoryScript : MonoBehaviour
 {
-    public List<InventorySlot> inventory = new List<InventorySlot>();
+    public static InventoryScript instance;
+
+    public List<InventoryItem> inventory = new List<InventoryItem>();
     public List<RectTransform> panels = new List<RectTransform>();
     public Transform inventoriesRoot;
     public Transform hotbarTransform;
-    public ItemStorable itemTest;
+    public int inventorySize = 48;
+    [Tooltip("DEVELOPER USE ONLY - Item to be assigned to player inventory on game start. For testing purposes.")]
+    public ItemStorable itemTemporary;
 
-    public void AddItem(InventorySlot item)
+
+    public void AddItem(InventoryItem item)
     {
-        inventory.Add(item);
-    }
+        if (inventory.Contains(item))
+        {
+            if (item.item.stackable)
+            {
+                if (item.quantity < item.item.maxStackSize)
+                {
+                    item.quantity += 1;
+                }
+                else
+                {
+                    Debug.Log("Item stack full");
+                    inventory.Add(item);
+                }
+            }
+        }
+        else
+        {
+            int ic = inventory.Count;
+            while (ic < inventory.Count)
+            {
+                if (inventory[ic].item == null)
+                {
+                    inventory[ic] = item;
+                    ic = inventory.Count;
+                    return;
 
-    public void RemoveItem(InventorySlot item)
+                }
+                ic++;
+            }
+
+        }
+    }
+    public InventoryItem GetItemFromIndex(int index)
+    {
+        return inventory[index];
+    }
+    public int returnInventorySize()
+    {
+        return inventory.Count;
+    }
+    public void RemoveItem(InventoryItem item)
     {
         inventory.Remove(item);
     }
 
-    void Start()
-    {
-        foreach (Transform slot in hotbarTransform)
+    void Awake()
+{
+    instance = this;
+    // Fill inventory with empty slots
+        for (int i = 0; i < inventorySize; i++)
         {
-            Debug.Log(slot.name);
-            inventory.Add(slot.GetComponent<InventorySlot>());
+            inventory.Add(new InventoryItem());
         }
-        foreach (Transform panel in inventoriesRoot)
-            {
-                foreach (Transform slot in panel)
-                {
-                    Debug.Log(slot.name);
-                    inventory.Add(slot.GetComponent<InventorySlot>());
-                }
-            }
-        
-        
 
-    }
+    // assign a starter item
+    inventory[0] = new InventoryItem(itemTemporary, 67);
+}
 
     // Update is called once per frame
     void Update()
     {
         
-            
+            for (int i = 0; i < inventory.Count; i++)
+            {
+            Debug.Log(inventory[i].item.name + " x" + inventory[i].quantity+"\nSlot: "+i);
+            }
 
 
     }
 
-    void ScanInventory()
-    {
+    // void ScanInventory()
+    // {
 
-    }
+    // }
 }
 
