@@ -8,6 +8,7 @@ TagManager:
   - TimeCube
   - Inventory
   - Hotbar
+  - Object
   layers:
   - Default
   - TransparentFX

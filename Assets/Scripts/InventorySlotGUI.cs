@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,7 +9,7 @@ using Image = UnityEngine.UI.Image;
 public class InventorySlotGUI : MonoBehaviour
 {
     // Start is called before the first frame update
-    public InventoryItem slot;
+    public InventorySlot slot;
     public Image itemImage;
     public TextMeshProUGUI quantityText;
     public int slotIndex;
@@ -46,8 +45,9 @@ public class InventorySlotGUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slot = InventoryScript.instance.GetItemFromIndex(slotIndex);
-        UpdateSlotGUI();
+            slot = InventoryScript.instance.GetItemFromIndex(slotIndex);
+            UpdateSlotGUI();
+        
     }
     public void UpdateSlotGUI()
     {

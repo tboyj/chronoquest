@@ -1,25 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro.EditorUtilities;
-using UnityEditor.Search;
+using TMPro;
+
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class InventoryScript : MonoBehaviour
 {
     public static InventoryScript instance;
 
-    public List<InventoryItem> inventory = new List<InventoryItem>();
+    public List<InventorySlot> inventory = new List<InventorySlot>();
     public List<RectTransform> panels = new List<RectTransform>();
     public Transform inventoriesRoot;
     public Transform hotbarTransform;
-    public int inventorySize = 48;
+    public int inventorySize = 49;
     [Tooltip("DEVELOPER USE ONLY - Item to be assigned to player inventory on game start. For testing purposes.")]
     public ItemStorable itemTemporary;
+    public ItemStorable itemTemporary2;
 
 
-    public void AddItem(InventoryItem item)
+    public void AddItem(InventorySlot item)
     {
         if (inventory.Contains(item))
         {
@@ -53,7 +53,7 @@ public class InventoryScript : MonoBehaviour
 
         }
     }
-    public InventoryItem GetItemFromIndex(int index)
+    public InventorySlot GetItemFromIndex(int index)
     {
         return inventory[index];
     }
@@ -61,34 +61,41 @@ public class InventoryScript : MonoBehaviour
     {
         return inventory.Count;
     }
-    public void RemoveItem(InventoryItem item)
+    public void RemoveItem(InventorySlot item)
     {
         inventory.Remove(item);
     }
 
     void Awake()
-{
-    instance = this;
-    // Fill inventory with empty slots
+    {
+        instance = this;
+        // Fill inventory with empty slots
         for (int i = 0; i < inventorySize; i++)
         {
-            inventory.Add(new InventoryItem());
+            inventory.Add(new InventorySlot());
         }
 
-    // assign a starter item
-    inventory[0] = new InventoryItem(itemTemporary, 67);
-}
+        // assign a starter item
+        inventory[0] = new InventorySlot(itemTemporary, 67);
+        inventory[1] = new InventorySlot(itemTemporary2, 67);
+    }
 
     // Update is called once per frame
     void Update()
     {
         
-            for (int i = 0; i < inventory.Count; i++)
-            {
-            Debug.Log(inventory[i].item.name + " x" + inventory[i].quantity+"\nSlot: "+i);
-            }
 
 
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Object"))
+        {
+            Debug.Log("Dattebayo!");
+            ItemStorable storable = other.GetComponent<ItemInWorld>().item;
+            AddItem(new InventorySlot(storable, 1));
+        }
     }
 
     // void ScanInventory()

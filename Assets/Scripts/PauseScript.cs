@@ -16,7 +16,7 @@ public class PauseScript : MonoBehaviour
     public bool isInventory = false;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

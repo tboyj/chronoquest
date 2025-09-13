@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Unity.VisualStudio.Editor;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
-public class InventoryItem
+public class InventorySlot
 {
     // Start is called before the first frame update
     public ItemStorable item;
@@ -16,17 +16,17 @@ public class InventoryItem
     
   
 
-    public InventoryItem()
+    public InventorySlot()
     {
         item = null;
         quantity = 0;
     }
-    public InventoryItem(ItemStorable item)
+    public InventorySlot(ItemStorable item)
     {
         this.item = item;
         quantity = 1;
     }
-    public InventoryItem(ItemStorable item, int quantity)
+    public InventorySlot(ItemStorable item, int quantity)
     {
         this.item = item;
         this.quantity = quantity;
