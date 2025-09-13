@@ -19,25 +19,27 @@ public class InventorySlotGUI : MonoBehaviour
     {
         slot = InventoryScript.instance.GetItemFromIndex(slotIndex); // just data
 
-        if (slot.item != null && slot.quantity > 0)
-        {
-            itemImage.sprite = slot.item.sprite;
-            itemImage.enabled = true;
+            if (slot.item != null && slot.quantity > 0)
+            {
+                itemImage.sprite = slot.item.sprite;
+                itemImage.enabled = true;
 
-            if (slot.item.stackable && slot.quantity > 1)
-                quantityText.text = "x" + slot.quantity;
+                if (slot.item.stackable && slot.quantity > 1)
+                    quantityText.text = "x" + slot.quantity;
+                else
+                    quantityText.text = "";
+            }
             else
+            {
+                itemImage.sprite = null;
+                itemImage.enabled = false;
                 quantityText.text = "";
-        }
-        else
-        {
-            itemImage.sprite = null;
-            itemImage.enabled = false;
-            quantityText.text = "";
+                
         }
     }
     else
     {
+        
         Debug.LogWarning($"Slot index {slotIndex} out of range!");
     }
 }
@@ -46,6 +48,7 @@ public class InventorySlotGUI : MonoBehaviour
     void Update()
     {
             slot = InventoryScript.instance.GetItemFromIndex(slotIndex);
+        Debug.Log("Slot selected: " + slot.item.name);
             UpdateSlotGUI();
         
     }
@@ -66,11 +69,11 @@ public class InventorySlotGUI : MonoBehaviour
                 quantityText.text = "";
             }
         }
-            else
-            {
-                itemImage.sprite = null;
-                itemImage.enabled = false;
-                quantityText.text = "";
-            }
+        else
+        {
+            itemImage.sprite = null;
+            itemImage.enabled = false;
+            quantityText.text = "";
+        }
     }
 }

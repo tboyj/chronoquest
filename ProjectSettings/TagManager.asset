@@ -9,6 +9,7 @@ TagManager:
   - Inventory
   - Hotbar
   - Object
+  - Recievable
   layers:
   - Default
   - TransparentFX

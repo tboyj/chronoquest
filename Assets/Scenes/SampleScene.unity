@@ -8607,7 +8607,7 @@ GameObject:
   - component: {fileID: 958613193}
   - component: {fileID: 958613197}
   m_Layer: 0
-  m_Name: ObjectArea
+  m_Name: ObjectPickupArea
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

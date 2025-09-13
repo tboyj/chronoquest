@@ -17,6 +17,13 @@ public class ItemInWorld : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    void OnTriggerStay()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            
+        }
     }
 }
