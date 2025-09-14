@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5402f46aa682b4d8e1c1d5d79c2559, type: 3}
   m_Name: Paket
   m_EditorClassIdentifier: 
-  quantity: 1
   prefab: {fileID: 2961246136862446188, guid: c825d0d1b80792b44b4106e0e8060f13, type: 3}
   category: 7
   sprite: {fileID: 21300000, guid: c6396ebe703a73b4493845793919e71c, type: 3}
@@ -23,4 +22,4 @@ MonoBehaviour:
   rarity: 5
   description: DEVELOPER TEST
   canBeDropped: 0
-  canBeGiven: 0
+  canBeGiven: 1

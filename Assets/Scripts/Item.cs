@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
-public class InventorySlot
+public class Item
 {
     // Start is called before the first frame update
     public ItemStorable item;
@@ -16,17 +16,17 @@ public class InventorySlot
     
   
 
-    public InventorySlot()
+    public Item()
     {
         item = null;
         quantity = 0;
     }
-    public InventorySlot(ItemStorable item)
+    public Item(ItemStorable item)
     {
         this.item = item;
         quantity = 1;
     }
-    public InventorySlot(ItemStorable item, int quantity)
+    public Item(ItemStorable item, int quantity)
     {
         this.item = item;
         this.quantity = quantity;

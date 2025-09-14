@@ -1,66 +1,97 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HoldingItemScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Visual References")]
     public SpriteRenderer itemImage;
     public SpriteRenderer jimSprite;
-    public InventorySlot heldItem;
+    public Image selected;
+
+    [Header("Hotbar Settings")]
+    public int hotbarSize = 4;
+    public int hotbarItem = 0;
+
+    [Header("Fallback Item")]
     public ItemStorable fauxItem;
-    public InventorySlot faux;
-    public int hotbarItem;
+    private Item faux;
+
+    private Item heldItem;
+
     void Start()
     {
-        faux = new InventorySlot(fauxItem, 1);
-        heldItem = InventoryScript.instance.GetItemFromIndex(0); // just data
+        faux = new Item(fauxItem, 1);
+        heldItem = GetHotbarItem(hotbarItem);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        itemImage.flipX = jimSprite.flipX;
+        // Only update heldItem if index is valid
+        if (hotbarItem >= 0 && hotbarItem < hotbarSize)
+        {
+            heldItem = GetHotbarItem(hotbarItem);
+        }
 
+        // Sync visuals
+        selected.sprite = itemImage.sprite;
+
+        if (heldItem != null && heldItem.item != null)
+        {
+            itemImage.flipX = jimSprite.flipX;
+            itemImage.sprite = heldItem.item.sprite;
+            selected.enabled = true;
+            itemImage.enabled = true;
+        }
+        else
+        {
+            itemImage.flipX = jimSprite.flipX;
+            itemImage.enabled = false;
+            selected.enabled = false;
+        }
+
+        // Hotbar key checks
         CheckHotbarKey(KeyCode.Alpha1, 0);
         CheckHotbarKey(KeyCode.Alpha2, 1);
         CheckHotbarKey(KeyCode.Alpha3, 2);
         CheckHotbarKey(KeyCode.Alpha4, 3);
-
-
-        if (heldItem != null && heldItem.item != null)
-        {
-            itemImage.sprite = heldItem.item.sprite;
-            itemImage.enabled = true;
-
-        }
-        else
-        {
-            itemImage.enabled = false;
-
-        }
     }
+
     void CheckHotbarKey(KeyCode key, int index)
     {
         if (Input.GetKeyDown(key))
         {
-            InventorySlot slot = InventoryScript.instance.GetItemFromIndex(index);
-            hotbarItem = index;
+            Item slot = GetHotbarItem(index);
 
-            // If same item is already held → clear it
+            if (slot == null || slot.item == null)
+            {
+                Debug.LogWarning($"[Hotbar] Ignored null item at index {index}");
+                return;
+            }
+
+            // Deselect if same item
             if (heldItem != null && slot.item == heldItem.item)
             {
                 heldItem = null;
+                hotbarItem = -1;
+                selected.enabled = false;
+                itemImage.enabled = false;
+                Debug.Log("[Hotbar] Deselected held item.");
             }
-            else if (slot.item != null) // Switch to new item
+            else
             {
                 heldItem = slot;
-                Debug.Log("Switched to: " + heldItem.item.name);
+                hotbarItem = index;
+                selected.enabled = true;
+                itemImage.enabled = true;
+                Debug.Log($"[Hotbar] Switched to: {heldItem.item.name}");
             }
-        }
 
+            InventoryScript.instance.SetSelectedIndex(index);
+        }
+    }
+
+    Item GetHotbarItem(int index)
+    {
+        return InventoryScript.instance.GetItemFromIndex(index);
     }
 }
-
-

@@ -6,18 +6,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
-public class InventorySlotGUI : MonoBehaviour
+public class ItemGUI : MonoBehaviour
 {
     // Start is called before the first frame update
-    public InventorySlot slot;
+    public Item slot;
     public Image itemImage;
     public TextMeshProUGUI quantityText;
     public int slotIndex;
     void Start()
-{
-    if (slotIndex < InventoryScript.instance.returnInventorySize())
     {
-        slot = InventoryScript.instance.GetItemFromIndex(slotIndex); // just data
+        RefreshFromInventory();    
+
+    }
+    public void RefreshFromInventory()
+    {
+            if (slotIndex < InventoryScript.instance.ReturnInventorySize())
+        {
+            slot = InventoryScript.instance.GetItemFromIndex(slotIndex); // just data
 
             if (slot.item != null && slot.quantity > 0)
             {
@@ -32,27 +37,25 @@ public class InventorySlotGUI : MonoBehaviour
             else
             {
                 itemImage.sprite = null;
+
                 itemImage.enabled = false;
                 quantityText.text = "";
-                
+
+            }
+        }
+        else
+        {
+
+            Debug.LogWarning($"Slot index {slotIndex} out of range!");
         }
     }
-    else
-    {
-        
-        Debug.LogWarning($"Slot index {slotIndex} out of range!");
-    }
-}
-
     // Update is called once per frame
-    void Update()
-    {
-            slot = InventoryScript.instance.GetItemFromIndex(slotIndex);
-        Debug.Log("Slot selected: " + slot.item.name);
-            UpdateSlotGUI();
+    // void Update()
+    // {
+    //         UpdateSlotGUI(slot);
         
-    }
-    public void UpdateSlotGUI()
+    // }
+    public void UpdateSlotGUI(Item slot)
     {
         if (slot.item != null && slot.quantity > 0)
         {

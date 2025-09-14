@@ -5,25 +5,24 @@ using UnityEngine;
 public class ItemInWorld : MonoBehaviour
 {
     // Start is called before the first frame update
+    public int amountOfItemsHere;
     public ItemStorable item;
-    public InventorySlot realItem;
     public SpriteRenderer rend;
+    public bool takeable;
     void Start()
     {
-        realItem = new InventorySlot(item);
-        rend.sprite = realItem.item.sprite;
+        rend.sprite = item.sprite;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-    void OnTriggerStay()
+    public Item ReturnItemForInventory()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            
-        }
+        amountOfItemsHere--;
+        return new Item(item,1);
     }
+
 }
