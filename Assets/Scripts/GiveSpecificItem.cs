@@ -16,7 +16,7 @@ public class GiveSpecificItem : MonoBehaviour
             int index = InventoryScript.instance.GetSelectedIndex();
             Item temp = InventoryScript.instance.GetItemFromIndex(index);
 
-            if (temp != null && index > -1 && temp.item.canBeGiven)
+            if (temp != null && index > -1 && temp.item.canBeGiven && InventoryScript.instance.holdingItem)
             {
                 items.Add(temp);
                 InventoryScript.instance.RemoveItem(index);

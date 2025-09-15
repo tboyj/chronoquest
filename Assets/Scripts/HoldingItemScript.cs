@@ -75,6 +75,7 @@ public class HoldingItemScript : MonoBehaviour
                 hotbarItem = -1;
                 selected.enabled = false;
                 itemImage.enabled = false;
+                InventoryScript.instance.SetHoldingCondition(false);
                 Debug.Log("[Hotbar] Deselected held item.");
             }
             else
@@ -83,6 +84,7 @@ public class HoldingItemScript : MonoBehaviour
                 hotbarItem = index;
                 selected.enabled = true;
                 itemImage.enabled = true;
+                InventoryScript.instance.SetHoldingCondition(true);
                 Debug.Log($"[Hotbar] Switched to: {heldItem.item.name}");
             }
 
