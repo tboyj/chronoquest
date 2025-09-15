@@ -8,18 +8,18 @@ using UnityEngine;
 public class InventoryScript : MonoBehaviour
 {
     public static InventoryScript instance;
-
+    public bool holdingItem = true;
     public List<Item> inventory = new List<Item>();
-    public List<RectTransform> panels = new List<RectTransform>();
+    // public List<RectTransform> panels = new List<RectTransform>();
     public Transform inventoriesRoot;
     public Transform hotbarTransform;
-    public int inventorySize = 49;
+    private int inventorySize = 49;
     [Tooltip("DEVELOPER USE ONLY - Item to be assigned to player inventory on game start. For testing purposes.")]
     public ItemStorable itemTemporary;
     public ItemStorable itemTemporary2;
     private bool objectInTrigger = false;
     private ItemInWorld currentStorable;
-
+    private Collider currentCollision;
 
     private int indexOfSelected = 0;
     public void AddItem(Item addingItem)
@@ -80,7 +80,14 @@ public class InventoryScript : MonoBehaviour
     {
         return indexOfSelected;
     }
-
+    public bool GetHoldingCondition()
+    {
+        return holdingItem;
+    }
+    public void SetHoldingCondition(bool setter)
+    {
+        holdingItem = setter;
+    }
     public int ReturnInventorySize()
     {
         return inventory.Count;
@@ -128,14 +135,16 @@ public class InventoryScript : MonoBehaviour
         }
     }
 
-    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Object"))
         {
             currentStorable = other.GetComponent<ItemInWorld>();
             objectInTrigger = true;
+
         }
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -146,14 +155,29 @@ public class InventoryScript : MonoBehaviour
             currentStorable = null;
         }
     }
-public void RefreshAllGUISlots()
-{
-    ItemGUI[] allGUIs = FindObjectsOfType<ItemGUI>();
-    foreach (ItemGUI gui in allGUIs)
+    public void RefreshAllGUISlots()
     {
-        gui.RefreshFromInventory();
+        ItemGUI[] allGUIs = FindObjectsOfType<ItemGUI>();
+        foreach (ItemGUI gui in allGUIs)
+        {
+            gui.RefreshFromInventory();
+        }
     }
-}
+    public void checkIfIGiveSomething()
+    {
+        if (objectInTrigger && Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Q Pressed");
+            int index = GetSelectedIndex();
+            Item temp = GetItemFromIndex(index);
+
+            if (temp != null && index > -1 && temp.item.canBeGiven && holdingItem)
+            {
+                currentCollision.GetComponent<InventoryScript>().AddItem(temp);
+                RemoveItem(index);
+            }
+        }
+    }
 
 
     // void ScanInventory()
