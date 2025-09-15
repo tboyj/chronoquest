@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GiveSpecificItem : MonoBehaviour
+public abstract class ItemHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // This script lets the player give the ItemHandler an item. Will be expanded into doors, interaction checks, etc.
     public List<Item> items = new List<Item>();
-    private bool playerInTrigger = false;
+    protected bool playerInTrigger = false;
 
-    private void Update()
+    void Update()
     {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.Q))
+        doCheck();
+    }
+    protected virtual void doCheck()
+    {
+                if (playerInTrigger && Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("Q Pressed");
             int index = InventoryScript.instance.GetSelectedIndex();
@@ -23,8 +27,7 @@ public class GiveSpecificItem : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -32,7 +35,7 @@ public class GiveSpecificItem : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
