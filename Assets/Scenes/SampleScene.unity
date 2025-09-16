@@ -12604,8 +12604,8 @@ MonoBehaviour:
   sprite: {fileID: 321782555}
   amITurnedOn: 0
   duration: 3
-  typeOfCondition: gate
   affectedObject: {fileID: 1814564087}
+  type: Gate
 --- !u!1 &1140579283
 GameObject:
   m_ObjectHideFlags: 0

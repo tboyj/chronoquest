@@ -3,63 +3,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressActivationButton : ItemHandler
+public interface Gate
+{
+    void EnactCondition(bool trueOrFalse);
+    IEnumerator waitingFunction();
+}
+
+public class PressActivationButton : ItemHandler , Gate
 {
     public SpriteRenderer sprite;
     public bool amITurnedOn = false; // are you?
     [Range(0.5f, float.MaxValue)]
     public float duration;
-    public String typeOfCondition;
     public Transform affectedObject;
+    public enum ActivatedCondition { Gate, Button, Lever };
+    public ActivatedCondition type;
+
+
+    Gate gateRef;
     void Start()
     {
+        gateRef = this;
         sprite = transform.Find("Object").GetComponent<SpriteRenderer>();
         sprite.color = Color.green;
     }
-    protected override void HandleInteraction()
+    
+        void Gate.EnactCondition(bool trueOrFalse)
     {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        if (trueOrFalse)
         {
-            StartCoroutine(conditionRuntime());
-
+            sprite.color = Color.red;
+            amITurnedOn = true;
+            affectedObject.position = new Vector3(affectedObject.position.x, affectedObject.position.y + 3, affectedObject.position.z);
+        }
+        else
+        {
+            sprite.color = Color.green;
+            amITurnedOn = false;
+            affectedObject.position = new Vector3(affectedObject.position.x, affectedObject.position.y  - 3, affectedObject.position.z);
         }
     }
-    IEnumerator conditionRuntime()
+    IEnumerator Gate.waitingFunction()
     {
         Debug.Log("Step 1: Starting...");
         sprite.color = Color.red;
         amITurnedOn = true;
-        doCondition(typeOfCondition, amITurnedOn);
+        gateRef.EnactCondition(amITurnedOn);
         yield return new WaitForSeconds(duration);
         Debug.Log("Step 2: After delay");
         sprite.color = Color.green;
         amITurnedOn = false;
-        doCondition(typeOfCondition, amITurnedOn);
+        gateRef.EnactCondition(amITurnedOn);
     }
-    IEnumerator gate(bool tof)
-    {
 
-        float direction = tof ? 0.05f : -0.05f;
-        yield return new WaitForSeconds(.05f);
-        affectedObject.position += new Vector3(0, direction, 0);
-    }
-    public void doCondition(String condition, bool mode)
+    protected override void HandleInteraction()
     {
-
-        switch (typeOfCondition)
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && !amITurnedOn)
         {
-            case "gate":
-                activateGate(mode);
-                break;
-        }
-        // do a reverse condition
-    }
-
-    private void activateGate(bool tof)
-    {
-        for (int i = 0; i < 40; i++)
-        {
-            StartCoroutine(gate(tof));
+            switch (type)
+            {
+                case ActivatedCondition.Gate:
+                    StartCoroutine(gateRef.waitingFunction());
+                    break;
+            }
+            
         }
     }
+
+
 }
