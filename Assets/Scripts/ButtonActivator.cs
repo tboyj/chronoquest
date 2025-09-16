@@ -1,14 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class GateActivater : ItemHandler
+public class ButtonActivator : ItemHandler
 {
     public SpriteRenderer sprite;
     public bool amITurnedOn = false;
     public bool timedActivater = false;
     [Range(0.5f, float.MaxValue)]
     public float duration = 1f;
-
+    
     public Transform affectedObject;
 
     void Start()
@@ -24,6 +24,7 @@ public class GateActivater : ItemHandler
             if (timedActivater)
             {
                 StartCoroutine(OpenGateRoutine());
+                
             }
             else
             {
