@@ -16,7 +16,7 @@ public class PressActivationButton : ItemHandler
         sprite = transform.Find("Object").GetComponent<SpriteRenderer>();
         sprite.color = Color.green;
     }
-    protected override void doCheck()
+    protected override void HandleInteraction()
     {
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {

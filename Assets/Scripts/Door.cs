@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class Door : ItemHandler
 {
@@ -12,60 +8,61 @@ public class Door : ItemHandler
     public int quantityNeeded;
     public bool unlocked = false;
     public bool opened = false;
+
     void Start()
     {
         door = transform.Find("Object").GetComponent<SpriteRenderer>();
         doorPassageWay = transform.Find("Object").GetComponent<BoxCollider>();
     }
-    protected override void doCheck()
-{
-    if (quantityNeeded <= 0 && !unlocked)
+
+    protected override bool IsValidItem(Item item, int index)
     {
-        unlocked = true;
-        openDoor();
-        Debug.Log("Door unlocked.");
+        return base.IsValidItem(item, index) &&
+               !unlocked &&
+               item.item == itemWanted &&
+               quantityNeeded <= item.quantity;
     }
 
-    // Handle unlocking with item
-    if (playerInTrigger && Input.GetKeyDown(KeyCode.Q) && !unlocked)
+    protected override void OnItemReceived(Item item, int index)
     {
-        Debug.Log("Q Pressed");
-        int index = InventoryScript.instance.GetSelectedIndex();
-        Item temp = InventoryScript.instance.GetItemFromIndex(index);
-
-        if (temp != null && index > -1 && temp.item.canBeGiven && InventoryScript.instance.holdingItem)
+        if (quantityNeeded > 0)
         {
-            if (temp.item == itemWanted && quantityNeeded <= temp.quantity)
-            {
-                if (quantityNeeded > 0)
-                {
-                    quantityNeeded--;
-                    items.Add(temp);
-                    InventoryScript.instance.RemoveItem(index);
-                }
-            }
+            quantityNeeded--;
+            items.Add(item);
+            InventoryScript.instance.RemoveItem(index);
+        }
+
+        if (quantityNeeded <= 0 && !unlocked)
+        {
+            unlocked = true;
+            openDoor();
+            Debug.Log("Door unlocked.");
         }
     }
 
-    // Handle toggling door open/close after unlocked
-    if (unlocked && playerInTrigger && Input.GetKeyDown(KeyCode.E))
+    void Update()
     {
-        if (opened)
-            closeDoor();
-        else
-            openDoor();
+        base.HandleInteraction();
+
+        if (unlocked && playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        {
+            if (opened)
+                closeDoor();
+            else
+                openDoor();
+        }
     }
-}
-    // turns black (temp, will replace with open door texture)
-    protected void openDoor()
+
+    void openDoor()
     {
-        door.color = new Color(0, 0, 0);
+        door.color = Color.black;
         opened = true;
         doorPassageWay.enabled = false;
     }
-    protected void closeDoor()
+
+    void closeDoor()
     {
-        door.color = new Color(255, 255, 255);
+        door.color = Color.white;
         opened = false;
         doorPassageWay.enabled = true;
     }
