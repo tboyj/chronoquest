@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-public class TimedGateActivater : ItemHandler
+public class GateActivater : ItemHandler
 {
     public SpriteRenderer sprite;
     public bool amITurnedOn = false;
-
+    public bool timedActivater = false;
     [Range(0.5f, float.MaxValue)]
     public float duration = 1f;
 
@@ -21,7 +21,15 @@ public class TimedGateActivater : ItemHandler
     {
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && !amITurnedOn)
         {
-            StartCoroutine(OpenGateRoutine());
+            if (timedActivater)
+            {
+                StartCoroutine(OpenGateRoutine());
+            }
+            else
+            {
+                sprite.color = Color.red;
+                amITurnedOn = true; // infinite;
+            }
         }
     }
 

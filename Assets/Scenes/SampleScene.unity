@@ -12603,9 +12603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 321782555}
   amITurnedOn: 0
+  timedActivater: 1
   duration: 3
   affectedObject: {fileID: 1814564087}
-  type: Gate
 --- !u!1 &1140579283
 GameObject:
   m_ObjectHideFlags: 0
