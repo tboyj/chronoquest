@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public abstract class ItemHandler : MonoBehaviour
     }
     protected virtual void doCheck()
     {
-                if (playerInTrigger && Input.GetKeyDown(KeyCode.Q))
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("Q Pressed");
             int index = InventoryScript.instance.GetSelectedIndex();
