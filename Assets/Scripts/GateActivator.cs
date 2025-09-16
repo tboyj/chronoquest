@@ -1,14 +1,14 @@
 using System.Collections;
 using UnityEngine;
-
-public class ButtonActivator : ItemHandler
+using ChronoQuest.Interactions.World;
+public class GateActivator : MonoBehaviour, Interaction
 {
     public SpriteRenderer sprite;
     public bool amITurnedOn = false;
     public bool timedActivater = false;
     [Range(0.5f, float.MaxValue)]
     public float duration = 1f;
-    
+    public bool playerInTrigger = false;
     public Transform affectedObject;
 
     void Start()
@@ -17,20 +17,23 @@ public class ButtonActivator : ItemHandler
         sprite.color = Color.green;
     }
 
-    protected override void HandleInteraction()
+    void Update()
     {
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && !amITurnedOn)
         {
-            if (timedActivater)
-            {
-                StartCoroutine(OpenGateRoutine());
-                
-            }
-            else
-            {
-                sprite.color = Color.red;
-                amITurnedOn = true; // infinite;
-            }
+            InteractionFunction();
+        }
+    }
+    public void InteractionFunction() // Add logic here
+    {
+        if (timedActivater)
+        {
+            StartCoroutine(OpenGateRoutine());
+        }
+        else
+        {
+            sprite.color = Color.red;
+            amITurnedOn = true; // infinite;
         }
     }
 
@@ -39,7 +42,6 @@ public class ButtonActivator : ItemHandler
         Debug.Log("Gate opening...");
         sprite.color = Color.red;
         amITurnedOn = true;
-
         affectedObject.position += Vector3.up * 3;
 
         yield return new WaitForSeconds(duration);
@@ -47,7 +49,25 @@ public class ButtonActivator : ItemHandler
         Debug.Log("Gate closing...");
         sprite.color = Color.green;
         amITurnedOn = false;
-
         affectedObject.position += Vector3.down * 3;
     }
+    
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+            playerInTrigger = true;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+            playerInTrigger = false;
+    }
+
+
+
+
+
 }

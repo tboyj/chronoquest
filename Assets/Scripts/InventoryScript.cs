@@ -76,6 +76,10 @@ public class InventoryScript : MonoBehaviour
     {
         indexOfSelected = index;
     }
+    public Item GetItemSelected()
+    {
+        return inventory[indexOfSelected];
+    }
     public int GetSelectedIndex()
     {
         return indexOfSelected;

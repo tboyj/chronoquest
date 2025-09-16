@@ -8,11 +8,19 @@ public class Door : ItemHandler
     public int quantityNeeded;
     public bool unlocked = false;
     public bool opened = false;
+    public bool oneTimeOpen = false;
+    public bool needsKey = true;
 
     void Start()
     {
         door = transform.Find("Object").GetComponent<SpriteRenderer>();
         doorPassageWay = transform.Find("Object").GetComponent<BoxCollider>();
+        if (quantityNeeded <= 0)
+        {
+            needsKey = false;
+            unlocked = true;
+            Debug.Log("Door unlocked.");
+        }
     }
 
     protected override bool IsValidItem(Item item, int index)
@@ -62,8 +70,11 @@ public class Door : ItemHandler
 
     void closeDoor()
     {
-        door.color = Color.white;
-        opened = false;
-        doorPassageWay.enabled = true;
+        if (!oneTimeOpen)
+        {
+            door.color = Color.white;
+            opened = false;
+            doorPassageWay.enabled = true;
+        }
     }
 }
