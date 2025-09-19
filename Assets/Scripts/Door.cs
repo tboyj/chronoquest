@@ -1,80 +1,63 @@
 using UnityEngine;
 
-public class Door : ItemHandler
+public class Door : MonoBehaviour
 {
-    public ItemStorable itemWanted;
-    public SpriteRenderer door;
-    public BoxCollider doorPassageWay;
-    public int quantityNeeded;
+    public SpriteRenderer spriteRenderer;
+    public bool isOpen = false;
+    public bool doorTrigger = false;
     public bool unlocked = false;
-    public bool opened = false;
-    public bool oneTimeOpen = false;
-    public bool needsKey = true;
-
-    void Start()
+    public int keysNeeded = 0;
+    
+    public void Start()
     {
-        door = transform.Find("Object").GetComponent<SpriteRenderer>();
-        doorPassageWay = transform.Find("Object").GetComponent<BoxCollider>();
-        if (quantityNeeded <= 0)
+
+    }
+
+    public void OpenDoor()
+    {
+        isOpen = true;
+        spriteRenderer.color = Color.black;
+    }
+
+    public void CloseDoor()
+    {
+        isOpen = false;
+        spriteRenderer.color = Color.white;
+    }
+    public void Update()
+    {
+        if (doorTrigger)
         {
-            needsKey = false;
-            unlocked = true;
-            Debug.Log("Door unlocked.");
+            if (Input.GetKeyDown(KeyCode.E) && unlocked)
+            {
+                if (isOpen)
+                {
+                    CloseDoor();
+                }
+                else
+                {
+                    OpenDoor();
+                }
+            }
+
         }
     }
-
-    protected override bool IsValidItem(Item item, int index)
+    void OnTriggerEnter(Collider other)
     {
-        return base.IsValidItem(item, index) &&
-               !unlocked &&
-               item.item == itemWanted &&
-               quantityNeeded <= item.quantity;
-    }
-
-    protected override void OnItemReceived(Item item, int index)
-    {
-        if (quantityNeeded > 0)
+        if (other.CompareTag("Player"))
         {
-            quantityNeeded--;
-            items.Add(item);
-            InventoryScript.instance.RemoveItem(index);
-        }
-
-        if (quantityNeeded <= 0 && !unlocked)
-        {
-            unlocked = true;
-            openDoor();
-            Debug.Log("Door unlocked.");
+            doorTrigger = true;
+           
         }
     }
-
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        base.HandleInteraction();
-
-        if (unlocked && playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player"))
         {
-            if (opened)
-                closeDoor();
-            else
-                openDoor();
+            doorTrigger = false;
         }
     }
+    
 
-    void openDoor()
-    {
-        door.color = Color.black;
-        opened = true;
-        doorPassageWay.enabled = false;
-    }
 
-    void closeDoor()
-    {
-        if (!oneTimeOpen)
-        {
-            door.color = Color.white;
-            opened = false;
-            doorPassageWay.enabled = true;
-        }
-    }
 }

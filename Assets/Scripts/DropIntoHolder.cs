@@ -14,7 +14,7 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Start is called before the first frame update
     void Start()
     {
-        slotIndex = this.GetComponent<ItemGUI>().slotIndex;
+        // slotIndex = this.GetComponent<ItemGUI>().slotIndex;
 
         if (transform.childCount > 0)
         {

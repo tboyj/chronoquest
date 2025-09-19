@@ -11,6 +11,8 @@ TagManager:
   - Object
   - Recievable
   - Holder
+  - NPC
+  - Door
   layers:
   - Default
   - TransparentFX

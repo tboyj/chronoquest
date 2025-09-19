@@ -28,8 +28,20 @@ public class Item
     }
     public Item(ItemStorable item, int quantity)
     {
-        this.item = item;
-        this.quantity = quantity;
+        if (item != null)
+        {
+            if (quantity <= item.maxStackSize)
+            {
+                this.item = item;
+                this.quantity = quantity;
+            }
+            else
+            {
+                this.item = item;
+                this.quantity = item.maxStackSize;
+
+            }
+        }
     }
 
 

@@ -20,6 +20,6 @@ public class ItemStorable : ScriptableObject
     public bool stackable;
     public ItemRarity rarity;
     public string description;
-    public bool canBeDropped;
-    public bool canBeGiven;
+    public bool canBeTaken; // im a new soul, i came to this strange world
+    public bool canBeGiven; // hoping i could learn a bit on how to give and take (items)
 }
