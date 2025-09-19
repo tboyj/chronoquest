@@ -5,18 +5,15 @@ using TMPro;
 
 using UnityEngine;
 
-public class InventoryScript : MonoBehaviour
+public class InventoryScript : Character
 {
-    public static InventoryScript instance;
-    public bool holdingItem = true;
-    public List<Item> inventory = new List<Item>();
+    Character player = new Player();
+    private bool holdingItem = true;
     // public List<RectTransform> panels = new List<RectTransform>();
     public Transform inventoriesRoot;
     public Transform hotbarTransform;
     private int inventorySize = 49;
-    [Tooltip("DEVELOPER USE ONLY - Item to be assigned to player inventory on game start. For testing purposes.")]
-    public ItemStorable itemTemporary;
-    public ItemStorable itemTemporary2;
+
     private bool objectInTrigger = false;
     private ItemInWorld currentStorable;
     private Collider currentCollision;
@@ -113,7 +110,6 @@ public class InventoryScript : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
         // Fill inventory with empty slots
         for (int i = 0; i < inventorySize; i++)
         {
@@ -121,8 +117,7 @@ public class InventoryScript : MonoBehaviour
         }
 
         // assign a starter item
-
-        AddItem(new Item(itemTemporary2, 1)); // jim's magnifying glass
+     // jim's magnifying glass
     }
     void Start()
     {
