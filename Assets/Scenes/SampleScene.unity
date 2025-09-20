@@ -6266,6 +6266,7 @@ GameObject:
   - component: {fileID: 613918452}
   - component: {fileID: 613918459}
   - component: {fileID: 613918460}
+  - component: {fileID: 613918461}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Player
@@ -6415,6 +6416,8 @@ MonoBehaviour:
   recievable: 1
   canGive: 1
   itemHeld: 0
+  isHolding: 1
+  holdingItemManager: {fileID: 0}
   inRange: 0
 --- !u!65 &613918460
 BoxCollider:
@@ -6437,6 +6440,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1.5, z: 3.5}
   m_Center: {x: 0, y: -0.005, z: 0}
+--- !u!114 &613918461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613918449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c8b5386ee047b459ee4ee9a1f3eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteHolderImage: {fileID: 196334159}
+  spriteTopLeftImage: {fileID: 982954535}
 --- !u!1 &618174603
 GameObject:
   m_ObjectHideFlags: 0
@@ -10316,7 +10333,6 @@ GameObject:
   - component: {fileID: 956675660}
   - component: {fileID: 956675659}
   - component: {fileID: 956675658}
-  - component: {fileID: 956675657}
   m_Layer: 0
   m_Name: InteractZoneSetup
   m_TagString: Recievable
@@ -10324,18 +10340,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &956675657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956675656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ca8b94c11f7794c84b3ea13730e547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &956675658
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10950,7 +10954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c897f71cfe2b78743a0b689e8aff0de2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6396ebe703a73b4493845793919e71c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11568,6 +11572,7 @@ GameObject:
   - component: {fileID: 1045520958}
   - component: {fileID: 1045520960}
   - component: {fileID: 1045520961}
+  - component: {fileID: 1045520962}
   m_Layer: 0
   m_Name: RealPlayer
   m_TagString: Player
@@ -11737,10 +11742,26 @@ MonoBehaviour:
   recievable: 1
   canGive: 1
   itemHeld: 0
+  isHolding: 1
+  holdingItemManager: {fileID: 1045520962}
   itemPaketTest: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
   parentOfInventory: {fileID: 1815465269}
   parentOfHotbar: {fileID: 633381273}
   guiHandler: {fileID: 0}
+--- !u!114 &1045520962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045520950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c8b5386ee047b459ee4ee9a1f3eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteHolderImage: {fileID: 1496721898}
+  spriteTopLeftImage: {fileID: 982954535}
 --- !u!1 &1078759309
 GameObject:
   m_ObjectHideFlags: 0
@@ -15105,7 +15126,6 @@ GameObject:
   - component: {fileID: 1397438984}
   - component: {fileID: 1397438983}
   - component: {fileID: 1397438982}
-  - component: {fileID: 1397438986}
   m_Layer: 0
   m_Name: InteractZoneSetup
   m_TagString: Recievable
@@ -15200,18 +15220,6 @@ Transform:
   - {fileID: 516096995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1397438986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397438980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ca8b94c11f7794c84b3ea13730e547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1398363339
 GameObject:
   m_ObjectHideFlags: 0

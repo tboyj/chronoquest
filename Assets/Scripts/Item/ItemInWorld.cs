@@ -53,7 +53,7 @@ public class ItemInWorld : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            itemRecognizesPlayer = true;
+            itemRecognizesPlayer = false;
         }
     }
 }

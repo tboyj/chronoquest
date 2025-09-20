@@ -10,7 +10,7 @@ public class NPC : Character
     protected Character npc;
     public void Start()
     {
-        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, false, true ,0, this.GetComponent<HoldingItemScript>());
+        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, false, true ,0, this.GetComponent<HoldingItemScript>(), false);
         npc.movement = npc.GetComponent<Movement>();
 
     }

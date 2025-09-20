@@ -1,20 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UIElements;
 
 public class Player : Character
 {
-    protected Character player;
+    // protected Character player;
     public ItemStorable itemPaketTest;
-
     public Item heldItem;
     private ItemInWorld takeableItem;
     public Transform parentOfInventory;
@@ -24,37 +14,47 @@ public class Player : Character
     public void Start()
     {
 
-        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, true, true, 0, this.GetComponent<HoldingItemScript>());
+        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, true, true, 0, this.GetComponent<HoldingItemScript>(), false);
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup();
         guiHandler = gameObject.AddComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);
+        holdingItemManager.spriteHolderImage.enabled = true;
         holdingItemManager.spriteHolderImage.sprite = heldItem.item.sprite;
-        holdingItemManager.spriteTopLeftImage.sprite = heldItem.item.sprite;
-
+        holdingItemManager.spriteTopLeftImage.enabled = true;
+        holdingItemManager.spriteTopLeftImage.sprite = heldItem.item.sprite; // UI Image
     }
+
     public void Update()
     {
 
-
+        if (heldItem.quantity <= 0 || !isHolding)
+        {
+            holdingItemManager.spriteHolderImage.enabled = false;
+            holdingItemManager.spriteTopLeftImage.enabled = false; // Hide the sprite when quantity is 0
+        }
+        else
+        {
+            holdingItemManager.spriteHolderImage.enabled = true;
+            holdingItemManager.spriteTopLeftImage.enabled = true; // Show the sprite when quantity is greater than 0
+        }
         if (recievable && Input.GetKeyDown(KeyCode.E))
         {
-            if (takeableItem.takeable && takeableItem.amountOfItemsHere > 0)
-            {
-                Item itemAdded = new Item(takeableItem.itemInWorld, 1);
-                inventory.AddItem(itemAdded);
-                // Debug.Log("item added: " + takeableItem.itemInWorld.name + ",inv index: " + inventory.GetItemIndex(itemAdded));
-            }
+                if (takeableItem.takeable && takeableItem.amountOfItemsHere > 0)
+                {
+                    Item itemAdded = new Item(takeableItem.itemInWorld, 1);
+                    inventory.AddItem(itemAdded);
+                    Debug.Log("item added: " + takeableItem.itemInWorld.name + ",inv index: " + inventory.GetItemIndex(itemAdded));
+                }
         }
         if (canGive && Input.GetKeyDown(KeyCode.Q))
         {
-            inventory.GetItemUsingIndex(itemHeld).quantity--;
+            if (isHolding && heldItem.quantity > 0)
+            {
+                inventory.GetItemUsingIndex(itemHeld).quantity--;
+            }
         }
         CheckForHotbarInput();
-
-
-
-
         //     
 
         //             if (slot == null || slot.item == null)
@@ -90,27 +90,26 @@ public class Player : Character
 
     }
 
+    
+
+
     private void CheckForHotbarInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            itemHeld = 0;
-            UpdateSelectedItem(itemHeld);
+            UpdateSelectedItem(0);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            itemHeld = 1;
-            UpdateSelectedItem(itemHeld);
+            UpdateSelectedItem(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            itemHeld = 2;
-            UpdateSelectedItem(itemHeld);
+            UpdateSelectedItem(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            itemHeld = 3;
-            UpdateSelectedItem(itemHeld);
+            UpdateSelectedItem(3);
         }
         // if (player.heldItem.item == null || player.heldItem.quantity <= 0)
         //     return;
@@ -119,19 +118,41 @@ public class Player : Character
 
     }
 
-    public void UpdateSelectedItem(int itemHeld)
+    public void UpdateSelectedItem(int updateIndex)
     {
-        if (inventory.GetItemUsingIndex(itemHeld).item != null && inventory.GetItemUsingIndex(itemHeld).quantity > 0)
+        Item candidate = inventory.GetItemUsingIndex(updateIndex);
+        Debug.Log(candidate.item.name);
+        bool isValidCandidate = candidate != null && candidate.item != null && candidate.quantity > 0;
+        
+        // If selecting the same index again, toggle holding state
+        if (updateIndex == itemHeld)
         {
-            heldItem = inventory.GetItemUsingIndex(itemHeld);
-            Debug.Log("Held item: " + heldItem.item.name + " x" + heldItem.quantity);
-            holdingItemManager.SetSelectedImage(heldItem);
+            isHolding = !isHolding;
+            Debug.Log($"Toggled holding state: {isHolding}");
         }
+        // If selecting a new valid item
+        else if (isValidCandidate)
+        {
+            heldItem = candidate;
+            itemHeld = updateIndex;
+            isHolding = true;
+            holdingItemManager.spriteHolderImage.sprite = heldItem.item.sprite;
+            holdingItemManager.spriteTopLeftImage.sprite = heldItem.item.sprite; // UI Image
+            Debug.Log($"Held item: {heldItem.item.name} x{heldItem.quantity}");
+        }
+        // If selecting an invalid or empty slot
         else
         {
-            Debug.Log("Selected null spot.");
+            // heldItem = null;
+            // itemHeld = -1;
+            isHolding = false;
+            Debug.Log("Selected null or empty slot.");
         }
+ // Optional: refresh visuals here
+
     }
+
+
 
     public void FixedUpdate()
     {
@@ -191,6 +212,7 @@ public class Player : Character
 
     public Item GetHeldItem()
     {
+        
         return heldItem;
     }
 }

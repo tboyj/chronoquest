@@ -14,10 +14,11 @@ public abstract class Character : MonoBehaviour
     public bool recievable = true;
     public bool canGive = true;
     public int itemHeld = 0;
+    public bool isHolding = true;
     public HoldingItemScript holdingItemManager;
 
     // Constructor
-    protected virtual Character Initialize(string name, Inventory inv, SpriteRenderer spriteR, Movement mov, bool recievable, bool canGive, int itemHeld, HoldingItemScript holdingItemScript)
+    protected virtual Character Initialize(string name, Inventory inv, SpriteRenderer spriteR, Movement mov, bool recievable, bool canGive, int itemHeld, HoldingItemScript holdingItemScript, bool isHolding)
     {
         Name = name;
         inventory = inv;
@@ -27,6 +28,7 @@ public abstract class Character : MonoBehaviour
         this.canGive = canGive;
         this.itemHeld = itemHeld;
         this.holdingItemManager = holdingItemScript;
+        this.isHolding = isHolding;
         return this;
     }
 
