@@ -10,14 +10,14 @@ public class NPC : Character
     protected Character npc;
     public void Start()
     {
-        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, false, true ,0, this.GetComponent<HoldingItemScript>(), false);
+        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null ,0, this.GetComponent<HoldingItemScript>(), false);
         npc.movement = npc.GetComponent<Movement>();
 
     }
     public void Update()
     {
         
-        if (inRange && recievable && Input.GetKeyDown(KeyCode.Q))
+        if (inRange && Input.GetKeyDown(KeyCode.Q))
         {
             if (itemGiven.item.canBeGiven == true)
                 npc.inventory.AddItem(itemGiven);

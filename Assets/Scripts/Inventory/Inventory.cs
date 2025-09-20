@@ -10,8 +10,17 @@ public class Inventory : MonoBehaviour
     // Fields
     public List<Item> items;
     public Item itemEquipped;
-
+    private bool refresh = false;
     // Constructor
+    public bool GetRefresh()
+    {
+        return refresh;
+
+    }
+    public void SetRefresh(bool refresh)
+    {
+        this.refresh = refresh;
+    }
     public Inventory()
     {
         items = new List<Item>();
@@ -112,6 +121,24 @@ We can add a expanding inventory later. Currently fixed size right now!!!!
     public int GetItemStorableIndex(ItemStorable item) // gets item index using item //?
     {
         return items.FindIndex(x => x.item == item);
+    }
+
+    public List<Item> GetInventory()
+    {
+        return items;
+    }
+
+    public void RemoveOneQuantity(int itemHeld)
+    {
+        if (items[itemHeld].quantity > 0)
+        {
+            items[itemHeld].quantity--;
+        }
+        else
+        {
+            items.RemoveAt(itemHeld);
+            AddToList(new Item());
+        }
     }
     // public int GetCapacity()
     // {

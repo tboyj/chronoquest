@@ -1,30 +1,42 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using Image = UnityEngine.UI.Image;
 public class Player : Character
 {
     // protected Character player;
     public ItemStorable itemPaketTest;
-    public Item heldItem;
-    private ItemInWorld takeableItem;
-    public Transform parentOfInventory;
-    public Transform parentOfHotbar;
-    public InventoryGUI guiHandler;
+    protected Item heldItem;
+    protected ItemInWorld interactableItem;
+    protected NPC interactableNPC;
+    protected InventoryGUI guiHandler;
+    [SerializeField]
+    protected RectTransform hotbarHolder;
+    [SerializeField]
+    protected RectTransform inventoryHolder;
+    private int indexOfInventoryHover { get; set; }
 
     public void Start()
     {
 
-        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, true, true, 0, this.GetComponent<HoldingItemScript>(), false);
+        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false);
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup();
-        guiHandler = gameObject.AddComponent<InventoryGUI>();
+        guiHandler = gameObject.GetComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);
+        if (heldItem.item != null)
+            Debug.Log(heldItem.item.name);
+        else
+            Debug.Log("Item is null");
         holdingItemManager.spriteHolderImage.enabled = true;
         holdingItemManager.spriteHolderImage.sprite = heldItem.item.sprite;
         holdingItemManager.spriteTopLeftImage.enabled = true;
         holdingItemManager.spriteTopLeftImage.sprite = heldItem.item.sprite; // UI Image
-    }
 
+        //!!! --- ! Inventory GUI Section ! --- !!!//
+        InventoryGuiRefresh();
+    }
     public void Update()
     {
 
@@ -38,92 +50,96 @@ public class Player : Character
             holdingItemManager.spriteHolderImage.enabled = true;
             holdingItemManager.spriteTopLeftImage.enabled = true; // Show the sprite when quantity is greater than 0
         }
-        if (recievable && Input.GetKeyDown(KeyCode.E))
-        {
-                if (takeableItem.takeable && takeableItem.amountOfItemsHere > 0)
-                {
-                    Item itemAdded = new Item(takeableItem.itemInWorld, 1);
-                    inventory.AddItem(itemAdded);
-                    Debug.Log("item added: " + takeableItem.itemInWorld.name + ",inv index: " + inventory.GetItemIndex(itemAdded));
-                }
-        }
-        if (canGive && Input.GetKeyDown(KeyCode.Q))
-        {
-            if (isHolding && heldItem.quantity > 0)
-            {
-                inventory.GetItemUsingIndex(itemHeld).quantity--;
-            }
-        }
+
+        CheckKeyInputInteraction();
         CheckForHotbarInput();
-        //     
-
-        //             if (slot == null || slot.item == null)
-        //             {
-        //                 Debug.LogWarning($"[Hotbar] Ignored null item at index {index}");
-        //                 return;
-        //             }
-
-        //             // Deselect if same item
-        //             if (player.heldItem != null && slot.item == player.heldItem.item)
-        //             {
-        //                 player.heldItem = null;
-        //                 hotbarItem = -1;
-        //                 selected.enabled = false;
-        //                 itemImage.enabled = false;
-        //                 InventoryScript.instance.SetHoldingCondition(false);
-        //                 Debug.Log("[Hotbar] Deselected held item.");
-        //             }
-        //             else
-        //             {
-        //                 player.heldItem = slot;
-        //                 hotbarItem = index;
-        //                 selected.enabled = true;
-        //                 itemImage.enabled = true;
-        //                 InventoryScript.instance.SetHoldingCondition(true);
-        //                 Debug.Log($"[Hotbar] Switched to: {player.heldItem.item.name}");
-        //             }
-
-        //             InventoryScript.instance.SetSelectedIndex(index);
-        //         }
-        //     }
-
-
+        if (inventory.GetRefresh() == true)
+        {
+            InventoryGuiRefresh();
+        }
     }
 
-    
+    private void CheckKeyInputInteraction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TryPickupitem();
+        }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TryDropItem();
+        }
+    }
+
+    private void TryPickupitem()
+    {
+        if (interactableItem != null)
+        {
+            if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
+            {
+                Item itemAdded = new Item(interactableItem.itemInWorld, 1);
+                inventory.AddItem(itemAdded);
+                Debug.Log("");
+                inventory.SetRefresh(true);
+            }
+        }
+    }
+
+    private void TryDropItem()
+    {
+        if (heldItem.quantity > 0 && heldItem.item.canBeGiven == true)
+        {
+            if (interactableItem.itemInWorld == heldItem.item)
+            {
+                if (interactableItem.amountOfItemsHere > 0)
+                {
+                    inventory.RemoveOneQuantity(itemHeld);
+                    inventory.SetRefresh(true);
+                    interactableItem.amountOfItemsHere++;
+                }
+            }
+            if (interactableNPC != null)
+            {
+                // Do later
+            }
+
+        }
+    }
 
     private void CheckForHotbarInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (!gameObject.GetComponent<PauseScript>().isPaused)
         {
-            UpdateSelectedItem(0);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                UpdateSelectedItem(0);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                UpdateSelectedItem(1);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                UpdateSelectedItem(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                UpdateSelectedItem(3);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            UpdateSelectedItem(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            UpdateSelectedItem(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            UpdateSelectedItem(3);
-        }
-        // if (player.heldItem.item == null || player.heldItem.quantity <= 0)
-        //     return;
-        // else
-        //     Debug.Log("Held item: " + player.heldItem.item.name + " x" + player.heldItem.quantity);
 
     }
 
     public void UpdateSelectedItem(int updateIndex)
     {
         Item candidate = inventory.GetItemUsingIndex(updateIndex);
-        Debug.Log(candidate.item.name);
+        if (candidate.item != null)
+            Debug.Log(candidate.item.name);
+        else
+            Debug.Log("null item selected");
         bool isValidCandidate = candidate != null && candidate.item != null && candidate.quantity > 0;
-        
+
         // If selecting the same index again, toggle holding state
         if (updateIndex == itemHeld)
         {
@@ -148,11 +164,9 @@ public class Player : Character
             isHolding = false;
             Debug.Log("Selected null or empty slot.");
         }
- // Optional: refresh visuals here
+        // Optional: refresh visuals here
 
     }
-
-
 
     public void FixedUpdate()
     {
@@ -166,27 +180,100 @@ public class Player : Character
         for (int i = 0; i < 49; i++)
         {
             Debug.Log(i);
-            Debug.Log(inventory.items.Count);
-            inventory.AddToList(new Item(null,1));
+            Debug.Log(inventory.GetInventory().Count);
+            inventory.AddToList(new Item(null, 1));
         }
-            Item paket = new Item(itemPaketTest, 67);
-            inventory.AddItem(paket);
-            Debug.Log("Player inventory setup.");
-            //player.inventory = player.inventory.SwapItem(Item item, Item item2);
-            // comment
+        Item paket = new Item(itemPaketTest, 67);
+        inventory.AddItem(paket);
+        Debug.Log("Player inventory setup.");
+        //player.inventory = player.inventory.SwapItem(Item item, Item item2);
+        // comment
+    }
+
+    public void InventoryGuiRefresh()
+    {
+        int imageSetupIndex = 0;
+
+        // -- ! Hotbar section ! -- //
+        foreach (RectTransform slot in hotbarHolder)
+        {
+            foreach (RectTransform imageContainer in slot)
+            {
+                if (imageContainer.name.Equals("Holder"))
+                {
+                    // Debug.Log("Got to image detector");
+                    Image imageOfItem = imageContainer.GetComponent<Image>();
+                    TextMeshProUGUI text = imageContainer.GetChild(0).GetComponent<TextMeshProUGUI>();
+                    if (inventory.GetItemUsingIndex(imageSetupIndex).item != null && inventory.GetItemUsingIndex(imageSetupIndex).quantity > 0)
+                    {
+                        imageOfItem.sprite = inventory.GetItemUsingIndex(imageSetupIndex).item.sprite;
+                        imageOfItem.enabled = true;
+                        text.text = "x" + inventory.GetItemUsingIndex(imageSetupIndex).quantity.ToString();
+                        text.enabled = true;
+                    }
+                    else
+                    {
+                        imageOfItem.enabled = false;
+                        text.enabled = false;
+                    }
+                    // Debug.Log(imageSetupIndex + "out of " + inventory.GetInventory().Count);
+                    imageSetupIndex++;
+                }
+
+
+            }
         }
 
-    
+        // --- ! Inventory section ! --- //
+
+        foreach (RectTransform slot in inventoryHolder)
+        {
+            foreach (RectTransform imageContainer in slot)
+            {
+                if (imageContainer.name.Equals("Holder"))
+                {
+                    // Debug.Log("Got to image detector");
+                    Image imageOfItem = imageContainer.GetComponent<Image>();
+                    TextMeshProUGUI text = imageContainer.GetChild(0).GetComponent<TextMeshProUGUI>();
+                    if (inventory.GetItemUsingIndex(imageSetupIndex).item != null && inventory.GetItemUsingIndex(imageSetupIndex).quantity > 0)
+                    {
+                        imageOfItem.sprite = inventory.GetItemUsingIndex(imageSetupIndex).item.sprite;
+                        imageOfItem.enabled = true;
+                        text.text = "x" + inventory.GetItemUsingIndex(imageSetupIndex).quantity.ToString();
+                        text.enabled = true;
+                    }
+                    else
+                    {
+                        imageOfItem.enabled = false;
+                        text.enabled = false;
+                    }
+                    // Debug.Log(imageSetupIndex + "out of " + inventory.GetInventory().Count);
+                    imageSetupIndex++;
+                }
+            }
+        }
+        inventory.SetRefresh(false);
+    }
 
     /** Interaction handler **/
-        // I LOVE HAMBURGERS
-        void OnTriggerEnter(Collider other)
+    // I LOVE HAMBURGERS
+    void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Object") && other.GetComponent<ItemInWorld>().takeable)
         {
-            recievable = true;
-            takeableItem = other.GetComponent<ItemInWorld>();
+
+
+            interactableItem = other.GetComponent<ItemInWorld>();
+            Debug.Log("Interactable item: " + interactableItem.itemInWorld.name);
         }
+        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+        {
+
+            interactableNPC = other.GetComponent<NPC>();
+
+        }
+
 
 
         // else if (other.CompareTag("NPC"))
@@ -203,17 +290,34 @@ public class Player : Character
 
     void OnTriggerExit(Collider other)
     {
+
         if (other.CompareTag("Object") && other.GetComponent<ItemInWorld>().takeable)
         {
-            recievable = false;
-            takeableItem = null;
+            Debug.Log("Interactable item: (false)" + interactableItem.itemInWorld.name);
+            interactableItem = null;
+
+        }
+        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+        {
+            Debug.Log("Interactable item: (false)" + interactableNPC.name);
+            interactableNPC = null;
+
         }
     }
 
     public Item GetHeldItem()
     {
-        
+
         return heldItem;
     }
+
+    public void SetIndexOfInventoryHover(int slotIndex)
+    {
+        indexOfInventoryHover = slotIndex;
+    }
+    public int GetIndexOfInventoryHover()
+    {
+        return indexOfInventoryHover;
+    }
 }
-// Only update player.heldItem if index is va
+
