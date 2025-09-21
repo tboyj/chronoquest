@@ -109,7 +109,7 @@ public class Player : Character
 
     private void CheckForHotbarInput()
     {
-        if (!gameObject.GetComponent<PauseScript>().isPaused)
+        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -141,8 +141,9 @@ public class Player : Character
         bool isValidCandidate = candidate != null && candidate.item != null && candidate.quantity > 0;
 
         // If selecting the same index again, toggle holding state
-        if (updateIndex == itemHeld)
+        if (updateIndex == itemHeld && candidate.item != null && candidate.item == heldItem.item)
         {
+
             isHolding = !isHolding;
             Debug.Log($"Toggled holding state: {isHolding}");
         }

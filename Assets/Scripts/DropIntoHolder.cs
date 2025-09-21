@@ -55,7 +55,7 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 player.inventory.SwapItem(player.inventory.GetItemUsingIndex(3), player.inventory.GetItemUsingIndex(slotIndex));
                 player.inventory.SetRefresh(true);
             }
-            
+            player.inventory.SetRefresh(true);
         }
         
     }

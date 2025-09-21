@@ -33,58 +33,57 @@ We can add a expanding inventory later. Currently fixed size right now!!!!
         items.Add(thisItem);
     }
     public void AddItem(Item thisItem)
+    {// if inventory is not full, add item
+            int stackableIndex = -1;
+int emptyIndex = -1;
+
+for (int i = 0; i < items.Count; i++)
+{
+    Item itemInInventory = items[i];
+
+    if (itemInInventory.item != null)
     {
-        { // if inventory is not full, add item
-            foreach (Item itemInInventory in items) // check if item is already in inventory
-            {
-                int index = GetItemIndex(itemInInventory);
-                Debug.Log("Index gathered: " + index);
-                if (itemInInventory.item != null)
-                {
-                    Debug.Log("Trying to access non null item");
-                    if (itemInInventory.item == thisItem.item &&
-                    thisItem.quantity < thisItem.item.maxStackSize)
-                    {
-                        Debug.Log("Trying to add quantity");
-                        AddQuantity(thisItem, items[index]);// if item is already in inventory, add to quantity
-                        Debug.Log("Item "+index+" name: "+items[index].item.name);
-                        Debug.Log("New item "+index+" quantity: "+items[index].quantity);
-                        break;
-                    }
-                    else if (itemInInventory.item == thisItem.item &&
-                    thisItem.quantity >= thisItem.item.maxStackSize)
-                    {
-                        Debug.Log("Slot is full!");
-
-                    }
-                }
-                else if (itemInInventory.item == null)
-                {
-                    Debug.Log("Trying to access null item");
-                    if (thisItem.quantity < thisItem.item.maxStackSize)
-                    {
-                        Debug.Log("Trying to add index " + index);
-                        // if item is already in inventory, add to quantity
-                        items[index] = thisItem;
-                        Debug.Log("Added item to index " + index + "");
-                        Debug.Log("Item " + index + " name: " + items[index].item.name);
-                        Debug.Log("Item "+index+" quantity: "+items[index].quantity);
-                    }
-                    else
-
-                    {
-                        Debug.Log("Trying to add stack to index " + index);
-                        Item stack = new Item(thisItem.item, thisItem.item.maxStackSize);
-                        items[index] = stack;
-                        thisItem.quantity -= stack.quantity;
-                        AddItem(thisItem);
-                    }
-                    break;
-
-                }
-            }
-
+        if (itemInInventory.item == thisItem.item &&
+            itemInInventory.quantity < itemInInventory.item.maxStackSize)
+        {
+            stackableIndex = i;
+            break; // Found a valid stackable slot, no need to keep searching
         }
+    }
+    else if (emptyIndex == -1)
+    {
+        emptyIndex = i; // Save first empty slot in case stacking isn't possible
+    }
+}
+
+// 🧠 Now apply the logic
+if (stackableIndex != -1)
+{
+    Debug.Log("Stacking onto slot " + stackableIndex);
+    AddQuantity(thisItem, items[stackableIndex]);
+    Debug.Log("Item " + stackableIndex + " name: " + items[stackableIndex].item.name);
+    Debug.Log("New item " + stackableIndex + " quantity: " + items[stackableIndex].quantity);
+}
+else if (emptyIndex != -1)
+{
+    Debug.Log("Placing into empty slot " + emptyIndex);
+    if (thisItem.quantity <= thisItem.item.maxStackSize)
+    {
+        items[emptyIndex] = thisItem;
+    }
+    else
+    {
+        Item stack = new Item(thisItem.item, thisItem.item.maxStackSize);
+        items[emptyIndex] = stack;
+        thisItem.quantity -= stack.quantity;
+        AddItem(thisItem); // recursive call to place remainder
+    }
+}
+else
+{
+    Debug.Log("Inventory full — cannot add item.");
+}
+
     }
     public Inventory SwapItem(Item item, Item item2)
     {
