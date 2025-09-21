@@ -15,9 +15,9 @@ public abstract class Character : MonoBehaviour
     public int itemHeld = 0;
     public bool isHolding = true;
     public HoldingItemScript holdingItemManager;
-
+    public Animator animatorSetup;
     // Constructor
-    protected virtual Character Initialize(string name, Inventory inv, SpriteRenderer spriteR, Movement mov, int itemHeld, HoldingItemScript holdingItemScript, bool isHolding)
+    protected virtual Character Initialize(string name, Inventory inv, SpriteRenderer spriteR, Movement mov, int itemHeld, HoldingItemScript holdingItemScript, bool isHolding, Animator animatorSetup)
     {
         Name = name;
         inventory = inv;
@@ -26,6 +26,7 @@ public abstract class Character : MonoBehaviour
         this.itemHeld = itemHeld;
         this.holdingItemManager = holdingItemScript;
         this.isHolding = isHolding;
+
         return this;
     }
 

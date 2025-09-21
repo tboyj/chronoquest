@@ -72,14 +72,16 @@ class PlayerMovement : Movement
                 horizontalVel = horizontalVel.normalized * maxSpeed;
                 rb.velocity = new Vector3(horizontalVel.x, rb.velocity.y, horizontalVel.z);
             }
-                if (x < 0)
-                {
-                    flip = true;
-                }
-                else if (x > 0)
-                {
-                    flip = false;
-                }
+            if (x < 0)
+            {
+                flip = true;
+            }
+            else if (x > 0)
+            {
+                flip = false;
+            }
+            
+
         }
     }
 

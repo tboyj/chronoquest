@@ -20,7 +20,7 @@ public class Player : Character
     public void Start()
     {
 
-        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false);
+        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, transform.GetChild(0).GetComponent<Animator>());
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup();
         guiHandler = gameObject.GetComponent<InventoryGUI>();
@@ -171,6 +171,7 @@ public class Player : Character
     public void FixedUpdate()
     {
         movement.MoveWithForce(movement.moveForce);
+        animatorSetup.SetFloat("SpeedX", movement.rb.velocity.magnitude);
         spriteRenderer.flipX = movement.flip;
 
     }

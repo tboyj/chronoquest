@@ -970,6 +970,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!1 &115452485
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +997,7 @@ Transform:
   m_GameObject: {fileID: 115452485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.488, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 3.125, y: 1.754386, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1045,7 +1046,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1580118811, guid: 484a59535877d1d40b88be82331ffc7f, type: 3}
+  m_Sprite: {fileID: -1936457348, guid: ca3ea4ea3046d2f48bf485a7507531ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1347,6 +1348,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &143868950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2430,6 +2432,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &249946250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2920,6 +2923,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!1 &311054018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3382,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!1 &325405451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3522,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!1 &396037592
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,6 +3814,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &400011755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4347,6 +4354,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &447014852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4619,6 +4627,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &468114430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5683,6 +5692,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &522381327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5821,6 +5831,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &560311373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6136,6 +6147,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &599623158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6416,6 +6428,7 @@ MonoBehaviour:
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 0}
+  animatorSetup: {fileID: 0}
   inRange: 0
 --- !u!65 &613918460
 BoxCollider:
@@ -6790,6 +6803,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &632736937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7486,6 +7500,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &677088729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7862,6 +7877,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &706193786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8134,6 +8150,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &708147150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8227,6 +8244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 716004962}
   - component: {fileID: 716004963}
+  - component: {fileID: 716004964}
   m_Layer: 0
   m_Name: JimSprite
   m_TagString: Untagged
@@ -8303,6 +8321,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &716004964
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716004961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4cf4ee4250ef0a64292ef85c79e25f5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &726048370
 GameObject:
   m_ObjectHideFlags: 0
@@ -8358,6 +8397,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &726048373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8496,6 +8536,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &726835058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9312,6 +9353,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &789330054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9450,6 +9492,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &820916649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10236,6 +10279,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &955866031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10603,6 +10647,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &962447233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11159,6 +11204,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &993775058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11740,6 +11786,7 @@ MonoBehaviour:
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 1045520962}
+  animatorSetup: {fileID: 716004964}
   itemPaketTest: {fileID: 11400000, guid: 06a7f18d2b525c348bf350837ffb345d, type: 2}
   hotbarHolder: {fileID: 1860769224}
   inventoryHolder: {fileID: 1507127993}
@@ -11914,6 +11961,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1088918094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12358,6 +12406,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1137788839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12622,6 +12671,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1140579286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12760,6 +12810,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1164177940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12898,6 +12949,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1171362554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13521,6 +13573,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!1 &1204944885
 GameObject:
   m_ObjectHideFlags: 0
@@ -13576,6 +13629,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1204944888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14559,6 +14613,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1329738689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14697,6 +14752,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1333767590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15817,6 +15873,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1463689553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16570,6 +16627,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1507401673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16842,6 +16900,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1521934765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16980,6 +17039,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1533120118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18006,6 +18066,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1629387764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18454,6 +18515,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1670819301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18935,6 +18997,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1737874623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19073,6 +19136,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1744068369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19211,6 +19275,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1777234088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19617,6 +19682,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1796390718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20556,6 +20622,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1866823661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21459,6 +21526,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1924370867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21731,6 +21799,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1946241134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22282,6 +22351,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &1979235254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22645,6 +22715,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &2035346728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23051,6 +23122,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &2055283652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23509,6 +23581,7 @@ MonoBehaviour:
   slotIndex: 0
   isHovered: 0
   currentHolder: {fileID: 748831212}
+  player: {fileID: 0}
 --- !u!61 &2101654847
 BoxCollider2D:
   m_ObjectHideFlags: 0
