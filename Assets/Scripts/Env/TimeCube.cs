@@ -44,6 +44,11 @@ public class TimeCube : MonoBehaviour
                 currMonth = 1;
                 currYear = 2024;
                 break;
+            case "Tutorial":
+                currDay = 6;
+                currMonth = 7;
+                currYear = 2024;
+                break;
             case "AncientEgypt":
                 currDay = 15;
                 currMonth = 6;

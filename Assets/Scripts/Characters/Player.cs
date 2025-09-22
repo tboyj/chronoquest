@@ -172,7 +172,7 @@ public class Player : Character
     public void FixedUpdate()
     {
         movement.MoveWithForce(movement.moveForce);
-        animatorSetup.SetFloat("SpeedX", movement.rb.velocity.magnitude);
+        animatorSetup.SetFloat("SpeedX", movement.rb.velocity.magnitude); // fix fall sown script
         spriteRenderer.flipX = movement.flip;
 
     }
