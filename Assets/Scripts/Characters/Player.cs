@@ -275,6 +275,10 @@ public class Player : Character
             interactableNPC = other.GetComponent<NPC>();
 
         }
+        else if (other.CompareTag("Teleport"))
+        {
+            this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
+        }
 
 
 

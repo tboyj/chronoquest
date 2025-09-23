@@ -13,6 +13,8 @@ TagManager:
   - Holder
   - NPC
   - Door
+  - Teleport
+  - Stair
   layers:
   - Default
   - TransparentFX
