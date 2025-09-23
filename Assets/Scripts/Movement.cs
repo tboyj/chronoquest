@@ -52,20 +52,34 @@ class PlayerMovement : Movement
             Ray ray;
             if (flip)
             {
-                rayholder.position = new Vector3(rb.transform.position.x - 0.315f, rayholder.position.y, rayholder.position.z);
-                ray = new Ray(rayholder.position, new Vector3(-0.05f, 0, 0));
+                rayholder.position = new Vector3(rb.transform.position.x - 0.075f, rayholder.position.y, rayholder.position.z);
+                ray = new Ray(rayholder.position, new Vector3(-0.025f, 0, 0));
             } else {
-                rayholder.position = new Vector3(rb.transform.position.x + 0.315f, rayholder.position.y, rayholder.position.z);
-                ray = new Ray(rayholder.position, new Vector3(0.05f, 0, 0));
+                rayholder.position = new Vector3(rb.transform.position.x + 0.075f, rayholder.position.y, rayholder.position.z);
+                ray = new Ray(rayholder.position, new Vector3(0.025f, 0, 0));
             }
 
             Debug.DrawRay(rayholder.position, ray.direction, Color.green);   
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 0.05f))
+            Vector3 currentMovement = new Vector3(x, -.5f, z).normalized;
+            if (Physics.Raycast(ray, out hit, 0.025f))
             {
+                if (hit.collider.CompareTag("Stair") && currentMovement.x > 0)
+                {
+                    float stairDecreaser = .5f;
+                    if (transform.position.x > 0)
+                    {
+                        transform.position = new Vector3(transform.position.x + .025f, transform.position.y + 0.2f, transform.position.z);
+                    }
+                    else if (transform.position.x < 0)
+                    {
+                        transform.position = new Vector3(transform.position.x - .025f, transform.position.y + 0.2f, transform.position.z);
+                    }
+                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
+                }
                 Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
             }
-            Vector3 currentMovement = new Vector3(x, 0, z).normalized;
+            
             float currentForce = moveForce;
             if (Input.GetKey(KeyCode.LeftShift))
             {
