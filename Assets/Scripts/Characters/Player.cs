@@ -70,6 +70,28 @@ public class Player : Character
         {
             TryDropItem();
         }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            TryNPCTalk();
+        }
+    }
+
+    private void TryNPCTalk()
+    {
+        if (interactableNPC != null)
+        {
+            try
+            {
+                QuestGiver test = interactableNPC.gameObject.GetComponent<QuestGiver>();
+                if (test.)
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning(e.StackTrace);
+            }
+            
+        }
     }
 
     private void TryPickupitem()

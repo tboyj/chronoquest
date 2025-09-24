@@ -8,15 +8,16 @@ public class NPC : Character
     public bool inRange = false;
     public Item itemGiven;
     protected Character npc;
+    
     public void Start()
     {
-        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null ,0, this.GetComponent<HoldingItemScript>(), false, null);
+        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, null);
         npc.movement = npc.GetComponent<Movement>();
 
     }
     public void Update()
     {
-        
+
         if (inRange && Input.GetKeyDown(KeyCode.Q))
         {
             if (itemGiven.item.canBeGiven == true)

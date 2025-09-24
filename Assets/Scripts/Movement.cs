@@ -97,7 +97,7 @@ class PlayerMovement : Movement
             if (currentMovement.sqrMagnitude == 0) return;
 
             rb.AddForce(currentMovement * force, ForceMode.Acceleration);
-
+            // Debug.Log("Force: "+rb.GetAccumulatedForce());
             // Clamp horizontal velocity only (keep gravity on Y)
             Vector3 horizontalVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             if (horizontalVel.magnitude > maxSpeed)
