@@ -84,7 +84,10 @@ public class Player : Character
             try
             {
                 QuestGiver test = interactableNPC.gameObject.GetComponent<QuestGiver>();
-                if (test.)
+                if (test.questToGive.requiredItemId == heldItem.item.id)
+                {
+                    Debug.Log("Dattebayo!");
+                }
             }
             catch (Exception e)
             {
