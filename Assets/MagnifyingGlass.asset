@@ -18,9 +18,9 @@ MonoBehaviour:
   itemName: Jim's Magnifying Glass
   id: 0
   maxStackSize: 1
-  stackable: 0
+  stackable: 1
   rarity: 5
   description: This is Jim's magnifying glass. Press Q near something that needs
     a closer look.
-  canBeDropped: 0
+  canBeTaken: 0
   canBeGiven: 0

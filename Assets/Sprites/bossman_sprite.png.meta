@@ -1,0 +1,7858 @@
+fileFormatVersion: 2
+guid: ca3ea4ea3046d2f48bf485a7507531ec
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bossman_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3392
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1c5cc3f48ef1a45a5dcda7d8b9b3bc
+      internalID: 366059551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3392
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3561e44939c48c45856356b0fb897d3
+      internalID: -2081348865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3392
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1bae5c3e0756b41a93cfad1f8b3ddc
+      internalID: -1261856278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 3392
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ded13f0599e5348ab56cf02375e93b
+      internalID: 929222270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 3392
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29cd265aed8b334db4f9ce1c4b2cc3a
+      internalID: 771071998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3392
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7c81ed17d705f49a5e8f7d96814280
+      internalID: 1515542598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3392
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f851cc4317ce84fa69fea31e39ece5
+      internalID: -604067406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3329
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd2a32d385cac24f875d71ee210273e
+      internalID: -292074449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3329
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8c01fe17af8a1499a1776a8ff764e1
+      internalID: -2061776168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3329
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbd2877a60bd4444b631cbb1814799e
+      internalID: 177536673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 3329
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6e3b30a1bc4cb4b837c8b690f24199
+      internalID: 82641410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3329
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67db1760aee82864c821e8d376036c40
+      internalID: -1366652785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3329
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db4977feb67bd642ab38e1ecdf632b1
+      internalID: -1659096904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3329
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddd42b7eda8af74b8f64efe2987afe1
+      internalID: -555161633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3265
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d7e6f79e76e43469aa64f4b398c329
+      internalID: 49385994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 3265
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bce8a2d18a9a5d46966b93a50e9df81
+      internalID: -453931861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3265
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f8ae2b4ee7c1b408686c0d5e8a5ec4
+      internalID: 38115698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 3265
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36e39d159b1a6f4fa47baf24263bff9
+      internalID: -412539872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 3265
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3aaed38ac626344b4bc19f05e62067
+      internalID: 240027496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3265
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66f473a9faa998448e03aa20f3ff854
+      internalID: 1414643746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3265
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3606f9442bb20ce46b0b1c62cda1c2cb
+      internalID: -936953977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3201
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527a35ed80d39be499c7688158a88f34
+      internalID: -25465255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 3201
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd81dce06f95a9488dee91860f8b907
+      internalID: 70678991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 3201
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be81b030056d984384c9bcdec84cf6a
+      internalID: -49428132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3201
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a7bc398b55ee348b2fa825fe50b03c
+      internalID: -1496678988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 3201
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44552ae62eb03c4d8737f1a20906b76
+      internalID: 1250736308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3201
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a936f76ed054349b6ade8375624095
+      internalID: -1527656453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3201
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4584a6814d3c941bd3e3f656d37779
+      internalID: 2052691965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3137
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3e34e0594ba9d43b6d984e131c1ba7
+      internalID: -2113982399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3135
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5645c9f24b0934549bff2872f756fdc4
+      internalID: -1150139273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 3135
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48703b299618f1349b63209df1e08185
+      internalID: 394511391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 3135
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f80a68f339939d4baafe0b46660ca03
+      internalID: 701278928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 3135
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2db7c9aa9d698f42adc8d393ff8fce7
+      internalID: 1123564898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3135
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdca98613da4a7841b4c327cb69031b9
+      internalID: 664451682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3135
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910f3a6595e7ecd48a6ae1d1aa414bc7
+      internalID: 1009035486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_35
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 3135
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab863b65f9c5dc04fa44fe271324840e
+      internalID: -423335969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3073
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483986923de660e4693893c0a5696b20
+      internalID: -1847090541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3073
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3f52f408772b745a20c1bf9982f451
+      internalID: -1512571363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_38
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3073
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f1852a707fa9e4d9a58c33e30bef43
+      internalID: 1522310008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_39
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 3073
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac98864cf1b7af4eadbe6713690fc53
+      internalID: 1924733970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 3073
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780652acf08aadd42b8bea8fd168e874
+      internalID: -1225034141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 3073
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d87dab0201fea84184cbf29c832d72c
+      internalID: 1003020232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3073
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea04a93cbccc1f4194d8da936ed0dec
+      internalID: -1187759244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_43
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 3073
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b08f397e4b194641abc0b51ec8f2176
+      internalID: -301692907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_44
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3009
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f66b6377bcd3c4abf41eccfc812033
+      internalID: 804369994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3011
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6400b05c612e5b241bc4d0ee6f7cd7de
+      internalID: 1467928835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_46
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3011
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05bb9a179ee6f040988c1f97c132668
+      internalID: 789844308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3011
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b4e3bc3242c294d89fceb5edb1b9de
+      internalID: 240221743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_48
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3011
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01670d21ab13d364084779dc9373659a
+      internalID: 1198094915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3011
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e538b63058702e44a4e3b0da84bfef0
+      internalID: 117133520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_50
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 3011
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fac4896cdbb8d84ab9e8202e112bb97
+      internalID: 1343603597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_51
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 3011
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e610aa8b92f5fc04193902bd5ac659d6
+      internalID: 1615556255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_52
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2945
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908d686d30e59e94a88b675e05c13be6
+      internalID: -614575564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_53
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2945
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce30955da05c2a3488fa68646b0165a2
+      internalID: 1344913096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_54
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2945
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac54cd11f7eb1d4e9b56da26a0d4dd7
+      internalID: -711324848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2945
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e502b6deb84ce44ba15c8e4078ba1c7
+      internalID: 1877301795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_56
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 2945
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485e2c753b39c44469ac0d372323b258
+      internalID: -1868833957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_57
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 2945
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2322a3d35d1ec3c47a3077a2ef4dcaa1
+      internalID: 701628570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_58
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2945
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f79ab54dfb76aa4899d8f95eca9ad67
+      internalID: -1619733589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2945
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b685efcd8dc5ca147aec570bd1637fad
+      internalID: 1336106977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_60
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2882
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617d8fc4dcdce954aaf86c44d5d05b7b
+      internalID: 1302025764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_61
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2882
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28096260796b4e40adf5be6b19f1870
+      internalID: -843172265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_62
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2881
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52dc750f15a76c4b9260947a1655b6e
+      internalID: 1630424683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_63
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2879
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f21b9a1345d194d889995b92b7bc98
+      internalID: 813074328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_64
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2881
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a94a0f14f8d1347b6b22acb66cf593
+      internalID: -1637256627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_65
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 2882
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19429b3c60365674d8f98616c1da8ea4
+      internalID: -1610488330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_66
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2881
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b927cb7aead6a44826b80f5979a2eb
+      internalID: -908317361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_67
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2879
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4d8db3d5ce65042b289af497de795b
+      internalID: 2017971895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_68
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2881
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab9aa7ea2300a742a536cca6427a2f5
+      internalID: -28609855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_69
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2816
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baf4ce0eddd6114a84bee7cd054b9e1
+      internalID: 216084001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_70
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2816
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3665d07d12414944b45fb59ed401a8d
+      internalID: -41613784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_71
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2818
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a64a38d1476f04d9b1960f27584211
+      internalID: -854172234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_72
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2818
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d447298f6d655a04da9f4478ebbe00fc
+      internalID: -1542089032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_73
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2816
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7160946a6c7f8d44e855546448e159a7
+      internalID: -1893624353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_74
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2816
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4915dfc28f3b4b4dbcfdba4c1d81460
+      internalID: 1745226265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_75
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2816
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76e9969ee3e025489b93a673c6ee039
+      internalID: -1882830599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_76
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2816
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b07c28c16796b44b961f73b985254a
+      internalID: 1442332367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_77
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2816
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f282ace41aa3e4b88a7434f7b801fd
+      internalID: 1207761799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_78
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2752
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9dc9efbe69ed648b5f0c24955c57a4
+      internalID: -1564938312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_79
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2752
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcab324bd90d1a24cbcfe3395d439a34
+      internalID: 95261863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_80
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2752
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382b77f01a7089445bf0fd9a6d681b54
+      internalID: 908868201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_81
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2752
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3432bab7f125e654dafc199762196522
+      internalID: -967841769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_82
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2752
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4663c9f921ee1488f56e2fa2ea84ae
+      internalID: -1810085913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_83
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 2752
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08681e83074b95f46b7b849050142e8e
+      internalID: 1478678475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2752
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d614b643e81f3e84780df800d668a30d
+      internalID: 189310785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_85
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2752
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cd345ccb33da44cbb773b1b016cafb
+      internalID: -1589474916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_86
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2752
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2522d5a69dd75c84da711d8640e990aa
+      internalID: 1109680694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_87
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2688
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271237d55ffd29447be177be83a64b58
+      internalID: 2026687756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_88
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2688
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5b425931ded254790dd9257c41207b
+      internalID: 1323135550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_89
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2690
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415a8dead2bccb042a714dc49c30a658
+      internalID: 1552685442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_90
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2690
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61fc10b08fbcb144b423981bf207de2
+      internalID: -1203943965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_91
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2688
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe6a0a2ccbc62640a834964f875872e
+      internalID: 31366169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_92
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 2688
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f3ce78157fa9a41975a3d937a748e0
+      internalID: 322948509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_93
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2688
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79954b85fbbf2843a232cb2b4ad9375
+      internalID: 118604760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_94
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 2688
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0e5a876d2006d449cd4a7998e6b757
+      internalID: -917479697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_95
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 2688
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41034506e0164644e8795bf2c0b22a1a
+      internalID: 2002794384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_96
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2624
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff93e86e54593b4cb721178d8ac3ad4
+      internalID: -1550657669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_97
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2624
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e6443fbbfac6e42af2262dca3ecc6c
+      internalID: 880472428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_98
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2624
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f8c22ef94310f4f8767218b13f04be
+      internalID: -1359189028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_99
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2624
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e1d67ed85b6254e9767ac059b5b32d
+      internalID: -235637004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_100
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2624
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd1439e7e826cc449c23e7a53b5ead1
+      internalID: 91790053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_101
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2624
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc87bd224e5e0d46acddc739e4a2281
+      internalID: -976585228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_102
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2560
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a0505ecf14b5440b0c09a8e54ed651
+      internalID: 1778026394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_103
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2560
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19d3dc8f031d54409ee4afd0a4ea085
+      internalID: 472355510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_104
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2560
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d862b9931bd25264ea8b16bd708a513c
+      internalID: -58693991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_105
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2560
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ec81182221111478013547cdfdfb52
+      internalID: 1445854492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_106
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 2560
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3f3106adf7f7b4e9b418a8bc9071b8
+      internalID: -600008385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_107
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 2560
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d961248d7b4358f4daa9fd730863a35d
+      internalID: 599683871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_108
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2498
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2442553b4b1bb4e97db9de7bbbbfc4
+      internalID: 1780689278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_109
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2498
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e14046bda0b414da81511fca515242
+      internalID: 722218364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_110
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2498
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db94dfd28c68f7d43abbe1095225a23a
+      internalID: 56993667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_111
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2498
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577879a2bba31cd44934860997c3ce78
+      internalID: 720945063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_112
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2498
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d949b99ea263fc84da378dc8f48a308f
+      internalID: -795810275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_113
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2498
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e37eac2ce74ed4785cb8b48fd34c45
+      internalID: 1396509668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_114
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2433
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4492323920ff96246a65b0539966573d
+      internalID: -25002015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_115
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2433
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d637e3da3194f3942af7561d03d6adfc
+      internalID: 246563584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_116
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2433
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0113a309fed24e949b2484974933480e
+      internalID: 862977302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_117
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2433
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf2d65d11dddca47a9696af9a5aabe0
+      internalID: -1312189234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_118
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2433
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d206eea5a2c4d947a30463e0040f249
+      internalID: 1748830579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_119
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2433
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc21dab65dc829c41b88f2c023bcf745
+      internalID: 1678570293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_120
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2369
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8d0d15e1316844d85d8119c289a9db
+      internalID: 718294956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_121
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2366
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89c38ef3ee7b72419913336aa5f639a
+      internalID: -1286868506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_122
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2366
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5e038969e785348b447d5538314f94
+      internalID: -768240642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_123
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2366
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6d2cf4830700a45a63ea1d1865e545
+      internalID: 1618186578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_124
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2366
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dd021a4903c9a4dacd961a6ba55aec
+      internalID: 1341614688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_125
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2366
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7087f90ed7d994592cf09a3839ebce
+      internalID: 1035325360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_126
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2366
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08e0c795fb791a448070104e1875b78
+      internalID: -2070815594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_127
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2366
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed05b9137703cd44baf52102838492f
+      internalID: -518519160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_128
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2366
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce83e1201fcde3c4e9c9e2eec518c9d4
+      internalID: 1294278039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_129
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2366
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9413d3cee7669ae4ba88638779d49bea
+      internalID: 1265690627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_130
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2366
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea1a5d8156cda849b8696a6547f66fc
+      internalID: -38598905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_131
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 2366
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0911a1801f252848885a41c80705c82
+      internalID: -1250556814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_132
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 2366
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b4905aeea536a4287aeb3b94d39a3d
+      internalID: 524993308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_133
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2305
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4aa1cf004fc4143aba35fdf4f2e9fc
+      internalID: 1876860547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_134
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2305
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d20e7606864379459eaac578af92597
+      internalID: -984219314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_135
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2305
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3887df6e909f4d04a9a9daa5f1f52478
+      internalID: 1289337923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_136
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2305
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546bfe8478c64ee4bbeba0b78d3d43b1
+      internalID: -1069672279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_137
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 2305
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ce59a604ec9574196292541ce113f3
+      internalID: -1061438869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_138
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2305
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7ce1fb12370534e9ac9492103a3709
+      internalID: -49629347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_139
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2305
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150bde6c12083d344ad7a6c82b364506
+      internalID: -49071942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_140
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2305
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bf16a26da682441b0fc157df79d970
+      internalID: -1125465206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_141
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 2305
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc177d43a0c16a64ca99c93d795f7d26
+      internalID: 1989959645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_142
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2305
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de8f6098ec00c340a7b30a22ae6809e
+      internalID: -1920814603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_143
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 2305
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add89b7bcfed5c142aab5f825466f7de
+      internalID: 1898396001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_144
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2305
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9b207d820a7204bb911cee8f7176f3
+      internalID: 656812830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_145
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2305
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aba2209dec3a19418b90fa00234cc3e
+      internalID: 1367271040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_146
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2241
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80845c8fdaddb444a8d1dbb95e55616f
+      internalID: -927357462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_147
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2ca21a3ab5d084fac2f8aaca887e27
+      internalID: 87918804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_148
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0b16827ac3af7499d39f65716db8fa
+      internalID: -401360634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_149
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6eb68db1527af44d88f4c9e3639af90
+      internalID: -137360692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2241
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e74b9549efb0f499db06e363967ae0
+      internalID: 1459362686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_151
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2241
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a8c690d03fe1a4f8092ab800ce0608
+      internalID: -1189556390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_152
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaf0f35c02061547b3f7b1294188bd4
+      internalID: -1473130903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_153
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179ee191040553f4fbc3e40b051de8f0
+      internalID: -1886006658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_154
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c5bd9908490e04391d4876f2b824c4
+      internalID: 327826669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_155
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28df985b5090f7843a78a93b6803d08e
+      internalID: 175781110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_156
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2241
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02ee2baefb34bd4a917d2712defa9a2
+      internalID: -454625291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_157
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 2241
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75d1b22fb8252148afebcd024c275b3
+      internalID: 1056148646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_158
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 2241
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c73df6d0e6806148907cb95e76fca47
+      internalID: -1712995067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_159
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2177
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1ec2f44afed314dafcd687ad4c8892
+      internalID: 25501661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_160
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2177
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656ec26c995494f4f85e52b953df55f9
+      internalID: 461076273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_161
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2177
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6803904178971e84faa72d49c5e0aceb
+      internalID: -850124402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_162
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2177
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205abb2fe36c82544a7aa93777d1b7d9
+      internalID: -1609230649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_163
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2177
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dc9999f99ecb849b75a0ebe89b0d15
+      internalID: -1475565697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_164
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2177
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7faaef04c50acfe4d9fa3f3498bd704b
+      internalID: -1380050569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_165
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2177
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7f2213461141f43b261b3499541bf4
+      internalID: 973703972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_166
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2177
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcd36636d7eba942bded4d2fac89013
+      internalID: -2128584235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_167
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 2177
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea135fea5ffe08418f208502b7838e7
+      internalID: -923370262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_168
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 2177
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f29ce8399b72604c93fdee293719738
+      internalID: 2130913001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_169
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2177
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcc0b00fb6022f4c9c515d3cf415604
+      internalID: -1259486535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_170
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2177
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862de4376be8a0447a28ac06742ae313
+      internalID: 745336458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_171
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 2177
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2546cb3e23a76f4e98cb10a5bd2dc33
+      internalID: 1122537851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_172
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2113
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e438c629e40c325458ddd1943849698f
+      internalID: -467137734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_173
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2113
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868e3f6cdb6c02c419246d7bef2ce8e8
+      internalID: 1751990814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_174
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2113
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df68f0bca27eee444b40abd9458dd717
+      internalID: -766847149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_175
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2114
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0a236db06819d45bed8fcdd06ee0af
+      internalID: 994715101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_176
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2114
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c12a326a72e674a8ce9d27958d785c
+      internalID: -110149708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_177
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2111
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17048ff5c8a8c74da4d3229a88f7646
+      internalID: 1650656551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_178
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2050
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db758d9a970e034f88fc4f7d1f3455d
+      internalID: -911050456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_179
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2049
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4065776337b54a479272491967c0012
+      internalID: -1662153816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_180
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2052
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e307c482cbcedd14b8bbc9ea24d84d4d
+      internalID: 1456249415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_181
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2050
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd4a3d7e3fc6d84b9dd6ad400200bc1
+      internalID: -457511670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_182
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2049
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdfaafc96e29d045913acb5af88c4ef
+      internalID: -86392147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_183
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2052
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc40b292d479c9b40b7509bf3d069305
+      internalID: 638107719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_184
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1985
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc324f2bf38ebd44ca5e572930658283
+      internalID: 1502092716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_185
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1985
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46cadcdf111f594ca1f30bc2b154eb6
+      internalID: -148868457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_186
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1920
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fb43e5fdbfae74a9dc2f9458462061
+      internalID: -2128420846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_187
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1920
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7ef6296c54a8e42920546adba03ea8
+      internalID: -771831182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_188
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1856
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d56210feefbab4f97d2d5704db9f48
+      internalID: -652260950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_189
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1856
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc183d90efff8b4eb5b602d2b5f11b3
+      internalID: 1187992424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_190
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1792
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c0e2e5953f6224083992fc29300ba7
+      internalID: 957006782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_191
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1792
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc64f194b2716bc4eb185225619843db
+      internalID: 705719336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_192
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1728
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6645e5ae05673364eaafea71ed6e2548
+      internalID: 1550297590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_193
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1728
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4771344eb29cc4d80dd33bdc23f921
+      internalID: 1808786069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_194
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1730
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626843cb29a964c43822ed205ab6ea71
+      internalID: -1123368282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_195
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1736
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538be5b04f1e4fe40acc380dab3c30da
+      internalID: 88001687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_196
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1733
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eccd896ae04ff143ae855cbab2a7711
+      internalID: 438127814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_197
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1664
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241fc9ddee646374a8ea5f9ee2fb76da
+      internalID: -96430856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_198
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1664
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6612c14dd1bd2c64ba6bf8339d78f8c9
+      internalID: 1766834005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_199
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1667
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f009411d8015bc4f8c407b6fe87d489
+      internalID: 681970071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_200
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1667
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b2278834f8cbf479ea3f89744f1934
+      internalID: 1837510294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_201
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1664
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885338fd2446f554e8bc8ff1cd71fe24
+      internalID: -757322016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_202
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1601
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd086c62df7bce46aea322bd4cb0d66
+      internalID: -639121791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_203
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1601
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6f8c69be6b14148aae4e0b88196128
+      internalID: 1014737755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_204
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1603
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8302e2477993f4dbad3c70a771cc24
+      internalID: -60288237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_205
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1607
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02ffc08f1d124348b30abab9786b0d8
+      internalID: -251540355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_206
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1603
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0482bca4de6b77f46bd405cf04778e85
+      internalID: -1380907981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_207
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1537
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c56d26d40c3d5f4fbf7c0c505583a81
+      internalID: 58274954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_208
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1537
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4279beadcde52ff4396b08c42e5fa7f5
+      internalID: 466726621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_209
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1539
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6558d9f26c86c743a2aa23c3c59e224
+      internalID: 780878933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_210
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1539
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3c0ad5dd492a844bf85305fc712ef8
+      internalID: -1946816123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_211
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1537
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321c55dcc31840d4681a858991cf6bb0
+      internalID: -1936457348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_212
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1473
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab7d24cb6a51154288b539eef1aea1f
+      internalID: -1172385410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_213
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1473
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fedbadeb59b754dbdb8f117af334ca
+      internalID: -1666606114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_214
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1483
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b28caf8ff914d14193e697c1f4d3ac7
+      internalID: -767863587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_215
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1409
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e6b1a26b0404945a7eef1e724e0a52
+      internalID: -693692456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_216
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1409
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e4d11669db81a4fb5efe21492964bf
+      internalID: -249341378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_217
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1411
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228bd4182ff0cb744b5a3b54a429ebae
+      internalID: -1178873818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_218
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1345
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6c4180035bdd94a8b01b5ffcccce3d
+      internalID: -1847707112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_219
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1345
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6dc8894a03e8745b27b35a215641eb
+      internalID: -1796752275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_220
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1345
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a3377d4602ff34d9b0cffa9f75c943
+      internalID: -1081924649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_221
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1283
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32defc704b3f4d2449e13ade4fccc373
+      internalID: 1698555155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_222
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1281
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de49b0b69d8e5c428b823e12e0ea4b4
+      internalID: -858204653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_223
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1283
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aad0b8f2a759d04dbf8a6e5d897d20b
+      internalID: 1642241270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_224
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1217
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151296e19adf86842a06c4044dff7717
+      internalID: -330573926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_225
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1217
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b99d6872d436dd49ba67a819ef07ddb
+      internalID: 814717042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_226
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1217
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ff8c7f81a3d7e40bdfc97315657b16
+      internalID: 1918235782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_227
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1153
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6399c464cb8f902499d9908b36aa0c98
+      internalID: 423467844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_228
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1153
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c24b0b742a49e34fa3480a9a2ca9044
+      internalID: 2123941656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_229
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1153
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4716b1a692a42f24e895c6ee540ae6c1
+      internalID: -2146824706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_230
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1088
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933b1204b60f30347a282c76dc36e69b
+      internalID: 869588880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_231
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1088
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0360ca2dc80511b45976da14b1d9ce65
+      internalID: -1988451810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_232
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1088
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ed18518eeb48e4abafdab12a9c3890
+      internalID: 468626605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_233
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1024
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5809610dd6f87174fbe2c1476b072cf0
+      internalID: 737705617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_234
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1024
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba09b755f7c0b5438186111dc996992
+      internalID: 1694692369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_235
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1024
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409459c596b1e4044a9bbca6aa7d9e4c
+      internalID: -197148717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_236
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 962
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4c96b95a0d4f54c902c08c0fb356a4
+      internalID: -2000660561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_237
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 959
+        width: 29
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5db4cb675484e4e99c2a5e822d899a
+      internalID: 528044988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_238
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 959
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a2a95acee98144ea2069c2e0eaccd0
+      internalID: 993305615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_239
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 959
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebd8665398f03044acd545d80dec4f2
+      internalID: -1375289261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_240
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 962
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75654d9a07578b84cb9f2403ae36c625
+      internalID: -82679827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_241
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 959
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1223ae55e09ee4c4aa078776a3cc3f95
+      internalID: 1321745843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_242
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 959
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2171232bde1d14ea4dae33239e72ed
+      internalID: -640659605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_243
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 959
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cd9bc4da36ea4499d4d218ef15071d
+      internalID: -822619139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_244
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 896
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6df745472b52e04cb91be174a6642e4
+      internalID: 2071485766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_245
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 896
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d866909fa23184780784536e9bdf9e
+      internalID: -1996126766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_246
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 896
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86866e2504dca714a9912738f1e2c5e1
+      internalID: 1720300117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_247
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 899
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565c1b07d362e3e4f93ff1ee2e981e45
+      internalID: 458772661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_248
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 896
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f16890a50202214599dbede2d7af680
+      internalID: -1069865067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_249
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 896
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccff10c1d2208d4baa5f686c8957ca6
+      internalID: 1521024919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_250
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 896
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f909d4cfedebc324ca5322e6efee948a
+      internalID: 211996031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_251
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 898
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0995a0273a1b7c2418b1275ed39d4798
+      internalID: -803637661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_252
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 830
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827162ac5249bda4bba42faf7fff38f5
+      internalID: 780340029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_253
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 830
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb7cf14333d1474fb60b6288bcb66a5
+      internalID: -1376815767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_254
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 830
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134f38136a6b7eb4cb40f44436a9ed7e
+      internalID: 971423908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_255
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 835
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb02643cb246f9d428358aed1a92dc1e
+      internalID: 440710959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_256
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 830
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cac2d79d8abc143bb47fafcbe1348f
+      internalID: -1109796900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_257
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 830
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9b7bce88e86ee4a9f5ff68b630c0ca
+      internalID: -2014794912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_258
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 832
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581bd9f640bf4934abf8e55fa4531cb8
+      internalID: 1010159797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_259
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 835
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539f0abd8342c3047974283b80408d4a
+      internalID: 1747434226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_260
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 770
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa605546fe84d74f916521fc2a0ade8
+      internalID: 314222029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_261
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 768
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885266b8151d8ed459bf197bbf5ffe4a
+      internalID: -310394549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_262
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 768
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd9581fe242e744fa414bd8ddbab0ab
+      internalID: -1628687543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_263
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 771
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd0cbed727624c47b2bfb7ec6414db4
+      internalID: -1313501739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_264
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 770
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c76f0e89e1b0144eae8894eda7a2664
+      internalID: 1063031993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_265
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 768
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3f8e6735d10944d919b38d7d73654e
+      internalID: -1126820885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_266
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 768
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b211edb87a2b9df4cb51f7ae21ee039f
+      internalID: 348972758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_267
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 770
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d83e2e0cbe42040ba7e5dfa028b9e1
+      internalID: 1071060704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_268
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 705
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecab00b7978d375419fab64855fe4baa
+      internalID: -573520897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_269
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 705
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba24cc41f1b1f2489332dce4ede25ec
+      internalID: -809662541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_270
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 641
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e29ed73738c5d49a3403e2ee8a88e5
+      internalID: 873346331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_271
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 641
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc6095f49674ec4798a124b370fd8b2
+      internalID: -296992309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_272
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 575
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44227e5bb759a1245b7039c3bc5eb0c6
+      internalID: 1495810741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_273
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 575
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d7d94930e115347972112363c178dc
+      internalID: -1934300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_274
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 513
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45db87b298a3cf468770c9820bbf662
+      internalID: -1433171299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_275
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 513
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c118654b88e7c3488beb3073f61e40e
+      internalID: -892691344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_276
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 447
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bb0216b88048a46a8c4f806b4b52e9
+      internalID: 1559474475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_277
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 449
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7edded9e40c314abdc8900f891a259
+      internalID: -384631653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_278
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 449
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae53c285020977a408efb9a417819aff
+      internalID: -1903815453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_279
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 449
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b9e1db07155694a9359087c7472415
+      internalID: 1976070496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_280
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 449
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad975a9aaad7c7349800927fea4da52c
+      internalID: -1981774925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_281
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 449
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85c5023f8aacb94fa698fe192ffcfb0
+      internalID: 1063923428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_282
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 449
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafb52f420b14f141bdb461019c626eb
+      internalID: -1516097603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_283
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 449
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff5771b03dd2240a1b0a685b10eb7b
+      internalID: -2036125244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_284
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 449
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00539fdca88e9f4c91ddf984a1b028f
+      internalID: 1313453912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_285
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 449
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a3c11bc03125a4c8e34dc561cb1e45
+      internalID: 913235285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_286
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 449
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c25f343f76238498824f8e88badddc
+      internalID: 775450037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_287
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 449
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becfbe67701c2a14a877f6da0ff5ab41
+      internalID: -190450134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_288
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 449
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e1fc22a368ac146b7c156128abd406
+      internalID: -1134215714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_289
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 385
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c02430cae8e80c44b70209c72463e14
+      internalID: -1653681608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_290
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 385
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3de837f81d0c6f4ba72e64d1d79811b
+      internalID: -1179220360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_291
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 385
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc116d020c4f66d4eae06efc53ad7d60
+      internalID: -621451844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_292
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 385
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ba82f31b5460d42898b1451ba09251
+      internalID: -619662357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_293
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 385
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214b9b9d27a327c40a92d0d42606242b
+      internalID: 380044890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_294
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 385
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae20165424573b44bb054123c804eb2
+      internalID: -1105013845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_295
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 385
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b89aa432e3ebcd4ebad728de0a0071f
+      internalID: -270800697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_296
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 385
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055fc21930248014dac57b844cf41297
+      internalID: 367309270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_297
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 385
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5323115d23f795c4092c7683122f0a23
+      internalID: 1100134506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_298
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 385
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e13c9b8e49af141aa50dceb46515ce
+      internalID: 214045666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_299
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 385
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537a5397aa02a18429d1d1bb3d542b29
+      internalID: -378629062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_300
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 385
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8f8e06351e2344683bfb68386c71b4
+      internalID: 1836366343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_301
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 385
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc58bf5049977845b35a126b7beaee2
+      internalID: 466459481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_302
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 319
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b2c38f087116147bd0c35b03d86af1
+      internalID: 1349733311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_303
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 319
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64561b21b5d84904f9deb71c111b34d0
+      internalID: 2034764647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_304
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 319
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb135315afa6204abac03e32fbe83a1
+      internalID: 112346339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_305
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 319
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fa881cbb0521e4fa83220b31346211
+      internalID: 1706511779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_306
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 319
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6c06142d5f0244b938a7163b7f5e05
+      internalID: -674719244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_307
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 319
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4630bae688fa5ee4e9df608dac373311
+      internalID: 1532131328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_308
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 319
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9580c9b47df2ffb4ca7fbcd3acbcc9a2
+      internalID: 1521366404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_309
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 319
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ec195c35392d64b97b7925c49e7e29
+      internalID: 944329242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_310
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 319
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f44080427acfd4d8b2e899d70a6556
+      internalID: -1976988875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_311
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 319
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c82c1373f0459847ac487642b7a9044
+      internalID: 1008537895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_312
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 319
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e43eb2844f1d34c98772b19d1018b5
+      internalID: 1187995803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_313
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 319
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7839fe44b4a56140b51b6200cc20a8e
+      internalID: 438465267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_314
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 319
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be13f73789fa8cc44a7d34ca1675a673
+      internalID: 213251586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_315
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 257
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171cdac763d3bed4e80db949e2b950d4
+      internalID: 272131363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_316
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 257
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90b7b3509403214595802b252f4b599
+      internalID: -1258852822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_317
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 257
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f343a3eca68a6546a686653c719a2e0
+      internalID: 1412251582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_318
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 257
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e46968638c25c45a6177605953073b
+      internalID: -704085920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_319
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 257
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daf0d35189ec864ea0a0bdd317630f0
+      internalID: 467359937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_320
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 257
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d655cdb91688c48ab7207067b43c98
+      internalID: 1647064904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_321
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 257
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d9ad48539eeb045bb78d929b1752c1
+      internalID: -1929126259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_322
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 257
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4cba9cd38429e48a949b5b05ce48c2
+      internalID: 1188947225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_323
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 257
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0965ed66be18eee4f96c6d3db4091fa5
+      internalID: 436147115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_324
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 257
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98aba7a0bb581f7439825b906bea2e74
+      internalID: -605341801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_325
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 257
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30766ac43cd287a49b3e61125b356e21
+      internalID: 1415178748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_326
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 257
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a015859f505700f4eb6b05789929e336
+      internalID: -1367846472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_327
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 257
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87fe2f19edcee840b37b4c975405746
+      internalID: 342817597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_328
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 192
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477ac789e0bccd54cb4c95b42bb91b5e
+      internalID: -651423884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_329
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 192
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd6716c580589a40b631878ef4e793f
+      internalID: -1441796351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_330
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 194
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466f239f1f4bbb74cac48bde53e9d1b2
+      internalID: -942300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_331
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 194
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b858f9b0c4cec2240a5abf5968e77b32
+      internalID: -1225850595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_332
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 194
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706086002da4add47bf6a4afeb491038
+      internalID: 1917684452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_333
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 192
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32a0d0e05685f545965b11df903c9fb
+      internalID: -1398599172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_334
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 128
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6645387072edf41a5317c86e6d5174
+      internalID: 2091670911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_335
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 128
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bd6a05e41afe44ea3be96549f63207
+      internalID: -1711548096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_336
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 128
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae102f6ea3f46f6488c9ddbc8ebdc364
+      internalID: -1191230376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_337
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f71330ce84e3584483103e180128335
+      internalID: 758850232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_338
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6725f2bdb2e8154f8ea4beb693da21f
+      internalID: -546677962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_339
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 128
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b467b6408cdfe41b7cd5e4cd7c2ed9
+      internalID: -798918345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_340
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 64
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178ac9f4024371e4388f937d2a1454cd
+      internalID: -1483264624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_341
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 64
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d29ef6eb09cdc499a2fd92d260b8d1
+      internalID: -234933651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_342
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 64
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd4c35227a294d40a8d9710c5e7c3fd
+      internalID: 425256686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_343
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 64
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdf708bf37b4854e9581d8d926b7a46
+      internalID: 1271210395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_344
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 64
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31e9e35c0fdb1545a13b91fba370808
+      internalID: -2064852337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_345
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d858e2f7fed736748a70324619560baa
+      internalID: 2072434303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_346
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eacc4111fbd3641a5118624dbbe4c3
+      internalID: -335168899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_347
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08380bd4a1c6f5545aabf8b4c52fece0
+      internalID: 55736279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_348
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31e19df54f95e444aefbfefdfcb8fb6
+      internalID: 610792378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_349
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e115f7ea65169704e93076bfbcf72679
+      internalID: -648401027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_350
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc48780b12f5f745a58ab7a6e5974de
+      internalID: 453263479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossman_sprite_351
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9923dcafbc6c64443b5b9270a93398f6
+      internalID: -1684342309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bossman_sprite_0: 366059551
+      bossman_sprite_1: -2081348865
+      bossman_sprite_10: 82641410
+      bossman_sprite_100: 91790053
+      bossman_sprite_101: -976585228
+      bossman_sprite_102: 1778026394
+      bossman_sprite_103: 472355510
+      bossman_sprite_104: -58693991
+      bossman_sprite_105: 1445854492
+      bossman_sprite_106: -600008385
+      bossman_sprite_107: 599683871
+      bossman_sprite_108: 1780689278
+      bossman_sprite_109: 722218364
+      bossman_sprite_11: -1366652785
+      bossman_sprite_110: 56993667
+      bossman_sprite_111: 720945063
+      bossman_sprite_112: -795810275
+      bossman_sprite_113: 1396509668
+      bossman_sprite_114: -25002015
+      bossman_sprite_115: 246563584
+      bossman_sprite_116: 862977302
+      bossman_sprite_117: -1312189234
+      bossman_sprite_118: 1748830579
+      bossman_sprite_119: 1678570293
+      bossman_sprite_12: -1659096904
+      bossman_sprite_120: 718294956
+      bossman_sprite_121: -1286868506
+      bossman_sprite_122: -768240642
+      bossman_sprite_123: 1618186578
+      bossman_sprite_124: 1341614688
+      bossman_sprite_125: 1035325360
+      bossman_sprite_126: -2070815594
+      bossman_sprite_127: -518519160
+      bossman_sprite_128: 1294278039
+      bossman_sprite_129: 1265690627
+      bossman_sprite_13: -555161633
+      bossman_sprite_130: -38598905
+      bossman_sprite_131: -1250556814
+      bossman_sprite_132: 524993308
+      bossman_sprite_133: 1876860547
+      bossman_sprite_134: -984219314
+      bossman_sprite_135: 1289337923
+      bossman_sprite_136: -1069672279
+      bossman_sprite_137: -1061438869
+      bossman_sprite_138: -49629347
+      bossman_sprite_139: -49071942
+      bossman_sprite_14: 49385994
+      bossman_sprite_140: -1125465206
+      bossman_sprite_141: 1989959645
+      bossman_sprite_142: -1920814603
+      bossman_sprite_143: 1898396001
+      bossman_sprite_144: 656812830
+      bossman_sprite_145: 1367271040
+      bossman_sprite_146: -927357462
+      bossman_sprite_147: 87918804
+      bossman_sprite_148: -401360634
+      bossman_sprite_149: -137360692
+      bossman_sprite_15: -453931861
+      bossman_sprite_150: 1459362686
+      bossman_sprite_151: -1189556390
+      bossman_sprite_152: -1473130903
+      bossman_sprite_153: -1886006658
+      bossman_sprite_154: 327826669
+      bossman_sprite_155: 175781110
+      bossman_sprite_156: -454625291
+      bossman_sprite_157: 1056148646
+      bossman_sprite_158: -1712995067
+      bossman_sprite_159: 25501661
+      bossman_sprite_16: 38115698
+      bossman_sprite_160: 461076273
+      bossman_sprite_161: -850124402
+      bossman_sprite_162: -1609230649
+      bossman_sprite_163: -1475565697
+      bossman_sprite_164: -1380050569
+      bossman_sprite_165: 973703972
+      bossman_sprite_166: -2128584235
+      bossman_sprite_167: -923370262
+      bossman_sprite_168: 2130913001
+      bossman_sprite_169: -1259486535
+      bossman_sprite_17: -412539872
+      bossman_sprite_170: 745336458
+      bossman_sprite_171: 1122537851
+      bossman_sprite_172: -467137734
+      bossman_sprite_173: 1751990814
+      bossman_sprite_174: -766847149
+      bossman_sprite_175: 994715101
+      bossman_sprite_176: -110149708
+      bossman_sprite_177: 1650656551
+      bossman_sprite_178: -911050456
+      bossman_sprite_179: -1662153816
+      bossman_sprite_18: 240027496
+      bossman_sprite_180: 1456249415
+      bossman_sprite_181: -457511670
+      bossman_sprite_182: -86392147
+      bossman_sprite_183: 638107719
+      bossman_sprite_184: 1502092716
+      bossman_sprite_185: -148868457
+      bossman_sprite_186: -2128420846
+      bossman_sprite_187: -771831182
+      bossman_sprite_188: -652260950
+      bossman_sprite_189: 1187992424
+      bossman_sprite_19: 1414643746
+      bossman_sprite_190: 957006782
+      bossman_sprite_191: 705719336
+      bossman_sprite_192: 1550297590
+      bossman_sprite_193: 1808786069
+      bossman_sprite_194: -1123368282
+      bossman_sprite_195: 88001687
+      bossman_sprite_196: 438127814
+      bossman_sprite_197: -96430856
+      bossman_sprite_198: 1766834005
+      bossman_sprite_199: 681970071
+      bossman_sprite_2: -1261856278
+      bossman_sprite_20: -936953977
+      bossman_sprite_200: 1837510294
+      bossman_sprite_201: -757322016
+      bossman_sprite_202: -639121791
+      bossman_sprite_203: 1014737755
+      bossman_sprite_204: -60288237
+      bossman_sprite_205: -251540355
+      bossman_sprite_206: -1380907981
+      bossman_sprite_207: 58274954
+      bossman_sprite_208: 466726621
+      bossman_sprite_209: 780878933
+      bossman_sprite_21: -25465255
+      bossman_sprite_210: -1946816123
+      bossman_sprite_211: -1936457348
+      bossman_sprite_212: -1172385410
+      bossman_sprite_213: -1666606114
+      bossman_sprite_214: -767863587
+      bossman_sprite_215: -693692456
+      bossman_sprite_216: -249341378
+      bossman_sprite_217: -1178873818
+      bossman_sprite_218: -1847707112
+      bossman_sprite_219: -1796752275
+      bossman_sprite_22: 70678991
+      bossman_sprite_220: -1081924649
+      bossman_sprite_221: 1698555155
+      bossman_sprite_222: -858204653
+      bossman_sprite_223: 1642241270
+      bossman_sprite_224: -330573926
+      bossman_sprite_225: 814717042
+      bossman_sprite_226: 1918235782
+      bossman_sprite_227: 423467844
+      bossman_sprite_228: 2123941656
+      bossman_sprite_229: -2146824706
+      bossman_sprite_23: -49428132
+      bossman_sprite_230: 869588880
+      bossman_sprite_231: -1988451810
+      bossman_sprite_232: 468626605
+      bossman_sprite_233: 737705617
+      bossman_sprite_234: 1694692369
+      bossman_sprite_235: -197148717
+      bossman_sprite_236: -2000660561
+      bossman_sprite_237: 528044988
+      bossman_sprite_238: 993305615
+      bossman_sprite_239: -1375289261
+      bossman_sprite_24: -1496678988
+      bossman_sprite_240: -82679827
+      bossman_sprite_241: 1321745843
+      bossman_sprite_242: -640659605
+      bossman_sprite_243: -822619139
+      bossman_sprite_244: 2071485766
+      bossman_sprite_245: -1996126766
+      bossman_sprite_246: 1720300117
+      bossman_sprite_247: 458772661
+      bossman_sprite_248: -1069865067
+      bossman_sprite_249: 1521024919
+      bossman_sprite_25: 1250736308
+      bossman_sprite_250: 211996031
+      bossman_sprite_251: -803637661
+      bossman_sprite_252: 780340029
+      bossman_sprite_253: -1376815767
+      bossman_sprite_254: 971423908
+      bossman_sprite_255: 440710959
+      bossman_sprite_256: -1109796900
+      bossman_sprite_257: -2014794912
+      bossman_sprite_258: 1010159797
+      bossman_sprite_259: 1747434226
+      bossman_sprite_26: -1527656453
+      bossman_sprite_260: 314222029
+      bossman_sprite_261: -310394549
+      bossman_sprite_262: -1628687543
+      bossman_sprite_263: -1313501739
+      bossman_sprite_264: 1063031993
+      bossman_sprite_265: -1126820885
+      bossman_sprite_266: 348972758
+      bossman_sprite_267: 1071060704
+      bossman_sprite_268: -573520897
+      bossman_sprite_269: -809662541
+      bossman_sprite_27: 2052691965
+      bossman_sprite_270: 873346331
+      bossman_sprite_271: -296992309
+      bossman_sprite_272: 1495810741
+      bossman_sprite_273: -1934300378
+      bossman_sprite_274: -1433171299
+      bossman_sprite_275: -892691344
+      bossman_sprite_276: 1559474475
+      bossman_sprite_277: -384631653
+      bossman_sprite_278: -1903815453
+      bossman_sprite_279: 1976070496
+      bossman_sprite_28: -2113982399
+      bossman_sprite_280: -1981774925
+      bossman_sprite_281: 1063923428
+      bossman_sprite_282: -1516097603
+      bossman_sprite_283: -2036125244
+      bossman_sprite_284: 1313453912
+      bossman_sprite_285: 913235285
+      bossman_sprite_286: 775450037
+      bossman_sprite_287: -190450134
+      bossman_sprite_288: -1134215714
+      bossman_sprite_289: -1653681608
+      bossman_sprite_29: -1150139273
+      bossman_sprite_290: -1179220360
+      bossman_sprite_291: -621451844
+      bossman_sprite_292: -619662357
+      bossman_sprite_293: 380044890
+      bossman_sprite_294: -1105013845
+      bossman_sprite_295: -270800697
+      bossman_sprite_296: 367309270
+      bossman_sprite_297: 1100134506
+      bossman_sprite_298: 214045666
+      bossman_sprite_299: -378629062
+      bossman_sprite_3: 929222270
+      bossman_sprite_30: 394511391
+      bossman_sprite_300: 1836366343
+      bossman_sprite_301: 466459481
+      bossman_sprite_302: 1349733311
+      bossman_sprite_303: 2034764647
+      bossman_sprite_304: 112346339
+      bossman_sprite_305: 1706511779
+      bossman_sprite_306: -674719244
+      bossman_sprite_307: 1532131328
+      bossman_sprite_308: 1521366404
+      bossman_sprite_309: 944329242
+      bossman_sprite_31: 701278928
+      bossman_sprite_310: -1976988875
+      bossman_sprite_311: 1008537895
+      bossman_sprite_312: 1187995803
+      bossman_sprite_313: 438465267
+      bossman_sprite_314: 213251586
+      bossman_sprite_315: 272131363
+      bossman_sprite_316: -1258852822
+      bossman_sprite_317: 1412251582
+      bossman_sprite_318: -704085920
+      bossman_sprite_319: 467359937
+      bossman_sprite_32: 1123564898
+      bossman_sprite_320: 1647064904
+      bossman_sprite_321: -1929126259
+      bossman_sprite_322: 1188947225
+      bossman_sprite_323: 436147115
+      bossman_sprite_324: -605341801
+      bossman_sprite_325: 1415178748
+      bossman_sprite_326: -1367846472
+      bossman_sprite_327: 342817597
+      bossman_sprite_328: -651423884
+      bossman_sprite_329: -1441796351
+      bossman_sprite_33: 664451682
+      bossman_sprite_330: -942300004
+      bossman_sprite_331: -1225850595
+      bossman_sprite_332: 1917684452
+      bossman_sprite_333: -1398599172
+      bossman_sprite_334: 2091670911
+      bossman_sprite_335: -1711548096
+      bossman_sprite_336: -1191230376
+      bossman_sprite_337: 758850232
+      bossman_sprite_338: -546677962
+      bossman_sprite_339: -798918345
+      bossman_sprite_34: 1009035486
+      bossman_sprite_340: -1483264624
+      bossman_sprite_341: -234933651
+      bossman_sprite_342: 425256686
+      bossman_sprite_343: 1271210395
+      bossman_sprite_344: -2064852337
+      bossman_sprite_345: 2072434303
+      bossman_sprite_346: -335168899
+      bossman_sprite_347: 55736279
+      bossman_sprite_348: 610792378
+      bossman_sprite_349: -648401027
+      bossman_sprite_35: -423335969
+      bossman_sprite_350: 453263479
+      bossman_sprite_351: -1684342309
+      bossman_sprite_36: -1847090541
+      bossman_sprite_37: -1512571363
+      bossman_sprite_38: 1522310008
+      bossman_sprite_39: 1924733970
+      bossman_sprite_4: 771071998
+      bossman_sprite_40: -1225034141
+      bossman_sprite_41: 1003020232
+      bossman_sprite_42: -1187759244
+      bossman_sprite_43: -301692907
+      bossman_sprite_44: 804369994
+      bossman_sprite_45: 1467928835
+      bossman_sprite_46: 789844308
+      bossman_sprite_47: 240221743
+      bossman_sprite_48: 1198094915
+      bossman_sprite_49: 117133520
+      bossman_sprite_5: 1515542598
+      bossman_sprite_50: 1343603597
+      bossman_sprite_51: 1615556255
+      bossman_sprite_52: -614575564
+      bossman_sprite_53: 1344913096
+      bossman_sprite_54: -711324848
+      bossman_sprite_55: 1877301795
+      bossman_sprite_56: -1868833957
+      bossman_sprite_57: 701628570
+      bossman_sprite_58: -1619733589
+      bossman_sprite_59: 1336106977
+      bossman_sprite_6: -604067406
+      bossman_sprite_60: 1302025764
+      bossman_sprite_61: -843172265
+      bossman_sprite_62: 1630424683
+      bossman_sprite_63: 813074328
+      bossman_sprite_64: -1637256627
+      bossman_sprite_65: -1610488330
+      bossman_sprite_66: -908317361
+      bossman_sprite_67: 2017971895
+      bossman_sprite_68: -28609855
+      bossman_sprite_69: 216084001
+      bossman_sprite_7: -292074449
+      bossman_sprite_70: -41613784
+      bossman_sprite_71: -854172234
+      bossman_sprite_72: -1542089032
+      bossman_sprite_73: -1893624353
+      bossman_sprite_74: 1745226265
+      bossman_sprite_75: -1882830599
+      bossman_sprite_76: 1442332367
+      bossman_sprite_77: 1207761799
+      bossman_sprite_78: -1564938312
+      bossman_sprite_79: 95261863
+      bossman_sprite_8: -2061776168
+      bossman_sprite_80: 908868201
+      bossman_sprite_81: -967841769
+      bossman_sprite_82: -1810085913
+      bossman_sprite_83: 1478678475
+      bossman_sprite_84: 189310785
+      bossman_sprite_85: -1589474916
+      bossman_sprite_86: 1109680694
+      bossman_sprite_87: 2026687756
+      bossman_sprite_88: 1323135550
+      bossman_sprite_89: 1552685442
+      bossman_sprite_9: 177536673
+      bossman_sprite_90: -1203943965
+      bossman_sprite_91: 31366169
+      bossman_sprite_92: 322948509
+      bossman_sprite_93: 118604760
+      bossman_sprite_94: -917479697
+      bossman_sprite_95: 2002794384
+      bossman_sprite_96: -1550657669
+      bossman_sprite_97: 880472428
+      bossman_sprite_98: -1359189028
+      bossman_sprite_99: -235637004
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

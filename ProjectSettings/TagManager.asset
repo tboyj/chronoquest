@@ -11,6 +11,10 @@ TagManager:
   - Object
   - Recievable
   - Holder
+  - NPC
+  - Door
+  - Teleport
+  - Stair
   layers:
   - Default
   - TransparentFX
