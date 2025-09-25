@@ -13,6 +13,14 @@ public class CollectItemQuest : Quest
         itemsCollected = 0;
         isCompleted = false;
     }
+    public virtual CollectItemQuest CollectItemInitialize(int requiredItemId, int requiredAmount, int itemsCollected, ItemStorable itemNeeded)
+    {
+        this.requiredItemId = requiredItemId;
+        this.requiredAmount = requiredAmount;
+        this.itemsCollected = itemsCollected;
+        this.itemNeeded = itemNeeded;
+        return this;
+    }
 
     public void ReportItemCollected(int itemId, int amount)
     {

@@ -40,18 +40,28 @@ public class NPC : Character
         {
             Debug.Log("Welcoem");
             inRange = true;
-            if (other.GetComponent<Player>().GetHeldItem().item != null)
-                itemGiven = other.GetComponent<Player>().GetHeldItem();
+            if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
+            {
+                itemGiven = other.GetComponent<Player>().GetHeldItem(); // This causes it twan
+                Debug.Log(itemGiven.item.name);
+            }
+            else
+                itemGiven = null;
         }
     }
     public void OnTriggerStay(Collider other)
     {
-        
+
         if (other.CompareTag("Player"))
         {
-            Debug.Log("How often do you happen to be here?");
-            if (other.GetComponent<Player>().GetHeldItem().item != null)
-                itemGiven = other.GetComponent<Player>().GetHeldItem();
+
+            if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
+            {
+                itemGiven = other.GetComponent<Player>().GetHeldItem(); // This causes it twan
+                // Debug.Log(itemGiven.item.name);
+            }
+            else
+                itemGiven = null;
         }
     }
     void OnTriggerExit(Collider other)
@@ -60,7 +70,8 @@ public class NPC : Character
         {
             Debug.Log("Goodbye");
             inRange = false;
-            itemGiven = null;
+            itemGiven = new Item();
+
         }
     }
 }

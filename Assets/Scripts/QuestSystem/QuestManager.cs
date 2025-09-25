@@ -7,7 +7,7 @@ public class QuestManager : MonoBehaviour
     public List<Quest> playerQuests = new List<Quest>();
     public List<Quest> playerQuestsCompleted = new List<Quest>();
     public Quest currentQuest;
-    
+
     void Start()
     {
 
@@ -15,6 +15,10 @@ public class QuestManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+    void PrintOutData()
     {
         
     }

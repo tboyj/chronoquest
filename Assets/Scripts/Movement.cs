@@ -77,7 +77,7 @@ class PlayerMovement : Movement
                     }
                     currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
                 }
-                Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
+                // Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
             }
             
             float currentForce = moveForce;

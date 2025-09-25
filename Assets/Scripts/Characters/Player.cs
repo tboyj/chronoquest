@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
@@ -63,7 +65,7 @@ public class Player : Character
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TryPickupitem();
+            TryUseEkey();
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -73,20 +75,35 @@ public class Player : Character
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            TryNPCTalk();
+            TryToGiveQuest();
         }
     }
 
-    private void TryNPCTalk()
+    private void TryToGiveQuest()
     {
         if (interactableNPC != null)
         {
             try
             {
-                QuestGiver test = interactableNPC.gameObject.GetComponent<QuestGiver>();
-                if (test.questToGive.requiredItemId == heldItem.item.id)
+                QuestGiver giver = interactableNPC.gameObject.GetComponent<QuestGiver>();
+                QuestManager manager = gameObject.GetComponent<QuestManager>();
+                Quest questVariable = giver.CollectItem();
+                switch (giver.id)
                 {
-                    Debug.Log("Dattebayo!");
+                    case 0: // 5 pakets quest (giver)
+                        if (!manager.playerQuests.Contains(questVariable))
+                        {
+                            manager.playerQuests.Add(questVariable);
+                            Debug.Log("Quest added: " + manager.playerQuests[manager.playerQuests.IndexOf(questVariable)]);
+                        }
+                        else
+                        {
+                            Debug.Log("Already in progress. Please work on: " + manager.playerQuests[manager.playerQuests.IndexOf(questVariable)]);
+                        }
+                        break;
+                    default: // 5 pakets quest
+                        Debug.Log("Quest added: " + "none");
+                        break;
                 }
             }
             catch (Exception e)
@@ -97,9 +114,9 @@ public class Player : Character
         }
     }
 
-    private void TryPickupitem()
+    private void TryUseEkey()
     {
-        if (interactableItem != null)
+        if (interactableItem != null) // picking up items
         {
             if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
             {
@@ -109,6 +126,7 @@ public class Player : Character
                 inventory.SetRefresh(true);
             }
         }
+        // if not recognizing item to pick up, look for npc to interact with
     }
 
     private void TryDropItem()
@@ -197,7 +215,7 @@ public class Player : Character
     public void FixedUpdate()
     {
         movement.MoveWithForce(movement.moveForce);
-        animatorSetup.SetFloat("SpeedX", movement.rb.velocity.magnitude); // fix fall sown script
+        animatorSetup.SetFloat("SpeedX", Math.Abs(movement.rb.velocity.x)); // Add Z animation to this at a later time.
         spriteRenderer.flipX = movement.flip;
 
     }
@@ -324,15 +342,20 @@ public class Player : Character
 
         if (other.CompareTag("Object") && other.GetComponent<ItemInWorld>().takeable)
         {
-            Debug.Log("Interactable item: (false)" + interactableItem.itemInWorld.name);
-            interactableItem = null;
+            if (interactableItem != null)
+            {
+                Debug.Log("Interactable item: (false)" + interactableItem.itemInWorld.name);
+                interactableItem = null;
+            }
 
         }
-        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+        if (other.CompareTag("NPC") && other.GetComponent<NPC>())
         {
-            Debug.Log("Interactable item: (false)" + interactableNPC.name);
-            interactableNPC = null;
-
+            if (interactableNPC != null)
+            {
+                Debug.Log("Interactable item: (false)" + interactableNPC.name);
+                interactableNPC = null;
+            }
         }
     }
 
