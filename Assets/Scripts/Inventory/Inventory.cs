@@ -34,27 +34,26 @@ We can add a expanding inventory later. Currently fixed size right now!!!!
     }
     public void AddItem(Item thisItem)
     {// if inventory is not full, add item
-            int stackableIndex = -1;
-int emptyIndex = -1;
+        int stackableIndex = -1;
+        int emptyIndex = -1;
 
-for (int i = 0; i < items.Count; i++)
-{
-    Item itemInInventory = items[i];
-
-    if (itemInInventory.item != null)
+    for (int i = 0; i < items.Count; i++)
     {
-        if (itemInInventory.item == thisItem.item &&
-            itemInInventory.quantity < itemInInventory.item.maxStackSize)
-        {
-            stackableIndex = i;
-            break; // Found a valid stackable slot, no need to keep searching
-        }
+        Item itemInInventory = items[i];
+        if (itemInInventory.item != null)
+            {
+                if (itemInInventory.item == thisItem.item &&
+                    itemInInventory.quantity < itemInInventory.item.maxStackSize)
+                {
+                    stackableIndex = i;
+                    break; // Found a valid stackable slot, no need to keep searching
+                }
+            }
+            else if (emptyIndex == -1)
+            {
+                emptyIndex = i; // Save first empty slot in case stacking isn't possible
+            }
     }
-    else if (emptyIndex == -1)
-    {
-        emptyIndex = i; // Save first empty slot in case stacking isn't possible
-    }
-}
 
 // 🧠 Now apply the logic
 if (stackableIndex != -1)

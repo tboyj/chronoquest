@@ -6,7 +6,7 @@ public class CollectItemQuest : Quest
 {
     public int requiredItemId;
     public int requiredAmount;
-    private int itemsCollected;
+    public int itemsCollected;
     public ItemStorable itemNeeded;
     public override void Initialize()
     {
@@ -22,13 +22,15 @@ public class CollectItemQuest : Quest
         return this;
     }
 
-    public void ReportItemCollected(int itemId, int amount)
+    public void ReportItemCollected(int amount)
     {
-        if (itemId == requiredItemId)
-        {
-            itemsCollected += amount;
+            itemsCollected+=amount;
+            Debug.Log("Added item to collection");
             CheckProgress();
-        }
+    }
+    public void SetQuestName(string name)
+    {
+        questName = name;
     }
     public override void Update()
     {

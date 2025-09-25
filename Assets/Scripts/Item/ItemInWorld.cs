@@ -11,6 +11,7 @@ public class ItemInWorld : MonoBehaviour
     public SpriteRenderer rend;
     public bool takeable;
     private bool itemRecognizesPlayer;
+    public GameObject referencePlayer;
 
     void Start()
     {
@@ -34,11 +35,23 @@ public class ItemInWorld : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && takeable)
             {
                 amountOfItemsHere--;
+                QuestManager manager = referencePlayer.GetComponent<QuestManager>();
+                    if (manager.currentQuest is CollectItemQuest collectItemQuest)
+                    {
+                        if (itemInWorld == collectItemQuest.itemNeeded)
+                        {
+                            collectItemQuest.ReportItemCollected(1);
+                            manager.UpdateQuestGui(manager.playerQuests.IndexOf(manager.currentQuest));
+                        }
+                    }
                 if (amountOfItemsHere == 0)
                 {
                     rend.enabled = false;
                     takeable = false;
+
+
                 }
+
             }
         }
     }
@@ -46,13 +59,16 @@ public class ItemInWorld : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            referencePlayer = other.gameObject;
             itemRecognizesPlayer = true;
         }
     }
-        void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
+            referencePlayer = null;
             itemRecognizesPlayer = false;
         }
     }

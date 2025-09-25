@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 public class Player : Character
@@ -18,10 +19,10 @@ public class Player : Character
     [SerializeField]
     protected RectTransform inventoryHolder;
     private int indexOfInventoryHover { get; set; }
-
+    private QuestManager manager;
     public void Start()
     {
-
+        manager = gameObject.GetComponent<QuestManager>();
         Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, transform.GetChild(0).GetComponent<Animator>());
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup();
@@ -86,25 +87,7 @@ public class Player : Character
             try
             {
                 QuestGiver giver = interactableNPC.gameObject.GetComponent<QuestGiver>();
-                QuestManager manager = gameObject.GetComponent<QuestManager>();
-                Quest questVariable = giver.CollectItem();
-                switch (giver.id)
-                {
-                    case 0: // 5 pakets quest (giver)
-                        if (!manager.playerQuests.Contains(questVariable))
-                        {
-                            manager.playerQuests.Add(questVariable);
-                            Debug.Log("Quest added: " + manager.playerQuests[manager.playerQuests.IndexOf(questVariable)]);
-                        }
-                        else
-                        {
-                            Debug.Log("Already in progress. Please work on: " + manager.playerQuests[manager.playerQuests.IndexOf(questVariable)]);
-                        }
-                        break;
-                    default: // 5 pakets quest
-                        Debug.Log("Quest added: " + "none");
-                        break;
-                }
+                manager.CheckUpOnQuest(giver.id, giver);
             }
             catch (Exception e)
             {
@@ -122,7 +105,8 @@ public class Player : Character
             {
                 Item itemAdded = new Item(interactableItem.itemInWorld, 1);
                 inventory.AddItem(itemAdded);
-                Debug.Log("");
+                
+                
                 inventory.SetRefresh(true);
             }
         }
@@ -144,7 +128,8 @@ public class Player : Character
             }
             if (interactableNPC != null)
             {
-                // Do later
+                // Do later, Add condition to check
+                
             }
 
         }

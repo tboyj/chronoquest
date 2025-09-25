@@ -20,7 +20,7 @@ public class NPC : Character
 
         if (inRange && Input.GetKeyDown(KeyCode.Q))
         {
-            if (itemGiven.item.canBeGiven == true)
+            if (itemGiven.item.canBeGiven == true) // Add condition to check
                 npc.inventory.AddItem(itemGiven);
         }
     }
