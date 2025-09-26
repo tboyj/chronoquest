@@ -25,7 +25,7 @@ public class Player : Character
         manager = gameObject.GetComponent<QuestManager>();
         Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, transform.GetChild(0).GetComponent<Animator>());
         movement = gameObject.AddComponent<PlayerMovement>();
-        InventorySetup();
+        InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);
         if (heldItem.item != null)
@@ -112,52 +112,74 @@ public class Player : Character
         }
         // if not recognizing item to pick up, look for npc to interact with
     }
+    private void TryDropForItem() {
 
+    if (interactableItem.itemInWorld == heldItem.item)
+        {
+            if (interactableItem.amountOfItemsHere > 0)
+            {
+                inventory.RemoveOneQuantity(itemHeld);
+                inventory.SetRefresh(true);
+                interactableItem.amountOfItemsHere++;
+            }
+        }
+    }
     private void TryDropItem()
     {
         if (heldItem.quantity > 0 && heldItem.item.canBeGiven == true)
         {
-            if (interactableItem.itemInWorld == heldItem.item)
+            if (interactableItem != null)
             {
-                if (interactableItem.amountOfItemsHere > 0)
-                {
-                    inventory.RemoveOneQuantity(itemHeld);
-                    inventory.SetRefresh(true);
-                    interactableItem.amountOfItemsHere++;
-                }
+                TryDropForItem();
+            }
+            else
+            {
+                Debug.Log("No item found");
             }
             if (interactableNPC != null)
             {
                 // Do later, Add condition to check
-                
+                Debug.Log(interactableNPC.inventory.items + ": interactableNPC");
+                if (heldItem.item.canBeGiven)
+                {
+                    interactableNPC.inventory.AddItem(new Item(heldItem.item, 1));
+                    inventory.RemoveOneQuantity(inventory.GetItemIndex(heldItem));
+                    Debug.Log("Do you ever succeed?");
+                    Debug.Log(interactableNPC.inventory.items[0].item.name);
+                }
             }
+                else
+                {
+                    Debug.Log("You are a dumb dumb. interactableNPC is worth NOTHING.");
+                }
 
         }
     }
+
 
     private void CheckForHotbarInput()
+{
+    if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
     {
-        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                UpdateSelectedItem(0);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                UpdateSelectedItem(1);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                UpdateSelectedItem(2);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                UpdateSelectedItem(3);
-            }
+            UpdateSelectedItem(0);
         }
-
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            UpdateSelectedItem(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            UpdateSelectedItem(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            UpdateSelectedItem(3);
+        }
     }
+
+}
 
     public void UpdateSelectedItem(int updateIndex)
     {
@@ -205,12 +227,12 @@ public class Player : Character
 
     }
 
-    public override void InventorySetup()
+    public override void InventorySetup(int amount)
     {
-        for (int i = 0; i < 49; i++)
+        for (int i = 0; i < amount; i++)
         {
             Debug.Log(i);
-            Debug.Log(inventory.GetInventory().Count);
+            // Debug.Log(inventory.GetInventory().Count);
             inventory.AddToList(new Item(null, 1));
         }
         Item paket = new Item(itemPaketTest, 67);

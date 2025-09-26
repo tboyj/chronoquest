@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour
     public Inventory()
     {
         items = new List<Item>();
+
     }
     /**
 We can add a expanding inventory later. Currently fixed size right now!!!!
@@ -36,11 +37,11 @@ We can add a expanding inventory later. Currently fixed size right now!!!!
     {// if inventory is not full, add item
         int stackableIndex = -1;
         int emptyIndex = -1;
-
-    for (int i = 0; i < items.Count; i++)
-    {
-        Item itemInInventory = items[i];
-        if (itemInInventory.item != null)
+        
+        for (int i = 0; i < items.Count; i++)
+        {
+            Item itemInInventory = items[i];
+            if (itemInInventory.item != null)
             {
                 if (itemInInventory.item == thisItem.item &&
                     itemInInventory.quantity < itemInInventory.item.maxStackSize)
@@ -53,35 +54,33 @@ We can add a expanding inventory later. Currently fixed size right now!!!!
             {
                 emptyIndex = i; // Save first empty slot in case stacking isn't possible
             }
-    }
-
-// 🧠 Now apply the logic
-if (stackableIndex != -1)
-{
-    Debug.Log("Stacking onto slot " + stackableIndex);
-    AddQuantity(thisItem, items[stackableIndex]);
-    Debug.Log("Item " + stackableIndex + " name: " + items[stackableIndex].item.name);
-    Debug.Log("New item " + stackableIndex + " quantity: " + items[stackableIndex].quantity);
-}
-else if (emptyIndex != -1)
-{
-    Debug.Log("Placing into empty slot " + emptyIndex);
-    if (thisItem.quantity <= thisItem.item.maxStackSize)
-    {
-        items[emptyIndex] = thisItem;
-    }
-    else
-    {
-        Item stack = new Item(thisItem.item, thisItem.item.maxStackSize);
-        items[emptyIndex] = stack;
-        thisItem.quantity -= stack.quantity;
-        AddItem(thisItem); // recursive call to place remainder
-    }
-}
-else
-{
-    Debug.Log("Inventory full — cannot add item.");
-}
+        }
+        if (stackableIndex != -1)
+        {
+            Debug.Log("Stacking onto slot " + stackableIndex);
+            AddQuantity(thisItem, items[stackableIndex]);
+            Debug.Log("Item " + stackableIndex + " name: " + items[stackableIndex].item.name);
+            Debug.Log("New item " + stackableIndex + " quantity: " + items[stackableIndex].quantity);
+        }
+        else if (emptyIndex != -1)
+        {
+            Debug.Log("Placing into empty slot " + emptyIndex);
+            if (thisItem.quantity <= thisItem.item.maxStackSize)
+            {
+                items[emptyIndex] = thisItem;
+            }
+            else
+            {
+                Item stack = new Item(thisItem.item, thisItem.item.maxStackSize);
+                items[emptyIndex] = stack;
+                thisItem.quantity -= stack.quantity;
+                AddItem(thisItem); // recursive call to place remainder
+            }
+        }
+        else
+        {
+            Debug.Log("Inventory full — cannot add item.");
+        }
 
     }
     public Inventory SwapItem(Item item, Item item2)

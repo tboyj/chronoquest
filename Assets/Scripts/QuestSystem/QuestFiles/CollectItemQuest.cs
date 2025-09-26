@@ -24,9 +24,16 @@ public class CollectItemQuest : Quest
 
     public void ReportItemCollected(int amount)
     {
-            itemsCollected+=amount;
+        if (itemsCollected < requiredAmount)
+        {
+            itemsCollected += amount;
             Debug.Log("Added item to collection");
             CheckProgress();
+        }
+        else
+        {
+            Debug.Log("Completed. Stop adding.");
+        }
     }
     public void SetQuestName(string name)
     {

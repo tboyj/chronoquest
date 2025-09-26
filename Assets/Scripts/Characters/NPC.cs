@@ -1,44 +1,39 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NPC : Character
 {
     public bool inRange = false;
     public Item itemGiven;
-    protected Character npc;
-    
+
+
     public void Start()
     {
-        npc = Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, null);
-        npc.movement = npc.GetComponent<Movement>();
-
+        Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, null);
+        movement = GetComponent<Movement>();
+        inventory = GetComponent<Inventory>();
+        Debug.Log(inventory.items.Count);
+        InventorySetup(49);
     }
     public void Update()
     {
 
-        if (inRange && Input.GetKeyDown(KeyCode.Q))
-        {
-            if (itemGiven.item.canBeGiven == true) // Add condition to check
-                npc.inventory.AddItem(itemGiven);
-        }
+        // if (inRange && Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     if (itemGiven.item.canBeGiven == true) // Add condition to check
+        //         inventory.AddItem(itemGiven);
+        // }
     }
-    // protected override void Initialize(string name, Inventory inv, SpriteRenderer spriteR)
-    // {
-    //     Name = name;
-    //     inventory = inv;
-    //     spriteRenderer = spriteR;
-    // }
-    public override void InventorySetup()
-    {
 
-    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Welcoem");
+            // Debug.Log("Welcoem");
             inRange = true;
             if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
             {

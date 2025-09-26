@@ -11701,13 +11701,13 @@ GameObject:
   - component: {fileID: 1036772508}
   - component: {fileID: 1036772507}
   - component: {fileID: 1036772506}
-  - component: {fileID: 1036772505}
   - component: {fileID: 1036772504}
   - component: {fileID: 1036772503}
   - component: {fileID: 1036772502}
   - component: {fileID: 1036772509}
   - component: {fileID: 1036772510}
   - component: {fileID: 1036772511}
+  - component: {fileID: 1036772512}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -11771,27 +11771,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &1036772505
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036772499}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9, y: 0.935, z: 3}
-  m_Center: {x: 0, y: -0.005, z: 0}
 --- !u!23 &1036772506
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11892,7 +11871,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.295
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -11911,6 +11890,29 @@ MonoBehaviour:
   questToGive: {fileID: 11400000, guid: c571effffa129a745bf603b81e1ce98e, type: 2}
   itemToCollect: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
   id: 0
+--- !u!136 &1036772512
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036772499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1036818363
 GameObject:
   m_ObjectHideFlags: 0
@@ -14333,6 +14335,7 @@ MonoBehaviour:
   itemInWorld: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
   rend: {fileID: 1630554256}
   takeable: 1
+  referencePlayer: {fileID: 0}
 --- !u!135 &1254902222
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14413,7 +14416,7 @@ Transform:
   m_GameObject: {fileID: 1254902220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.35, y: 4.44, z: 130.85}
+  m_LocalPosition: {x: -1.18, y: 4.44, z: 117.91}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:

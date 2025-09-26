@@ -31,6 +31,14 @@ public abstract class Character : MonoBehaviour
     }
 
     // Abstract methods that must be implemented by derived classes
-    public abstract void InventorySetup();
+    public virtual void InventorySetup(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            Debug.Log(i);
+            // Debug.Log(inventory.GetInventory().Count);
+            inventory.AddToList(new Item(null, 1));
+        }
+    }
 }
 

@@ -6,7 +6,7 @@ public abstract class Quest : ScriptableObject
     public int id;
     public string questName;
     public string description;
-    public bool isCompleted;
+    public bool isCompleted = false;
 
     public abstract void Initialize();
 

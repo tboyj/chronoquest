@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e68357f601f9f479d8e59e9b0fa3cf, type: 3}
   m_Name: 5Pakets
   m_EditorClassIdentifier: 
-  questName: 
+  id: 0
+  questName: Gather 5 Pakets
   description: 
   isCompleted: 0
-  requiredItemId: 0
-  requiredAmount: 0
+  requiredItemId: 1
+  requiredAmount: 5
+  itemsCollected: 0
+  itemNeeded: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
