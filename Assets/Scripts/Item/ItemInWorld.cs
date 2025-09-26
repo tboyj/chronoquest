@@ -35,20 +35,11 @@ public class ItemInWorld : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && takeable)
             {
                 amountOfItemsHere--;
-                QuestManager manager = referencePlayer.GetComponent<QuestManager>();
-                    if (manager.currentQuest is CollectItemQuest collectItemQuest)
-                    {
-                        if (itemInWorld == collectItemQuest.itemNeeded)
-                        {
-                            collectItemQuest.ReportItemCollected(1);
-                            manager.UpdateQuestGui(manager.playerQuests.IndexOf(manager.currentQuest));
-                        }
-                    }
                 if (amountOfItemsHere == 0)
                 {
                     rend.enabled = false;
                     takeable = false;
-
+                    
 
                 }
 

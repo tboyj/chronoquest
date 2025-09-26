@@ -71,7 +71,7 @@ public class Player : Character
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            TryDropItem();
+            TryDrop();
         }
 
         if (Input.GetKeyDown(KeyCode.T))
@@ -124,7 +124,7 @@ public class Player : Character
             }
         }
     }
-    private void TryDropItem()
+    private void TryDrop()
     {
         if (heldItem.quantity > 0 && heldItem.item.canBeGiven == true)
         {
@@ -139,11 +139,21 @@ public class Player : Character
             if (interactableNPC != null)
             {
                 // Do later, Add condition to check
+                    QuestManager manager = gameObject.GetComponent<QuestManager>();
+                    if (manager.currentQuest is CollectItemQuest collectItemQuest)
+                    {
+                        if (heldItem.item == collectItemQuest.itemNeeded)
+                        {
+                            collectItemQuest.ReportItemCollected(1);
+                            manager.UpdateQuestGui(manager.playerQuests.IndexOf(manager.currentQuest));
+                        }
+                    }
                 Debug.Log(interactableNPC.inventory.items + ": interactableNPC");
                 if (heldItem.item.canBeGiven)
                 {
                     interactableNPC.inventory.AddItem(new Item(heldItem.item, 1));
                     inventory.RemoveOneQuantity(inventory.GetItemIndex(heldItem));
+                    inventory.SetRefresh(true);
                     Debug.Log("Do you ever succeed?");
                     Debug.Log(interactableNPC.inventory.items[0].item.name);
                 }
