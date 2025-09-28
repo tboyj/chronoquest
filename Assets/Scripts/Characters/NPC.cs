@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class NPC : Character
 {
-    public bool inRange = false;
-    public Item itemGiven;
 
+    // public Item itemGiven;
+    
 
     public void Start()
     {
@@ -21,52 +21,48 @@ public class NPC : Character
     public void Update()
     {
 
-        // if (inRange && Input.GetKeyDown(KeyCode.Q))
-        // {
-        //     if (itemGiven.item.canBeGiven == true) // Add condition to check
-        //         inventory.AddItem(itemGiven);
-        // }
+
     }
 
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Debug.Log("Welcoem");
-            inRange = true;
-            if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
-            {
-                itemGiven = other.GetComponent<Player>().GetHeldItem(); // This causes it twan
-                Debug.Log(itemGiven.item.name);
-            }
-            else
-                itemGiven = null;
-        }
-    }
-    public void OnTriggerStay(Collider other)
-    {
+    // public void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         // Debug.Log("Welcoem");
+    //         inRange = true;
+    //         if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
+    //         {
+    //             itemGiven = other.GetComponent<Player>().GetHeldItem(); // This causes it twan
+    //             Debug.Log(itemGiven.item.name);
+    //         }
+    //         else
+    //             itemGiven = null;
+    //     }
+    // }
+    // public void OnTriggerStay(Collider other)
+    // {
 
-        if (other.CompareTag("Player"))
-        {
+    //     if (other.CompareTag("Player"))
+    //     {
 
-            if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
-            {
-                itemGiven = other.GetComponent<Player>().GetHeldItem(); // This causes it twan
-                // Debug.Log(itemGiven.item.name);
-            }
-            else
-                itemGiven = null;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Goodbye");
-            inRange = false;
-            itemGiven = new Item();
+    //         if (other.GetComponent<Player>().GetHeldItem().item != null && other.GetComponent<Player>().isHolding == true)
+    //         {
+    //             itemGiven = other.GetComponent<Player>().GetHeldItem(); // This causes it twan
+    //             // Debug.Log(itemGiven.item.name);
+    //         }
+    //         else
+    //             itemGiven = null;
+    //     }
+    // }
+    // void OnTriggerExit(Collider other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         Debug.Log("Goodbye");
+    //         inRange = false;
+    //         itemGiven = new Item();
 
-        }
-    }
+    //     }
+    // }
 }

@@ -43,7 +43,7 @@ public class GateActivator : MonoBehaviour, Interaction
         sprite.color = Color.red;
         amITurnedOn = true;
         affectedObject.position += Vector3.up * 3;
-
+    
         yield return new WaitForSeconds(duration);
 
         Debug.Log("Gate closing...");

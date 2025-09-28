@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Collections.Generic;
 using Image = UnityEngine.UI.Image;
+using System;
 
 public class HoldingItemScript : MonoBehaviour
 {
@@ -12,28 +13,26 @@ public class HoldingItemScript : MonoBehaviour
     public void Start()
     {
         spriteHolderImage.gameObject.SetActive(true);
-        
+        spriteTopLeftImage.gameObject.SetActive(true);
     }
-    // public void SelectedPlayerItem(int index, List<Item> inventory, bool isHolding)
-    // {
-    //     spriteHolderImage.sprite = inventory[index].item.sprite;
-    //     spriteHolderImage.gameObject.SetActive(isHolding);
-    // }
 
+    internal void Activate(bool v)
+    {
+        spriteHolderImage.enabled = v;
+        spriteTopLeftImage.enabled = v;
+    }
 
+    internal void EnableWithSprite(Sprite sprite)
+    {
+        spriteHolderImage.enabled = true;
+        spriteHolderImage.sprite = sprite;
+        spriteTopLeftImage.enabled = true;
+        spriteTopLeftImage.sprite = sprite;
+    }
 
-
-    // public void SelectedNPCItem(Item item)
-    // {
-    //     if (item.item != null)
-    //     {
-    //         spriteHolderImage.sprite = item.item.sprite;
-    //         spriteHolderImage.gameObject.SetActive(true);
-
-    //     }
-    //     else
-    //     {
-    //         spriteHolderImage.gameObject.SetActive(false);
-    //     }
-    // }
+    internal void SetSprite(Sprite sprite)
+    {
+        spriteHolderImage.sprite = sprite;
+        spriteTopLeftImage.sprite = sprite;
+    }
 }

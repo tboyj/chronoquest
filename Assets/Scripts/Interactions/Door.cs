@@ -1,10 +1,10 @@
 using UnityEngine;
-
-public class Door : MonoBehaviour
+using ChronoQuest.Interactions.World;
+public class Door : MonoBehaviour, Interaction
 {
     public SpriteRenderer spriteRenderer;
     public bool isOpen = false;
-    public bool doorTrigger = false;
+    public bool playerInTrigger = false;
     public bool unlocked = false;
     public int keysNeeded = 0;
     
@@ -26,18 +26,11 @@ public class Door : MonoBehaviour
     }
     public void Update()
     {
-        if (doorTrigger)
+        if (playerInTrigger)
         {
-            if (Input.GetKeyDown(KeyCode.E) && unlocked)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (isOpen)
-                {
-                    CloseDoor();
-                }
-                else
-                {
-                    OpenDoor();
-                }
+                InteractionFunction();
             }
 
         }
@@ -46,7 +39,7 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            doorTrigger = true;
+            playerInTrigger = true;
            
         }
     }
@@ -54,10 +47,22 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            doorTrigger = false;
+            playerInTrigger = false;
         }
     }
-    
 
-
+    public void InteractionFunction()
+    {
+        if (unlocked)
+        {
+            if (isOpen)
+            {
+                CloseDoor();
+            }
+            else
+            {
+                OpenDoor();
+            }
+        }
+    }
 }

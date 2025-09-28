@@ -28,7 +28,7 @@ public abstract class Movement : MonoBehaviour
     }
 
     // Abstract methods that must be implemented by derived classes
-    public virtual void MoveWithForce(float force)
+    public virtual void MoveWithForce()
     {
 
     }
@@ -42,7 +42,7 @@ class PlayerMovement : Movement
     /// The horizontal velocity is clamped to the maximum speed.
     /// </summary>
     /// <param name="force">The force to apply.</param>
-    public override void MoveWithForce(float force)
+    public override void MoveWithForce()
     {
 
         if (Time.timeScale > 0)
@@ -96,7 +96,7 @@ class PlayerMovement : Movement
             currentForce *= runMultiplier;
             if (currentMovement.sqrMagnitude == 0) return;
 
-            rb.AddForce(currentMovement * force, ForceMode.Acceleration);
+            rb.AddForce(currentMovement * currentForce, ForceMode.Acceleration);
             // Debug.Log("Force: "+rb.GetAccumulatedForce());
             // Clamp horizontal velocity only (keep gravity on Y)
             Vector3 horizontalVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);

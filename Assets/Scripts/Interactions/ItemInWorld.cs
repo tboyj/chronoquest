@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using ChronoQuest.Interactions.World;
 
-public class ItemInWorld : MonoBehaviour
+public class ItemInWorld : MonoBehaviour, Interaction
 {
     // Start is called before the first frame update
     public int amountOfItemsHere;
@@ -12,19 +13,11 @@ public class ItemInWorld : MonoBehaviour
     public bool takeable;
     private bool itemRecognizesPlayer;
     public GameObject referencePlayer;
+    public QuestCollectItem questAttached;
 
     void Start()
     {
-        rend.sprite = itemInWorld.sprite;
-        if (amountOfItemsHere > 0)
-        {
-            rend.enabled = true;
-        }
-        else
-        {
-            rend.enabled = false;
-            takeable = false;
-        }
+        Startup();
     }
 
     // Update is called once per frame
@@ -32,17 +25,9 @@ public class ItemInWorld : MonoBehaviour
     {
         if (itemRecognizesPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.E) && takeable)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                amountOfItemsHere--;
-                if (amountOfItemsHere == 0)
-                {
-                    rend.enabled = false;
-                    takeable = false;
-                    
-
-                }
-
+                InteractionFunction();
             }
         }
     }
@@ -61,6 +46,33 @@ public class ItemInWorld : MonoBehaviour
         {
             referencePlayer = null;
             itemRecognizesPlayer = false;
+        }
+    }
+    private void Startup()
+    {
+        rend.sprite = itemInWorld.sprite;
+        if (amountOfItemsHere > 0)
+        {
+            rend.enabled = true;
+        }
+        else
+        {
+            rend.enabled = false;
+            takeable = false;
+        }
+    }
+    public void InteractionFunction()
+    {
+        if (takeable)
+        {
+            amountOfItemsHere--;
+            if (amountOfItemsHere == 0)
+            {
+                rend.enabled = false;
+                takeable = false;
+
+
+            }
         }
     }
 }

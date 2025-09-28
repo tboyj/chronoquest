@@ -14,8 +14,6 @@ public class Item
     [Range(0, 9999)]
     public int quantity;
     
-  
-
     public Item()
     {
         item = null;

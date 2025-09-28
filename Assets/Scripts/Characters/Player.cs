@@ -14,10 +14,10 @@ public class Player : Character
     protected ItemInWorld interactableItem;
     protected NPC interactableNPC;
     protected InventoryGUI guiHandler;
-    [SerializeField]
-    protected RectTransform hotbarHolder;
-    [SerializeField]
-    protected RectTransform inventoryHolder;
+
+    public RectTransform hotbarHolder;
+
+    public RectTransform inventoryHolder;
     private int indexOfInventoryHover { get; set; }
     private QuestManager manager;
     public void Start()
@@ -32,10 +32,8 @@ public class Player : Character
             Debug.Log(heldItem.item.name);
         else
             Debug.Log("Item is null");
-        holdingItemManager.spriteHolderImage.enabled = true;
-        holdingItemManager.spriteHolderImage.sprite = heldItem.item.sprite;
-        holdingItemManager.spriteTopLeftImage.enabled = true;
-        holdingItemManager.spriteTopLeftImage.sprite = heldItem.item.sprite; // UI Image
+        holdingItemManager.EnableWithSprite(heldItem.item.sprite);
+ // UI Image
 
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
@@ -45,15 +43,23 @@ public class Player : Character
 
         if (heldItem.quantity <= 0 || !isHolding)
         {
-            holdingItemManager.spriteHolderImage.enabled = false;
-            holdingItemManager.spriteTopLeftImage.enabled = false; // Hide the sprite when quantity is 0
+            holdingItemManager.Activate(false);
+             // Hide the sprite when quantity is 0
         }
         else
         {
-            holdingItemManager.spriteHolderImage.enabled = true;
-            holdingItemManager.spriteTopLeftImage.enabled = true; // Show the sprite when quantity is greater than 0
+            holdingItemManager.Activate(true); // Show the sprite when quantity is greater than 0
         }
 
+        if (manager.questsAssigned.Count > 0)
+        {
+            if (manager.questsAssigned[0].IsCompleted && manager.questsAssigned[0].todo.Count == 1)
+            {
+                Debug.Log("Completed: True.");
+                if (manager.questsAssigned[0].todo.Count > 1)
+                    gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
+            }
+        }
         CheckKeyInputInteraction();
         CheckForHotbarInput();
         if (inventory.GetRefresh() == true)
@@ -76,27 +82,48 @@ public class Player : Character
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            TryToGiveQuest();
+            // Dialog();
+            if (manager.questsAssigned.Count == 0)
+            {
+                TryToGiveQuest();
+            }
+            else
+            {
+                Debug.Log("You have a quest underway");
+            }
         }
+    }
+
+    private void Dialog()
+    {
+        throw new NotImplementedException();
     }
 
     private void TryToGiveQuest()
     {
         if (interactableNPC != null)
         {
-            try
+            QuestHandler npcQuestHandler = interactableNPC.GetComponent<QuestHandler>();
+            Quest questAssigned = npcQuestHandler.GetMostRecentQuest();
+            Debug.Log(questAssigned.IsCompleted);
+            if (questAssigned != null)
             {
-                QuestGiver giver = interactableNPC.gameObject.GetComponent<QuestGiver>();
-                manager.CheckUpOnQuest(giver.id, giver);
+                if (manager.questsAssigned.Contains(questAssigned) && !manager.questsCompleted.Contains(questAssigned)) // make sure he doesn't have it already;
+                { // quest is assigned but not done.
+                    Debug.Log("Not complete.");
+                }
+                else if (!manager.questsAssigned.Contains(questAssigned) && !manager.questsCompleted.Contains(questAssigned))
+                { // add since there is none in quest.
+                    manager.AddQuestToList(questAssigned);
+                }
+                else
+                { // quest is done.
+                    
+                }
             }
-            catch (Exception e)
-            {
-                Debug.LogWarning(e.StackTrace);
-            }
-            
         }
     }
-
+// quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
     private void TryUseEkey()
     {
         if (interactableItem != null) // picking up items
@@ -110,6 +137,7 @@ public class Player : Character
                 inventory.SetRefresh(true);
             }
         }
+        
         // if not recognizing item to pick up, look for npc to interact with
     }
     private void TryDropForItem() {
@@ -136,33 +164,6 @@ public class Player : Character
             {
                 Debug.Log("No item found");
             }
-            if (interactableNPC != null)
-            {
-                // Do later, Add condition to check
-                    QuestManager manager = gameObject.GetComponent<QuestManager>();
-                    if (manager.currentQuest is CollectItemQuest collectItemQuest)
-                    {
-                        if (heldItem.item == collectItemQuest.itemNeeded)
-                        {
-                            collectItemQuest.ReportItemCollected(1);
-                            manager.UpdateQuestGui(manager.playerQuests.IndexOf(manager.currentQuest));
-                        }
-                    }
-                Debug.Log(interactableNPC.inventory.items + ": interactableNPC");
-                if (heldItem.item.canBeGiven)
-                {
-                    interactableNPC.inventory.AddItem(new Item(heldItem.item, 1));
-                    inventory.RemoveOneQuantity(inventory.GetItemIndex(heldItem));
-                    inventory.SetRefresh(true);
-                    Debug.Log("Do you ever succeed?");
-                    Debug.Log(interactableNPC.inventory.items[0].item.name);
-                }
-            }
-                else
-                {
-                    Debug.Log("You are a dumb dumb. interactableNPC is worth NOTHING.");
-                }
-
         }
     }
 
@@ -213,8 +214,8 @@ public class Player : Character
             heldItem = candidate;
             itemHeld = updateIndex;
             isHolding = true;
-            holdingItemManager.spriteHolderImage.sprite = heldItem.item.sprite;
-            holdingItemManager.spriteTopLeftImage.sprite = heldItem.item.sprite; // UI Image
+            holdingItemManager.SetSprite(heldItem.item.sprite);
+ // UI Image
             Debug.Log($"Held item: {heldItem.item.name} x{heldItem.quantity}");
         }
         // If selecting an invalid or empty slot
@@ -231,7 +232,7 @@ public class Player : Character
 
     public void FixedUpdate()
     {
-        movement.MoveWithForce(movement.moveForce);
+        movement.MoveWithForce();
         animatorSetup.SetFloat("SpeedX", Math.Abs(movement.rb.velocity.x)); // Add Z animation to this at a later time.
         spriteRenderer.flipX = movement.flip;
 
@@ -339,19 +340,6 @@ public class Player : Character
         {
             this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
         }
-
-
-
-        // else if (other.CompareTag("NPC"))
-        // {
-        //     if (other.GetComponent<NPC>().canTalkTo)
-        //     {
-        //         if (Input.GetKeyDown(KeyCode.E))
-        //         {
-        //             other.GetComponent<NPC>().StartDialogue();
-        //         }
-        //     }       
-        // } for later!!!! (KEEP)
     }
 
     void OnTriggerExit(Collider other)
