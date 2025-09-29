@@ -1,7 +1,7 @@
 using UnityEngine.UIElements;
 using UnityEngine.UI;
 using UnityEngine;
-
+using System.Collections.Generic;
 using Image = UnityEngine.UI.Image;
 using System;
 
@@ -11,18 +11,18 @@ public class HoldingItemScript : MonoBehaviour
     public Image spriteTopLeftImage; // UI Image
 
     public void Start()
-    { //
+    {
         spriteHolderImage.gameObject.SetActive(true);
         spriteTopLeftImage.gameObject.SetActive(true);
     }
 
-    public void Activate(bool v)
+    internal void Activate(bool v)
     {
         spriteHolderImage.enabled = v;
         spriteTopLeftImage.enabled = v;
     }
 
-    public void EnableWithSprite(Sprite sprite)
+    internal void EnableWithSprite(Sprite sprite)
     {
         spriteHolderImage.enabled = true;
         spriteHolderImage.sprite = sprite;
@@ -30,7 +30,7 @@ public class HoldingItemScript : MonoBehaviour
         spriteTopLeftImage.sprite = sprite;
     }
 
-    public void SetSprite(Sprite sprite)
+    internal void SetSprite(Sprite sprite)
     {
         spriteHolderImage.sprite = sprite;
         spriteTopLeftImage.sprite = sprite;
