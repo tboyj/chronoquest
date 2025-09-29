@@ -1,12 +1,11 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 public class QuestHandler : MonoBehaviour // for npcs
 {
     [SerializeField]
-    private List<Quest> questsInStock = new List<Quest>();
+    public List<QuestInstance> questsInStock = new List<QuestInstance>();
     
-    public Quest GetMostRecentQuest()
+    public QuestInstance GetMostRecentQuest()
     {
         if (questsInStock.Count > 0)
         {
@@ -18,7 +17,7 @@ public class QuestHandler : MonoBehaviour // for npcs
         }
     }
 
-    public List<Quest> GetQuestList()
+    public List<QuestInstance> GetQuestList()
     {
         return questsInStock;
     }

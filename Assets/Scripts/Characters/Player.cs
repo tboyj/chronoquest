@@ -104,7 +104,7 @@ public class Player : Character
         if (interactableNPC != null)
         {
             QuestHandler npcQuestHandler = interactableNPC.GetComponent<QuestHandler>();
-            Quest questAssigned = npcQuestHandler.GetMostRecentQuest();
+            QuestInstance questAssigned = npcQuestHandler.GetMostRecentQuest();
             Debug.Log(questAssigned.IsCompleted);
             if (questAssigned != null)
             {

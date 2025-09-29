@@ -2,13 +2,18 @@
 
 using UnityEngine;
 using ChronoQuest.Quests;
+using System.Collections.Generic;
 
-[CreateAssetMenu(menuName = "Quests/Collect Action")]
-public class QuestCollectItem : Quest
+public class QuestCollectItem : QuestInstance
 {
     public int requiredCount;
     public int currentCount;
-    
+
+    public QuestCollectItem(Quest q, bool i, List<string> t, int requiredCount, int currentCount) : base(q, i, t)
+    {
+        this.requiredCount = requiredCount;
+        this.currentCount = currentCount;
+    }
 
     public void QuestEventTriggered()
     {
