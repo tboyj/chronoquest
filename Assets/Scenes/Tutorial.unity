@@ -3021,7 +3021,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a86ddeeddc6814d899acae89b23735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questsAssigned: []
+  questsAssigned:
+  - data: {fileID: 0}
+    IsCompleted: 0
+    todo: []
   questsCompleted: []
 --- !u!114 &160479122
 MonoBehaviour:
@@ -12427,9 +12430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89eb6b4e9b0635c448c6e8a09f45389d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questsInStock:
-  - {fileID: 11400000, guid: 358818077a009394cba44c4d38509c91, type: 2}
-  - {fileID: 11400000, guid: 694c56a53c662f24180d56f42bf269d8, type: 2}
+  questsInStock: []
 --- !u!1 &1036818363
 GameObject:
   m_ObjectHideFlags: 0
@@ -14853,7 +14854,6 @@ MonoBehaviour:
   rend: {fileID: 1630554256}
   takeable: 1
   referencePlayer: {fileID: 0}
-  questAttached: {fileID: 0}
 --- !u!135 &1254902222
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16006,7 +16006,6 @@ MonoBehaviour:
   toggled: 0
   affectedObject: {fileID: 873901944}
   playerInTrigger: 0
-  questAttached: {fileID: 11400000, guid: 358818077a009394cba44c4d38509c91, type: 2}
 --- !u!135 &1334272706
 SphereCollider:
   m_ObjectHideFlags: 0
