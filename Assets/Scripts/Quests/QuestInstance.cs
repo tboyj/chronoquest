@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using ChronoQuest.Quests;
+using UnityEngine;
 
 [System.Serializable]
-public class QuestInstance
+public class QuestInstance : MonoBehaviour
 {
     public Quest data;
     public IQuestAction condition;

@@ -13,7 +13,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     public bool takeable;
     private bool itemRecognizesPlayer;
     public GameObject referencePlayer;
-    public QuestCollectItem questAttached;
+    public QuestCollectItem quest;
 
     void Start()
     {
@@ -37,6 +37,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
         {
             referencePlayer = other.gameObject;
             itemRecognizesPlayer = true;
+            quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as QuestCollectItem;
         }
     }
     void OnTriggerExit(Collider other)
@@ -66,6 +67,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
         if (takeable)
         {
             amountOfItemsHere--;
+            quest.QuestEventTriggered();
             if (amountOfItemsHere == 0)
             {
                 rend.enabled = false;

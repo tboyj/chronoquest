@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using Image = UnityEngine.UI.Image;
 using System;
-
 public class HoldingItemScript : MonoBehaviour
 {
     public SpriteRenderer spriteHolderImage;

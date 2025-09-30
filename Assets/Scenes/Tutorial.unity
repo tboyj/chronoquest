@@ -2790,11 +2790,11 @@ GameObject:
   - component: {fileID: 160479112}
   - component: {fileID: 160479111}
   - component: {fileID: 160479110}
-  - component: {fileID: 160479109}
   - component: {fileID: 160479118}
   - component: {fileID: 160479120}
   - component: {fileID: 160479121}
   - component: {fileID: 160479122}
+  - component: {fileID: 160479123}
   m_Layer: 0
   m_Name: RealPlayer
   m_TagString: Player
@@ -2821,20 +2821,6 @@ Transform:
   - {fileID: 1995528487}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &160479109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160479107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c8b5386ee047b459ee4ee9a1f3eb93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteHolderImage: {fileID: 1843141964}
-  spriteTopLeftImage: {fileID: 678452762}
 --- !u!114 &160479110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,7 +2838,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   itemHeld: 0
   isHolding: 1
-  holdingItemManager: {fileID: 160479109}
+  holdingItemManager: {fileID: 0}
   animatorSetup: {fileID: 78369804}
   itemPaketTest: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
   hotbarHolder: {fileID: 1047586296}
@@ -3021,10 +3007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a86ddeeddc6814d899acae89b23735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questsAssigned:
-  - data: {fileID: 0}
-    IsCompleted: 0
-    todo: []
+  questsAssigned: []
   questsCompleted: []
 --- !u!114 &160479122
 MonoBehaviour:
@@ -3040,6 +3023,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestName: {fileID: 1009820283}
   currentQuestCondition: {fileID: 914910208}
+--- !u!114 &160479123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160479107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8df109943720146874fe4e97f694c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteHolderImage: {fileID: 1843141964}
+  spriteTopLeftImage: {fileID: 678452762}
 --- !u!1 &165319486
 GameObject:
   m_ObjectHideFlags: 0
@@ -12211,6 +12208,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020247708}
   m_CullTransparentMesh: 1
+--- !u!1 &1034665119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1034665121}
+  - component: {fileID: 1034665120}
+  m_Layer: 0
+  m_Name: QuestHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1034665120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034665119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c479238d5ad11bd4a9b3f9d1fe7e5f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 3ecb10c2426ddae4a8abfca9e32a55d3, type: 2}
+  IsCompleted: 0
+  todo:
+  - Hello?
+  - Uh hello hello? Uhh The animats
+  toggled: 0
+--- !u!4 &1034665121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034665119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1334272709}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1036772499
 GameObject:
   m_ObjectHideFlags: 0
@@ -12225,10 +12272,10 @@ GameObject:
   - component: {fileID: 1036772504}
   - component: {fileID: 1036772503}
   - component: {fileID: 1036772502}
-  - component: {fileID: 1036772509}
   - component: {fileID: 1036772510}
   - component: {fileID: 1036772512}
   - component: {fileID: 1036772513}
+  - component: {fileID: 1036772514}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -12358,20 +12405,6 @@ Transform:
   - {fileID: 662981087}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1036772509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036772499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c8b5386ee047b459ee4ee9a1f3eb93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteHolderImage: {fileID: 662981086}
-  spriteTopLeftImage: {fileID: 0}
 --- !u!136 &1036772510
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12430,7 +12463,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89eb6b4e9b0635c448c6e8a09f45389d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questsInStock: []
+  questsInStock:
+  - {fileID: 1034665120}
+--- !u!114 &1036772514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036772499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8df109943720146874fe4e97f694c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteHolderImage: {fileID: 662981086}
+  spriteTopLeftImage: {fileID: 0}
 --- !u!1 &1036818363
 GameObject:
   m_ObjectHideFlags: 0
@@ -14854,6 +14902,7 @@ MonoBehaviour:
   rend: {fileID: 1630554256}
   takeable: 1
   referencePlayer: {fileID: 0}
+  questAttached: {fileID: 0}
 --- !u!135 &1254902222
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16006,6 +16055,8 @@ MonoBehaviour:
   toggled: 0
   affectedObject: {fileID: 873901944}
   playerInTrigger: 0
+  quest: {fileID: 1034665120}
+  id: 0
 --- !u!135 &1334272706
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16092,6 +16143,7 @@ Transform:
   m_Children:
   - {fileID: 942856814}
   - {fileID: 873901944}
+  - {fileID: 1034665121}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340086773
@@ -22047,6 +22099,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744605874}
   m_CullTransparentMesh: 1
+--- !u!1 &1746828277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746828278}
+  m_Layer: 0
+  m_Name: QuestHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1746828278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746828277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748169443
 GameObject:
   m_ObjectHideFlags: 0
@@ -27626,3 +27709,4 @@ SceneRoots:
   - {fileID: 1254902225}
   - {fileID: 1334272709}
   - {fileID: 878311038}
+  - {fileID: 1746828278}

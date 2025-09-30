@@ -3,11 +3,11 @@
 using UnityEngine;
 using ChronoQuest.Quests;
 using System.Collections.Generic;
-
-[CreateAssetMenu(menuName = "Quests/Toggle Action")]
-public class QuestToggleItem : QuestInstance
+using ChronoQuest.Interactions.World;
+[System.Serializable]
+public class QuestToggleItem : QuestInstance,  IQuestAction
 {
-    public bool toggled = false;
+    public bool toggled;
 
     public QuestToggleItem(Quest q, bool i, List<string> t, bool toggled) : base(q, i, t)
     {
@@ -17,12 +17,13 @@ public class QuestToggleItem : QuestInstance
     public void QuestEventTriggered()
     {
         toggled = true;
-        IsCompleted = CheckConditions(); // Called when something is toggled
+        Debug.Log("toggled: "+toggled);
+        IsCompleted = CheckConditions();
+         // Called when something is toggled
     }
 
     public override bool CheckConditions()
     {
         return toggled;
     }
-
 }

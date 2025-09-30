@@ -7,13 +7,14 @@ public class LeverActivator : MonoBehaviour, Interaction
     public bool toggled = false;
     public Transform affectedObject;
     public bool playerInTrigger = false;
-    public QuestToggleItem questAttached;
+    public QuestToggleItem quest;
+
 
     void Start()
     {
         sprite = transform.Find("Object").GetComponent<SpriteRenderer>();
         sprite.color = Color.green;
-        questAttached.IsCompleted = false;
+        //questAttached.IsCompleted = false;
     }
 
     void Update()
@@ -22,19 +23,19 @@ public class LeverActivator : MonoBehaviour, Interaction
     }
     public void InteractionFunction() // Add logic here
     {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && questAttached is QuestToggleItem)
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             toggled = !toggled;
-            questAttached.QuestEventTriggered();
-            leverCheck();
+            quest.QuestEventTriggered();
+            LeverCheck();
         }
-        else if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && questAttached is not QuestToggleItem)
+        else if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             toggled = !toggled;
-            leverCheck(); // ignore case if not part of a quest
+            LeverCheck(); // ignore case if not part of a quest
         }
     }
-    void leverCheck()
+    void LeverCheck()
     {
         if (toggled)
         {
@@ -55,13 +56,22 @@ public class LeverActivator : MonoBehaviour, Interaction
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
+            Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().data.questName);
+            Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().GetType().ToString());
+            quest = other.GetComponent<QuestManager>().GetCurrentQuest() as QuestToggleItem;
+        
             playerInTrigger = true;
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
+
             playerInTrigger = false;
+        }
     }
 
 

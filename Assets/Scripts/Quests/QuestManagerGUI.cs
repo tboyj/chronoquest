@@ -5,7 +5,7 @@ public class QuestManagerGUI : MonoBehaviour
 {
     public TextMeshProUGUI currentQuestName;
     public TextMeshProUGUI currentQuestCondition;
-    QuestManager qm;
+    public QuestManager qm;
     public void Start()
     {
         qm = gameObject.GetComponent<QuestManager>();

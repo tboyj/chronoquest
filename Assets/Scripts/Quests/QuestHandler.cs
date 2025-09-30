@@ -4,7 +4,7 @@ public class QuestHandler : MonoBehaviour // for npcs
 {
     [SerializeField]
     public List<QuestInstance> questsInStock = new List<QuestInstance>();
-    
+
     public QuestInstance GetMostRecentQuest()
     {
         if (questsInStock.Count > 0)

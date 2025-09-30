@@ -21,4 +21,12 @@ public class QuestManager : MonoBehaviour
     {
         return questAssigned.CheckConditions();
     }
+
+    public QuestInstance GetCurrentQuest()
+    {
+        if (questsAssigned.Count <= 0)
+            return null;
+        else
+            return questsAssigned[0];
+    }
 }

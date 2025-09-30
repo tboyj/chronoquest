@@ -23,7 +23,7 @@ public class Player : Character
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, transform.GetChild(0).GetComponent<Animator>());
+        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, transform.GetChild(0).GetComponent<Animator>());
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();
@@ -92,6 +92,8 @@ public class Player : Character
                 Debug.Log("You have a quest underway");
             }
         }
+
+        
     }
 
     private void Dialog()

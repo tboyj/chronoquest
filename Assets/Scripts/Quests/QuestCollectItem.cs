@@ -3,7 +3,7 @@
 using UnityEngine;
 using ChronoQuest.Quests;
 using System.Collections.Generic;
-
+[System.Serializable]
 public class QuestCollectItem : QuestInstance
 {
     public int requiredCount;
