@@ -16,7 +16,7 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Start is called before the first frame update
     void Start()
     {
-        // slotIndex = this.GetComponent<ItemGUI>().slotIndex;
+
         currentHolder = transform.Find("Holder");
         player = GameObject.Find("RealPlayer").GetComponent<Player>();
         if (currentHolder.transform.parent.parent.name.Equals("Inventory"))
@@ -27,11 +27,14 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             slotIndex = currentHolder.transform.parent.GetSiblingIndex();
         }
+        Debug.Log(currentHolder.name + " " + slotIndex);
     }
 
     // Update is called once per frame
-     void Update()
+    void Update()
     {
+
+
         if (isHovered && slotIndex >= 4)
         {
             player.SetIndexOfInventoryHover(slotIndex);
@@ -55,8 +58,9 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 player.inventory.SwapItem(player.inventory.GetItemUsingIndex(3), player.inventory.GetItemUsingIndex(slotIndex));
                 player.inventory.SetRefresh(true);
             }
-            player.inventory.SetRefresh(true);
+
         }
+
         
     }
     public void OnPointerEnter(PointerEventData eventData)

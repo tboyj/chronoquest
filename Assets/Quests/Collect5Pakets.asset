@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
-  m_Name: 5Pakets
+  m_Script: {fileID: 11500000, guid: a4a1c5475e3ee7f47b959c74023be9e8, type: 3}
+  m_Name: Collect5Pakets
   m_EditorClassIdentifier: 
-  questName: 5 Pakets
-  id: 0
-  todo:
-  - Go Collect 5 Pakets
-  - Return To Bossman
-  IsCompleted: 0
-  requiredCount: 0
-  currentCount: 5
+  questName: Collect5Pakets
+  id: 1

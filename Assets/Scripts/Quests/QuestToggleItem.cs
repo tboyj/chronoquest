@@ -9,7 +9,7 @@ public class QuestToggleItem : QuestInstance,  IQuestAction
 {
     public bool toggled;
 
-    public QuestToggleItem(Quest q, bool i, List<string> t, bool toggled) : base(q, i, t)
+    public QuestToggleItem(Quest q, bool i, List<string> t, List<QuestDialog> d, bool toggled) : base(q, i, t, d)
     {
         this.toggled = toggled;
     }
@@ -17,8 +17,9 @@ public class QuestToggleItem : QuestInstance,  IQuestAction
     public void QuestEventTriggered()
     {
         toggled = true;
-        Debug.Log("toggled: "+toggled);
+        Debug.Log("toggled: " + toggled);
         IsCompleted = CheckConditions();
+        
          // Called when something is toggled
     }
 

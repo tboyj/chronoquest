@@ -20,6 +20,7 @@ public class Player : Character
     public RectTransform inventoryHolder;
     private int indexOfInventoryHover { get; set; }
     private QuestManager manager;
+
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
@@ -62,6 +63,7 @@ public class Player : Character
         }
         CheckKeyInputInteraction();
         CheckForHotbarInput();
+        
         if (inventory.GetRefresh() == true)
         {
             InventoryGuiRefresh();
@@ -73,6 +75,7 @@ public class Player : Character
         if (Input.GetKeyDown(KeyCode.E))
         {
             TryUseEkey();
+            CheckForHotbarInput();
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -83,13 +86,41 @@ public class Player : Character
         if (Input.GetKeyDown(KeyCode.T))
         {
             // Dialog();
-            if (manager.questsAssigned.Count == 0)
+
+            TryToGiveQuest();
+            
+            
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && manager.CurrentlyInDialog())
+        { // bummy boy code o-o
+            if (interactableNPC != null)
             {
-                TryToGiveQuest();
+                Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
+                Debug.Log(manager.GetCurrentQuest());
+                if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
+                {
+                    if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
+                    {
+                        Debug.Log("Count is > 1.");
+                        manager.GetCurrentQuest().DialogAdvance();
+                        manager.SetCurrentlyInDialog(true);
+                    }
+                    else if (manager.GetCurrentQuest().dialogsForQuest.Count == 1)
+                    {
+                        Debug.Log("Count is 1.");
+                        manager.GetCurrentQuest().ShowDialog(false);
+                        manager.SetCurrentlyInDialog(false);
+                    }
+                    manager.GetCurrentQuest().ShowDialog(true);
+                }
+                else
+                {
+                    Debug.Log("Wrong Character!!!");
+                }
             }
             else
             {
-                Debug.Log("You have a quest underway");
+                Debug.Log("No Character Found!!!");
             }
         }
 
@@ -107,21 +138,47 @@ public class Player : Character
         {
             QuestHandler npcQuestHandler = interactableNPC.GetComponent<QuestHandler>();
             QuestInstance questAssigned = npcQuestHandler.GetMostRecentQuest();
-            Debug.Log(questAssigned.IsCompleted);
             if (questAssigned != null)
             {
-                if (manager.questsAssigned.Contains(questAssigned) && !manager.questsCompleted.Contains(questAssigned)) // make sure he doesn't have it already;
-                { // quest is assigned but not done.
-                    Debug.Log("Not complete.");
+                if (manager.GetCurrentQuest() != null)
+                {
+                    if (manager.questsAssigned.Contains(questAssigned) && !manager.GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
+                    { // quest is assigned but not done.
+                        Debug.Log("Not complete.");
+                    }
+
+                    if (manager.GetCurrentQuest().IsCompleted &&
+                    questAssigned.IsCompleted && manager.questsAssigned.Contains(questAssigned))
+                    { // quest is assigned and done.
+                        Debug.Log("Good Job");
+                        manager.SetQuestCompleted(manager.GetCurrentQuest());
+                        // throw into dialog here.
+                        npcQuestHandler.questsInStock.RemoveAt(0);
+                    }
                 }
-                else if (!manager.questsAssigned.Contains(questAssigned) && !manager.questsCompleted.Contains(questAssigned))
+                Debug.Log(manager.questsAssigned.Count);
+                Debug.Log(npcQuestHandler.questsInStock.Count);
+                if (manager.questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
                 { // add since there is none in quest.
+                    Debug.Log("Add Quest");
                     manager.AddQuestToList(questAssigned);
+                    // Throw him into a dialog.
+                    manager.GetCurrentQuest().ShowDialog(true);
+                    manager.SetCurrentlyInDialog(true);
+                }
+                else if (manager.questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
+                {
+                    Debug.Log("Can't assign Quest, One in progress already.");
                 }
                 else
-                { // quest is done.
-                    
+                {
+                    Debug.Log("No quest in stock.");
                 }
+
+            }
+            else
+            {
+                Debug.Log("do a general dialogue");
             }
         }
     }
@@ -162,7 +219,7 @@ public class Player : Character
             {
                 TryDropForItem();
             }
-            else
+            else 
             {
                 Debug.Log("No item found");
             }
@@ -234,10 +291,17 @@ public class Player : Character
 
     public void FixedUpdate()
     {
-        movement.MoveWithForce();
-        animatorSetup.SetFloat("SpeedX", Math.Abs(movement.rb.velocity.x)); // Add Z animation to this at a later time.
-        spriteRenderer.flipX = movement.flip;
-
+        if (!manager.CurrentlyInDialog())
+        {
+            animatorSetup.speed = 1;
+            movement.MoveWithForce();
+            animatorSetup.SetFloat("SpeedX", Math.Abs(movement.rb.velocity.x)); // Add Z animation to this at a later time.
+            spriteRenderer.flipX = movement.flip;
+        }
+        else
+        {
+            animatorSetup.speed = 0;
+        }
     }
 
     public override void InventorySetup(int amount)

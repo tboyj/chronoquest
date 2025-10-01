@@ -8,9 +8,21 @@ public class QuestCollectItem : QuestInstance
 {
     public int requiredCount;
     public int currentCount;
+    public ItemStorable requiredItem;
 
-    public QuestCollectItem(Quest q, bool i, List<string> t, int requiredCount, int currentCount) : base(q, i, t)
+    public QuestCollectItem(Quest q, bool i, List<string> t, List<QuestDialog> d, int requiredCount, int currentCount) : base(q, i, t, d)
     {
+        if (questManager.GetComponentInParent<Player>().inventory.items != null)
+        {
+            foreach (Item item in questManager.GetComponentInParent<Player>().inventory.items)
+            {
+                if (item.item == requiredItem)
+                {
+                    currentCount += item.quantity;
+                }
+                Debug.Log("Testing: " + item.item.name);
+            }
+        }
         this.requiredCount = requiredCount;
         this.currentCount = currentCount;
     }

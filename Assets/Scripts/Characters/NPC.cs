@@ -13,7 +13,7 @@ public class NPC : Character
     public void Start()
     {
         Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, null);
-        movement = GetComponent<Movement>();
+        movement = gameObject.AddComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
         Debug.Log(inventory.items.Count);
         InventorySetup(49);

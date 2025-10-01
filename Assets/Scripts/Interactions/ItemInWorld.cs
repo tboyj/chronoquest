@@ -67,7 +67,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
         if (takeable)
         {
             amountOfItemsHere--;
-            quest.QuestEventTriggered();
+            quest.QuestEventTriggered(); // causes error
             if (amountOfItemsHere == 0)
             {
                 rend.enabled = false;

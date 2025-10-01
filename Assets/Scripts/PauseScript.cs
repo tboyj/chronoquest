@@ -31,6 +31,10 @@ public class PauseScript : MonoBehaviour
         {
             activateInventory();
         }
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            // do nothing;
+        }
     }
     public void activatePause()
     {

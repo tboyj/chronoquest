@@ -5,8 +5,10 @@ public class QuestManager : MonoBehaviour
 {
     public List<QuestInstance> questsAssigned = new List<QuestInstance>();
     public List<QuestInstance> questsCompleted = new List<QuestInstance>();
+    private bool currentlyInDialog;
+
     public void AddQuestToList(QuestInstance quest)
-    {   
+    {
         questsAssigned.Add(quest);
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
@@ -28,5 +30,14 @@ public class QuestManager : MonoBehaviour
             return null;
         else
             return questsAssigned[0];
+    }
+    public bool CurrentlyInDialog()
+    {
+        return currentlyInDialog;
+    }
+
+    public void SetCurrentlyInDialog(bool v)
+    {
+        currentlyInDialog = v;
     }
 }
