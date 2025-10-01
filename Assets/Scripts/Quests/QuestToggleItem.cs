@@ -17,9 +17,8 @@ public class QuestToggleItem : QuestInstance,  IQuestAction
     public void QuestEventTriggered()
     {
         toggled = true;
-        Debug.Log("toggled: " + toggled);
+        Debug.Log("toggled: "+toggled);
         IsCompleted = CheckConditions();
-        
          // Called when something is toggled
     }
 

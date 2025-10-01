@@ -20,7 +20,6 @@ public class QuestCollectItem : QuestInstance
                 {
                     currentCount += item.quantity;
                 }
-                Debug.Log("Testing: " + item.item.name);
             }
         }
         this.requiredCount = requiredCount;

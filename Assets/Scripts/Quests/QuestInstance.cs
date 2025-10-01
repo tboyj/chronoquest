@@ -11,6 +11,7 @@ public class QuestInstance : MonoBehaviour
     public IQuestAction condition;
     public bool IsCompleted;
     public List<string> todo;
+    [SerializeField]
     public List<QuestDialog> dialogsForQuest;
     public QuestManager questManager;
 

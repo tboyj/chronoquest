@@ -160,6 +160,7 @@ public class Player : Character
                 Debug.Log(npcQuestHandler.questsInStock.Count);
                 if (manager.questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
                 { // add since there is none in quest.
+                    questAssigned = npcQuestHandler.GetMostRecentQuest();
                     Debug.Log("Add Quest");
                     manager.AddQuestToList(questAssigned);
                     // Throw him into a dialog.
