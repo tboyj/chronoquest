@@ -21,15 +21,17 @@ public class LeverActivator : MonoBehaviour, Interaction
     {
         InteractionFunction();
     }
-    public void InteractionFunction() // Add logic here
+    public void InteractionFunction() // Add logic here (fix structuring of if statement later)
     {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest.GetQuestID() == playerQuest.GetQuestID())
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest != null)
         {
             toggled = !toggled;
+            quest.toggled = toggled;
+            Debug.Log(quest.toggled + "HELOOOOOOOOOOOOOOO");
             quest.QuestEventTriggered();
             LeverCheck();
         }
-        else if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        else if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest == null)
         {
             toggled = !toggled;
             LeverCheck(); // ignore case if not part of a quest

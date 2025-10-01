@@ -52,15 +52,14 @@ public class Player : Character
             holdingItemManager.Activate(true); // Show the sprite when quantity is greater than 0
         }
 
-        if (manager.questsAssigned.Count > 0)
-        {
-            if (manager.questsAssigned[0].IsCompleted && manager.questsAssigned[0].todo.Count == 1)
-            {
-                Debug.Log("Completed: True.");
-                if (manager.questsAssigned[0].todo.Count > 1)
-                    gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
-            }
-        }
+        // if (manager.questsAssigned.Count > 0)
+        // {
+        //     if (manager.questsAssigned[0].IsCompleted && manager.questsAssigned[0].todo.Count == 1)
+        //     {
+        //         Debug.Log("Completed: True.");
+
+        //     }
+        // }
         CheckKeyInputInteraction();
         CheckForHotbarInput();
         
@@ -154,8 +153,10 @@ public class Player : Character
                         { // quest is assigned and done.
                             Debug.Log("Good Job");
                             manager.SetQuestCompleted(manager.GetCurrentQuest());
-                            // throw into dialog here.
                             npcQuestHandler.questsInStock.RemoveAt(0);
+                        
+                            // throw into dialog here.
+
                         }
                     }
                     else
@@ -169,10 +170,20 @@ public class Player : Character
                 { // add since there is none in quest.
                     questAssigned = npcQuestHandler.GetMostRecentQuest();
                     Debug.Log("Add Quest");
-                    manager.AddQuestToList(questAssigned);
-                    // Throw him into a dialog.
-                    manager.GetCurrentQuest().ShowDialog(true);
-                    manager.SetCurrentlyInDialog(true);
+                    if (questAssigned.CheckConditions())
+                    {
+                        Debug.Log("Conditions are good. Ignore.");
+                        npcQuestHandler.questsInStock.RemoveAt(0);
+                        // Throw here dialog saying good job.
+                        TryToGiveQuest();
+                    }
+                    else
+                    {
+                        manager.AddQuestToList(questAssigned);
+                        // Throw him into a dialog.
+                        manager.GetCurrentQuest().ShowDialog(true);
+                        manager.SetCurrentlyInDialog(true);
+                    }
                 }
                 else if (manager.questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
                 {

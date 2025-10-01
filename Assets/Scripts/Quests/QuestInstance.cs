@@ -14,13 +14,15 @@ public class QuestInstance : MonoBehaviour
     [SerializeField]
     public List<QuestDialog> dialogsForQuest;
     public QuestManager questManager;
+    public List<QuestInstance> relatedQuests;
 
-    public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d)
+    public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
     {
         data = q;
         IsCompleted = i;
         todo = t;
         dialogsForQuest = d;
+        relatedQuests = s;
     }
     public void Trigger()
     {

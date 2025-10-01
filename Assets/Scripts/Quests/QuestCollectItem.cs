@@ -10,7 +10,7 @@ public class QuestCollectItem : QuestInstance
     public int currentCount;
     public ItemStorable requiredItem;
 
-    public QuestCollectItem(Quest q, bool i, List<string> t, List<QuestDialog> d, int requiredCount, int currentCount) : base(q, i, t, d)
+    public QuestCollectItem(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s, int requiredCount, int currentCount) : base(q, i, t, d, s)
     {
         if (questManager.GetComponentInParent<Player>().inventory.items != null)
         {
@@ -34,7 +34,21 @@ public class QuestCollectItem : QuestInstance
 
     public override bool CheckConditions()
     {
-        return currentCount >= requiredCount;
+        foreach (QuestInstance quest in relatedQuests)
+        {
+            if (!quest.CheckConditions())
+            {
+                return false;
+            }
+        }
+        if (currentCount >= requiredCount)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }
