@@ -9,6 +9,5 @@ public class Quest : ScriptableObject
     public string questName;
     public int id;
 
-
 }
 

@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestName: {fileID: 1009820283}
   currentQuestCondition: {fileID: 914910208}
-  qm: {fileID: 0}
+  qm: {fileID: 160479121}
 --- !u!114 &160479123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5812,7 +5812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418681282}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.88, y: 4.6, z: 109.15}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
@@ -5820,7 +5820,7 @@ Transform:
   - {fileID: 364611682}
   - {fileID: 2091033136}
   - {fileID: 727777348}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 824254226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &422042222
 GameObject:
@@ -8451,7 +8451,7 @@ GameObject:
   - component: {fileID: 679699628}
   - component: {fileID: 679699627}
   m_Layer: 0
-  m_Name: QuestHolder
+  m_Name: IndividualQuestHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9162,7 +9162,7 @@ GameObject:
   - component: {fileID: 727777348}
   - component: {fileID: 727777347}
   m_Layer: 0
-  m_Name: QuestHolder
+  m_Name: IndividualQuestHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9512,7 +9512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737373674}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.42, y: 4.6, z: 111.64}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
@@ -9520,7 +9520,7 @@ Transform:
   - {fileID: 676869408}
   - {fileID: 503915443}
   - {fileID: 679699628}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 824254226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745879106
 GameObject:
@@ -10250,6 +10250,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820950120}
   m_CullTransparentMesh: 1
+--- !u!1 &824254224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824254226}
+  m_Layer: 0
+  m_Name: MultiQuestHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &824254226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824254224}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 418681287}
+  - {fileID: 737373679}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &833001361
 GameObject:
   m_ObjectHideFlags: 0
@@ -13168,6 +13201,11 @@ MonoBehaviour:
   todo:
   - Hello?
   - Uh hello hello? Uhh The animats
+  - do
+  - u
+  - get
+  - me
+  - like im netspend
   dialogsForQuest:
   - dialogueText: Hello Jimmy
     sprite: {fileID: 366059551, guid: ca3ea4ea3046d2f48bf485a7507531ec, type: 3}
@@ -13407,6 +13445,7 @@ MonoBehaviour:
   questsInStock:
   - {fileID: 1034665120}
   - {fileID: 2047054392}
+  - {fileID: 727777347}
 --- !u!114 &1036772514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29043,7 +29082,6 @@ SceneRoots:
   - {fileID: 1254902225}
   - {fileID: 1334272709}
   - {fileID: 1613480543}
-  - {fileID: 418681287}
-  - {fileID: 737373679}
   - {fileID: 878311038}
   - {fileID: 1746828278}
+  - {fileID: 824254226}

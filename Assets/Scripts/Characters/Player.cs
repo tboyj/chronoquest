@@ -151,10 +151,21 @@ public class Player : Character
                         if (manager.GetCurrentQuest().IsCompleted &&
                         questAssigned.IsCompleted)
                         { // quest is assigned and done.
+                            if (manager.GetCurrentQuest().relatedQuests.Count > 0)
+                            {
+                                foreach (QuestInstance relatedQuest in manager.GetCurrentQuest().relatedQuests)
+                                {
+                                    if (!relatedQuest.IsCompleted)
+                                    {
+                                        Debug.Log("Not completed.");
+                                        return;
+                                    }
+                                }
+                            }
                             Debug.Log("Good Job");
                             manager.SetQuestCompleted(manager.GetCurrentQuest());
                             npcQuestHandler.questsInStock.RemoveAt(0);
-                        
+
                             // throw into dialog here.
 
                         }
@@ -175,14 +186,23 @@ public class Player : Character
                         Debug.Log("Conditions are good. Ignore.");
                         npcQuestHandler.questsInStock.RemoveAt(0);
                         // Throw here dialog saying good job.
+                        Debug.Log("Good job");
                         TryToGiveQuest();
                     }
                     else
                     {
                         manager.AddQuestToList(questAssigned);
                         // Throw him into a dialog.
-                        manager.GetCurrentQuest().ShowDialog(true);
-                        manager.SetCurrentlyInDialog(true);
+                        if (manager.GetCurrentQuest().dialogsForQuest.Count > 0)
+                        {
+                            manager.GetCurrentQuest().ShowDialog(true);
+                            manager.SetCurrentlyInDialog(true);
+                        }
+                        else
+                        {
+                            manager.GetCurrentQuest().ShowDialog(false);
+                            manager.SetCurrentlyInDialog(false);
+                        }
                     }
                 }
                 else if (manager.questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)

@@ -23,11 +23,15 @@ public class LeverActivator : MonoBehaviour, Interaction
     }
     public void InteractionFunction() // Add logic here (fix structuring of if statement later)
     {
+        if (playerQuest == null)
+        {
+            Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
+        }
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest != null)
         {
             toggled = !toggled;
             quest.toggled = toggled;
-            Debug.Log(quest.toggled + "HELOOOOOOOOOOOOOOO");
+            Debug.Log(quest.toggled + " Hello America, You have a q- q- q- quest!");
             quest.QuestEventTriggered();
             LeverCheck();
         }
@@ -36,6 +40,8 @@ public class LeverActivator : MonoBehaviour, Interaction
             toggled = !toggled;
             LeverCheck(); // ignore case if not part of a quest
         }
+
+    
     }
     void LeverCheck()
     {
@@ -58,10 +64,12 @@ public class LeverActivator : MonoBehaviour, Interaction
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
+
+        {  
+            playerQuest = other.GetComponent<QuestManager>().GetCurrentQuest() as QuestToggleItem;
             Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().data.questName);
             Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().GetType().ToString());
-            playerQuest = other.GetComponent<QuestManager>().GetCurrentQuest() as QuestToggleItem;
+            
         
             playerInTrigger = true;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 using ChronoQuest.Quests;
 using System.Collections.Generic;
 [System.Serializable]
-public class QuestCollectItem : QuestInstance
+public class QuestCollectItem : QuestInstance, IQuestAction
 {
     public int requiredCount;
     public int currentCount;
@@ -21,6 +21,7 @@ public class QuestCollectItem : QuestInstance
                     currentCount += item.quantity;
                 }
             }
+        
         }
         this.requiredCount = requiredCount;
         this.currentCount = currentCount;
@@ -34,21 +35,7 @@ public class QuestCollectItem : QuestInstance
 
     public override bool CheckConditions()
     {
-        foreach (QuestInstance quest in relatedQuests)
-        {
-            if (!quest.CheckConditions())
-            {
-                return false;
-            }
-        }
-        if (currentCount >= requiredCount)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return currentCount >= requiredCount;
     }
 
 }
