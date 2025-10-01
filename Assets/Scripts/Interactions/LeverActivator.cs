@@ -8,7 +8,7 @@ public class LeverActivator : MonoBehaviour, Interaction
     public Transform affectedObject;
     public bool playerInTrigger = false;
     public QuestToggleItem quest;
-
+    public QuestToggleItem playerQuest;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class LeverActivator : MonoBehaviour, Interaction
     }
     public void InteractionFunction() // Add logic here
     {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest.GetQuestID() == playerQuest.GetQuestID())
         {
             toggled = !toggled;
             quest.QuestEventTriggered();
@@ -59,7 +59,7 @@ public class LeverActivator : MonoBehaviour, Interaction
         {
             Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().data.questName);
             Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().GetType().ToString());
-            quest = other.GetComponent<QuestManager>().GetCurrentQuest() as QuestToggleItem;
+            playerQuest = other.GetComponent<QuestManager>().GetCurrentQuest() as QuestToggleItem;
         
             playerInTrigger = true;
         }

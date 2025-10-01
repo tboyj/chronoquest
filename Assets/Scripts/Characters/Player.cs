@@ -142,18 +142,25 @@ public class Player : Character
             {
                 if (manager.GetCurrentQuest() != null)
                 {
-                    if (manager.questsAssigned.Contains(questAssigned) && !manager.GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
-                    { // quest is assigned but not done.
-                        Debug.Log("Not complete.");
-                    }
+                    if (manager.GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
+                    {
+                        if (manager.GetCurrentQuest().IsCompleted && !manager.GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
+                        { // quest is assigned but not done.
+                            Debug.Log("Not complete.");
+                        }
 
-                    if (manager.GetCurrentQuest().IsCompleted &&
-                    questAssigned.IsCompleted && manager.questsAssigned.Contains(questAssigned))
-                    { // quest is assigned and done.
-                        Debug.Log("Good Job");
-                        manager.SetQuestCompleted(manager.GetCurrentQuest());
-                        // throw into dialog here.
-                        npcQuestHandler.questsInStock.RemoveAt(0);
+                        if (manager.GetCurrentQuest().IsCompleted &&
+                        questAssigned.IsCompleted)
+                        { // quest is assigned and done.
+                            Debug.Log("Good Job");
+                            manager.SetQuestCompleted(manager.GetCurrentQuest());
+                            // throw into dialog here.
+                            npcQuestHandler.questsInStock.RemoveAt(0);
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Not the same quest.");
                     }
                 }
                 Debug.Log(manager.questsAssigned.Count);

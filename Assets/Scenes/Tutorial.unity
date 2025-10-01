@@ -12521,7 +12521,7 @@ MonoBehaviour:
   - dialogueText: Yes Bossman
     sprite: {fileID: -1388624072, guid: 484a59535877d1d40b88be82331ffc7f, type: 3}
     characterName: jim
-  questManager: {fileID: 0}
+  questManager: {fileID: 160479121}
   toggled: 0
 --- !u!4 &1034665121
 Transform:
@@ -26027,7 +26027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c479238d5ad11bd4a9b3f9d1fe7e5f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 3ecb10c2426ddae4a8abfca9e32a55d3, type: 2}
+  data: {fileID: 11400000, guid: 2ec308860a0bedc49838062cac512fa5, type: 2}
   IsCompleted: 0
   todo:
   - Hello?

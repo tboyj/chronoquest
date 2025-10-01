@@ -43,4 +43,8 @@ public class QuestInstance : MonoBehaviour
             Debug.Log(dialogsForQuest[0].characterName + ": " + dialogsForQuest[0].dialogueText);
         }
     }
+    public int GetQuestID()
+    {
+        return data.id;
+    }
 }
