@@ -34,14 +34,14 @@ public class Player : Character
         else
             Debug.Log("Item is null");
         holdingItemManager.EnableWithSprite(heldItem.item.sprite);
- // UI Image
+        // UI Image
 
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
     }
     public void Update()
     {
-
+        inventory.SetRefresh(true);
         if (heldItem.quantity <= 0 || !isHolding)
         {
             holdingItemManager.Activate(false);
@@ -71,18 +71,18 @@ public class Player : Character
 
     private void CheckKeyInputInteraction()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(Keybinds.actionKeybind))
         {
-            TryUseEkey();
+            AttemptInteraction();
             CheckForHotbarInput();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(Keybinds.giveKeybind))
         {
             TryDrop();
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(Keybinds.talkKeybind))
         {
             // Dialog();
 
@@ -90,7 +90,7 @@ public class Player : Character
             
             
         }
-        if (Input.GetKeyDown(KeyCode.Return) && manager.CurrentlyInDialog())
+        if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog())
         { // bummy boy code o-o
             if (interactableNPC != null)
             {
@@ -222,7 +222,7 @@ public class Player : Character
         }
     }
 // quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
-    private void TryUseEkey()
+    private void AttemptInteraction()
     {
         if (interactableItem != null) // picking up items
         {
@@ -351,8 +351,8 @@ public class Player : Character
             // Debug.Log(inventory.GetInventory().Count);
             inventory.AddToList(new Item(null, 1));
         }
-        Item paket = new Item(itemPaketTest, 67);
-        inventory.AddItem(paket);
+        // Item paket = new Item(itemPaketTest, 67);
+        // inventory.AddItem(paket); Good bye, my lover... Good bye, my paket... 
         Debug.Log("Player inventory setup.");
         //player.inventory = player.inventory.SwapItem(Item item, Item item2);
         // comment

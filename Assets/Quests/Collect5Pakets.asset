@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a1c5475e3ee7f47b959c74023be9e8, type: 3}
   m_Name: Collect5Pakets
   m_EditorClassIdentifier: 
-  questName: Collect5Pakets
+  questName: Collect 5 Pakets
   id: 1

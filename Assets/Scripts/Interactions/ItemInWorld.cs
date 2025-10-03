@@ -18,6 +18,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     void Start()
     {
         Startup();
+        quest.PrecheckInventory();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     {
         if (itemRecognizesPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(Keybinds.actionKeybind))
             {
                 InteractionFunction();
             }

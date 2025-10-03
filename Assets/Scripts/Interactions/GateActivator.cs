@@ -19,7 +19,7 @@ public class GateActivator : MonoBehaviour, Interaction
 
     void Update()
     {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && !amITurnedOn)
+        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn)
         {
             InteractionFunction();
         }

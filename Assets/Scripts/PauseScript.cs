@@ -23,15 +23,15 @@ public class PauseScript : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(Keybinds.pauseKeybind))
         {
             activatePause();
         }
-        else if (Input.GetKeyDown(KeyCode.I))
+        else if (Input.GetKeyDown(Keybinds.inventoryKeybind))
         {
             activateInventory();
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else if (Input.GetKeyDown(Keybinds.continueKeybind))
         {
             // do nothing;
         }

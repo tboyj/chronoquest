@@ -30,6 +30,7 @@ public class QuestInstance : MonoBehaviour
     }
     public virtual bool CheckConditions()
     {
+        
         return IsCompleted;
     }
 

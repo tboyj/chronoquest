@@ -28,7 +28,7 @@ public class Door : MonoBehaviour, Interaction
     {
         if (playerInTrigger)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(Keybinds.actionKeybind))
             {
                 InteractionFunction();
             }

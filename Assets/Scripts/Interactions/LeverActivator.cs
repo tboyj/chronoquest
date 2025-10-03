@@ -23,11 +23,11 @@ public class LeverActivator : MonoBehaviour, Interaction
     }
     public void InteractionFunction() // Add logic here (fix structuring of if statement later)
     {
-        if (playerQuest == null)
-        {
-            Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
-        }
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest != null)
+        // if (playerQuest == null)
+        // {
+        //     // Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
+        // }
+        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && quest != null)
         {
             toggled = !toggled;
             quest.toggled = toggled;
@@ -35,7 +35,7 @@ public class LeverActivator : MonoBehaviour, Interaction
             quest.QuestEventTriggered();
             LeverCheck();
         }
-        else if (playerInTrigger && Input.GetKeyDown(KeyCode.E) && quest == null)
+        else if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && quest == null)
         {
             toggled = !toggled;
             LeverCheck(); // ignore case if not part of a quest

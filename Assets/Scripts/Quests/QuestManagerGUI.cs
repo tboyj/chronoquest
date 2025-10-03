@@ -6,6 +6,7 @@ public class QuestManagerGUI : MonoBehaviour
     public TextMeshProUGUI currentQuestName;
     public TextMeshProUGUI currentQuestCondition;
     public QuestManager qm;
+    
     public void Start()
     {
         qm = gameObject.GetComponent<QuestManager>();
@@ -25,8 +26,21 @@ public class QuestManagerGUI : MonoBehaviour
         {
             if (qm.questsAssigned[0].todo.Count > 1)
             {
-                qm.questsAssigned[0].todo.RemoveAt(0);
-                currentQuestCondition.text = qm.questsAssigned[0].todo[0];
+                bool isWorking = true;
+                foreach (QuestInstance relatedQuest in qm.GetCurrentQuest().relatedQuests)
+                {
+                    if (!relatedQuest.IsCompleted)
+                    {
+                        Debug.Log("Not completed.");
+                        isWorking = false;
+                        break;
+                    }
+                }
+                if (isWorking)
+                {
+                    qm.questsAssigned[0].todo.RemoveAt(0);
+                    currentQuestCondition.text = qm.questsAssigned[0].todo[0];
+                }
             }
 
         }
