@@ -22,7 +22,10 @@ public class Player : Character, Interaction
     private int indexOfInventoryHover { get; set; }
     public bool inDialog { get; set; }
     private QuestManager manager;
-
+    public GameObject questPanelContainer;
+    public GameObject containerHiddenDuringDialog;
+    public GameObject dialogPanel;
+    public DialogGUIManager dialogManager;
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
@@ -36,8 +39,8 @@ public class Player : Character, Interaction
         else
             Debug.Log("Item is null");
         holdingItemManager.EnableWithSprite(heldItem.item.sprite);
-        // UI Image
-
+        // UI Image 
+        dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
     }
@@ -53,7 +56,6 @@ public class Player : Character, Interaction
         {
             holdingItemManager.Activate(true); // Show the sprite when quantity is greater than 0
         }
-
         // if (manager.questsAssigned.Count > 0)
         // {
         //     if (manager.questsAssigned[0].IsCompleted && manager.questsAssigned[0].todo.Count == 1)
@@ -62,58 +64,77 @@ public class Player : Character, Interaction
 
         //     }
         // }
-        CheckKeyInputInteraction();
-        CheckForHotbarInput();
-        
-        if (inventory.GetRefresh() == true)
+        if (manager.questsAssigned.Count == 0)
         {
-            InventoryGuiRefresh();
+            questPanelContainer.SetActive(false);
+        }
+        else
+        {
+            questPanelContainer.SetActive(true);
+        }
+        CheckKeyInputInteraction();
+        if (!manager.CurrentlyInDialog())
+        {
+            if (gameObject.GetComponent<PauseScript>().isPaused == false)
+            {
+                CheckForHotbarInput();
+
+                if (inventory.GetRefresh() == true)
+                {
+                    InventoryGuiRefresh();
+                }
+
+
+            }
+            inDialog = false;
+            containerHiddenDuringDialog.SetActive(true);
+            dialogPanel.SetActive(false);
+        }
+        else if (manager.CurrentlyInDialog())
+            
+        {
+            containerHiddenDuringDialog.SetActive(false);
+            inDialog = true;
+            dialogPanel.SetActive(true);
         }
     }
 
     private void CheckKeyInputInteraction()
     {
-        if (!manager.CurrentlyInDialog())
-        {
+        if (!manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false) {
             if (Input.GetKeyDown(Keybinds.actionKeybind))
             {
                 AttemptInteraction();
                 CheckForHotbarInput();
             }
 
-            if (Input.GetKeyDown(Keybinds.giveKeybind))
+            if (Input.GetKeyDown(Keybinds.giveKeybind) && gameObject.GetComponent<PauseScript>().isPaused == false)
             {
                 TryDrop();
             }
 
-            if (Input.GetKeyDown(Keybinds.talkKeybind))
+            if (Input.GetKeyDown(Keybinds.talkKeybind) && gameObject.GetComponent<PauseScript>().isPaused == false)
             {
                 // Dialog();
 
                 TryToGiveQuest();
-
-
             }
-            inDialog = false;
         }
-        else if (manager.CurrentlyInDialog())
-        
-        {
-            inDialog = true;
-        }
-        if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog())
-        { // bummy boy code o-o
-            if (interactableNPC != null)
-            {
-                Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
-                Debug.Log(manager.GetCurrentQuest());
-                if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
+            if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
+            { // bummy boy code o-o
+                if (interactableNPC != null)
                 {
+                    Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
+                    Debug.Log(manager.GetCurrentQuest());
+                    if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
+                    {
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {
                         Debug.Log("Count is > 1.");
                         manager.GetCurrentQuest().DialogAdvance();
                         manager.SetCurrentlyInDialog(true);
+                        dialogManager.SetCharName(manager.GetCurrentQuest().dialogsForQuest[0].characterName);
+                        dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
                     else if (manager.GetCurrentQuest().dialogsForQuest.Count == 1)
                     {
@@ -121,23 +142,19 @@ public class Player : Character, Interaction
                         manager.GetCurrentQuest().ShowDialog(false);
                         manager.SetCurrentlyInDialog(false);
                     }
-                    manager.GetCurrentQuest().ShowDialog(true);
+                        manager.GetCurrentQuest().ShowDialog(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Wrong Character!!!");
+                    }
                 }
                 else
                 {
-                    Debug.Log("Wrong Character!!!");
+                    Debug.Log("No Character Found!!!");
                 }
             }
-            else
-            {
-                Debug.Log("No Character Found!!!");
-            }
-        }
-
-        
     }
-
-
 
     private void TryToGiveQuest()
     {
@@ -173,9 +190,7 @@ public class Player : Character, Interaction
                             Debug.Log("Good Job");
                             manager.SetQuestCompleted(manager.GetCurrentQuest());
                             npcQuestHandler.questsInStock.RemoveAt(0);
-
-                            // throw into dialog here.
-
+                            // throw into dialog gui here.
                         }
                     }
                     else
@@ -205,6 +220,8 @@ public class Player : Character, Interaction
                         {
                             manager.GetCurrentQuest().ShowDialog(true);
                             manager.SetCurrentlyInDialog(true);
+                            dialogManager.SetCharName(manager.GetCurrentQuest().dialogsForQuest[0].characterName);
+                            dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                         }
                         else
                         {
@@ -216,12 +233,12 @@ public class Player : Character, Interaction
                 else if (manager.questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
                 {
                     Debug.Log("Can't assign Quest, One in progress already.");
+                    // hint sys goes here
                 }
                 else
                 {
                     Debug.Log("No quest in stock.");
                 }
-
             }
             else
             {
@@ -243,7 +260,6 @@ public class Player : Character, Interaction
                 inventory.SetRefresh(true);
             }
         }
-        
         // if not recognizing item to pick up, look for npc to interact with
     }
     private void TryDropForItem() {
@@ -273,31 +289,28 @@ public class Player : Character, Interaction
         }
     }
 
-
     private void CheckForHotbarInput()
-{
-    if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
         {
-            UpdateSelectedItem(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            UpdateSelectedItem(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            UpdateSelectedItem(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            UpdateSelectedItem(3);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                UpdateSelectedItem(0);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                UpdateSelectedItem(1);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                UpdateSelectedItem(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                UpdateSelectedItem(3);
+            }
         }
     }
-
-}
-
     public void UpdateSelectedItem(int updateIndex)
     {
         Item candidate = inventory.GetItemUsingIndex(updateIndex);
@@ -321,7 +334,7 @@ public class Player : Character, Interaction
             itemHeld = updateIndex;
             isHolding = true;
             holdingItemManager.SetSprite(heldItem.item.sprite);
- // UI Image
+         // UI Image
             Debug.Log($"Held item: {heldItem.item.name} x{heldItem.quantity}");
         }
         // If selecting an invalid or empty slot
@@ -362,14 +375,11 @@ public class Player : Character, Interaction
         // Item paket = new Item(itemPaketTest, 67);
         // inventory.AddItem(paket); Good bye, my lover... Good bye, my paket... 
         Debug.Log("Player inventory setup.");
-        //player.inventory = player.inventory.SwapItem(Item item, Item item2);
-        // comment
     }
 
     public void InventoryGuiRefresh()
     {
         int imageSetupIndex = 0;
-
         // -- ! Hotbar section ! -- //
         foreach (RectTransform slot in hotbarHolder)
         {
@@ -395,13 +405,10 @@ public class Player : Character, Interaction
                     // Debug.Log(imageSetupIndex + "out of " + inventory.GetInventory().Count);
                     imageSetupIndex++;
                 }
-
-
             }
         }
 
         // --- ! Inventory section ! --- //
-
         foreach (RectTransform slot in inventoryHolder)
         {
             foreach (RectTransform imageContainer in slot)
@@ -476,10 +483,8 @@ public class Player : Character, Interaction
             }
         }
     }
-
     public Item GetHeldItem()
     {
-
         return heldItem;
     }
 
@@ -491,7 +496,6 @@ public class Player : Character, Interaction
     {
         return indexOfInventoryHover;
     }
-
     public void InteractionFunction()
     {
     

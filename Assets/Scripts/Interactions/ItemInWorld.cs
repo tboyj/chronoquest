@@ -14,6 +14,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     private bool itemRecognizesPlayer;
     public GameObject referencePlayer;
     public QuestCollectItem quest;
+    public PauseScript pauseCheck;
     public bool inDialog { get; set; }
     void Start()
     {
@@ -26,7 +27,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     {
         if (itemRecognizesPlayer)
         {
-            if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog)
+            if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog  && !pauseCheck.isInventory && !pauseCheck.isPaused)
             {
                 InteractionFunction();
             }

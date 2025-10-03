@@ -8,7 +8,6 @@ using ChronoQuest.Interactions.World;
 public class QuestToggleItem : QuestInstance
 {
     public bool toggled; // List of QuestInstance
-    public bool firstTime = false;
     public QuestToggleItem(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s, bool toggled) : base(q, i, t, d, s)
     {
         this.toggled = toggled;
@@ -16,8 +15,7 @@ public class QuestToggleItem : QuestInstance
 
     public void QuestEventTriggered()
     {
-        if (firstTime == false)
-        {
+       
             toggled = true;
             Debug.Log("toggled: " + toggled);
             IsCompleted = CheckConditions();
@@ -28,13 +26,13 @@ public class QuestToggleItem : QuestInstance
                     if (questManager.GetCurrentQuest().data.id == data.id)
                     {
                         questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
-                        firstTime = true;
+                        
                     }
                     questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
                 }
             }
-        }
     }
+    
          // Called when something is toggled
 
 

@@ -10,7 +10,7 @@ public class GateActivator : MonoBehaviour, Interaction
     public float duration = 1f;
     public bool playerInTrigger = false;
     public Transform affectedObject;
-
+    public PauseScript pauseCheck;
     public bool inDialog { get; set; }
 
     void Start()
@@ -21,7 +21,7 @@ public class GateActivator : MonoBehaviour, Interaction
 
     void Update()
     {
-        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn && !inDialog)
+        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn && !inDialog  && !pauseCheck.isInventory && !pauseCheck.isPaused)
         {
             InteractionFunction();
         }

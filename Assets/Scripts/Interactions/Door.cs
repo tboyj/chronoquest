@@ -8,6 +8,7 @@ public class Door : MonoBehaviour, Interaction
     public bool unlocked = false;
     public int keysNeeded = 0;
     public bool inDialog { get; set; }
+    public PauseScript pauseCheck;
     public void Start()
     {
 
@@ -28,7 +29,7 @@ public class Door : MonoBehaviour, Interaction
     {
         if (playerInTrigger)
         {
-            if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog)
+            if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog && !pauseCheck.isInventory && !pauseCheck.isPaused)
             {
                 InteractionFunction();
             }

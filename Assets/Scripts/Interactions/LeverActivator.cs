@@ -9,8 +9,9 @@ public class LeverActivator : MonoBehaviour, Interaction
     public bool playerInTrigger = false;
     public QuestToggleItem quest;
     public QuestToggleItem playerQuest;
+    public PauseScript pauseCheck;
     public bool inDialog { get; set; }
-
+    public bool firstTime = true; // can be based on this specific lever. idk.
     void Start()
     {
         sprite = transform.Find("Object").GetComponent<SpriteRenderer>();
@@ -23,19 +24,20 @@ public class LeverActivator : MonoBehaviour, Interaction
         InteractionFunction();
     }
     public void InteractionFunction() // Add logic here (fix structuring of if statement later)
-    {
+    { 
         // if (playerQuest == null)
         // {
         //     // Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
         // }
-        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind)
-         && quest != null && !inDialog)
+        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind)  && !pauseCheck.isInventory && !pauseCheck.isPaused
+         && quest != null && !inDialog && firstTime)
         {
             toggled = !toggled;
             quest.toggled = toggled;
             Debug.Log(quest.toggled + " Hello America, You have a q- q- q- quest!");
             quest.QuestEventTriggered();
             LeverCheck();
+            firstTime = false;
         }
         else if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && quest == null)
         {
