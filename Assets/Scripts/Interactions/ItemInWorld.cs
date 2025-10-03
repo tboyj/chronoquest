@@ -14,7 +14,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     private bool itemRecognizesPlayer;
     public GameObject referencePlayer;
     public QuestCollectItem quest;
-
+    public bool inDialog { get; set; }
     void Start()
     {
         Startup();
@@ -26,7 +26,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     {
         if (itemRecognizesPlayer)
         {
-            if (Input.GetKeyDown(Keybinds.actionKeybind))
+            if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog)
             {
                 InteractionFunction();
             }

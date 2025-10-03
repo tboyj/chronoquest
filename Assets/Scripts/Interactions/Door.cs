@@ -7,7 +7,7 @@ public class Door : MonoBehaviour, Interaction
     public bool playerInTrigger = false;
     public bool unlocked = false;
     public int keysNeeded = 0;
-    
+    public bool inDialog { get; set; }
     public void Start()
     {
 
@@ -28,7 +28,7 @@ public class Door : MonoBehaviour, Interaction
     {
         if (playerInTrigger)
         {
-            if (Input.GetKeyDown(Keybinds.actionKeybind))
+            if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog)
             {
                 InteractionFunction();
             }

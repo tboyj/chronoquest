@@ -11,6 +11,8 @@ public class GateActivator : MonoBehaviour, Interaction
     public bool playerInTrigger = false;
     public Transform affectedObject;
 
+    public bool inDialog { get; set; }
+
     void Start()
     {
         sprite = transform.Find("Object").GetComponent<SpriteRenderer>();
@@ -19,7 +21,7 @@ public class GateActivator : MonoBehaviour, Interaction
 
     void Update()
     {
-        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn)
+        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn && !inDialog)
         {
             InteractionFunction();
         }

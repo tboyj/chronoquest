@@ -9,6 +9,7 @@ public class LeverActivator : MonoBehaviour, Interaction
     public bool playerInTrigger = false;
     public QuestToggleItem quest;
     public QuestToggleItem playerQuest;
+    public bool inDialog { get; set; }
 
     void Start()
     {
@@ -27,7 +28,8 @@ public class LeverActivator : MonoBehaviour, Interaction
         // {
         //     // Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
         // }
-        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && quest != null)
+        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind)
+         && quest != null && !inDialog)
         {
             toggled = !toggled;
             quest.toggled = toggled;

@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using ChronoQuest.Interactions.World;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
-public class Player : Character
+public class Player : Character, Interaction
 {
     // protected Character player;
     public ItemStorable itemPaketTest;
@@ -19,6 +20,7 @@ public class Player : Character
 
     public RectTransform inventoryHolder;
     private int indexOfInventoryHover { get; set; }
+    public bool inDialog { get; set; }
     private QuestManager manager;
 
     public void Start()
@@ -71,24 +73,33 @@ public class Player : Character
 
     private void CheckKeyInputInteraction()
     {
-        if (Input.GetKeyDown(Keybinds.actionKeybind))
+        if (!manager.CurrentlyInDialog())
         {
-            AttemptInteraction();
-            CheckForHotbarInput();
+            if (Input.GetKeyDown(Keybinds.actionKeybind))
+            {
+                AttemptInteraction();
+                CheckForHotbarInput();
+            }
+
+            if (Input.GetKeyDown(Keybinds.giveKeybind))
+            {
+                TryDrop();
+            }
+
+            if (Input.GetKeyDown(Keybinds.talkKeybind))
+            {
+                // Dialog();
+
+                TryToGiveQuest();
+
+
+            }
+            inDialog = false;
         }
-
-        if (Input.GetKeyDown(Keybinds.giveKeybind))
+        else if (manager.CurrentlyInDialog())
+        
         {
-            TryDrop();
-        }
-
-        if (Input.GetKeyDown(Keybinds.talkKeybind))
-        {
-            // Dialog();
-
-            TryToGiveQuest();
-            
-            
+            inDialog = true;
         }
         if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog())
         { // bummy boy code o-o
@@ -126,10 +137,7 @@ public class Player : Character
         
     }
 
-    private void Dialog()
-    {
-        throw new NotImplementedException();
-    }
+
 
     private void TryToGiveQuest()
     {
@@ -482,6 +490,11 @@ public class Player : Character
     public int GetIndexOfInventoryHover()
     {
         return indexOfInventoryHover;
+    }
+
+    public void InteractionFunction()
+    {
+    
     }
 }
 
