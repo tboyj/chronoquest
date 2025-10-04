@@ -15,7 +15,7 @@ public class QuestInstance : MonoBehaviour
     public List<QuestDialog> dialogsForQuest;
     public QuestManager questManager;
     public List<QuestInstance> relatedQuests;
-
+    public Vector3 positionOfQuestGiver;
     public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
     {
         data = q;
@@ -24,6 +24,33 @@ public class QuestInstance : MonoBehaviour
         dialogsForQuest = d;
         relatedQuests = s;
     }
+    public void Start()
+    {
+        questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>(); //dbl check this
+        positionOfQuestGiver = gameObject.transform.parent.position;
+    }
+    public void Update()
+    {
+        if (questManager.GetCurrentQuest() != null)
+        {
+            // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
+            if (questManager.GetCurrentQuest().data.id < data.id) // checks if the current quest is before this quest in the quest line
+            {
+                gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
+                gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc out of sight
+            }
+            else
+            {
+                gameObject.transform.parent.GetComponent<SphereCollider>().enabled = true;
+                gameObject.transform.parent.position = positionOfQuestGiver; // moves the quest giver npc back to original position
+            }
+        }
+        else
+        { // else SCREW THAT !!! we want the collider to be inactive if there is no current quest
+            gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
+            gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc back out of sight
+        }
+    } 
     public void Trigger()
     {
         condition.QuestEventTriggered();

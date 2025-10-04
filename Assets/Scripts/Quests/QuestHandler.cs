@@ -16,7 +16,26 @@ public class QuestHandler : MonoBehaviour // for npcs
             return null;
         }
     }
+    public Item GetRequiredItemOfMostRecentQuest()
+    {
+        QuestInstance recentQuest = GetMostRecentQuest();
+        if (recentQuest is QuestCollectItem collectItemQuest)
+        {
+            return new Item(collectItemQuest.requiredItem, collectItemQuest.requiredCount);
+        }
+        
+        return null;
+    }
+    public ItemStorable GetRequiredItemStorableOfMostRecentQuest()
+    {
+        QuestInstance recentQuest = GetMostRecentQuest();
+        if (recentQuest is QuestCollectItem collectItemQuest)
+        {
+            return collectItemQuest.requiredItem;
+        }
 
+        return null;
+    }
     public List<QuestInstance> GetQuestList()
     {
         return questsInStock;
