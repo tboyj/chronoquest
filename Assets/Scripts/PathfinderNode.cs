@@ -15,12 +15,5 @@ public class PathfinderNode : MonoBehaviour
     {
 
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("NPC") && other.GetComponent<NPCMovement>().GetCurrentNode() == this.transform)
-        {
-            Debug.Log("NPC entered node");
-            gameObject.SetActive(false);
-        }
-    }
+
 }
