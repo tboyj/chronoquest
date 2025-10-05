@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class Movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
 
     public LayerMask collisionDetector;
@@ -16,6 +16,8 @@ public abstract class Movement : MonoBehaviour
     public Transform rayholder;
 
     public bool flip = false;
+
+
 
     protected virtual void Initialize(float moveForce, float runMultiplier,
     float maxSpeed, Rigidbody rb)
@@ -42,7 +44,7 @@ public abstract class Movement : MonoBehaviour
 
 
 }
-class PlayerMovement : Movement
+public class PlayerMovement : Movement
 {
     
     /// <summary>
@@ -145,37 +147,78 @@ class PlayerMovement : Movement
 
 
 }
-
-class NPCMovement : Movement
+[System.Serializable]
+public class NPCMovement : Movement
 {
-
+    public GameObject pathPointContainer;
+    public List<Transform> pathPoints = new List<Transform>();
+    private Transform minNode = null;
     /// <summary>
     /// Applies a force to the player's Rigidbody in the direction of the player's input.
     /// The force is multiplied by the run multiplier if the left shift key is pressed.
     /// The horizontal velocity is clamped to the maximum speed.
     /// </summary>
     /// <param name="force">The force to apply.</param>
+    public void Start()
+    {
+
+        rb.freezeRotation = true; // stops rigidbody from tipping over
+        rb.useGravity = true;     // enables gravity
+
+        pathPointContainer = GameObject.Find("AINodeHolder");
+
+        foreach (Transform child in pathPointContainer.transform)
+        {
+            pathPoints.Add(child);
+        }
+    }
+    public void FixedUpdate()
+    {
+        MoveWithForce();
+    }
     public override void MoveWithForce()
     {
 
         if (Time.timeScale > 0)
         {
-            float x = Input.GetAxisRaw("Horizontal");
-            float z = Input.GetAxisRaw("Vertical");
+
             Ray ray;
-            if (flip)
+            if (flip) // fix this later in the morning
             {
 
                 rayholder.position = new Vector3(rb.transform.position.x - 0.075f, rayholder.position.y, rayholder.position.z);
                 ray = new Ray(rayholder.position, new Vector3(-0.025f, 0, 0));
-            } else {
+            }
+            else
+            {
 
                 rayholder.position = new Vector3(rb.transform.position.x + 0.075f, rayholder.position.y, rayholder.position.z);
                 ray = new Ray(rayholder.position, new Vector3(0.025f, 0, 0));
             }
 
-            Debug.DrawRay(rayholder.position, ray.direction, Color.green);   
+            Debug.DrawRay(rayholder.position, ray.direction, Color.green);
             RaycastHit hit;
+
+            float x = 0;
+            float z = 0;
+            float minDist = Mathf.Infinity;
+            
+
+            foreach (Transform node in pathPoints)
+            {
+                float dist = Vector3.Distance(transform.position, node.position);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    Vector3 direction = (node.position - transform.position).normalized;
+                    x = direction.x;
+                    z = direction.z;
+                    minNode = node;
+                }
+            }
+            //
+            Debug.Log(minNode.position);
+
             Vector3 currentMovement = new Vector3(x, -.5f, z).normalized;
             if (Physics.Raycast(ray, out hit, 0.025f))
             {
@@ -194,7 +237,7 @@ class NPCMovement : Movement
                 }
                 // Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
             }
-            
+
             float currentForce = moveForce;
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -233,14 +276,13 @@ class NPCMovement : Movement
         }
     }
 
-
-    void Start()
+    public Transform GetCurrentNode()
     {
-
-        rb.freezeRotation = true; // stops rigidbody from tipping over
-        rb.useGravity = true;     // enables gravity
-
+        return minNode;
     }
+
+
+
     // Example jump (optional)
     // if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
     // {

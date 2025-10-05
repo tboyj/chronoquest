@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPC : Character
 {
@@ -10,6 +11,7 @@ public class NPC : Character
     // public Item itemGiven;
     private Inventory playerInventory;
     private QuestHandler questHandler;
+
     public void Start()
     {
         Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, null);
@@ -25,6 +27,7 @@ public class NPC : Character
             questHandler = gameObject.AddComponent<QuestHandler>();
         }
         InventorySetup(49);
+
     }
     public void Update()
     {
@@ -32,8 +35,10 @@ public class NPC : Character
         {
             Debug.Log("NPC has item");
         }
-
+        
+        
     }
+
 
 
     public void OnTriggerEnter(Collider other)
