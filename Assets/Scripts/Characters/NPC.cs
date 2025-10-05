@@ -9,12 +9,13 @@ public class NPC : Character
 {
 
     // public Item itemGiven;
+    private bool inRange = false;
     private Inventory playerInventory;
     private QuestHandler questHandler;
 
     public void Start()
     {
-        Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, null);
+        Initialize("NPC", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
         movement = gameObject.AddComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
         Debug.Log(inventory.items.Count);
@@ -31,12 +32,17 @@ public class NPC : Character
     }
     public void Update()
     {
-        if (inventory.items.Contains(questHandler.GetRequiredItemOfMostRecentQuest()))
+        
+        if (inDialog)
         {
-            Debug.Log("NPC has item");
+            movement.enabled = false;
+            movement.rb.position = movement.rb.position;
         }
-        
-        
+        else
+        {
+            movement.enabled = true;
+        }
+
     }
 
 
@@ -47,15 +53,23 @@ public class NPC : Character
         {
             // Debug.Log("Welcoem");
             playerInventory = other.GetComponent<Inventory>();
-
+            inRange = true;
         }
     }
-    
+
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             playerInventory = other.GetComponent<Inventory>();
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = false;
+            playerInventory = null;
         }
     }
 }

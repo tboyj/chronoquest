@@ -13,10 +13,11 @@ public class DialogGUIManager : MonoBehaviour
         charName.text = cname;
     }
 
-    internal void SetDialText(string dtext)
+    public void SetDialText(string dtext)
     {
         dialText.text = dtext;
     }
+
 
     // Start is called before the first frame update
 

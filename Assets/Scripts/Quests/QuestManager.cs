@@ -16,7 +16,7 @@ public class QuestManager : MonoBehaviour
     {
         questsCompleted.Add(quest);
         questsAssigned.Remove(quest);
-        
+
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
 
@@ -41,4 +41,137 @@ public class QuestManager : MonoBehaviour
     {
         currentlyInDialog = v;
     }
+    public void TryToGiveQuest(NPC interactableNPC, DialogGUIManager dialogManager)
+    {
+        QuestHandler npcQuestHandler = interactableNPC.GetComponent<QuestHandler>();
+        QuestInstance questAssigned = npcQuestHandler.GetMostRecentQuest();
+        if (questAssigned != null)
+        {
+            if (GetCurrentQuest() != null)
+            {
+                if (GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
+                {
+                    if (GetCurrentQuest().IsCompleted && !GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
+                    { // quest is assigned but not done.
+                        Debug.Log("Not complete.");
+                    }
+
+                    if (GetCurrentQuest().IsCompleted &&
+                    questAssigned.IsCompleted)
+                    { // quest is assigned and done.
+                        if (GetCurrentQuest().relatedQuests.Count > 0)
+                        {
+                            foreach (QuestInstance relatedQuest in GetCurrentQuest().relatedQuests)
+                            {
+                                if (!relatedQuest.IsCompleted)
+                                {
+                                    Debug.Log("Not completed.");
+                                    return;
+                                }
+                            }
+                        }
+                        // Specific checks for quest types.
+                        if (questAssigned is QuestCollectItem quest)
+                        {
+                            if (quest.isGiveQuestType)
+                            {
+                                foreach (Item item in gameObject.GetComponent<Player>().inventory.items) // use ToList() to avoid modifying while iterating
+                                {
+                                    if (item.item != null &&
+                                        item.item.itemName == quest.requiredItem.itemName &&
+                                        item.quantity > 0)
+                                    {
+                                        Debug.Log("Item found.");
+                                        Debug.Log("Index: " + gameObject.GetComponent<Player>().inventory.items.IndexOf(item));
+
+                                        int transferAmount = Mathf.Min(item.quantity, quest.requiredCount);
+
+                                        // Give item(s) to NPC
+                                        interactableNPC.inventory.AddItem(new Item(item.item, transferAmount));
+
+                                        // Subtract from player
+                                        item.quantity -= transferAmount;
+
+                                        if (item.quantity <= 0)
+                                        {
+                                            int index = gameObject.GetComponent<Player>().inventory.items.IndexOf(item);
+                                            gameObject.GetComponent<Player>().inventory.items[index] = new Item(null, 0);
+                                        }
+
+                                        break; // stop after transferring
+                                    }
+                                }
+                            }
+                        }
+
+
+                    
+                        Debug.Log("Good Job");
+                        SetQuestCompleted(GetCurrentQuest());
+                        npcQuestHandler.questsInStock.RemoveAt(0);
+                        // throw into dialog gui here.
+                    }
+                }
+
+                else
+                {
+                    Debug.Log("Not the same quest.");
+                }
+
+            }
+            Debug.Log(questsAssigned.Count);
+            Debug.Log(npcQuestHandler.questsInStock.Count);
+            if (questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
+            { // add since there is none in quest.
+                questAssigned = npcQuestHandler.GetMostRecentQuest();
+                Debug.Log("Add Quest");
+                if (questAssigned.CheckConditions())
+                {
+                    Debug.Log("Conditions are good. Ignore.");
+                    npcQuestHandler.questsInStock.RemoveAt(0);
+                    // Throw here dialog saying good job.
+                    Debug.Log("Good job");
+                    TryToGiveQuest(interactableNPC, dialogManager);
+                }
+
+                else
+                {
+                    AddQuestToList(questAssigned);
+                    // Throw him into a dialog.
+                    if (GetCurrentQuest().dialogsForQuest.Count > 0)
+                    {
+                        GetCurrentQuest().ShowDialog(true);
+                        SetCurrentlyInDialog(true);
+                        interactableNPC.inDialog = true;
+                        dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                        dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                    }
+                    else
+                    {
+                        GetCurrentQuest().ShowDialog(false);
+                        SetCurrentlyInDialog(false);
+                        interactableNPC.inDialog = true;
+                    }
+                }
+            }
+            else if (questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
+            {
+                Debug.Log("Can't assign Quest, One in progress already.");
+                // hint sys goes here
+            }
+
+            else
+            {
+                Debug.Log("No quest in stock.");
+            }
+
+        }
+
+        else
+        {
+            Debug.Log("do a general dialogue");
+        }
+    }
+
+
 }

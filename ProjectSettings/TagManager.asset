@@ -17,6 +17,7 @@ TagManager:
   - Stair
   - Middleman
   - End
+  - Unclimbable
   layers:
   - Default
   - TransparentFX

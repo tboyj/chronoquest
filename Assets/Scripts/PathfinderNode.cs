@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PathfinderNode : MonoBehaviour
 {
+    public bool wasVisited = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +17,11 @@ public class PathfinderNode : MonoBehaviour
     {
 
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("NPC"))
+        {
+            wasVisited = true;
+        }
+    }
 }

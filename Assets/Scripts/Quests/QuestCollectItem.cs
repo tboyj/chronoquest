@@ -23,6 +23,7 @@ public class QuestCollectItem : QuestInstance, IQuestAction
         if (questManager.GetCurrentQuest().data.id == data.id)
         {
             questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
+            // Also go to the next pointer position.
         }
         IsCompleted = CheckConditions(); // Called when item is collected
     }

@@ -20,7 +20,7 @@ public class Player : Character, Interaction
 
     public RectTransform inventoryHolder;
     private int indexOfInventoryHover { get; set; }
-    public bool inDialog { get; set; }
+    
     private QuestManager manager;
     public GameObject questPanelContainer;
     public GameObject containerHiddenDuringDialog;
@@ -29,7 +29,7 @@ public class Player : Character, Interaction
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, transform.GetChild(0).GetComponent<Animator>());
+        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();
@@ -56,14 +56,6 @@ public class Player : Character, Interaction
         {
             holdingItemManager.Activate(true); // Show the sprite when quantity is greater than 0
         }
-        // if (manager.questsAssigned.Count > 0)
-        // {
-        //     if (manager.questsAssigned[0].IsCompleted && manager.questsAssigned[0].todo.Count == 1)
-        //     {
-        //         Debug.Log("Completed: True.");
-
-        //     }
-        // }
         if (manager.questsAssigned.Count == 0)
         {
             questPanelContainer.SetActive(false);
@@ -83,8 +75,6 @@ public class Player : Character, Interaction
                 {
                     InventoryGuiRefresh();
                 }
-
-
             }
             inDialog = false;
             containerHiddenDuringDialog.SetActive(true);
@@ -98,7 +88,6 @@ public class Player : Character, Interaction
             dialogPanel.SetActive(true);
         }
     }
-
     private void CheckKeyInputInteraction()
     {
         if (!manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false) {
@@ -117,7 +106,7 @@ public class Player : Character, Interaction
             {
                 // Dialog();
 
-                TryToGiveQuest();
+                manager.TryToGiveQuest(interactableNPC, dialogManager);
             }
         }
             if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
@@ -133,6 +122,7 @@ public class Player : Character, Interaction
                         Debug.Log("Count is > 1.");
                         manager.GetCurrentQuest().DialogAdvance();
                         manager.SetCurrentlyInDialog(true);
+                        interactableNPC.inDialog = true;
                         dialogManager.SetCharName(manager.GetCurrentQuest().dialogsForQuest[0].characterName);
                         dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
@@ -141,6 +131,7 @@ public class Player : Character, Interaction
                         Debug.Log("Count is 1.");
                         manager.GetCurrentQuest().ShowDialog(false);
                         manager.SetCurrentlyInDialog(false);
+                        interactableNPC.inDialog = false;
                     }
                         manager.GetCurrentQuest().ShowDialog(true);
                     }
@@ -156,96 +147,6 @@ public class Player : Character, Interaction
             }
     }
 
-    private void TryToGiveQuest()
-    {
-        if (interactableNPC != null)
-        {
-            QuestHandler npcQuestHandler = interactableNPC.GetComponent<QuestHandler>();
-            QuestInstance questAssigned = npcQuestHandler.GetMostRecentQuest();
-            if (questAssigned != null)
-            {
-                if (manager.GetCurrentQuest() != null)
-                {
-                    if (manager.GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
-                    {
-                        if (manager.GetCurrentQuest().IsCompleted && !manager.GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
-                        { // quest is assigned but not done.
-                            Debug.Log("Not complete.");
-                        }
-
-                        if (manager.GetCurrentQuest().IsCompleted &&
-                        questAssigned.IsCompleted)
-                        { // quest is assigned and done.
-                            if (manager.GetCurrentQuest().relatedQuests.Count > 0)
-                            {
-                                foreach (QuestInstance relatedQuest in manager.GetCurrentQuest().relatedQuests)
-                                {
-                                    if (!relatedQuest.IsCompleted)
-                                    {
-                                        Debug.Log("Not completed.");
-                                        return;
-                                    }
-                                }
-                            }
-                            Debug.Log("Good Job");
-                            manager.SetQuestCompleted(manager.GetCurrentQuest());
-                            npcQuestHandler.questsInStock.RemoveAt(0);
-                            // throw into dialog gui here.
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("Not the same quest.");
-                    }
-                }
-                Debug.Log(manager.questsAssigned.Count);
-                Debug.Log(npcQuestHandler.questsInStock.Count);
-                if (manager.questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
-                { // add since there is none in quest.
-                    questAssigned = npcQuestHandler.GetMostRecentQuest();
-                    Debug.Log("Add Quest");
-                    if (questAssigned.CheckConditions())
-                    {
-                        Debug.Log("Conditions are good. Ignore.");
-                        npcQuestHandler.questsInStock.RemoveAt(0);
-                        // Throw here dialog saying good job.
-                        Debug.Log("Good job");
-                        TryToGiveQuest();
-                    }
-                    else
-                    {
-                        manager.AddQuestToList(questAssigned);
-                        // Throw him into a dialog.
-                        if (manager.GetCurrentQuest().dialogsForQuest.Count > 0)
-                        {
-                            manager.GetCurrentQuest().ShowDialog(true);
-                            manager.SetCurrentlyInDialog(true);
-                            dialogManager.SetCharName(manager.GetCurrentQuest().dialogsForQuest[0].characterName);
-                            dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
-                        }
-                        else
-                        {
-                            manager.GetCurrentQuest().ShowDialog(false);
-                            manager.SetCurrentlyInDialog(false);
-                        }
-                    }
-                }
-                else if (manager.questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
-                {
-                    Debug.Log("Can't assign Quest, One in progress already.");
-                    // hint sys goes here
-                }
-                else
-                {
-                    Debug.Log("No quest in stock.");
-                }
-            }
-            else
-            {
-                Debug.Log("do a general dialogue");
-            }
-        }
-    }
 // quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
     private void AttemptInteraction()
     {
@@ -390,7 +291,8 @@ public class Player : Character, Interaction
                     // Debug.Log("Got to image detector");
                     Image imageOfItem = imageContainer.GetComponent<Image>();
                     TextMeshProUGUI text = imageContainer.GetChild(0).GetComponent<TextMeshProUGUI>();
-                    if (inventory.GetItemUsingIndex(imageSetupIndex).item != null && inventory.GetItemUsingIndex(imageSetupIndex).quantity > 0)
+                    Item basicItem = inventory.GetItemUsingIndex(imageSetupIndex);
+                    if (basicItem.item != null)
                     {
                         imageOfItem.sprite = inventory.GetItemUsingIndex(imageSetupIndex).item.sprite;
                         imageOfItem.enabled = true;
@@ -401,6 +303,7 @@ public class Player : Character, Interaction
                     {
                         imageOfItem.enabled = false;
                         text.enabled = false;
+
                     }
                     // Debug.Log(imageSetupIndex + "out of " + inventory.GetInventory().Count);
                     imageSetupIndex++;
@@ -418,6 +321,7 @@ public class Player : Character, Interaction
                     // Debug.Log("Got to image detector");
                     Image imageOfItem = imageContainer.GetComponent<Image>();
                     TextMeshProUGUI text = imageContainer.GetChild(0).GetComponent<TextMeshProUGUI>();
+
                     if (inventory.GetItemUsingIndex(imageSetupIndex).item != null && inventory.GetItemUsingIndex(imageSetupIndex).quantity > 0)
                     {
                         imageOfItem.sprite = inventory.GetItemUsingIndex(imageSetupIndex).item.sprite;
