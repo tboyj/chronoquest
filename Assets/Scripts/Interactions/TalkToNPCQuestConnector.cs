@@ -20,21 +20,18 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
     // Update is called once per frame
     void Update()
     {
-        if (!pauseCheck.isInventory && !pauseCheck.isPaused && inDialog)
+        if (!pauseCheck.isInventory && !pauseCheck.isPaused)
         {
-            if (quest != null)
+            if (Input.GetKeyUp(Keybinds.talkKeybind))
             {
-                Debug.Log(quest.data.id +" : " + quest.questManager.GetCurrentQuest().data.id);
+                Debug.Log("test???");
                 InteractionFunction();
-
             }
             else
             {
                 Debug.Log("It's deeper than this");
             }
-        
         }
-        
     }
     void OnTriggerEnter(Collider other)
     {

@@ -65,6 +65,7 @@ public class NPC : Character
         if (other.CompareTag("Player"))
         {
             playerInventory = other.GetComponent<Inventory>();
+            inRange = true;
         }
     }
     public void OnTriggerExit(Collider other)

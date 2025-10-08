@@ -20,7 +20,22 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
 
     public override void QuestEventTriggered()
     {
-            IsCompleted = CheckConditions();
+        IsCompleted = CheckConditions();
+        if (IsCompleted)
+        {
+            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
+            ShowDialog(true);
+            npc.inDialog = true;
+            questManager.gameObject.GetComponent<Player>().inDialog = true;
+            questManager.SetCurrentlyInDialog(true);
+            questManager.AddQuestToList(npc.questHandler.GetMostRecentQuest());
+        }
+        else
+        {
+            ShowDialog(false);
+            npc.inDialog = false;
+            questManager.gameObject.GetComponent<Player>().inDialog = false;
+        }  
             // Called when item is collected
     }
 
