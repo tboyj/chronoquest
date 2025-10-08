@@ -104,7 +104,10 @@ public class QuestManager : MonoBehaviour
                             }
                         }
 
-
+                        if (questAssigned is TalkToNPCQuest) // Testing as of 10-7-2025, 2.24 pm
+                        {
+                            questAssigned.QuestEventTriggered();
+                        }
                     
                         Debug.Log("Good Job");
                         SetQuestCompleted(GetCurrentQuest());
@@ -127,11 +130,14 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Add Quest");
                 if (questAssigned.CheckConditions())
                 {
+                    Debug.Log(questAssigned.CheckConditions());
                     Debug.Log("Conditions are good. Ignore.");
+                    SetQuestCompleted(GetCurrentQuest());
                     npcQuestHandler.questsInStock.RemoveAt(0);
                     // Throw here dialog saying good job.
                     Debug.Log("Good job");
                     TryToGiveQuest(interactableNPC, dialogManager);
+                    interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
                 }
 
                 else
@@ -156,8 +162,26 @@ public class QuestManager : MonoBehaviour
             }
             else if (questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
             {
-                Debug.Log("Can't assign Quest, One in progress already.");
-                // hint sys goes here
+                // if (GetCurrentQuest() is TalkToNPCQuest)
+                // {
+                //     // make exception
+                //     questAssigned = npcQuestHandler.GetMostRecentQuest();
+                //     Debug.Log("Add Quest");
+                //     if (questAssigned.CheckConditions())
+                //     {
+                //         Debug.Log("Conditions are good. Ignore.");
+                //         npcQuestHandler.questsInStock.RemoveAt(0);
+                //         // Throw here dialog saying good job.
+                //         Debug.Log("Good job");
+                //         TryToGiveQuest(interactableNPC, dialogManager);
+                //     }
+
+                // }
+                // else
+                // {
+                    Debug.Log("Can't assign Quest, One in progress already.");
+                    // hint sys goes here
+                // }
             }
 
             else

@@ -142,6 +142,7 @@ public class PlayerMovement : Movement
 public class NPCMovement : Movement
 {
     //public bool debugPause = true;
+    public string status = "Idle";
     private PauseScript pauseScript;
     public GameObject pathPointContainer;
     public List<Transform> pathPoints = new List<Transform>();
@@ -198,7 +199,16 @@ public class NPCMovement : Movement
     public void FixedUpdate()
     {
         //if (!debugPause)  (used to keep in place)
-        MoveWithForce();
+        if (status != "Idle")
+        {
+            MoveWithForce();
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
     }
     public override void MoveWithForce()
     {

@@ -13,7 +13,7 @@ public class QuestToggleItem : QuestInstance
         this.toggled = toggled;
     }
 
-    public void QuestEventTriggered()
+    public override void QuestEventTriggered()
     {
        
             toggled = true;
@@ -26,7 +26,7 @@ public class QuestToggleItem : QuestInstance
                     if (questManager.GetCurrentQuest().data.id == data.id)
                     {
                         questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
-                        
+                        // bring next end to its position.
                     }
                     questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
                 }

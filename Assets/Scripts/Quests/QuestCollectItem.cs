@@ -17,7 +17,7 @@ public class QuestCollectItem : QuestInstance, IQuestAction
         this.currentCount = currentCount;
     }
 
-    public void QuestEventTriggered()
+    public override void QuestEventTriggered()
     {
         currentCount++;
         if (questManager.GetCurrentQuest().data.id == data.id)

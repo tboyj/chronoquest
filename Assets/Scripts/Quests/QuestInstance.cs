@@ -26,13 +26,15 @@ public class QuestInstance : MonoBehaviour
     }
     public void Start()
     {
-        questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>(); //dbl check this
+        // questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
+        
         positionOfQuestGiver = gameObject.transform.parent.position;
     }
     public void Update()
     {
         if (questManager.GetCurrentQuest() != null)
         {
+            
             // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
             if (questManager.GetCurrentQuest().data.id < data.id) // checks if the current quest is before this quest in the quest line
             {
@@ -47,6 +49,7 @@ public class QuestInstance : MonoBehaviour
         }
         else
         { // else SCREW THAT !!! we want the collider to be inactive if there is no current quest
+            // Debug.Log("I couldn't work because i'm just a silly boy: "+questManager.gameObject.name);
             gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
             gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc back out of sight
         }
@@ -76,5 +79,10 @@ public class QuestInstance : MonoBehaviour
     public int GetQuestID()
     {
         return data.id;
+    }
+
+    public virtual void QuestEventTriggered()
+    {
+        
     }
 }

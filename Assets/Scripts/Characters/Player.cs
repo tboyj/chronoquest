@@ -77,6 +77,7 @@ public class Player : Character, Interaction
                 }
             }
             inDialog = false;
+
             containerHiddenDuringDialog.SetActive(true);
             dialogPanel.SetActive(false);
         }
@@ -85,6 +86,7 @@ public class Player : Character, Interaction
         {
             containerHiddenDuringDialog.SetActive(false);
             inDialog = true;
+            interactableNPC.inDialog = true;
             dialogPanel.SetActive(true);
         }
     }
@@ -347,23 +349,27 @@ public class Player : Character, Interaction
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("Object") && other.GetComponent<ItemInWorld>().takeable)
+        if (other.CompareTag("Object"))
         {
-
-
-            interactableItem = other.GetComponent<ItemInWorld>();
-            Debug.Log("Interactable item: " + interactableItem.itemInWorld.name);
+            if (other.GetComponent<ItemInWorld>() != null)
+            {
+                if (other.GetComponent<ItemInWorld>().takeable)
+                {
+                    interactableItem = other.GetComponent<ItemInWorld>();
+                    Debug.Log("Interactable item: " + interactableItem.itemInWorld.name);
+                }
+            }
         }
-        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
-        {
+            else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+            {
 
-            interactableNPC = other.GetComponent<NPC>();
+                interactableNPC = other.GetComponent<NPC>();
 
-        }
-        else if (other.CompareTag("Teleport"))
-        {
-            this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
-        }
+            }
+            else if (other.CompareTag("Teleport"))
+            {
+                this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
+            }
     }
 
     void OnTriggerExit(Collider other)

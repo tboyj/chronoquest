@@ -11,7 +11,7 @@ public class NPC : Character
     // public Item itemGiven;
     private bool inRange = false;
     private Inventory playerInventory;
-    private QuestHandler questHandler;
+    public QuestHandler questHandler;
 
     public void Start()
     {
@@ -45,7 +45,10 @@ public class NPC : Character
 
     }
 
-
+    public bool GetInRange()
+    {
+        return inRange;
+    }
 
     public void OnTriggerEnter(Collider other)
     {

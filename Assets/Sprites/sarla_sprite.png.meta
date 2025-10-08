@@ -1,0 +1,7858 @@
+fileFormatVersion: 2
+guid: b3bd298b445b5aa4db5a113e7d3f1ae9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sarla_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3392
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37e88e4b1c7a5a49ba05288ad8fa567
+      internalID: 440388656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3392
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c131579acf4394dba9450dca292444
+      internalID: -180272247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3392
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a134b81e9ae05d41a181999439e2ccb
+      internalID: -1780290327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 3392
+        width: 39
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b128dc99da2f54ab47e5923effd3a4
+      internalID: -926986510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3392
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403343307fb315942a691a54cb69a3e9
+      internalID: 2088281405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 3392
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9219258e1fa487b4188b92545386918c
+      internalID: 542104612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3392
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15310447d2153a40963b824a077f33d
+      internalID: 567530275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3329
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f99ca2fa7d87154ea12d2c49a5fabe9
+      internalID: -931370350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3329
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a354599cdddc044ad49fcf8a113965
+      internalID: 1714877996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 3329
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716b6c7ab1ceb9343900b2913a93658e
+      internalID: -227391708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 3329
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd325e89655b340829cad725d44d06
+      internalID: -657130726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3329
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b972971135824074b9296c3e5eb796f9
+      internalID: -105545154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 3329
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5f4c7901dbe4444a7053f17b142469
+      internalID: 787292428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3329
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7386ae7c33d3242abddac8d78a52be
+      internalID: -1237189692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3264
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec261fcaa34dd7c41b490505dd311842
+      internalID: 253368532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3264
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6df3a3379134a744b26733c72e9123c
+      internalID: -711703653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3264
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb6980149260cc4c955996aaeb0bd17
+      internalID: -1804722277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3264
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c152fba735243314cba699731cdaf8a0
+      internalID: -1933861502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3264
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be35268ffe18634b89c31279a672d51
+      internalID: -465511350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 3264
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2fa8106e9ecc6449d9e3e6ac8890e7
+      internalID: -870928707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3264
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02691eb76cc91de4a893de4c5d0ce2cc
+      internalID: 554613377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3200
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ee5672011598c47a19941d34f84894
+      internalID: 1118546243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 3200
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7045a6a9b9b0e14fac8cf19de150368
+      internalID: 1921897956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 3200
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466b2727470bfa84db1952931cb5b679
+      internalID: -813206536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 3200
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d610b5a0f897834995ed4634fb6405f
+      internalID: 455951863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 3200
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222fc11e9d1dd1a4aacedd3b8977e9ef
+      internalID: 1992254033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3200
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199b82eb3f9a7f945a1f91fcd4f6a111
+      internalID: -1497404006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 3200
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8d19aa3e872f749be689a0445cad47
+      internalID: -2085259029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3135
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fc5d9e31ec9b445bf5fb06b9232599
+      internalID: -1352542415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3135
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4002c3851819b43b24ddb76977a2b2
+      internalID: -1432095096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 3135
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a409ef3b380717448b16594e6a665fb8
+      internalID: -829055273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 3135
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a324e76fd164f41acf6209e12ea053
+      internalID: 1495953338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 3135
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875c636a7908fcb4bbc7cf228903e533
+      internalID: 47442560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3135
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e6691d2976fa340a465780b35e1c61
+      internalID: -509807027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3135
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f944400790d7a6a488ebc759ec8cdb16
+      internalID: -803418532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_35
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 3135
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a473566c75b3bfc4aad266e9c39b3d5c
+      internalID: 1722572995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_36
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3072
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5144635f6bb8e4d892f74b3c44d023
+      internalID: 2037228411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3072
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465edb068e5b60f41bee15d55ed3baae
+      internalID: -1776488644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3072
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14113ab0d54ede468a72a0a18d74ec1
+      internalID: -1186542215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 3072
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63dee93f103cb9429c209db9703b7b4
+      internalID: -1970235581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_40
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 3072
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb29873f7c388e4fa53970bf7077000
+      internalID: -1802853767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_41
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3072
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6465832a26b0a3847867062bb4ccedfe
+      internalID: 306632436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_42
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3072
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb4bdf297ca6a6448e0d37b85d99c0e
+      internalID: 906410620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_43
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 3072
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71212a7807373c24c9b9f7b1c2ee405e
+      internalID: -757968757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3008
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3457f610702fa134fa6514b2db933f8d
+      internalID: -1399862850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3008
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db9f2086e4a0a145b77a4a4572e0efa
+      internalID: -1660536813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3010
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f09b860e75ae94091fc78dd56f0746
+      internalID: 189016735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_47
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 3010
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a75c70445c8a624aa6e79286ec637e3
+      internalID: 1422809311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_48
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3010
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ceda780ed2d4346baa0dbbe5a5dce5
+      internalID: -525624197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_49
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 3010
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31391c0617a58524d878a3fa1a152baa
+      internalID: -571205690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_50
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 3010
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dbd1652a584df49960053015805324
+      internalID: 19830254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_51
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 3010
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e36f3f3b18de20489e539e2d82a599b
+      internalID: 1635690130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_52
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2944
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b105ce0196a284480503c44aaae5b0
+      internalID: 809492841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_53
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2944
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cb9dbbbab5d3c44a1d6d21f168fe8b
+      internalID: 1369535416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2944
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72cfcd25ec18e24cb2898c1e1cc1668
+      internalID: -990257291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_55
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2944
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8de8703162d69429b134de06cf810c
+      internalID: -1609265166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_56
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2944
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b660ecfc0721c47b22c4de93a33559
+      internalID: 1236310492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_57
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2944
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5962da1d018f3954cafb97e75b187ade
+      internalID: 797779352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_58
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 2944
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0cc1cd8dbc5a244991a6ccf5a27c38
+      internalID: 1380130482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_59
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2944
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3230cda2eb8d3af42a0ee58bd3e6ace0
+      internalID: -938871194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2880
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbd1e95e181ba546b18cc21e13637a6
+      internalID: 8406053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2880
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d30030903d84be4386410ce7cb43be3
+      internalID: 747104261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2879
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b24f045e5d47944b8ded98f13c7da8
+      internalID: -1516911913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_63
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2878
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f02bd8c4fbb40548bea3f385fc282b1
+      internalID: -178977956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_64
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2879
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdde6607a5e05584fbcfa8cb016db053
+      internalID: 785580253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_65
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2880
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb7b062846b21840b1c549248092c9a
+      internalID: -687506176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_66
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 2879
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ef1f370aba95e42925f0eeafc49748
+      internalID: -1470414912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_67
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 2878
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5b32694594b3a4bad1eb9e5df241ef
+      internalID: -1642683369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_68
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2879
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f52517ec106ac84bb9be54bc3632562
+      internalID: 1091071522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_69
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2816
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab71183a91821e4caa294b816f789d5
+      internalID: -1620850342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_70
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2816
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81d6416201ea23449acc45b54fc8953
+      internalID: 98788794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_71
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 2817
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27091a3a6d55ec844ba7f9d476633e47
+      internalID: -1205785953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_72
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2817
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8272a43c3b03ed343b9b069cde51b859
+      internalID: -1672393423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_73
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2816
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab52575a657e634b9436e2cd9cc9a97
+      internalID: -1918554313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_74
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2816
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3081ee8dcae804d88ef349d8f5973e
+      internalID: -1433097123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_75
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2816
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91217970a0c13b442ab1add467c945c7
+      internalID: 858364891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_76
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2816
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abedc3038b7389646bec52951833cf79
+      internalID: -1685290523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_77
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 2816
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f8c6890dd00e947a8ab6a43391b0d9
+      internalID: -656950515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_78
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f1c2a1e55f02e4ab86d1ee7cde85b8
+      internalID: 1906905626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_79
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3db03658f91b674cbdf13b0120d024f
+      internalID: 1545606902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_80
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ed6aabfaa19cb43b02127f6d66b29d
+      internalID: -1338195441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_81
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2751
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8a9f117c4f89c4a938255f8932a221
+      internalID: -1442074203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_82
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e7d345036f7bc48a1d3d0c9e813c53
+      internalID: 228402130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_83
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed665a5f12ea25438396ee1e7e141e4
+      internalID: 795394965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_84
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8099cbec413d92a409d94d25d0777296
+      internalID: -1244887263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_85
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 2751
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0124291d30aaed144b1140098cddba35
+      internalID: -1614152465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_86
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2751
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a84bc3f1703c3449f5e652194084ed
+      internalID: -83801937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_87
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2687
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a418da071569548a25f64f3ebee009
+      internalID: -1867111728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_88
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2687
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2884b5ff842214cab9819cd52ae97e
+      internalID: 794620792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_89
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 2689
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d2762f04c2d924a830749e42f6ea4a
+      internalID: -777484678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_90
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2689
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867e1be87a411ba44a98f1f6dc0dab3e
+      internalID: -2009509610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_91
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2687
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3afc669e2325848a991a9dec2aee89
+      internalID: 102393691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_92
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 2687
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbb7bb9b48e2c840a890b9fb89d953b
+      internalID: 1422939957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_93
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2687
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61df654bb9c7ed458079a9bce4d1df9
+      internalID: -1343517649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_94
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2687
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a950766a30d297468ded2e1f5fef89e
+      internalID: 1014712209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_95
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 2687
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3c9f404f5166b4fa86cbe728400930
+      internalID: 1573230024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_96
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2623
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b277611599c93a4ca2bfa2179c08d2f
+      internalID: -831237757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_97
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2623
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069ec92fe5412c54aae7ccbd874eedb4
+      internalID: -104367132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_98
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2623
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f563fb8ff85e95544bfc4f20bc2cf1fb
+      internalID: 2141383539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_99
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2623
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb4a3ba38be7394682de65691fec2d8
+      internalID: -667415001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_100
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2623
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c85c49f5be1ca34e8bb74443f590af1
+      internalID: -702566361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_101
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2623
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9ae26f073ef184ba9910fbd17703e3
+      internalID: -642663124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_102
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2559
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf7de2b4ebe20a4e84e8a0069ac9b1f
+      internalID: -1907006793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_103
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2559
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ceb1805801c70f4894ecf301c777718
+      internalID: -759056508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_104
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2559
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbb2249172931e4fa701fef833bfdf7
+      internalID: 578588485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_105
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2559
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba44c4edbc7039f498c40a79636a52af
+      internalID: 999905743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_106
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2559
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c21a46a0ee6ba14490ae619aba6e169
+      internalID: 826543082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_107
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2559
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f741d11f45891f49887b7e7bd722e67
+      internalID: -599437768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_108
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2497
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae9e0df2277c584ca320461a813da10
+      internalID: -24883550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_109
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2497
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987902d862979404ab0d1dea490c78b7
+      internalID: 2116344509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_110
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2497
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7671883a3c0afd144be03d67612af2dd
+      internalID: 1343215274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_111
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2497
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7004756384d9e42852b413a5e2f25f
+      internalID: 609588954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_112
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2497
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f7a8716017c474988c854932cd55ce
+      internalID: 2026635192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_113
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2497
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ecc629899eb014b97cb7ca42243dc5
+      internalID: -2054129496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_114
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2433
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8b5dd232e5fd146a961b8daebef276
+      internalID: 339682686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_115
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2433
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f82f08a2c6208942904edfc886dbcec
+      internalID: 929671369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_116
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 2433
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd9cc81f4cce434aafc21df44f32e5c
+      internalID: 625421163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_117
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2433
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae49e67a5afa0246b2c256409fb1761
+      internalID: -643576796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_118
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2433
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78764bda7ca32f348b97d3dadd53cb70
+      internalID: 665179545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_119
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2433
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bda8fffe81c7cc41b6f299050cd6d7a
+      internalID: 2120821358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_120
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2368
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7eb18d65a4300418e8e48e186365f9
+      internalID: -1803281756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_121
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2367
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688abfb601c268c468c34b10fe0bb559
+      internalID: -1413322705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_122
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2366
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59857fcfac4b78d44bb0f5717af6b0c9
+      internalID: 2117965832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_123
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2366
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0f2ca09d1ecba48804ddb8d02d0550
+      internalID: -1492956963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_124
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2366
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bd35f2044df0542a21af1486348cb3
+      internalID: -1569796440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_125
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2366
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc115953644c584b987c4499cf8a052
+      internalID: -337480603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_126
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2366
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6751017cead5a104f94f2f0b77bd61cf
+      internalID: -1880288076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_127
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2366
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587d1266977f09e47a94524428ce9133
+      internalID: 1380444529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_128
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2366
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f43e2c92571b41429db542e917011ab
+      internalID: -306296881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_129
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2366
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b009ec00573d1b94a88521c47b8c4cd5
+      internalID: 1571649775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_130
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2366
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d965b86a6b03a6142a5c6b30116e3f17
+      internalID: 1430326972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_131
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2366
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673fee6c21e78494d9a31736a5058f70
+      internalID: -2077250505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_132
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2366
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5b1c841f76a75458a791e28ef3b9c8
+      internalID: 81010739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_133
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2304
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc32500b4a53cb41bf21bd3bf78da45
+      internalID: -2030502568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_134
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2304
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823fd9a169be9f74d83339461e6bab39
+      internalID: -598726290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_135
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2304
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b1bb14f125bda44b7f2261863022d0
+      internalID: -2034955825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_136
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2304
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b98df29ee0a89347bb524aa575cd771
+      internalID: 1678232200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_137
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 2304
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa8bcc40ab05fb40a10fc4e62bc4850
+      internalID: 904187751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_138
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2304
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6188e97b973f5f4d9d16f7f26b170a0
+      internalID: -1277031481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_139
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2304
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49c208a97ea55e4aa2ab8c10cfb8693
+      internalID: 1398189845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_140
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 2304
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed373cf5b287c84e9fce46d8ce39b8b
+      internalID: -142695163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_141
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2304
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a2c1bedc972784da680ccbf3e202ce
+      internalID: 1843482758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_142
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 2304
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ec488da70834445ba8f8dd63de560d
+      internalID: 428576271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_143
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 2304
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bae4a70e7cb954fa7600a684c379fa
+      internalID: -2032631944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_144
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 2304
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182ebb607f2e35b408b4dddc6f5ad612
+      internalID: -273239940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_145
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 2304
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfad8bc4ff7d7204fba87b5f9e6956c4
+      internalID: -1781274015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_146
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2240
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83c08343c631c54baca4676e6db94fd
+      internalID: 2081406912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_147
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2238
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88f2b8feaa385e4bb326db0009b74d2
+      internalID: -2099853088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_148
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2240
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5b28fcdbea5640a0fbe15fbb075ac
+      internalID: -815405262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_149
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2240
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be404d692c755f4885e106413fd879e
+      internalID: -1152205715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2240
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af307b2a3fa6b84f9d10c5d7d172c17
+      internalID: -1947293918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_151
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2240
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c12581e4597ee49bdf106f740e714b
+      internalID: -598841132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_152
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2240
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38c1cc19d5ffc74f809933c2c7fe8d4
+      internalID: 1151440994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_153
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 2240
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a76d7783ede8c41ad2f32f45e57f0f
+      internalID: -2059706548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_154
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2240
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8626b072703c4684f86e7f123aba5878
+      internalID: 1272102207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_155
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2240
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a7636ef9733244394ffa84c79506c0
+      internalID: 1386277253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_156
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2240
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d805025f291e47d4ab18e70c713b81e5
+      internalID: 384832406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_157
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2240
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8a7d8eafec9414c907adb35f4d289e
+      internalID: 1176594453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_158
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2240
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d498c06a9a47f4f89869419b767730
+      internalID: -2093684413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_159
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2176
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83171c51fbb13a4bbd14109ed307b21
+      internalID: -1431279513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_160
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2176
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df655b5b63d00d648bb8c4398455b7e4
+      internalID: 2081363223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_161
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2176
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cbd1f09db2a134388800a3c869d224
+      internalID: -959825602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_162
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2176
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d48e0e6162b5d4db05cde266e0e28d
+      internalID: -1199751795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_163
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2176
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c1cfa8823bbb944a1de8687dd056c4
+      internalID: 1383912230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_164
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2176
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33b97c859a0a194483ea537e39d275b
+      internalID: -561466739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_165
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2176
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1501e3821cd8f8f40a4855c65c8da42d
+      internalID: -1158247335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_166
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2176
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4bd27a6698450498768e5888586706
+      internalID: -150912582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_167
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2176
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7e7c5564ebd6f47989ab05e40fb8a6
+      internalID: -1760571856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_168
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2176
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d39f087b1cef14ebe92b64723bf111
+      internalID: -63532805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_169
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2176
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346cbef852fa67a4e85e5000e9e573b9
+      internalID: -234258470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_170
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 2176
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8a36c1b04ea074cb494e00e6933858
+      internalID: 510901448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_171
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2176
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ca11b1bcc3ed140941440388e70174
+      internalID: 1891020598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_172
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2112
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd13a5bb5d1e724d8d07c70b2554b9f
+      internalID: 285658485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_173
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2112
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93113e4f5d4ef3f4ab50954677d723d9
+      internalID: 1041205173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_174
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 2112
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f75278d783065438281ea7a61aba6e
+      internalID: -1739393749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_175
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2112
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7957a89b90a694c9139d4b8acfd2e0
+      internalID: -726155321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_176
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2114
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b923a6b86b4594f4fbb9fa7287860582
+      internalID: -1438427494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_177
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2110
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19e7e2051297334ab13fd9effbf26d1
+      internalID: 1803641426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_178
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2049
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f412430d75bdb4185bff0ee5a01229
+      internalID: -2032779463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_179
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2048
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb64c2640cb0e9a4eae75da7d25579fc
+      internalID: 743443336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_180
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2051
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288812b9bf43b8f45bbf2816fbe6510c
+      internalID: 990766151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_181
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2049
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec959e06a13cc04383e694774d2f6c4
+      internalID: -1200823129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_182
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2048
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbb21b6ced40df44ab7a4e9a2dbb1d0
+      internalID: -1396036088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_183
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2051
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d441d2cb5a45a0b4281ff66beeb6d1da
+      internalID: 1975256488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_184
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1984
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f166f508984668a44867cba25649ad0d
+      internalID: 1697953595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_185
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1984
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b72a8b910556d4d9981d23dd04d00d
+      internalID: 16015111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_186
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1920
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a8691d74b8c3248b9754b17c4a5fec
+      internalID: -1075121124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_187
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1920
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8543253f0ddd387449122d363c6d8fc2
+      internalID: -830513745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_188
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1855
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7fa6cfc47adef43b30ba765ecbb0e1
+      internalID: 1209879365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_189
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1855
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357b62606808c8447a7fc41dc90e8e3a
+      internalID: -1449528306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_190
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1791
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e280ca32a842b82499e7d8d58fed4616
+      internalID: -1994574775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_191
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1791
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1b889536c502a4da43530f0f14ed10
+      internalID: -313474910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_192
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1727
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f89b9abac0598489068ec2ffeaf7d9
+      internalID: 1837507918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_193
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1727
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70744aaf254cca748a9624ff97e91e5a
+      internalID: -312262464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_194
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1729
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f6c0f62b8f3db43a8dc3b2bd053201
+      internalID: -820467061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_195
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1736
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bddbaea8464e9419b1b29a9326e1a5
+      internalID: 125471126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_196
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1732
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f89e003422e0c4a98c979fa6f4f40b
+      internalID: 233669014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_197
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1664
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ed96da88bc39a46ab6f2c30eb1e6d4
+      internalID: 957716334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_198
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1664
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1de6c2637fe7a449e571c335b06022
+      internalID: -912580118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_199
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1666
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb703bfd9347b54f980c331339135b8
+      internalID: -1268378523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_200
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1666
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c840633b8bcdb2b40bd181e335f69650
+      internalID: -1852260153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_201
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1664
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7735a35915966764f8402e81885d8fd4
+      internalID: 627872497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_202
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1601
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695f2254bfbfa8d42a4b0f6615fa7c8f
+      internalID: -1667444234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_203
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1601
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf5229a0aae6a14f9a541de3e36b84d
+      internalID: -1148591485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_204
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1602
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca95b2ac06294a54d92a159a57c9e98d
+      internalID: -1387720184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_205
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1606
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949a22a94b4fd764ca9685e5e8ea3c4e
+      internalID: 2066978339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_206
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1602
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836dd414ee6680043b12be628dcecc2b
+      internalID: -1071043343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_207
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1536
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06dbef55a639a5542a99caed9c8a8225
+      internalID: 940716521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_208
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1536
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd9767e6e3259c408aacfb63416026a
+      internalID: 458927439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_209
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1538
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f70d389b784a704dafbab0e27ac9da0
+      internalID: -1671373807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_210
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1538
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8883bbd8aa26338499d0b7d785f9d85f
+      internalID: 84265535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_211
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1536
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f70b76384811e43917a4ddfde77487
+      internalID: 624008256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_212
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1472
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51219e37a1116714a99a582a727818ac
+      internalID: -231623498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_213
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1472
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f861016488f4ccd48ad52b6ac387e659
+      internalID: 1234935559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_214
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1482
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d2fc2ffb9b93d4e9d95f8f947783f4
+      internalID: 1433127096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_215
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1408
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dfc797554a1f54a859ca1622769441
+      internalID: 728367977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_216
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1408
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26f705eac964ed4b8ae0d090dc46a1e
+      internalID: 291128609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_217
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1410
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f66a45d64f201c4fa5503850efb823b
+      internalID: -1490983243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_218
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1344
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f96f283a7b7a8498faef4616cf9de7
+      internalID: -1020404044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_219
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1344
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a349fdb14a5b68439124be6805ebe8d
+      internalID: -689623965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_220
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1344
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2b6f2e5e4a4064f90d05238f197f26
+      internalID: -1939955069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_221
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1282
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e2d3970a8315c41975445635b884ae
+      internalID: -917524226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_222
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1280
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86a06d9e21833d40a5e654d1daee988
+      internalID: 1232443128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_223
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1282
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6975212368cacbd4ca258e1a474f09ba
+      internalID: -1567534096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_224
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1216
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf1ca8eb7aa04a4caf0dff36059adb1
+      internalID: 78403968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_225
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1216
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2009c9ac23dd34e83f36c3a79219a9
+      internalID: -439872167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_226
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1216
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5555ec310246d144bacae275c75a638
+      internalID: 1222613286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_227
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1152
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f993bc72f2b317640aea2216c7bfd637
+      internalID: -845384128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_228
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1152
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798bd2695674ce94f90259224dd9f5d2
+      internalID: -861996543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_229
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1152
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6023987b4e09d8746bab76a9f84d10d1
+      internalID: 667154315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_230
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1088
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a4f7fd58cb48d4db61ef17a30d09b6
+      internalID: 604973139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_231
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1088
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b51ec97c4ad33642bb03bf8bf8733d0
+      internalID: 1298182450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_232
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1088
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80ed148e7ed34446aeb3d9addba8a34
+      internalID: 451099444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_233
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02cd3418f3dd4b42bcaf58f68eb79a5
+      internalID: 914354917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_234
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad736d34db95ec41b6e326cdc3ed2b9
+      internalID: 1915239732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_235
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1024
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26eea73bc4f38044b8ba9050f1e657b2
+      internalID: 257791406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_236
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 961
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae0c54841b4c4f4baab847c1b39b80b
+      internalID: 507044266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_237
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 958
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7769bf343ffcda74e8ec7141105019ce
+      internalID: -1793007457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_238
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 958
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769b74f5bba94b64cb1fd3ebee4ce4b9
+      internalID: 2079353442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_239
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 958
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccf6add64b483c4d9b084eac743caf0
+      internalID: 311939787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_240
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 961
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709a3ae7dd3a7044c8c5d012cbb97b97
+      internalID: 1597471334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_241
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 958
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550622ed38f70764dbee26ec4ce29821
+      internalID: -719485457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_242
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 958
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b2b49f68cc1e440abc9c289162f9db
+      internalID: 523267380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_243
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 958
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e1538c4267f1b4c88a06ade113b368
+      internalID: 260308679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_244
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 895
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43fc199de6827d448eb1bbb98e3dea8
+      internalID: -1404179412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_245
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 895
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17dc3416febe230428bc83441555f993
+      internalID: 1428847705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_246
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 895
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cf8b86aad59154d86770c6dbda6de0
+      internalID: 1607003121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_247
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 899
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18df793384aaef747bb146580d943e50
+      internalID: 1129598702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_248
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 895
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7755a83f35032241bbfb51fcb000b5a
+      internalID: -307119342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_249
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 895
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e0f1e716db4cf4381269d1f37e89ba
+      internalID: -2143558034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_250
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 895
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c2c9459d275034d969692688fc64e3
+      internalID: 960213301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_251
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 899
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4385b728a51fa4da87cf598118231b
+      internalID: -99069143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_252
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 829
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9709cb291381a4e9a392c048814e46
+      internalID: -468122970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_253
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 829
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e64abf3deee3f4f981fb64c0f04905
+      internalID: -597372174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_254
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 831
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fcc149f22466d41bbbb110a52be44b
+      internalID: 867208116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_255
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 834
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b07ef94959f644490b9b08681d017b
+      internalID: -846250546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_256
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 829
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6625278271571ca4396250ff245878c8
+      internalID: -596120260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_257
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 829
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6f0ae80c209f64784c692f0ad4fe2b
+      internalID: -1253822337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_258
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 831
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75cca16c58e48a41954da6efdad8cae
+      internalID: 905212760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_259
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 834
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a917349b811d934abc4418300585508
+      internalID: 1541872196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_260
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 769
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264310ef6845e26478d8f5fa14397132
+      internalID: 583353230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_261
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 769
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e96f21a0ec95349beb5f93b696c78f
+      internalID: -129775508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_262
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 769
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7187781648d6f0749a5ba251d0df7bba
+      internalID: -222227249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_263
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 770
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154d20c39fe99dc4a8ad0d0d6c9681c1
+      internalID: 966553792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_264
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 769
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16882c90238f223499148ab94860a343
+      internalID: -544481338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_265
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 769
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825ec096a646c2b41aeabed0ec594b1e
+      internalID: -2088668975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_266
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 767
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e967528b8fba75b4ba573f42cb8e885e
+      internalID: -1156402219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_267
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 770
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6c5b5823736854d8cae084869d5224
+      internalID: -659813447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_268
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 705
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d61329aa12686478e865785df5c777
+      internalID: 1947261748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_269
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 705
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03fb77c8ac7d6346b4aae67a58e9974
+      internalID: -1464765264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_270
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 640
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e72e9bb67b1704eabe41bf8953c5d8
+      internalID: 613815167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_271
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 640
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2c8e65f8b67514abe1960acf5761be
+      internalID: 1495663049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_272
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 575
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4a1ff42d99a5b4ab77ac373cdc6997
+      internalID: -929658145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_273
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 575
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a0ee4a920cd6943b66d9d7d007bfb1
+      internalID: 1643529119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_274
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 512
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327e8804f8465484897c4cfa92ae2790
+      internalID: 1830288089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_275
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 512
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cdaf7be84f6f149b023736a3d610d3
+      internalID: 85585222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_276
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 446
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b96ddeb971231438109a5605f757a4
+      internalID: 72735794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_277
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 448
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079ddedcebdae3a49b49248a380900f0
+      internalID: 2089137088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_278
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 448
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fb9b7393a639c4ba5652c185edf431
+      internalID: -1316487536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_279
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 448
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a339daa5cf8bf40a93089b51ef679d
+      internalID: 1381805491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_280
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 448
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d796e90c9333840bcd712d3c9ee172
+      internalID: -1423656967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_281
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 448
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc96fd610d47f64b8095d269b12880f
+      internalID: -1959866508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_282
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 448
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434adcf4bf8efed4da8949b0aff377c3
+      internalID: -2026525924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_283
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 448
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb657fa47b15b654dacdd0926ff0cede
+      internalID: -2005296589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_284
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 448
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b6acd329910d94da45439e6baade76
+      internalID: 1157610559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_285
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 448
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9229f1b8b23bee54f8e9aac0b6b8d185
+      internalID: -729585922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_286
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 448
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c3979f9a090e04688683f6ae853ddf
+      internalID: -2050048274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_287
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 448
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6dd5f27e9a4b04f934f10e8b373ddd
+      internalID: -1815675601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_288
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 448
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff263400833252646b60c90db31d244d
+      internalID: 1183565598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_289
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 384
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e618a502fc280489025427342c2e36
+      internalID: 1461302618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_290
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 384
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f26b5ffc382e264e963fd6999cf8b0d
+      internalID: -1322580974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_291
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 384
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cfcd863a5e6d341b19a8a609faca1b
+      internalID: -1746643444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_292
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 384
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7090a1a57450d2149abd773fa62c3055
+      internalID: 639385963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_293
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 384
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97b77d4d3de0b14bb19b731259e3b7a
+      internalID: 1886083132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_294
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 384
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a2df66e447c6947b7eb3b641efc919
+      internalID: 2010243855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_295
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 384
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4966c158076ac7040bd85974599cf037
+      internalID: -1082294447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_296
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 384
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632b66086871ec144971fd7ff1d25b83
+      internalID: -57502269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_297
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 384
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6917ee7fea6f7c9458460da9cb7979bc
+      internalID: -686879923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_298
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 384
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56510bfd8b93a724a8a8138f5b146a63
+      internalID: 1745738550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_299
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 384
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809fd28ab91f98d42b3306ae0018597d
+      internalID: -2128139615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_300
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 384
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968c15cc8deab974c8a57d2214f2f7a3
+      internalID: -1890916704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_301
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 384
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0e54afedbb59141b42335b33687298
+      internalID: 119120470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_302
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 318
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b25127e9cec3f2448eb3d0d4d06943b
+      internalID: 878638734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_303
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 318
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fbf268d66f9e44f855779c2655f463
+      internalID: -671070762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_304
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 318
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b62a1f27d05668488b47773db7f940f
+      internalID: -1113601806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_305
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 318
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f450690a0b4c80c41b026aed51c5d921
+      internalID: 2087135099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_306
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 318
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf27ec05bc2ab2499b8f612c44510c9
+      internalID: 58486986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_307
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 318
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02f212e2a8a70247affb28cac389766
+      internalID: -684630308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_308
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 318
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0c481c9e8db484ca490e618152fcc7
+      internalID: -1762220117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_309
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 318
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3f5858c604fd143a68eaedad275fbd
+      internalID: 1096571763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_310
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 318
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173768e6dbc348144a831af1e93c2b46
+      internalID: 1770681418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_311
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 318
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9feb4d9a0b97ed4429ba725a4e891679
+      internalID: -1655884093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_312
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 318
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa17d5866d8462478dad3b428f2be56
+      internalID: 1049919607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_313
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 318
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0782572c11966b249974c597415992f9
+      internalID: 698015664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_314
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 318
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2179b8ac0bbdb914d98c1325b4b921a0
+      internalID: -627185656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_315
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 256
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e30076a7191f8489d813d6c6f19eda
+      internalID: 117275194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_316
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9d104026dfa2f4995d4d3729243fbf
+      internalID: 57663608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_317
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 256
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a54ec9a733faa47ae209ccb449c2f4
+      internalID: -1375610517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_318
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 256
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e62aa9ebbf483447a21b22634f67c44
+      internalID: -267676617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_319
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 256
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56581e36784159d4883dc9c5c08a5c9c
+      internalID: 1853817378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_320
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 256
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0750cdd4d64e8574ca9d9fe5dd5722c7
+      internalID: -2092410804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_321
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 256
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbd7b8920f49424b9e4ca41aa6bd9a6
+      internalID: 15217092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_322
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 256
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305b0894e28d72c4091b23b33d152e63
+      internalID: -1906536718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_323
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 256
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6b0598b3730de418c64d19ff43fe55
+      internalID: 1171016187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_324
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 256
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef6ba4d43ea9f84d94c89de62e7aff9
+      internalID: -1583722052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_325
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 256
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a32dab55ae47934da2898cb4c474fff
+      internalID: 937979198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_326
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 256
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a81effc29844144faa5827fbea9dd85
+      internalID: 1420447373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_327
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 256
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216edfc52df92194d94fa19b86c2de14
+      internalID: -1337948311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_328
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f501d35e4bd9384db821d6f18c62a10
+      internalID: 550918644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_329
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636ed98507b694a40b053fc00912a966
+      internalID: -1658334818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_330
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 193
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc813e894774afc4c9b6b0332b5a44bc
+      internalID: -2019905994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_331
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 193
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6218db7e3b761154c849d3da5d747a16
+      internalID: -839570588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_332
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 193
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18346d92372e1ad4890a70ed3f039efa
+      internalID: 1276613909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_333
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 192
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a6a4331b58404448030ca86bc04f4e
+      internalID: -1330929333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_334
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 127
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd96930fcd8f62743af8c64f8529f681
+      internalID: 326573880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_335
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 127
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc42172bacd73d341adb170f5ab9ac66
+      internalID: -1182816746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_336
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 127
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eea0569f2c333c4eab8d00d8f22ae93
+      internalID: 1058843164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_337
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 127
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a375cf5e0774d24985de3cacd8fb8bc
+      internalID: 1579000085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_338
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 127
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28816c35baf3a534187fd3b25825c540
+      internalID: -1144791863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_339
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 127
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5136c4601b7f19642b5b5822855b77ba
+      internalID: -2047030606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_340
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 63
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c3379f302ccd940822bf06fa401db2
+      internalID: -1591680172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_341
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 63
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b9d215355d04a4ea9372c62cd52ca1
+      internalID: 1399937195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_342
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 63
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a59b68e87944964eb78fd948eabeef7
+      internalID: 1055619964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_343
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 63
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379eb592a8b3d77439e9306fcbf7a23c
+      internalID: -2013367650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_344
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 63
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d87d7ccd3293e43a7fa9d1d41ea342
+      internalID: -318685448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_345
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 63
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029f5edf9a919e84dac84be365e8eb3e
+      internalID: -2035451346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_346
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb72d1b85452d104c9f194444e65be07
+      internalID: -750411746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_347
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e89d678e5a932a49a1a7f45e8f3ffc4
+      internalID: 305676768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_348
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f097527f707c7794daa1aa87b996c854
+      internalID: -1123110114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_349
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52969acb232df5458ff08cb12b53cf1
+      internalID: 946578434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_350
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 0
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef1468064587a2499a750b5317a9baf
+      internalID: -1763603354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarla_sprite_351
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b0626197b932d4b9d3deb6a7a60cef
+      internalID: -1977193337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sarla_sprite_0: 440388656
+      sarla_sprite_1: -180272247
+      sarla_sprite_10: -657130726
+      sarla_sprite_100: -702566361
+      sarla_sprite_101: -642663124
+      sarla_sprite_102: -1907006793
+      sarla_sprite_103: -759056508
+      sarla_sprite_104: 578588485
+      sarla_sprite_105: 999905743
+      sarla_sprite_106: 826543082
+      sarla_sprite_107: -599437768
+      sarla_sprite_108: -24883550
+      sarla_sprite_109: 2116344509
+      sarla_sprite_11: -105545154
+      sarla_sprite_110: 1343215274
+      sarla_sprite_111: 609588954
+      sarla_sprite_112: 2026635192
+      sarla_sprite_113: -2054129496
+      sarla_sprite_114: 339682686
+      sarla_sprite_115: 929671369
+      sarla_sprite_116: 625421163
+      sarla_sprite_117: -643576796
+      sarla_sprite_118: 665179545
+      sarla_sprite_119: 2120821358
+      sarla_sprite_12: 787292428
+      sarla_sprite_120: -1803281756
+      sarla_sprite_121: -1413322705
+      sarla_sprite_122: 2117965832
+      sarla_sprite_123: -1492956963
+      sarla_sprite_124: -1569796440
+      sarla_sprite_125: -337480603
+      sarla_sprite_126: -1880288076
+      sarla_sprite_127: 1380444529
+      sarla_sprite_128: -306296881
+      sarla_sprite_129: 1571649775
+      sarla_sprite_13: -1237189692
+      sarla_sprite_130: 1430326972
+      sarla_sprite_131: -2077250505
+      sarla_sprite_132: 81010739
+      sarla_sprite_133: -2030502568
+      sarla_sprite_134: -598726290
+      sarla_sprite_135: -2034955825
+      sarla_sprite_136: 1678232200
+      sarla_sprite_137: 904187751
+      sarla_sprite_138: -1277031481
+      sarla_sprite_139: 1398189845
+      sarla_sprite_14: 253368532
+      sarla_sprite_140: -142695163
+      sarla_sprite_141: 1843482758
+      sarla_sprite_142: 428576271
+      sarla_sprite_143: -2032631944
+      sarla_sprite_144: -273239940
+      sarla_sprite_145: -1781274015
+      sarla_sprite_146: 2081406912
+      sarla_sprite_147: -2099853088
+      sarla_sprite_148: -815405262
+      sarla_sprite_149: -1152205715
+      sarla_sprite_15: -711703653
+      sarla_sprite_150: -1947293918
+      sarla_sprite_151: -598841132
+      sarla_sprite_152: 1151440994
+      sarla_sprite_153: -2059706548
+      sarla_sprite_154: 1272102207
+      sarla_sprite_155: 1386277253
+      sarla_sprite_156: 384832406
+      sarla_sprite_157: 1176594453
+      sarla_sprite_158: -2093684413
+      sarla_sprite_159: -1431279513
+      sarla_sprite_16: -1804722277
+      sarla_sprite_160: 2081363223
+      sarla_sprite_161: -959825602
+      sarla_sprite_162: -1199751795
+      sarla_sprite_163: 1383912230
+      sarla_sprite_164: -561466739
+      sarla_sprite_165: -1158247335
+      sarla_sprite_166: -150912582
+      sarla_sprite_167: -1760571856
+      sarla_sprite_168: -63532805
+      sarla_sprite_169: -234258470
+      sarla_sprite_17: -1933861502
+      sarla_sprite_170: 510901448
+      sarla_sprite_171: 1891020598
+      sarla_sprite_172: 285658485
+      sarla_sprite_173: 1041205173
+      sarla_sprite_174: -1739393749
+      sarla_sprite_175: -726155321
+      sarla_sprite_176: -1438427494
+      sarla_sprite_177: 1803641426
+      sarla_sprite_178: -2032779463
+      sarla_sprite_179: 743443336
+      sarla_sprite_18: -465511350
+      sarla_sprite_180: 990766151
+      sarla_sprite_181: -1200823129
+      sarla_sprite_182: -1396036088
+      sarla_sprite_183: 1975256488
+      sarla_sprite_184: 1697953595
+      sarla_sprite_185: 16015111
+      sarla_sprite_186: -1075121124
+      sarla_sprite_187: -830513745
+      sarla_sprite_188: 1209879365
+      sarla_sprite_189: -1449528306
+      sarla_sprite_19: -870928707
+      sarla_sprite_190: -1994574775
+      sarla_sprite_191: -313474910
+      sarla_sprite_192: 1837507918
+      sarla_sprite_193: -312262464
+      sarla_sprite_194: -820467061
+      sarla_sprite_195: 125471126
+      sarla_sprite_196: 233669014
+      sarla_sprite_197: 957716334
+      sarla_sprite_198: -912580118
+      sarla_sprite_199: -1268378523
+      sarla_sprite_2: -1780290327
+      sarla_sprite_20: 554613377
+      sarla_sprite_200: -1852260153
+      sarla_sprite_201: 627872497
+      sarla_sprite_202: -1667444234
+      sarla_sprite_203: -1148591485
+      sarla_sprite_204: -1387720184
+      sarla_sprite_205: 2066978339
+      sarla_sprite_206: -1071043343
+      sarla_sprite_207: 940716521
+      sarla_sprite_208: 458927439
+      sarla_sprite_209: -1671373807
+      sarla_sprite_21: 1118546243
+      sarla_sprite_210: 84265535
+      sarla_sprite_211: 624008256
+      sarla_sprite_212: -231623498
+      sarla_sprite_213: 1234935559
+      sarla_sprite_214: 1433127096
+      sarla_sprite_215: 728367977
+      sarla_sprite_216: 291128609
+      sarla_sprite_217: -1490983243
+      sarla_sprite_218: -1020404044
+      sarla_sprite_219: -689623965
+      sarla_sprite_22: 1921897956
+      sarla_sprite_220: -1939955069
+      sarla_sprite_221: -917524226
+      sarla_sprite_222: 1232443128
+      sarla_sprite_223: -1567534096
+      sarla_sprite_224: 78403968
+      sarla_sprite_225: -439872167
+      sarla_sprite_226: 1222613286
+      sarla_sprite_227: -845384128
+      sarla_sprite_228: -861996543
+      sarla_sprite_229: 667154315
+      sarla_sprite_23: -813206536
+      sarla_sprite_230: 604973139
+      sarla_sprite_231: 1298182450
+      sarla_sprite_232: 451099444
+      sarla_sprite_233: 914354917
+      sarla_sprite_234: 1915239732
+      sarla_sprite_235: 257791406
+      sarla_sprite_236: 507044266
+      sarla_sprite_237: -1793007457
+      sarla_sprite_238: 2079353442
+      sarla_sprite_239: 311939787
+      sarla_sprite_24: 455951863
+      sarla_sprite_240: 1597471334
+      sarla_sprite_241: -719485457
+      sarla_sprite_242: 523267380
+      sarla_sprite_243: 260308679
+      sarla_sprite_244: -1404179412
+      sarla_sprite_245: 1428847705
+      sarla_sprite_246: 1607003121
+      sarla_sprite_247: 1129598702
+      sarla_sprite_248: -307119342
+      sarla_sprite_249: -2143558034
+      sarla_sprite_25: 1992254033
+      sarla_sprite_250: 960213301
+      sarla_sprite_251: -99069143
+      sarla_sprite_252: -468122970
+      sarla_sprite_253: -597372174
+      sarla_sprite_254: 867208116
+      sarla_sprite_255: -846250546
+      sarla_sprite_256: -596120260
+      sarla_sprite_257: -1253822337
+      sarla_sprite_258: 905212760
+      sarla_sprite_259: 1541872196
+      sarla_sprite_26: -1497404006
+      sarla_sprite_260: 583353230
+      sarla_sprite_261: -129775508
+      sarla_sprite_262: -222227249
+      sarla_sprite_263: 966553792
+      sarla_sprite_264: -544481338
+      sarla_sprite_265: -2088668975
+      sarla_sprite_266: -1156402219
+      sarla_sprite_267: -659813447
+      sarla_sprite_268: 1947261748
+      sarla_sprite_269: -1464765264
+      sarla_sprite_27: -2085259029
+      sarla_sprite_270: 613815167
+      sarla_sprite_271: 1495663049
+      sarla_sprite_272: -929658145
+      sarla_sprite_273: 1643529119
+      sarla_sprite_274: 1830288089
+      sarla_sprite_275: 85585222
+      sarla_sprite_276: 72735794
+      sarla_sprite_277: 2089137088
+      sarla_sprite_278: -1316487536
+      sarla_sprite_279: 1381805491
+      sarla_sprite_28: -1352542415
+      sarla_sprite_280: -1423656967
+      sarla_sprite_281: -1959866508
+      sarla_sprite_282: -2026525924
+      sarla_sprite_283: -2005296589
+      sarla_sprite_284: 1157610559
+      sarla_sprite_285: -729585922
+      sarla_sprite_286: -2050048274
+      sarla_sprite_287: -1815675601
+      sarla_sprite_288: 1183565598
+      sarla_sprite_289: 1461302618
+      sarla_sprite_29: -1432095096
+      sarla_sprite_290: -1322580974
+      sarla_sprite_291: -1746643444
+      sarla_sprite_292: 639385963
+      sarla_sprite_293: 1886083132
+      sarla_sprite_294: 2010243855
+      sarla_sprite_295: -1082294447
+      sarla_sprite_296: -57502269
+      sarla_sprite_297: -686879923
+      sarla_sprite_298: 1745738550
+      sarla_sprite_299: -2128139615
+      sarla_sprite_3: -926986510
+      sarla_sprite_30: -829055273
+      sarla_sprite_300: -1890916704
+      sarla_sprite_301: 119120470
+      sarla_sprite_302: 878638734
+      sarla_sprite_303: -671070762
+      sarla_sprite_304: -1113601806
+      sarla_sprite_305: 2087135099
+      sarla_sprite_306: 58486986
+      sarla_sprite_307: -684630308
+      sarla_sprite_308: -1762220117
+      sarla_sprite_309: 1096571763
+      sarla_sprite_31: 1495953338
+      sarla_sprite_310: 1770681418
+      sarla_sprite_311: -1655884093
+      sarla_sprite_312: 1049919607
+      sarla_sprite_313: 698015664
+      sarla_sprite_314: -627185656
+      sarla_sprite_315: 117275194
+      sarla_sprite_316: 57663608
+      sarla_sprite_317: -1375610517
+      sarla_sprite_318: -267676617
+      sarla_sprite_319: 1853817378
+      sarla_sprite_32: 47442560
+      sarla_sprite_320: -2092410804
+      sarla_sprite_321: 15217092
+      sarla_sprite_322: -1906536718
+      sarla_sprite_323: 1171016187
+      sarla_sprite_324: -1583722052
+      sarla_sprite_325: 937979198
+      sarla_sprite_326: 1420447373
+      sarla_sprite_327: -1337948311
+      sarla_sprite_328: 550918644
+      sarla_sprite_329: -1658334818
+      sarla_sprite_33: -509807027
+      sarla_sprite_330: -2019905994
+      sarla_sprite_331: -839570588
+      sarla_sprite_332: 1276613909
+      sarla_sprite_333: -1330929333
+      sarla_sprite_334: 326573880
+      sarla_sprite_335: -1182816746
+      sarla_sprite_336: 1058843164
+      sarla_sprite_337: 1579000085
+      sarla_sprite_338: -1144791863
+      sarla_sprite_339: -2047030606
+      sarla_sprite_34: -803418532
+      sarla_sprite_340: -1591680172
+      sarla_sprite_341: 1399937195
+      sarla_sprite_342: 1055619964
+      sarla_sprite_343: -2013367650
+      sarla_sprite_344: -318685448
+      sarla_sprite_345: -2035451346
+      sarla_sprite_346: -750411746
+      sarla_sprite_347: 305676768
+      sarla_sprite_348: -1123110114
+      sarla_sprite_349: 946578434
+      sarla_sprite_35: 1722572995
+      sarla_sprite_350: -1763603354
+      sarla_sprite_351: -1977193337
+      sarla_sprite_36: 2037228411
+      sarla_sprite_37: -1776488644
+      sarla_sprite_38: -1186542215
+      sarla_sprite_39: -1970235581
+      sarla_sprite_4: 2088281405
+      sarla_sprite_40: -1802853767
+      sarla_sprite_41: 306632436
+      sarla_sprite_42: 906410620
+      sarla_sprite_43: -757968757
+      sarla_sprite_44: -1399862850
+      sarla_sprite_45: -1660536813
+      sarla_sprite_46: 189016735
+      sarla_sprite_47: 1422809311
+      sarla_sprite_48: -525624197
+      sarla_sprite_49: -571205690
+      sarla_sprite_5: 542104612
+      sarla_sprite_50: 19830254
+      sarla_sprite_51: 1635690130
+      sarla_sprite_52: 809492841
+      sarla_sprite_53: 1369535416
+      sarla_sprite_54: -990257291
+      sarla_sprite_55: -1609265166
+      sarla_sprite_56: 1236310492
+      sarla_sprite_57: 797779352
+      sarla_sprite_58: 1380130482
+      sarla_sprite_59: -938871194
+      sarla_sprite_6: 567530275
+      sarla_sprite_60: 8406053
+      sarla_sprite_61: 747104261
+      sarla_sprite_62: -1516911913
+      sarla_sprite_63: -178977956
+      sarla_sprite_64: 785580253
+      sarla_sprite_65: -687506176
+      sarla_sprite_66: -1470414912
+      sarla_sprite_67: -1642683369
+      sarla_sprite_68: 1091071522
+      sarla_sprite_69: -1620850342
+      sarla_sprite_7: -931370350
+      sarla_sprite_70: 98788794
+      sarla_sprite_71: -1205785953
+      sarla_sprite_72: -1672393423
+      sarla_sprite_73: -1918554313
+      sarla_sprite_74: -1433097123
+      sarla_sprite_75: 858364891
+      sarla_sprite_76: -1685290523
+      sarla_sprite_77: -656950515
+      sarla_sprite_78: 1906905626
+      sarla_sprite_79: 1545606902
+      sarla_sprite_8: 1714877996
+      sarla_sprite_80: -1338195441
+      sarla_sprite_81: -1442074203
+      sarla_sprite_82: 228402130
+      sarla_sprite_83: 795394965
+      sarla_sprite_84: -1244887263
+      sarla_sprite_85: -1614152465
+      sarla_sprite_86: -83801937
+      sarla_sprite_87: -1867111728
+      sarla_sprite_88: 794620792
+      sarla_sprite_89: -777484678
+      sarla_sprite_9: -227391708
+      sarla_sprite_90: -2009509610
+      sarla_sprite_91: 102393691
+      sarla_sprite_92: 1422939957
+      sarla_sprite_93: -1343517649
+      sarla_sprite_94: 1014712209
+      sarla_sprite_95: 1573230024
+      sarla_sprite_96: -831237757
+      sarla_sprite_97: -104367132
+      sarla_sprite_98: 2141383539
+      sarla_sprite_99: -667415001
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
