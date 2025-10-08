@@ -71,43 +71,8 @@ public class QuestManager : MonoBehaviour
                             }
                         }
                         // Specific checks for quest types.
-                        if (questAssigned is QuestCollectItem quest)
-                        {
-                            if (quest.isGiveQuestType)
-                            {
-                                foreach (Item item in gameObject.GetComponent<Player>().inventory.items) // use ToList() to avoid modifying while iterating
-                                {
-                                    if (item.item != null &&
-                                        item.item.itemName == quest.requiredItem.itemName &&
-                                        item.quantity > 0)
-                                    {
-                                        Debug.Log("Item found.");
-                                        Debug.Log("Index: " + gameObject.GetComponent<Player>().inventory.items.IndexOf(item));
-
-                                        int transferAmount = Mathf.Min(item.quantity, quest.requiredCount);
-
-                                        // Give item(s) to NPC
-                                        interactableNPC.inventory.AddItem(new Item(item.item, transferAmount));
-
-                                        // Subtract from player
-                                        item.quantity -= transferAmount;
-
-                                        if (item.quantity <= 0)
-                                        {
-                                            int index = gameObject.GetComponent<Player>().inventory.items.IndexOf(item);
-                                            gameObject.GetComponent<Player>().inventory.items[index] = new Item(null, 0);
-                                        }
-
-                                        break; // stop after transferring
-                                    }
-                                }
-                            }
-                        }
-
-                        if (questAssigned is TalkToNPCQuest) // Testing as of 10-7-2025, 2.24 pm
-                        {
-                            questAssigned.QuestEventTriggered();
-                        }
+                        QuestForker(questAssigned, interactableNPC);
+                        
                     
                         Debug.Log("Good Job");
                         SetQuestCompleted(GetCurrentQuest());
@@ -196,6 +161,53 @@ public class QuestManager : MonoBehaviour
             Debug.Log("do a general dialogue");
         }
     }
+    /** QUEST FORKER - DEFINES QUEST HANDLING BEFORE THEY GO INTO THEIR FINAL SCRIPT CHECKS.
+        put in functions later. (or a script)
+    **/
 
+    private void QuestForker(QuestInstance questAssigned, NPC interactableNPC)
+    {
+        if (questAssigned is QuestCollectItem quest)
+        {
+            if (quest.isGiveQuestType)
+            {
+                // COLLECT ITEM QUEST
+                foreach (Item item in gameObject.GetComponent<Player>().inventory.items) // use ToList() to avoid modifying while iterating
+                {
+                    if (item.item != null &&
+                        item.item.itemName == quest.requiredItem.itemName &&
+                        item.quantity > 0)
+                    {
+                        Debug.Log("Item found.");
+                        Debug.Log("Index: " + gameObject.GetComponent<Player>().inventory.items.IndexOf(item));
 
+                        int transferAmount = Mathf.Min(item.quantity, quest.requiredCount);
+
+                        // Give item(s) to NPC
+                        interactableNPC.inventory.AddItem(new Item(item.item, transferAmount));
+
+                        // Subtract from player
+                        item.quantity -= transferAmount;
+
+                        if (item.quantity <= 0)
+                        {
+                            int index = gameObject.GetComponent<Player>().inventory.items.IndexOf(item);
+                            gameObject.GetComponent<Player>().inventory.items[index] = new Item(null, 0);
+                        }
+
+                        break; // stop after transferring
+                    }
+                }
+            }
+        }
+        if (questAssigned is TalkToNPCQuest) // Testing as of 10-7-2025, 2.24 pm
+        {
+            // TALKTONPCQUEST
+            questAssigned.QuestEventTriggered();
+        }
+        if (questAssigned is DustingBonesQuest)
+        {
+            
+        }
+    }
 }

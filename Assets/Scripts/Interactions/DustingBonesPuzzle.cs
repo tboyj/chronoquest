@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using ChronoQuest.Interactions.World;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour, Interaction
+{
+    public bool inDialog { get; set; }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    public void InteractionFunction() // Add logic here (fix structuring of if statement later)
+    {
+
+    }
+}

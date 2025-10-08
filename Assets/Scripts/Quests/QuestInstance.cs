@@ -16,6 +16,9 @@ public class QuestInstance : MonoBehaviour
     public QuestManager questManager;
     public List<QuestInstance> relatedQuests;
     public Vector3 positionOfQuestGiver;
+    [SerializeField]
+    private ItemStorable borrowableItem;
+    private bool questHasBorrowableItem;
     public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
     {
         data = q;
@@ -27,7 +30,15 @@ public class QuestInstance : MonoBehaviour
     public void Start()
     {
         // questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
-        
+        if (borrowableItem != null)
+        {
+            questHasBorrowableItem = true;
+        }
+        else
+        {
+            Debug.LogWarning("ItemStorable borrowableItem is not defined/null");
+            questHasBorrowableItem = false;
+        }
         positionOfQuestGiver = gameObject.transform.parent.position;
     }
     public void Update()

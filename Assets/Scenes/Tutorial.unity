@@ -2241,6 +2241,7 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: -3.186, y: 4.44, z: 119.1}
+  borrowableItem: {fileID: 0}
   requiredCount: 1
   currentCount: 0
   requiredItem: {fileID: 11400000, guid: 35ea9685997b7214199d2c7d1af455d5, type: 2}
@@ -4686,7 +4687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questsInStock:
-  - {fileID: 727777347}
+  - {fileID: 1593908652}
 --- !u!136 &263861364
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7265,13 +7266,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498545813}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.646, y: 4.3, z: 125.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1593908650}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1501469598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500929457
 GameObject:
@@ -9843,6 +9844,7 @@ MonoBehaviour:
   relatedQuests:
   - {fileID: 727777347}
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 0}
   toggled: 0
 --- !u!4 &679699628
 Transform:
@@ -10671,6 +10673,7 @@ MonoBehaviour:
   relatedQuests:
   - {fileID: 679699627}
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 0}
   toggled: 0
 --- !u!4 &727777348
 Transform:
@@ -15184,6 +15187,7 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 0}
   toggled: 0
 --- !u!4 &1034665121
 Transform:
@@ -17286,6 +17290,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176834464}
   m_CullTransparentMesh: 1
+--- !u!1 &1199085543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199085544}
+  m_Layer: 0
+  m_Name: -============-
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1199085544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199085543}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211317957
 GameObject:
   m_ObjectHideFlags: 0
@@ -18131,14 +18166,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254902220}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.104, y: 4.376, z: 119.099}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1630554257}
   - {fileID: 2072975162}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1501469598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267163800
 GameObject:
@@ -18986,6 +19021,7 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 0}
   npc: {fileID: 263861365}
 --- !u!1 &1328477448
 GameObject:
@@ -21614,14 +21650,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500553379}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.128, y: 4.381, z: 119.1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1599473363}
   - {fileID: 88321791}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1501469598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1500553385
 MonoBehaviour:
@@ -21642,6 +21678,41 @@ MonoBehaviour:
   referencePlayer: {fileID: 0}
   quest: {fileID: 88321792}
   pauseCheck: {fileID: 160479111}
+--- !u!1 &1501469597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501469598}
+  m_Layer: 0
+  m_Name: Quests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1501469598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501469597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1254902225}
+  - {fileID: 1500553384}
+  - {fileID: 2019644271}
+  - {fileID: 498545817}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501790651
 GameObject:
   m_ObjectHideFlags: 0
@@ -23185,7 +23256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593908650}
-  - component: {fileID: 1593908651}
+  - component: {fileID: 1593908652}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -23202,13 +23273,13 @@ Transform:
   m_GameObject: {fileID: 1593908649}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96299994, y: 0, z: 0.21600342}
+  m_LocalPosition: {x: -0.083, y: 0, z: 0.21600342}
   m_LocalScale: {x: 0.32, y: 0.57, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 498545817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1593908651
+--- !u!114 &1593908652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23217,28 +23288,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1593908649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ee37ef577690d4284a919cab781982, type: 3}
+  m_Script: {fileID: 11500000, guid: c767f1e8046cae74fafc98e78e7df314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 2ba5e3e2c1065384c8eeff7d142345cf, type: 2}
+  data: {fileID: 11400000, guid: 9e6bcf9dc9736c4409f1ea7497831f77, type: 2}
   IsCompleted: 0
   todo:
-  - csafcdsafw
-  - Do The Thing
-  - Do The Thing
-  dialogsForQuest:
-  - dialogueText: Oh, you also probably need a brush for later.
-    characterName: Bossman
-  - dialogueText: It also turns out we don't have that on deck...
-    characterName: Bossman
-  - dialogueText: Why not just have it?
-    characterName: Jim
-  - dialogueText: Don't worry about that right now. Just go find it. Maybe try seeing
-      if Sarlah has it.
-    characterName: Bossman
-  questManager: {fileID: 160479121}
+  - Dust Off Those Bones, Boy
+  - Give them to Sarla
+  dialogsForQuest: []
+  questManager: {fileID: 0}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
   npc: {fileID: 263861365}
 --- !u!1 &1599473361
 GameObject:
@@ -30663,13 +30725,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019644269}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.617, y: 4.3, z: 125.536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1325759865}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1501469598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2019644272
 MonoBehaviour:
@@ -30732,6 +30794,7 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 0}
   toggled: 0
 --- !u!4 &2047054393
 Transform:
@@ -31059,6 +31122,7 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  borrowableItem: {fileID: 0}
   requiredCount: 1
   currentCount: 0
   requiredItem: {fileID: 11400000, guid: 06a7f18d2b525c348bf350837ffb345d, type: 2}
@@ -39115,8 +39179,6 @@ SceneRoots:
   - {fileID: 1300764783}
   - {fileID: 619321232}
   - {fileID: 1122070073}
-  - {fileID: 1254902225}
-  - {fileID: 1500553384}
   - {fileID: 2105435177}
   - {fileID: 1334272709}
   - {fileID: 1613480543}
@@ -39131,5 +39193,5 @@ SceneRoots:
   - {fileID: 1521495532}
   - {fileID: 353927662}
   - {fileID: 7078337622323177326}
-  - {fileID: 2019644271}
-  - {fileID: 498545817}
+  - {fileID: 1199085544}
+  - {fileID: 1501469598}

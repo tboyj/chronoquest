@@ -61,7 +61,7 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
         }
         else
         {
-            Debug.Log("Current quest is null: " + Environment.StackTrace.ToString());
+            Debug.Log("Current quest is null: " + Environment.StackTrace.ToString()); // Thank you Dad <3
 
         }
         return false;
