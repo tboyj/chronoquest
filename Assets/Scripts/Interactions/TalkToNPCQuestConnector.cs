@@ -11,6 +11,7 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
     public GameObject referencePlayer;
     public TalkToNPCQuest quest;
     public PauseScript pauseCheck;
+    public QuestManager qm;
     public bool inDialog { get; set; }
     void Start()
     {
@@ -39,20 +40,29 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         {
             referencePlayer = other.gameObject;
             quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as TalkToNPCQuest;
+            qm = referencePlayer.GetComponent<QuestManager>();
         }
     }
-    // void OnTriggerExit(Collider other)
-    // {
+    void OnTriggerExit(Collider other)
+    {
 
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         referencePlayer = null;
-    //     }
-    // }
-    public void InteractionFunction()
-    {            
-        quest.QuestEventTriggered(); // causes error
+        if (other.CompareTag("Player"))
+        {
+            referencePlayer = null;
+        }
     }
-    
+    public void InteractionFunction()
+    {
+        if (Input.GetKeyDown(Keybinds.talkKeybind) && !pauseCheck.isInventory && !pauseCheck.isPaused
+         && quest != null && referencePlayer != null)
+        {
+            if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+            {
+                Debug.Log("Moves to here.");
+                quest.QuestEventTriggered(); // causes error
+            }
+
+        }
+    }
 }
 

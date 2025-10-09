@@ -87,8 +87,8 @@ public class QuestManager : MonoBehaviour
                 }
 
             }
-            Debug.Log(questsAssigned.Count);
-            Debug.Log(npcQuestHandler.questsInStock.Count);
+            Debug.Log(dialogManager.GetPrint());
+            // Debug.Log(dialogManager.);
             if (questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
             { // add since there is none in quest.
                 questAssigned = npcQuestHandler.GetMostRecentQuest();
@@ -103,23 +103,21 @@ public class QuestManager : MonoBehaviour
                     Debug.Log("Good job");
                     TryToGiveQuest(interactableNPC, dialogManager);
                     interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
-                    // dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
-                    // dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                    dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                    dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                 }
 
                 else
                 {
                     AddQuestToList(questAssigned);
                     // Throw him into a dialog.
-
-                }
-                if (GetCurrentQuest().dialogsForQuest.Count > 0)
+                    if (GetCurrentQuest().dialogsForQuest.Count > 0)
                     {
                         GetCurrentQuest().ShowDialog(true);
                         SetCurrentlyInDialog(true);
                         interactableNPC.inDialog = true;
-                        // dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
-                        // dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                        dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                        dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
                     else
                     {
@@ -127,12 +125,20 @@ public class QuestManager : MonoBehaviour
                         SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = true;
                     }
+                }
             }
             else if (questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
             {
-
-                Debug.Log("Can't assign Quest, One in progress already.");
-                // hint sys goes here
+                if (questAssigned is TalkToNPCQuest && questAssigned.data.id == GetCurrentQuest().data.id)
+                {
+                    Debug.Log("IDs match and its ready to go.");
+                }
+                else
+                {
+                    Debug.Log("Quest Assigned in NPC: " + questAssigned.data.id + " Actual: " + GetCurrentQuest().data.id);
+                }
+                    Debug.Log("Can't assign Quest, One in progress already.");
+                    // hint sys goes here
                 // }
             }
 

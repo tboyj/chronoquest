@@ -10,23 +10,19 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
     // public int requiredCount;
     // public int currentCount;
     public NPC npc;
-        
+    public NPC questAssignerNPC;
     public TalkToNPCQuest(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s, NPC npc) : base(q, i, t, d, s)
     {
         this.npc = npc;
         // this.requiredCount = requiredCount;
         // this.currentCount = currentCount;
     }
-
     public override void QuestEventTriggered()
     {
         IsCompleted = CheckConditions();
         if (IsCompleted)
         {
-            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
-            questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
-            questManager.TryToGiveQuest(npc, questManager.gameObject.GetComponent<DialogGUIManager>());
-            questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            Debug.Log("Completed");
         }
         else
         {
@@ -34,6 +30,7 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
             npc.inDialog = false;
             questManager.gameObject.GetComponent<Player>().inDialog = false;
         }  
+        
             // Called when item is collected
     }
 
@@ -43,11 +40,15 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
         Debug.Log(questManager.name);
         if (questManager.GetCurrentQuest() != null)
         {
-            if (questManager.GetCurrentQuest().data.id == data.id)
+            if (questManager.GetCurrentQuest().data.id == questAssignerNPC.questHandler.GetMostRecentQuest().data.id)
             {
                 Debug.Log("Are you correct here");
+                Debug.Log(questManager.GetCurrentQuest());
                 if (npc.GetInRange())
                 {
+                    questManager.SetQuestCompleted(questAssignerNPC.questHandler.GetMostRecentQuest());
+                    questAssignerNPC.questHandler.questsInStock.RemoveAt(0);
+                    questManager.TryToGiveQuest(npc, questManager.gameObject.GetComponent<Player>().dialogManager);
                     Debug.Log("T");
                     return true;
                 }

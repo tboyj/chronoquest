@@ -19363,6 +19363,7 @@ MonoBehaviour:
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
   borrowableItem: {fileID: 0}
   npc: {fileID: 263861365}
+  questAssignerNPC: {fileID: 1036772502}
 --- !u!1 &1328477448
 GameObject:
   m_ObjectHideFlags: 0

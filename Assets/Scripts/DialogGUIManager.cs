@@ -17,6 +17,10 @@ public class DialogGUIManager : MonoBehaviour
     {
         dialText.text = dtext;
     }
+    public string GetPrint()
+    {
+        return charName.text + ": " + dialText.text;
+    }
 
 
     // Start is called before the first frame update
