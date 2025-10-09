@@ -134,8 +134,9 @@ public class Player : Character, Interaction
                         manager.GetCurrentQuest().ShowDialog(false);
                         manager.SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = false;
+                        manager.GetCurrentQuest().DialogAdvance();
                     }
-                        manager.GetCurrentQuest().ShowDialog(true);
+                        //manager.GetCurrentQuest().ShowDialog(true);
                     }
                     else
                     {

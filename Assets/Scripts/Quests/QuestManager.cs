@@ -103,19 +103,23 @@ public class QuestManager : MonoBehaviour
                     Debug.Log("Good job");
                     TryToGiveQuest(interactableNPC, dialogManager);
                     interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
+                    // dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                    // dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                 }
 
                 else
                 {
                     AddQuestToList(questAssigned);
                     // Throw him into a dialog.
-                    if (GetCurrentQuest().dialogsForQuest.Count > 0)
+
+                }
+                if (GetCurrentQuest().dialogsForQuest.Count > 0)
                     {
                         GetCurrentQuest().ShowDialog(true);
                         SetCurrentlyInDialog(true);
                         interactableNPC.inDialog = true;
-                        dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
-                        dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                        // dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                        // dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
                     else
                     {
@@ -123,29 +127,12 @@ public class QuestManager : MonoBehaviour
                         SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = true;
                     }
-                }
             }
             else if (questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
             {
-                // if (GetCurrentQuest() is TalkToNPCQuest)
-                // {
-                //     // make exception
-                //     questAssigned = npcQuestHandler.GetMostRecentQuest();
-                //     Debug.Log("Add Quest");
-                //     if (questAssigned.CheckConditions())
-                //     {
-                //         Debug.Log("Conditions are good. Ignore.");
-                //         npcQuestHandler.questsInStock.RemoveAt(0);
-                //         // Throw here dialog saying good job.
-                //         Debug.Log("Good job");
-                //         TryToGiveQuest(interactableNPC, dialogManager);
-                //     }
 
-                // }
-                // else
-                // {
-                    Debug.Log("Can't assign Quest, One in progress already.");
-                    // hint sys goes here
+                Debug.Log("Can't assign Quest, One in progress already.");
+                // hint sys goes here
                 // }
             }
 

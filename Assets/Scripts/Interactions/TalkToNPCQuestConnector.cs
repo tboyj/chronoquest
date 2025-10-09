@@ -22,7 +22,7 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
     {
         if (!pauseCheck.isInventory && !pauseCheck.isPaused)
         {
-            if (Input.GetKeyUp(Keybinds.talkKeybind))
+            if (Input.GetKeyDown(Keybinds.talkKeybind))
             {
                 Debug.Log("test???");
                 InteractionFunction();

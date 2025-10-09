@@ -24,11 +24,9 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
         if (IsCompleted)
         {
             questManager.SetQuestCompleted(questManager.GetCurrentQuest());
-            ShowDialog(true);
-            npc.inDialog = true;
-            questManager.gameObject.GetComponent<Player>().inDialog = true;
-            questManager.SetCurrentlyInDialog(true);
-            questManager.AddQuestToList(npc.questHandler.GetMostRecentQuest());
+            questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
+            questManager.TryToGiveQuest(npc, questManager.gameObject.GetComponent<DialogGUIManager>());
+            questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         }
         else
         {

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using ChronoQuest.Interactions.World;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour, Interaction
+public class DustingBonesPuzzle : MonoBehaviour, Interaction
 {
     public bool inDialog { get; set; }
-
+    public PauseScript pauseCheck;
+    public DustingBonesQuest dustingBones;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,6 @@ public class NewBehaviourScript : MonoBehaviour, Interaction
     }
     public void InteractionFunction() // Add logic here (fix structuring of if statement later)
     {
-
+        
     }
 }

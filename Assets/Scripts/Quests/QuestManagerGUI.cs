@@ -1,5 +1,7 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 public class QuestManagerGUI : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class QuestManagerGUI : MonoBehaviour
             currentQuestCondition.text = qm.questsAssigned[0].todo[0];
 
         }
+
     }
     public void GotoNextTodo()
     {
