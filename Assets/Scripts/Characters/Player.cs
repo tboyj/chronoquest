@@ -376,7 +376,7 @@ public class Player : Character, Interaction
     void OnTriggerExit(Collider other)
     {
 
-        if (other.CompareTag("Object") && other.GetComponent<ItemInWorld>().takeable)
+        if (other.CompareTag("Object"))
         {
             if (interactableItem != null)
             {

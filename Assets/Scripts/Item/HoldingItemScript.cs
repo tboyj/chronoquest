@@ -34,4 +34,20 @@ public class HoldingItemScript : MonoBehaviour
         spriteHolderImage.sprite = sprite;
         spriteTopLeftImage.sprite = sprite;
     }
+    public bool GetActiveness()
+    {
+        if (spriteHolderImage.enabled && spriteTopLeftImage.enabled)
+        {
+            return true;
+        }
+        else if (!spriteHolderImage.enabled && !spriteTopLeftImage.enabled)
+        {
+            return false;
+        }
+        else
+        {
+            Debug.Log("what do you have...?");
+            return false;
+        }
+    }
 }

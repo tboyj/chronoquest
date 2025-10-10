@@ -20,14 +20,6 @@ public class DustingBonesQuest : QuestInstance, IQuestAction
 
     public override void QuestEventTriggered()
     {
-        if (questManager.GetCurrentQuest().data.id == data.id)
-        {
-            if (!IsCompleted)
-            {
-                ActivateQuest(true);
-            }
-        }
-
         IsCompleted = CheckConditions();
         // if (IsCompleted)
         // {
@@ -45,18 +37,6 @@ public class DustingBonesQuest : QuestInstance, IQuestAction
         //     questManager.gameObject.GetComponent<Player>().inDialog = false;
         // }  
             // Called when item is collected
-    }
-
-    private void ActivateQuest(bool v)
-    {
-        if (v)
-        {
-            // Currently being worked on :: 10-8-2025
-        }
-        else
-        {
-            
-        }
     }
 
     public override bool CheckConditions()

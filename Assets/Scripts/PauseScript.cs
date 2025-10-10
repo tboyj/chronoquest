@@ -81,4 +81,16 @@ public class PauseScript : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+
+    public void activateTimeFreeze()
+    {
+        if (timeIsStopped)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
 }
