@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using ChronoQuest.Interactions.World;
+using UnityEngine.Events;
 
 public class ItemInWorld : MonoBehaviour, Interaction
 {
@@ -16,6 +17,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     public QuestCollectItem quest;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
+    //public UnityEvent<GameObject> OnInteractEvent;
     void Start()
     {
         Startup();
@@ -70,7 +72,11 @@ public class ItemInWorld : MonoBehaviour, Interaction
         if (takeable)
         {
             amountOfItemsHere--;
-            quest.QuestEventTriggered(); // causes error
+            if (quest != null)
+                quest.QuestEventTriggered();
+            else
+                Debug.LogWarning("No quest found for this interaction."); // causes error
+            //OnInteractEvent?.Invoke(referencePlayer);
             if (amountOfItemsHere == 0)
             {
                 rend.enabled = false;

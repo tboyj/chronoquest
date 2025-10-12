@@ -198,9 +198,6 @@ public class QuestManager : MonoBehaviour
             // TALKTONPCQUEST
             questAssigned.QuestEventTriggered();
         }
-        if (questAssigned is DustingBonesQuest)
-        {
-            
-        }
+        
     }
 }

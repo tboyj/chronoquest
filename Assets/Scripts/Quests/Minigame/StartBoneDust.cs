@@ -19,8 +19,8 @@ public class StartBoneDust : MonoBehaviour
             Debug.Log("Index " + child.GetComponentIndex() + ": " + child.gameObject.name);
         }
         gameObject.SetActive(true);
-        
-        
+
+
         Debug.Log("Hi!");
         questManager.GetComponent<PauseScript>().activateTimeFreeze();
         System.Random randomLimit = new System.Random();
@@ -29,5 +29,12 @@ public class StartBoneDust : MonoBehaviour
         {
             boneToaster.GenerateNewObject();
         }
+
+    }
+    public void Stop()
+    {
+        gameObject.SetActive(false);
+        questManager.GetComponent<PauseScript>().activateTimeFreeze();
+        Debug.Log("Bye!");
     }
 }

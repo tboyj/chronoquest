@@ -76,10 +76,26 @@ public class PlayerMovement : Movement
             Debug.DrawRay(rayholder.position, ray.direction, Color.green);   
             RaycastHit hit;
             Vector3 currentMovement = new Vector3(x, -.5f, z).normalized;
+            Debug.Log("Movement (x): " + currentMovement.x);
             if (Physics.Raycast(ray, out hit, 0.025f))
             {
                 if (hit.collider.CompareTag("Stair") && currentMovement.x > 0)
                 {
+                    Debug.Log("Default!");
+                    float stairDecreaser = .5f;
+                    if (transform.position.x > 0)
+                    {
+                        transform.position = new Vector3(transform.position.x + .025f, transform.position.y + 0.2f, transform.position.z);
+                    }
+                    else if (transform.position.x < 0)
+                    {
+                        transform.position = new Vector3(transform.position.x - .025f, transform.position.y + 0.2f, transform.position.z);
+                    }
+                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
+                }
+                if (hit.collider.CompareTag("Stair") && currentMovement.x < 0)
+                {
+                    Debug.Log("Correct almost!");
                     float stairDecreaser = .5f;
                     if (transform.position.x > 0)
                     {
@@ -93,7 +109,57 @@ public class PlayerMovement : Movement
                 }
                 // Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
             }
-            
+            Ray rayZ = new Ray();
+            if (currentMovement.z < 0)
+            {
+                rayholder.position = new Vector3(rayholder.position.x, rayholder.position.y, rb.transform.position.z - 0.075f);
+                rayZ = new Ray(rayholder.position, new Vector3(0, 0, -0.025f));
+            }
+            else if (currentMovement.z > 0)
+            {
+                rayholder.position = new Vector3(rayholder.position.x, rayholder.position.y, rb.transform.position.z + 0.075f);
+                rayZ = new Ray(rayholder.position, new Vector3(0, 0, 0.025f));
+            }
+
+            Debug.DrawRay(rayholder.position, rayZ.direction, Color.blue);
+
+            if (Physics.Raycast(rayZ, out hit, 0.025f))
+                {
+                if (hit.collider.CompareTag("Stair") && currentMovement.z > 0)
+                {
+                    Debug.Log("Z Default!");
+                    float stairDecreaser = .5f;
+                    if (transform.position.z > 0)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z + .025f);
+                    }
+                    else if (transform.position.z < 0)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z - .025f);
+                    }
+                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
+                }
+
+                if (hit.collider.CompareTag("Stair") && currentMovement.z < 0)
+                {
+                    Debug.Log("Z Correct almost!");
+                    float stairDecreaser = .5f;
+                    if (transform.position.z > 0)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z + .025f);
+                    }
+                    else if (transform.position.z < 0)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z - .025f);
+                    }
+                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
+                }
+            }
+
+            /** 
+            add Z coord implementation.
+            **/
+
             float currentForce = moveForce;
             if (Input.GetKey(KeyCode.LeftShift))
             {

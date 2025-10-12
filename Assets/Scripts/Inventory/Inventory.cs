@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
-
+[System.Serializable]
 public class Inventory : MonoBehaviour
 {
     // Fields

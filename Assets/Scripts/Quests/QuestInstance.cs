@@ -8,7 +8,7 @@ using UnityEngine;
 public class QuestInstance : MonoBehaviour
 {
     public Quest data;
-    public IQuestAction condition;
+    public IQuestAction conditions;
     public bool IsCompleted;
     public List<string> todo;
     [SerializeField]
@@ -16,9 +16,7 @@ public class QuestInstance : MonoBehaviour
     public QuestManager questManager;
     public List<QuestInstance> relatedQuests;
     public Vector3 positionOfQuestGiver;
-    [SerializeField]
-    private ItemStorable borrowableItem;
-    private bool questHasBorrowableItem;
+
     public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
     {
         data = q;
@@ -30,15 +28,6 @@ public class QuestInstance : MonoBehaviour
     public void Start()
     {
         // questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
-        if (borrowableItem != null)
-        {
-            questHasBorrowableItem = true;
-        }
-        else
-        {
-            Debug.LogWarning("ItemStorable borrowableItem is not defined/null");
-            questHasBorrowableItem = false;
-        }
         positionOfQuestGiver = gameObject.transform.parent.position;
     }
     public void Update()
@@ -67,7 +56,8 @@ public class QuestInstance : MonoBehaviour
     } 
     public void Trigger()
     {
-        condition.QuestEventTriggered();
+        Debug.Log($"Condition {conditions}");
+        conditions.QuestEventTriggered();
     }
     public virtual bool CheckConditions()
     {

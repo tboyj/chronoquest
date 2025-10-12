@@ -29,7 +29,7 @@ public class Player : Character, Interaction
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.AddComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+        Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();

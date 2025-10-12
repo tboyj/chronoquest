@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
+[System.Serializable]
 public class Item
 {
     // Start is called before the first frame update
