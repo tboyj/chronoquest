@@ -4192,7 +4192,7 @@ Transform:
   m_GameObject: {fileID: 160479107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.36, y: 4.3, z: 123.45}
+  m_LocalPosition: {x: -6.18, y: 4.3, z: 123.45}
   m_LocalScale: {x: 0.32, y: 0.57, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16840,7 +16840,7 @@ Transform:
   m_GameObject: {fileID: 693168784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25700125, y: -0.169, z: -2.5004985}
+  m_LocalPosition: {x: 0.242, y: -0.169, z: -2.5004985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16863,7 +16863,6 @@ MonoBehaviour:
   toggled: 0
   decoderScript: {fileID: 873901944}
   playerInTrigger: 0
-  quest: {fileID: 0}
   playerQuest: {fileID: 0}
   pauseCheck: {fileID: 160479111}
   conditionsMet: 0
@@ -20887,8 +20886,8 @@ Transform:
   m_GameObject: {fileID: 873901943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.187, y: 0.243, z: 1.672}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalPosition: {x: 2.694, y: 0.243, z: 5.221}
+  m_LocalScale: {x: 3.18, y: 2.33, z: 1.55}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334272709}
@@ -20912,8 +20911,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.65, y: 1.3, z: 0.3}
-  m_Center: {x: 0, y: 0, z: -0.1}
+  m_Size: {x: 0.33, y: -0.34, z: 0.14}
+  m_Center: {x: 0, y: -0.16, z: -0.02}
 --- !u!212 &873901946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20955,8 +20954,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ee4e179a943b6a4695b81f9244e0ff8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 947c9e0d8a2ff1f4facf2a8e3270bf39, type: 3}
+  m_Color: {r: 1, g: 0.9592521, b: 0.78930813, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20984,6 +20983,7 @@ MonoBehaviour:
   - {fileID: 693168784}
   - {fileID: 1522198190}
   - {fileID: 942856812}
+  quest: {fileID: 0}
 --- !u!1 &874236917
 GameObject:
   m_ObjectHideFlags: 0
@@ -21352,6 +21352,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 193354177}
+  - {fileID: 1694680024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878438995
@@ -23037,7 +23038,7 @@ Transform:
   m_GameObject: {fileID: 942856812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4239998, y: -0.169, z: -2.5004985}
+  m_LocalPosition: {x: -0.45, y: -0.169, z: -2.5004985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -23060,7 +23061,6 @@ MonoBehaviour:
   toggled: 0
   decoderScript: {fileID: 873901944}
   playerInTrigger: 0
-  quest: {fileID: 0}
   playerQuest: {fileID: 0}
   pauseCheck: {fileID: 160479111}
   conditionsMet: 0
@@ -24851,7 +24851,7 @@ Transform:
   m_GameObject: {fileID: 1022037764}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6230011, y: -0.169, z: -2.5004985}
+  m_LocalPosition: {x: 1.6380005, y: -0.169, z: -2.5004985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -24874,7 +24874,6 @@ MonoBehaviour:
   toggled: 0
   decoderScript: {fileID: 873901944}
   playerInTrigger: 0
-  quest: {fileID: 0}
   playerQuest: {fileID: 0}
   pauseCheck: {fileID: 160479111}
   conditionsMet: 0
@@ -32462,7 +32461,7 @@ Transform:
   m_GameObject: {fileID: 1334272704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.95, y: 4.6, z: 130.37}
+  m_LocalPosition: {x: -25.08, y: 4.6, z: 130.37}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36364,7 +36363,7 @@ Transform:
   m_GameObject: {fileID: 1522198190}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.92900085, y: -0.169, z: -2.5004985}
+  m_LocalPosition: {x: 0.978, y: -0.169, z: -2.5004985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -36387,7 +36386,6 @@ MonoBehaviour:
   toggled: 0
   decoderScript: {fileID: 873901944}
   playerInTrigger: 0
-  quest: {fileID: 0}
   playerQuest: {fileID: 0}
   pauseCheck: {fileID: 160479111}
   conditionsMet: 0
@@ -41574,6 +41572,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692187975}
   m_Mesh: {fileID: -2432090755550338912, guid: c2eaee1d2b73af24699ac77edbd817bd, type: 3}
+--- !u!1 &1694680023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694680024}
+  - component: {fileID: 1694680026}
+  m_Layer: 0
+  m_Name: Blocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1694680024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694680023}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.054, y: 0, z: -0.064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 878311038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1694680026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694680023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914b362800342c44badc0d8f260053d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
+  currentQuestId: 0
+  blocker: {fileID: 0}
 --- !u!1 &1697316497
 GameObject:
   m_ObjectHideFlags: 0

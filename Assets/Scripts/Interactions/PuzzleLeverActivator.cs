@@ -50,7 +50,7 @@ public class PuzzleLeverActivator : MonoBehaviour, Interaction
         {
             conditionsMet = true;
             Debug.Log("Gate opening...");
-            sprite.color = Color.green;  
+            sprite.color = Color.white;  
             decoderScript.GetComponent<CorrectOrderOpenScript>().CheckOrder(gameObject);                     
         }
         
