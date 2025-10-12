@@ -44,14 +44,14 @@ public class GateActivator : MonoBehaviour, Interaction
         Debug.Log("Gate opening...");
         sprite.color = Color.red;
         amITurnedOn = true;
-        affectedObject.position += Vector3.up * 3;
+        affectedObject.position += Vector3.down * 3;
     
         yield return new WaitForSeconds(duration);
 
         Debug.Log("Gate closing...");
         sprite.color = Color.green;
         amITurnedOn = false;
-        affectedObject.position += Vector3.down * 3;
+        affectedObject.position += Vector3.up * 3;
     }
     
 
