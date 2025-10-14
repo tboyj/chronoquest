@@ -84,7 +84,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
             }
             else
             {
-                referencePlayer.GetComponent<Inventory>().AddItem(new Item(itemInWorld, 1));
+                //referencePlayer.GetComponent<Inventory>().AddItem(new Item(itemInWorld, 1));
             }
 
             // causes error
