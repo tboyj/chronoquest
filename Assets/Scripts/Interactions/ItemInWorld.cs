@@ -17,6 +17,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     public QuestCollectItem quest;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
+    public bool questRequired;
     //public UnityEvent<GameObject> OnInteractEvent;
     void Start()
     {
@@ -72,10 +73,21 @@ public class ItemInWorld : MonoBehaviour, Interaction
         if (takeable)
         {
             amountOfItemsHere--;
-            if (quest != null)
-                quest.QuestEventTriggered();
+            if (questRequired)
+            {
+                if (quest != null)
+                    quest.QuestEventTriggered();
+                else
+                {
+                    Debug.LogWarning("No quest found for this interaction.");
+                }
+            }
             else
-                Debug.LogWarning("No quest found for this interaction."); // causes error
+            {
+                referencePlayer.GetComponent<Inventory>().AddItem(new Item(itemInWorld, 1));
+            }
+
+            // causes error
             //OnInteractEvent?.Invoke(referencePlayer);
             if (amountOfItemsHere == 0)
             {
