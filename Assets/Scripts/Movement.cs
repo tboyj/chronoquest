@@ -8,379 +8,174 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
 
-    public LayerMask collisionDetector;
-    public float moveForce = 22.5f;       // movement default force strength
-    public float runMultiplier = 1.25f; // sprint multiplier
-    public float maxSpeed = 1.5f;         // max horizontal speed
-    // public float jumpForce = 5f;        // optional: jump
-    public Rigidbody rb;
-    public Transform rayholder;
+    [Header("Movement Settings")]
+    public float moveSpeed = .85f;        // Base movement speed
+    public float runMultiplier = 1.25f; // Sprint multiplier
+    public float gravity = -.01f;
 
-    public bool flip = false;
+    [Header("References")]
+    public CharacterController controller;
+    public Transform rayholder;         // Optional for stairs or slope checks
 
-
-
-    protected virtual void Initialize(float moveForce, float runMultiplier,
-    float maxSpeed, Rigidbody rb)
-    {
-        this.moveForce = moveForce;
-        this.runMultiplier = runMultiplier;
-        this.maxSpeed = maxSpeed;
-
-    }
-
-    // Abstract methods that must be implemented by derived classes
-    public virtual void MoveWithForce()
-    {
-
-    }
+    protected Vector3 velocity;
+    protected bool isGrounded;
+    public bool flip;
     protected virtual void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        rayholder = transform.Find("Rayholder");
+        controller = GetComponent<CharacterController>();
+        if (controller == null)
+            Debug.LogError("CharacterController not found on " + gameObject.name);
 
+        rayholder = transform.Find("Rayholder");
         if (rayholder == null)
-            Debug.LogError("Rayholder not found on " + gameObject.name);
+            Debug.LogWarning("Rayholder not found, slope detection will be limited.");
     }
+
+    public virtual void MoveWithForce() { }
 
 
 }
 public class PlayerMovement : Movement
 {
     
-    /// <summary>
-    /// Applies a force to the player's Rigidbody in the direction of the player's input.
-    /// The force is multiplied by the run multiplier if the left shift key is pressed.
-    /// The horizontal velocity is clamped to the maximum speed.
-    /// </summary>
-    /// <param name="force">The force to apply.</param>
+    
+
+    private void Update()
+    {
+        MoveWithForce();
+    }
+
     public override void MoveWithForce()
     {
+        isGrounded = controller.isGrounded;
 
-        if (Time.timeScale > 0)
-        {
-            float x = Input.GetAxisRaw("Horizontal");
-            float z = Input.GetAxisRaw("Vertical");
-            Ray ray = new Ray();
-            if (flip)
-            {
+        if (isGrounded)
+            velocity.y = -1f; // small downward force to keep grounded
 
-                rayholder.position = new Vector3(rb.transform.position.x - 0.075f, rayholder.position.y, rayholder.position.z);
-                ray = new Ray(rayholder.position, new Vector3(-0.025f, 0, 0));
-            } else {
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-                rayholder.position = new Vector3(rb.transform.position.x + 0.075f, rayholder.position.y, rayholder.position.z);
-                ray = new Ray(rayholder.position, new Vector3(0.025f, 0, 0));
-            }
+        Vector3 move = transform.right * x + transform.forward * z;
 
-            Debug.DrawRay(rayholder.position, ray.direction, Color.green);   
-            RaycastHit hit;
-            Vector3 currentMovement = new Vector3(x, -.5f, z).normalized;
-            Debug.Log("Movement (x): " + currentMovement.x);
-            if (Physics.Raycast(ray, out hit, 0.025f))
-            {
-                if (hit.collider.CompareTag("Stair") && currentMovement.x > 0)
-                {
-                    Debug.Log("Default!");
-                    float stairDecreaser = .5f;
-                    if (transform.position.x > 0)
-                    {
-                        transform.position = new Vector3(transform.position.x + .025f, transform.position.y + 0.2f, transform.position.z);
-                    }
-                    else if (transform.position.x < 0)
-                    {
-                        transform.position = new Vector3(transform.position.x - .025f, transform.position.y + 0.2f, transform.position.z);
-                    }
-                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
-                }
-                if (hit.collider.CompareTag("Stair") && currentMovement.x < 0)
-                {
-                    Debug.Log("Correct almost!");
-                    float stairDecreaser = .5f;
-                    if (transform.position.x > 0)
-                    {
-                        transform.position = new Vector3(transform.position.x + .025f, transform.position.y + 0.2f, transform.position.z);
-                    }
-                    else if (transform.position.x < 0)
-                    {
-                        transform.position = new Vector3(transform.position.x - .025f, transform.position.y + 0.2f, transform.position.z);
-                    }
-                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
-                }
-                // Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
-            }
-            Ray rayZ = new Ray();
-            if (currentMovement.z < 0)
-            {
-                rayholder.position = new Vector3(rayholder.position.x, rayholder.position.y, rb.transform.position.z - 0.075f);
-                rayZ = new Ray(rayholder.position, new Vector3(0, 0, -0.025f));
-            }
-            else if (currentMovement.z > 0)
-            {
-                rayholder.position = new Vector3(rayholder.position.x, rayholder.position.y, rb.transform.position.z + 0.075f);
-                rayZ = new Ray(rayholder.position, new Vector3(0, 0, 0.025f));
-            }
+        float speed = moveSpeed;
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed *= runMultiplier;
 
-            Debug.DrawRay(rayholder.position, rayZ.direction, Color.blue);
+        controller.Move(move * speed * Time.deltaTime);
 
-            if (Physics.Raycast(rayZ, out hit, 0.025f))
-                {
-                if (hit.collider.CompareTag("Stair") && currentMovement.z > 0)
-                {
-                    Debug.Log("Z Default!");
-                    float stairDecreaser = .5f;
-                    if (transform.position.z > 0)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z + .025f);
-                    }
-                    else if (transform.position.z < 0)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z - .025f);
-                    }
-                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
-                }
+        // Apply gravity
+        velocity.y += gravity;
+        controller.Move(velocity * Time.deltaTime);
 
-                if (hit.collider.CompareTag("Stair") && currentMovement.z < 0)
-                {
-                    Debug.Log("Z Correct almost!");
-                    float stairDecreaser = .5f;
-                    if (transform.position.z > 0)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z + .025f);
-                    }
-                    else if (transform.position.z < 0)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z - .025f);
-                    }
-                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
-                }
-            }
+        // Flip character based on movement direction
+        if (x < 0) flip = true;
+        else if (x > 0) flip = false;
 
-            /** 
-            add Z coord implementation.
-            **/
-
-            float currentForce = moveForce;
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                runMultiplier = 1.25f;
-            }
-            else
-            {
-                runMultiplier = 1;
-            }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                runMultiplier = 1;
-            }
-            currentForce *= runMultiplier;
-            if (currentMovement.sqrMagnitude == 0) return;
-
-            rb.AddForce(currentMovement * currentForce, ForceMode.Acceleration);
-            // Debug.Log("Force: "+rb.GetAccumulatedForce());
-            // Clamp horizontal velocity only (keep gravity on Y)
-            Vector3 horizontalVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            if (horizontalVel.magnitude > maxSpeed)
-            {
-                horizontalVel = horizontalVel.normalized * maxSpeed;
-                rb.velocity = new Vector3(horizontalVel.x, rb.velocity.y, horizontalVel.z);
-            }
-            if (x < 0)
-            {
-                flip = true;
-            }
-            else if (x > 0)
-            {
-                flip = false;
-            }
-        }
+        // Optional stair adjustment
+        // HandleStairs(move);
     }
 
-    void Start()
-    {
+    // private void HandleStairs(Vector3 move)
+    // {
+    //     if (rayholder == null) return;
 
-        rb.freezeRotation = true; // stops rigidbody from tipping over
-        rb.useGravity = true;     // enables gravity
-
-    }
+    //     Ray ray = new Ray(rayholder.position + move.normalized * 0.1f, Vector3.down);
+    //     if (Physics.Raycast(ray, out RaycastHit hit, 0.5f))
+    //     {
+    //         if (hit.collider.CompareTag("Stair"))
+    //         {
+    //             Vector3 stairStep = new Vector3(0, 0.2f, 0);
+    //             controller.Move(stairStep);
+    //         }
+    //     }
+    // }
 }
 [System.Serializable]
 public class NPCMovement : Movement
 {
-    //public bool debugPause = true;
     public string status = "Idle";
-    private PauseScript pauseScript;
     public GameObject pathPointContainer;
     public List<Transform> pathPoints = new List<Transform>();
     public Transform currentNode;
-    private Transform minNode = null;
-    [SerializeField]
-    private float x = 0;
-    [SerializeField]
-    private float z = 0;
-    [SerializeField]
-    private float minDist = Mathf.Infinity;
-    /// <summary>
-    /// Applies a force to the player's Rigidbody in the direction of the player's input.
-    /// The force is multiplied by the run multiplier if the left shift key is pressed.
-    /// The horizontal velocity is clamped to the maximum speed.
-    /// </summary>
-    /// <param name="force">The force to apply.</param>
-    public void Start()
-    {
 
-        rb.freezeRotation = true; // stops rigidbody from tipping over
-        rb.useGravity = true;     // enables gravity
+    private float minDist = Mathf.Infinity;
+
+    private void Start()
+    {
+        controller = GetComponent<CharacterController>();
+        if (controller == null)
+            Debug.LogError("CharacterController missing on NPC.");
 
         pathPointContainer = GameObject.Find("AINodeHolder");
 
         foreach (Transform child in pathPointContainer.transform)
-        {
             pathPoints.Add(child);
-        }
+
         currentNode = GetClosestNode();
     }
+
+    private void Update()
+    {
+        if (status != "Idle")
+            MoveWithForce();
+    }
+
+    public override void MoveWithForce()
+    {
+        if (currentNode == null) return;
+
+        Vector3 direction = (currentNode.position - transform.position).normalized;
+
+        Vector3 move = new Vector3(direction.x, 0, direction.z) * moveSpeed * Time.deltaTime;
+        controller.Move(move);
+
+        // Apply gravity
+        if (!controller.isGrounded)
+            velocity.y += gravity * Time.deltaTime;
+        else
+            velocity.y = -2f;
+
+        controller.Move(velocity * Time.deltaTime);
+
+        // Flip NPC based on movement
+        if (direction.x < 0) flip = true;
+        else if (direction.x > 0) flip = false;
+
+        float dist = Vector3.Distance(transform.position, currentNode.position);
+        if (dist < 0.5f) // Node reached
+        {
+            currentNode.GetComponent<PathfinderNode>().wasVisited = true;
+            currentNode = GetClosestNode();
+            minDist = Mathf.Infinity;
+        }
+    }
+
     public Transform GetClosestNode()
     {
+        Transform closest = null;
         foreach (Transform node in pathPoints)
         {
-            if (node != null && node.GetComponent<PathfinderNode>().wasVisited == false)
+            if (!node.GetComponent<PathfinderNode>().wasVisited)
             {
                 float dist = Vector3.Distance(transform.position, node.position);
-                // float endDist = Vector3.Distance(transform.position, GameObject.Find("End").transform.position);
-
                 if (dist < minDist)
                 {
                     minDist = dist;
-                    minNode = node;
+                    closest = node;
                 }
-            } // goes to the closest node
-            else
-            {
-                continue;
             }
         }
-        return minNode;
-    }
-    public void FixedUpdate()
-    {
-        //if (!debugPause)  (used to keep in place)
-        if (status != "Idle")
-        {
-            MoveWithForce();
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
-        }
-        else
-        {
-            rb.velocity = Vector3.zero;
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-    }
-    public override void MoveWithForce()
-    {
-
-        if (Time.timeScale > 0)
-        {
-
-            Ray ray;
-            if (flip) // fix this later in the morning
-            {
-
-                rayholder.position = new Vector3(rb.transform.position.x - 0.075f, rayholder.position.y, rayholder.position.z);
-                ray = new Ray(rayholder.position, new Vector3(-0.025f, 0, 0));
-            }
-            else
-            {
-
-                rayholder.position = new Vector3(rb.transform.position.x + 0.075f, rayholder.position.y, rayholder.position.z);
-                ray = new Ray(rayholder.position, new Vector3(0.025f, 0, 0));
-            }
-
-            Debug.DrawRay(rayholder.position, ray.direction, Color.green);
-            RaycastHit hit;
-            Debug.Log(minNode.position);
-
-            Vector3 currentMovement = new Vector3(x, -.5f, z).normalized;
-            if (Physics.Raycast(ray, out hit, 0.025f))
-            {
-                if (hit.collider.CompareTag("Stair") && currentMovement.x > 0)
-                {
-                    float stairDecreaser = .5f;
-                    if (transform.position.x > 0)
-                    {
-                        transform.position = new Vector3(transform.position.x + .025f, transform.position.y + 0.2f, transform.position.z);
-                    }
-                    else if (transform.position.x < 0)
-                    {
-                        transform.position = new Vector3(transform.position.x - .025f, transform.position.y + 0.2f, transform.position.z);
-                    }
-                    currentMovement = new Vector3(x - stairDecreaser, -.25f, z - stairDecreaser);
-                }
-                // Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
-            }
-
-            // if (Physics.Raycast(ray, out hit, 2f)) {
-            //     if (hit.collider.CompareTag("Unclimbable"))
-            //     {
-            //         minNode = TryToFindClimbable();
-            //         Vector3 direction = (minNode.position - transform.position).normalized;
-            //         x = direction.x;
-            //         z = direction.z;
-            //     }
-            // }
-            Vector3 direction = (currentNode.position - transform.position).normalized;
-            x = direction.x;
-            z = direction.z;
-            float currentForce = moveForce;
-            if (currentMovement.sqrMagnitude == 0) return;
-
-            rb.AddForce(currentMovement * currentForce, ForceMode.Acceleration);
-            Vector3 horizontalVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            if (horizontalVel.magnitude > maxSpeed)
-            {
-                horizontalVel = horizontalVel.normalized * maxSpeed;
-                rb.velocity = new Vector3(horizontalVel.x, rb.velocity.y, horizontalVel.z);
-            }
-            if (x < 0)
-            {
-                flip = true;
-            }
-            else if (x > 0)
-            {
-                flip = false;
-            }
-            float dist = Vector3.Distance(transform.position, currentNode.position);
-
-        }
+        return closest;
     }
 
-    public Transform GetCurrentNode()
-{
-    return minNode;
-}
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("End"))
         {
-            Debug.Log("End reached");
-            pathPoints.Clear();
             foreach (Transform child in pathPointContainer.transform)
-            {
-                pathPoints.Add(child);
                 child.GetComponent<PathfinderNode>().wasVisited = false;
-            }
-        }
-        if (other.CompareTag("Middleman") && other.transform == currentNode)
-        {
-            currentNode.GetComponent<PathfinderNode>().wasVisited = true;
-            // sets the one behind it to unvisited
-            minDist = Mathf.Infinity;
-            currentNode = GetClosestNode(); // gets the next closest node
-        }
-        if (other.CompareTag("Player"))
-        {
-            
+
+            currentNode = GetClosestNode();
         }
     }
 }

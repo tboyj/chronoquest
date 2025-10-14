@@ -259,7 +259,7 @@ public class Player : Character, Interaction
         {
             animatorSetup.speed = 1;
             movement.MoveWithForce();
-            animatorSetup.SetFloat("SpeedX", Math.Abs(movement.rb.velocity.x)); // Add Z animation to this at a later time.
+            animatorSetup.SetFloat("SpeedX", Math.Abs(movement.controller.velocity.x + movement.controller.velocity.z / 2)); // Add Z animation to this at a later time.
             spriteRenderer.flipX = movement.flip;
         }
         else

@@ -36,7 +36,7 @@ public class NPC : Character
         if (inDialog)
         {
             movement.enabled = false;
-            movement.rb.position = movement.rb.position;
+            movement.controller.transform.position = movement.controller.transform.position;
         }
         else
         {
