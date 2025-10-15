@@ -32,7 +32,7 @@ public class NPC : Character
     }
     public void Update()
     {
-        
+
         if (inDialog)
         {
             movement.enabled = false;
@@ -43,6 +43,10 @@ public class NPC : Character
             movement.enabled = true;
         }
 
+    }
+    public void FixedUpdate()
+    {
+        
     }
 
     public bool GetInRange()

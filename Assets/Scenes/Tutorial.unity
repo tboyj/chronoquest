@@ -509,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 24850670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1496,6 +1496,7 @@ GameObject:
   - component: {fileID: 54891873}
   - component: {fileID: 54891872}
   - component: {fileID: 54891871}
+  - component: {fileID: 54891874}
   m_Layer: 0
   m_Name: Egyptian fence (9)
   m_TagString: Untagged
@@ -1535,7 +1536,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -1590,6 +1591,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54891869}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &54891874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54891869}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.999999, y: 8.753909e-11, z: 16.8}
+  m_Center: {x: 0.000015258789, y: 0.00012207031, z: -3.87}
 --- !u!1 &54979649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,7 +3118,7 @@ GameObject:
   - component: {fileID: 97291412}
   - component: {fileID: 97291415}
   - component: {fileID: 97291414}
-  - component: {fileID: 97291413}
+  - component: {fileID: 97291416}
   m_Layer: 0
   m_Name: FenceinEgypt (3)
   m_TagString: Untagged
@@ -3124,28 +3146,6 @@ Transform:
   - {fileID: 1992567035}
   m_Father: {fileID: 73145773}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -360}
---- !u!64 &97291413
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97291411}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &97291414
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3196,6 +3196,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97291411}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &97291416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97291411}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000030517578, y: 0, z: -4.92}
 --- !u!1 &107871027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,16 +5141,14 @@ GameObject:
   - component: {fileID: 160479108}
   - component: {fileID: 160479116}
   - component: {fileID: 160479115}
-  - component: {fileID: 160479113}
   - component: {fileID: 160479112}
   - component: {fileID: 160479111}
   - component: {fileID: 160479110}
-  - component: {fileID: 160479118}
-  - component: {fileID: 160479120}
   - component: {fileID: 160479121}
   - component: {fileID: 160479122}
   - component: {fileID: 160479123}
   - component: {fileID: 160479124}
+  - component: {fileID: 160479125}
   m_Layer: 0
   m_Name: RealPlayer
   m_TagString: Player
@@ -5146,7 +5165,7 @@ Transform:
   m_GameObject: {fileID: 160479107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.28, y: 4.26, z: 129.47}
+  m_LocalPosition: {x: -21.28, y: 4.26, z: 115.18}
   m_LocalScale: {x: 0.32, y: 0.57, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5212,33 +5231,6 @@ Skybox:
   m_GameObject: {fileID: 160479107}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
---- !u!54 &160479113
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160479107}
-  serializedVersion: 4
-  m_Mass: 4
-  m_Drag: 0
-  m_AngularDrag: 1
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!23 &160479115
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5289,52 +5281,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160479107}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &160479118
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160479107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.295
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &160479120
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160479107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &160479121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5394,6 +5340,32 @@ MonoBehaviour:
   itemEquipped:
     item: {fileID: 0}
     quantity: 0
+--- !u!143 &160479125
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160479107}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 0.85
+  m_Radius: 0.3
+  m_SlopeLimit: 40
+  m_StepOffset: 0.2
+  m_SkinWidth: 0.05
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &160795167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,7 +5626,7 @@ GameObject:
   - component: {fileID: 167462118}
   - component: {fileID: 167462121}
   - component: {fileID: 167462120}
-  - component: {fileID: 167462119}
+  - component: {fileID: 167462122}
   m_Layer: 0
   m_Name: Egyptian fence
   m_TagString: Untagged
@@ -5677,28 +5649,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1992567035}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &167462119
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167462117}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &167462120
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5749,6 +5699,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167462117}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &167462122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167462117}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000030517578, y: -0.00012207031, z: -4.92}
 --- !u!1 &181928242
 GameObject:
   m_ObjectHideFlags: 0
@@ -5802,8 +5773,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.530496, y: 0.91882396, z: 6.4339914}
-  m_Center: {x: -0.000000008705647, y: -0.07712999, z: 0.4871289}
+  m_Size: {x: 0.530496, y: 1.3372538, z: 6.313346}
+  m_Center: {x: -0.0000000048784, y: 0.1320851, z: 0.54745317}
 --- !u!23 &181928245
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7010,7 +6981,7 @@ GameObject:
   - component: {fileID: 228168537}
   - component: {fileID: 228168540}
   - component: {fileID: 228168539}
-  - component: {fileID: 228168538}
+  - component: {fileID: 228168541}
   m_Layer: 0
   m_Name: Egyptian fence
   m_TagString: Untagged
@@ -7033,28 +7004,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 97291412}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &228168538
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228168536}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &228168539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7105,6 +7054,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228168536}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &228168541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228168536}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000045776367, y: 0, z: -4.92}
 --- !u!1 &234545546
 GameObject:
   m_ObjectHideFlags: 0
@@ -7298,9 +7268,7 @@ GameObject:
   - component: {fileID: 263861362}
   - component: {fileID: 263861361}
   - component: {fileID: 263861371}
-  - component: {fileID: 263861373}
-  - component: {fileID: 263861374}
-  - component: {fileID: 263861375}
+  - component: {fileID: 263861372}
   m_Layer: 0
   m_Name: NPC_Sarlah
   m_TagString: NPC
@@ -7449,8 +7417,8 @@ MonoBehaviour:
   itemEquipped:
     item: {fileID: 0}
     quantity: 0
---- !u!136 &263861373
-CapsuleCollider:
+--- !u!143 &263861372
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7467,60 +7435,13 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &263861374
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263861359}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
---- !u!136 &263861375
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263861359}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  serializedVersion: 3
+  m_Height: 0.85
+  m_Radius: 0.3
+  m_SlopeLimit: 40
+  m_StepOffset: 0.2
+  m_SkinWidth: 0.05
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &264118371
 GameObject:
@@ -8930,7 +8851,7 @@ Transform:
   m_GameObject: {fileID: 348391774}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.51315, y: -0.47131673, z: -0.32348633}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10637,7 +10558,7 @@ Transform:
   m_GameObject: {fileID: 422616418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7105, y: -0.1435, z: 0}
+  m_LocalPosition: {x: 0.7105, y: -0.151, z: 0}
   m_LocalScale: {x: 1, y: 1.0235633, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12806,8 +12727,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33, y: -0.34, z: 0.14}
-  m_Center: {x: 0, y: -0.16, z: -0.02}
+  m_Size: {x: 0.33, y: 0.64797986, z: 0.14}
+  m_Center: {x: -1.2658924e-15, y: -0.006009939, z: -0.020000001}
 --- !u!212 &510810965
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13690,6 +13611,7 @@ GameObject:
   - component: {fileID: 528465480}
   - component: {fileID: 528465479}
   - component: {fileID: 528465478}
+  - component: {fileID: 528465481}
   m_Layer: 0
   m_Name: Egyptian fence (11)
   m_TagString: Untagged
@@ -13729,7 +13651,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -13784,6 +13706,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528465476}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &528465481
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528465476}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.290939, y: 0.18724522, z: 22.325268}
+  m_Center: {x: -1.1452249, y: -0.014124844, z: -6.719811}
 --- !u!1 &534539204
 GameObject:
   m_ObjectHideFlags: 0
@@ -14523,6 +14466,7 @@ GameObject:
   - component: {fileID: 582176887}
   - component: {fileID: 582176886}
   - component: {fileID: 582176885}
+  - component: {fileID: 582176888}
   m_Layer: 0
   m_Name: Egyptian fence (10)
   m_TagString: Untagged
@@ -14562,7 +14506,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -14617,6 +14561,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582176883}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &582176888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582176883}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.999998, y: 0.21713409, z: 16.8}
+  m_Center: {x: 0.00024414793, y: 0.10856687, z: -3.8700016}
 --- !u!1 &585563486
 GameObject:
   m_ObjectHideFlags: 0
@@ -14889,7 +14854,7 @@ GameObject:
   - component: {fileID: 588875367}
   - component: {fileID: 588875370}
   - component: {fileID: 588875369}
-  - component: {fileID: 588875368}
+  - component: {fileID: 588875371}
   m_Layer: 0
   m_Name: Egyptian fence (3)
   m_TagString: Untagged
@@ -14912,28 +14877,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 97291412}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &588875368
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588875366}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &588875369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14984,6 +14927,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588875366}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &588875371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588875366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000030517578, y: 0, z: -4.92}
 --- !u!1 &599794373
 GameObject:
   m_ObjectHideFlags: 0
@@ -15595,7 +15559,7 @@ GameObject:
   - component: {fileID: 634096843}
   - component: {fileID: 634096846}
   - component: {fileID: 634096845}
-  - component: {fileID: 634096844}
+  - component: {fileID: 634096847}
   m_Layer: 0
   m_Name: Egyptian fence (3)
   m_TagString: Untagged
@@ -15618,28 +15582,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1992567035}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &634096844
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 634096842}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &634096845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15690,6 +15632,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634096842}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &634096847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634096842}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000015258789, y: 0, z: -4.92}
 --- !u!1 &644870736
 GameObject:
   m_ObjectHideFlags: 0
@@ -17153,7 +17116,7 @@ Transform:
   m_GameObject: {fileID: 702916870}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -0.217, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18931,7 +18894,7 @@ Transform:
   m_GameObject: {fileID: 785814141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.51315, y: -0.47131673, z: -0.32348633}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19087,7 +19050,7 @@ GameObject:
   - component: {fileID: 805472879}
   - component: {fileID: 805472882}
   - component: {fileID: 805472881}
-  - component: {fileID: 805472880}
+  - component: {fileID: 805472883}
   m_Layer: 0
   m_Name: Egyptian fence (5)
   m_TagString: Untagged
@@ -19110,28 +19073,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 73145773}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &805472880
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805472878}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &805472881
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19182,6 +19123,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805472878}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &805472883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805472878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.000001490165, z: 21.53}
+  m_Center: {x: 0.000045776367, y: 0, z: -4.92}
 --- !u!1 &810530865
 GameObject:
   m_ObjectHideFlags: 0
@@ -19361,6 +19323,7 @@ GameObject:
   - component: {fileID: 820592579}
   - component: {fileID: 820592578}
   - component: {fileID: 820592577}
+  - component: {fileID: 820592581}
   m_Layer: 0
   m_Name: FenceinEgypt
   m_TagString: Untagged
@@ -19385,7 +19348,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -19459,6 +19422,27 @@ Transform:
   - {fileID: 1031116556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!65 &820592581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820592576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.00000089415505, z: 21.2}
+  m_Center: {x: 0, y: -0.0000076293945, z: -4.94}
 --- !u!1 &820950120
 GameObject:
   m_ObjectHideFlags: 0
@@ -22305,6 +22289,7 @@ GameObject:
   - component: {fileID: 928446418}
   - component: {fileID: 928446417}
   - component: {fileID: 928446416}
+  - component: {fileID: 928446420}
   m_Layer: 0
   m_Name: Egyptian fence
   m_TagString: Untagged
@@ -22329,7 +22314,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -22399,6 +22384,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 820592580}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!65 &928446420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928446415}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.00000089415505, z: 21.2}
+  m_Center: {x: -0.00012207031, y: 0, z: -4.94}
 --- !u!1 &942856812
 GameObject:
   m_ObjectHideFlags: 0
@@ -24098,7 +24104,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 687684546}
-  - {fileID: 1098858252}
   - {fileID: 62044171}
   - {fileID: 1927825302}
   - {fileID: 644870737}
@@ -24867,6 +24872,7 @@ GameObject:
   - component: {fileID: 1031116555}
   - component: {fileID: 1031116554}
   - component: {fileID: 1031116553}
+  - component: {fileID: 1031116557}
   m_Layer: 0
   m_Name: Egyptian fence (1)
   m_TagString: Untagged
@@ -24891,7 +24897,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -24961,6 +24967,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 820592580}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!65 &1031116557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031116552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.00000089415505, z: 21.2}
+  m_Center: {x: 0, y: -0.0000076293945, z: -4.94}
 --- !u!1 &1034773591
 GameObject:
   m_ObjectHideFlags: 0
@@ -25085,7 +25112,6 @@ GameObject:
   - component: {fileID: 1036772516}
   - component: {fileID: 1036772518}
   - component: {fileID: 1036772519}
-  - component: {fileID: 1036772520}
   m_Layer: 0
   m_Name: NPC_Bossman
   m_TagString: NPC
@@ -25253,43 +25279,16 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1036772519
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036772499}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
---- !u!136 &1036772520
-CapsuleCollider:
+--- !u!143 &1036772519
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -25303,13 +25302,16 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  serializedVersion: 3
+  m_Height: 0.85
+  m_Radius: 0.3
+  m_SlopeLimit: 40
+  m_StepOffset: 0.2
+  m_SkinWidth: 0.05
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1036818363
 GameObject:
@@ -26388,7 +26390,7 @@ GameObject:
   - component: {fileID: 1092519528}
   - component: {fileID: 1092519531}
   - component: {fileID: 1092519530}
-  - component: {fileID: 1092519529}
+  - component: {fileID: 1092519532}
   m_Layer: 0
   m_Name: Egyptian fence (5)
   m_TagString: Untagged
@@ -26411,28 +26413,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1992567035}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1092519529
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092519527}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1092519530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26483,6 +26463,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092519527}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1092519532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092519527}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: 0, y: 0, z: -4.92}
 --- !u!1 &1095705294
 GameObject:
   m_ObjectHideFlags: 0
@@ -26585,125 +26586,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095705294}
   m_CullTransparentMesh: 1
---- !u!1 &1098858251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1098858252}
-  - component: {fileID: 1098858256}
-  - component: {fileID: 1098858255}
-  - component: {fileID: 1098858254}
-  - component: {fileID: 1098858253}
-  m_Layer: 8
-  m_Name: Middleman (1)
-  m_TagString: Middleman
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1098858252
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098858251}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.39, z: 115.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1008602697}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1098858253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098858251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23db2c9507df87f45a43a4626e4ce93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wasVisited: 0
---- !u!135 &1098858254
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098858251}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1098858255
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098858251}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1098858256
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098858251}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1103953523
 GameObject:
   m_ObjectHideFlags: 0
@@ -27804,7 +27686,7 @@ GameObject:
   - component: {fileID: 1138537980}
   - component: {fileID: 1138537983}
   - component: {fileID: 1138537982}
-  - component: {fileID: 1138537981}
+  - component: {fileID: 1138537984}
   m_Layer: 0
   m_Name: Egyptian fence (1)
   m_TagString: Untagged
@@ -27827,28 +27709,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 97291412}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1138537981
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138537979}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1138537982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27899,6 +27759,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138537979}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1138537984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138537979}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000045776367, y: 0, z: -4.92}
 --- !u!1 &1139555897
 GameObject:
   m_ObjectHideFlags: 0
@@ -28044,7 +27925,7 @@ GameObject:
   - component: {fileID: 1141824546}
   - component: {fileID: 1141824549}
   - component: {fileID: 1141824548}
-  - component: {fileID: 1141824547}
+  - component: {fileID: 1141824550}
   m_Layer: 0
   m_Name: Egyptian fence (1)
   m_TagString: Untagged
@@ -28067,28 +27948,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 73145773}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1141824547
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141824545}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1141824548
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28139,6 +27998,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141824545}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1141824550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141824545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.000001490165, z: 21.53}
+  m_Center: {x: 0.000015258789, y: 0, z: -4.92}
 --- !u!1 &1143861160
 GameObject:
   m_ObjectHideFlags: 0
@@ -28151,6 +28031,7 @@ GameObject:
   - component: {fileID: 1143861163}
   - component: {fileID: 1143861162}
   - component: {fileID: 1143861161}
+  - component: {fileID: 1143861165}
   m_Layer: 0
   m_Name: Egyptian fence (3)
   m_TagString: Untagged
@@ -28175,7 +28056,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -28245,6 +28126,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 820592580}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!65 &1143861165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143861160}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.00000089415505, z: 21.2}
+  m_Center: {x: 0, y: -0.0000076293945, z: -4.94}
 --- !u!1 &1147642073
 GameObject:
   m_ObjectHideFlags: 0
@@ -30103,8 +30005,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.88844985, z: 1}
-  m_Center: {x: 1.4932825e-17, y: -0.055775084, z: 4.2777616e-15}
+  m_Size: {x: 1, y: 0.88844985, z: 2.0727115}
+  m_Center: {x: -1.5194156e-13, y: -0.055775084, z: -0.53635496}
 --- !u!23 &1234728490
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32661,7 +32563,7 @@ GameObject:
   - component: {fileID: 1372270826}
   - component: {fileID: 1372270829}
   - component: {fileID: 1372270828}
-  - component: {fileID: 1372270827}
+  - component: {fileID: 1372270830}
   m_Layer: 0
   m_Name: Egyptian fence (4)
   m_TagString: Untagged
@@ -32684,28 +32586,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 73145773}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1372270827
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372270825}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1372270828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32756,6 +32636,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372270825}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1372270830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372270825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.000001490165, z: 21.53}
+  m_Center: {x: 0.000030517578, y: 0, z: -4.92}
 --- !u!1 &1374443230
 GameObject:
   m_ObjectHideFlags: 0
@@ -35076,7 +34977,7 @@ GameObject:
   - component: {fileID: 1498580502}
   - component: {fileID: 1498580505}
   - component: {fileID: 1498580504}
-  - component: {fileID: 1498580503}
+  - component: {fileID: 1498580506}
   m_Layer: 0
   m_Name: Egyptian fence (1)
   m_TagString: Untagged
@@ -35099,28 +35000,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1992567035}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1498580503
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498580501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1498580504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35171,6 +35050,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498580501}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1498580506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498580501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000030517578, y: 0.00012207031, z: -4.92}
 --- !u!1 &1500553379
 GameObject:
   m_ObjectHideFlags: 0
@@ -36969,6 +36869,7 @@ GameObject:
   - component: {fileID: 1585821110}
   - component: {fileID: 1585821109}
   - component: {fileID: 1585821108}
+  - component: {fileID: 1585821111}
   m_Layer: 0
   m_Name: Egyptian fence (7)
   m_TagString: Untagged
@@ -37008,7 +36909,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -37063,6 +36964,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585821106}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1585821111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585821106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.221099, y: 0.45471185, z: 16.8}
+  m_Center: {x: 0.11054624, y: 0.18135571, z: -3.8699987}
 --- !u!1 &1589596642
 GameObject:
   m_ObjectHideFlags: 0
@@ -37563,7 +37485,7 @@ GameObject:
   - component: {fileID: 1598496087}
   - component: {fileID: 1598496090}
   - component: {fileID: 1598496089}
-  - component: {fileID: 1598496088}
+  - component: {fileID: 1598496091}
   m_Layer: 0
   m_Name: Egyptian fence
   m_TagString: Untagged
@@ -37586,28 +37508,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 73145773}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1598496088
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598496086}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1598496089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37658,6 +37558,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598496086}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1598496091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598496086}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.000001490165, z: 21.53}
+  m_Center: {x: 0.000015258789, y: 0, z: -4.92}
 --- !u!1 &1599473361
 GameObject:
   m_ObjectHideFlags: 0
@@ -38890,8 +38811,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.530496, y: 0.91882396, z: 6.570199}
-  m_Center: {x: 0, y: -0.077130005, z: 0.41902757}
+  m_Size: {x: 0.530496, y: 1.9050936, z: 6.5701995}
+  m_Center: {x: -0.000000012644065, y: 0.41600418, z: 0.41902763}
 --- !u!23 &1635758573
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39323,7 +39244,7 @@ GameObject:
   - component: {fileID: 1670775078}
   - component: {fileID: 1670775081}
   - component: {fileID: 1670775080}
-  - component: {fileID: 1670775079}
+  - component: {fileID: 1670775082}
   m_Layer: 0
   m_Name: Egyptian fence (3)
   m_TagString: Untagged
@@ -39346,28 +39267,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 73145773}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1670775079
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670775077}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1670775080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39418,6 +39317,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670775077}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1670775082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670775077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.000001490165, z: 21.53}
+  m_Center: {x: 0.000015258789, y: 0, z: -4.92}
 --- !u!1 &1674145768
 GameObject:
   m_ObjectHideFlags: 0
@@ -41733,6 +41653,7 @@ GameObject:
   - component: {fileID: 1739109675}
   - component: {fileID: 1739109674}
   - component: {fileID: 1739109673}
+  - component: {fileID: 1739109676}
   m_Layer: 0
   m_Name: Egyptian fence (8)
   m_TagString: Untagged
@@ -41772,7 +41693,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -41827,6 +41748,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739109671}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1739109676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739109671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.999999, y: 8.753909e-11, z: 16.8}
+  m_Center: {x: 0.000015258789, y: 0.00012207031, z: -3.87}
 --- !u!1 &1741117176
 GameObject:
   m_ObjectHideFlags: 0
@@ -42226,7 +42168,7 @@ GameObject:
   - component: {fileID: 1751436798}
   - component: {fileID: 1751436801}
   - component: {fileID: 1751436800}
-  - component: {fileID: 1751436799}
+  - component: {fileID: 1751436802}
   m_Layer: 0
   m_Name: Egyptian fence (4)
   m_TagString: Untagged
@@ -42249,28 +42191,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1992567035}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1751436799
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751436797}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1751436800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42321,6 +42241,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751436797}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1751436802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751436797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000015258789, y: -0.00012207031, z: -4.92}
 --- !u!1 &1756045159
 GameObject:
   m_ObjectHideFlags: 0
@@ -45109,6 +45050,7 @@ GameObject:
   - component: {fileID: 1910669222}
   - component: {fileID: 1910669221}
   - component: {fileID: 1910669220}
+  - component: {fileID: 1910669223}
   m_Layer: 0
   m_Name: Egyptian fence (6)
   m_TagString: Untagged
@@ -45148,7 +45090,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -45203,6 +45145,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910669218}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1910669223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910669218}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000006, y: 0.0000009199681, z: 16.8}
+  m_Center: {x: 0, y: -0.00024414062, z: -3.87}
 --- !u!1 &1915742186
 GameObject:
   m_ObjectHideFlags: 0
@@ -45432,8 +45395,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.530496, y: 0.918824, z: 6.305877}
-  m_Center: {x: -0.000000090171795, y: -0.07712997, z: 0.55117446}
+  m_Size: {x: 0.530496, y: 1.5455481, z: 6.0565157}
+  m_Center: {x: -0.00000017603767, y: 0.2362306, z: 0.6758489}
 --- !u!23 &1921370083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46433,7 +46396,7 @@ GameObject:
   - component: {fileID: 1959650302}
   - component: {fileID: 1959650305}
   - component: {fileID: 1959650304}
-  - component: {fileID: 1959650303}
+  - component: {fileID: 1959650306}
   m_Layer: 0
   m_Name: Egyptian fence (4)
   m_TagString: Untagged
@@ -46456,28 +46419,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 97291412}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1959650303
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959650301}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1959650304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46528,6 +46469,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959650301}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1959650306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959650301}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000030517578, y: 0, z: -4.92}
 --- !u!1 &1961023102
 GameObject:
   m_ObjectHideFlags: 0
@@ -47334,7 +47296,7 @@ GameObject:
   - component: {fileID: 1992567035}
   - component: {fileID: 1992567038}
   - component: {fileID: 1992567037}
-  - component: {fileID: 1992567036}
+  - component: {fileID: 1992567039}
   m_Layer: 0
   m_Name: FenceinEgypt (3)
   m_TagString: Untagged
@@ -47362,28 +47324,6 @@ Transform:
   - {fileID: 1498580502}
   m_Father: {fileID: 97291412}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!64 &1992567036
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992567034}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1992567037
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47434,6 +47374,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992567034}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1992567039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992567034}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000005, y: 0.0000014901798, z: 21.53}
+  m_Center: {x: -0.000030517578, y: 0, z: -4.92}
 --- !u!1 &1995528486
 GameObject:
   m_ObjectHideFlags: 0
@@ -49671,6 +49632,7 @@ GameObject:
   - component: {fileID: 2129555437}
   - component: {fileID: 2129555436}
   - component: {fileID: 2129555435}
+  - component: {fileID: 2129555439}
   m_Layer: 0
   m_Name: Egyptian fence (4)
   m_TagString: Untagged
@@ -49695,7 +49657,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -49766,6 +49728,27 @@ Transform:
   - {fileID: 1234728488}
   m_Father: {fileID: 820592580}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!65 &2129555439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129555434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.00000089415494, z: 27.296045}
+  m_Center: {x: -1.8214073e-13, y: -0.0000076293704, z: -7.9880204}
 --- !u!1 &2129848071
 GameObject:
   m_ObjectHideFlags: 0
@@ -57253,8 +57236,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.530496, y: 0.91882396, z: 6.570199}
-  m_Center: {x: 0, y: -0.077130005, z: 0.41902757}
+  m_Size: {x: 0.530496, y: 2.3342175, z: 6.5701995}
+  m_Center: {x: 2.0435178e-14, y: 0.6305668, z: 0.41902766}
 --- !u!1 &8164078558607168696
 GameObject:
   m_ObjectHideFlags: 0
@@ -57443,8 +57426,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.530496, y: 0.91882414, z: 6.5702}
-  m_Center: {x: 3.8329553e-13, y: -0.077129535, z: 0.41902667}
+  m_Size: {x: 0.530496, y: 2.2484767, z: 5.979051}
+  m_Center: {x: 0.000000052578052, y: 0.5876932, z: 0.7146031}
 --- !u!1 &8164078559319414491
 GameObject:
   m_ObjectHideFlags: 0
