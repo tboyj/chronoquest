@@ -5,8 +5,10 @@ using UnityEngine.UIElements;
 
 public class Paper : BaseUse
 {
-    
+
     public GameObject container;
+    [TextArea]
+    public string paperText;
     public bool isActive = false;
     private void Start()
     {
@@ -18,22 +20,25 @@ public class Paper : BaseUse
         {
             if (isActive)
             {
-                GetPlayer().isUsingItem = true;
                 // GetPlayer().movement.enabled = false; // bug can occur where character can go outside the trigger zone, disabling.
                 GetPlayer().movement.moveSpeed = 0;
             }
             else
             {
-                GetPlayer().isUsingItem = false;
                 // GetPlayer().movement.enabled = true;
-                GetPlayer().movement.moveSpeed = 0.40f;
+                GetPlayer().movement.moveSpeed = 0.45f;
             }
         }
     }
     // Example method for using the paper item
     public override void Use()
     {
+        container.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = paperText;
         isActive = !isActive;
         container.SetActive(isActive);
+        if (GetPlayer() != null)
+        {
+            GetPlayer().isUsingItem = isActive;
+        }
     }
 }

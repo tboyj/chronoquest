@@ -8,7 +8,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 0.40f;      // Base movement speed
+    public float moveSpeed = 0.45f;      // Base movement speed
     public float runMultiplier = 1.15f; // Sprint multiplier
     public float gravity = -0.075f;
 

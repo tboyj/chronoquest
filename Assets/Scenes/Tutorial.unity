@@ -5336,6 +5336,7 @@ MonoBehaviour:
   animatorSetup: {fileID: 78369804}
   itemPaketTest: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
   reciever: {fileID: 0}
+  isUsingItem: 0
   hotbarHolder: {fileID: 1047586296}
   inventoryHolder: {fileID: 760785944}
   questPanelContainer: {fileID: 579856491}
@@ -19308,6 +19309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   container: {fileID: 1119403765}
+  paperText: 'I. Around the Red Sea,
+
+    Across the Nile River'
   isActive: 0
 --- !u!1 &803060493
 GameObject:
@@ -19706,6 +19710,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   container: {fileID: 1119403765}
+  paperText: 'VII. My Tyrian hue
+
+    I kept throughout the land.'
   isActive: 0
 --- !u!1 &810530865
 GameObject:
@@ -26812,6 +26819,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   container: {fileID: 1119403765}
+  paperText: 'V. Beautiful grass,
+
+    Sparkling sand.'
   isActive: 0
 --- !u!1 &1078016375
 GameObject:
@@ -27907,7 +27917,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 1200}
+  m_SizeDelta: {x: 1200, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119403767
 MonoBehaviour:
@@ -27929,7 +27939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0cb3e8015655a334c80001856277ba5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42330,7 +42340,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 1100}
+  m_SizeDelta: {x: 620, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729420140
 MonoBehaviour:
@@ -42379,15 +42389,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 112
-  m_fontSizeBase: 112
+  m_fontSize: 115
+  m_fontSizeBase: 115
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -42404,7 +42414,7 @@ MonoBehaviour:
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_parseCtrlCharacters: 1
+  m_parseCtrlCharacters: 0
   m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
@@ -42415,7 +42425,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 129.62292}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -43591,6 +43601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   container: {fileID: 1119403765}
+  paperText: 'III. Indigo for me,
+
+    My fire has withered.'
   isActive: 0
 --- !u!1 &1772499839
 GameObject:
