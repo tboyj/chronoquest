@@ -8,8 +8,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 0.5f;      // Base movement speed
-    public float runMultiplier = 1.25f; // Sprint multiplier
+    public float moveSpeed = 0.40f;      // Base movement speed
+    public float runMultiplier = 1.15f; // Sprint multiplier
     public float gravity = -0.075f;
 
     [Header("References")]
@@ -40,8 +40,8 @@ public class Movement : MonoBehaviour
 public class PlayerMovement : Movement
 {
     private void Update()
-    {
-        MoveWithForce();
+        {
+            MoveWithForce();
     }
 
     public override void MoveWithForce()
