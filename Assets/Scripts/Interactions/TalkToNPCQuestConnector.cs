@@ -21,7 +21,7 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
     // Update is called once per frame
     void Update()
     {
-        if (!pauseCheck.isInventory && !pauseCheck.isPaused && Input.GetKeyDown(Keybinds.talkKeybind))
+        if (!pauseCheck.isInventory && !pauseCheck.isPaused && Input.GetKeyDown(Keybinds.actionKeybind))
         {
             InteractionFunction();
         }
@@ -46,15 +46,18 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         }
     }
     public void InteractionFunction()
-{
-    if (quest != null && referencePlayer != null)
     {
-        if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+        if (quest != null)
         {
-            Debug.Log("Moves to here.");
-            quest.QuestEventTriggered();
+            if (referencePlayer != null)
+            {
+                if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+                {
+                    Debug.Log("Moves to here.");
+                    quest.QuestEventTriggered();
+                }
+            }
         }
-    }
-}
+    }   
 }
 

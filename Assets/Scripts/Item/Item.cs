@@ -11,6 +11,7 @@ using Image = UnityEngine.UI.Image;
 public class Item
 {
     // Start is called before the first frame update
+    
     public ItemStorable item;
     [Range(0, 9999)]
     public int quantity;

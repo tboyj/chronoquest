@@ -10,22 +10,27 @@ using Image = UnityEngine.UI.Image;
 public class Player : Character, Interaction
 {
     // protected Character player;
-    public ItemStorable itemPaketTest;
-    protected Item heldItem;
-    protected ItemInWorld interactableItem;
-    protected NPC interactableNPC;
-    protected InventoryGUI guiHandler;
+    // Item Handling
+    public ItemStorable itemPaketTest;         // Reference to a storable item package (test or template)
+    protected Item heldItem;                   // Currently held item by the player or NPC
+    public GameObject reciever;         // Component that receives item usage (e.g., doors, NPCs)
 
-    public RectTransform hotbarHolder;
+    // Interaction Targets
+    protected ItemInWorld interactableItem;    // Item in the world that can be interacted with or picked up
+    protected NPC interactableNPC;             // NPC that can be interacted with
 
-    public RectTransform inventoryHolder;
-    private int indexOfInventoryHover { get; set; }
-    
-    private QuestManager manager;
-    public GameObject questPanelContainer;
-    public GameObject containerHiddenDuringDialog;
-    public GameObject dialogPanel;
-    public DialogGUIManager dialogManager;
+    // Inventory UI
+    protected InventoryGUI guiHandler;         // Inventory GUI logic handler
+    public RectTransform hotbarHolder;         // UI container for hotbar slots
+    public RectTransform inventoryHolder;      // UI container for inventory slots
+    private int indexOfInventoryHover { get; set; } // Index of currently hovered inventory slot
+
+    // Quest & Dialog Systems
+    private QuestManager manager;              // Manages active and completed quests
+    public GameObject questPanelContainer;     // UI container for displaying quest panels
+    public GameObject containerHiddenDuringDialog; // UI elements hidden during dialog sequences
+    public GameObject dialogPanel;             // Dialog UI panel
+    public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
@@ -98,17 +103,15 @@ public class Player : Character, Interaction
                 AttemptInteraction();
                 CheckForHotbarInput();
             }
-
-            if (Input.GetKeyDown(Keybinds.giveKeybind) && gameObject.GetComponent<PauseScript>().isPaused == false)
+            if (Input.GetKeyDown(Keybinds.useKeybind))
             {
-                TryDrop();
+                TryToUse();
+                CheckForHotbarInput();
             }
 
-            if (Input.GetKeyDown(Keybinds.talkKeybind) && gameObject.GetComponent<PauseScript>().isPaused == false)
+            if (Input.GetKeyDown(Keybinds.giveKeybind))
             {
-                // Dialog();
-
-                manager.TryToGiveQuest(interactableNPC, dialogManager);
+                TryDrop();
             }
         }
             if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
@@ -150,24 +153,42 @@ public class Player : Character, Interaction
             }
     }
 
-// quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
+    // quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
     private void AttemptInteraction()
     {
+
+
         if (interactableItem != null) // picking up items
         {
             if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
             {
                 Item itemAdded = new Item(interactableItem.itemInWorld, 1);
                 inventory.AddItem(itemAdded);
-                
-                
+
                 inventory.SetRefresh(true);
             }
         }
+        if (interactableNPC != null)
+        {
+            manager.TryToGiveQuest(interactableNPC, dialogManager);
+        }
         // if not recognizing item to pick up, look for npc to interact with
     }
+    private void TryToUse()
+    {
+        if (isHolding)
+        {  
+            if (reciever != null)
+            {
+                heldItem.item.useEffect.Apply(reciever);
+            } else
+            {
+                heldItem.item.useEffect.ApplyAlone();
+            }
+        }
+    }
     private void TryDropForItem() {
-
+    if (heldItem.item != null)
     if (interactableItem.itemInWorld == heldItem.item)
         {
             if (interactableItem.amountOfItemsHere > 0)
@@ -257,6 +278,7 @@ public class Player : Character, Interaction
     {
         if (!manager.CurrentlyInDialog())
         {
+            this.movement.controller.enabled = true;
             animatorSetup.speed = 1;
             movement.MoveWithForce();
             animatorSetup.SetFloat("SpeedX", 1); // Add Z animation to this at a later time.// input.magnitude.
@@ -264,7 +286,7 @@ public class Player : Character, Interaction
         }
         else
         {
-            movement.transform.position = movement.transform.position;
+            this.movement.controller.enabled = false;
             animatorSetup.speed = 0;
         }
     }
@@ -362,16 +384,20 @@ public class Player : Character, Interaction
                 }
             }
         }
-            else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
-            {
+        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+        {
 
-                interactableNPC = other.GetComponent<NPC>();
+            interactableNPC = other.GetComponent<NPC>();
 
-            }
-            else if (other.CompareTag("Teleport"))
-            {
-                this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
-            }
+        }
+        else if (other.CompareTag("Teleport"))
+        {
+            this.movement.controller.enabled = false;
+            this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
+            this.movement.controller.enabled = true;
+        }
+        reciever = other.gameObject;
+        Debug.Log(reciever.name);
     }
 
     void OnTriggerExit(Collider other)
@@ -394,6 +420,7 @@ public class Player : Character, Interaction
                 interactableNPC = null;
             }
         }
+        reciever = null; 
     }
     public Item GetHeldItem()
     {

@@ -9,7 +9,6 @@ public class Inventory : MonoBehaviour
 {
     // Fields
     public List<Item> items;
-    public Item itemEquipped;
     private bool refresh = false;
     // Constructor
     public bool GetRefresh()
