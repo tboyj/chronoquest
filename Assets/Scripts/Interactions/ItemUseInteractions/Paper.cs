@@ -18,12 +18,14 @@ public class Paper : BaseUse
         {
             if (isActive)
             {
-                GetPlayer().movement.enabled = false; // bug can occur where character can go outside the trigger zone, disabling.
+                GetPlayer().isUsingItem = true;
+                // GetPlayer().movement.enabled = false; // bug can occur where character can go outside the trigger zone, disabling.
                 GetPlayer().movement.moveSpeed = 0;
             }
             else
             {
-                GetPlayer().movement.enabled = true;
+                GetPlayer().isUsingItem = false;
+                // GetPlayer().movement.enabled = true;
                 GetPlayer().movement.moveSpeed = 0.40f;
             }
         }

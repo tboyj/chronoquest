@@ -18,7 +18,7 @@ public class Player : Character, Interaction
     // Interaction Targets
     protected ItemInWorld interactableItem;    // Item in the world that can be interacted with or picked up
     protected NPC interactableNPC;             // NPC that can be interacted with
-
+    public bool isUsingItem;
     // Inventory UI
     protected InventoryGUI guiHandler;         // Inventory GUI logic handler
     public RectTransform hotbarHolder;         // UI container for hotbar slots
@@ -31,6 +31,7 @@ public class Player : Character, Interaction
     public GameObject containerHiddenDuringDialog; // UI elements hidden during dialog sequences
     public GameObject dialogPanel;             // Dialog UI panel
     public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
+
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
@@ -276,7 +277,7 @@ public class Player : Character, Interaction
 
     public void FixedUpdate()
     {
-        if (!manager.CurrentlyInDialog())
+        if (!manager.CurrentlyInDialog() && !isUsingItem)
         {
             this.movement.controller.enabled = true;
             animatorSetup.speed = 1;
