@@ -94,7 +94,8 @@ public class ItemInWorld : MonoBehaviour, Interaction
             //OnInteractEvent?.Invoke(referencePlayer);
             if (amountOfItemsHere == 0)
             {
-                rend.enabled = false;
+                if (rend != null)
+                    rend.enabled = false;
                 takeable = false;
 
 
