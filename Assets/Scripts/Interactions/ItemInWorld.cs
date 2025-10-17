@@ -33,7 +33,10 @@ public class ItemInWorld : MonoBehaviour, Interaction
             if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog && !pauseCheck.isInventory && !pauseCheck.isPaused)
             {
                 InteractionFunction();
-                
+                if (gameObject?.GetComponent<ExtraBase>())
+                {
+                    gameObject?.GetComponent<ExtraBase>().Change();
+                }
             }
         }
     }
