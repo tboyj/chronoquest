@@ -5304,7 +5304,7 @@ Transform:
   m_GameObject: {fileID: 160479107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.5, y: 4.26, z: 128}
+  m_LocalPosition: {x: -6.03, y: 4.26, z: 114.95}
   m_LocalScale: {x: 0.32, y: 0.57, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6569,7 +6569,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206703561}
-  - component: {fileID: 206703562}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -6593,33 +6592,6 @@ Transform:
   - {fileID: 1854758788}
   m_Father: {fileID: 1803730266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &206703562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206703560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ebdcbdceb9f50dd4d9e41f5ce6e4a9e6, type: 2}
-  IsCompleted: 0
-  todo:
-  - Go get his water
-  - Return to the Bossman
-  dialogsForQuest:
-  - dialogueText: Now get me water.
-    characterName: Bossman
-  questManager: {fileID: 160479121}
-  relatedQuests: []
-  positionOfQuestGiver: {x: -3.186, y: 4.44, z: 119.1}
-  requiredCount: 1
-  currentCount: 0
-  requiredItem: {fileID: 11400000, guid: a4b87800cc924264d99728fdcb7a63b5, type: 2}
-  isGiveQuestType: 1
 --- !u!1 &207713712
 GameObject:
   m_ObjectHideFlags: 0
@@ -23247,7 +23219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950465420}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
   m_Name: 
