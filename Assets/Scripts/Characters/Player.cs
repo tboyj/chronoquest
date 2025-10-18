@@ -373,7 +373,6 @@ public class Player : Character, Interaction
     // I LOVE HAMBURGERS
     void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("Object"))
         {
             if (other.GetComponent<ItemInWorld>() != null)

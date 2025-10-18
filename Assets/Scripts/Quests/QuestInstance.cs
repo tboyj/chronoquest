@@ -16,7 +16,7 @@ public class QuestInstance : MonoBehaviour
     public QuestManager questManager;
     public List<QuestInstance> relatedQuests;
     public Vector3 positionOfQuestGiver;
-
+    public List<AfterQuestDialog> postQuestList;
     public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
     {
         data = q;

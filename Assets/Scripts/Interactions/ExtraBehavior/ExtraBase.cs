@@ -5,7 +5,7 @@ public abstract class ExtraBase : MonoBehaviour
 {
     // Called when the script instance is being loaded
     public bool inRange = false;
-    private Player player;
+    public Player player;
     // Called before the first frame update
     private void Start()
     {

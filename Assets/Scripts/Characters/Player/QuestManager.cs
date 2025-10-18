@@ -123,7 +123,14 @@ public class QuestManager : MonoBehaviour
                     {
                         GetCurrentQuest().ShowDialog(false);
                         SetCurrentlyInDialog(false);
-                        interactableNPC.inDialog = true;
+                        interactableNPC.inDialog = false;
+                        if (questAssigned != null && questAssigned.postQuestList.Count > 0)
+                        {
+                            foreach (AfterQuestDialog change in questAssigned.postQuestList)
+                            {
+                                change.SetChange();
+                            }
+                        }
                     }
                 }
             }

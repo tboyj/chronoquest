@@ -6,10 +6,12 @@ using UnityEngine;
 public class CorrectOrderOpenScript : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public int idSave;
     public List<GameObject> guessOrder = new List<GameObject>();
     public List<GameObject> answerOrder = new List<GameObject>();
     public QuestToggleItem quest;
-
+    
     public void CheckOrder(GameObject check)
     {
         int i = 0;
@@ -49,7 +51,7 @@ public class CorrectOrderOpenScript : MonoBehaviour
 
     private void OpenDoor()
     {
-        int idSave = 0;
+        
         foreach (GameObject button in answerOrder)
         {
             button.GetComponent<PuzzleLeverActivator>().sprite.color = Color.white;

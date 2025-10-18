@@ -51,7 +51,7 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         {
             if (referencePlayer != null)
             {
-                if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest()?.data.id)
+                if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
                 {
                     Debug.Log("Moves to here.");
                     quest.QuestEventTriggered();
