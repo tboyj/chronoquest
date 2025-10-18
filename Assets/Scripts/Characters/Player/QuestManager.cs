@@ -49,6 +49,10 @@ public class QuestManager : MonoBehaviour
         {
             if (GetCurrentQuest() != null)
             {
+                Debug.Log($"CurrentQuest ID: {GetCurrentQuest()?.GetQuestID()}");
+                Debug.Log($"AssignedQuest ID: {questAssigned?.GetQuestID()}");
+
+
                 if (GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
                 {
                     if (GetCurrentQuest().IsCompleted && !GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
@@ -72,9 +76,14 @@ public class QuestManager : MonoBehaviour
                         }
                         // Specific checks for quest types.
                         QuestForker(questAssigned, interactableNPC);
-                        
-                    
+
+
                         Debug.Log("Good Job");
+                        foreach (AfterQuestDialog change in GetCurrentQuest()?.postQuestList)
+                        {
+                            Debug.Log("Reached.");
+                            change.SetChange();
+                        }
                         SetQuestCompleted(GetCurrentQuest());
                         npcQuestHandler.questsInStock.RemoveAt(0);
                         // throw into dialog gui here.
@@ -97,6 +106,11 @@ public class QuestManager : MonoBehaviour
                 {
                     Debug.Log(questAssigned.CheckConditions());
                     Debug.Log("Conditions are good. Ignore.");
+                    foreach (AfterQuestDialog change in GetCurrentQuest().postQuestList)
+                    {
+                        Debug.Log("Reached.");
+                        change.SetChange();
+                    }
                     SetQuestCompleted(GetCurrentQuest());
                     npcQuestHandler.questsInStock.RemoveAt(0);
                     // Throw here dialog saying good job.
@@ -124,13 +138,7 @@ public class QuestManager : MonoBehaviour
                         GetCurrentQuest().ShowDialog(false);
                         SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = false;
-                        if (questAssigned != null && questAssigned.postQuestList.Count > 0)
-                        {
-                            foreach (AfterQuestDialog change in questAssigned.postQuestList)
-                            {
-                                change.SetChange();
-                            }
-                        }
+
                     }
                 }
             }

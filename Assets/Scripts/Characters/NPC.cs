@@ -16,7 +16,7 @@ public class NPC : Character
     public void Start()
     {
         Initialize("NPC", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
-        movement = gameObject.AddComponent<NPCMovement>();
+        movement = gameObject.GetComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
         Debug.Log(inventory.items.Count);
         if (gameObject.GetComponent<QuestHandler>() != null)

@@ -11,7 +11,7 @@ public class CorrectOrderOpenScript : MonoBehaviour
     public List<GameObject> guessOrder = new List<GameObject>();
     public List<GameObject> answerOrder = new List<GameObject>();
     public QuestToggleItem quest;
-    
+
     public void CheckOrder(GameObject check)
     {
         int i = 0;

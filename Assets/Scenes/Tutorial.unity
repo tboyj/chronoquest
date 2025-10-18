@@ -3285,6 +3285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88321791}
   - component: {fileID: 88321792}
+  - component: {fileID: 88321793}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -3331,11 +3332,26 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: -3.186, y: 4.44, z: 119.1}
-  postQuestList: []
+  postQuestList:
+  - {fileID: 88321793}
   requiredCount: 1
   currentCount: 0
   requiredItem: {fileID: 11400000, guid: a4b87800cc924264d99728fdcb7a63b5, type: 2}
   isGiveQuestType: 1
+--- !u!114 &88321793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88321789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee5e415f8b010145a2aa00b889f597d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 1036772520}
+  desiredStatus: walk
 --- !u!1 &97291411
 GameObject:
   m_ObjectHideFlags: 0
@@ -5411,6 +5427,7 @@ GameObject:
   - component: {fileID: 160479124}
   - component: {fileID: 160479125}
   - component: {fileID: 160479126}
+  - component: {fileID: 160479127}
   m_Layer: 0
   m_Name: RealPlayer
   m_TagString: Player
@@ -5650,6 +5667,26 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &160479127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160479107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b1f8e6d4aa51348825e4985899f469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.45
+  runMultiplier: 1.1
+  gravity: -0.075
+  controller: {fileID: 0}
+  rayholder: {fileID: 0}
+  flip: 0
+  acceleration: 4
+  deceleration: 8
 --- !u!1 &160795167
 GameObject:
   m_ObjectHideFlags: 0
@@ -7526,6 +7563,7 @@ GameObject:
   - component: {fileID: 263861371}
   - component: {fileID: 263861372}
   - component: {fileID: 263861373}
+  - component: {fileID: 263861374}
   m_Layer: 0
   m_Name: NPC_Sarlah
   m_TagString: NPC
@@ -7560,7 +7598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questsInStock:
-  - {fileID: 1916732354}
+  - {fileID: 950465422}
 --- !u!114 &263861365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7721,6 +7759,30 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &263861374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263861359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c066e20626223bf49985484720a32198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.6
+  runMultiplier: 1.15
+  gravity: -0.075
+  controller: {fileID: 0}
+  rayholder: {fileID: 0}
+  flip: 0
+  acceleration: 5
+  deceleration: 7.6
+  status: Idle
+  pathPointContainer: {fileID: 1008602696}
+  pathPoints: []
+  currentNode: {fileID: 0}
 --- !u!1 &264118371
 GameObject:
   m_ObjectHideFlags: 0
@@ -21798,7 +21860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53fe2bbf86f6db4696d732c52a1a8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idSave: 3
+  idSave: 6
   guessOrder: []
   answerOrder:
   - {fileID: 942856812}
@@ -23662,7 +23724,6 @@ GameObject:
   m_Component:
   - component: {fileID: 950465421}
   - component: {fileID: 950465422}
-  - component: {fileID: 950465423}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -23708,23 +23769,9 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
-  postQuestList: []
+  postQuestList:
+  - {fileID: 0}
   toggled: 0
---- !u!114 &950465423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950465420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1714594318c814f469ebe2ce2a264c09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  player: {fileID: 0}
-  questToAdd: {fileID: 1916732354}
 --- !u!1 &956607100
 GameObject:
   m_ObjectHideFlags: 0
@@ -26121,6 +26168,7 @@ GameObject:
   - component: {fileID: 1036772516}
   - component: {fileID: 1036772518}
   - component: {fileID: 1036772519}
+  - component: {fileID: 1036772520}
   m_Layer: 0
   m_Name: NPC_Bossman
   m_TagString: NPC
@@ -26319,6 +26367,30 @@ CharacterController:
   m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1036772520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036772499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c066e20626223bf49985484720a32198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.6
+  runMultiplier: 1.15
+  gravity: -0.075
+  controller: {fileID: 0}
+  rayholder: {fileID: 0}
+  flip: 0
+  acceleration: 5
+  deceleration: 7.6
+  status: Idle
+  pathPointContainer: {fileID: 1008602696}
+  pathPoints: []
+  currentNode: {fileID: 0}
 --- !u!1 &1036818363
 GameObject:
   m_ObjectHideFlags: 0

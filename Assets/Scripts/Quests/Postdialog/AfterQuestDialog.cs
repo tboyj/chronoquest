@@ -1,7 +1,10 @@
 using System;
 using UnityEngine;
 
-public abstract class AfterQuestDialog : MonoBehaviour
+public class AfterQuestDialog : MonoBehaviour
 {
-    public abstract void SetChange();
+    public virtual void SetChange()
+    {
+        
+    }
 }
