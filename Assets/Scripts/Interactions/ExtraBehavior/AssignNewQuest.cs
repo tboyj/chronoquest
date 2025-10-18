@@ -19,7 +19,7 @@ public class AssignNewQuest : ExtraBase
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<QuestManager>().GetCurrentQuest() == null)
+        if (GetComponent<QuestInstance>().IsCompleted)
         {
             Change();
         }

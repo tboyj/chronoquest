@@ -7560,7 +7560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questsInStock:
-  - {fileID: 950465422}
+  - {fileID: 1916732354}
 --- !u!114 &263861365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8642,6 +8642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRange: 0
+  player: {fileID: 0}
   topChestObject: {fileID: 5484222738077837508}
   active: 1
 --- !u!114 &311886404
@@ -21690,7 +21691,6 @@ GameObject:
   - component: {fileID: 873901946}
   - component: {fileID: 873901945}
   - component: {fileID: 873901947}
-  - component: {fileID: 873901948}
   m_Layer: 0
   m_Name: ConditionalChange
   m_TagString: Untagged
@@ -21808,22 +21808,7 @@ MonoBehaviour:
   - {fileID: 1022037764}
   - {fileID: 1522198190}
   - {fileID: 847643217}
-  quest: {fileID: 950465422}
---- !u!114 &873901948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873901943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1714594318c814f469ebe2ce2a264c09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  qm: {fileID: 160479121}
-  questToAdd: {fileID: 1916732354}
+  quest: {fileID: 0}
 --- !u!1 &874236917
 GameObject:
   m_ObjectHideFlags: 0
@@ -23677,6 +23662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950465421}
   - component: {fileID: 950465422}
+  - component: {fileID: 950465423}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -23724,6 +23710,21 @@ MonoBehaviour:
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
   postQuestList: []
   toggled: 0
+--- !u!114 &950465423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950465420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1714594318c814f469ebe2ce2a264c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inRange: 0
+  player: {fileID: 0}
+  questToAdd: {fileID: 1916732354}
 --- !u!1 &956607100
 GameObject:
   m_ObjectHideFlags: 0
@@ -46970,6 +46971,8 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: I bet Bossman will like this...
     characterName: Jim
+  - dialogueText: I bet Bossman will like this...
+    characterName: wqd
   questManager: {fileID: 0}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
