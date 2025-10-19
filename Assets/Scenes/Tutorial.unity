@@ -8705,6 +8705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   player: {fileID: 0}
+  qm: {fileID: 0}
   topChestObject: {fileID: 5484222738077837508}
   active: 1
 --- !u!114 &311886404
@@ -8726,7 +8727,7 @@ MonoBehaviour:
   referencePlayer: {fileID: 0}
   quest: {fileID: 1916732354}
   pauseCheck: {fileID: 160479111}
-  questRequired: 0
+  questRequired: 1
 --- !u!135 &311886405
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21753,6 +21754,8 @@ GameObject:
   - component: {fileID: 873901946}
   - component: {fileID: 873901945}
   - component: {fileID: 873901947}
+  - component: {fileID: 873901949}
+  - component: {fileID: 873901948}
   m_Layer: 0
   m_Name: ConditionalChange
   m_TagString: Untagged
@@ -21871,6 +21874,35 @@ MonoBehaviour:
   - {fileID: 1522198190}
   - {fileID: 847643217}
   quest: {fileID: 0}
+--- !u!114 &873901948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873901943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eb6b4e9b0635c448c6e8a09f45389d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questsInStock:
+  - {fileID: 1916732354}
+--- !u!114 &873901949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873901943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1714594318c814f469ebe2ce2a264c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inRange: 0
+  player: {fileID: 160479110}
+  qm: {fileID: 160479121}
 --- !u!1 &874236917
 GameObject:
   m_ObjectHideFlags: 0
@@ -47016,7 +47048,7 @@ Transform:
   m_GameObject: {fileID: 1916732352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7333333, y: 0.106666565, z: 1.3933309}
+  m_LocalPosition: {x: 0.04, y: 0.011, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47045,13 +47077,13 @@ MonoBehaviour:
     characterName: Jim
   - dialogueText: I bet Bossman will like this...
     characterName: wqd
-  questManager: {fileID: 0}
+  questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
   postQuestList: []
   requiredCount: 1
   currentCount: 0
-  requiredItem: {fileID: 11400000, guid: b7dfb157fa47a344ab8e31bab973ba05, type: 2}
+  requiredItem: {fileID: 0}
   isGiveQuestType: 0
 --- !u!1001 &1917020475
 PrefabInstance:

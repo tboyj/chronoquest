@@ -30,6 +30,10 @@ public class CorrectOrderOpenScript : MonoBehaviour
             }
             if (ableToOpen)
                 OpenDoor();
+                if (gameObject.GetComponent<ExtraBase>() != null) // activate extra behavior if there is any
+                {
+                    gameObject.GetComponent<ExtraBase>().Change();
+                }
             else
                 ResetGuess();
             

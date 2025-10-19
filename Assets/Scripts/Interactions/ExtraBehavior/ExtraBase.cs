@@ -6,10 +6,12 @@ public abstract class ExtraBase : MonoBehaviour
     // Called when the script instance is being loaded
     public bool inRange = false;
     public Player player;
+    public QuestManager qm;
     // Called before the first frame update
     private void Start()
     {
         // Setup code here
+        qm = player.gameObject.GetComponent<QuestManager>();
     }
     private void Update()
     {

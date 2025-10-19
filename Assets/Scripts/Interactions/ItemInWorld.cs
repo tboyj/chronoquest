@@ -76,23 +76,18 @@ public class ItemInWorld : MonoBehaviour, Interaction
         if (takeable)
         {
             amountOfItemsHere--;
-            if (questRequired)
-            {
-                if (quest != null)
-                    quest.QuestEventTriggered();
-                else
-                {
-                    Debug.LogWarning("No quest found for this interaction.");
-                }
+
+            if (quest != null) { 
+                quest.QuestEventTriggered();
             }
             else
             {
-                //referencePlayer.GetComponent<Inventory>().AddItem(new Item(itemInWorld, 1));
+                Debug.LogWarning("No quest found for this interaction.");
             }
 
             // causes error
             //OnInteractEvent?.Invoke(referencePlayer);
-            if (amountOfItemsHere == 0)
+            if (amountOfItemsHere <= 0)
             {
                 if (rend != null)
                     rend.enabled = false;

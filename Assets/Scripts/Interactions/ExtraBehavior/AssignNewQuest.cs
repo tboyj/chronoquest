@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class AssignNewQuest : ExtraBase
 {
-    public QuestInstance questToAdd;
+    QuestHandler qh;
     public override void Change()
-    { // Check check :)s
-        player.GetComponent<QuestManager>().AddQuestToList(questToAdd);
+    { // Check check :)s\
+        Debug.Log("Changing right now... Dattebayo!");
+        if (qh.GetQuestList().Count > 0 && qm.GetCurrentQuest() != null)
+        {
+            qm.SetQuestCompleted(qm.GetCurrentQuest());
+            qm.AddQuestToList(qh.GetMostRecentQuest());
+            Debug.Log("skull emoji");
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        qh = gameObject.GetComponent<QuestHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<QuestInstance>().IsCompleted)
-        {
-            Change();
-        }
+
     }
 }

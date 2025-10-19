@@ -20,6 +20,7 @@ public class QuestCollectItem : QuestInstance, IQuestAction
     public override void QuestEventTriggered()
     {
         currentCount++;
+        Debug.Log("Current:" + questManager.GetCurrentQuest().data.id + "This:" + data.id);
         if (questManager.GetCurrentQuest().data.id == data.id)
         {
             questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
