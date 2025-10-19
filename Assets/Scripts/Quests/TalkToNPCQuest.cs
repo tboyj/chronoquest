@@ -38,7 +38,7 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
     {
         Debug.Log(this.name);
         Debug.Log(questManager.name);
-        if (questManager.GetCurrentQuest() != null)
+        if (questManager.GetCurrentQuest() != null && questAssignerNPC.questHandler.GetMostRecentQuest() != null)
         {
             if (questManager.GetCurrentQuest().data.id == questAssignerNPC.questHandler.GetMostRecentQuest().data.id)
             {

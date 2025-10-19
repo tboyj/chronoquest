@@ -12,7 +12,7 @@ public class ItemStorable : ScriptableObject
 {
     public GameObject prefab;
     public ItemCategory category;
-    public ItemUseEffect useEffect;
+    public ItemUseEffect useConnector;
     public Sprite sprite;
     public string itemName;
     public int id;

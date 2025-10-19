@@ -27,7 +27,7 @@ public class PauseScript : MonoBehaviour
         {
             activatePause();
         }
-        else if (Input.GetKeyDown(Keybinds.inventoryKeybind))
+        else if (Input.GetKeyDown(Keybinds.inventoryKeybind) && gameObject.GetComponent<Player>().GetInventoryPermission())
         {
             activateInventory();
         }

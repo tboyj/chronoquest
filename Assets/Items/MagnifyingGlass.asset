@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2961246136862446188, guid: 37f75017b34e9e844b2ac2a8b1256751, type: 3}
   category: 3
-  useEffect: {fileID: 11400000, guid: a7e8e28ee54e4a148a296671943ff2e8, type: 2}
+  useConnector: {fileID: 11400000, guid: a7e8e28ee54e4a148a296671943ff2e8, type: 2}
   sprite: {fileID: 21300000, guid: c897f71cfe2b78743a0b689e8aff0de2, type: 3}
   itemName: Jim's Magnifying Glass
   id: 0

@@ -32,10 +32,13 @@ public class Player : Character, Interaction
     public GameObject dialogPanel;             // Dialog UI panel
     public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
 
+    private bool inventoryInteractionPermission;
+
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
         Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+        inventoryInteractionPermission = true;
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();
@@ -181,10 +184,10 @@ public class Player : Character, Interaction
         {  
             if (reciever != null)
             {
-                heldItem.item.useEffect.Apply(reciever);
+                heldItem.item.useConnector.Apply(reciever);
             } else
             {
-                heldItem.item.useEffect.ApplyAlone();
+                heldItem.item.useConnector.ApplyAlone();
             }
         }
     }
@@ -217,7 +220,7 @@ public class Player : Character, Interaction
 
     private void CheckForHotbarInput()
     {
-        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
+        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0 && inventoryInteractionPermission)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -438,6 +441,15 @@ public class Player : Character, Interaction
     public void InteractionFunction()
     {
     
+    }
+
+    public void SetInventoryPermission(bool v)
+    {
+        inventoryInteractionPermission = v;
+    }
+    public bool GetInventoryPermission()
+    {
+        return inventoryInteractionPermission;
     }
 }
 

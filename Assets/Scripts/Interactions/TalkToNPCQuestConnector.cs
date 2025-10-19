@@ -58,7 +58,8 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
                 }
                 else
                 {
-                    Debug.Log("Null / inequal id. Please check both.");
+                    
+                    Debug.Log("Null / inequal id. Please check both. "+quest.data.id +":"+referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id);
                 }
             }
         }
