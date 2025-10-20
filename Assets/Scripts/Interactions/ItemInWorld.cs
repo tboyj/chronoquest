@@ -17,6 +17,7 @@ public class ItemInWorld : MonoBehaviour, Interaction
     public QuestCollectItem quest;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
+    public bool questRequired;
     //public UnityEvent<GameObject> OnInteractEvent;
     void Start()
     {
@@ -32,7 +33,10 @@ public class ItemInWorld : MonoBehaviour, Interaction
             if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog && !pauseCheck.isInventory && !pauseCheck.isPaused)
             {
                 InteractionFunction();
-                
+                if (gameObject?.GetComponent<ExtraBase>())
+                {
+                    gameObject?.GetComponent<ExtraBase>().Change();
+                }
             }
         }
     }
@@ -72,14 +76,21 @@ public class ItemInWorld : MonoBehaviour, Interaction
         if (takeable)
         {
             amountOfItemsHere--;
-            if (quest != null)
+
+            if (quest != null) { 
                 quest.QuestEventTriggered();
+            }
             else
-                Debug.LogWarning("No quest found for this interaction."); // causes error
-            //OnInteractEvent?.Invoke(referencePlayer);
-            if (amountOfItemsHere == 0)
             {
-                rend.enabled = false;
+                Debug.LogWarning("No quest found for this interaction.");
+            }
+
+            // causes error
+            //OnInteractEvent?.Invoke(referencePlayer);
+            if (amountOfItemsHere <= 0)
+            {
+                if (rend != null)
+                    rend.enabled = false;
                 takeable = false;
 
 

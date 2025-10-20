@@ -40,5 +40,6 @@ public abstract class Character : MonoBehaviour
             inventory.AddToList(new Item(null, 1));
         }
     }
+    
 }
 

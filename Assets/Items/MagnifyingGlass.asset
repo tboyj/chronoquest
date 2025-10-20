@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5402f46aa682b4d8e1c1d5d79c2559, type: 3}
+  m_Name: MagnifyingGlass
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2961246136862446188, guid: 37f75017b34e9e844b2ac2a8b1256751, type: 3}
+  category: 3
+  useConnector: {fileID: 11400000, guid: a7e8e28ee54e4a148a296671943ff2e8, type: 2}
+  sprite: {fileID: 21300000, guid: c897f71cfe2b78743a0b689e8aff0de2, type: 3}
+  itemName: Jim's Magnifying Glass
+  id: 0
+  maxStackSize: 1
+  stackable: 1
+  rarity: 5
+  description: This is Jim's magnifying glass. Press Q near something that needs
+    a closer look.
+  canBeTaken: 0
+  canBeGiven: 0

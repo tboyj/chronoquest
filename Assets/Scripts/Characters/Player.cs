@@ -10,26 +10,35 @@ using Image = UnityEngine.UI.Image;
 public class Player : Character, Interaction
 {
     // protected Character player;
-    public ItemStorable itemPaketTest;
-    protected Item heldItem;
-    protected ItemInWorld interactableItem;
-    protected NPC interactableNPC;
-    protected InventoryGUI guiHandler;
+    // Item Handling
+    public ItemStorable itemPaketTest;         // Reference to a storable item package (test or template)
+    protected Item heldItem;                   // Currently held item by the player or NPC
+    public GameObject reciever;         // Component that receives item usage (e.g., doors, NPCs)
 
-    public RectTransform hotbarHolder;
+    // Interaction Targets
+    protected ItemInWorld interactableItem;    // Item in the world that can be interacted with or picked up
+    protected NPC interactableNPC;             // NPC that can be interacted with
+    public bool isUsingItem;
+    // Inventory UI
+    protected InventoryGUI guiHandler;         // Inventory GUI logic handler
+    public RectTransform hotbarHolder;         // UI container for hotbar slots
+    public RectTransform inventoryHolder;      // UI container for inventory slots
+    private int indexOfInventoryHover { get; set; } // Index of currently hovered inventory slot
 
-    public RectTransform inventoryHolder;
-    private int indexOfInventoryHover { get; set; }
-    
-    private QuestManager manager;
-    public GameObject questPanelContainer;
-    public GameObject containerHiddenDuringDialog;
-    public GameObject dialogPanel;
-    public DialogGUIManager dialogManager;
+    // Quest & Dialog Systems
+    private QuestManager manager;              // Manages active and completed quests
+    public GameObject questPanelContainer;     // UI container for displaying quest panels
+    public GameObject containerHiddenDuringDialog; // UI elements hidden during dialog sequences
+    public GameObject dialogPanel;             // Dialog UI panel
+    public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
+
+    private bool inventoryInteractionPermission;
+
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
         Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+        inventoryInteractionPermission = true;
         movement = gameObject.AddComponent<PlayerMovement>();
         InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();
@@ -98,27 +107,26 @@ public class Player : Character, Interaction
                 AttemptInteraction();
                 CheckForHotbarInput();
             }
-
-            if (Input.GetKeyDown(Keybinds.giveKeybind) && gameObject.GetComponent<PauseScript>().isPaused == false)
+            if (Input.GetKeyDown(Keybinds.useKeybind))
             {
-                TryDrop();
+                TryToUse();
+                CheckForHotbarInput();
             }
 
-            if (Input.GetKeyDown(Keybinds.talkKeybind) && gameObject.GetComponent<PauseScript>().isPaused == false)
+            if (Input.GetKeyDown(Keybinds.giveKeybind))
             {
-                // Dialog();
-
-                manager.TryToGiveQuest(interactableNPC, dialogManager);
+                TryDrop();
             }
         }
             if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
             { // bummy boy code o-o
-                if (interactableNPC != null)
+            if (interactableNPC != null)
+            {
+                Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
+                Debug.Log(manager.GetCurrentQuest());
+                if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
                 {
-                    Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
-                    Debug.Log(manager.GetCurrentQuest());
-                    if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
-                    {
+                    var currentQuest = manager.GetCurrentQuest();
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {
                         Debug.Log("Count is > 1.");
@@ -128,46 +136,67 @@ public class Player : Character, Interaction
                         dialogManager.SetCharName(manager.GetCurrentQuest().dialogsForQuest[0].characterName);
                         dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
+
                     else if (manager.GetCurrentQuest().dialogsForQuest.Count == 1)
                     {
                         Debug.Log("Count is 1.");
-                        manager.GetCurrentQuest().ShowDialog(false);
+                        currentQuest.ShowDialog(false);
                         manager.SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = false;
-                        manager.GetCurrentQuest().DialogAdvance();
+                        currentQuest.DialogAdvance();
+                        manager.ChangeFunction();
                     }
-                        //manager.GetCurrentQuest().ShowDialog(true);
-                    }
-                    else
-                    {
-                        Debug.Log("Wrong Character!!!");
-                    }
+                    //manager.GetCurrentQuest().ShowDialog(true);
                 }
                 else
                 {
-                    Debug.Log("No Character Found!!!");
+                    Debug.Log("Wrong Character!!!");
                 }
             }
+
+            else
+            {
+                Debug.Log("No Character Found!!!");
+            }
+        }
     }
 
-// quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
+    // quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
     private void AttemptInteraction()
     {
+
+
         if (interactableItem != null) // picking up items
         {
             if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
             {
                 Item itemAdded = new Item(interactableItem.itemInWorld, 1);
                 inventory.AddItem(itemAdded);
-                
-                
+
                 inventory.SetRefresh(true);
             }
         }
+        if (interactableNPC != null)
+        {
+            manager.TryToGiveQuest(interactableNPC, dialogManager);
+        }
         // if not recognizing item to pick up, look for npc to interact with
     }
+    private void TryToUse()
+    {
+        if (isHolding)
+        {  
+            if (reciever != null)
+            {
+                heldItem.item.useConnector.Apply(reciever);
+            } else
+            {
+                heldItem.item.useConnector.ApplyAlone();
+            }
+        }
+    }
     private void TryDropForItem() {
-
+    if (heldItem.item != null)
     if (interactableItem.itemInWorld == heldItem.item)
         {
             if (interactableItem.amountOfItemsHere > 0)
@@ -195,7 +224,7 @@ public class Player : Character, Interaction
 
     private void CheckForHotbarInput()
     {
-        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0)
+        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0 && inventoryInteractionPermission)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -255,15 +284,17 @@ public class Player : Character, Interaction
 
     public void FixedUpdate()
     {
-        if (!manager.CurrentlyInDialog())
+        if (!manager.CurrentlyInDialog() && !isUsingItem)
         {
+            this.movement.controller.enabled = true;
             animatorSetup.speed = 1;
             movement.MoveWithForce();
-            animatorSetup.SetFloat("SpeedX", Math.Abs(movement.rb.velocity.x)); // Add Z animation to this at a later time.
+            animatorSetup.SetFloat("SpeedX", 1); // Add Z animation to this at a later time.// input.magnitude.
             spriteRenderer.flipX = movement.flip;
         }
         else
         {
+            this.movement.controller.enabled = false;
             animatorSetup.speed = 0;
         }
     }
@@ -349,7 +380,6 @@ public class Player : Character, Interaction
     // I LOVE HAMBURGERS
     void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("Object"))
         {
             if (other.GetComponent<ItemInWorld>() != null)
@@ -361,16 +391,19 @@ public class Player : Character, Interaction
                 }
             }
         }
-            else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
-            {
+        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+        {
 
-                interactableNPC = other.GetComponent<NPC>();
+            interactableNPC = other.GetComponent<NPC>();
 
-            }
-            else if (other.CompareTag("Teleport"))
-            {
-                this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
-            }
+        }
+        else if (other.CompareTag("Teleport"))
+        {
+            other.GetComponent<TeleportScript>()?.Teleport(this.gameObject);
+        }
+
+        reciever = other.gameObject;
+        Debug.Log(reciever.name);
     }
 
     void OnTriggerExit(Collider other)
@@ -393,6 +426,7 @@ public class Player : Character, Interaction
                 interactableNPC = null;
             }
         }
+        reciever = null; 
     }
     public Item GetHeldItem()
     {
@@ -410,6 +444,15 @@ public class Player : Character, Interaction
     public void InteractionFunction()
     {
     
+    }
+
+    public void SetInventoryPermission(bool v)
+    {
+        inventoryInteractionPermission = v;
+    }
+    public bool GetInventoryPermission()
+    {
+        return inventoryInteractionPermission;
     }
 }
 

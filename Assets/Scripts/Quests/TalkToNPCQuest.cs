@@ -38,7 +38,7 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
     {
         Debug.Log(this.name);
         Debug.Log(questManager.name);
-        if (questManager.GetCurrentQuest() != null)
+        if (questManager.GetCurrentQuest() != null && questAssignerNPC.questHandler.GetMostRecentQuest() != null)
         {
             if (questManager.GetCurrentQuest().data.id == questAssignerNPC.questHandler.GetMostRecentQuest().data.id)
             {
@@ -46,10 +46,9 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
                 Debug.Log(questManager.GetCurrentQuest());
                 if (npc.GetInRange())
                 {
-                    questManager.SetQuestCompleted(questAssignerNPC.questHandler.GetMostRecentQuest());
+                    questManager.SetQuestCompleted(questManager.GetCurrentQuest());
                     questAssignerNPC.questHandler.questsInStock.RemoveAt(0);
                     questManager.TryToGiveQuest(npc, questManager.gameObject.GetComponent<Player>().dialogManager);
-                    Debug.Log("T");
                     return true;
                 }
             }

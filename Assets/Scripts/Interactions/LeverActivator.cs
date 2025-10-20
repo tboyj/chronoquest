@@ -30,14 +30,20 @@ public class LeverActivator : MonoBehaviour, Interaction
         //     // Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
         // }
         if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind)  && !pauseCheck.isInventory && !pauseCheck.isPaused
-         && quest != null && !inDialog && firstTime)
+        && !inDialog)
         {
             toggled = !toggled;
-            quest.toggled = toggled;
-            Debug.Log(quest.toggled + " Hello America, You have a q- q- q- quest!");
-            quest.QuestEventTriggered();
+            if (quest != null)
+            {
+                quest.toggled = toggled;
+                Debug.Log(quest.toggled + " Hello America, You have a q- q- q- quest!");
+                quest.QuestEventTriggered();
+            }
             LeverCheck();
-            firstTime = false;
+            if (firstTime)
+            {
+                firstTime = false;
+            }
         }
         else if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && quest == null)
         {
@@ -53,13 +59,13 @@ public class LeverActivator : MonoBehaviour, Interaction
         {
             Debug.Log("Gate opening...");
             sprite.color = Color.red;
-            affectedObject.position = new Vector3(affectedObject.position.x, (affectedObject.position.y + 3), affectedObject.position.z); //Vector3.up * 3;
+            affectedObject.position = new Vector3(affectedObject.position.x, (affectedObject.position.y - 3), affectedObject.position.z); //Vector3.up * 3;
         }
         else
         {
             Debug.Log("Gate closing...");
             sprite.color = Color.green;
-            affectedObject.position = new Vector3(affectedObject.position.x, (affectedObject.position.y - 3), affectedObject.position.z);
+            affectedObject.position = new Vector3(affectedObject.position.x, (affectedObject.position.y + 3), affectedObject.position.z);
         }
         // +5 on each as a shift up since the baseplate is set at 5
     }

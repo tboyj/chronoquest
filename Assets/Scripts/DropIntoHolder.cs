@@ -34,7 +34,7 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     void Update()
     {
 
-
+        // do checks on if you can do this within something idk.
         if (isHovered && slotIndex >= 4)
         {
             player.SetIndexOfInventoryHover(slotIndex);
