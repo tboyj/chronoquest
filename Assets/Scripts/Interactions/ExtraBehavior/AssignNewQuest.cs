@@ -10,6 +10,7 @@ public class AssignNewQuest : ExtraBase
         Debug.Log("Changing right now... Dattebayo!");
         if (qh.GetQuestList().Count > 0 && qm.GetCurrentQuest() != null)
         {
+            qm.GetCurrentQuest().IsCompleted = true;
             qm.SetQuestCompleted(qm.GetCurrentQuest());
             qm.AddQuestToList(qh.GetMostRecentQuest());
             Debug.Log("skull emoji");

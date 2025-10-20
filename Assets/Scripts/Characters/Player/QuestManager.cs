@@ -55,7 +55,7 @@ public class QuestManager : MonoBehaviour
 
                 if (GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
                 {
-                    if (GetCurrentQuest().IsCompleted && !GetCurrentQuest().IsCompleted) // make sure he doesn't have it already;
+                    if (GetCurrentQuest().IsCompleted == false) // make sure he doesn't have it already;
                     { // quest is assigned but not done.
                         Debug.Log("Not complete.");
                     }
@@ -79,11 +79,12 @@ public class QuestManager : MonoBehaviour
 
 
                         Debug.Log("Good Job");
-                        foreach (AfterQuestDialog change in GetCurrentQuest()?.postQuestList)
+                        if (GetCurrentQuest().postQuestList.Count > 0)
                         {
-                            Debug.Log("Reached.");
-                            change.SetChange();
+                            Debug.Log(GetCurrentQuest().data.name);
                         }
+                        // redundancy, might want to fix later.
+
                         SetQuestCompleted(GetCurrentQuest());
                         npcQuestHandler.questsInStock.RemoveAt(0);
                         // throw into dialog gui here.
@@ -106,11 +107,6 @@ public class QuestManager : MonoBehaviour
                 {
                     Debug.Log(questAssigned.CheckConditions());
                     Debug.Log("Conditions are good. Ignore.");
-                    foreach (AfterQuestDialog change in GetCurrentQuest().postQuestList)
-                    {
-                        Debug.Log("Reached.");
-                        change.SetChange();
-                    }
                     SetQuestCompleted(GetCurrentQuest());
                     npcQuestHandler.questsInStock.RemoveAt(0);
                     // Throw here dialog saying good job.
@@ -138,7 +134,6 @@ public class QuestManager : MonoBehaviour
                         GetCurrentQuest().ShowDialog(false);
                         SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = false;
-
                     }
                 }
             }
@@ -152,8 +147,8 @@ public class QuestManager : MonoBehaviour
                 {
                     Debug.Log("Quest Assigned in NPC: " + questAssigned.data.id + " Actual: " + GetCurrentQuest().data.id);
                 }
-                    Debug.Log("Can't assign Quest, One in progress already.");
-                    // hint sys goes here
+                Debug.Log("Can't assign Quest, One in progress already.");
+                // hint sys goes here
                 // }
             }
 
@@ -169,6 +164,27 @@ public class QuestManager : MonoBehaviour
             Debug.Log("do a general dialogue");
         }
     }
+    
+    public void ChangeFunction()
+    {
+        if (GetCurrentQuest()?.postQuestList == null)
+        {
+            Debug.LogWarning("postQuestList is null!");
+            return;
+        }
+        else
+        {
+            foreach (AfterQuestDialog change in GetCurrentQuest().postQuestList)
+            {
+                Debug.Log($"Assigning {change.GetType()} to quest {GetCurrentQuest().gameObject.GetInstanceID()}");
+                Debug.Log($"Type: {change.GetType()}");
+
+                change.SetChange();
+            }
+
+        }
+    }
+
     /** QUEST FORKER - DEFINES QUEST HANDLING BEFORE THEY GO INTO THEIR FINAL SCRIPT CHECKS.
         put in functions later. (or a script)
     **/
@@ -208,11 +224,8 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
-        if (questAssigned is TalkToNPCQuest) // Testing as of 10-7-2025, 2.24 pm
-        {
             // TALKTONPCQUEST
             questAssigned.QuestEventTriggered();
-        }
         
     }
 }

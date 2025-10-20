@@ -16,7 +16,8 @@ public class QuestInstance : MonoBehaviour
     public QuestManager questManager;
     public List<QuestInstance> relatedQuests;
     public Vector3 positionOfQuestGiver;
-    public List<AfterQuestDialog> postQuestList = new List<AfterQuestDialog>();
+    [SerializeReference]
+    public List<AfterQuestDialog> postQuestList;
     public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
     {
         data = q;
@@ -36,7 +37,6 @@ public class QuestInstance : MonoBehaviour
         {
             if (questManager.GetCurrentQuest() != null)
             {
-
                 // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
                 if (questManager.GetCurrentQuest().data.id < data.id) // checks if the current quest is before this quest in the quest line
                 {

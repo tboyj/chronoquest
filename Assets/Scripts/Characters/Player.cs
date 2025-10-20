@@ -120,12 +120,13 @@ public class Player : Character, Interaction
         }
             if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
             { // bummy boy code o-o
-                if (interactableNPC != null)
+            if (interactableNPC != null)
+            {
+                Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
+                Debug.Log(manager.GetCurrentQuest());
+                if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
                 {
-                    Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
-                    Debug.Log(manager.GetCurrentQuest());
-                    if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
-                    {
+                    var currentQuest = manager.GetCurrentQuest();
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {
                         Debug.Log("Count is > 1.");
@@ -135,26 +136,29 @@ public class Player : Character, Interaction
                         dialogManager.SetCharName(manager.GetCurrentQuest().dialogsForQuest[0].characterName);
                         dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
+
                     else if (manager.GetCurrentQuest().dialogsForQuest.Count == 1)
                     {
                         Debug.Log("Count is 1.");
-                        manager.GetCurrentQuest().ShowDialog(false);
+                        currentQuest.ShowDialog(false);
                         manager.SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = false;
-                        manager.GetCurrentQuest().DialogAdvance();
+                        currentQuest.DialogAdvance();
+                        manager.ChangeFunction();
                     }
-                        //manager.GetCurrentQuest().ShowDialog(true);
-                    }
-                    else
-                    {
-                        Debug.Log("Wrong Character!!!");
-                    }
+                    //manager.GetCurrentQuest().ShowDialog(true);
                 }
                 else
                 {
-                    Debug.Log("No Character Found!!!");
+                    Debug.Log("Wrong Character!!!");
                 }
             }
+
+            else
+            {
+                Debug.Log("No Character Found!!!");
+            }
+        }
     }
 
     // quest system will be one at a time. linear story. i cant produce a branching story narrative in 3 months :PPPPP
@@ -395,10 +399,9 @@ public class Player : Character, Interaction
         }
         else if (other.CompareTag("Teleport"))
         {
-            this.movement.controller.enabled = false;
-            this.transform.position = other.GetComponent<TeleportScript>().teleportToPosition;
-            this.movement.controller.enabled = true;
+            other.GetComponent<TeleportScript>()?.Teleport(this.gameObject);
         }
+
         reciever = other.gameObject;
         Debug.Log(reciever.name);
     }
