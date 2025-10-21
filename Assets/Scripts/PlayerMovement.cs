@@ -20,7 +20,11 @@ public class PlayerMovement : Movement
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
-            Vector3 move = transform.right * x + transform.forward * z;
+            // Clamp input to prevent diagonal speed boost
+            Vector3 rawInput = new Vector3(x, 0, z);
+            rawInput = Vector3.ClampMagnitude(rawInput, 1f); // ensures max magnitude is 1
+
+            Vector3 move = transform.right * rawInput.x + transform.forward * rawInput.z;
 
             float speed = moveSpeed;
             if (Input.GetKey(KeyCode.LeftShift))
@@ -29,10 +33,8 @@ public class PlayerMovement : Movement
             controller.Move(move * speed * Time.deltaTime);
 
             // Smooth acceleration/deceleration
-            Vector3 input = new Vector3(x, 0, z);
-            input = transform.TransformDirection(input).normalized;
-
-            if (input.magnitude > 0.01f)
+            Vector3 input = transform.TransformDirection(rawInput); // already clamped
+            if (rawInput.magnitude > 0.01f)
             {
                 velocity = Vector3.Lerp(velocity, input * moveSpeed, acceleration * Time.deltaTime);
             }
