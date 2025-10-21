@@ -20,7 +20,7 @@ public abstract class Movement : MonoBehaviour
     public bool flip;
 
     public float acceleration = 5f;   // How fast you gain speed
-    public float deceleration = 7.6f; // How fast you slow down
+    public float deceleration = 6.5f; // How fast you slow down
 
     protected virtual void Awake()
     {
