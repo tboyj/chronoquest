@@ -165,7 +165,7 @@ public class Player : Character, Interaction
     private void AttemptInteraction()
     {
 
-
+        
         if (interactableItem != null) // picking up items
         {
             if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)

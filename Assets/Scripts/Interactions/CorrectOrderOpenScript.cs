@@ -29,13 +29,18 @@ public class CorrectOrderOpenScript : MonoBehaviour
                 i++;
             }
             if (ableToOpen)
+            {
                 OpenDoor();
                 if (gameObject.GetComponent<ExtraBase>() != null) // activate extra behavior if there is any
                 {
                     gameObject.GetComponent<ExtraBase>().Change();
                 }
-            else
+                else
+                    ResetGuess();
+            } else
+            {
                 ResetGuess();
+            }
             
         }
     }
@@ -64,10 +69,10 @@ public class CorrectOrderOpenScript : MonoBehaviour
                 idSave = button.GetComponent<PuzzleLeverActivator>().playerQuest.data.id;
         }
         gameObject.transform.position = new Vector3(transform.position.x, (transform.position.y - 3), transform.position.z);
-        if (quest != null && idSave == quest.data.id)
-        {
-            quest.QuestEventTriggered();
-        }
+        // if (quest != null && idSave == quest.data.id)
+        // {
+        quest.QuestEventTriggered();
+        // }
     }
 
     void Start()

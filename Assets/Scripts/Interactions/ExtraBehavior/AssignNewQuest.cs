@@ -24,12 +24,4 @@ public class AssignNewQuest : ExtraBase
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(Keybinds.actionKeybind) && !player.gameObject.GetComponent<PauseScript>().isPaused &&
-        !player.gameObject.GetComponent<PauseScript>().isInventory && inRange)
-        {
-            Change(); // attempts to change.
-        }
-    }
 }
