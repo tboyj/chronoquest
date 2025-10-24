@@ -12,7 +12,9 @@ public class NPC : Character
     private bool inRange = false;
     private Inventory playerInventory;
     public QuestHandler questHandler;
-
+    [Header("NPC AI Systems")]
+    [Range(0,100)]
+    public int trust = 50;
     public void Start()
     {
         Initialize("NPC", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, false, null);

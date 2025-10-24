@@ -286,7 +286,7 @@ public class Player : Character, Interaction
     {
         if (!manager.CurrentlyInDialog() && !isUsingItem)
         {
-            this.movement.controller.enabled = true;
+            movement.controller.enabled = true;
             animatorSetup.speed = 1;
             movement.MoveWithForce();
             animatorSetup.SetFloat("SpeedX", 1); // Add Z animation to this at a later time.// input.magnitude.
@@ -294,7 +294,7 @@ public class Player : Character, Interaction
         }
         else
         {
-            this.movement.controller.enabled = false;
+            movement.controller.enabled = false;
             animatorSetup.speed = 0;
         }
     }
@@ -399,7 +399,7 @@ public class Player : Character, Interaction
         }
         else if (other.CompareTag("Teleport"))
         {
-            other.GetComponent<TeleportScript>()?.Teleport(this.gameObject);
+            other.GetComponent<TeleportScript>()?.Teleport(gameObject);
         }
 
         reciever = other.gameObject;

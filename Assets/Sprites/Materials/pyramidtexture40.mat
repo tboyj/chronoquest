@@ -75,7 +75,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 0.507
     - _Parallax: 0.08
-    - _PixelSize: 32
+    - _PixelSize: 16
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1

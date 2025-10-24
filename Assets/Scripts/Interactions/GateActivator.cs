@@ -9,6 +9,10 @@ public class GateActivator : MonoBehaviour, Interaction
     [Range(0.5f, float.MaxValue)]
     public float duration = 1f;
     public bool playerInTrigger = false;
+    public QuestInstance instanceToWaitFor;
+    public QuestInstance instanceFromPlayer;
+    [SerializeField]
+    private bool questRequired;
     public Transform affectedObject;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
@@ -23,7 +27,17 @@ public class GateActivator : MonoBehaviour, Interaction
     {
         if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn && !inDialog  && !pauseCheck.isInventory && !pauseCheck.isPaused)
         {
-            InteractionFunction();
+            if (questRequired)
+            {
+                if (instanceToWaitFor != null && instanceFromPlayer != null)
+                {
+                    if (instanceToWaitFor.data.id == instanceFromPlayer.data.id)
+                        InteractionFunction();
+                }
+            } else
+            {
+                InteractionFunction();
+            }
         }
     }
     public void InteractionFunction() // Add logic here
@@ -59,13 +73,22 @@ public class GateActivator : MonoBehaviour, Interaction
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInTrigger = true;
+            if (other.GetComponent<QuestManager>().GetCurrentQuest() != null)
+            {
+                instanceFromPlayer = other.GetComponent<QuestManager>().GetCurrentQuest();
+            }
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInTrigger = false;
+            instanceFromPlayer = null;
+        }
     }
 
 

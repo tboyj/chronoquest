@@ -11,11 +11,7 @@ public class QuestCollectItem : QuestInstance, IQuestAction
     public ItemStorable requiredItem;
     public bool isGiveQuestType;
 
-    public QuestCollectItem(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s, int requiredCount, int currentCount) : base(q, i, t, d, s)
-    {
-        this.requiredCount = requiredCount;
-        this.currentCount = currentCount;
-    }
+
 
     public override void QuestEventTriggered()
     {

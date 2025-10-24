@@ -6,11 +6,6 @@ public class TeleportScript : QuestInstance
 {
     public Vector3 teleportToPosition;
 
-    public TeleportScript(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s) : base(q, i, t, d, s)
-    {
-        
-    }
-
     public void Teleport(GameObject target)
         {
             var movement = target.GetComponent<PlayerMovement>(); // or whatever your movement script is called

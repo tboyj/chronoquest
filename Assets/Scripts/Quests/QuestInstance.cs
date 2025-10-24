@@ -10,7 +10,7 @@ public class QuestInstance : MonoBehaviour
     public Quest data;
     public IQuestAction conditions;
     public bool IsCompleted;
-    public List<string> todo;
+    public List<TodoObject> todo;
     [SerializeField]
     public List<QuestDialog> dialogsForQuest;
     public QuestManager questManager;
@@ -18,15 +18,15 @@ public class QuestInstance : MonoBehaviour
     public Vector3 positionOfQuestGiver;
     [SerializeReference]
     public List<AfterQuestDialog> postQuestList;
-    public QuestInstance(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s)
-    {
-        data = q;
-        IsCompleted = i;
-        todo = t;
-        dialogsForQuest = d;
-        relatedQuests = s;
-    }
-    public void Start()
+    // public QuestInstance(Quest q, bool i, List<TodoObject> t, List<QuestDialog> d, List<QuestInstance> s)
+    // {
+    //     data = q;
+    //     IsCompleted = i;
+    //     todo = t;
+    //     dialogsForQuest = d;
+    //     relatedQuests = s;
+    // }
+    public virtual void Start()
     {
         // questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
         positionOfQuestGiver = gameObject.transform.parent.position;

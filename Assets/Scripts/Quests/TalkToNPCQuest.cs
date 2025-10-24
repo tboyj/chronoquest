@@ -11,12 +11,14 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
     // public int currentCount;
     public NPC npc;
     public NPC questAssignerNPC;
-    public TalkToNPCQuest(Quest q, bool i, List<string> t, List<QuestDialog> d, List<QuestInstance> s, NPC npc) : base(q, i, t, d, s)
+    public override void Start()
     {
-        this.npc = npc;
-        // this.requiredCount = requiredCount;
-        // this.currentCount = currentCount;
+        base.Start();
+        npc = gameObject.GetComponent<NPC>();
     }
+        
+        // requiredCount = requiredCount;
+        // currentCount = currentCount;
     public override void QuestEventTriggered()
     {
         IsCompleted = CheckConditions();
@@ -36,7 +38,7 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
 
     public override bool CheckConditions()
     {
-        Debug.Log(this.name);
+        Debug.Log(name);
         Debug.Log(questManager.name);
         if (questManager.GetCurrentQuest() != null && questAssignerNPC.questHandler.GetMostRecentQuest() != null)
         {
