@@ -5,18 +5,34 @@ public class QuestManager : MonoBehaviour
 {
     public List<QuestInstance> questsAssigned = new List<QuestInstance>();
     public List<QuestInstance> questsCompleted = new List<QuestInstance>();
+    public int currentQuestId;
     private bool currentlyInDialog;
 
+    public void Start()
+    {
+        currentQuestId = 3; // replace with savedata
+        if (questsCompleted.Count > 0)
+        {
+            if (GetCurrentQuest() != null)
+            {
+                currentQuestId = GetCurrentQuest().data.id;
+            }
+            else
+            {
+                Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
+            }
+        }
+    }
     public void AddQuestToList(QuestInstance quest)
     {
         questsAssigned.Add(quest);
+        currentQuestId = GetCurrentQuest().data.id;
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
     public void SetQuestCompleted(QuestInstance quest)
     {
         questsCompleted.Add(quest);
         questsAssigned.Remove(quest);
-
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
 
@@ -98,19 +114,18 @@ public class QuestManager : MonoBehaviour
 
             }
             Debug.Log(dialogManager.GetPrint());
-            // Debug.Log(dialogManager.);
             if (questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
             { // add since there is none in quest.
                 questAssigned = npcQuestHandler.GetMostRecentQuest();
-                Debug.Log("Add Quest");
+                Debug.Log($"Adding quest {questAssigned.data.questName} with id {questAssigned.data.id}");
+                Debug.Log($"Conditions are {questAssigned.CheckConditions()}.");
                 if (questAssigned.CheckConditions())
                 {
-                    Debug.Log(questAssigned.CheckConditions());
-                    Debug.Log("Conditions are good. Ignore.");
+                    Debug.Log("Ignoring conditions |>");
                     SetQuestCompleted(GetCurrentQuest());
                     npcQuestHandler.questsInStock.RemoveAt(0);
                     // Throw here dialog saying good job.
-                    Debug.Log("Good job");
+                    Debug.Log("Dialog for congratulating them");
                     TryToGiveQuest(interactableNPC, dialogManager);
                     interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
                     dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
@@ -161,7 +176,7 @@ public class QuestManager : MonoBehaviour
 
         else
         {
-            Debug.Log("do a general dialogue");
+            Debug.Log("Do a general dialog");
         }
     }
     
@@ -176,9 +191,6 @@ public class QuestManager : MonoBehaviour
         {
             foreach (AfterQuestDialog change in GetCurrentQuest().postQuestList)
             {
-                Debug.Log($"Assigning {change.GetType()} to quest {GetCurrentQuest().gameObject.GetInstanceID()}");
-                Debug.Log($"Type: {change.GetType()}");
-
                 change.SetChange();
             }
 

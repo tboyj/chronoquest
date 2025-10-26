@@ -11,11 +11,25 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
     // public int currentCount;
     public NPC npc;
     public NPC questAssignerNPC;
-    public override void Start()
+  public override void Start()
     {
         base.Start();
-        npc = gameObject.GetComponent<NPC>();
+
+        // Try to assign NPC if null (MAGIC)
+        if (npc == null)
+        {
+            npc = gameObject.GetComponent<NPC>();
+            if (npc == null)
+            {
+                Debug.LogWarning($"NPC reference is null on {gameObject.name}. Assign questAssignerNPC in inspector!");
+            }
+            else
+            {
+                Debug.Log($"NPC automatically assigned from {gameObject.name}");
+            }
+        }
     }
+
         
         // requiredCount = requiredCount;
         // currentCount = currentCount;
@@ -44,10 +58,10 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
         {
             if (questManager.GetCurrentQuest().data.id == questAssignerNPC.questHandler.GetMostRecentQuest().data.id)
             {
-                Debug.Log("Are you correct here");
-                Debug.Log(questManager.GetCurrentQuest());
-                if (npc.GetInRange())
+                Debug.Log("Is quest in range? : ");
+                if (npc != null && npc.GetInRange())
                 {
+                    Debug.Log("Yes");
                     questManager.SetQuestCompleted(questManager.GetCurrentQuest());
                     questAssignerNPC.questHandler.questsInStock.RemoveAt(0);
                     questManager.TryToGiveQuest(npc, questManager.gameObject.GetComponent<Player>().dialogManager);

@@ -27,22 +27,31 @@ public class TimeCube : MonoBehaviour
     public int currYear;
 
     public bool isAD;
+    [SerializeField]
     public string sceneName;
     public string reformattedDate;
-
+    [SerializeField]
     public TextMeshProUGUI dateText;
-
+    public PixelateEffect bitsChanger;
 
     void Start()
     {
+
         sceneName = gameObject.scene.name;
         Debug.Log("Scene Name: " + sceneName);
+        GameObject canvas = GameObject.Find("Canvas");
+        GameObject dateObj = canvas.transform.Find("HideForDialogContainer/GameUIHolder/Bg_Date/Date").gameObject;
+        dateText = dateObj.GetComponent<TextMeshProUGUI>();
+        bitsChanger = GameObject.Find("RealPlayer").transform.Find("MainCamera").gameObject.GetComponent<PixelateEffect>();
+
+
         switch (sceneName)
         {
             case "SampleScene":
                 currDay = 1;
                 currMonth = 1;
                 currYear = 2024;
+                bitsChanger.SetPixelSize(1);
                 break;
             case "Tutorial":
                 currDay = 6;
@@ -69,6 +78,7 @@ public class TimeCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (currYear < 0)
         {
             isAD = false;

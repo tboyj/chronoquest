@@ -21,7 +21,7 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
     // Update is called once per frame
     void Update()
     {
-        if (!pauseCheck.isInventory && !pauseCheck.isPaused && Input.GetKeyDown(Keybinds.actionKeybind))
+        if (!pauseCheck.isInventory && !pauseCheck.isPaused && Input.GetKeyUp(Keybinds.actionKeybind))
         {
             InteractionFunction();
         }
@@ -51,17 +51,23 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         {
             if (referencePlayer != null)
             {
-                if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+                if (referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() != null)
                 {
-                    Debug.Log("Moves to here.");
-                    quest.QuestEventTriggered();
-                }
-                else
-                {
-                    
-                    Debug.Log("Null / inequal id. Please check both. "+quest.data.id +":"+referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id);
+                    if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+                    {
+                        Debug.Log("Moves to here.");
+                        quest.QuestEventTriggered();
+                    }
+                    else
+                    {
+
+                        Debug.Log("Inequal id. Please check..." + quest.data.id + ":" + referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id);
+                    }
                 }
             }
+        } else
+        {
+            Debug.LogWarning("Quest is null...");
         }
     }   
 }

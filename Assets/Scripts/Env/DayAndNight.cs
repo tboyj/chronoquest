@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DayAndNight : MonoBehaviour
@@ -9,17 +10,21 @@ public class DayAndNight : MonoBehaviour
     // Start is called before the first frame update
     public Transform sunBody;
     public AnimationCurve lightCurve;
-    public Light lightForSky;
     [Range(-90f, 270f)]
     public float timeInDay;
     private float rotationSpeed = .005f;
     public TextMeshProUGUI timeText;
+    [SerializeField]
     public GameObject timeCube;
     void Start()
     {
+        GameObject canvas = GameObject.Find("Canvas");
+        GameObject dateObj = canvas.transform.Find("HideForDialogContainer/GameUIHolder/Bg_Time/Time").gameObject;
+        timeText = dateObj.GetComponent<TextMeshProUGUI>();
         timeText.text = "06:00";
         timeInDay = 0f;
         gameObject.transform.rotation = Quaternion.Euler(0, -90f, -90f);
+
     }
 
     // Update is called once per frame
@@ -31,6 +36,8 @@ public class DayAndNight : MonoBehaviour
         int hours = Mathf.FloorToInt((timeInDay + 90f) / 15f);
         int minutes = Mathf.FloorToInt((((timeInDay + 90f) / 15f) - hours) * 60f);
 
+        
+
         hours = (hours + 24) % 24; // Ensure hours is always 0-23
         int displayHour = hours;
         if (displayHour >= 12)
@@ -41,7 +48,7 @@ public class DayAndNight : MonoBehaviour
         }
         if (displayHour == 0)
             displayHour = 12;
-        
+
         string hNotMil = displayHour.ToString("00");
         timeText.text = hNotMil + ":" + minutes.ToString("00") + " " + amOrPm;
         if (timeInDay >= 270f)
@@ -52,5 +59,9 @@ public class DayAndNight : MonoBehaviour
 
         sunBody.rotation = Quaternion.Euler(timeInDay, -90f, -90f);
 
+    }
+    public void SetTimeCube()
+    {
+        
     }
 }

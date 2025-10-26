@@ -27,7 +27,6 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             slotIndex = currentHolder.transform.parent.GetSiblingIndex();
         }
-        Debug.Log(currentHolder.name + " " + slotIndex);
     }
 
     // Update is called once per frame
@@ -66,13 +65,13 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData eventData)
     {
         isHovered = true;
-        Debug.Log("Hovering over slot: " + slotIndex);
+        Debug.Log("Entered slot " + slotIndex);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         isHovered = false;
-        Debug.Log("End hovering over slot: " + slotIndex);
+        Debug.Log("Exited slot " + slotIndex);
     }
 
 }

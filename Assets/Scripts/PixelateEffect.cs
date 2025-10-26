@@ -6,9 +6,9 @@ public class PixelateEffect : MonoBehaviour
 {
     public Shader pixelateShader;
     [Range(64,1024)]
-    public int pixelSize = 256;
+    public int pixelSize;
     [Range(2,64)]
-    public float colorLevels = 64f;
+    public float colorLevels;
 
     private Material _material;
 
@@ -26,5 +26,13 @@ public class PixelateEffect : MonoBehaviour
         _material.SetFloat("_PixelSize", pixelSize);
         _material.SetFloat("_Levels", colorLevels); // <- explicitly pass the value
         Graphics.Blit(src, dest, _material);
+    }
+    public void SetPixelSize(int pxSize)
+    {
+        pixelSize = pxSize;
+    }
+    public void SetPosterization(float posterBoy) // 2hollis
+    {
+        colorLevels = posterBoy;
     }
 }

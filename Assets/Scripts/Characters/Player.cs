@@ -44,14 +44,27 @@ public class Player : Character, Interaction
         guiHandler = gameObject.GetComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);
         if (heldItem.item != null)
+        {
             Debug.Log(heldItem.item.name);
+        }
         else
-            Debug.Log("Item is null");
-        holdingItemManager.EnableWithSprite(heldItem.item.sprite);
+        {
+            Debug.LogWarning("Item is null, maybe it needs assigned?");
+        }
+        try
+        {
+            holdingItemManager.EnableWithSprite(heldItem.item.sprite);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Can't gather rendering data for held item. Maybe you have no items?");
+            Debug.LogException(e);
+        }
         // UI Image 
         dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
+        Physics.IgnoreLayerCollision(0, 8, true);
     }
     public void Update()
     {
@@ -303,8 +316,6 @@ public class Player : Character, Interaction
     {
         for (int i = 0; i < amount; i++)
         {
-            Debug.Log(i);
-            // Debug.Log(inventory.GetInventory().Count);
             inventory.AddToList(new Item(null, 1));
         }
         // Item paket = new Item(itemPaketTest, 67);

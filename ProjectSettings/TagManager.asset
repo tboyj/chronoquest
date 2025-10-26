@@ -18,6 +18,7 @@ TagManager:
   - Middleman
   - End
   - Unclimbable
+  - Path
   layers:
   - Default
   - TransparentFX

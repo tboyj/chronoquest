@@ -35,8 +35,6 @@ public abstract class Character : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            Debug.Log(i);
-            // Debug.Log(inventory.GetInventory().Count);
             inventory.AddToList(new Item(null, 1));
         }
     }
