@@ -23,7 +23,6 @@ public class NPCMovement : Movement
             pathPoints.Add(child);
 
         currentNode = GetClosestNode();
-        endNode = GameObject.FindWithTag("End").transform;
 
         if (currentNode && endNode)
             SetPathToEnd();
@@ -31,7 +30,7 @@ public class NPCMovement : Movement
 
     private void Update()
     {
-        if (status != "Idle")
+        if (status != "IDLE")
             MoveWithForce();
             
     }
@@ -41,16 +40,24 @@ public class NPCMovement : Movement
         if (Time.timeScale <= 0) return;
 
         if (currentNode == null && currentPath.Count == 0) return;
-
+        
         // If reached current node, move to next
         float dist = Vector3.Distance(transform.position, currentNode.position);
         if (dist < 0.5f)
         {
             if (currentPath.Count > 0)
+            {
                 currentNode = currentPath.Dequeue();
+                status = "MOVE";
+            }
             else
-                return; // reached end
-        }
+            {
+                status = "IDLE";
+                return;
+            }
+
+        } 
+        
 
         // Move toward current node
         Vector3 dir = (currentNode.position - transform.position).normalized;
@@ -74,7 +81,12 @@ public class NPCMovement : Movement
     private void SetPathToEnd()
     {
         List<Transform> path = FindShortestPath(currentNode, endNode);
+        Debug.Log($"Generated path length: {path.Count}");
+        
+        foreach (var node in path)
+            Debug.Log("Path node: " + node.name);
         currentPath = new Queue<Transform>(path);
+        
     }
 
     // --- Shortest Path Finder (A*) ---

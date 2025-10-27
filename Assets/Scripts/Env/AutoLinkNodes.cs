@@ -4,7 +4,7 @@ public class AutoLinkNodes : MonoBehaviour
 {
     public float connectionDistance = 5f;
 
-    void Start()
+    void Awake()
     {
         PathfinderNode[] nodes = FindObjectsOfType<PathfinderNode>();
 

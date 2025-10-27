@@ -4888,6 +4888,7 @@ MonoBehaviour:
   questsAssigned: []
   questsCompleted: []
   currentQuestId: 0
+  hasCompletedFirstQuest: 0
 --- !u!114 &160479122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6955,6 +6956,127 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240008920}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &250518405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250518406}
+  - component: {fileID: 250518410}
+  - component: {fileID: 250518409}
+  - component: {fileID: 250518408}
+  - component: {fileID: 250518407}
+  m_Layer: 8
+  m_Name: End_Sarlah
+  m_TagString: End
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &250518406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518405}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.742, y: 4.32, z: 126.995}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1008602697}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250518407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db2c9507df87f45a43a4626e4ce93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasVisited: 0
+  nodeCost: 1
+  neighbors: []
+--- !u!135 &250518408
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518405}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &250518409
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518405}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f35f40dbcd55d8044a900e435faaa9f3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &250518410
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518405}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &256409687
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,16 +7343,16 @@ MonoBehaviour:
   moveSpeed: 1.65
   runMultiplier: 1.15
   gravity: -0.075
-  controller: {fileID: 0}
-  rayholder: {fileID: 0}
+  controller: {fileID: 263861372}
+  rayholder: {fileID: 348391775}
   flip: 0
   acceleration: 5
   deceleration: 7.6
-  status: walk
+  status: 
   pathPointContainer: {fileID: 1008602696}
   pathPoints: []
   currentNode: {fileID: 0}
-  endNode: {fileID: 0}
+  endNode: {fileID: 250518406}
 --- !u!114 &263861375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18572,7 +18694,7 @@ GameObject:
   - component: {fileID: 763070986}
   - component: {fileID: 763070989}
   m_Layer: 8
-  m_Name: End
+  m_Name: End_Bossman
   m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24269,6 +24391,7 @@ Transform:
   - {fileID: 1927825302}
   - {fileID: 644870737}
   - {fileID: 763070985}
+  - {fileID: 250518406}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1008602698
@@ -25430,11 +25553,11 @@ MonoBehaviour:
   flip: 0
   acceleration: 5
   deceleration: 7.6
-  status: Idle
+  status: IDLE
   pathPointContainer: {fileID: 1008602696}
   pathPoints: []
   currentNode: {fileID: 0}
-  endNode: {fileID: 0}
+  endNode: {fileID: 763070985}
 --- !u!114 &1036772521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31549,7 +31672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 1036772520}
-  desiredStatus: walk
+  desiredStatus: MOVE
 --- !u!1 &1328477448
 GameObject:
   m_ObjectHideFlags: 0
@@ -40598,7 +40721,7 @@ Transform:
   m_GameObject: {fileID: 1713221425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.815, y: 4.39, z: 125.447}
+  m_LocalPosition: {x: -1.815, y: 4.39, z: 124.323}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
