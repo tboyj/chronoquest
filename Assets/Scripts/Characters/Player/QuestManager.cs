@@ -193,7 +193,6 @@ public class QuestManager : MonoBehaviour
             {
                 change.SetChange();
             }
-
         }
     }
 

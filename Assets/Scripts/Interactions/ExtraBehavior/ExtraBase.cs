@@ -11,7 +11,7 @@ public abstract class ExtraBase : MonoBehaviour
     private void Start()
     {
         // Setup code here
-        qm = player.gameObject.GetComponent<QuestManager>();
+        
     }
     private void Update()
     {
@@ -25,6 +25,7 @@ public abstract class ExtraBase : MonoBehaviour
         {
             inRange = true;
             SetPlayer(other.gameObject.GetComponent<Player>());
+            qm = player.GetComponent<QuestManager>();
         }
     }
 
@@ -35,6 +36,7 @@ public abstract class ExtraBase : MonoBehaviour
         {
             inRange = false;
             SetPlayer(null);
+            
         }
     }
     

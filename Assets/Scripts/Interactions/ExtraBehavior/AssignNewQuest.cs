@@ -12,15 +12,21 @@ public class AssignNewQuest : ExtraBase
         {
             qm.GetCurrentQuest().IsCompleted = true;
             qm.SetQuestCompleted(qm.GetCurrentQuest());
-            qm.AddQuestToList(qh.GetMostRecentQuest());
-            Debug.Log("skull emoji");
+
+            var nextQuest = qh.GetMostRecentQuest();
+            qm.AddQuestToList(nextQuest);
+            qm.currentQuestId = nextQuest.data.id;
+
+            Debug.Log($"[QuestManager] Advanced to quest {nextQuest.data.id}");
         }
+        qm.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         qh = gameObject.GetComponent<QuestHandler>();
+        Debug.Log(qh);
     }
 
     // Update is called once per frame

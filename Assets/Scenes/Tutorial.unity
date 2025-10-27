@@ -7402,7 +7402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   player: {fileID: 0}
-  qm: {fileID: 0}
+  qm: {fileID: 160479121}
   topChestObject: {fileID: 5484222738077837508}
   active: 1
 --- !u!114 &311886404
@@ -7538,7 +7538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accessPoint: {fileID: 311886402}
-  todoText: Collect what's in the chest
+  todoText: Collect the item from the chest
 --- !u!1 &312175341
 GameObject:
   m_ObjectHideFlags: 0
@@ -10269,127 +10269,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: c2eaee1d2b73af24699ac77edbd817bd, type: 3}
---- !u!1 &440908972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 440908973}
-  - component: {fileID: 440908977}
-  - component: {fileID: 440908976}
-  - component: {fileID: 440908975}
-  - component: {fileID: 440908974}
-  m_Layer: 8
-  m_Name: Middleman (5)
-  m_TagString: Path
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &440908973
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440908972}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6070004, y: 5.34, z: 130.02}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1008602697}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &440908974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440908972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23db2c9507df87f45a43a4626e4ce93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wasVisited: 0
-  nodeCost: 5
-  neighbors: []
---- !u!135 &440908975
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440908972}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &440908976
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440908972}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 75005747ad2a2bc478c9fe65f426e726, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &440908977
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440908972}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &447607409
 GameObject:
   m_ObjectHideFlags: 0
@@ -18708,7 +18587,7 @@ Transform:
   m_GameObject: {fileID: 763070984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6, y: 5.348, z: 131.025}
+  m_LocalPosition: {x: 5.6, y: 5.348, z: 129.995}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -21225,7 +21104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53fe2bbf86f6db4696d732c52a1a8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idSave: 6
   guessOrder: []
   answerOrder:
   - {fileID: 942856812}
@@ -21235,7 +21113,7 @@ MonoBehaviour:
   - {fileID: 1022037764}
   - {fileID: 1522198190}
   - {fileID: 847643217}
-  quest: {fileID: 0}
+  quest: {fileID: 950465422}
 --- !u!114 &873901948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21441,7 +21319,6 @@ MonoBehaviour:
   timedActivater: 1
   duration: 3
   playerInTrigger: 0
-  instanceToWaitFor: {fileID: 950465422}
   instanceFromPlayer: {fileID: 0}
   questRequired: 1
   affectedObject: {fileID: 824416521}
@@ -21571,7 +21448,6 @@ MonoBehaviour:
   timedActivater: 1
   duration: 3
   playerInTrigger: 0
-  instanceToWaitFor: {fileID: 950465422}
   instanceFromPlayer: {fileID: 0}
   questRequired: 1
   affectedObject: {fileID: 510810963}
@@ -23124,6 +23000,7 @@ MonoBehaviour:
   IsCompleted: 0
   todo:
   - {fileID: 1956007033}
+  - {fileID: 1956007033}
   dialogsForQuest:
   - dialogueText: What the heck is this thing...This looks authentic!
     characterName: Sarla
@@ -24391,7 +24268,6 @@ Transform:
   - {fileID: 907688036}
   - {fileID: 1927825302}
   - {fileID: 644870737}
-  - {fileID: 440908973}
   - {fileID: 763070985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24984,7 +24860,6 @@ MonoBehaviour:
   timedActivater: 1
   duration: 3
   playerInTrigger: 0
-  instanceToWaitFor: {fileID: 950465422}
   instanceFromPlayer: {fileID: 0}
   questRequired: 1
   affectedObject: {fileID: 824416521}
@@ -25457,7 +25332,6 @@ MonoBehaviour:
   - {fileID: 1406703727}
   - {fileID: 1325759866}
   - {fileID: 1666987370}
-  - {fileID: 0}
 --- !u!114 &1036772514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27391,7 +27265,6 @@ MonoBehaviour:
   timedActivater: 1
   duration: 3
   playerInTrigger: 0
-  instanceToWaitFor: {fileID: 950465422}
   instanceFromPlayer: {fileID: 0}
   questRequired: 1
   affectedObject: {fileID: 510810963}
@@ -39806,6 +39679,7 @@ GameObject:
   - component: {fileID: 1685995634}
   - component: {fileID: 1685995636}
   - component: {fileID: 1685995635}
+  - component: {fileID: 1685995637}
   m_Layer: 0
   m_Name: TalkToBossmanQuest
   m_TagString: Object
@@ -39866,6 +39740,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1685995637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685995633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessPoint: {fileID: 1685995634}
+  todoText: Show what you've found to the Bossman
 --- !u!1 &1687473395
 GameObject:
   m_ObjectHideFlags: 0
@@ -45138,6 +45026,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: ae00d6bdf8cb9154ab70c4f5c523b168, type: 2}
   IsCompleted: 0
   todo:
+  - {fileID: 311886410}
   - {fileID: 311886410}
   dialogsForQuest: []
   questManager: {fileID: 160479121}

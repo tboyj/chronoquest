@@ -150,9 +150,9 @@ public class Player : Character, Interaction
                         dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
 
-                    else if (manager.GetCurrentQuest().dialogsForQuest.Count == 1)
+                    else if (manager.GetCurrentQuest().dialogsForQuest.Count <= 1)
                     {
-                        Debug.Log("Count is 1.");
+                        Debug.Log("Count is equal to or less than 1.");
                         currentQuest.ShowDialog(false);
                         manager.SetCurrentlyInDialog(false);
                         interactableNPC.inDialog = false;
@@ -160,6 +160,7 @@ public class Player : Character, Interaction
                         manager.ChangeFunction();
                     }
                     //manager.GetCurrentQuest().ShowDialog(true);
+                    
                 }
                 else
                 {

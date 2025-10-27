@@ -33,10 +33,9 @@ public class ItemInWorld : MonoBehaviour, Interaction
             if (Input.GetKeyDown(Keybinds.actionKeybind) && !inDialog && !pauseCheck.isInventory && !pauseCheck.isPaused)
             {
                 InteractionFunction();
-                if (gameObject?.GetComponent<ExtraBase>())
-                {
-                    gameObject?.GetComponent<ExtraBase>().Change();
-                }
+                Debug.Log("I found you...");
+                if (gameObject?.GetComponent<AssignNewQuest>())
+                    gameObject.GetComponent<AssignNewQuest>().Change(); // make sure to have specific class type. no generals.
             }
         }
     }

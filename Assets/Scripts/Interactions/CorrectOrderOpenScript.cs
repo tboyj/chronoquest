@@ -7,7 +7,7 @@ public class CorrectOrderOpenScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public int idSave;
+    // public int idSave;
     public List<GameObject> guessOrder = new List<GameObject>();
     public List<GameObject> answerOrder = new List<GameObject>();
     public QuestToggleItem quest;
@@ -65,8 +65,8 @@ public class CorrectOrderOpenScript : MonoBehaviour
         {
             button.GetComponent<PuzzleLeverActivator>().sprite.color = Color.white;
             button.GetComponent<PuzzleLeverActivator>().conditionsMet = true;
-            if (button.GetComponent<PuzzleLeverActivator>().playerQuest != null)
-                idSave = button.GetComponent<PuzzleLeverActivator>().playerQuest.data.id;
+            // if (button.GetComponent<PuzzleLeverActivator>().playerQuest != null)
+            //     idSave = button.GetComponent<PuzzleLeverActivator>().playerQuest.data.id;
         }
         gameObject.transform.position = new Vector3(transform.position.x, (transform.position.y - 3), transform.position.z);
         // if (quest != null && idSave == quest.data.id)

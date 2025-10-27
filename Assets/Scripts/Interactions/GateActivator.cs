@@ -9,7 +9,7 @@ public class GateActivator : MonoBehaviour, Interaction
     [Range(0.5f, float.MaxValue)]
     public float duration = 1f;
     public bool playerInTrigger = false;
-    public QuestInstance instanceToWaitFor;
+    // public QuestInstance instanceToWaitFor;
     public QuestInstance instanceFromPlayer;
     [SerializeField]
     private bool questRequired;
@@ -29,11 +29,11 @@ public class GateActivator : MonoBehaviour, Interaction
         {
             if (questRequired)
             {
-                if (instanceToWaitFor != null && instanceFromPlayer != null)
-                {
-                    if (instanceToWaitFor.data.id == instanceFromPlayer.data.id)
-                        InteractionFunction();
-                }
+                // if (instanceToWaitFor != null && instanceFromPlayer != null)
+                // {
+                //     if (instanceToWaitFor.data.id == instanceFromPlayer.data.id) // ew
+                InteractionFunction();
+                // }
             } else
             {
                 InteractionFunction();

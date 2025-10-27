@@ -47,27 +47,23 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
     }
     public void InteractionFunction()
     {
-        if (quest != null)
-        {
-            if (referencePlayer != null)
-            {
-                if (referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() != null)
-                {
-                    if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
-                    {
-                        Debug.Log("Moves to here.");
-                        quest.QuestEventTriggered();
-                    }
-                    else
-                    {
 
-                        Debug.Log("Inequal id. Please check..." + quest.data.id + ":" + referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id);
-                    }
+        if (referencePlayer != null)
+        {
+            if (referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() != null)
+            {
+                Debug.Log($"Check id {quest.data.id} : {referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id}");
+                if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+                {
+                    Debug.Log("Moves to here.");
+                    quest.QuestEventTriggered();
+                }
+                else
+                {
+
+                    Debug.Log("Inequal id. Please check..." + quest.data.id + ":" + referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id);
                 }
             }
-        } else
-        {
-            Debug.LogWarning("Quest is null...");
         }
     }   
 }
