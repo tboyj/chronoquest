@@ -11,15 +11,13 @@ public class NPCMovement : Movement
     public Transform endNode;
 
     private Queue<Transform> currentPath = new Queue<Transform>();
-    private float minDist = Mathf.Infinity;
+    
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         if (controller == null)
             Debug.LogError("CharacterController missing on NPC.");
-
-        pathPointContainer = GameObject.Find("AINodeHolder");
 
         foreach (Transform child in pathPointContainer.transform)
             pathPoints.Add(child);
@@ -35,6 +33,7 @@ public class NPCMovement : Movement
     {
         if (status != "Idle")
             MoveWithForce();
+            
     }
 
     public override void MoveWithForce()

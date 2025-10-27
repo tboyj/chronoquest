@@ -7,7 +7,7 @@ public class QuestManager : MonoBehaviour
     public List<QuestInstance> questsCompleted = new List<QuestInstance>();
     public int currentQuestId;
     private bool currentlyInDialog;
-
+    public bool hasCompletedFirstQuest;
     public void Start()
     {
         currentQuestId = 3; // replace with savedata
@@ -25,9 +25,25 @@ public class QuestManager : MonoBehaviour
     }
     public void AddQuestToList(QuestInstance quest)
     {
-        questsAssigned.Add(quest);
-        currentQuestId = GetCurrentQuest().data.id;
-        gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        if (quest.data.id > 3 && hasCompletedFirstQuest)
+        {
+            questsAssigned.Add(quest);
+            currentQuestId = GetCurrentQuest().data.id;
+            gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        }
+        else if (quest.data.id == 3 && !hasCompletedFirstQuest)
+        {
+            questsAssigned.Add(quest);
+            currentQuestId = GetCurrentQuest().data.id;
+            gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            hasCompletedFirstQuest = true;
+        }
+        else
+        {
+            Debug.Log("Block");
+        }
+        
+        
     }
     public void SetQuestCompleted(QuestInstance quest)
     {

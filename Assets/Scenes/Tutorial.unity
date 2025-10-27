@@ -7002,8 +7002,8 @@ GameObject:
   - component: {fileID: 263861362}
   - component: {fileID: 263861361}
   - component: {fileID: 263861371}
-  - component: {fileID: 263861372}
   - component: {fileID: 263861373}
+  - component: {fileID: 263861372}
   - component: {fileID: 263861374}
   - component: {fileID: 263861375}
   m_Layer: 0
@@ -7055,7 +7055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   spriteRenderer: {fileID: 1589596643}
-  movement: {fileID: 0}
+  movement: {fileID: 263861374}
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 0}
@@ -7196,8 +7196,8 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
-  m_LayerOverridePriority: 10
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -7226,7 +7226,7 @@ MonoBehaviour:
   flip: 0
   acceleration: 5
   deceleration: 7.6
-  status: Idle
+  status: walk
   pathPointContainer: {fileID: 1008602696}
   pathPoints: []
   currentNode: {fileID: 0}
@@ -19618,7 +19618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   container: {fileID: 1119403765}
-  paperText: 'VII. My Tyrian hue
+  paperText: 'VII. My magenta hue
 
     I kept throughout the land.'
   isActive: 0
@@ -25227,7 +25227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   spriteRenderer: {fileID: 1413166577}
-  movement: {fileID: 0}
+  movement: {fileID: 1036772520}
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 0}
@@ -38810,6 +38810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666987369}
   - component: {fileID: 1666987370}
+  - component: {fileID: 1666987371}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -38855,14 +38856,33 @@ MonoBehaviour:
     characterName: Bossman
   - dialogueText: I'll give you my hieroglyph cheatsheet. You should use it.
     characterName: Bossman
-  - dialogueText: Alright, let's explore this place!
+  - dialogueText: Alright, let's explore this pla-
     characterName: Bossman
+  - dialogueText: '*bzzz bzzz i spawn in portal*'
+    characterName: UFO
+  - dialogueText: Who made this dialog?
+    characterName: Jim
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
-  postQuestList: []
+  postQuestList:
+  - {fileID: 0}
   npc: {fileID: 1036772502}
   questAssignerNPC: {fileID: 1036772502}
+--- !u!114 &1666987371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666987368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336e1202e517b694cae3353af60f2559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 763070984}
+  goTo: {x: 0, y: 0, z: 0}
 --- !u!1 &1670775077
 GameObject:
   m_ObjectHideFlags: 0
