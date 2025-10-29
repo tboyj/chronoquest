@@ -40,11 +40,7 @@ public class NPCMovement : MonoBehaviour
         
 
 
-<<<<<<< HEAD
         // Debug.Log("Remaining: " + agent.remainingDistance);
-=======
-        Debug.Log("Remaining: " + agent.remainingDistance);
->>>>>>> a3506ef9b943eb0ffe2936a110a11d435742425c
         // Move agent along path
         MoveToTarget(endNode);
         // if (agent.remainingDistance > agent.stoppingDistance)

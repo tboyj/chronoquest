@@ -41,15 +41,11 @@ public class Player : Character, Interaction
         Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
         movement = gameObject.GetComponent<PlayerMovement>();
-<<<<<<< HEAD
         if (isInventorySetup == false)
         {
             InventorySetup(49);
             isInventorySetup = true;
         }
-=======
-        InventorySetup(49);
->>>>>>> a3506ef9b943eb0ffe2936a110a11d435742425c
         guiHandler = gameObject.GetComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);
         if (heldItem.item != null)
