@@ -12,7 +12,7 @@ public abstract class Movement : MonoBehaviour
     public float gravity = -0.075f;
 
     [Header("References")]
-    public CharacterController controller;
+    
     public Transform rayholder; // Optional for stairs or slope checks
 
     protected Vector3 velocity;
@@ -24,10 +24,7 @@ public abstract class Movement : MonoBehaviour
 
     protected virtual void Awake()
     {
-        controller = GetComponent<CharacterController>();
-        if (controller == null)
-            Debug.LogError("CharacterController not found on " + gameObject.name);
-
+        
         rayholder = transform.Find("Rayholder");
         if (rayholder == null)
             Debug.LogWarning("Rayholder not found, slope detection will be limited.");

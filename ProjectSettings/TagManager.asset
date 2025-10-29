@@ -19,6 +19,7 @@ TagManager:
   - End
   - Unclimbable
   - Path
+  - Wall
   layers:
   - Default
   - TransparentFX

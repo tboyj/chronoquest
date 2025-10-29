@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : Movement
 {
+    public CharacterController controller;
+
     private void Update()
         {
             MoveWithForce();

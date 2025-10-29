@@ -30,17 +30,12 @@ public class QuestManager : MonoBehaviour
             questsAssigned.Add(quest);
             currentQuestId = GetCurrentQuest().data.id;
             gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-        }
-        else if (quest.data.id == 3 && !hasCompletedFirstQuest)
+        } else if (quest.data.id == 3 && !hasCompletedFirstQuest)
         {
             questsAssigned.Add(quest);
             currentQuestId = GetCurrentQuest().data.id;
             gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
             hasCompletedFirstQuest = true;
-        }
-        else
-        {
-            Debug.Log("Block");
         }
         
         

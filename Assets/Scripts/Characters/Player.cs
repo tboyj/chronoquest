@@ -24,7 +24,7 @@ public class Player : Character, Interaction
     public RectTransform hotbarHolder;         // UI container for hotbar slots
     public RectTransform inventoryHolder;      // UI container for inventory slots
     private int indexOfInventoryHover { get; set; } // Index of currently hovered inventory slot
-
+    public PlayerMovement movement;
     // Quest & Dialog Systems
     private QuestManager manager;              // Manages active and completed quests
     public GameObject questPanelContainer;     // UI container for displaying quest panels
@@ -37,9 +37,9 @@ public class Player : Character, Interaction
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+        Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
-        movement = gameObject.AddComponent<PlayerMovement>();
+        movement = gameObject.GetComponent<PlayerMovement>();
         InventorySetup(49);
         guiHandler = gameObject.GetComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);

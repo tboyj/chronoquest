@@ -43,6 +43,8 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         if (other.CompareTag("Player"))
         {
             referencePlayer = null;
+            quest = null;
+            qm = null;
         }
     }
     public void InteractionFunction()
@@ -52,7 +54,6 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         {
             if (referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() != null)
             {
-                Debug.Log($"Check id {quest.data.id} : {referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id}");
                 if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
                 {
                     Debug.Log("Moves to here.");
