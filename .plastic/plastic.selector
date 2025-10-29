@@ -1,3 +1,4 @@
-rep "chronoquest/chronoquest@2474376476170@cloud"
+repository "chronoquest/chronoquest@2474376476170@cloud"
   path "/"
-    smartbranch "/main"
+    br "/main"
+    co "/main"

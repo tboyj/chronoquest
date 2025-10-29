@@ -124,6 +124,13 @@ We can add a expanding inventory later. Currently fixed size right now!!!!
         return items;
     }
 
+    public void SetInventory(List<Item> items)
+    {
+        this.items = items;
+        
+        SetRefresh(true);
+    }
+
     public void RemoveOneQuantity(int itemHeld)
     {
         if (items[itemHeld].quantity > 0)

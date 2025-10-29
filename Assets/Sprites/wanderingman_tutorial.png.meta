@@ -1,0 +1,7858 @@
+fileFormatVersion: 2
+guid: 6c6ceab1a4915a14b97b0f0dee433507
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wanderingman_tutorial_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3392
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5c8a02e57ccf747bc0c9d13cb98886
+      internalID: -1431928270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3392
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3493838ad0d6c479b9ad7d8c379b42
+      internalID: 400016873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3392
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e2c1b4772920347828b46a751f2471
+      internalID: -979887364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3392
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c099200a97ccfed469a0b92648bf6e25
+      internalID: -635979697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 3392
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a1b8c8ca0eca640a5c6d23d433ceb0
+      internalID: -116444034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_5
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 3392
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df305a7691bc094fada42f82395875f
+      internalID: -1741333428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3392
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350cb55141cce644bb0f3e1fdb82f48f
+      internalID: -1662410511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_7
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 3329
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea780938c093994196e5bc871426e56
+      internalID: -1900732856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3329
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4850d03aacbd1d468b2223cbd06d43b
+      internalID: 1563149228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_9
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3329
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3492f9b926cfc9b49ba71b33edd75ec6
+      internalID: 886495558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 3329
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9592f92e17eee240b1012cb4b052090
+      internalID: -1398531748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3329
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c364112ba36244abd1375b5f51b45c
+      internalID: 979871214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_12
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3329
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac13ed8c5aeac847a731cbb5a2d52df
+      internalID: 1364806461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3329
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7c37c1db5638e4eb885297ac058dc4
+      internalID: 101886701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3265
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733c43b2b35ca7647ad832f02bd80d02
+      internalID: -1379632359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3265
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65fa030c71723643b45372622aca74f
+      internalID: 641362101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3265
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd3d33e6e6423843adc1cda2b931e99
+      internalID: -1322771830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3265
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c135a0b603b394894905b6b7d309eb
+      internalID: -651105683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_18
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 3265
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3f2c3d66ae1e54885b0b96d5fe2935
+      internalID: 1289768253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_19
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 3265
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a95eb43fca673c46b1e094997bb3473
+      internalID: -538399952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3265
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c47cb5b2ab1f3642877b8b69ef150d7
+      internalID: -282816664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3201
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da5a3493c0df684aa733f550aed94fc
+      internalID: -1607494564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_22
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3201
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74936a8c6a6aa24aa92a87e8b36936b
+      internalID: -1460758352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_23
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3201
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc00c9367fe718043b72f3840d1f0204
+      internalID: -559751361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3201
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645fbfdcaf2f6a54793650d8cb1e6cd6
+      internalID: -1584086293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 3201
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5be929af2ad6347985e1f04c829fa3
+      internalID: -1422514577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3201
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8fe513fac3e244e9b270b75c01c82d
+      internalID: 29592316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_27
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 3201
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0ef5e71e115fb428e21cd88cafef5a
+      internalID: 1926454772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_28
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3135
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c41da8813458e04d88e7bde7450fda9
+      internalID: 572875632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3135
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a2394926f117f479f71cec7a6caa38
+      internalID: -666477388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3135
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8a3453be23a2419fb689f0a690ac6
+      internalID: -829766640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_31
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 3135
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa7642d905c87f4c91a487546a5d650
+      internalID: 1080457423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_32
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 3135
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414ca31db1adfa24c81dd5e2fe859601
+      internalID: 1006879356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_33
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 3135
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ab994e08abc784081d1d9090503209
+      internalID: -111372208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_34
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 3135
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7943f2e6439cc054eaa8d36b10fade6b
+      internalID: -469312232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_35
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 3135
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46d57281188f5943ae734346fd718ee
+      internalID: 1633406834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_36
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 3073
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127764abe0e04c24bab828fd33d7ac26
+      internalID: 1315490767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3073
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15a298fb14e5f144b9385519b253d55
+      internalID: -1445654960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_38
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3073
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337ffba5e70533a43a142066a177da37
+      internalID: 1142759652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_39
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 3073
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3108335fea07c468277d8460889749
+      internalID: -1921905635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 3073
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbf72f367269364bad8ac1b6e4b231d
+      internalID: 105384477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_41
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3073
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4490a071e9ead9e49984b4090d6f7d5d
+      internalID: 1967169135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3073
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a94c840b53cf746989446b53473569
+      internalID: -1595284616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_43
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 3073
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904a2e5a40106c141bc4a57849d8007c
+      internalID: 1918130696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3009
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fdd0bb4de04c84cba85864125e09eb
+      internalID: -2132335182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3009
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c920ab3571d7f49ac22bb9a0834d83
+      internalID: -1336424629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_46
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3011
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56d59bebdf276742a8ecfcf0bffb4c7
+      internalID: -1733706065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3011
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28789659796f204fa27be4809e2721a
+      internalID: -1787491002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_48
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 3011
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a79b188ab18a394c8cde770a5d5fc40
+      internalID: 1635753645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_49
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3011
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d71ad3081d576e4e8ebc9d44f1caab5
+      internalID: 1873874914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_50
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3011
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e530efa62b7804a9c071642228f924
+      internalID: 943901725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_51
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 3011
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc1ae6226633a4489fd08a7553ffae7
+      internalID: 142026750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_52
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2945
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8643d4526ad54b34c91d4f7c21114a0b
+      internalID: 1701248784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_53
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2945
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b60f777314d944798842d44e16f208
+      internalID: -769299267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_54
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2945
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbaa2e980556a9c47bc3b618dc7d3c9e
+      internalID: 1906695613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2945
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98306003204456a4b9df29406d85b078
+      internalID: -1325797882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_56
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 2945
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440c2bc965163be409d7dc3f94c94538
+      internalID: -2055179669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_57
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 2945
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5e1c486be66eb4e8deb5cef5c4e5d5
+      internalID: -976940329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_58
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2945
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0efaa80c81cc584aae00f8b921e9ffc
+      internalID: 819197211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2945
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4868307a198ba8342a2ce060e8c04f35
+      internalID: -209704983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_60
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2881
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c520c6859d0e234a82ba78017a9611f
+      internalID: -446852242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_61
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2881
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dfe069f31846b43b765114365b78d0
+      internalID: -1199057424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_62
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2879
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47878e3478418354ba37cfe5e9d6f4d5
+      internalID: -17876318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_63
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2879
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8febd3c0ca4cc847bbf2a37e4bd68a4
+      internalID: -2024215906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_64
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2879
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f00ebfb79093b4f93bb0a94c0d2c19
+      internalID: 133498890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_65
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2881
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1be68250178b54f9c3e649857e4642
+      internalID: 1570432730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_66
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 2879
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec7f1ed8e45c724c8410175ce21164c
+      internalID: -1262399792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_67
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2879
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08773b349ebc00e41b28f6ac9c499fd6
+      internalID: 137858525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_68
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2879
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447d931d57838b64e98b7073f4abffc1
+      internalID: 801940536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_69
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2816
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d6f23427f4b55449b98476599fef06
+      internalID: 1611065430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_70
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2816
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33572eae185838e469a46d82b5e25134
+      internalID: -408093389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_71
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2818
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584ca2b6239ef6941bf2b58f3db1be62
+      internalID: 557728125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_72
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 2818
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c2a07a99032314da4bade24c4f776a
+      internalID: 97663599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_73
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2816
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9254232e485c9d941848cc945f825ef4
+      internalID: -242482983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_74
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2816
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb4691ca2230e64fb013e71706979f3
+      internalID: -39716302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_75
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2816
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e21274aa8f7a44293d5f53761ebc33
+      internalID: 26791903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_76
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 2816
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2033a199219c054e9e4addedbd299c6
+      internalID: 1492375981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_77
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 2816
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d1f4acac26fc64c9e2d398e232c1b7
+      internalID: -542179609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_78
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2752
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6aec1c9fe1fcf42bd47f972d486f54
+      internalID: 770062370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_79
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2752
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe20aa7f3b3e30c4e815bf1cb0f166f8
+      internalID: 499444941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_80
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2752
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89eab5bfb4dc9147892b91fed17a161
+      internalID: -332082540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_81
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2752
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36b69e4fe1b74348bb50a5aa90f93bf
+      internalID: 819682729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_82
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2752
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cf5660ac46ef241b97eb3859f205fc
+      internalID: 1835288902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_83
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2752
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c95ff55ea8e0bf4989c182a8084aa73
+      internalID: -484992227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2752
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a75857306bc9249ad560aff99c9fa6
+      internalID: 1179587005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_85
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 2752
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd5000161df9c443ba6e34b42ede78b
+      internalID: -827316591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_86
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2752
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ba4860041b0f244a5ee4ed42071ac3
+      internalID: 1522017603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_87
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2688
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6545fa6157fad6941a487c12aa574a32
+      internalID: 1474497564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_88
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2688
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f5224099cde5343982419359dceca2
+      internalID: 1013524027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_89
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2690
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffb19c91eea2ed45aa75d600333ebb6
+      internalID: -1068853340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_90
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2690
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2475aa68acdae44807c1a8d1d6ec5a
+      internalID: -393816797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_91
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2688
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2d6535e4dc4cd4c8392e17cc26e15b
+      internalID: -369958283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_92
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 2688
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0325d293ba8bd6145976b9b9c6a5c3d2
+      internalID: 1321954798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_93
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2688
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab01d075a668f6946a93b6cfc2823219
+      internalID: 364605226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_94
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2688
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e7e30e9c893be44bed18378bbc7dc2
+      internalID: 450021680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_95
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 2688
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3914b7fa2711bc4bbad3de785335376
+      internalID: 1713490622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_96
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2624
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4137e74f9a37746afd9137f86a677a
+      internalID: 575699193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_97
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2624
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49671e06638c717498c01b674528b9dc
+      internalID: 1772833907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_98
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2624
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ea721adc14ee2468a0ef6773876de9
+      internalID: 1988554141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_99
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2624
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff70c977d35492428848500326170b2
+      internalID: 210429136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_100
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2624
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdaa589a56eca347ba49c3f44ffd49c
+      internalID: -1228539077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_101
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2624
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66fc81d9e6745e418c86832e5b4cca7
+      internalID: 1358149012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_102
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2560
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdc5c4a2d170a84db987d6303a1b589
+      internalID: 1186599363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_103
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2560
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf932507abaa6142b5d44e25af92b10
+      internalID: 1011321694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_104
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2560
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9662332bf052fdf4a84b757a61b68bc5
+      internalID: -266805842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_105
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2560
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01fda8698c9e8f41992a2512d412e4e
+      internalID: 746189522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_106
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 2560
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0f7196c2a9cab4697d49976a9b84ca
+      internalID: -442776457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_107
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2560
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb667e03f1c928041b748fa753bfde3a
+      internalID: 469824625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_108
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2498
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c11b141543c75246812612236858cf5
+      internalID: 1737944687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_109
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2498
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45797622a04cd5048b86c8a62eb52b29
+      internalID: -1816755692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_110
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2498
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bed775036e8e9a44b86d094ea168bad
+      internalID: 1334419273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_111
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2498
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3142fae9c575bff4ca8fbce5eb68b63f
+      internalID: 2017143321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_112
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2498
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3f6b3e3cd51c44492a3125ebd1d345
+      internalID: 1403464172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_113
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2498
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e216d40776ac22a46b77423754929c82
+      internalID: 677554954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_114
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2433
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acb600e06f600448b4ae9fe0a332f89
+      internalID: -540442750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_115
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2433
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c4dbf4b771f59409fc695a8b4a5e0e
+      internalID: -804520642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_116
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2433
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6895e86163020b440bd9db30d95838a6
+      internalID: 769287829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_117
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2433
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa24deb0c61249438de4f12f09f0601
+      internalID: 1521536622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_118
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2433
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554f8c45ed6a6e84ca512e907b7f6ef1
+      internalID: -812656620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_119
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2433
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8809d735f37452148a9e12daaa6f090f
+      internalID: 1325727693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_120
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2369
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6d55118c5fbe44eabb32857af82de3
+      internalID: -1153815477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_121
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2366
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0b62027ac47be49b4cb6b8960473f4
+      internalID: -1370445766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_122
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2366
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07304190e6370445971b5e45cb6c619
+      internalID: -352206016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_123
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2366
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cea5316eabd8c49bdfcd6ded359f9c
+      internalID: 942485818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_124
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2366
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed01adcdfb982845960bb6e5281e972
+      internalID: 1265742738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_125
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2366
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df5df4fa98bfd04abf1b61ba0414645
+      internalID: 841151356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_126
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2366
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00b5e1e799ccec40abde2de2009af0a
+      internalID: -1730171882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_127
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2366
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfab70a41a0d235458ac57dacc55173e
+      internalID: -1543823051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_128
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 2366
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8265f26572efcbd49b7d328c0cb65eae
+      internalID: 641726290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_129
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 2366
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f498292ec13585648aece370636f8885
+      internalID: 343589193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_130
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 2366
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22272918a60988e4e8f169bd8240b817
+      internalID: -2016358994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_131
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2366
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7b9d9be76f604468c0e84a369b1aea
+      internalID: 2027469361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_132
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 2366
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddbfa6b88f260744907b1fd6b5cbf10
+      internalID: -524269324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_133
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2305
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8492630b7946d094d8951944d931cc3f
+      internalID: 1219660731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_134
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2305
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93559dfcbbd984d4cb7d1056458dc9e8
+      internalID: 1795320550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_135
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2305
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515bc0cb68f97ef4a94caa50ca86c9b5
+      internalID: -1347064751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_136
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2305
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c96d463804002544b926467835bcbad
+      internalID: 532968723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_137
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 2305
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b228884b51b0d143aff78f8f36bf9d0
+      internalID: 886418674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_138
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2305
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a810fc5254eff0c4eb0cf5bc2bd217dd
+      internalID: 388912979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_139
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2305
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257c770c06ae7af46940a14e92a81267
+      internalID: 605256301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_140
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2305
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c394292c6cd4e4f40a6b48288535dbc4
+      internalID: 1297384226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_141
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 2305
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dec6fa4a55556b4ea87ba6fb816a694
+      internalID: 323725394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_142
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2305
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72ef617b8311db4d8e1a7727d6853f7
+      internalID: 833727042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_143
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 2305
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d38e36a48b3b9b42acb456d1a68e7dd
+      internalID: 2077495505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_144
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2305
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddaf29bba7c7864e933740043b7e359
+      internalID: -1243840826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_145
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2305
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cae8c0710229349bf31bfa9647eb57
+      internalID: 48946204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_146
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2241
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c7e42589f6de04dbe91b33b1a673ec
+      internalID: 931446483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_147
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2239
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c5a3be9b206854c811e997aebd36c0
+      internalID: -547401746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_148
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2241
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4121fd453cc916449b194e77c2c4908
+      internalID: -346475675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_149
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2241
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af86e77a47b31e743807485b9ec9772e
+      internalID: -1503408832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2241
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbc3b6d0bd57da4184c6971218f21b2
+      internalID: 1686290178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_151
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2241
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1b3d33d299f6545a6dd309a54455d1
+      internalID: -1167686953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_152
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 2241
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00f45d7470770a4b9d09ca2b388f074
+      internalID: -1440693108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_153
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2241
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b6b1d0269156b409076d5114c89d93
+      internalID: 1265685369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_154
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2241
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2149114585a24e74993f9c3e6a506f73
+      internalID: -910384047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_155
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 2241
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4006344a7e57e56428dce001eadafeac
+      internalID: -137477601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_156
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2241
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864f764e1bcc0bf4c8f78698e86df79f
+      internalID: 1475115163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_157
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2241
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c27a6c1a9482a40ada6e70980605c4
+      internalID: 136696883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_158
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 2241
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5350083f92ed6a439b72c20f63e8fcc
+      internalID: -1430175715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_159
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2177
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b64b87c6c1ae94287db0ccbc528b85
+      internalID: 22053936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_160
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2177
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087ed499f3e3c69478c233ddb071e9f6
+      internalID: -2052639441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_161
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2177
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d440ad94ced4dde4ab54d85a74dcaea5
+      internalID: 1520576376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_162
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2177
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe585ad17b1c8b45856008c02a55d99
+      internalID: 461273612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_163
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2177
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bd4cdae672fa447b23501ae2193c72
+      internalID: -1764253036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_164
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2177
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f37eb568bf027b4c8f99d09f0d24b21
+      internalID: -1852833489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_165
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2177
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb86eb591ff4fe4c99bb93259a93df4
+      internalID: -472635327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_166
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 2177
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff8c55a38aafe342908fb07456b30ef
+      internalID: 1607667977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_167
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 2177
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e72a8c388218e43b77fc76d5f949f0
+      internalID: 1352437701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_168
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 2177
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739040ce9669e274fa69440edf7fd190
+      internalID: 345205100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_169
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 2177
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618eb35aba679e549b7a602e7b105dd3
+      internalID: -927345953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_170
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 2177
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcb535327274ab4ca92b4bb324d2e3e
+      internalID: 1589793799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_171
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 2177
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63293f5bbf187254ba9358b054d08302
+      internalID: -65015577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_172
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2113
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87079a02b5984124eaa63efa5dcd47ce
+      internalID: 1266317792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_173
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2113
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f3bb4fe8dbe9e4eabb3d1d0886a124
+      internalID: 1658507118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_174
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2113
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3505cd5064eb264fa58fce2d24355df
+      internalID: 784119969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_175
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2113
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8259ce274a95b45a4eb5c3ed358821
+      internalID: -2041081954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_176
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2114
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f3b5c0990a270469b5f29b59365ea5
+      internalID: -784739550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_177
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2111
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20522b8c7f26804b9dd4bf3abbd1515
+      internalID: -330471037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_178
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2050
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c54039f63e61b4c88bbea4b09bb473
+      internalID: -1993983933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_179
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2049
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325ee643955c5b54e88a26c254e35301
+      internalID: 155402797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_180
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2052
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53739efac3b5ec408cc0636f82fe189
+      internalID: 447323026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_181
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2050
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b8747300148374d9988fa53dc7d6f0
+      internalID: 1730367282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_182
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2049
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94a1c7a491a3d146874d99f80083128
+      internalID: 1329949198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_183
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2052
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34219d09d8217a04190328f0b185a921
+      internalID: 1834823628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_184
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1985
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57409615ba6910547b15898ea560fa6d
+      internalID: 164562363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_185
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1985
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289eeafd89553ee42957a50dae4ec815
+      internalID: 975612162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_186
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1920
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6926a9821183f14fb9e579dd37123a3
+      internalID: 969045672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_187
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1920
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa2f1802f76b8845a8717454309de3f
+      internalID: 946539141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_188
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1856
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee40ae2c7eda5e4cb29ad2609865a31
+      internalID: 308828153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_189
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1856
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370af051c8182fa44b36565ae46b67ee
+      internalID: -1078222367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_190
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1792
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c606c906eaca8284ba9f622a080e3f7b
+      internalID: 1116326413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_191
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1792
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a98e110575fd74dac256f47a03824c
+      internalID: 16215506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_192
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1728
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f33c1ea376ec084d9c3ff215c145b10
+      internalID: -800414178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_193
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1728
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de44f41fdf7e41d42ace0bf169913e2c
+      internalID: -577543656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_194
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1730
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd93e3f5221ec944c8de75e3af65f907
+      internalID: 1881704456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_195
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1736
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e9ccd0a4f387643b13dc8489205222
+      internalID: 1358393236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_196
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1733
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9561a1a5742235498144f1e42f11bda
+      internalID: -1120043026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_197
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1664
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f014ac7341ba49f4996a7c9b84890a56
+      internalID: -464876670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_198
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1664
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81adb35db693dba418841aa900191f53
+      internalID: 1378560190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_199
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1667
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd0eb40830ef944ba41a3665a14e574
+      internalID: 1721529817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_200
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1667
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3f5e6e749979c48aa2d69179ee3756
+      internalID: -205035808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_201
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1664
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1b4ef6f68eca94294a07eb2ee4f849
+      internalID: 783248479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_202
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1601
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b8f1dd06721ba439d020940500d38c
+      internalID: 2131894134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_203
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1601
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cf371f0b91b984db266535755aa3da
+      internalID: -92513068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_204
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1603
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97553d58ca944c42ad61ea2d900ff2f
+      internalID: -52120487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_205
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1607
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7907e3c569fa104088504383ea709c3
+      internalID: -1637626984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_206
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1603
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d1d3c9447d3264a8b1aec0be084c33
+      internalID: -1174836276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_207
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1537
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f92cc5b4d8814f4e957abc407aa5f68
+      internalID: -1075669757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_208
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1537
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaf570bcb023c542a7a0b0778064a89
+      internalID: 2018259237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_209
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1539
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf34234f35e869438d9c43c1fe1f0ea
+      internalID: 594225199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_210
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1539
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c870d8a2cff8f34bb8ec7133d3fbbdb
+      internalID: -2012883724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_211
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1537
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0c71ae1e7e5c44f838e6b29580be99
+      internalID: 1169984964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_212
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1473
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f07c122d769f5a40a83e87a53f9f5d7
+      internalID: 1395100463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_213
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1473
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3423a4792d5e4b34f8d2666a0f417c2e
+      internalID: 1896935766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_214
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1483
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab314df8e6977b45b9fe10c7e1b3d0c
+      internalID: 100966321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_215
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1409
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167f42f97dc25024bb8614a2613f8358
+      internalID: -601221213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_216
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1409
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4a474fedde32a4eb43defc8d5ec968
+      internalID: 1969738071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_217
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1411
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02445c7e201f82b459565ca497d240bf
+      internalID: -1656714214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_218
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1345
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c8180bf9a348548a8989af49d2d583
+      internalID: 1197964939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_219
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1345
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e5e78ddc5214b4492ccd4b3aeb82bf
+      internalID: -2054105257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_220
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1345
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061b47bb47d3fb04fa45736ba1234648
+      internalID: 111378869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_221
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1283
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b40932a30194fb4699f6506c2bff31a
+      internalID: -654917211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_222
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1281
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c4018230bc03d4eb24548d043f1760
+      internalID: 561061386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_223
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1283
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f6e5808a0504a4baa0ca4cf98ebdf7
+      internalID: 332542578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_224
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1217
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b556aea00676d04bb4c55e06836bfa4
+      internalID: 860705251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_225
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1217
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da50ee16838e9c44cbc60d43a86a09b3
+      internalID: 1587720839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_226
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1217
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab107b3a0ab29e64dbbd03b5589e204b
+      internalID: -414866898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_227
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1153
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce94a155af5f3314fb7010a0fe37759a
+      internalID: 815611730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_228
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1153
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d08fe29c46c594c91ed6e48e8a5df6
+      internalID: -1828846804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_229
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1153
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426cc513cd96c4a48b986c9d628e3be2
+      internalID: 372664246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_230
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1088
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d9cc9160768744fb37caa62b6465b4
+      internalID: -1720507270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_231
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1088
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a344dbff07ae2c848bb7b21ca17ee556
+      internalID: 1793130656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_232
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1088
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9d3aa650bec974b87b4f55c6e32898
+      internalID: -1619819050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_233
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1024
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395a7305671628f4b8f6ea3967927ddb
+      internalID: 1288041656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_234
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1024
+        width: 22
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f6c2ba852ea1b4eb3568563f409460
+      internalID: -1156095423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_235
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1024
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1466e3ab54503454180b960e0b8481ea
+      internalID: -1817427099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_236
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 962
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1301a142a8f5f47a1da905d43efd99
+      internalID: -1911907995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_237
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 959
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7249e3e08606494797697c77489900b
+      internalID: 942974344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_238
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 959
+        width: 23
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46424d757a2de4c4392572bf13c14b39
+      internalID: 1759464965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_239
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 959
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4fc7d189af43a4888bc88b84d979fb
+      internalID: 920731256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_240
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 962
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96495b032d27f5d48a23c7103f8addeb
+      internalID: 1162040996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_241
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 959
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c34d8b698598c848b3a000ec6dc1639
+      internalID: -1645476794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_242
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 959
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c731267982aec429e43d3a46742720
+      internalID: 1940587768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_243
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 959
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0597fb1fa91ee94fa7740aa2f02c42c
+      internalID: -1151140950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_244
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 896
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1804180a131f4469fe79fc757ca8ee
+      internalID: 213054785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_245
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 896
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b7538dd44581d42b2b8a720ce3b234
+      internalID: 2085011038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_246
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 896
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a7be22eae99944b8db51876d869899
+      internalID: -1042430332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_247
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 899
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc09446de9a8914ab96315535eb2a05
+      internalID: 1775081345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_248
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 896
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eee36d3e48098f41a95dd3f2940d02d
+      internalID: -805735457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_249
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 896
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657179f15175ea745a32e73413865a16
+      internalID: -179409197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_250
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 896
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f791193e63487242a5de5be98567a44
+      internalID: 533337719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_251
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 899
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafcbe6b64bc20642b45b1ce84f67f29
+      internalID: 898401190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_252
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 830
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cef81b48e50b34980fca96b0bb9d64
+      internalID: 646543812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_253
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 830
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668409d9c9e9e8b4b953d484bd743a89
+      internalID: 1858798086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_254
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 832
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14aec356f8bcab47b7a1083e76a477e
+      internalID: 1073173727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_255
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 835
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cd8b15d0e36b747aed03e9e57eee64
+      internalID: 1311998366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_256
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 830
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a6198bd7e8aaf48ad5a5ee7a8481c3
+      internalID: -377442988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_257
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 830
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be66e56a35441a478feb66df70ce744
+      internalID: 1013569421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_258
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 832
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87abac058a119bd4e837aa7aab2614b0
+      internalID: 1571862492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_259
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 835
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9f6102d8ea5ba489729ea94dcd26eb
+      internalID: 1576414434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_260
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 770
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba7ea86e04adbc4bb739cfa3ba103e3
+      internalID: -672235140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_261
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 770
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50340ba628048e54db1d7500139d8f26
+      internalID: 1014259363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_262
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 770
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b32f1298bdf1b4c87a7bc1d6f46e03
+      internalID: 6918326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_263
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 771
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7989011f08bc91e419c6a1c8b1dfaaca
+      internalID: 917622205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_264
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 770
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9c970531328c443b3810051992c3ed
+      internalID: 1877807398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_265
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 770
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122a5c84148976e459ed057369f4997d
+      internalID: 518371523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_266
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 768
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9d273baffdc114196735d35859e9ea
+      internalID: 259868514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_267
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 771
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7db2ff7a857284e93ea8f41bd6f55a
+      internalID: -394581564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_268
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 705
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f062d316887f656458e6ea93b5a70b05
+      internalID: -582537575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_269
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 705
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e2159e0fc26f4fac8c865de62abeb
+      internalID: -373714977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_270
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 641
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043c86182d498cd45989bc112867b97d
+      internalID: -1095135759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_271
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 641
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee96b9e1c68e2f649aa7a45e14fc0836
+      internalID: 83331614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_272
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 575
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104c966152a69654b96e3ad2d0ad557d
+      internalID: -769425286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_273
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 575
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbd59af84e333247acb943ff10ca635
+      internalID: 1673539590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_274
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 513
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f1600db08124748b52a26f0cd3a73c
+      internalID: -611613560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_275
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 513
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631ef1cc46001b64398f3b16b52fe662
+      internalID: 1154603094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_276
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 447
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bc049444980aa4aa07d7afb0a2c187
+      internalID: -184138571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_277
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 449
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b821e4ae552e565409c2d14672459c0c
+      internalID: 740634301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_278
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 449
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb8a2153bf547043aff3d8eb4770ae3
+      internalID: 1309873005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_279
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 449
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295db3a37b8360747bbce3c2e237a57e
+      internalID: -1857578856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_280
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 449
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae22f2a0d2dfa6e46bfc952a9285e4a4
+      internalID: -1719511656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_281
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 449
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029eee7ddb8434b4284ed2604c7b5d0f
+      internalID: -1605436549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_282
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 449
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbaf9a3730a41a84db80a368f0a293d0
+      internalID: 1090366892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_283
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 449
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4812ce42fb648104293ffb74aa687697
+      internalID: -249612077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_284
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 449
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7524cd69e2d362948a56258dc7dfd87b
+      internalID: -570490903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_285
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 449
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6c8cfa703070f45b264846e90ca7a0
+      internalID: -266746347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_286
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 449
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15563b8159a1cd64f9b9c6c0384b211e
+      internalID: -2103596408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_287
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 449
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7a45fd65759984392f3029c3007bf5
+      internalID: -916013896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_288
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 449
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750d36065573316408f63c5e4a543676
+      internalID: -974388406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_289
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 385
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba45bed696d3f3418b0a53035293c9e
+      internalID: 1606616624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_290
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 385
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb33efa2933d684b8b32a9233c8c2ba
+      internalID: -1810025105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_291
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 385
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aeae4955d8068646b9cfe4ed68b44e5
+      internalID: -1081068909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_292
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 385
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab239fb173e2c740a7dcdf3b8c9ee55
+      internalID: 79758665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_293
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 385
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6705e2468447b42b4765530a847eef
+      internalID: 1549079890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_294
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 385
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cc269a6c28d634aa060b220660f92e
+      internalID: 455261008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_295
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 385
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a714ec1c90341b459950a589d0a233f
+      internalID: 1590144284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_296
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 385
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a513ebe2d1aef4ebcdc732731158d1
+      internalID: -1430164845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_297
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 385
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20ec27e08d146941b8608384cceec14
+      internalID: 1139724893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_298
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 385
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4875076f278df1645b59b17585fb8e10
+      internalID: 468531111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_299
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 385
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6050e3c9113adf14b8484470fde57f56
+      internalID: -854780889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_300
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 385
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fb8dc1be468dc4fb2d190a820fa0fb
+      internalID: 898395039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_301
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 385
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b383d75c93a255449a47bdff2a44c17
+      internalID: -383526702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_302
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 319
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b654da974c9f1a64ab1e0494bfb145f3
+      internalID: 60563306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_303
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 319
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6247cf20c7f5847bf7f54bb3b28164
+      internalID: -476389621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_304
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 319
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e524e5f9fe684c54aa9a911eef6383b6
+      internalID: -593659827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_305
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 319
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ee4538c9a30ca47abba7af63ed5f3e
+      internalID: -1359276262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_306
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 319
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c3e1c2e729421418d8060dfbea01e5
+      internalID: -1736816056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_307
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 319
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a84b47022adbd4409dfd2861ce744a6
+      internalID: 238588790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_308
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 319
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c3d666da3a97942b625bff8fcf9a7f
+      internalID: -276225875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_309
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 319
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3e58c5f862fa54ab6bbd6613440088
+      internalID: -1887301944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_310
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 319
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048763da667dbd84dacd685e9dd9fabe
+      internalID: 1568871486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_311
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 319
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae3a836986604d45b29fc3f0bbd5e1b
+      internalID: 1250018907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_312
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 319
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2fecfbe653bae4cbac9961dd62c76e
+      internalID: 438126538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_313
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 319
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64ec98edbb857b48a683802965c0ea9
+      internalID: 1096400562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_314
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 319
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dc6009739d88d4faadc42cefde9c7b
+      internalID: -891783134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_315
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 257
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5601392d3db3e439a4d272555fc6e0
+      internalID: -564746560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_316
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 257
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea73db3c253500e4f825620cf34cf667
+      internalID: -590277568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_317
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 257
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1c8c3a03102f84ba302fd5f56103b4
+      internalID: -1897374838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_318
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 257
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6a37e83ee4f354c880c7b20a04b1b5
+      internalID: -1324659776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_319
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 257
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6594a66e147100e419e0c1a8fad0a8f1
+      internalID: -1517921995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_320
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 257
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67f3d99f0c8eb747a418f8e53db80e1
+      internalID: -791595346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_321
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 257
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb07f1f09a03ffa4998ec300f751c276
+      internalID: 1169174320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_322
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 257
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc769683b32ad4a4f8153970769aa3a1
+      internalID: 598099596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_323
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 257
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06f8263965d41a4a9ea7b66c7bcfe50
+      internalID: -819630775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_324
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 257
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1ee7aab7b7c2646a7c323496ae41e6
+      internalID: 1745366530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_325
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 257
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6d8dcf69dbb1f4bb572e13bad52bff
+      internalID: -1002455746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_326
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 257
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77418794a02a4744bf1fa30ba2e8fdd
+      internalID: -761051161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_327
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 257
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c150678fcf6cd42a8ebcc99533a1f2
+      internalID: 758354624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_328
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 192
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694af4e159169a949b1b487d8fe459a6
+      internalID: 1158682566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_329
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 192
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98976e6387854b4ba13a9e7e01ce90f
+      internalID: -1666749519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_330
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 194
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8ecbc89e8a92441929cfab8c6c2812
+      internalID: -139257807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_331
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 194
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d81e5446cbb4f3438c18d78e9ddc04e
+      internalID: -827272351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_332
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 194
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7677516a0e8b324492eef634327caaf
+      internalID: 1540495603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_333
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 192
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d71a4ee5090e5741a22355218788618
+      internalID: -1465985767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_334
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 128
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb83055b7b3bdf644a219f6f245bd82a
+      internalID: -2003368483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_335
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 128
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90760d84143e0684e899e0ac6a9cba5c
+      internalID: 1544964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_336
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 128
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726ce53c650a8cb46a392c6051922dd2
+      internalID: -2006189770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_337
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2cdd6d4f29d914188280451b769582
+      internalID: 1621450707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_338
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d7924e74fca03418cc4c0be5bf070b
+      internalID: 169571055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_339
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 128
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271c63b22206cf64fbd277dc5b92c1ca
+      internalID: -1215002562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_340
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 64
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67eada0869aada448985ccd1bdbae6f9
+      internalID: 169150027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_341
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 64
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccfe761387c1ad4b8ec83c542ab3954
+      internalID: 938507541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_342
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 64
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0960ba3b0a7222b499deeb607d47d391
+      internalID: -1694854718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_343
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 64
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d025d302206d0894e9128695b3b7e01f
+      internalID: -924548666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_344
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 64
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f984c8a88a6e11448a980dfd08558853
+      internalID: -335303957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_345
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15636b7cec649448ab4d97505398bbc
+      internalID: 364595730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_346
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3b3a5ee6d5359418b5510032a78263
+      internalID: 159561642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_347
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155ef180ca22444489e1f1b9697e1bba
+      internalID: -1426868681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_348
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d784f9155121cdf419807ad8adfbb98e
+      internalID: -550458573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_349
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf708adf4d775843b4916dd0c01258b
+      internalID: -1545887369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_350
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e011891969ac64f8037a36a665cd07
+      internalID: -1289618045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wanderingman_tutorial_351
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5da3c564f47fa040930d0837476530e
+      internalID: -1152798955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wanderingman_tutorial_0: -1431928270
+      wanderingman_tutorial_1: 400016873
+      wanderingman_tutorial_10: -1398531748
+      wanderingman_tutorial_100: -1228539077
+      wanderingman_tutorial_101: 1358149012
+      wanderingman_tutorial_102: 1186599363
+      wanderingman_tutorial_103: 1011321694
+      wanderingman_tutorial_104: -266805842
+      wanderingman_tutorial_105: 746189522
+      wanderingman_tutorial_106: -442776457
+      wanderingman_tutorial_107: 469824625
+      wanderingman_tutorial_108: 1737944687
+      wanderingman_tutorial_109: -1816755692
+      wanderingman_tutorial_11: 979871214
+      wanderingman_tutorial_110: 1334419273
+      wanderingman_tutorial_111: 2017143321
+      wanderingman_tutorial_112: 1403464172
+      wanderingman_tutorial_113: 677554954
+      wanderingman_tutorial_114: -540442750
+      wanderingman_tutorial_115: -804520642
+      wanderingman_tutorial_116: 769287829
+      wanderingman_tutorial_117: 1521536622
+      wanderingman_tutorial_118: -812656620
+      wanderingman_tutorial_119: 1325727693
+      wanderingman_tutorial_12: 1364806461
+      wanderingman_tutorial_120: -1153815477
+      wanderingman_tutorial_121: -1370445766
+      wanderingman_tutorial_122: -352206016
+      wanderingman_tutorial_123: 942485818
+      wanderingman_tutorial_124: 1265742738
+      wanderingman_tutorial_125: 841151356
+      wanderingman_tutorial_126: -1730171882
+      wanderingman_tutorial_127: -1543823051
+      wanderingman_tutorial_128: 641726290
+      wanderingman_tutorial_129: 343589193
+      wanderingman_tutorial_13: 101886701
+      wanderingman_tutorial_130: -2016358994
+      wanderingman_tutorial_131: 2027469361
+      wanderingman_tutorial_132: -524269324
+      wanderingman_tutorial_133: 1219660731
+      wanderingman_tutorial_134: 1795320550
+      wanderingman_tutorial_135: -1347064751
+      wanderingman_tutorial_136: 532968723
+      wanderingman_tutorial_137: 886418674
+      wanderingman_tutorial_138: 388912979
+      wanderingman_tutorial_139: 605256301
+      wanderingman_tutorial_14: -1379632359
+      wanderingman_tutorial_140: 1297384226
+      wanderingman_tutorial_141: 323725394
+      wanderingman_tutorial_142: 833727042
+      wanderingman_tutorial_143: 2077495505
+      wanderingman_tutorial_144: -1243840826
+      wanderingman_tutorial_145: 48946204
+      wanderingman_tutorial_146: 931446483
+      wanderingman_tutorial_147: -547401746
+      wanderingman_tutorial_148: -346475675
+      wanderingman_tutorial_149: -1503408832
+      wanderingman_tutorial_15: 641362101
+      wanderingman_tutorial_150: 1686290178
+      wanderingman_tutorial_151: -1167686953
+      wanderingman_tutorial_152: -1440693108
+      wanderingman_tutorial_153: 1265685369
+      wanderingman_tutorial_154: -910384047
+      wanderingman_tutorial_155: -137477601
+      wanderingman_tutorial_156: 1475115163
+      wanderingman_tutorial_157: 136696883
+      wanderingman_tutorial_158: -1430175715
+      wanderingman_tutorial_159: 22053936
+      wanderingman_tutorial_16: -1322771830
+      wanderingman_tutorial_160: -2052639441
+      wanderingman_tutorial_161: 1520576376
+      wanderingman_tutorial_162: 461273612
+      wanderingman_tutorial_163: -1764253036
+      wanderingman_tutorial_164: -1852833489
+      wanderingman_tutorial_165: -472635327
+      wanderingman_tutorial_166: 1607667977
+      wanderingman_tutorial_167: 1352437701
+      wanderingman_tutorial_168: 345205100
+      wanderingman_tutorial_169: -927345953
+      wanderingman_tutorial_17: -651105683
+      wanderingman_tutorial_170: 1589793799
+      wanderingman_tutorial_171: -65015577
+      wanderingman_tutorial_172: 1266317792
+      wanderingman_tutorial_173: 1658507118
+      wanderingman_tutorial_174: 784119969
+      wanderingman_tutorial_175: -2041081954
+      wanderingman_tutorial_176: -784739550
+      wanderingman_tutorial_177: -330471037
+      wanderingman_tutorial_178: -1993983933
+      wanderingman_tutorial_179: 155402797
+      wanderingman_tutorial_18: 1289768253
+      wanderingman_tutorial_180: 447323026
+      wanderingman_tutorial_181: 1730367282
+      wanderingman_tutorial_182: 1329949198
+      wanderingman_tutorial_183: 1834823628
+      wanderingman_tutorial_184: 164562363
+      wanderingman_tutorial_185: 975612162
+      wanderingman_tutorial_186: 969045672
+      wanderingman_tutorial_187: 946539141
+      wanderingman_tutorial_188: 308828153
+      wanderingman_tutorial_189: -1078222367
+      wanderingman_tutorial_19: -538399952
+      wanderingman_tutorial_190: 1116326413
+      wanderingman_tutorial_191: 16215506
+      wanderingman_tutorial_192: -800414178
+      wanderingman_tutorial_193: -577543656
+      wanderingman_tutorial_194: 1881704456
+      wanderingman_tutorial_195: 1358393236
+      wanderingman_tutorial_196: -1120043026
+      wanderingman_tutorial_197: -464876670
+      wanderingman_tutorial_198: 1378560190
+      wanderingman_tutorial_199: 1721529817
+      wanderingman_tutorial_2: -979887364
+      wanderingman_tutorial_20: -282816664
+      wanderingman_tutorial_200: -205035808
+      wanderingman_tutorial_201: 783248479
+      wanderingman_tutorial_202: 2131894134
+      wanderingman_tutorial_203: -92513068
+      wanderingman_tutorial_204: -52120487
+      wanderingman_tutorial_205: -1637626984
+      wanderingman_tutorial_206: -1174836276
+      wanderingman_tutorial_207: -1075669757
+      wanderingman_tutorial_208: 2018259237
+      wanderingman_tutorial_209: 594225199
+      wanderingman_tutorial_21: -1607494564
+      wanderingman_tutorial_210: -2012883724
+      wanderingman_tutorial_211: 1169984964
+      wanderingman_tutorial_212: 1395100463
+      wanderingman_tutorial_213: 1896935766
+      wanderingman_tutorial_214: 100966321
+      wanderingman_tutorial_215: -601221213
+      wanderingman_tutorial_216: 1969738071
+      wanderingman_tutorial_217: -1656714214
+      wanderingman_tutorial_218: 1197964939
+      wanderingman_tutorial_219: -2054105257
+      wanderingman_tutorial_22: -1460758352
+      wanderingman_tutorial_220: 111378869
+      wanderingman_tutorial_221: -654917211
+      wanderingman_tutorial_222: 561061386
+      wanderingman_tutorial_223: 332542578
+      wanderingman_tutorial_224: 860705251
+      wanderingman_tutorial_225: 1587720839
+      wanderingman_tutorial_226: -414866898
+      wanderingman_tutorial_227: 815611730
+      wanderingman_tutorial_228: -1828846804
+      wanderingman_tutorial_229: 372664246
+      wanderingman_tutorial_23: -559751361
+      wanderingman_tutorial_230: -1720507270
+      wanderingman_tutorial_231: 1793130656
+      wanderingman_tutorial_232: -1619819050
+      wanderingman_tutorial_233: 1288041656
+      wanderingman_tutorial_234: -1156095423
+      wanderingman_tutorial_235: -1817427099
+      wanderingman_tutorial_236: -1911907995
+      wanderingman_tutorial_237: 942974344
+      wanderingman_tutorial_238: 1759464965
+      wanderingman_tutorial_239: 920731256
+      wanderingman_tutorial_24: -1584086293
+      wanderingman_tutorial_240: 1162040996
+      wanderingman_tutorial_241: -1645476794
+      wanderingman_tutorial_242: 1940587768
+      wanderingman_tutorial_243: -1151140950
+      wanderingman_tutorial_244: 213054785
+      wanderingman_tutorial_245: 2085011038
+      wanderingman_tutorial_246: -1042430332
+      wanderingman_tutorial_247: 1775081345
+      wanderingman_tutorial_248: -805735457
+      wanderingman_tutorial_249: -179409197
+      wanderingman_tutorial_25: -1422514577
+      wanderingman_tutorial_250: 533337719
+      wanderingman_tutorial_251: 898401190
+      wanderingman_tutorial_252: 646543812
+      wanderingman_tutorial_253: 1858798086
+      wanderingman_tutorial_254: 1073173727
+      wanderingman_tutorial_255: 1311998366
+      wanderingman_tutorial_256: -377442988
+      wanderingman_tutorial_257: 1013569421
+      wanderingman_tutorial_258: 1571862492
+      wanderingman_tutorial_259: 1576414434
+      wanderingman_tutorial_26: 29592316
+      wanderingman_tutorial_260: -672235140
+      wanderingman_tutorial_261: 1014259363
+      wanderingman_tutorial_262: 6918326
+      wanderingman_tutorial_263: 917622205
+      wanderingman_tutorial_264: 1877807398
+      wanderingman_tutorial_265: 518371523
+      wanderingman_tutorial_266: 259868514
+      wanderingman_tutorial_267: -394581564
+      wanderingman_tutorial_268: -582537575
+      wanderingman_tutorial_269: -373714977
+      wanderingman_tutorial_27: 1926454772
+      wanderingman_tutorial_270: -1095135759
+      wanderingman_tutorial_271: 83331614
+      wanderingman_tutorial_272: -769425286
+      wanderingman_tutorial_273: 1673539590
+      wanderingman_tutorial_274: -611613560
+      wanderingman_tutorial_275: 1154603094
+      wanderingman_tutorial_276: -184138571
+      wanderingman_tutorial_277: 740634301
+      wanderingman_tutorial_278: 1309873005
+      wanderingman_tutorial_279: -1857578856
+      wanderingman_tutorial_28: 572875632
+      wanderingman_tutorial_280: -1719511656
+      wanderingman_tutorial_281: -1605436549
+      wanderingman_tutorial_282: 1090366892
+      wanderingman_tutorial_283: -249612077
+      wanderingman_tutorial_284: -570490903
+      wanderingman_tutorial_285: -266746347
+      wanderingman_tutorial_286: -2103596408
+      wanderingman_tutorial_287: -916013896
+      wanderingman_tutorial_288: -974388406
+      wanderingman_tutorial_289: 1606616624
+      wanderingman_tutorial_29: -666477388
+      wanderingman_tutorial_290: -1810025105
+      wanderingman_tutorial_291: -1081068909
+      wanderingman_tutorial_292: 79758665
+      wanderingman_tutorial_293: 1549079890
+      wanderingman_tutorial_294: 455261008
+      wanderingman_tutorial_295: 1590144284
+      wanderingman_tutorial_296: -1430164845
+      wanderingman_tutorial_297: 1139724893
+      wanderingman_tutorial_298: 468531111
+      wanderingman_tutorial_299: -854780889
+      wanderingman_tutorial_3: -635979697
+      wanderingman_tutorial_30: -829766640
+      wanderingman_tutorial_300: 898395039
+      wanderingman_tutorial_301: -383526702
+      wanderingman_tutorial_302: 60563306
+      wanderingman_tutorial_303: -476389621
+      wanderingman_tutorial_304: -593659827
+      wanderingman_tutorial_305: -1359276262
+      wanderingman_tutorial_306: -1736816056
+      wanderingman_tutorial_307: 238588790
+      wanderingman_tutorial_308: -276225875
+      wanderingman_tutorial_309: -1887301944
+      wanderingman_tutorial_31: 1080457423
+      wanderingman_tutorial_310: 1568871486
+      wanderingman_tutorial_311: 1250018907
+      wanderingman_tutorial_312: 438126538
+      wanderingman_tutorial_313: 1096400562
+      wanderingman_tutorial_314: -891783134
+      wanderingman_tutorial_315: -564746560
+      wanderingman_tutorial_316: -590277568
+      wanderingman_tutorial_317: -1897374838
+      wanderingman_tutorial_318: -1324659776
+      wanderingman_tutorial_319: -1517921995
+      wanderingman_tutorial_32: 1006879356
+      wanderingman_tutorial_320: -791595346
+      wanderingman_tutorial_321: 1169174320
+      wanderingman_tutorial_322: 598099596
+      wanderingman_tutorial_323: -819630775
+      wanderingman_tutorial_324: 1745366530
+      wanderingman_tutorial_325: -1002455746
+      wanderingman_tutorial_326: -761051161
+      wanderingman_tutorial_327: 758354624
+      wanderingman_tutorial_328: 1158682566
+      wanderingman_tutorial_329: -1666749519
+      wanderingman_tutorial_33: -111372208
+      wanderingman_tutorial_330: -139257807
+      wanderingman_tutorial_331: -827272351
+      wanderingman_tutorial_332: 1540495603
+      wanderingman_tutorial_333: -1465985767
+      wanderingman_tutorial_334: -2003368483
+      wanderingman_tutorial_335: 1544964
+      wanderingman_tutorial_336: -2006189770
+      wanderingman_tutorial_337: 1621450707
+      wanderingman_tutorial_338: 169571055
+      wanderingman_tutorial_339: -1215002562
+      wanderingman_tutorial_34: -469312232
+      wanderingman_tutorial_340: 169150027
+      wanderingman_tutorial_341: 938507541
+      wanderingman_tutorial_342: -1694854718
+      wanderingman_tutorial_343: -924548666
+      wanderingman_tutorial_344: -335303957
+      wanderingman_tutorial_345: 364595730
+      wanderingman_tutorial_346: 159561642
+      wanderingman_tutorial_347: -1426868681
+      wanderingman_tutorial_348: -550458573
+      wanderingman_tutorial_349: -1545887369
+      wanderingman_tutorial_35: 1633406834
+      wanderingman_tutorial_350: -1289618045
+      wanderingman_tutorial_351: -1152798955
+      wanderingman_tutorial_36: 1315490767
+      wanderingman_tutorial_37: -1445654960
+      wanderingman_tutorial_38: 1142759652
+      wanderingman_tutorial_39: -1921905635
+      wanderingman_tutorial_4: -116444034
+      wanderingman_tutorial_40: 105384477
+      wanderingman_tutorial_41: 1967169135
+      wanderingman_tutorial_42: -1595284616
+      wanderingman_tutorial_43: 1918130696
+      wanderingman_tutorial_44: -2132335182
+      wanderingman_tutorial_45: -1336424629
+      wanderingman_tutorial_46: -1733706065
+      wanderingman_tutorial_47: -1787491002
+      wanderingman_tutorial_48: 1635753645
+      wanderingman_tutorial_49: 1873874914
+      wanderingman_tutorial_5: -1741333428
+      wanderingman_tutorial_50: 943901725
+      wanderingman_tutorial_51: 142026750
+      wanderingman_tutorial_52: 1701248784
+      wanderingman_tutorial_53: -769299267
+      wanderingman_tutorial_54: 1906695613
+      wanderingman_tutorial_55: -1325797882
+      wanderingman_tutorial_56: -2055179669
+      wanderingman_tutorial_57: -976940329
+      wanderingman_tutorial_58: 819197211
+      wanderingman_tutorial_59: -209704983
+      wanderingman_tutorial_6: -1662410511
+      wanderingman_tutorial_60: -446852242
+      wanderingman_tutorial_61: -1199057424
+      wanderingman_tutorial_62: -17876318
+      wanderingman_tutorial_63: -2024215906
+      wanderingman_tutorial_64: 133498890
+      wanderingman_tutorial_65: 1570432730
+      wanderingman_tutorial_66: -1262399792
+      wanderingman_tutorial_67: 137858525
+      wanderingman_tutorial_68: 801940536
+      wanderingman_tutorial_69: 1611065430
+      wanderingman_tutorial_7: -1900732856
+      wanderingman_tutorial_70: -408093389
+      wanderingman_tutorial_71: 557728125
+      wanderingman_tutorial_72: 97663599
+      wanderingman_tutorial_73: -242482983
+      wanderingman_tutorial_74: -39716302
+      wanderingman_tutorial_75: 26791903
+      wanderingman_tutorial_76: 1492375981
+      wanderingman_tutorial_77: -542179609
+      wanderingman_tutorial_78: 770062370
+      wanderingman_tutorial_79: 499444941
+      wanderingman_tutorial_8: 1563149228
+      wanderingman_tutorial_80: -332082540
+      wanderingman_tutorial_81: 819682729
+      wanderingman_tutorial_82: 1835288902
+      wanderingman_tutorial_83: -484992227
+      wanderingman_tutorial_84: 1179587005
+      wanderingman_tutorial_85: -827316591
+      wanderingman_tutorial_86: 1522017603
+      wanderingman_tutorial_87: 1474497564
+      wanderingman_tutorial_88: 1013524027
+      wanderingman_tutorial_89: -1068853340
+      wanderingman_tutorial_9: 886495558
+      wanderingman_tutorial_90: -393816797
+      wanderingman_tutorial_91: -369958283
+      wanderingman_tutorial_92: 1321954798
+      wanderingman_tutorial_93: 364605226
+      wanderingman_tutorial_94: 450021680
+      wanderingman_tutorial_95: 1713490622
+      wanderingman_tutorial_96: 575699193
+      wanderingman_tutorial_97: 1772833907
+      wanderingman_tutorial_98: 1988554141
+      wanderingman_tutorial_99: 210429136
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

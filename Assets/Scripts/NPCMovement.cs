@@ -1,208 +1,81 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.AI;
 
-[System.Serializable]
-public class NPCMovement : Movement
+[RequireComponent(typeof(NavMeshAgent))]
+public class NPCMovement : MonoBehaviour
 {
-    public string status;
-    public GameObject pathPointContainer;
-    public List<Transform> pathPoints = new List<Transform>();
-    public Transform currentNode;
+    [Header("AI Settings")]
     public Transform endNode;
+    public string status;
+    [SerializeField]
+    private NavMeshAgent agent;
 
-    private Queue<Transform> currentPath = new Queue<Transform>();
-    
-
-    private void Start()
+    public void Awake()
     {
-        controller = GetComponent<CharacterController>();
-        if (controller == null)
-            Debug.LogError("CharacterController missing on NPC.");
+        
+        
+        
+        if (agent == null)
+        {
+            Debug.LogError("NavMeshAgent missing on NPC.");
+            return;
+        }
 
-        foreach (Transform child in pathPointContainer.transform)
-            pathPoints.Add(child);
-
-        currentNode = GetClosestNode();
-
-        if (currentNode && endNode)
-            SetPathToEnd();
+        // Sync moveSpeed with base class
+        agent.speed = 2;
+        agent.angularSpeed = 120f;
+        agent.acceleration = 2;
+        agent.stoppingDistance = 0.5f;
+        agent.updateRotation = false; // We'll handle flipping manually
     }
 
     private void Update()
     {
-        if (status != "IDLE")
-            MoveWithForce();
+
+        // Flip NPC based on movement direction
+        
+        
+
+
+        // Debug.Log("Remaining: " + agent.remainingDistance);
+        // Move agent along path
+        MoveToTarget(endNode);
+        // if (agent.remainingDistance > agent.stoppingDistance)
+        // {
             
-    }
+        // }
 
-    public override void MoveWithForce()
-    {
-        if (Time.timeScale <= 0) return;
-
-        if (currentNode == null && currentPath.Count == 0) return;
-        
-        // If reached current node, move to next
-        float dist = Vector3.Distance(transform.position, currentNode.position);
-        if (dist < 0.5f)
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            if (currentPath.Count > 0)
-            {
-                currentNode = currentPath.Dequeue();
-                status = "MOVE";
-            }
-            else
-            {
-                status = "IDLE";
-                return;
-            }
-
-        } 
-        
-
-        // Move toward current node
-        Vector3 dir = (currentNode.position - transform.position).normalized;
-        Vector3 move = new Vector3(dir.x, 0, dir.z) * moveSpeed * Time.deltaTime;
-
-        controller.Move(move);
-
-        // Gravity
-        if (!controller.isGrounded)
-            velocity.y += gravity * Time.deltaTime;
-        else
-            velocity.y = -2f;
-
-        controller.Move(velocity * Time.deltaTime);
-
-        // Flip NPC
-        if (dir.x < 0) flip = true;
-        else if (dir.x > 0) flip = false;
-    }
-
-    private void SetPathToEnd()
-    {
-        List<Transform> path = FindShortestPath(currentNode, endNode);
-        Debug.Log($"Generated path length: {path.Count}");
-        
-        foreach (var node in path)
-            Debug.Log("Path node: " + node.name);
-        currentPath = new Queue<Transform>(path);
-        
-    }
-
-    // --- Shortest Path Finder (A*) ---
-    public List<Transform> FindShortestPath(Transform start, Transform goal)
-    {
-        var openSet = new List<Transform> { start };
-        var cameFrom = new Dictionary<Transform, Transform>();
-
-        var gScore = new Dictionary<Transform, float>();
-        var fScore = new Dictionary<Transform, float>();
-
-        foreach (Transform node in pathPoints)
-        {
-            gScore[node] = Mathf.Infinity;
-            fScore[node] = Mathf.Infinity;
+            status = "IDLE";
         }
 
-        gScore[start] = 0;
-        fScore[start] = Heuristic(start, goal);
-
-        while (openSet.Count > 0)
-        {
-            Transform current = GetLowestFScore(openSet, fScore);
-            if (current == goal)
-                return ReconstructPath(cameFrom, current);
-
-            openSet.Remove(current);
-
-            foreach (Transform neighbor in current.GetComponent<PathfinderNode>().neighbors)
-            {
-                float tentativeG = gScore[current] + Vector3.Distance(current.position, neighbor.position) * neighbor.GetComponent<PathfinderNode>().nodeCost;
-                if (tentativeG < gScore[neighbor])
-                {
-                    cameFrom[neighbor] = current;
-                    gScore[neighbor] = tentativeG;
-                    fScore[neighbor] = tentativeG + Heuristic(neighbor, goal);
-
-                    if (!openSet.Contains(neighbor))
-                        openSet.Add(neighbor);
-                }
-            }
-        }
-
-        return new List<Transform>(); // no path found
     }
 
-    private float Heuristic(Transform a, Transform b)
+
+    public void MoveToTarget(Transform target)
     {
-        float dist = Vector3.Distance(a.position, b.position);
-        float bonus = 0f;
-        if (a.CompareTag("Path"))
-            bonus = -10f;
-        
-        return dist + bonus;
+
+        endNode = target;
+        agent.SetDestination(endNode.position);
+        status = "MOVING";
     }
 
-    private Transform GetLowestFScore(List<Transform> openSet, Dictionary<Transform, float> fScore)
+    public void StopMovement()
     {
-        Transform best = openSet[0];
-        float lowest = fScore[best];
-
-        foreach (Transform node in openSet)
-        {
-            if (fScore[node] < lowest)
-            {
-                lowest = fScore[node];
-                best = node;
-            }
-        }
-        
-        return best;
-    }
-
-    private List<Transform> ReconstructPath(Dictionary<Transform, Transform> cameFrom, Transform current)
-    {
-        var totalPath = new List<Transform> { current };
-
-        while (cameFrom.ContainsKey(current))
-        {
-            current = cameFrom[current];
-            totalPath.Insert(0, current);
-        }
-
-        totalPath.RemoveAt(0); // remove starting node
-        return totalPath;
+        if (agent == null) return;
+        agent.ResetPath();
+        status = "IDLE";
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("End"))
         {
-            foreach (Transform child in pathPointContainer.transform)
-                child.GetComponent<PathfinderNode>().wasVisited = false;
-
-            SetPathToEnd(); // recalculate
+            StopMovement();
         }
-    }
-
-    public Transform GetClosestNode()
-    {
-        Transform minNode = null;
-        float minDistLocal = Mathf.Infinity;
-
-        foreach (Transform node in pathPoints)
-        {
-            if (node != null)
-            {
-                float dist = Vector3.Distance(transform.position, node.position);
-                if (dist < minDistLocal)
-                {
-                    minDistLocal = dist;
-                    minNode = node;
-                }
-            }
-        }
-
-        return minNode;
     }
 }

@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI; // ✅ Not UIElements
+using UnityEngine.UI;
 
 public class CheatsheetManager : MonoBehaviour// had to be hardcoded cuz unity was poopy dooping itself :(((
 {

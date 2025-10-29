@@ -11,7 +11,7 @@ public class DayAndNight : MonoBehaviour
     public Transform sunBody;
     public AnimationCurve lightCurve;
     [Range(-90f, 270f)]
-    public float timeInDay;
+    public float timeInDay = 0f;
     private float rotationSpeed = .005f;
     public TextMeshProUGUI timeText;
     [SerializeField]
@@ -22,7 +22,6 @@ public class DayAndNight : MonoBehaviour
         GameObject dateObj = canvas.transform.Find("HideForDialogContainer/GameUIHolder/Bg_Time/Time").gameObject;
         timeText = dateObj.GetComponent<TextMeshProUGUI>();
         timeText.text = "06:00";
-        timeInDay = 0f;
         gameObject.transform.rotation = Quaternion.Euler(0, -90f, -90f);
 
     }
@@ -62,6 +61,11 @@ public class DayAndNight : MonoBehaviour
     }
     public void SetTimeCube()
     {
-        
+
+    }
+    
+    public void SetTimeOfDay(float time)
+    {
+        timeInDay = time;
     }
 }

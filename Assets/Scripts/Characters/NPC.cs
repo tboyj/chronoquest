@@ -12,12 +12,13 @@ public class NPC : Character
     public bool inRange;
     public Inventory playerInventory;
     public QuestHandler questHandler;
+    public NPCMovement movement;
     [Header("NPC AI Systems")]
     [Range(0,100)]
     public int trust = 50;
     public void Start()
     {
-        Initialize("NPC", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
+        Initialize("NPC", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
         movement = gameObject.GetComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
         if (gameObject.GetComponent<QuestHandler>() != null)

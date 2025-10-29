@@ -19,12 +19,13 @@ public class Player : Character, Interaction
     protected ItemInWorld interactableItem;    // Item in the world that can be interacted with or picked up
     protected NPC interactableNPC;             // NPC that can be interacted with
     public bool isUsingItem;
+    public bool isInventorySetup = false;
     // Inventory UI
     protected InventoryGUI guiHandler;         // Inventory GUI logic handler
     public RectTransform hotbarHolder;         // UI container for hotbar slots
     public RectTransform inventoryHolder;      // UI container for inventory slots
     private int indexOfInventoryHover { get; set; } // Index of currently hovered inventory slot
-
+    public PlayerMovement movement;
     // Quest & Dialog Systems
     private QuestManager manager;              // Manages active and completed quests
     public GameObject questPanelContainer;     // UI container for displaying quest panels
@@ -37,10 +38,14 @@ public class Player : Character, Interaction
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, null, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+        Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
-        movement = gameObject.AddComponent<PlayerMovement>();
-        InventorySetup(49);
+        movement = gameObject.GetComponent<PlayerMovement>();
+        if (isInventorySetup == false)
+        {
+            InventorySetup(49);
+            isInventorySetup = true;
+        }
         guiHandler = gameObject.GetComponent<InventoryGUI>();
         heldItem = inventory.GetItemUsingIndex(itemHeld);
         if (heldItem.item != null)
@@ -72,7 +77,7 @@ public class Player : Character, Interaction
         if (heldItem.quantity <= 0 || !isHolding)
         {
             holdingItemManager.Activate(false);
-             // Hide the sprite when quantity is 0
+            // Hide the sprite when quantity is 0
         }
         else
         {
@@ -104,7 +109,7 @@ public class Player : Character, Interaction
             dialogPanel.SetActive(false);
         }
         else if (manager.CurrentlyInDialog())
-            
+
         {
             containerHiddenDuringDialog.SetActive(false);
             inDialog = true;
@@ -114,7 +119,8 @@ public class Player : Character, Interaction
     }
     private void CheckKeyInputInteraction()
     {
-        if (!manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false) {
+        if (!manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
+        {
             if (Input.GetKeyDown(Keybinds.actionKeybind))
             {
                 AttemptInteraction();
@@ -131,8 +137,8 @@ public class Player : Character, Interaction
                 TryDrop();
             }
         }
-            if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
-            { // bummy boy code o-o
+        if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
+        { // bummy boy code o-o
             if (interactableNPC != null)
             {
                 Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
@@ -160,7 +166,7 @@ public class Player : Character, Interaction
                         manager.ChangeFunction();
                     }
                     //manager.GetCurrentQuest().ShowDialog(true);
-                    
+
                 }
                 else
                 {
@@ -179,7 +185,7 @@ public class Player : Character, Interaction
     private void AttemptInteraction()
     {
 
-        
+
         if (interactableItem != null) // picking up items
         {
             if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
@@ -199,27 +205,29 @@ public class Player : Character, Interaction
     private void TryToUse()
     {
         if (isHolding)
-        {  
+        {
             if (reciever != null)
             {
                 heldItem.item.useConnector.Apply(reciever);
-            } else
+            }
+            else
             {
                 heldItem.item.useConnector.ApplyAlone();
             }
         }
     }
-    private void TryDropForItem() {
-    if (heldItem.item != null)
-    if (interactableItem.itemInWorld == heldItem.item)
-        {
-            if (interactableItem.amountOfItemsHere > 0)
+    private void TryDropForItem()
+    {
+        if (heldItem.item != null)
+            if (interactableItem.itemInWorld == heldItem.item)
             {
-                inventory.RemoveOneQuantity(itemHeld);
-                inventory.SetRefresh(true);
-                interactableItem.amountOfItemsHere++;
+                if (interactableItem.amountOfItemsHere > 0)
+                {
+                    inventory.RemoveOneQuantity(itemHeld);
+                    inventory.SetRefresh(true);
+                    interactableItem.amountOfItemsHere++;
+                }
             }
-        }
     }
     private void TryDrop()
     {
@@ -229,7 +237,7 @@ public class Player : Character, Interaction
             {
                 TryDropForItem();
             }
-            else 
+            else
             {
                 Debug.Log("No item found");
             }
@@ -281,7 +289,7 @@ public class Player : Character, Interaction
             itemHeld = updateIndex;
             isHolding = true;
             holdingItemManager.SetSprite(heldItem.item.sprite);
-         // UI Image
+            // UI Image
             Debug.Log($"Held item: {heldItem.item.name} x{heldItem.quantity}");
         }
         // If selecting an invalid or empty slot
@@ -438,7 +446,7 @@ public class Player : Character, Interaction
                 interactableNPC = null;
             }
         }
-        reciever = null; 
+        reciever = null;
     }
     public Item GetHeldItem()
     {
@@ -455,7 +463,7 @@ public class Player : Character, Interaction
     }
     public void InteractionFunction()
     {
-    
+
     }
 
     public void SetInventoryPermission(bool v)
@@ -465,6 +473,11 @@ public class Player : Character, Interaction
     public bool GetInventoryPermission()
     {
         return inventoryInteractionPermission;
+    }
+
+    public void SetEntireInventory(List<Item> items)
+    {
+        inventory.SetInventory(items);
     }
 }
 

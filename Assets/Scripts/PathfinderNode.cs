@@ -13,7 +13,11 @@ public class PathfinderNode : MonoBehaviour
         foreach (var n in neighbors)
         {
             if (n != null)
+            {
                 Gizmos.DrawLine(transform.position, n.position);
+                // Insert raycast. If hit then try a different way?
+            }
+
         }
     }
 }
