@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Materials/papyrusplanr.mat.meta
 guid: e98536f4efb56fa46af983f63e92b6ef
+========
+guid: bdbb9d6b7ab3404478652e75b0b22eed
+>>>>>>>> a3506ef9b943eb0ffe2936a110a11d435742425c:Assets/Scenes/Tutorial/NavMesh-Ground 3.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
