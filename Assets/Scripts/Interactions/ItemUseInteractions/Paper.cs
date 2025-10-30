@@ -26,7 +26,7 @@ public class Paper : BaseUse
             else
             {
                 // GetPlayer().movement.enabled = true;
-                GetPlayer().movement.moveSpeed = 0.45f;
+                GetPlayer().movement.moveSpeed = 1; // <-- This is the movement speed of the player. Find another way to do this lol.
             }
         }
     }

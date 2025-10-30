@@ -79,13 +79,36 @@ public class QuestManager : MonoBehaviour
                 Debug.Log($"CurrentQuest ID: {GetCurrentQuest()?.GetQuestID()}");
                 Debug.Log($"AssignedQuest ID: {questAssigned?.GetQuestID()}");
 
+                if (GetCurrentQuest().IsCompleted == false) // make sure he doesn't have it already;
+                { // quest is assigned but not done.
+                  // i have to check if it's a talking script you know? cuz its flimsy?
+                    if (GetCurrentQuest() is TalkToNPCQuest talkToNPC)
+                    {
+                        if (talkToNPC.npc == interactableNPC && GetCurrentQuest().data.id == talkToNPC.GetQuestID())
+                        {
+                            SetQuestCompleted(GetCurrentQuest());
+                            TryToGiveQuest(interactableNPC, dialogManager); // recall if so;
+                            Debug.Log("You, sir have won the internet today! (Completed.)");
+                        }
+                    }
+                    else // if not this exception... not complete.
+                    {
+                        Debug.Log("Not complete.");
+                    }
+                }
+                // completes GetCurrentQuest if it has most recent quest behind it and if it is ready to go.
+                // at least thats what i hope it does. :grimace:
+
+                // system:
+
+                // assign a talk to quest with id 5 (example id)
+                // assign quest that is given by npc to talk to with same id (eg. 5)
+                // further it along when completed with that
+
 
                 if (GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
                 {
-                    if (GetCurrentQuest().IsCompleted == false) // make sure he doesn't have it already;
-                    { // quest is assigned but not done.
-                        Debug.Log("Not complete.");
-                    }
+                    
 
                     if (GetCurrentQuest().IsCompleted &&
                     questAssigned.IsCompleted)
@@ -126,56 +149,67 @@ public class QuestManager : MonoBehaviour
             }
             Debug.Log(dialogManager.GetPrint());
             if (questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
-            { // add since there is none in quest.
-                questAssigned = npcQuestHandler.GetMostRecentQuest();
-                Debug.Log($"Adding quest {questAssigned.data.questName} with id {questAssigned.data.id}");
-                Debug.Log($"Conditions are {questAssigned.CheckConditions()}.");
-                if (questAssigned.CheckConditions())
+            { // add since there is none in quest. maybe this is where your skipping error happens logically. :P
+                if (questsCompleted.Contains(GetCurrentQuest()))
                 {
-                    Debug.Log("Ignoring conditions |>");
-                    SetQuestCompleted(GetCurrentQuest());
-                    npcQuestHandler.questsInStock.RemoveAt(0);
-                    // Throw here dialog saying good job.
-                    Debug.Log("Dialog for congratulating them");
-                    TryToGiveQuest(interactableNPC, dialogManager);
-                    interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
-                    dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
-                    dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                    Debug.Log("You already did this! I'm Ignoring You. BLOCKED!");
+                    // If you completed this quest already it ignores that.
                 }
-
                 else
                 {
-                    AddQuestToList(questAssigned);
-                    // Throw him into a dialog.
-                    if (GetCurrentQuest().dialogsForQuest.Count > 0)
+                    questAssigned = npcQuestHandler.GetMostRecentQuest();
+                    Debug.Log($"Adding quest {questAssigned.data.questName} with id {questAssigned.data.id}");
+                    Debug.Log($"Conditions are {questAssigned.CheckConditions()}.");
+                    if (questAssigned.CheckConditions())
                     {
-                        GetCurrentQuest().ShowDialog(true);
-                        SetCurrentlyInDialog(true);
-                        interactableNPC.inDialog = true;
+                        Debug.Log("Ignoring conditions |>");
+                        SetQuestCompleted(GetCurrentQuest());
+                        npcQuestHandler.questsInStock.RemoveAt(0);
+                        // Throw here dialog saying good job.
+                        Debug.Log("Dialog for congratulating them");
+                        TryToGiveQuest(interactableNPC, dialogManager);
+                        interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
                         dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
                         dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
+
                     else
                     {
-                        GetCurrentQuest().ShowDialog(false);
-                        SetCurrentlyInDialog(false);
-                        interactableNPC.inDialog = false;
+                        AddQuestToList(questAssigned);
+                        // If conditions are false, add the next quest and throw him into a dialog.
+                        if (GetCurrentQuest().dialogsForQuest.Count > 0)
+                        {
+                            GetCurrentQuest().ShowDialog(true);
+                            SetCurrentlyInDialog(true);
+                            interactableNPC.inDialog = true;
+                            dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                            dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                        }
+                        else
+                        {
+                            GetCurrentQuest().ShowDialog(false);
+                            SetCurrentlyInDialog(false);
+                            interactableNPC.inDialog = false;
+                        }
                     }
                 }
             }
             else if (questsAssigned.Count > 0 && npcQuestHandler.questsInStock.Count > 0)
             {
-                if (questAssigned is TalkToNPCQuest && questAssigned.data.id == GetCurrentQuest().data.id)
-                {
-                    Debug.Log("IDs match and its ready to go.");
+                if (!questsCompleted.Contains(GetCurrentQuest())) {
+                    if (questAssigned.data.id == GetCurrentQuest().data.id)
+                    {
+                        Debug.Log("IDs match and its ready to go.");
+                    }
+                    else
+                    {
+                        // Check if not same npc.
+                        Debug.Log("Quest Assigned in NPC: " + questAssigned.data.id + " Actual: " + GetCurrentQuest().data.id);
+                    }
+                    Debug.Log("Can't assign Quest, One in progress already.");
+                    // hint sys goes here
+                    // }
                 }
-                else
-                {
-                    Debug.Log("Quest Assigned in NPC: " + questAssigned.data.id + " Actual: " + GetCurrentQuest().data.id);
-                }
-                Debug.Log("Can't assign Quest, One in progress already.");
-                // hint sys goes here
-                // }
             }
 
             else
