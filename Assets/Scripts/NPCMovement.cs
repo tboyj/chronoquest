@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -36,13 +37,20 @@ public class NPCMovement : MonoBehaviour
     {
 
         // Flip NPC based on movement direction
-        
-        
+
+
 
 
         // Debug.Log("Remaining: " + agent.remainingDistance);
         // Move agent along path
-        MoveToTarget(endNode);
+        if (status == "QUEST")
+        {
+            MoveToQuest(endNode);
+        }
+        else if (status == "WANDER")
+        {
+            WanderToRandom();
+        }
         // if (agent.remainingDistance > agent.stoppingDistance)
         // {
             
@@ -55,13 +63,18 @@ public class NPCMovement : MonoBehaviour
 
     }
 
+    private void WanderToRandom()
+    {
+        throw new NotImplementedException(); // not done
+        
+    }
 
-    public void MoveToTarget(Transform target)
+    public void MoveToQuest(Transform target)
     {
 
         endNode = target;
         agent.SetDestination(endNode.position);
-        status = "MOVING";
+        status = "QUEST";
     }
 
     public void StopMovement()
