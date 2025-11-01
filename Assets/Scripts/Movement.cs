@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class Movement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed;      // Base movement speed
+    public float moveSpeed = 0.55f;      // Base movement speed
     public float runMultiplier = 1.15f; // Sprint multiplier
     public float gravity = -0.075f;
 
@@ -19,8 +19,8 @@ public abstract class Movement : MonoBehaviour
     protected bool isGrounded;
     public bool flip;
 
-    public float acceleration;   // How fast you gain speed
-    public float deceleration; // How fast you slow down
+    public float acceleration = 5f;   // How fast you gain speed
+    public float deceleration = 6.5f; // How fast you slow down
 
     protected virtual void Awake()
     {

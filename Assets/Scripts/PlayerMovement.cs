@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerMovement : Movement
@@ -15,15 +14,9 @@ public class PlayerMovement : Movement
         isGrounded = controller.isGrounded;
 
         if (isGrounded)
-        {
-            velocity.y = -1f;
-            gravity = -.01f;
-        }// small downward force to keep grounded
+            velocity.y = -1f; // small downward force to keep grounded
         else
-        {
-            gravity -= 0.0175f;
-            velocity.y = gravity;
-        }
+            velocity.y += gravity;
         if (Time.timeScale > 0)
         {
             float x = Input.GetAxis("Horizontal");
@@ -32,20 +25,25 @@ public class PlayerMovement : Movement
             // Clamp input to prevent diagonal speed boost
             Vector3 rawInput = new Vector3(x, 0, z);
             rawInput = Vector3.ClampMagnitude(rawInput, 1f); // ensures max magnitude is 1
-            // Smooth acceleration/deceleration
-            Vector3 input = transform.TransformDirection(rawInput); // already clamped
+
+            Vector3 move = transform.right * rawInput.x + transform.forward * rawInput.z;
+
             float speed = moveSpeed;
             if (Input.GetKey(KeyCode.LeftShift))
                 speed *= runMultiplier;
+
+            controller.Move(move * speed * Time.deltaTime);
+
+            // Smooth acceleration/deceleration
+            Vector3 input = transform.TransformDirection(rawInput); // already clamped
             if (rawInput.magnitude > 0.01f)
             {
-                velocity = Vector3.Lerp(velocity, input * speed, acceleration * Time.deltaTime);
+                velocity = Vector3.Lerp(velocity, input * moveSpeed, acceleration * Time.deltaTime);
             }
             else
             {
                 velocity = Vector3.Lerp(velocity, Vector3.zero, deceleration * Time.deltaTime);
             }
-            
 
             controller.Move(velocity * Time.deltaTime);
 
