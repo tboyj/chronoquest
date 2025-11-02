@@ -21,4 +21,5 @@ public class QuestHandler : MonoBehaviour // for npcs
     {
         return questsInStock;
     }
+    // NOTE: FOR TALKTOQUESTNPC QUESTS, YOU MUST HAVE AT LEAST 1 QUEST AFTER IT. ENDING QUEST STRUCTURES WITH A TALKTONPCQUEST BREAKS IT.
 }

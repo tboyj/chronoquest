@@ -1,7 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using ChronoQuest.Interactions.World;
-public class GateActivator : MonoBehaviour, Interaction
+using ChronoQuest.UIForInteractions;
+public class GateActivator : MonoBehaviour, Interaction, IAvailableActions
 {
     public SpriteRenderer sprite;
     public bool amITurnedOn = false;
@@ -9,14 +10,15 @@ public class GateActivator : MonoBehaviour, Interaction
     [Range(0.5f, float.MaxValue)]
     public float duration = 1f;
     public bool playerInTrigger = false;
-    // public QuestInstance instanceToWaitFor;
+    public QuestInstance instanceToWaitFor;
     public QuestInstance instanceFromPlayer;
     [SerializeField]
     private bool questRequired;
     public Transform affectedObject;
+    private Player player;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
-
+    private bool waitingOnInput;
     void Start()
     {
         sprite = transform.Find("Object").GetComponent<SpriteRenderer>();
@@ -25,18 +27,31 @@ public class GateActivator : MonoBehaviour, Interaction
 
     void Update()
     {
-        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind) && !amITurnedOn && !inDialog  && !pauseCheck.isInventory && !pauseCheck.isPaused)
+        if (playerInTrigger && !amITurnedOn && !inDialog && !pauseCheck.isInventory && !pauseCheck.isPaused)
         {
             if (questRequired)
             {
-                // if (instanceToWaitFor != null && instanceFromPlayer != null)
-                // {
-                //     if (instanceToWaitFor.data.id == instanceFromPlayer.data.id) // ew
-                InteractionFunction();
-                // }
-            } else
+                if (instanceToWaitFor != null && instanceFromPlayer != null)
+                {
+                    if (instanceToWaitFor.data.id <= instanceFromPlayer.data.id)
+                    { // ew
+                        waitingOnInput = true;
+                        if (Input.GetKeyDown(Keybinds.actionKeybind))
+                            InteractionFunction(); // valid
+                    }
+                    else
+                    {
+                        waitingOnInput = false;
+                    }
+                }
+            }
+            else // else ignore
             {
-                InteractionFunction();
+                if (Input.GetKeyDown(Keybinds.actionKeybind))
+                {
+                    InteractionFunction();
+                }
+
             }
         }
     }
@@ -56,6 +71,7 @@ public class GateActivator : MonoBehaviour, Interaction
     private IEnumerator OpenGateRoutine()
     {
         Debug.Log("Gate opening...");
+        ChangeTheUI("");
         sprite.color = Color.red;
         amITurnedOn = true;
         affectedObject.position += Vector3.down * 3;
@@ -67,7 +83,7 @@ public class GateActivator : MonoBehaviour, Interaction
         amITurnedOn = false;
         affectedObject.position += Vector3.up * 3;
     }
-    
+
 
 
     void OnTriggerEnter(Collider other)
@@ -75,24 +91,67 @@ public class GateActivator : MonoBehaviour, Interaction
         if (other.CompareTag("Player"))
         {
             playerInTrigger = true;
+            player = other.GetComponent<Player>();
+            if (!amITurnedOn)
+            {
+                // add functionality to where it shows open/close when needed. thats later though. :)))
+                if (questRequired && waitingOnInput)
+                    ChangeTheUI("[F] Open " + gameObject.name.ToString());
+                else if (!questRequired)
+                    ChangeTheUI("[F] Open " + gameObject.name.ToString());
+            }
             if (other.GetComponent<QuestManager>().GetCurrentQuest() != null)
             {
                 instanceFromPlayer = other.GetComponent<QuestManager>().GetCurrentQuest();
             }
+
         }
     }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInTrigger = true;
+            player = other.GetComponent<Player>();
+            if (!amITurnedOn)
+            {
+                // add functionality to where it shows open/close when needed. thats later though. :)))
+                if (questRequired && waitingOnInput)
+                    ChangeTheUI("[F] Open " + gameObject.name.ToString());
+                else if (!questRequired)
+                    ChangeTheUI("[F] Open " + gameObject.name.ToString());
+            } else
+            {
+                ChangeTheUI("");
+            }
+            if (other.GetComponent<QuestManager>().GetCurrentQuest() != null)
+            {
+                instanceFromPlayer = other.GetComponent<QuestManager>().GetCurrentQuest();
+            }
 
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            ChangeTheUI("");
+            player = null;
             playerInTrigger = false;
             instanceFromPlayer = null;
         }
     }
 
+    public void ChangeTheUI(string str)
+    {
+        if (player != null)
+        {
+            player.interactionPanel.text = str;
+        }
+    }
 
-
-
-
+    public void ChangeTheUI(Item item)
+    {
+        throw new System.NotImplementedException();
+    }
 }

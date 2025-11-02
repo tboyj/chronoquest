@@ -29,7 +29,7 @@ public class NPCMovement : MonoBehaviour
         agent.speed = 2;
         agent.angularSpeed = 120f;
         agent.acceleration = 2;
-        agent.stoppingDistance = 0.5f;
+        agent.stoppingDistance = 0.1f;
         agent.updateRotation = false; // We'll handle flipping manually
     }
 
@@ -43,9 +43,9 @@ public class NPCMovement : MonoBehaviour
 
         // Debug.Log("Remaining: " + agent.remainingDistance);
         // Move agent along path
-        if (status == "QUEST")
+        if (status == "QUEST" || status == "MOVING")
         {
-            MoveToQuest(endNode);
+            MoveToDestination(endNode);
         }
         else if (status == "WANDER")
         {
@@ -66,10 +66,10 @@ public class NPCMovement : MonoBehaviour
     private void WanderToRandom()
     {
         throw new NotImplementedException(); // not done
-        
+
     }
 
-    public void MoveToQuest(Transform target)
+    public void MoveToDestination(Transform target)
     {
 
         endNode = target;

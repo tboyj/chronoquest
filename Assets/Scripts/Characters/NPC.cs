@@ -1,16 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ChronoQuest.UIForInteractions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPC : Character
+public class NPC : Character, IAvailableActions
 {
 
     // public Item itemGiven;
     public bool inRange;
-    public Inventory playerInventory;
+    public Player player;
     public QuestHandler questHandler;
     public NPCMovement movement;
     [Header("NPC AI Systems")]
@@ -76,11 +77,10 @@ public class NPC : Character
         }
         if (other.CompareTag("Player"))
         {
-            playerInventory = other.GetComponent<Inventory>();
+            player = other.GetComponent<Player>();
             inRange = true;
         }
     }
-
     public void OnTriggerExit(Collider other)
     {
         Debug.Log("[TRIGGER EVENT / NPC] Trigger exited by: " + other.name + " Tag: " + other.tag);
@@ -91,7 +91,21 @@ public class NPC : Character
         if (other.CompareTag("Player"))
         {
             inRange = false;
-            playerInventory = null;
+            ChangeTheUI(""); // reset
+            player = null;
         }
+    }
+
+
+    public void ChangeTheUI(string str)
+    {
+        if (player != null)
+            player.interactionPanel.text = str;
+        
+    }
+
+    public void ChangeTheUI(Item item)
+    {
+        
     }
 }

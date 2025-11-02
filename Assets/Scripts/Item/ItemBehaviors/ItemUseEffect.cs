@@ -8,7 +8,7 @@ using UnityEngine;
             
         public virtual void Apply(GameObject target)
         {
-            Debug.Log("We here");
+            
         }
 
         public virtual void ApplyAlone()

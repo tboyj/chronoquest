@@ -34,6 +34,7 @@ public class Player : Character, Interaction
     public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
 
     private bool inventoryInteractionPermission;
+    public TextMeshProUGUI interactionPanel;
 
     public void Start()
     {
@@ -96,6 +97,7 @@ public class Player : Character, Interaction
         {
             if (gameObject.GetComponent<PauseScript>().isPaused == false)
             {
+                
                 CheckForHotbarInput();
 
                 if (inventory.GetRefresh() == true)
@@ -404,48 +406,70 @@ public class Player : Character, Interaction
         {
             if (other.GetComponent<ItemInWorld>() != null)
             {
-                if (other.GetComponent<ItemInWorld>().takeable)
+                if (other.GetComponent<ItemInWorld>().takeable && other.GetComponent<ItemInWorld>().amountOfItemsHere > 0)
                 {
                     interactableItem = other.GetComponent<ItemInWorld>();
+                    interactableItem.ChangeTheUI("[F] Take Item");
                     Debug.Log("Interactable item: " + interactableItem.itemInWorld.name);
                 }
             }
         }
-        else if (other.CompareTag("NPC") && other.GetComponent<NPC>())
+        if (other.CompareTag("NPC"))
         {
-
+            Debug.Log("hello. pls work. :0");
             interactableNPC = other.GetComponent<NPC>();
-
+            interactableNPC.ChangeTheUI("[F] Interact");
         }
-        else if (other.CompareTag("Teleport"))
+        if (other.CompareTag("Teleport"))
         {
             other.GetComponent<TeleportScript>()?.Teleport(gameObject);
         }
-
         reciever = other.gameObject;
         Debug.Log(reciever.name);
     }
-
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Object"))
+        {
+            if (interactableItem != null)
+            {
+                if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
+                {
+                    interactableItem.ChangeTheUI("[F] Take Item");
+                }
+                else
+                {
+                    interactableItem.ChangeTheUI("");
+                }
+            }
+        }
+        reciever = other.gameObject;
+    }
     void OnTriggerExit(Collider other)
     {
-
+        
         if (other.CompareTag("Object"))
         {
             if (interactableItem != null)
             {
                 Debug.Log("Interactable item: (false)" + interactableItem.itemInWorld.name);
+                interactableItem.ChangeTheUI("");
                 interactableItem = null;
             }
 
         }
         if (other.CompareTag("NPC") && other.GetComponent<NPC>())
         {
+
             if (interactableNPC != null)
             {
+                interactableNPC.ChangeTheUI("");
                 Debug.Log("Interactable item: (false)" + interactableNPC.name);
                 interactableNPC = null;
             }
         }
+        
+        
         reciever = null;
     }
     public Item GetHeldItem()

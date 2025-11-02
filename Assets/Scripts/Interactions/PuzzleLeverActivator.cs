@@ -2,13 +2,15 @@ using ChronoQuest.Interactions.World;
 using UnityEngine;
 using ChronoQuest.Quests;
 using System.Collections;
-public class PuzzleLeverActivator : MonoBehaviour, Interaction
+using ChronoQuest.UIForInteractions;
+public class PuzzleLeverActivator : MonoBehaviour, Interaction, IAvailableActions
 {
     public SpriteRenderer sprite;
     public Color savedColor;
     public bool toggled = false;
     public Transform decoderScript;
     public bool playerInTrigger = false;
+    private Player player;
     public QuestInstance playerQuest;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
@@ -26,23 +28,26 @@ public class PuzzleLeverActivator : MonoBehaviour, Interaction
         InteractionFunction();
     }
     public void InteractionFunction() // Add logic here (fix structuring of if statement later)
-    { 
+    {
         // if (playerQuest == null)
         // {
         //     // Debug.Log("Hello Twan, You have No player quest. Dattebayo!");
         // }
-        if (playerInTrigger && Input.GetKeyDown(Keybinds.actionKeybind)  && !pauseCheck.isInventory && !pauseCheck.isPaused
+        if (playerInTrigger && !pauseCheck.isInventory && !pauseCheck.isPaused
         && !inDialog)
         {
-            toggled = !toggled;
-            
-            }
-            if (!conditionsMet)
+            if (Input.GetKeyDown(Keybinds.actionKeybind))
             {
-                LeverCheck();
-                
+                toggled = !toggled;
+                if (!conditionsMet)
+                {
+                    LeverCheck();
+
+                }
             }
         }
+    }
+        
 
     void LeverCheck()
     {
@@ -50,7 +55,8 @@ public class PuzzleLeverActivator : MonoBehaviour, Interaction
         {
             conditionsMet = true;
             Debug.Log("Gate opening...");
-            sprite.color = Color.white;  
+            sprite.color = Color.white;
+            ChangeTheUI("");
             decoderScript.GetComponent<CorrectOrderOpenScript>().CheckOrder(gameObject);                     
         }
         
@@ -62,7 +68,12 @@ public class PuzzleLeverActivator : MonoBehaviour, Interaction
     {
         if (other.CompareTag("Player"))
 
-        {  
+        {
+            player = other.GetComponent<Player>();
+            if (!conditionsMet)
+            {
+                ChangeTheUI("[F] Press "+gameObject.name.ToString());
+            }
             playerQuest = other.GetComponent<QuestManager>().GetCurrentQuest();
             // Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().data.questName);
             // Debug.Log(other.GetComponent<QuestManager>().GetCurrentQuest().GetType().ToString());
@@ -76,6 +87,7 @@ public class PuzzleLeverActivator : MonoBehaviour, Interaction
         {
 
             playerInTrigger = false;
+            ChangeTheUI("");
         }
     }
     public IEnumerator WrongCoroutine()
@@ -93,4 +105,14 @@ public class PuzzleLeverActivator : MonoBehaviour, Interaction
         StartCoroutine(WrongCoroutine());
     }
 
+    public void ChangeTheUI(string str)
+    {
+        if (player != null)
+            player.interactionPanel.text = str;
+    }
+
+    public void ChangeTheUI(Item item)
+    {
+        throw new System.NotImplementedException();
+    }
 }

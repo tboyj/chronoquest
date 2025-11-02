@@ -1,7 +1,8 @@
 using System;
+using ChronoQuest.UIForInteractions;
 using UnityEngine;
 
-public abstract class BaseUse : MonoBehaviour
+public abstract class BaseUse : MonoBehaviour, IAvailableActions
 {
     // Called when the script instance is being loaded
     public bool inRange = false;
@@ -26,12 +27,13 @@ public abstract class BaseUse : MonoBehaviour
         }
     }
 
-
     public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             inRange = false;
+            ChangeTheUI("");
+            SetPlayer(null);
         }
     }
     
@@ -43,4 +45,15 @@ public abstract class BaseUse : MonoBehaviour
     {
         return player;
     }
+    public void ChangeTheUI(string str)
+    {
+        if (GetPlayer() != null)
+            GetPlayer().interactionPanel.text = str;
+    }
+
+    public void ChangeTheUI(Item item)
+    {
+        throw new NotImplementedException();
+    }
+
 }

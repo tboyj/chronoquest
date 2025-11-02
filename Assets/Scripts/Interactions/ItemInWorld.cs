@@ -4,23 +4,27 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using ChronoQuest.Interactions.World;
 using UnityEngine.Events;
+using System;
+using ChronoQuest.UIForInteractions;
 
-public class ItemInWorld : MonoBehaviour, Interaction
+public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
 {
     // Start is called before the first frame update
     public int amountOfItemsHere;
     public ItemStorable itemInWorld;
     public SpriteRenderer rend;
     public bool takeable;
-    private bool itemRecognizesPlayer;
+    public bool itemRecognizesPlayer;
     public GameObject referencePlayer;
     public QuestCollectItem quest;
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
     public bool questRequired;
+    public Player player;
     //public UnityEvent<GameObject> OnInteractEvent;
     void Start()
     {
+        
         Startup();
         quest.PrecheckInventory();
     }
@@ -39,22 +43,28 @@ public class ItemInWorld : MonoBehaviour, Interaction
             }
         }
     }
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             referencePlayer = other.gameObject;
+            player = referencePlayer.GetComponent<Player>();
             itemRecognizesPlayer = true;
             quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as QuestCollectItem;
         }
     }
+    void OnTriggerStay(Collider other)
+    {
+        itemRecognizesPlayer = true;
+    }
     void OnTriggerExit(Collider other)
     {
-
         if (other.CompareTag("Player"))
         {
-            referencePlayer = null;
             itemRecognizesPlayer = false;
+            referencePlayer = null;
         }
     }
     private void Startup()
@@ -96,4 +106,15 @@ public class ItemInWorld : MonoBehaviour, Interaction
             }
         }
     }
+
+    public void ChangeTheUI(Item heldItem)
+    {
+        ChangeTheUI("");
+    }
+
+    public void ChangeTheUI(string str)
+    {
+        player.interactionPanel.text = str;
+    }
+
 }
