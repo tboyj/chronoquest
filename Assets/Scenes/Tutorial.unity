@@ -4990,7 +4990,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 10
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.4
   m_Height: 1
