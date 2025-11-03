@@ -468,8 +468,8 @@ public class Player : Character, Interaction
                 interactableNPC = null;
             }
         }
-        
-        
+
+        reciever.GetComponent<BaseUse>().ChangeTheUI("");
         reciever = null;
     }
     public Item GetHeldItem()

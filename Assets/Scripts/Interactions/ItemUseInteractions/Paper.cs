@@ -20,8 +20,16 @@ public class Paper : BaseUse
     {
         if (GetPlayer() != null)
         {
-            if (GetPlayer().GetHeldItem().item != null && GetPlayer().isHolding)
-                ChangeTheUI("[E] Use " + GetPlayer().GetHeldItem().item.itemName);
+            if (GetPlayer().GetHeldItem().item.id == 0 && GetPlayer().isHolding)
+            {// this is the new system, should be migrated to a new class for scalability
+            // item.id == 0 // this is magnifying glass // could change into switch case
+            // ___
+            // avoid this for future ref, this looks as if it could lead down a pirate software code path
+                ChangeTheUI("[E] Inspect Paper");
+            }
+            else {
+                ChangeTheUI("");
+            }
              // only if holding the right thign.
             if (isActive)
             {
