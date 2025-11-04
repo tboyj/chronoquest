@@ -5025,12 +5025,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   runMultiplier: 1.25
-  gravity: -9.81
+  gravity: -20
   rayholder: {fileID: 1995528487}
   flip: 0
   acceleration: 4.75
   deceleration: 4.25
   controller: {fileID: 160479125}
+  jumpForce: 1.25
+  gravityStrength: -1.5
 --- !u!1 &164084589
 GameObject:
   m_ObjectHideFlags: 0
@@ -31009,9 +31011,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   container: {fileID: 1119403765}
-  paperText: 'I. Around the Red Sea,
+  paperText: 'Bossman''s Todo:
 
-    Across the Nile River'
+
+    - Do nothing
+
+    - Yell at Jim
+
+    - Explore
+    Egypt'
   isActive: 0
 --- !u!135 &1319796900
 SphereCollider:
@@ -31094,13 +31102,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319796898}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.4, y: 4.068, z: 118.58}
+  m_LocalRotation: {x: 0.70554113, y: 0.04702901, z: -0.047029, w: 0.70554113}
+  m_LocalPosition: {x: -2.228, y: 4.068, z: 118.717}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -7.627}
 --- !u!1 &1323150790
 GameObject:
   m_ObjectHideFlags: 0
