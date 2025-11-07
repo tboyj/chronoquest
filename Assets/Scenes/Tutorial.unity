@@ -6885,6 +6885,7 @@ GameObject:
   - component: {fileID: 250518410}
   - component: {fileID: 250518409}
   - component: {fileID: 250518408}
+  - component: {fileID: 250518411}
   m_Layer: 8
   m_Name: End_Sarlah
   m_TagString: End
@@ -6978,6 +6979,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250518405}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &250518411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_StartPoint: {x: 0, y: 0, z: -2.5}
+  m_EndPoint: {x: 0, y: 0, z: 2.5}
+  m_Width: 0
+  m_CostModifier: -1
+  m_Bidirectional: 1
+  m_AutoUpdatePosition: 0
+  m_Area: 0
 --- !u!1 &256409687
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,7 +7704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &315320840
 Transform:
   m_ObjectHideFlags: 0
@@ -18115,7 +18136,7 @@ GameObject:
   - component: {fileID: 576052944}
   m_Layer: 0
   m_Name: GoThroughPortalQuest
-  m_TagString: Untagged
+  m_TagString: LoadNew
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18153,7 +18174,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -25686,11 +25707,47 @@ MonoBehaviour:
   IsCompleted: 0
   todo:
   - {fileID: 576052944}
-  dialogsForQuest: []
+  dialogsForQuest:
+  - dialogueText: Oh? What's these you found?
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: Ancient tablets. Neat!
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: I'll give you my hieroglyph cheatsheet. You should use it.
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: Alright, let's explore this pla-
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: Ahh! It's a UFO!!!!
+    characterName: Bossman
+    midQuestActions:
+    - {fileID: 746441233}
+    - {fileID: 1741817587}
+  - dialogueText: What the...
+    characterName: Jim
+    midQuestActions: []
+  - dialogueText: Hey Bossman, this wasn't part of my pay.
+    characterName: Jim
+    midQuestActions: []
+  - dialogueText: But you know what is?
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: Exploring Egypt!!
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: C'mon, it'd be awesome if you went!
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: Fine...
+    characterName: Jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
-  postQuestList: []
+  postQuestList:
+  - {fileID: 1142334647}
   player: {fileID: 160479107}
   canvas: {fileID: 1776828883}
   teleportToPosition: {x: 0, y: 0, z: 0}
@@ -44261,7 +44318,7 @@ Transform:
   m_GameObject: {fileID: 1685995633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.844, y: 4.3, z: 125.5}
+  m_LocalPosition: {x: 5.634, y: 4.143, z: 130.048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
