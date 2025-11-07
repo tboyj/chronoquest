@@ -78,7 +78,7 @@ public class QuestManager : MonoBehaviour
             {
                 Debug.Log($"CurrentQuest ID: {GetCurrentQuest()?.GetQuestID()}");
                 Debug.Log($"AssignedQuest ID: {questAssigned?.GetQuestID()}");
-
+                
                 if (GetCurrentQuest().IsCompleted == false) // make sure he doesn't have it already;
                 { // quest is assigned but not done.
                   // i have to check if it's a talking script you know? cuz its flimsy?

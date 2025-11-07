@@ -1,6 +1,7 @@
 using System;
 using ChronoQuest.UIForInteractions;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -20,8 +21,17 @@ public class Paper : BaseUse
     {
         if (GetPlayer() != null)
         {
-            if (GetPlayer().GetHeldItem().item != null && GetPlayer().isHolding)
-                ChangeTheUI("[E] Use " + GetPlayer().GetHeldItem().item.itemName);
+            if (GetPlayer().isHolding)
+            {
+                if (GetPlayer()?.GetHeldItem()?.item?.id == 0)
+                {
+                    // this is the new system, should be migrated to a new class for scalability
+                    // item.id == 0 // this is magnifying glass // could change into switch case
+                    // ___
+                    // avoid this for future ref, this looks as if it could lead down a pirate software code path
+                    ChangeTheUI("[E] Inspect Paper");
+                }
+            }
              // only if holding the right thign.
             if (isActive)
             {
@@ -35,7 +45,7 @@ public class Paper : BaseUse
                 // GetPlayer().movement.enabled = true;
                 GetPlayer().movement.moveSpeed = 1; // <-- This is the movement speed of the player. Find another way to do this lol.
             }
-        } 
+        }
     }
     // Example method for using the paper item
     public override void Use()
@@ -48,6 +58,4 @@ public class Paper : BaseUse
             GetPlayer().isUsingItem = isActive;
         }
     }
-
-    
 }

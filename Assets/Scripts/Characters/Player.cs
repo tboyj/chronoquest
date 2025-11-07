@@ -75,7 +75,7 @@ public class Player : Character, Interaction
     public void Update()
     {
         inventory.SetRefresh(true);
-        if (heldItem.quantity <= 0 || !isHolding)
+        if (!isHolding)
         {
             holdingItemManager.Activate(false);
             // Hide the sprite when quantity is 0
@@ -143,6 +143,9 @@ public class Player : Character, Interaction
         { // bummy boy code o-o
             if (interactableNPC != null)
             {
+                if (manager.GetCurrentQuest().dialogsForQuest.Count > 0) {
+                    manager.GetCurrentQuest().dialogsForQuest[0].CycleMidQuestActions();
+                }
                 Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
                 Debug.Log(manager.GetCurrentQuest());
                 if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
@@ -201,6 +204,10 @@ public class Player : Character, Interaction
         if (interactableNPC != null)
         {
             manager.TryToGiveQuest(interactableNPC, dialogManager);
+            if (manager.GetCurrentQuest() != null && manager.GetCurrentQuest().dialogsForQuest.Count > 0)
+            {
+                manager.GetCurrentQuest().dialogsForQuest[0].CycleMidQuestActions();
+            }
         }
         // if not recognizing item to pick up, look for npc to interact with
     }
@@ -248,7 +255,7 @@ public class Player : Character, Interaction
 
     private void CheckForHotbarInput()
     {
-        if (!gameObject.GetComponent<PauseScript>().isPaused && indexOfInventoryHover >= 0 && inventoryInteractionPermission)
+        if (!gameObject.GetComponent<PauseScript>().isPaused && inventoryInteractionPermission)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -271,17 +278,23 @@ public class Player : Character, Interaction
     public void UpdateSelectedItem(int updateIndex)
     {
         Item candidate = inventory.GetItemUsingIndex(updateIndex);
-        if (candidate.item != null)
-            Debug.Log(candidate.item.name);
-        else
-            Debug.Log("null item selected");
+            
         bool isValidCandidate = candidate != null && candidate.item != null && candidate.quantity > 0;
-
+        
         // If selecting the same index again, toggle holding state
         if (updateIndex == itemHeld && candidate.item != null && candidate.item == heldItem.item)
         {
-
-            isHolding = !isHolding;
+            Debug.Log(updateIndex + " = " + itemHeld);
+            Debug.Log("candidate.item = " + candidate.item.itemName);
+            Debug.Log("heldItem.item = " + heldItem.item.itemName);
+            if (candidate.item != null)
+            {
+                isHolding = !isHolding;
+            }
+            else
+            {
+                isHolding = false;
+            }
             Debug.Log($"Toggled holding state: {isHolding}");
         }
         // If selecting a new valid item
@@ -297,8 +310,8 @@ public class Player : Character, Interaction
         // If selecting an invalid or empty slot
         else
         {
-            // heldItem = null;
-            // itemHeld = -1;
+            heldItem = null;
+            itemHeld = -1;
             isHolding = false;
             Debug.Log("Selected null or empty slot.");
         }
@@ -321,6 +334,7 @@ public class Player : Character, Interaction
             movement.controller.enabled = false;
             animatorSetup.speed = 0;
         }
+        
     }
 
     public override void InventorySetup(int amount)
@@ -468,8 +482,9 @@ public class Player : Character, Interaction
                 interactableNPC = null;
             }
         }
-        
-        
+
+        if (reciever != null)
+            reciever.GetComponent<BaseUse>()?.ChangeTheUI("");
         reciever = null;
     }
     public Item GetHeldItem()
