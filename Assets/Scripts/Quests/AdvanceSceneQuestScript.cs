@@ -16,6 +16,7 @@ public class AdvanceSceneQuestScript : QuestInstance
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Hello");
             LoadNextScene();
         }
         else if (other.CompareTag("NPC"))
