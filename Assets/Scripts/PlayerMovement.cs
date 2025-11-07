@@ -14,58 +14,58 @@ public class PlayerMovement : Movement
 public float gravityStrength = -8.81f; // consistent gravity pull
 private float verticalVelocity; // separate Y velocity tracking
 
-public override void MoveWithForce()
-{
-    isGrounded = controller.isGrounded;
-
-    if (isGrounded)
+    public override void MoveWithForce()
     {
-        if (verticalVelocity < 0)
-            verticalVelocity = -1f; // small downward push to keep grounded
+        isGrounded = controller.isGrounded;
 
-        // Jump input
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded)
         {
-            verticalVelocity = jumpForce;
+            if (verticalVelocity < 0)
+                verticalVelocity = -1f; // small downward push to keep grounded
+
+            // Jump input
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                verticalVelocity = jumpForce;
+            }
+        }
+        else
+        {
+            // Apply gravity while in air
+            verticalVelocity += gravityStrength * Time.deltaTime;
+        }
+
+        if (Time.timeScale > 0)
+        {
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            Vector3 rawInput = new Vector3(x, 0, z);
+            rawInput = Vector3.ClampMagnitude(rawInput, 1f);
+            Vector3 input = transform.TransformDirection(rawInput);
+
+            float speed = moveSpeed;
+            if (Input.GetKey(KeyCode.LeftShift))
+                speed *= runMultiplier;
+
+            Vector3 horizontalVelocity;
+            if (rawInput.magnitude > 0.01f)
+                horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), input * speed, acceleration * Time.deltaTime);
+            else
+                horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), Vector3.zero, deceleration * Time.deltaTime);
+
+            // Combine horizontal and vertical movement
+            velocity = new Vector3(horizontalVelocity.x, verticalVelocity, horizontalVelocity.z);
+                if (controller.enabled)
+                {
+                    controller.Move(velocity * Time.deltaTime);
+                }
+
+            // Flip character
+            if (x < 0) flip = true;
+            else if (x > 0) flip = false;
         }
     }
-    else
-    {
-        // Apply gravity while in air
-        verticalVelocity += gravityStrength * Time.deltaTime;
-    }
-
-    if (Time.timeScale > 0)
-    {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 rawInput = new Vector3(x, 0, z);
-        rawInput = Vector3.ClampMagnitude(rawInput, 1f);
-        Vector3 input = transform.TransformDirection(rawInput);
-
-        float speed = moveSpeed;
-        if (Input.GetKey(KeyCode.LeftShift))
-            speed *= runMultiplier;
-
-        Vector3 horizontalVelocity;
-        if (rawInput.magnitude > 0.01f)
-            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), input * speed, acceleration * Time.deltaTime);
-        else
-            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), Vector3.zero, deceleration * Time.deltaTime);
-
-        // Combine horizontal and vertical movement
-        velocity = new Vector3(horizontalVelocity.x, verticalVelocity, horizontalVelocity.z);
-            if (controller.enabled)
-            {
-                controller.Move(velocity * Time.deltaTime);
-            }
-
-        // Flip character
-        if (x < 0) flip = true;
-        else if (x > 0) flip = false;
-    }
-}
 
     /*
     private void HandleStairs(Vector3 move)

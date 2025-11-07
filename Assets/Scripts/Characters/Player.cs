@@ -334,7 +334,6 @@ public class Player : Character, Interaction
             movement.controller.enabled = false;
             animatorSetup.speed = 0;
         }
-        
     }
 
     public override void InventorySetup(int amount)
