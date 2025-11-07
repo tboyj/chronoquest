@@ -15447,12 +15447,16 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: Hello Jimmy
     characterName: bossman
+    midQuestActions: []
   - dialogueText: Hi bossman
     characterName: jim
+    midQuestActions: []
   - dialogueText: Those other buttons are nice and red over there
     characterName: bossman
+    midQuestActions: []
   - dialogueText: Yes Bossman
     characterName: jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests:
   - {fileID: 727777347}
@@ -16245,6 +16249,50 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &701432266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 701432267}
+  - component: {fileID: 701432268}
+  m_Layer: 0
+  m_Name: Middialoghold1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &701432267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701432266}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2072975162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &701432268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701432266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea6b1d34352b764e8f7c50cc2f8ef0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &701934488
 GameObject:
   m_ObjectHideFlags: 0
@@ -16794,12 +16842,16 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: Good Job jimmy
     characterName: bossman
+    midQuestActions: []
   - dialogueText: Thank you
     characterName: jim
+    midQuestActions: []
   - dialogueText: Those other buttons are nice and red over there
     characterName: bossman
+    midQuestActions: []
   - dialogueText: Sure thing
     characterName: jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests:
   - {fileID: 679699627}
@@ -17588,6 +17640,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745879106}
   m_CullTransparentMesh: 1
+--- !u!1 &746441231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 746441232}
+  - component: {fileID: 746441233}
+  m_Layer: 0
+  m_Name: ufocrashesintoegyptanim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &746441232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746441231}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1666987369}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &746441233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746441231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bab0e3cca99027409378db423d02cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animPlayback: {fileID: 7650212133015342481}
+  animString: ufoflyingin
+  obj: {fileID: 7650212133015342480}
 --- !u!1 &754247151
 GameObject:
   m_ObjectHideFlags: 0
@@ -22295,26 +22394,35 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: What the heck is this thing...This looks authentic!
     characterName: Sarla
+    midQuestActions: []
   - dialogueText: Oh, hey, new guy. Watch doin' over here with the Bossman by your
       side? You two are inseperable.
     characterName: Sarla
+    midQuestActions: []
   - dialogueText: We wanted to check what you had found yet. In terms of digging,
       anyway.
     characterName: Jim
+    midQuestActions: []
   - dialogueText: Ah, yeah, I had found here this nice artifact! It's genyoueyene.
     characterName: Sarla
+    midQuestActions: []
   - dialogueText: '*whispers* She means genuine. She has a bit of a drawl.'
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: There was always rumors of there being 3 buried tablets, but I
       never thought it was real. But now, this proves there has to be more!
     characterName: Sarla
+    midQuestActions: []
   - dialogueText: You two should see if the graveyard has another similar tablet.
       Here, I'll give you the tablet for comparison.
     characterName: Sarla
+    midQuestActions: []
   - dialogueText: The graveyard to left of us?
     characterName: Jim
+    midQuestActions: []
   - dialogueText: Yep! You got it. Now go out there and find that tablet.
     characterName: Sarla
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
@@ -27726,12 +27834,16 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: Oh? What's these you found?
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Ancient tablets. Neat!
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: I'll give you my hieroglyph cheatsheet. You should use it.
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Alright, let's explore this place!
     characterName: Bossman
+    midQuestActions: []
   questManager: {fileID: 0}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
@@ -31302,8 +31414,10 @@ MonoBehaviour:
   - dialogueText: I heard that Sarlah had found something really cool. Why don't
       we check it out?
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Ok.
     characterName: Jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
@@ -32684,6 +32798,7 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: Now get me water.
     characterName: Bossman
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: -3.186, y: 4.44, z: 119.1}
@@ -38133,7 +38248,9 @@ Transform:
   m_LocalPosition: {x: 0.008000016, y: 0, z: 0}
   m_LocalScale: {x: 0.32, y: 0.57, z: 0.01}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 746441232}
+  - {fileID: 1741817586}
   m_Father: {fileID: 1685995634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666987370
@@ -38156,16 +38273,23 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: Oh? What's these you found?
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Ancient tablets. Neat!
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: I'll give you my hieroglyph cheatsheet. You should use it.
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Alright, let's explore this pla-
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: '*bzzz bzzz i spawn in portal*'
     characterName: UFO
+    midQuestActions:
+    - {fileID: 746441233}
   - dialogueText: Who made this dialog?
     characterName: Jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
@@ -40879,6 +41003,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741117176}
   m_CullTransparentMesh: 1
+--- !u!1 &1741817585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741817586}
+  m_Layer: 0
+  m_Name: spawnportal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741817586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741817585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1666987369}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1744605874
 GameObject:
   m_ObjectHideFlags: 0
@@ -46497,12 +46652,16 @@ MonoBehaviour:
   dialogsForQuest:
   - dialogueText: Good Job jimmy
     characterName: bossman
+    midQuestActions: []
   - dialogueText: Thank you
     characterName: jim
+    midQuestActions: []
   - dialogueText: Toggle that other button
     characterName: bossman
+    midQuestActions: []
   - dialogueText: Sure thing
     characterName: jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
@@ -46907,6 +47066,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 674734218}
+  - {fileID: 701432267}
   m_Father: {fileID: 1254902225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2072975163
@@ -46930,24 +47090,35 @@ MonoBehaviour:
   - dialogueText: Hey Jim, I know it's your first day and all, and you probably feel
       a little nervous that we're in Egypt...
     characterName: Bossman
+    midQuestActions:
+    - {fileID: 701432268}
   - dialogueText: But we're in Egypt.
     characterName: Bossman
+    midQuestActions:
+    - {fileID: 701432268}
   - dialogueText: I can tell.
     characterName: Jim
+    midQuestActions: []
   - dialogueText: I personally think it's really beautiful out here. All the mummies,
       all the sand, just us...
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Doing archaeology stuff. Of course.
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: ...Yeah?
     characterName: Jim
+    midQuestActions: []
   - dialogueText: Anyways...for your first "task", can you get the magnifying glass
       from the trunk? It seems like you forgot it.
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: I think you'll need it, you know.
     characterName: Bossman
+    midQuestActions: []
   - dialogueText: Sure thing, man.
     characterName: Jim
+    midQuestActions: []
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: -3.104, y: 4, z: 119.099}
@@ -50094,6 +50265,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1704269992446408009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7570806030930421362}
+  - component: {fileID: 4739977745769701176}
+  - component: {fileID: 8134189789948623788}
+  m_Layer: 0
+  m_Name: default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1742016517729861148
 GameObject:
   m_ObjectHideFlags: 0
@@ -52522,6 +52711,14 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679936968448187534}
   m_Mesh: {fileID: -2432090755550338912, guid: a15efb651af68ef479b78525b340c29f, type: 3}
+--- !u!33 &4739977745769701176
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704269992446408009}
+  m_Mesh: {fileID: -2432090755550338912, guid: de758effea5b72b49b4c76fea73ad4be, type: 3}
 --- !u!23 &4810418010753075493
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54178,6 +54375,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &7016841090933397290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650212133015342480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.28, y: 7.51, z: 118.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7570806030930421362}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7031894220553436909
 Transform:
   m_ObjectHideFlags: 0
@@ -54730,6 +54943,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &7570806030930421362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704269992446408009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.99, y: -2.52, z: 18.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7016841090933397290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7575309450582427442
 GameObject:
   m_ObjectHideFlags: 0
@@ -54779,6 +55007,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7031894220553436909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7650212133015342480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7016841090933397290}
+  - component: {fileID: 7650212133015342481}
+  m_Layer: 0
+  m_Name: ufo3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &7650212133015342481
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650212133015342480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76f071526cbbbd14cb937e04426c6c61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7678299925260815376
 GameObject:
   m_ObjectHideFlags: 0
@@ -55246,6 +55512,48 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8451287674089998563}
   m_Mesh: {fileID: -2679659031966174025, guid: 9d5242bc0acdaf44c95e53608ec18f54, type: 3}
+--- !u!23 &8134189789948623788
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704269992446408009}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9f700f2db0c788e4e8bdf864a69f8de7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8164078558236642782
 GameObject:
   m_ObjectHideFlags: 0
@@ -56246,3 +56554,4 @@ SceneRoots:
   - {fileID: 804426807}
   - {fileID: 861375924}
   - {fileID: 583034365}
+  - {fileID: 7016841090933397290}

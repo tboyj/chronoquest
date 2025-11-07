@@ -71,6 +71,7 @@ public class QuestInstance : MonoBehaviour
     public void DialogAdvance()
     {
         dialogsForQuest.RemoveAt(0);
+
     }
 
     public void ShowDialog(bool v)

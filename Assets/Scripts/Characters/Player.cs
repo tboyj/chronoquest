@@ -143,6 +143,9 @@ public class Player : Character, Interaction
         { // bummy boy code o-o
             if (interactableNPC != null)
             {
+                if (manager.GetCurrentQuest().dialogsForQuest.Count > 0) {
+                    manager.GetCurrentQuest().dialogsForQuest[0].CycleMidQuestActions();
+                }
                 Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
                 Debug.Log(manager.GetCurrentQuest());
                 if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
@@ -201,6 +204,10 @@ public class Player : Character, Interaction
         if (interactableNPC != null)
         {
             manager.TryToGiveQuest(interactableNPC, dialogManager);
+            if (manager.GetCurrentQuest() != null && manager.GetCurrentQuest().dialogsForQuest.Count > 0)
+            {
+                manager.GetCurrentQuest().dialogsForQuest[0].CycleMidQuestActions();
+            }
         }
         // if not recognizing item to pick up, look for npc to interact with
     }
