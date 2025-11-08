@@ -8,6 +8,18 @@ public class QuestManager : MonoBehaviour
     public int currentQuestId;
     private bool currentlyInDialog;
     public bool hasCompletedFirstQuest;
+    private NPC currentNPC;
+
+    public void SetCurrentNPC(NPC npc)
+    {
+        currentNPC = npc;
+    }
+
+    public NPC GetCurrentNPC()
+    {
+        return currentNPC;
+    }
+
     public void Start()
     {
         currentQuestId = 3; // replace with savedata

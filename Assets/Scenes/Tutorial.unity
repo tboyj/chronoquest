@@ -7248,7 +7248,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 0.75
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -27547,8 +27547,8 @@ MonoBehaviour:
   - dialogueText: '*whispers* She means genuine. She has a bit of a drawl.'
     characterName: Bossman
     midQuestActions: []
-  - dialogueText: There was always rumors of there being 3 buried tablets, but I never
-      thought it was real. But now, this proves there has to be more!
+  - dialogueText: There was always rumors of there being 3 buried tablets, but I
+      never thought it was real. But now, this proves there has to be more!
     characterName: Sarla
     midQuestActions: []
   - dialogueText: You two should see if the graveyard has another similar tablet.
@@ -30008,7 +30008,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 0.75
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -30664,7 +30664,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 0.75
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -36324,7 +36324,8 @@ MonoBehaviour:
 
     - Yell at Jim
 
-    - Explore Egypt'
+    - Explore
+    Egypt'
   isActive: 0
 --- !u!135 &1319796900
 SphereCollider:
@@ -36604,8 +36605,8 @@ MonoBehaviour:
   - {fileID: 759241906}
   - {fileID: 274259980}
   dialogsForQuest:
-  - dialogueText: I heard that Sarlah had found something really cool. Why don't we
-      check it out?
+  - dialogueText: I heard that Sarlah had found something really cool. Why don't
+      we check it out?
     characterName: Bossman
     midQuestActions: []
   - dialogueText: Ok.
@@ -43442,7 +43443,9 @@ Transform:
   m_LocalPosition: {x: 0.008000016, y: 0, z: 0}
   m_LocalScale: {x: 0.32, y: 0.57, z: 0.01}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 746441232}, {fileID: 1741817586}]
+  m_Children:
+  - {fileID: 746441232}
+  - {fileID: 1741817586}
   m_Father: {fileID: 1685995634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666987370
@@ -43500,7 +43503,8 @@ MonoBehaviour:
   questManager: {fileID: 160479121}
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
-  postQuestList: [{fileID: 1142334647}]
+  postQuestList:
+  - {fileID: 1142334647}
   npc: {fileID: 1036772502}
   questAssignerNPC: {fileID: 1036772502}
 --- !u!114 &1666987371
@@ -51602,8 +51606,8 @@ Transform:
   m_GameObject: {fileID: 2019644269}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.844, y: 4.3, z: 125.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.082, y: 4.3, z: 125.5}
+  m_LocalScale: {x: 0.44021, y: 0.5126686, z: 0.44021}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1325759865}
@@ -52327,7 +52331,7 @@ MonoBehaviour:
   - dialogueText: Doing archaeology stuff. Of course.
     characterName: Bossman
     midQuestActions: []
-  - dialogueText: '...Yeah?'
+  - dialogueText: ...Yeah?
     characterName: Jim
     midQuestActions: []
   - dialogueText: Anyways...for your first "task", can you get the magnifying glass
