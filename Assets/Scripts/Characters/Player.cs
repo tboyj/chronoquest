@@ -176,6 +176,7 @@ public class Player : Character, Interaction
                 else
                 {
                     Debug.Log("Wrong Character!!!");
+                    manager.SetCurrentlyInDialog(false);
                 }
             }
 
@@ -455,7 +456,12 @@ public class Player : Character, Interaction
                     interactableItem.ChangeTheUI("");
                 }
             }
+            if (!isHolding)
+            {
+                interactionPanel.text = "";
+            }
         }
+        
         reciever = other.gameObject;
     }
     void OnTriggerExit(Collider other)

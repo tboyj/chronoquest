@@ -11,13 +11,18 @@ public class AdvanceSceneQuestScript : QuestInstance
     public GameObject canvas;
     public Vector3 teleportToPosition;
     public bool isLoading;
+    public QuestInstance nextQuestAfterSceneLoads;
     
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hello");
+            IsCompleted = true;
+            player.GetComponent<QuestManagerGUI>().GotoNextTodo();
+            Debug.Log("Hi again");
             LoadNextScene();
+            player.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         }
         else if (other.CompareTag("NPC"))
         {

@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeleportScript : QuestInstance
+public class TeleportScript : MonoBehaviour
 {
+    public GameObject positionTP;
     public Vector3 teleportToPosition;
+    public void Start()
+    {
+        teleportToPosition = positionTP.transform.position;
+    }
 
     public void Teleport(GameObject target)
         {
@@ -26,7 +31,7 @@ public class TeleportScript : QuestInstance
         {
             Teleport(other.gameObject);
             other.GetComponent<QuestManagerGUI>().GotoNextTodo();
-            QuestEventTriggered();
+            other.GetComponent<QuestManager>().GetCurrentQuest().QuestEventTriggered();
         } else if (other.CompareTag("NPC"))
         {
             Teleport(other.gameObject);
