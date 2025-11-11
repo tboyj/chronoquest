@@ -6051,6 +6051,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207713712}
   m_CullTransparentMesh: 1
+--- !u!1 &218936489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218936491}
+  - component: {fileID: 218936490}
+  - component: {fileID: 218936492}
+  m_Layer: 0
+  m_Name: DefaultRuntimeQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &218936490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218936489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d7093f535556048ab0114ebfdb9258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questManager: {fileID: 160479121}
+--- !u!4 &218936491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218936489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.635, y: 4.27, z: 116.222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1477296690}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &218936492
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218936489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &223859005
 GameObject:
   m_ObjectHideFlags: 0
@@ -19422,7 +19490,7 @@ Transform:
   m_GameObject: {fileID: 619835701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000003006789, y: 0.16756569, z: -0.59998566}
+  m_LocalPosition: {x: 0.05, y: 0.21, z: -0.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21011,6 +21079,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686580228}
   m_CullTransparentMesh: 1
+--- !u!1 &689281608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 689281609}
+  - component: {fileID: 689281610}
+  m_Layer: 0
+  m_Name: talktobossmanTDO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &689281609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689281608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036772508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &689281610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689281608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessPoint: {fileID: 1036772508}
+  todoText: Talk to the Bossman
 --- !u!1 &693168784
 GameObject:
   m_ObjectHideFlags: 0
@@ -23678,7 +23792,7 @@ GameObject:
   - component: {fileID: 797772313}
   m_Layer: 0
   m_Name: paper
-  m_TagString: Untagged
+  m_TagString: Recievable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24058,7 +24172,7 @@ GameObject:
   - component: {fileID: 809298913}
   m_Layer: 3
   m_Name: paper4
-  m_TagString: Untagged
+  m_TagString: Recievable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25782,6 +25896,7 @@ MonoBehaviour:
   canvas: {fileID: 1776828883}
   teleportToPosition: {x: 0, y: 0, z: 0}
   isLoading: 0
+  nextQuestAfterSceneLoads: {fileID: 0}
 --- !u!135 &874054029
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29767,6 +29882,7 @@ Transform:
   - {fileID: 785814142}
   - {fileID: 555906911}
   - {fileID: 493459000}
+  - {fileID: 689281609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1036772513
@@ -30688,7 +30804,7 @@ GameObject:
   - component: {fileID: 1065247244}
   m_Layer: 0
   m_Name: paper3
-  m_TagString: Untagged
+  m_TagString: Recievable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36377,7 +36493,7 @@ GameObject:
   - component: {fileID: 1319796899}
   m_Layer: 0
   m_Name: paper (1)
-  m_TagString: Untagged
+  m_TagString: Recievable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39246,6 +39362,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459305481}
   m_CullTransparentMesh: 1
+--- !u!1 &1477296689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1477296690}
+  - component: {fileID: 1477296691}
+  m_Layer: 0
+  m_Name: QuestHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1477296690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477296689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.635, y: 4.27, z: 116.222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 218936491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1477296691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477296689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ee37ef577690d4284a919cab781982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 584aa5b9e0702e94a9c6bcfb6ad51a3b, type: 2}
+  IsCompleted: 0
+  todo:
+  - {fileID: 689281610}
+  - {fileID: 689281610}
+  dialogsForQuest:
+  - dialogueText: hello
+    characterName: tets
+    midQuestActions: []
+  - dialogueText: computer
+    characterName: ok
+    midQuestActions: []
+  questManager: {fileID: 160479121}
+  relatedQuests: []
+  positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  postQuestList: []
+  npc: {fileID: 1036772502}
+  questAssignerNPC: {fileID: 1036772502}
 --- !u!1 &1478166650
 GameObject:
   m_ObjectHideFlags: 0
@@ -47265,7 +47443,7 @@ GameObject:
   - component: {fileID: 1770876795}
   m_Layer: 0
   m_Name: paper2
-  m_TagString: Untagged
+  m_TagString: Recievable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62493,3 +62671,4 @@ SceneRoots:
   - {fileID: 583034365}
   - {fileID: 7016841090933397290}
   - {fileID: 374568067}
+  - {fileID: 218936491}

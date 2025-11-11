@@ -36,9 +36,10 @@ public class Player : Character, Interaction
     private bool inventoryInteractionPermission;
     public TextMeshProUGUI interactionPanel;
 
-    public void Start()
+    public void Awake()
     {
         manager = gameObject.GetComponent<QuestManager>();
+
         Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
         movement = gameObject.GetComponent<PlayerMovement>();
@@ -52,28 +53,33 @@ public class Player : Character, Interaction
         if (heldItem.item != null)
         {
             Debug.Log(heldItem.item.name);
+            try
+            {
+                holdingItemManager.EnableWithSprite(heldItem.item.sprite);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Can't gather rendering data for held item. Maybe you have no items?");
+                Debug.LogException(e);
+            }
         }
         else
         {
             Debug.LogWarning("Item is null, maybe it needs assigned?");
         }
-        try
-        {
-            holdingItemManager.EnableWithSprite(heldItem.item.sprite);
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("Can't gather rendering data for held item. Maybe you have no items?");
-            Debug.LogException(e);
-        }
+        GameObject a2 = GameObject.Find("DefaultRuntimeQuest");
+        a2.GetComponent<StartingSceneQuest>().RuntimeQuest(); // hell
+        Debug.Log(a2.name);
         // UI Image 
         dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
         Physics.IgnoreLayerCollision(0, 8, true);
+
     }
     public void Update()
     {
+        Debug.Log(manager?.GetCurrentQuest()?.name);
         inventory.SetRefresh(true);
         if (!isHolding)
         {
@@ -418,80 +424,89 @@ public class Player : Character, Interaction
     {
         if (other.CompareTag("Object"))
         {
-            if (other.GetComponent<ItemInWorld>() != null)
+            ItemInWorld item = other.GetComponent<ItemInWorld>();
+
+            if (item != null)
             {
-                if (other.GetComponent<ItemInWorld>().takeable && other.GetComponent<ItemInWorld>().amountOfItemsHere > 0)
+                if (item.takeable && item.amountOfItemsHere > 0)
                 {
-                    interactableItem = other.GetComponent<ItemInWorld>();
+                    interactableItem = item;
                     interactableItem.ChangeTheUI("[F] Take Item");
-                    Debug.Log("Interactable item: " + interactableItem.itemInWorld.name);
+                    Debug.Log("Interactable item: " + item.itemInWorld.name);
                 }
             }
         }
+
         if (other.CompareTag("NPC"))
         {
-            Debug.Log("hello. pls work. :0");
-            interactableNPC = other.GetComponent<NPC>();
-            interactableNPC.ChangeTheUI("[F] Interact");
+            NPC npc = other.GetComponent<NPC>();
+            if (npc != null)
+            {
+                interactableNPC = npc;
+                npc.ChangeTheUI("[F] Interact");
+                Debug.Log("hello. pls work. :0");
+            }
         }
+
         if (other.CompareTag("Teleport"))
         {
             other.GetComponent<TeleportScript>()?.Teleport(gameObject);
         }
+
         reciever = other.gameObject;
         Debug.Log(reciever.name);
     }
+
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Object"))
+        if (other.CompareTag("Object") && interactableItem != null)
         {
-            if (interactableItem != null)
-            {
-                if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
-                {
-                    interactableItem.ChangeTheUI("[F] Take Item");
-                }
-                else
-                {
-                    interactableItem.ChangeTheUI("");
-                }
-            }
-            if (!isHolding)
-            {
-                interactionPanel.text = "";
-            }
+            if (interactableItem.takeable && interactableItem.amountOfItemsHere > 0)
+                interactableItem.ChangeTheUI("[F] Take Item");
+            else
+                interactableItem.ChangeTheUI("");
+
+
         }
         
         reciever = other.gameObject;
     }
+
     void OnTriggerExit(Collider other)
     {
-        
+        // only clear if exiting object is the same one we're tracking
         if (other.CompareTag("Object"))
         {
-            if (interactableItem != null)
+            ItemInWorld item = other.GetComponent<ItemInWorld>();
+
+            if (item != null && item == interactableItem)
             {
-                Debug.Log("Interactable item: (false)" + interactableItem.itemInWorld.name);
-                interactableItem.ChangeTheUI("");
+                Debug.Log("Interactable item: (false) " + item.itemInWorld.name);
+                item.ChangeTheUI("");
                 interactableItem = null;
             }
-
         }
-        if (other.CompareTag("NPC") && other.GetComponent<NPC>())
-        {
 
-            if (interactableNPC != null)
+        if (other.CompareTag("NPC"))
+        {
+            NPC npc = other.GetComponent<NPC>();
+
+            if (npc != null && npc == interactableNPC)
             {
-                interactableNPC.ChangeTheUI("");
-                Debug.Log("Interactable item: (false)" + interactableNPC.name);
+                npc.ChangeTheUI("");
+                Debug.Log("Interactable NPC: (false) " + npc.name);
                 interactableNPC = null;
             }
         }
 
-        if (reciever != null)
+        // clear if this exiting collider was the receiver
+        if (other.gameObject == reciever)
             reciever.GetComponent<BaseUse>()?.ChangeTheUI("");
-        reciever = null;
+
+        if (other.gameObject == reciever)
+            reciever = null;
     }
+
     public Item GetHeldItem()
     {
         return heldItem;

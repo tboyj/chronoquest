@@ -13,10 +13,7 @@ public class Paper : BaseUse
     public string paperText;
     // public ItemStorable itemPreferred; // will likely change up in future but i need this working. SPEED I NEED THIS MY UI'S KIND OF HOMELESS...
     public bool isActive = false;
-    private void Start()
-    {
-        
-    }
+
     private void Update()
     {
         if (GetPlayer() != null)
@@ -31,18 +28,19 @@ public class Paper : BaseUse
                     // avoid this for future ref, this looks as if it could lead down a pirate software code path
                     ChangeTheUI("[E] Inspect Paper");
                 }
+            } else
+            {
+                ChangeTheUI("");
             }
              // only if holding the right thign.
             if (isActive)
             {
-                
-                // GetPlayer().movement.enabled = false; // bug can occur where character can go outside the trigger zone, disabling.
+                // bug can occur where character can go outside the trigger zone, disabling.
                 GetPlayer().movement.moveSpeed = 0;
                 ChangeTheUI("");
             }
             else
             {
-                // GetPlayer().movement.enabled = true;
                 GetPlayer().movement.moveSpeed = 1; // <-- This is the movement speed of the player. Find another way to do this lol.
             }
         }
@@ -58,6 +56,4 @@ public class Paper : BaseUse
             GetPlayer().isUsingItem = isActive;
         }
     }
-
-    
 }
