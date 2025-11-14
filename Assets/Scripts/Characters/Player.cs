@@ -79,7 +79,7 @@ public class Player : Character, Interaction
     }
     public void Update()
     {
-        Debug.Log(manager?.GetCurrentQuest()?.name);
+        // Debug.Log(manager?.GetCurrentQuest()?.name);
         inventory.SetRefresh(true);
         if (!isHolding)
         {

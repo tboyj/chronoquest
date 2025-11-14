@@ -8,6 +8,7 @@ public class TestingScripts : MonoBehaviour
     [Header("Persistent Objects")]
     public GameObject player;
     public GameObject canvas;
+    public GameObject quests;
 
     [Header("Next Scene Name")]
     public string nextScene;
@@ -53,6 +54,7 @@ public class TestingScripts : MonoBehaviour
         // Move persistent objects into the new scene
         SceneManager.MoveGameObjectToScene(canvas, newScene);
         SceneManager.MoveGameObjectToScene(player, newScene);
+        SceneManager.MoveGameObjectToScene(quests, newScene);
 
         // Wait a frame so scene objects initialize properly
         yield return null;

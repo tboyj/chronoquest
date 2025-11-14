@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartingSceneQuest : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class StartingSceneQuest : MonoBehaviour
     public QuestManager questManager;
     void Start()
     {
+        questManager = FindObjectOfType<QuestManager>();
+        if (questManager == null)
+            Debug.LogError("QuestManager not found in scene.");
     }
 
 

@@ -34,6 +34,7 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
             }
         }
+        hasCompletedFirstQuest = false;
     }
     public void AddQuestToList(QuestInstance quest)
     {
@@ -272,10 +273,13 @@ public class QuestManager : MonoBehaviour
                         var a = gameObject.GetComponent<Player>().GetHeldItem();
                         var b = gameObject.GetComponent<HoldingItemScript>();
 
-                        if (a.item.sprite == b.spriteTopLeftImage.sprite && a.item.id == item.item.id)
+                        if (a.item != null)
                         {
-                            gameObject.GetComponent<Player>().isHolding = false;
-                            gameObject.GetComponent<HoldingItemScript>().Activate(false);
+                            if (a.item.sprite == b.spriteTopLeftImage.sprite && a.item.id == item.item.id)
+                            {
+                                gameObject.GetComponent<Player>().isHolding = false;
+                                gameObject.GetComponent<HoldingItemScript>().Activate(false);
+                            }
                         }
 
                         // Subtract from player

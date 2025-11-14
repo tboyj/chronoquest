@@ -4893,6 +4893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 160479107}
   canvas: {fileID: 1776828883}
+  quests: {fileID: 0}
   nextScene: AncientEgypt
 --- !u!114 &160479128
 MonoBehaviour:
@@ -25812,6 +25813,7 @@ GameObject:
   - component: {fileID: 874054028}
   - component: {fileID: 874054029}
   - component: {fileID: 874054030}
+  - component: {fileID: 874054031}
   m_Layer: 0
   m_Name: QuestHolder
   m_TagString: Untagged
@@ -25890,13 +25892,13 @@ MonoBehaviour:
   relatedQuests: []
   positionOfQuestGiver: {x: 0, y: 0, z: 0}
   postQuestList:
-  - {fileID: 1142334647}
+  - {fileID: 874054031}
   - {fileID: 874054030}
   player: {fileID: 160479107}
   canvas: {fileID: 1776828883}
+  questsHolder: {fileID: 1501469597}
   teleportToPosition: {x: 0, y: 0, z: 0}
   isLoading: 0
-  nextQuestAfterSceneLoads: {fileID: 0}
 --- !u!135 &874054029
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25931,6 +25933,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 874054029}
+--- !u!114 &874054031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874054026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c251692acccdd2443a687da0e3c73c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendOver: {fileID: 160479110}
+  recieve: {fileID: 160479110}
 --- !u!1 &874236917
 GameObject:
   m_ObjectHideFlags: 0
@@ -50308,7 +50324,7 @@ MonoBehaviour:
   dialogsForQuest: []
   questManager: {fileID: 160479121}
   relatedQuests: []
-  positionOfQuestGiver: {x: 0, y: 0, z: 0}
+  positionOfQuestGiver: {x: -25.709, y: 4.246, z: 128.25}
   postQuestList: []
   requiredCount: 1
   currentCount: 0

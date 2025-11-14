@@ -9,9 +9,10 @@ public class AdvanceSceneQuestScript : QuestInstance
     [Header("Persistent Objects")]
     public GameObject player;
     public GameObject canvas;
+    public GameObject questsHolder;
     public Vector3 teleportToPosition;
     public bool isLoading;
-    public QuestInstance nextQuestAfterSceneLoads;
+    
     
     public void OnTriggerEnter(Collider other)
     {
@@ -19,6 +20,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         {
             Debug.Log("Hello");
             IsCompleted = true;
+            CheckConditions();
             player.GetComponent<QuestManagerGUI>().GotoNextTodo();
             Debug.Log("Hi again");
             LoadNextScene();
@@ -64,11 +66,13 @@ public class AdvanceSceneQuestScript : QuestInstance
             Debug.LogError($"Scene failed to load!");
             yield break;
         }
-
+        DontDestroyOnLoad(questsHolder);
         // Move persistent objects into the new scene
+        
+        
+        SceneManager.MoveGameObjectToScene(questsHolder, newScene);
         SceneManager.MoveGameObjectToScene(canvas, newScene);
         SceneManager.MoveGameObjectToScene(player, newScene);
-
         // Wait a frame so scene objects initialize properly
         yield return null;
 
