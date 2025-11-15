@@ -60,7 +60,7 @@ public class NPC : Character, IAvailableActions
     }
     public void FixedUpdate()
     {
-        
+        animatorSetup.SetFloat("SpeedX", 1);
     }
 
     public bool GetInRange()

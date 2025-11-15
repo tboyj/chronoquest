@@ -32,7 +32,6 @@ public class Player : Character, Interaction
     public GameObject containerHiddenDuringDialog; // UI elements hidden during dialog sequences
     public GameObject dialogPanel;             // Dialog UI panel
     public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
-
     private bool inventoryInteractionPermission;
     public TextMeshProUGUI interactionPanel;
 
@@ -333,7 +332,7 @@ public class Player : Character, Interaction
             movement.controller.enabled = true;
             animatorSetup.speed = 1;
             movement.MoveWithForce();
-            animatorSetup.SetFloat("SpeedX", 1); // Add Z animation to this at a later time.// input.magnitude.
+            animatorSetup.SetFloat("SpeedX", movement.rawInput.magnitude); // Add Z animation to this at a later time.// input.magnitude.
             spriteRenderer.flipX = movement.flip;
         }
         else

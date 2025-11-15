@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMovement : Movement
 {
     public CharacterController controller;
-
+    public Vector3 rawInput;
     private void Update()
         {
             MoveWithForce();
@@ -35,7 +35,7 @@ private float verticalVelocity; // separate Y velocity tracking
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 rawInput = new Vector3(x, 0, z);
+        rawInput = new Vector3(x, 0, z);
         rawInput = Vector3.ClampMagnitude(rawInput, 1f);
         Vector3 input = transform.TransformDirection(rawInput);
 
