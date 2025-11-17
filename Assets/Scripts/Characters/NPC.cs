@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using ChronoQuest.UIForInteractions;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class NPC : Character, IAvailableActions
 {
@@ -56,11 +52,35 @@ public class NPC : Character, IAvailableActions
         {
             movement.enabled = true;
         }
-
     }
+
     public void FixedUpdate()
     {
+
+        animatorSetup.SetFloat("SpeedX", Mathf.Clamp01(movement.GetAgent().velocity.magnitude));
+        // facing direction based on where player is (if current quest is controlled by npc).
+        if (movement.status == "IDLE") {
+            if (questHandler?.GetMostRecentQuest()?.data?.id == player.GetQuestManager().GetCurrentQuest().data.id) {
+                if (player.transform.position.x < transform.position.x)
+                {
+                    spriteRenderer.flipX = true;
+                } else
+                {
+                    spriteRenderer.flipX = false;
+                }
+            }
+        }
         
+        if (movement.status == "QUEST" || movement.status == "MOVING")
+        {
+            Vector3 destination = movement.GetAgent().destination;
+            float directionX = destination.x - transform.position.x;
+
+            if (Mathf.Abs(directionX) > 0.01f) // small threshold to avoid jitter
+            {
+                spriteRenderer.flipX = directionX < 0; // flip if destination is left
+            }
+        }
     }
 
     public bool GetInRange()
@@ -92,7 +112,7 @@ public class NPC : Character, IAvailableActions
         {
             inRange = false;
             ChangeTheUI(""); // reset
-            player = null;
+            // player = null;
         }
     }
 

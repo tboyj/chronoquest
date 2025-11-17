@@ -37,7 +37,7 @@ public class QuestInstance : MonoBehaviour
         {
             if (questManager.GetCurrentQuest() != null)
             {
-                // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
+                Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
                 if (questManager.GetCurrentQuest().data.id < data.id) // checks if the current quest is before this quest in the quest line
                 {
                     gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
@@ -71,7 +71,6 @@ public class QuestInstance : MonoBehaviour
     public void DialogAdvance()
     {
         dialogsForQuest.RemoveAt(0);
-
     }
 
     public void ShowDialog(bool v)

@@ -12,7 +12,12 @@ public class QuestCollectItem : QuestInstance, IQuestAction
     public bool isGiveQuestType;
 
 
-
+    public void Start()
+    {
+        questManager = FindObjectOfType<QuestManager>();
+        if (questManager == null)
+            Debug.LogError("QuestManager not found in scene.");
+    }
     public override void QuestEventTriggered()
     {
         currentCount++;

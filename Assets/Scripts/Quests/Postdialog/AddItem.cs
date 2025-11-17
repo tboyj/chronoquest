@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AddItemPostDialog : AfterQuestDialog
 {
-    public NPC sendOver;
+    public Character sendOver;
     public Player recieve;
     public override void SetChange()
     {

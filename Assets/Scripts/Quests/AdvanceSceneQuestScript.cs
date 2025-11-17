@@ -9,15 +9,22 @@ public class AdvanceSceneQuestScript : QuestInstance
     [Header("Persistent Objects")]
     public GameObject player;
     public GameObject canvas;
+    public GameObject questsHolder;
     public Vector3 teleportToPosition;
     public bool isLoading;
+    
     
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hello");
+            IsCompleted = true;
+            CheckConditions();
+            player.GetComponent<QuestManagerGUI>().GotoNextTodo();
+            Debug.Log("Hi again");
             LoadNextScene();
+            player.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         }
         else if (other.CompareTag("NPC"))
         {
@@ -59,11 +66,13 @@ public class AdvanceSceneQuestScript : QuestInstance
             Debug.LogError($"Scene failed to load!");
             yield break;
         }
-
+        DontDestroyOnLoad(questsHolder);
         // Move persistent objects into the new scene
+        
+        
+        SceneManager.MoveGameObjectToScene(questsHolder, newScene);
         SceneManager.MoveGameObjectToScene(canvas, newScene);
         SceneManager.MoveGameObjectToScene(player, newScene);
-
         // Wait a frame so scene objects initialize properly
         yield return null;
 

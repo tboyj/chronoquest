@@ -8,9 +8,21 @@ public class QuestManager : MonoBehaviour
     public int currentQuestId;
     private bool currentlyInDialog;
     public bool hasCompletedFirstQuest;
+    private NPC currentNPC;
+
+    public void SetCurrentNPC(NPC npc)
+    {
+        currentNPC = npc;
+    }
+
+    public NPC GetCurrentNPC()
+    {
+        return currentNPC;
+    }
+
     public void Start()
     {
-        currentQuestId = 3; // replace with savedata
+         // replace with savedata
         if (questsCompleted.Count > 0)
         {
             if (GetCurrentQuest() != null)
@@ -22,23 +34,15 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
             }
         }
+        hasCompletedFirstQuest = false;
     }
     public void AddQuestToList(QuestInstance quest)
     {
-        if (quest.data.id > 3 && hasCompletedFirstQuest)
-        {
-            questsAssigned.Add(quest);
-            currentQuestId = GetCurrentQuest().data.id;
-            gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-        } else if (quest.data.id == 3 && !hasCompletedFirstQuest)
-        {
-            questsAssigned.Add(quest);
-            currentQuestId = GetCurrentQuest().data.id;
-            gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-            hasCompletedFirstQuest = true;
-        }
-        
-        
+        questsAssigned.Add(quest);
+        currentQuestId = GetCurrentQuest().data.id;
+        gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        // set as false in editor
+        hasCompletedFirstQuest = true;
     }
     public void SetQuestCompleted(QuestInstance quest)
     {
@@ -78,7 +82,7 @@ public class QuestManager : MonoBehaviour
             {
                 Debug.Log($"CurrentQuest ID: {GetCurrentQuest()?.GetQuestID()}");
                 Debug.Log($"AssignedQuest ID: {questAssigned?.GetQuestID()}");
-                
+
                 if (GetCurrentQuest().IsCompleted == false) // make sure he doesn't have it already;
                 { // quest is assigned but not done.
                   // i have to check if it's a talking script you know? cuz its flimsy?
@@ -266,9 +270,21 @@ public class QuestManager : MonoBehaviour
                         // Give item(s) to NPC
                         interactableNPC.inventory.AddItem(new Item(item.item, transferAmount));
 
+                        var a = gameObject.GetComponent<Player>().GetHeldItem();
+                        var b = gameObject.GetComponent<HoldingItemScript>();
+
+                        if (a.item != null)
+                        {
+                            if (a.item.sprite == b.spriteTopLeftImage.sprite && a.item.id == item.item.id)
+                            {
+                                gameObject.GetComponent<Player>().isHolding = false;
+                                gameObject.GetComponent<HoldingItemScript>().Activate(false);
+                            }
+                        }
+
                         // Subtract from player
                         item.quantity -= transferAmount;
-
+                        
                         if (item.quantity <= 0)
                         {
                             int index = gameObject.GetComponent<Player>().inventory.items.IndexOf(item);
