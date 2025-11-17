@@ -59,6 +59,9 @@ public class NPCMovement : MonoBehaviour
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
             status = "IDLE";
+        } else
+        {
+             status = "MOVING";
         }
 
     }
@@ -90,5 +93,9 @@ public class NPCMovement : MonoBehaviour
         {
             StopMovement();
         }
+    }
+    public NavMeshAgent GetAgent()
+    {
+        return agent;
     }
 }

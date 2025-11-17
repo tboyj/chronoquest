@@ -537,5 +537,9 @@ public class Player : Character, Interaction
     {
         inventory.SetInventory(items);
     }
+    public QuestManager GetQuestManager()
+    {
+        return manager;
+    }
 }
 

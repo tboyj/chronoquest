@@ -6739,9 +6739,9 @@ MonoBehaviour:
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 0}
-  animatorSetup: {fileID: 0}
+  animatorSetup: {fileID: 1589596645}
   inRange: 0
-  player: {fileID: 0}
+  player: {fileID: 160479110}
   questHandler: {fileID: 0}
   movement: {fileID: 263861374}
   trust: 50
@@ -29816,9 +29816,9 @@ MonoBehaviour:
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 0}
-  animatorSetup: {fileID: 0}
+  animatorSetup: {fileID: 1413166579}
   inRange: 0
-  player: {fileID: 0}
+  player: {fileID: 160479110}
   questHandler: {fileID: 0}
   movement: {fileID: 1036772520}
   trust: 50
@@ -30674,9 +30674,9 @@ MonoBehaviour:
   itemHeld: 0
   isHolding: 1
   holdingItemManager: {fileID: 0}
-  animatorSetup: {fileID: 0}
+  animatorSetup: {fileID: 2047400028}
   inRange: 0
-  player: {fileID: 0}
+  player: {fileID: 160479110}
   questHandler: {fileID: 0}
   movement: {fileID: 1064785745}
   trust: 50
@@ -38393,7 +38393,7 @@ Animator:
   m_GameObject: {fileID: 1413166576}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97613c5c1bf467142943b8868cd32cfd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -42082,7 +42082,7 @@ Animator:
   m_GameObject: {fileID: 1589596642}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a65f74520f2e0fd4097c523fe606fff7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -52916,7 +52916,7 @@ Animator:
   m_GameObject: {fileID: 2047400025}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e577bd54f64f2d4bbb6293d2ca95192, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
