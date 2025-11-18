@@ -11,6 +11,8 @@ public class Player : Character, Interaction
 {
     // protected Character player;
     // Item Handling
+    private int dialogCount = 0;
+
     public ItemStorable itemPaketTest;         // Reference to a storable item package (test or template)
     protected Item heldItem;                   // Currently held item by the player or NPC
     public GameObject reciever;         // Component that receives item usage (e.g., doors, NPCs)
@@ -155,6 +157,7 @@ public class Player : Character, Interaction
                 Debug.Log(manager.GetCurrentQuest());
                 if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
                 {
+                    manager.generalDialogCounter++;
                     var currentQuest = manager.GetCurrentQuest();
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {
@@ -334,6 +337,7 @@ public class Player : Character, Interaction
             movement.MoveWithForce();
             animatorSetup.SetFloat("SpeedX", movement.rawInput.magnitude); // Add Z animation to this at a later time.// input.magnitude.
             spriteRenderer.flipX = movement.flip;
+            holdingItemManager.spriteHolderImage.flipX=movement.flip;
         }
         else
         {
@@ -541,5 +545,18 @@ public class Player : Character, Interaction
     {
         return manager;
     }
+    
+    public void DialogAdvanceMid()
+    {
+        if (manager.GetCurrentQuest().todo[0].dialogsForQuestSections.Count > dialogCount) {
+            manager.GetCurrentQuest().todo[0].ShowDialog(true);
+            dialogCount++;
+        } else
+        {
+            dialogCount = 0;
+        }
+    }
+
+    
 }
 

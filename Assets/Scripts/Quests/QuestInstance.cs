@@ -7,6 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public class QuestInstance : MonoBehaviour
 {
+    public bool inProgress;
     public Quest data;
     public IQuestAction conditions;
     public bool IsCompleted;
@@ -35,9 +36,10 @@ public class QuestInstance : MonoBehaviour
     {
         if (questManager != null)
         {
+            inProgress = false;
             if (questManager.GetCurrentQuest() != null)
             {
-                Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
+                // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
                 if (questManager.GetCurrentQuest().data.id < data.id) // checks if the current quest is before this quest in the quest line
                 {
                     gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
@@ -47,6 +49,13 @@ public class QuestInstance : MonoBehaviour
                 {
                     gameObject.transform.parent.GetComponent<SphereCollider>().enabled = true;
                     gameObject.transform.parent.position = positionOfQuestGiver; // moves the quest giver npc back to original position
+                    if (questManager.GetCurrentQuest().data.id == data.id) {
+                    
+                        if (!IsCompleted )
+                        {
+                            inProgress = true;
+                        }
+                    }
                 }
             }
             else
@@ -55,6 +64,7 @@ public class QuestInstance : MonoBehaviour
                 gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
                 gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc back out of sight
             }
+
         }
     } 
     public void Trigger()
@@ -70,7 +80,8 @@ public class QuestInstance : MonoBehaviour
 
     public void DialogAdvance()
     {
-        dialogsForQuest.RemoveAt(0);
+        if (dialogsForQuest.Count > 0)
+            dialogsForQuest.RemoveAt(0);
     }
 
     public void ShowDialog(bool v)

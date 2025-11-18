@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
 {
     
     public int slotIndex;
@@ -57,7 +57,6 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 player.inventory.SwapItem(player.inventory.GetItemUsingIndex(3), player.inventory.GetItemUsingIndex(slotIndex));
                 player.inventory.SetRefresh(true);
             }
-
         }
 
         

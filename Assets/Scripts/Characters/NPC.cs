@@ -64,9 +64,11 @@ public class NPC : Character, IAvailableActions
                 if (player.transform.position.x < transform.position.x)
                 {
                     spriteRenderer.flipX = true;
+                    holdingItemManager.spriteHolderImage.flipX=true;
                 } else
                 {
                     spriteRenderer.flipX = false;
+                    holdingItemManager.spriteHolderImage.flipX=false;
                 }
             }
         }
@@ -126,6 +128,7 @@ public class NPC : Character, IAvailableActions
 
     public void ChangeTheUI(Item item)
     {
-        
+        if (player != null)
+            player.interactionPanel.text = item.item.itemName;
     }
 }

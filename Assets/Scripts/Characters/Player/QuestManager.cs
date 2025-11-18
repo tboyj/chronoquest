@@ -9,6 +9,8 @@ public class QuestManager : MonoBehaviour
     private bool currentlyInDialog;
     public bool hasCompletedFirstQuest;
     private NPC currentNPC;
+    
+    public int generalDialogCounter;
 
     public void SetCurrentNPC(NPC npc)
     {
@@ -86,6 +88,7 @@ public class QuestManager : MonoBehaviour
                 if (GetCurrentQuest().IsCompleted == false) // make sure he doesn't have it already;
                 { // quest is assigned but not done.
                   // i have to check if it's a talking script you know? cuz its flimsy?
+                  generalDialogCounter = 0;
                     if (GetCurrentQuest() is TalkToNPCQuest talkToNPC)
                     {
                         if (talkToNPC.npc == interactableNPC && GetCurrentQuest().data.id == talkToNPC.GetQuestID())
@@ -97,7 +100,12 @@ public class QuestManager : MonoBehaviour
                     }
                     else // if not this exception... not complete.
                     {
+                        
                         Debug.Log("Not complete.");
+                        SetCurrentlyInDialog(true);
+                        interactableNPC.inDialog = true;
+                        dialogManager.SetCharName(GetCurrentQuest().todo[generalDialogCounter].GetCharName(generalDialogCounter));
+                        dialogManager.SetDialText(GetCurrentQuest().todo[generalDialogCounter].GetCharText(generalDialogCounter));
                     }
                 }
                 // completes GetCurrentQuest if it has most recent quest behind it and if it is ready to go.
@@ -142,6 +150,7 @@ public class QuestManager : MonoBehaviour
                         SetQuestCompleted(GetCurrentQuest());
                         npcQuestHandler.questsInStock.RemoveAt(0);
                         // throw into dialog gui here.
+                        generalDialogCounter = 0;
                     }
                 }
 

@@ -4788,6 +4788,7 @@ MonoBehaviour:
   questsCompleted: []
   currentQuestId: 0
   hasCompletedFirstQuest: 0
+  generalDialogCounter: 0
 --- !u!114 &160479122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7072,6 +7073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 263861370}
   todoText: Return to Sarlah
 --- !u!1 &282467853
@@ -7433,6 +7435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 311886402}
   todoText: Collect the item from the chest
 --- !u!1 &312175341
@@ -18266,6 +18269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 576052942}
   todoText: What are you waiting for?
 --- !u!1 &577197570
@@ -21125,6 +21129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 1036772508}
   todoText: Talk to the Bossman
 --- !u!1 &693168784
@@ -23130,6 +23135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 263861370}
   todoText: Talk to Sarlah
 --- !u!1 &759650249
@@ -30025,6 +30031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 1036772508}
   todoText: Return to the Bossman
 --- !u!195 &1036772522
@@ -30061,6 +30068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 1036772508}
   todoText: Talk to Bossman
 --- !u!1 &1036818363
@@ -35412,6 +35420,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections:
+  - dialogueText: Hello, I am testing in between talking!
+    characterName: Bossman
+    midQuestActions: []
+  - dialogueText: You're schizophrenic.
+    characterName: Jim
+    midQuestActions: []
+  - dialogueText: You're schizophrenic.
+    characterName: Jim
+    midQuestActions: []
   accessPoint: {fileID: 1254902225}
   todoText: Grab from the trunk
 --- !u!1 &1255661315
@@ -40171,6 +40189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 1500553384}
   todoText: He's very thirsty
 --- !u!1 &1501469597
@@ -44960,6 +44979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 1685995634}
   todoText: Show what you've found to the Bossman
 --- !u!1 &1687473395
@@ -51474,6 +51494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f1f82970bed945925d2de2ba0509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogsForQuestSections: []
   accessPoint: {fileID: 1956007028}
   todoText: Press the buttons in order based on the poems
 --- !u!1 &1961023102
