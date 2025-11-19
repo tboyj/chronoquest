@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class QuestManager : MonoBehaviour
 {
     public List<QuestInstance> questsAssigned = new List<QuestInstance>();
     public List<QuestInstance> questsCompleted = new List<QuestInstance>();
-    public int currentQuestId;
+    public CurrentQIDMonitor currentQuestId;
     private bool currentlyInDialog;
     public bool hasCompletedFirstQuest;
     private NPC currentNPC;
@@ -23,13 +24,13 @@ public class QuestManager : MonoBehaviour
     }
 
     public void Start()
-    {
+    {   
          // replace with savedata
         if (questsCompleted.Count > 0)
         {
             if (GetCurrentQuest() != null)
             {
-                currentQuestId = GetCurrentQuest().data.id;
+                CurrentQIDMonitor.Instance.SetCurrentId(GetCurrentQuest().data.id);
             }
             else
             {
@@ -41,8 +42,8 @@ public class QuestManager : MonoBehaviour
     public void AddQuestToList(QuestInstance quest)
     {
         questsAssigned.Add(quest);
-        currentQuestId = GetCurrentQuest().data.id;
-        gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        CurrentQIDMonitor.Instance.SetCurrentId(quest.data.id);
+        GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         // set as false in editor
         hasCompletedFirstQuest = true;
     }
@@ -50,6 +51,7 @@ public class QuestManager : MonoBehaviour
     {
         questsCompleted.Add(quest);
         questsAssigned.Remove(quest);
+        
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
 
@@ -102,10 +104,13 @@ public class QuestManager : MonoBehaviour
                     {
                         
                         Debug.Log("Not complete.");
-                        SetCurrentlyInDialog(true);
-                        interactableNPC.inDialog = true;
-                        dialogManager.SetCharName(GetCurrentQuest().todo[generalDialogCounter].GetCharName(generalDialogCounter));
-                        dialogManager.SetDialText(GetCurrentQuest().todo[generalDialogCounter].GetCharText(generalDialogCounter));
+                        
+                        if (GetCurrentQuest().todo[0].dialogsForQuestSections.Count > 0) {
+                            SetCurrentlyInDialog(true);
+                            interactableNPC.inDialog = true;
+                            dialogManager.SetCharName(GetCurrentQuest().todo[generalDialogCounter].GetCharName(generalDialogCounter));
+                            dialogManager.SetDialText(GetCurrentQuest().todo[generalDialogCounter].GetCharText(generalDialogCounter));
+                        }
                         
                     }
                 }
@@ -121,8 +126,6 @@ public class QuestManager : MonoBehaviour
 
                 if (GetCurrentQuest().GetQuestID() == questAssigned.GetQuestID())
                 {
-                    
-
                     if (GetCurrentQuest().IsCompleted &&
                     questAssigned.IsCompleted)
                     { // quest is assigned and done.

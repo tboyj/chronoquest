@@ -4786,7 +4786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questsAssigned: []
   questsCompleted: []
-  currentQuestId: 0
+  currentQuestId: {fileID: 0}
   hasCompletedFirstQuest: 0
   generalDialogCounter: 0
 --- !u!114 &160479122
@@ -20495,6 +20495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c479238d5ad11bd4a9b3f9d1fe7e5f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: 73dd49709849643418c6c86928e5837a, type: 2}
   IsCompleted: 0
   todo:
@@ -22115,6 +22116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c479238d5ad11bd4a9b3f9d1fe7e5f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: 73dd49709849643418c6c86928e5837a, type: 2}
   IsCompleted: 0
   todo:
@@ -25855,6 +25857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7cf9118f5edf34da595f08ae98f093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: 50211fee4d6852142895968be3949296, type: 2}
   IsCompleted: 0
   todo:
@@ -27728,6 +27731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c479238d5ad11bd4a9b3f9d1fe7e5f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: c738d147817ba4440a8b687df68620a2, type: 2}
   IsCompleted: 0
   todo:
@@ -36829,6 +36833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee37ef577690d4284a919cab781982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: 2ba5e3e2c1065384c8eeff7d142345cf, type: 2}
   IsCompleted: 0
   todo:
@@ -38109,6 +38114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: ebdcbdceb9f50dd4d9e41f5ce6e4a9e6, type: 2}
   IsCompleted: 0
   todo:
@@ -39463,6 +39469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee37ef577690d4284a919cab781982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: 584aa5b9e0702e94a9c6bcfb6ad51a3b, type: 2}
   IsCompleted: 0
   todo:
@@ -44133,6 +44140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee37ef577690d4284a919cab781982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: f10dce21154dade4e884e8f7eea34b7d, type: 2}
   IsCompleted: 0
   todo:
@@ -50381,6 +50389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: ae00d6bdf8cb9154ab70c4f5c523b168, type: 2}
   IsCompleted: 0
   todo:
@@ -52802,6 +52811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c479238d5ad11bd4a9b3f9d1fe7e5f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: 2ec308860a0bedc49838062cac512fa5, type: 2}
   IsCompleted: 0
   todo:
@@ -53344,6 +53354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inProgress: 0
   data: {fileID: 11400000, guid: d9f14cf7f7ee8af48af1ae3f783f2373, type: 2}
   IsCompleted: 0
   todo:

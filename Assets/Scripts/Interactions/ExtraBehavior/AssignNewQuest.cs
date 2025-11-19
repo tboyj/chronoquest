@@ -15,7 +15,7 @@ public class AssignNewQuest : ExtraBase
 
             var nextQuest = qh.GetMostRecentQuest();
             qm.AddQuestToList(nextQuest);
-            qm.currentQuestId = nextQuest.data.id;
+            CurrentQIDMonitor.Instance.SetCurrentId(nextQuest.data.id);
 
             Debug.Log($"[QuestManager] Advanced to quest {nextQuest.data.id}");
         }

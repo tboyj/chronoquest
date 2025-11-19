@@ -33,8 +33,9 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         if (other.CompareTag("Player"))
         {
             referencePlayer = other.gameObject;
-            quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as TalkToNPCQuest;
-            qm = referencePlayer.GetComponent<QuestManager>();
+            if (referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() is TalkToNPCQuest)
+                quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as TalkToNPCQuest;
+            qm = other.GetComponent<QuestManager>();
         }
     }
     void OnTriggerExit(Collider other)
@@ -52,17 +53,17 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
 
         if (referencePlayer != null)
         {
-            if (referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() != null)
+            if (qm.GetCurrentQuest() != null)
             {
-                if (quest.data.id == referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id)
+                if (quest?.data?.id == qm.GetCurrentQuest()?.data?.id)
                 {
                     Debug.Log("Moves to here.");
                     quest.QuestEventTriggered();
                 }
                 else
                 {
-
-                    Debug.Log("Inequal id. Please check..." + quest.data.id + ":" + referencePlayer.GetComponent<QuestManager>().GetCurrentQuest().data.id);
+                    Debug.Log("Inequal id. Please check..." + quest.data.id + ":" + qm.GetCurrentQuest().data.id);
+                    // try to do a general dialog ?????
                 }
             }
         }

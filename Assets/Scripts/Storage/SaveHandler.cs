@@ -80,7 +80,7 @@ public class SaveHandler : MonoBehaviour
         {
             data.questsAssigned = new List<QuestInstance>(questManager.questsAssigned);
             data.questsCompleted = new List<QuestInstance>(questManager.questsCompleted);
-            data.currentQuestId = questManager.currentQuestId;
+            data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
             data.hasCompletedFirstQuest = questManager.hasCompletedFirstQuest;
         }
 
@@ -158,7 +158,7 @@ public class SaveHandler : MonoBehaviour
         {
             questManager.questsAssigned = new List<QuestInstance>(data.questsAssigned);
             questManager.questsCompleted = new List<QuestInstance>(data.questsCompleted);
-            questManager.currentQuestId = data.currentQuestId;
+            CurrentQIDMonitor.Instance.SetCurrentId(data.currentQuestId);
             questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
             questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         }

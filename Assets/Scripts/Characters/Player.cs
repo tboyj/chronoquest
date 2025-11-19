@@ -37,20 +37,21 @@ public class Player : Character, Interaction
     private bool inventoryInteractionPermission;
     public TextMeshProUGUI interactionPanel;
 
-    public void Awake()
+    public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-
         Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
+        
         movement = gameObject.GetComponent<PlayerMovement>();
         if (isInventorySetup == false)
         {
             InventorySetup(49);
             isInventorySetup = true;
         }
-        guiHandler = gameObject.GetComponent<InventoryGUI>();
+        
         heldItem = inventory.GetItemUsingIndex(itemHeld);
+        guiHandler = gameObject.GetComponent<InventoryGUI>();
         if (heldItem.item != null)
         {
             Debug.Log(heldItem.item.name);
@@ -76,7 +77,7 @@ public class Player : Character, Interaction
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
         Physics.IgnoreLayerCollision(0, 8, true);
-
+        
     }
     public void Update()
     {
@@ -181,28 +182,23 @@ public class Player : Character, Interaction
                     }
                     else if (manager.GetCurrentQuest().dialogsForQuest.Count == 0)
                     {
-                        if (manager.generalDialogCounter < manager.GetCurrentQuest().todo.Count) {
-                        manager.generalDialogCounter++;
-                        manager.SetCurrentlyInDialog(true);
-                        interactableNPC.inDialog = true;
-                        
-                        Debug.Log(manager.generalDialogCounter);
-                        
-                        Debug.Log("todo length: " + manager.GetCurrentQuest().todo.Count);
-                        Debug.Log("sections length: " + manager.GetCurrentQuest().todo[0].dialogsForQuestSections.Count);
-                        Debug.Log("counter: " + manager.generalDialogCounter);
+                        if (manager.generalDialogCounter < manager.GetCurrentQuest().todo.Count && manager.GetCurrentQuest()?.todo[0]?.dialogsForQuestSections?.Count > 0) {
 
-                        // basic talk in between
-                        dialogManager.SetCharName(manager.GetCurrentQuest().todo[0].dialogsForQuestSections[manager.generalDialogCounter].characterName);
-                        dialogManager.SetDialText(manager.GetCurrentQuest().todo[0].dialogsForQuestSections[manager.generalDialogCounter].dialogueText);
-                        
-                        
+                            Debug.Log(manager.generalDialogCounter);
+                            Debug.Log("counter: " + manager.generalDialogCounter);
+
+                            // basic talk in between
+                            manager.generalDialogCounter++;
+                            manager.SetCurrentlyInDialog(true);
+                            interactableNPC.inDialog = true;
+                            dialogManager.SetCharName(manager.GetCurrentQuest().todo[0].dialogsForQuestSections[manager.generalDialogCounter].characterName);
+                            dialogManager.SetDialText(manager.GetCurrentQuest().todo[0].dialogsForQuestSections[manager.generalDialogCounter].dialogueText);
                         } else
                         {
                             manager.SetCurrentlyInDialog(false);
                             interactableNPC.inDialog = false;
+                            Debug.Log("In between dialog not set");
                         }
-
                     }
                     //manager.GetCurrentQuest().ShowDialog(true);
 
