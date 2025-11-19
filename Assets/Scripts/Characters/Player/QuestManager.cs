@@ -106,6 +106,7 @@ public class QuestManager : MonoBehaviour
                         interactableNPC.inDialog = true;
                         dialogManager.SetCharName(GetCurrentQuest().todo[generalDialogCounter].GetCharName(generalDialogCounter));
                         dialogManager.SetDialText(GetCurrentQuest().todo[generalDialogCounter].GetCharText(generalDialogCounter));
+                        
                     }
                 }
                 // completes GetCurrentQuest if it has most recent quest behind it and if it is ready to go.

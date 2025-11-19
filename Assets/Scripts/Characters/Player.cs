@@ -155,9 +155,10 @@ public class Player : Character, Interaction
                 }
                 Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
                 Debug.Log(manager.GetCurrentQuest());
+
                 if (interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest() == manager.GetCurrentQuest())
                 {
-                    manager.generalDialogCounter++;
+                    
                     var currentQuest = manager.GetCurrentQuest();
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {
@@ -169,7 +170,7 @@ public class Player : Character, Interaction
                         dialogManager.SetDialText(manager.GetCurrentQuest().dialogsForQuest[0].dialogueText);
                     }
 
-                    else if (manager.GetCurrentQuest().dialogsForQuest.Count <= 1)
+                    else if (manager.GetCurrentQuest().dialogsForQuest.Count == 1)
                     {
                         Debug.Log("Count is equal to or less than 1.");
                         currentQuest.ShowDialog(false);
@@ -177,6 +178,31 @@ public class Player : Character, Interaction
                         interactableNPC.inDialog = false;
                         currentQuest.DialogAdvance();
                         manager.ChangeFunction();
+                    }
+                    else if (manager.GetCurrentQuest().dialogsForQuest.Count == 0)
+                    {
+                        if (manager.generalDialogCounter < manager.GetCurrentQuest().todo.Count) {
+                        manager.generalDialogCounter++;
+                        manager.SetCurrentlyInDialog(true);
+                        interactableNPC.inDialog = true;
+                        
+                        Debug.Log(manager.generalDialogCounter);
+                        
+                        Debug.Log("todo length: " + manager.GetCurrentQuest().todo.Count);
+                        Debug.Log("sections length: " + manager.GetCurrentQuest().todo[0].dialogsForQuestSections.Count);
+                        Debug.Log("counter: " + manager.generalDialogCounter);
+
+                        // basic talk in between
+                        dialogManager.SetCharName(manager.GetCurrentQuest().todo[0].dialogsForQuestSections[manager.generalDialogCounter].characterName);
+                        dialogManager.SetDialText(manager.GetCurrentQuest().todo[0].dialogsForQuestSections[manager.generalDialogCounter].dialogueText);
+                        
+                        
+                        } else
+                        {
+                            manager.SetCurrentlyInDialog(false);
+                            interactableNPC.inDialog = false;
+                        }
+
                     }
                     //manager.GetCurrentQuest().ShowDialog(true);
 
