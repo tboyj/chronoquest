@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/RealTitleScreen.unity
+    guid: fec0b4eb6ff7eb143a0095534d3756e5
+  - enabled: 1
+    path: Assets/Scenes/UtilityScene.unity
+    guid: 9e585a25d975a8748a683ed8122fee8e
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 2eabb51dc51dbe44b8f0c1f2d26cbbc7
   - enabled: 1
     path: Assets/Scenes/AncientEgypt.unity
     guid: 0c02106f4baa94240971187f9a827370
-  - enabled: 1
-    path: Assets/Scenes/RealTitleScreen.unity
-    guid: fec0b4eb6ff7eb143a0095534d3756e5
   m_configObjects: {}

@@ -31,9 +31,29 @@ public class AdvanceSceneQuestScript : QuestInstance
             other.gameObject.SetActive(false);
         }
     }
+    string utilitiesSceneName = "UtilityScene"; // or build index
+
+    Scene GetRealGameplayScene()
+    {
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+
+            if (scene.name != utilitiesSceneName)
+            {
+                return scene; // This is your real active scene
+            }
+        }
+
+        Debug.LogError("No non-utility scene is loaded!");
+        return default(Scene);
+    }
+
     public void LoadNextScene()
     {
-        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        Scene realScene = GetRealGameplayScene();
+
+        int currentIndex = realScene.buildIndex;
         int nextIndex = currentIndex + 1;
 
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
