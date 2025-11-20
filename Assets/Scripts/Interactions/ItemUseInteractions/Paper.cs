@@ -1,13 +1,10 @@
-using System;
-using ChronoQuest.UIForInteractions;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Paper : BaseUse
 {
-
+    
     public GameObject container;
     [TextArea]
     public string paperText;
@@ -41,11 +38,17 @@ public class Paper : BaseUse
             {
                 // bug can occur where character can go outside the trigger zone, disabling.
                 GetPlayer().movement.moveSpeed = 0;
+                GetPlayer().SetInventoryPermission(false);
+                GetPlayer().hotbarHolder.Find("OpenInv").GetComponent<Button>().interactable = false;
+
+
                 ChangeTheUI("");
             }
             else
             {
                 GetPlayer().movement.moveSpeed = 1; // <-- This is the movement speed of the player. Find another way to do this lol.
+                GetPlayer().hotbarHolder.Find("OpenInv").GetComponent<Button>().interactable = true;
+                GetPlayer().SetInventoryPermission(true);
             }
         }
     }
