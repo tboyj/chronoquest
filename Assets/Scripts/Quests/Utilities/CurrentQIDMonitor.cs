@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CurrentQIDMonitor : MonoBehaviour
@@ -31,4 +32,9 @@ public class CurrentQIDMonitor : MonoBehaviour
     {
         return currentQuestId;
     }
+
+    // internal object GetCurrentId()
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

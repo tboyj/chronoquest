@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AdvanceSceneQuestScript : QuestInstance
 {
@@ -13,14 +14,16 @@ public class AdvanceSceneQuestScript : QuestInstance
     public Vector3 teleportToPosition;
     public bool isLoading;
     
-    
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hello");
-            IsCompleted = true;
-            CheckConditions();
+            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
+            questManager.questsAssigned.Clear();
+            questManager.questsCompleted.Clear();
+
             player.GetComponent<QuestManagerGUI>().GotoNextTodo();
             Debug.Log("Hi again");
             LoadNextScene();
@@ -86,11 +89,9 @@ public class AdvanceSceneQuestScript : QuestInstance
             Debug.LogError($"Scene failed to load!");
             yield break;
         }
-        DontDestroyOnLoad(questsHolder);
         // Move persistent objects into the new scene
         
         
-        SceneManager.MoveGameObjectToScene(questsHolder, newScene);
         SceneManager.MoveGameObjectToScene(canvas, newScene);
         SceneManager.MoveGameObjectToScene(player, newScene);
         // Wait a frame so scene objects initialize properly
@@ -117,5 +118,20 @@ public class AdvanceSceneQuestScript : QuestInstance
         SceneManager.UnloadSceneAsync(currentScene);
 
         isLoading = false;
+        
+        CurrentQIDMonitor.Instance.SetCurrentId(questManager.GetCurrentQuest().data.id);
+
+        Debug.Log(CurrentQIDMonitor.Instance.GetCurrentQuestId());
+
+        questManager.hasCompletedFirstQuest = false;
+        // reset ^^^
+        //questManager.GetComponent<Player>().
+
+        Transform child = GameObject.Find("DefaultRuntimeQuest").transform.GetChild(0);
+        QuestInstance q = child.GetComponent<QuestInstance>();
+
+        Debug.Log(q.data.questName);
+
+        questManager.AddQuestToList(q);
     }
 }
