@@ -6,7 +6,6 @@ public class QuestManager : MonoBehaviour
 {
     public List<QuestInstance> questsAssigned = new List<QuestInstance>();
     public List<QuestInstance> questsCompleted = new List<QuestInstance>();
-    public CurrentQIDMonitor currentQuestId;
     private bool currentlyInDialog;
     public bool hasCompletedFirstQuest;
     private NPC currentNPC;
@@ -26,17 +25,17 @@ public class QuestManager : MonoBehaviour
     public void Start()
     {   
          // replace with savedata
-        if (questsCompleted.Count > 0)
-        {
+        
             if (GetCurrentQuest() != null)
             {
+                Debug.Log("attempt @ cqidm");
                 CurrentQIDMonitor.Instance.SetCurrentId(GetCurrentQuest().data.id);
             }
             else
             {
                 Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
             }
-        }
+        
         hasCompletedFirstQuest = false;
     }
     public void AddQuestToList(QuestInstance quest)

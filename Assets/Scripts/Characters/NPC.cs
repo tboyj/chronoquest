@@ -60,17 +60,27 @@ public class NPC : Character, IAvailableActions
         animatorSetup.SetFloat("SpeedX", Mathf.Clamp01(movement.GetAgent().velocity.magnitude));
         // facing direction based on where player is (if current quest is controlled by npc).
         if (movement.status == "IDLE") {
-            if (questHandler?.GetMostRecentQuest()?.data?.id == player.GetQuestManager().GetCurrentQuest().data.id) {
-                if (player.transform.position.x < transform.position.x)
-                {
-                    spriteRenderer.flipX = true;
-                    holdingItemManager.spriteHolderImage.flipX=true;
-                } else
-                {
-                    spriteRenderer.flipX = false;
-                    holdingItemManager.spriteHolderImage.flipX=false;
+            if (player != null && player.GetQuestManager() != null) {
+                if (questHandler?.GetMostRecentQuest()?.data.id == player?.GetQuestManager()?.GetCurrentQuest()?.data.id) {
+                    if (player.transform.position.x < transform.position.x)
+                    {
+                        spriteRenderer.flipX = true;
+                        holdingItemManager.spriteHolderImage.flipX=true;
+                    } else
+                    {
+                        spriteRenderer.flipX = false;
+                        holdingItemManager.spriteHolderImage.flipX=false;
+                    }
                 }
+                 else
+                {
+                    // Debug.Log("Not for me!");
+                }
+            } else
+            {
+                Debug.Log("Definitely not for me!");
             }
+           
         }
         
         if (movement.status == "QUEST" || movement.status == "MOVING")

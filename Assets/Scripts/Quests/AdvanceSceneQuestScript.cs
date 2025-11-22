@@ -75,7 +75,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         Scene currentScene = SceneManager.GetSceneByBuildIndex(current);
         // Start loading in background
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next, LoadSceneMode.Additive);
-        asyncLoad.allowSceneActivation = true;
+        asyncLoad.allowSceneActivation = false;
 
         while (!asyncLoad.isDone)
         {

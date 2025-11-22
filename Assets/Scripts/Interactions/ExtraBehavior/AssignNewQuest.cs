@@ -8,11 +8,9 @@ public class AssignNewQuest : ExtraBase
     public override void Change()
     { // Check check :)s\
         Debug.Log("Changing right now... Dattebayo!");
-        if (qh.GetQuestList().Count > 0 && qm.GetCurrentQuest() != null)
+        if (qh.GetQuestList().Count > 0 && qm.GetCurrentQuest() != null && qm.GetCurrentQuest().IsCompleted) // problemm 
         {
-            qm.GetCurrentQuest().IsCompleted = true;
             qm.SetQuestCompleted(qm.GetCurrentQuest());
-
             var nextQuest = qh.GetMostRecentQuest();
             qm.AddQuestToList(nextQuest);
             CurrentQIDMonitor.Instance.SetCurrentId(nextQuest.data.id);

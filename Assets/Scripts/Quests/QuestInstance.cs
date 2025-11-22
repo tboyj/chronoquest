@@ -7,7 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public class QuestInstance : MonoBehaviour
 {
-    public bool inProgress;
+    
     public Quest data;
     public IQuestAction conditions;
     public bool IsCompleted;
@@ -36,7 +36,6 @@ public class QuestInstance : MonoBehaviour
     {
         if (questManager != null)
         {
-            inProgress = false;
             if (questManager.GetCurrentQuest() != null)
             {
                 // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
@@ -51,10 +50,7 @@ public class QuestInstance : MonoBehaviour
                     gameObject.transform.parent.position = positionOfQuestGiver; // moves the quest giver npc back to original position
                     if (questManager.GetCurrentQuest().data.id == data.id) {
                     
-                        if (!IsCompleted )
-                        {
-                            inProgress = true;
-                        }
+                        
                     }
                 }
             }

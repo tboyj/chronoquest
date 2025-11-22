@@ -17,18 +17,27 @@ public class QuestCollectItem : QuestInstance, IQuestAction
         questManager = FindObjectOfType<QuestManager>();
         if (questManager == null)
             Debug.LogError("QuestManager not found in scene.");
-    }
+    }	
     public override void QuestEventTriggered()
     {
+        if (IsCompleted)
+        {
+            Debug.Log("Quest already completed, ignoring trigger: " + data.id);
+            return;
+        }
+
         currentCount++;
         Debug.Log("Current:" + questManager.GetCurrentQuest().data.id + "This:" + data.id);
+
+        // Only advance if this quest is the current active one
         if (questManager.GetCurrentQuest().data.id == data.id)
         {
             questManager.gameObject.GetComponent<QuestManagerGUI>().GotoNextTodo();
-            // Also go to the next pointer position.
         }
-        IsCompleted = CheckConditions(); // Called when item is collected
+
+        IsCompleted = CheckConditions();
     }
+
 
     public override bool CheckConditions()
     {

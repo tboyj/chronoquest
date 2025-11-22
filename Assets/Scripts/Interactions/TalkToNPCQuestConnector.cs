@@ -55,13 +55,15 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         {
             if (qm.GetCurrentQuest() != null)
             {
-                if (quest?.data?.id == qm.GetCurrentQuest()?.data?.id)
+                if (quest?.data?.id == qm.GetCurrentQuest()?.data?.id && !inDialog)
                 {
                     Debug.Log("Moves to here.");
                     quest.QuestEventTriggered();
                 }
                 else
                 {
+                    if (inDialog)
+                        Debug.Log("In dialog. Don't try.");
                     Debug.Log("Inequal id. Please check..." + quest.data.id + ":" + qm.GetCurrentQuest().data.id);
                     // try to do a general dialog ?????
                 }
