@@ -7,7 +7,7 @@ public class StartingSceneQuest : MonoBehaviour
 {
     // Start is called before the first frame update
     public QuestManager questManager;
-    void Start()
+    void Awake()
     {
         questManager = FindObjectOfType<QuestManager>();
         if (questManager == null)

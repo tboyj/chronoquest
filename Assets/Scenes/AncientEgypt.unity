@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!143 &2902169
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8464,7 +8464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893a4c8477ac57d4cbcbd1dd4961083f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inProgress: 0
   data: {fileID: 11400000, guid: 5cfd77803e08a5c49ae97830e662856e, type: 2}
   IsCompleted: 0
   todo:
@@ -44031,7 +44030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1886961732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44039,7 +44038,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886961731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -44059,7 +44058,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886961731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 

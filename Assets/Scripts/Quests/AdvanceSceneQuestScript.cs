@@ -23,8 +23,7 @@ public class AdvanceSceneQuestScript : QuestInstance
             questManager.SetQuestCompleted(questManager.GetCurrentQuest());
             questManager.questsAssigned.Clear();
             questManager.questsCompleted.Clear();
-
-            player.GetComponent<QuestManagerGUI>().GotoNextTodo();
+            
             Debug.Log("Hi again");
             LoadNextScene();
             player.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
@@ -41,13 +40,11 @@ public class AdvanceSceneQuestScript : QuestInstance
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
             Scene scene = SceneManager.GetSceneAt(i);
-
             if (scene.name != utilitiesSceneName)
             {
                 return scene; // This is your real active scene
             }
         }
-
         Debug.LogError("No non-utility scene is loaded!");
         return default(Scene);
     }
@@ -75,7 +72,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         Scene currentScene = SceneManager.GetSceneByBuildIndex(current);
         // Start loading in background
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next, LoadSceneMode.Additive);
-        asyncLoad.allowSceneActivation = false;
+        asyncLoad.allowSceneActivation = true;
 
         while (!asyncLoad.isDone)
         {
@@ -116,9 +113,14 @@ public class AdvanceSceneQuestScript : QuestInstance
 
         // Finally unload the old scene
         SceneManager.UnloadSceneAsync(currentScene);
-
+        SceneManager.SetActiveScene(newScene);
         isLoading = false;
-        
+        Transform child = GameObject.Find("DefaultRuntimeQuest").transform.GetChild(0);
+        QuestInstance q = child.GetComponent<QuestInstance>();
+
+        Debug.Log(q.data.questName);
+
+        questManager.AddQuestToList(q);
         CurrentQIDMonitor.Instance.SetCurrentId(questManager.GetCurrentQuest().data.id);
 
         Debug.Log(CurrentQIDMonitor.Instance.GetCurrentQuestId());
@@ -127,11 +129,6 @@ public class AdvanceSceneQuestScript : QuestInstance
         // reset ^^^
         //questManager.GetComponent<Player>().
 
-        Transform child = GameObject.Find("DefaultRuntimeQuest").transform.GetChild(0);
-        QuestInstance q = child.GetComponent<QuestInstance>();
 
-        Debug.Log(q.data.questName);
-
-        questManager.AddQuestToList(q);
     }
 }
