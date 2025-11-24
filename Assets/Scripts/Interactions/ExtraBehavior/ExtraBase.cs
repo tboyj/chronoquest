@@ -8,10 +8,13 @@ public abstract class ExtraBase : MonoBehaviour
     public Player player;
     public QuestManager qm;
     // Called before the first frame update
-    private void Start()
+    void Start()
     {
-        // Setup code here
-        
+        if (player == null)
+            player = FindObjectOfType<Player>();
+
+        if (qm == null)
+            qm = FindObjectOfType<QuestManager>();
     }
     private void Update()
     {

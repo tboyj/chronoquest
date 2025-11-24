@@ -27,6 +27,11 @@ public class QuestInstance : MonoBehaviour
     //     dialogsForQuest = d;
     //     relatedQuests = s;
     // }
+    public void Awake()
+    {
+        if (questManager == null)
+            questManager = FindObjectOfType<QuestManager>();
+    }
     public virtual void Start()
     {
         // questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();

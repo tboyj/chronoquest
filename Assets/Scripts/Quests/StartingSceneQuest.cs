@@ -12,6 +12,7 @@ public class StartingSceneQuest : MonoBehaviour
         questManager = FindObjectOfType<QuestManager>();
         if (questManager == null)
             Debug.LogError("QuestManager not found in scene.");
+        
     }
 
 

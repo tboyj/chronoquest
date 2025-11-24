@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeleportScript : MonoBehaviour
+public class TeleportScript : QuestInstance
 {
     public GameObject positionTP;
     public Vector3 teleportToPosition;
     public void Start()
     {
+
         teleportToPosition = positionTP.transform.position;
     }
 
     public void Teleport(GameObject target)
         {
-            var movement = target.GetComponent<PlayerMovement>(); // or whatever your movement script is called
+            PlayerMovement movement = target.GetComponent<PlayerMovement>(); // or whatever your movement script is called
             if (movement != null && movement.controller != null)
             {
                 movement.controller.enabled = false;
@@ -30,11 +31,17 @@ public class TeleportScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Teleport(other.gameObject);
-            other.GetComponent<QuestManagerGUI>().GotoNextTodo();
-            other.GetComponent<QuestManager>().GetCurrentQuest().QuestEventTriggered();
+            other.GetComponent<QuestManager>().SetQuestCompleted(other.GetComponent<QuestManager>().GetCurrentQuest());
+            other.GetComponent<QuestManager>().GetCurrentQuest().CheckConditions();
+            if (gameObject.GetComponent<ExtraBase>() != null) // activate extra behavior if there is any
+                {
+                    gameObject.GetComponent<ExtraBase>().Change();
+                }
+            other.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         } else if (other.CompareTag("NPC"))
         {
             Teleport(other.gameObject);
         }
     }
+
 }
