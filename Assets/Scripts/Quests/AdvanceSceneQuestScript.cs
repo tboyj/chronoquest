@@ -13,7 +13,7 @@ public class AdvanceSceneQuestScript : QuestInstance
     public GameObject questsHolder;
     public Vector3 teleportToPosition;
     public bool isLoading;
-    
+    private QuestInstance q;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -115,8 +115,29 @@ public class AdvanceSceneQuestScript : QuestInstance
         SceneManager.UnloadSceneAsync(currentScene);
         SceneManager.SetActiveScene(newScene);
         isLoading = false;
-        Transform child = GameObject.Find("DefaultRuntimeQuest").transform.GetChild(0);
-        QuestInstance q = child.GetComponent<QuestInstance>();
+
+        // Find the root object named "DefaultRuntimeQuest" in the newly loaded scene
+        GameObject[] roots = newScene.GetRootGameObjects();
+
+        GameObject defaultRuntimeQuest = null;
+        foreach (GameObject go in roots)
+        {
+            if (go.name == "DefaultRuntimeQuest")
+            {
+                defaultRuntimeQuest = go;
+                break;
+            }
+        }
+
+        if (defaultRuntimeQuest != null)
+        {
+            Debug.LogError("DefaultRuntimeQuest not found in scene: " + newScene.name);
+            Transform child = defaultRuntimeQuest.transform.GetChild(0);
+            q = child.GetComponent<QuestInstance>();
+        }
+
+        // Now safely get the first child
+        
 
         Debug.Log(q.data.questName);
 

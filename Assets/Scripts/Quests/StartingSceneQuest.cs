@@ -40,11 +40,7 @@ public class StartingSceneQuest : MonoBehaviour
         if (questManager.GetCurrentQuest())
             questManager.GetCurrentQuest().IsCompleted = true;
         // Check ID and assign if appropriate
-        if (firstQuest != null)
-        {
             questManager.AddQuestToList(firstQuest);
             questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-        }
- 
     }
 }
