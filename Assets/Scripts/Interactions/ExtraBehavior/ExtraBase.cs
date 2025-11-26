@@ -8,13 +8,19 @@ public abstract class ExtraBase : MonoBehaviour
     public Player player;
     public QuestManager qm;
     // Called before the first frame update
-    void Start()
+    public void Start()
     {
-        if (player == null)
-            player = FindObjectOfType<Player>();
-
-        if (qm == null)
-            qm = FindObjectOfType<QuestManager>();
+        
+        GameObject rp = GameObject.Find("RealPlayer");
+        if (rp != null)
+        {
+            player = rp.GetComponent<Player>();
+            qm = rp.GetComponent<QuestManager>();
+        }
+        else
+        {
+            Debug.LogError("RealPlayer not found!");
+        }
     }
     private void Update()
     {
@@ -28,7 +34,7 @@ public abstract class ExtraBase : MonoBehaviour
         {
             inRange = true;
             SetPlayer(other.gameObject.GetComponent<Player>());
-            qm = player.GetComponent<QuestManager>();
+            SetManager(other.gameObject.GetComponent<QuestManager>());
         }
     }
 
@@ -38,8 +44,6 @@ public abstract class ExtraBase : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inRange = false;
-            SetPlayer(null);
-            
         }
     }
     
@@ -50,5 +54,13 @@ public abstract class ExtraBase : MonoBehaviour
     public Player GetPlayer()
     {
         return player;
+    }
+    public void SetManager(QuestManager qm)
+    {
+        this.qm = qm;
+    }
+    public QuestManager GetManager()
+    {
+        return qm;
     }
 }

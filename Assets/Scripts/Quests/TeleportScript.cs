@@ -30,9 +30,8 @@ public class TeleportScript : QuestInstance
     {
         if (other.CompareTag("Player"))
         {
+            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
             Teleport(other.gameObject);
-            other.GetComponent<QuestManager>().SetQuestCompleted(other.GetComponent<QuestManager>().GetCurrentQuest());
-            other.GetComponent<QuestManager>().GetCurrentQuest().CheckConditions();
             if (gameObject.GetComponent<ExtraBase>() != null) // activate extra behavior if there is any
                 {
                     gameObject.GetComponent<ExtraBase>().Change();

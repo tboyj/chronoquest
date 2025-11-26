@@ -49,6 +49,7 @@ public class QuestManager : MonoBehaviour
     public void SetQuestCompleted(QuestInstance quest)
     {
         questsCompleted.Add(quest);
+        quest.IsCompleted = true;
         questsAssigned.Remove(quest);
         
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
