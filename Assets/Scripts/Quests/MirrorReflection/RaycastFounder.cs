@@ -5,52 +5,57 @@ using UnityEngine;
 public class RaycastFounder : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool activeReflection;
     public float distance = 50f;
     public LayerMask mask;
     [SerializeField]
     private GameObject reflection;
-    void OnDrawGizmos()
+    public List<Collider> mirrorChain = new List<Collider>();
+    void Start()
     {
-        Vector3 origin = transform.position;
-        Vector3 direction = transform.forward;
-
-        // Perform raycast (Editor only)
-        RaycastHit hit;
-        bool didHit = Physics.Raycast(origin, direction, out hit, distance, mask);
-
-        Gizmos.color = didHit ? Color.green : Color.red;
-
-        // Line to hit or full distance
-        float drawDistance = didHit ? hit.distance : distance;
-
-        Gizmos.DrawLine(origin, origin + direction * drawDistance);
-
-        if (hit.collider.CompareTag("MirrorReflection")) {
-
-            Gizmos.DrawSphere(hit.point, 0.1f);
-        }
+        LookingForReflections();
     }
-
     void Update()
     {
+        LookingForReflections();
+    }
+
+  public void LookingForReflections()
+    {
         Vector3 origin = transform.position;
         Vector3 direction = transform.forward;
 
-        if (Physics.Raycast(origin, direction, out RaycastHit hit, distance, mask) && hit.collider.CompareTag("MirrorReflection"))
+        if (Physics.Raycast(origin, direction, out RaycastHit hit, distance, mask))
         {
-            Debug.Log("Hit: " + hit.collider.name);
-            
-            // Example: draw line in scene view
-            Debug.DrawLine(origin, hit.point, Color.green);
-            reflection = hit.collider.transform.Find("rayshiner").gameObject;
-            reflection.transform.position = hit.point;
-            reflection.GetComponent<RaycastFounder>().distance = 50f;
+            // Debug.Log("Hit: " + hit.collider.name);
+            if (hit.collider.CompareTag("MirrorReflection"))
+            {
+                 // Track the hit
+                activeReflection = true;
+                Debug.DrawLine(origin, hit.point, Color.green);
+                if (hit.collider.transform?.Find("rayshiner")?.gameObject != null) {
+                    reflection = hit.collider.transform?.Find("rayshiner")?.gameObject;
+                    // reflection.transform.position = hit.point; caused too much vulnerability for reflections. if refined this would be propr
+                    reflection.GetComponent<RaycastFounder>().distance = 50f;
+                    
+            }
             // Example: do something to the object
             // hit.collider.GetComponent<Something>()?.DoThing();
+            } else if (hit.collider.CompareTag("RecieverForReflection"))
+            {
+                Debug.DrawLine(origin, hit.point, Color.green);
+                hit.collider.GetComponent<ReflectionReciever>().CheckAllReflections();
+                activeReflection = true;
+            }
+            else
+            {
+                activeReflection = false;
+                Debug.DrawLine(origin, origin + direction * distance, Color.red);
+            }
         }
         else
         {
-            Debug.DrawLine(origin, origin + direction * distance, Color.red);
+            
         }
     }
 }

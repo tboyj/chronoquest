@@ -23,6 +23,7 @@ TagManager:
   - Mirror
   - MirrorReflection
   - LoadNew
+  - RecieverForReflection
   layers:
   - Default
   - TransparentFX

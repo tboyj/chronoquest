@@ -35,8 +35,7 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
                     if (instanceToWaitFor.data.id <= instanceFromPlayer.data.id)
                     { // ew
                         waitingOnInput = true;
-                        if (Input.GetKeyDown(Keybinds.actionKeybind))
-                            InteractionFunction(); // valid
+                        InteractionFunction();
                     }
                     else
                     {
@@ -46,19 +45,15 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
             }
             else // else ignore
             {
-                if (Input.GetKeyDown(Keybinds.actionKeybind))
-                {
-                    InteractionFunction();
-                }
-
+                InteractionFunction();
             }
         }
     }
-    public void InteractionFunction() // Add logic here
+    public void InteractionFunction(int multiplier) // Add logic here
     {
         if (timedActivater)
         {
-            StartCoroutine(RotateWithCoolDown());
+            StartCoroutine(RotateWithCoolDown(multiplier));
         }
         else
         {
@@ -66,12 +61,12 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
         }
     }
 
-    private IEnumerator RotateWithCoolDown()
+    private IEnumerator RotateWithCoolDown(int multiplier)
     {
-        Debug.Log("Rotating 30 degrees");
+        Debug.Log($"Rotating {rotateIncrement * multiplier} degrees");
         ChangeTheUI("");
         amITurnedOn = true;
-        affectedObject.Rotate(0,rotateIncrement,0);
+        affectedObject.Rotate(0,rotateIncrement*multiplier,0);
     
         yield return new WaitForSeconds(duration);
 
@@ -91,9 +86,9 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
             {
                 // add functionality to where it shows open/close when needed. thats later though. :)))
                 if (questRequired && waitingOnInput)
-                    ChangeTheUI("[F] Rotate " + gameObject.name.ToString());
+                    ChangeTheUI("[F] Rotate Clockwise\n[E] Rotate Counterclockwise");
                 else if (!questRequired)
-                    ChangeTheUI("[F] Rotate " + gameObject.name.ToString());
+                    ChangeTheUI("[F] Rotate Clockwise\n[E] Rotate Counterclockwise");
             }
             if (other.GetComponent<QuestManager>().GetCurrentQuest() != null)
             {
@@ -112,9 +107,9 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
             {
                 // add functionality to where it shows open/close when needed. thats later though. :)))
                 if (questRequired && waitingOnInput)
-                    ChangeTheUI("[F] Rotate " + gameObject.name.ToString());
+                    ChangeTheUI("[F] Rotate Clockwise\n[E] Rotate Counterclockwise");
                 else if (!questRequired)
-                    ChangeTheUI("[F] Rotate " + gameObject.name.ToString());
+                    ChangeTheUI("[F] Rotate Clockwise\n[E] Rotate Counterclockwise");
             } else
             {
                 ChangeTheUI("");
@@ -148,5 +143,13 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
     public void ChangeTheUI(Item item)
     {
         throw new System.NotImplementedException();
+    }
+
+    public void InteractionFunction()
+    {
+        if (Input.GetKeyDown(Keybinds.actionKeybind))
+            InteractionFunction(1); // valid
+        else if (Input.GetKeyDown(Keybinds.useKeybind))
+            InteractionFunction(-1); // valid
     }
 }
