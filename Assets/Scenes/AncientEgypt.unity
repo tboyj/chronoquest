@@ -648,10 +648,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 1
 --- !u!120 &4269443
 LineRenderer:
   serializedVersion: 2
@@ -768,12 +771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &18852943
 GameObject:
   m_ObjectHideFlags: 0
@@ -7775,10 +7772,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &177674301
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7966,12 +7966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &181190314
 GameObject:
   m_ObjectHideFlags: 0
@@ -33041,10 +33035,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &921288211
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33232,12 +33229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &923616648
 GameObject:
   m_ObjectHideFlags: 0
@@ -33745,10 +33736,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &936949960
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33936,12 +33930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &937613194
 GameObject:
   m_ObjectHideFlags: 0
@@ -43322,10 +43310,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &1165823740
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -43513,12 +43504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &1169972340
 GameObject:
   m_ObjectHideFlags: 0
@@ -44711,10 +44696,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &1205776207
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -44902,12 +44890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &1206774356
 GameObject:
   m_ObjectHideFlags: 0
@@ -54501,10 +54483,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &1502997958
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -54692,12 +54677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &1503272226
 GameObject:
   m_ObjectHideFlags: 0
@@ -55220,10 +55199,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!120 &1516383981
 LineRenderer:
   serializedVersion: 2
@@ -55340,12 +55322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &1519037578
 GameObject:
   m_ObjectHideFlags: 0
@@ -76160,10 +76136,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeReflection: 0
   distance: 50
+  hitByPreviousMirror: 0
   mask:
     serializedVersion: 2
     m_Bits: 3072
   reflection: {fileID: 0}
+  mirrorChain: []
+  bigPapa: 0
 --- !u!135 &2048119390
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -76351,12 +76330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bb3f520c8c2f240b6455af888adab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastFounder: {fileID: 0}
-  maxReflections: 10
-  maxDistance: 50
-  mask:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!1 &2050946670
 GameObject:
   m_ObjectHideFlags: 0

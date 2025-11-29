@@ -7,9 +7,10 @@ public class RaycastFounder : MonoBehaviour
     // Start is called before the first frame update
     public bool activeReflection;
     public float distance = 50f;
+    public bool hitByPreviousMirror = false;
     public LayerMask mask;
     [SerializeField]
-    private GameObject reflection;
+    private RaycastFounder reflection;
     public List<Collider> mirrorChain = new List<Collider>();
     void Start()
     {
@@ -27,18 +28,19 @@ public class RaycastFounder : MonoBehaviour
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance, mask))
         {
+
             // Debug.Log("Hit: " + hit.collider.name);
             if (hit.collider.CompareTag("MirrorReflection"))
             {
                  // Track the hit
                 activeReflection = true;
-                Debug.DrawLine(origin, hit.point, Color.green);
                 if (hit.collider.transform?.Find("rayshiner")?.gameObject != null) {
-                    reflection = hit.collider.transform?.Find("rayshiner")?.gameObject;
+                    reflection = hit.collider.transform.Find("rayshiner").gameObject.GetComponent<RaycastFounder>();
                     // reflection.transform.position = hit.point; caused too much vulnerability for reflections. if refined this would be propr
-                    reflection.GetComponent<RaycastFounder>().distance = 50f;
-                    
-            }
+                    reflection.distance = 50f;
+                    reflection.hitByPreviousMirror = true;
+                }
+                
             // Example: do something to the object
             // hit.collider.GetComponent<Something>()?.DoThing();
             } else if (hit.collider.CompareTag("RecieverForReflection"))
@@ -50,6 +52,15 @@ public class RaycastFounder : MonoBehaviour
             else
             {
                 activeReflection = false;
+                if (reflection != null)
+                    reflection.hitByPreviousMirror = false;
+            }
+            
+            if (activeReflection && hitByPreviousMirror)
+            {
+                Debug.DrawLine(origin, hit.point, Color.green);
+            } else
+            {
                 Debug.DrawLine(origin, origin + direction * distance, Color.red);
             }
         }
