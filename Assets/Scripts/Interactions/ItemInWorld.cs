@@ -39,7 +39,8 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
                 InteractionFunction();
                 Debug.Log("I found you...");
                 if (gameObject?.GetComponent<AssignNewQuest>())
-                    gameObject.GetComponent<AssignNewQuest>().Change(); // make sure to have specific class type. no generals.
+                    gameObject.GetComponent<AssignNewQuest>().Change();
+                 // make sure to have specific class type. no generals.
             }
         }
     }
@@ -53,11 +54,15 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
             player = referencePlayer.GetComponent<Player>();
             itemRecognizesPlayer = true;
             quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as QuestCollectItem;
+
         }
     }
     void OnTriggerStay(Collider other)
     {
-        itemRecognizesPlayer = true;
+        if (other.CompareTag("Player"))
+        {
+            itemRecognizesPlayer = true;
+        }
     }
     void OnTriggerExit(Collider other)
     {
@@ -69,6 +74,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
     }
     private void Startup()
     {
+        pauseCheck = GameObject.Find("RealPlayer").GetComponent<PauseScript>();
         rend.sprite = itemInWorld.sprite;
         if (amountOfItemsHere > 0)
         {
@@ -84,10 +90,15 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
     {
         if (takeable)
         {
-            amountOfItemsHere--;
-
+            if (gameObject.GetComponent<ChestChangeActivity>() != null) // activate extra behavior if there is any
+            {
+                gameObject.GetComponent<ChestChangeActivity>().Change();
+            }
+            
             if (quest != null) { 
                 quest.QuestEventTriggered();
+                amountOfItemsHere--;
+
             }
             else
             {
@@ -101,8 +112,10 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
                 if (rend != null)
                     rend.enabled = false;
                 takeable = false;
-
-
+                if (gameObject.GetComponent<AssignNewQuest>() != null) // activate extra behavior if there is any
+                {
+                    gameObject.GetComponent<AssignNewQuest>().Change();
+                }
             }
         }
     }

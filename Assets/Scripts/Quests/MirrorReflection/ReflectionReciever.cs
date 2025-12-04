@@ -9,6 +9,7 @@ public class ReflectionReciever : MonoBehaviour
     private List<RaycastFounder> reflections;
     public GameObject barrier;
     public bool ConditionsMet;
+    int i = 0;
     public void CheckAllReflections()
     {
         bool allAreReflecting = true;
@@ -28,6 +29,7 @@ public class ReflectionReciever : MonoBehaviour
         if (allAreReflecting) {
             Debug.Log("Everything is correct.");
             ConditionsMet = true;
+            
         }
     }
 
@@ -45,6 +47,13 @@ public class ReflectionReciever : MonoBehaviour
         {
             // Advance quest
             barrier.SetActive(false);
+            if (i < 1) {
+                AssignNewQuest a = GetComponent<AssignNewQuest>();
+                a.player.GetQuestManager().SetQuestCompleted(a.player.GetQuestManager().GetCurrentQuest());
+                a.Change();
+                i++; // We do this so that it doesn't do more than once
+                
+            }
         }
     }
 }

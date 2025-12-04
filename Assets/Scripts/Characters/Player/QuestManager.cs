@@ -133,6 +133,7 @@ public class QuestManager : MonoBehaviour
                         {
                             foreach (QuestInstance relatedQuest in GetCurrentQuest().relatedQuests)
                             {
+                                Debug.Log(relatedQuest.IsCompleted + ": completion of related quests");
                                 if (!relatedQuest.IsCompleted)
                                 {
                                     Debug.Log("Not completed.");
@@ -147,7 +148,7 @@ public class QuestManager : MonoBehaviour
                         Debug.Log("Good Job");
                         if (GetCurrentQuest().postQuestList.Count > 0)
                         {
-                            Debug.Log(GetCurrentQuest().data.name);
+                            ChangeFunction();
                         }
                         // redundancy, might want to fix later.
 
@@ -308,9 +309,10 @@ public class QuestManager : MonoBehaviour
                     }
                 }
             }
-        }
+        } else {
             // TALKTONPCQUEST
             questAssigned.QuestEventTriggered();
+        }
         
     }
 }

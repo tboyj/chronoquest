@@ -44238,6 +44238,7 @@ MonoBehaviour:
   IsCompleted: 0
   todo:
   - {fileID: 1036772521}
+  - {fileID: 1036772521}
   dialogsForQuest:
   - dialogueText: Oh? What's these you found?
     characterName: Bossman

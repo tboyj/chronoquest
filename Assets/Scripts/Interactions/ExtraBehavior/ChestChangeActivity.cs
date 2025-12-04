@@ -6,11 +6,16 @@ public class ChestChangeActivity : ExtraBase
     public bool active = true;
     void Start()
     {
+        base.Start();
         topChestObject.SetActive(active);
+    }
+    private void Update()
+    {
+        
     }
     public override void Change()
     {
-        active = !active;
+        active = false;
         if (!active)
         {
             topChestObject.transform.localEulerAngles = new Vector3(0,0,45);

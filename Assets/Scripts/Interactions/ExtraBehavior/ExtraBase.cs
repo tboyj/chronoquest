@@ -24,7 +24,7 @@ public abstract class ExtraBase : MonoBehaviour
     }
     private void Update()
     {
-        // Initialization code here
+        
     }
     // Example method for using the paper item
     public abstract void Change();

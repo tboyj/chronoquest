@@ -151,8 +151,10 @@ public class Player : Character, Interaction
         { // bummy boy code o-o
             if (interactableNPC != null)
             {
-                if (manager.GetCurrentQuest().dialogsForQuest.Count > 0) {
-                    manager.GetCurrentQuest().dialogsForQuest[0].CycleMidQuestActions();
+                if (manager.GetCurrentQuest() != null) {
+                    if (manager.GetCurrentQuest().dialogsForQuest.Count > 0) {
+                        manager.GetCurrentQuest().dialogsForQuest[0].CycleMidQuestActions();
+                    }
                 }
                 Debug.Log(interactableNPC.GetComponent<QuestHandler>().GetMostRecentQuest());
                 Debug.Log(manager.GetCurrentQuest());
@@ -161,6 +163,7 @@ public class Player : Character, Interaction
                 {
                     
                     var currentQuest = manager.GetCurrentQuest();
+                    // bug
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {
                         Debug.Log("Count is > 1.");
@@ -228,7 +231,6 @@ public class Player : Character, Interaction
             {
                 Item itemAdded = new Item(interactableItem.itemInWorld, 1);
                 inventory.AddItem(itemAdded);
-
                 inventory.SetRefresh(true);
             }
         }
