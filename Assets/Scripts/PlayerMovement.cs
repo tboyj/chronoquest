@@ -8,6 +8,7 @@ public class PlayerMovement : Movement
     private void Update()
         {
             MoveWithForce();
+            
     }
 
     public float jumpForce = 7.2f; // how strong the jump is
@@ -17,7 +18,7 @@ private float verticalVelocity; // separate Y velocity tracking
     public override void MoveWithForce()
     {
         isGrounded = controller.isGrounded;
-
+        
         if (isGrounded)
         {
             if (verticalVelocity < 0)
@@ -38,6 +39,17 @@ private float verticalVelocity; // separate Y velocity tracking
         rawInput = new Vector3(x, 0, z);
         rawInput = Vector3.ClampMagnitude(rawInput, 1f);
         Vector3 input = transform.TransformDirection(rawInput);
+
+        if (!controller.gameObject.GetComponent<PauseScript>().isPaused && !controller.gameObject.GetComponent<PauseScript>().isInventory && 
+        !controller.gameObject.GetComponent<Player>().inDialog) {
+            if (x != 0 || z != 0) {
+                Vector3 rawInput2 = new Vector3(rawInput.x, 90, rawInput.z);
+                controller.transform.Find("Jimsprite").Find("metarig").transform.rotation = Quaternion.LookRotation(rawInput2);
+            }
+        }
+        
+        
+
 
         float speed = moveSpeed;
         if (Input.GetKey(KeyCode.LeftShift)) speed *= runMultiplier;

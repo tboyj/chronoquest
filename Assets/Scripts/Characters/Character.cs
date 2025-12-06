@@ -8,7 +8,7 @@ public abstract class Character : MonoBehaviour
     // Properties
     protected string Name;
     public Inventory inventory;
-    public SpriteRenderer spriteRenderer;
+    public GameObject objRendered;
     // public Movement movement;
     protected Item itemTest;
     public bool inDialog { get; set; }
@@ -17,11 +17,11 @@ public abstract class Character : MonoBehaviour
     public HoldingItemScript holdingItemManager;
     public Animator animatorSetup;
     // Constructor
-    protected virtual Character Initialize(string name, Inventory inv, SpriteRenderer spriteR, int itemHeld, HoldingItemScript holdingItemScript, bool isHolding, bool inDialog, Animator animatorSetup)
+    protected virtual Character Initialize(string name, Inventory inv, GameObject objRendered, int itemHeld, HoldingItemScript holdingItemScript, bool isHolding, bool inDialog, Animator animatorSetup)
     {
         Name = name;
         inventory = inv;
-        spriteRenderer = spriteR;
+        this.objRendered = objRendered;
         // movement = mov;
         this.itemHeld = itemHeld;
         this.holdingItemManager = holdingItemScript;

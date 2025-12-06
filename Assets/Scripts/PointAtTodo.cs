@@ -27,7 +27,7 @@ public class PointAtTodo : MonoBehaviour
 
         // Get direction from player to target (in world space)
         Vector3 direction = target.position - player.position;
-
+        
         // Convert that world direction into the player's local space
         // So the arrow behaves correctly even if the player rotates
         float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;

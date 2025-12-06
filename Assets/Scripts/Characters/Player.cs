@@ -40,7 +40,7 @@ public class Player : Character, Interaction
     public void Start()
     {
         manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+        Initialize("Player", gameObject.GetComponent<Inventory>(), base.objRendered, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
         
         movement = gameObject.GetComponent<PlayerMovement>();
@@ -359,8 +359,8 @@ public class Player : Character, Interaction
             movement.controller.enabled = true;
             animatorSetup.speed = 1;
             movement.MoveWithForce();
-            animatorSetup.SetFloat("SpeedX", movement.rawInput.magnitude); // Add Z animation to this at a later time.// input.magnitude.
-            spriteRenderer.flipX = movement.flip;
+            animatorSetup.SetFloat("SpeedX", movement.rawInput.magnitude);
+            animatorSetup.SetBool("Grounded", movement.controller.isGrounded); // Add Z animation to this at a later time.// input.magnitude.
             holdingItemManager.spriteHolderImage.flipX=movement.flip;
         }
         else

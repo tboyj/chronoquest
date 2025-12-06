@@ -15,7 +15,7 @@ public class NPC : Character, IAvailableActions
     public int trust = 50;
     public void Start()
     {
-        Initialize("NPC", gameObject.GetComponent<Inventory>(), base.spriteRenderer, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
+        Initialize("NPC", gameObject.GetComponent<Inventory>(), base.gameObject, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
         movement = gameObject.GetComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
         if (gameObject.GetComponent<QuestHandler>() != null)
@@ -64,11 +64,11 @@ public class NPC : Character, IAvailableActions
                 if (questHandler?.GetMostRecentQuest()?.data.id == player?.GetQuestManager()?.GetCurrentQuest()?.data.id) {
                     if (player.transform.position.x < transform.position.x)
                     {
-                        spriteRenderer.flipX = true;
+                       
                         holdingItemManager.spriteHolderImage.flipX=true;
                     } else
                     {
-                        spriteRenderer.flipX = false;
+
                         holdingItemManager.spriteHolderImage.flipX=false;
                     }
                 }
@@ -90,7 +90,7 @@ public class NPC : Character, IAvailableActions
 
             if (Mathf.Abs(directionX) > 0.01f) // small threshold to avoid jitter
             {
-                spriteRenderer.flipX = directionX < 0; // flip if destination is left
+                // spriteRenderer.flipX = directionX < 0; // flip if destination is left
             }
         }
     }
