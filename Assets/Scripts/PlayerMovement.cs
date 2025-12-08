@@ -5,15 +5,22 @@ public class PlayerMovement : Movement
 {
     public CharacterController controller;
     public Vector3 rawInput;
+    [SerializeField] private Transform cameraTransform;
+    
+    private void Start()
+    {
+        if (cameraTransform == null)
+            cameraTransform = Camera.main.transform;
+    }
+    
     private void Update()
-        {
-            MoveWithForce();
-            
+    {
+        MoveWithForce();
     }
 
-    public float jumpForce = 7.2f; // how strong the jump is
-public float gravityStrength = -8.81f; // consistent gravity pull
-private float verticalVelocity; // separate Y velocity tracking
+    public float jumpForce = 7.2f;
+    public float gravityStrength = -8.81f;
+    private float verticalVelocity;
 
     public override void MoveWithForce()
     {
@@ -29,7 +36,6 @@ private float verticalVelocity; // separate Y velocity tracking
         }
         else
         {
-            // Use fixedDeltaTime for consistency
             verticalVelocity += gravityStrength * Time.fixedDeltaTime;
         }
 
@@ -38,25 +44,39 @@ private float verticalVelocity; // separate Y velocity tracking
 
         rawInput = new Vector3(x, 0, z);
         rawInput = Vector3.ClampMagnitude(rawInput, 1f);
-        Vector3 input = transform.TransformDirection(rawInput);
+        
+        Vector3 camForward = cameraTransform.forward;
+        Vector3 camRight = cameraTransform.right;
 
-        if (!controller.gameObject.GetComponent<PauseScript>().isPaused && !controller.gameObject.GetComponent<PauseScript>().isInventory && 
-        !controller.gameObject.GetComponent<Player>().inDialog) {
-            if (x != 0 || z != 0) {
-                Vector3 rawInput2 = new Vector3(rawInput.x, 90, rawInput.z);
-                controller.transform.Find("Jimsprite").Find("metarig").transform.rotation = Quaternion.LookRotation(rawInput2);
+        camForward.y = 0f;
+        camRight.y = 0f;
+
+        camForward.Normalize();
+        camRight.Normalize();
+        
+        Vector3 moveDirection = (camForward * z + camRight * x).normalized * rawInput.magnitude;
+
+        if (!controller.gameObject.GetComponent<PauseScript>().isPaused && 
+            !controller.gameObject.GetComponent<PauseScript>().isInventory && 
+            !controller.gameObject.GetComponent<Player>().inDialog)
+        {
+            if (moveDirection.magnitude > 0.01f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+
+                Transform metarig = controller.transform.Find("Jimsprite").Find("metarig");
+
+                metarig.rotation = targetRotation;
+                metarig.rotation = Quaternion.Euler(-90f, metarig.rotation.eulerAngles.y, metarig.rotation.eulerAngles.z);
             }
         }
-        
-        
-
 
         float speed = moveSpeed;
         if (Input.GetKey(KeyCode.LeftShift)) speed *= runMultiplier;
 
         Vector3 horizontalVelocity;
         if (rawInput.magnitude > 0.01f)
-            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), input * speed, acceleration * Time.deltaTime);
+            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), moveDirection * speed, acceleration * Time.deltaTime);
         else
             horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), Vector3.zero, deceleration * Time.deltaTime);
 
@@ -65,25 +85,6 @@ private float verticalVelocity; // separate Y velocity tracking
         if (controller.enabled)
             controller.Move(velocity * Time.deltaTime);
 
-        // Flip character
-        flip = x < 0 ? true : x > 0 ? false : flip;
+        // flip = moveDirection.x < -0.1f || (moveDirection.x <= 0.1f && flip);
     }
-
-
-    /*
-    private void HandleStairs(Vector3 move)
-    {
-        if (rayholder == null) return;
-
-        Ray ray = new Ray(rayholder.position + move.normalized * 0.1f, Vector3.down);
-        if (Physics.Raycast(ray, out RaycastHit hit, 0.5f))
-        {
-            if (hit.collider.CompareTag("Stair"))
-            {
-                Vector3 stairStep = new Vector3(0, 0.2f, 0);
-                controller.Move(stairStep);
-            }
-        }
-    }
-    */
 }
