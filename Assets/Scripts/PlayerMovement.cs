@@ -36,7 +36,7 @@ public class PlayerMovement : Movement
         }
         else
         {
-            verticalVelocity += gravityStrength * Time.fixedDeltaTime;
+            verticalVelocity += gravityStrength * Time.deltaTime;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -76,14 +76,14 @@ public class PlayerMovement : Movement
 
         Vector3 horizontalVelocity;
         if (rawInput.magnitude > 0.01f)
-            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), moveDirection * speed, acceleration * Time.smoothDeltaTime);
+            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), moveDirection * speed, acceleration * Time.deltaTime);
         else
-            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), Vector3.zero, deceleration * Time.smoothDeltaTime);
+            horizontalVelocity = Vector3.Lerp(new Vector3(velocity.x, 0, velocity.z), Vector3.zero, deceleration * Time.deltaTime);
 
         velocity = new Vector3(horizontalVelocity.x, verticalVelocity, horizontalVelocity.z);
 
         if (controller.enabled)
-            controller.Move(velocity * Time.smoothDeltaTime);
+            controller.Move(velocity * Time.deltaTime);
 
         // flip = moveDirection.x < -0.1f || (moveDirection.x <= 0.1f && flip);
     }

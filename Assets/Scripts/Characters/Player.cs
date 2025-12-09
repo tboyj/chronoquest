@@ -250,11 +250,11 @@ public class Player : Character, Interaction
         {
             if (reciever != null)
             {
-                heldItem.item.useConnector.Apply(reciever);
+                heldItem?.item?.useConnector?.Apply(reciever);
             }
             else
             {
-                heldItem.item.useConnector.ApplyAlone();
+                heldItem?.item?.useConnector?.ApplyAlone();
             }
         }
     }
