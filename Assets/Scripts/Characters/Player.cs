@@ -163,6 +163,12 @@ public class Player : Character, Interaction
                 {
                     
                     var currentQuest = manager.GetCurrentQuest();
+                    if (currentQuest == null)
+                    {
+                        Debug.LogError("Current quest is null.");
+                        manager.SetCurrentlyInDialog(false);
+                        return;
+                    }
                     // bug
                     if (manager.GetCurrentQuest().dialogsForQuest.Count > 1)
                     {

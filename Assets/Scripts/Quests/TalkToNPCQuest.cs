@@ -63,7 +63,7 @@ public class TalkToNPCQuest : QuestInstance, IQuestAction
                 {
                     Debug.Log("Quest Being Completed: "+questManager.GetCurrentQuest().data.name);
                     questManager.SetQuestCompleted(questManager.GetCurrentQuest());
-                    questAssignerNPC.questHandler.questsInStock.RemoveAt(0);
+                    // questAssignerNPC.questHandler.questsInStock.RemoveAt(0);
                     questManager.TryToGiveQuest(npc, questManager.gameObject.GetComponent<Player>().dialogManager);
                     return true;
                 }

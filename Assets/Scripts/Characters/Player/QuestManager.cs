@@ -48,6 +48,12 @@ public class QuestManager : MonoBehaviour
     }
     public void SetQuestCompleted(QuestInstance quest)
     {
+        if (quest == null)
+        {
+            Debug.LogError("Cannot complete a null quest.");
+            return;
+        }
+        
         questsCompleted.Add(quest);
         quest.IsCompleted = true;
         questsAssigned.Remove(quest);

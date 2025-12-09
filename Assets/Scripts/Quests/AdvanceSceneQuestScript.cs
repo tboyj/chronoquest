@@ -20,10 +20,9 @@ public class AdvanceSceneQuestScript : QuestInstance
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hello");
-            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
             questManager.questsAssigned.Clear();
-            questManager.questsCompleted.Clear();
-            
+            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
+
             Debug.Log("Hi again");
             LoadNextScene();
             player.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
@@ -87,8 +86,8 @@ public class AdvanceSceneQuestScript : QuestInstance
             yield break;
         }
         // Move persistent objects into the new scene
-        
-        
+
+
         SceneManager.MoveGameObjectToScene(canvas, newScene);
         SceneManager.MoveGameObjectToScene(player, newScene);
         // Wait a frame so scene objects initialize properly
@@ -137,7 +136,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         }
 
         // Now safely get the first child
-        
+
 
         Debug.Log(q.data.questName);
 
