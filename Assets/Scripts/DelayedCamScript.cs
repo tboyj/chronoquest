@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DelayedCamScript : MonoBehaviour
 {
-    private Vector3 offset = new(0, 1.25f, -2f);
+    private Vector3 offset = new(0, -1.25f, -2f);
     public float smoothTime = .075f;
     private Vector3 velocity = Vector3.zero;
     [SerializeField] private Transform target;

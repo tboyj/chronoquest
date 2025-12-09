@@ -1,6 +1,7 @@
 using System;
 using ChronoQuest.UIForInteractions;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPC : Character, IAvailableActions
 {
@@ -10,11 +11,10 @@ public class NPC : Character, IAvailableActions
     public Player player;
     public QuestHandler questHandler;
     public NPCMovement movement;
-    [Header("NPC AI Systems")]
-    [Range(0,100)]
-    public int trust = 50;
+    NavMeshAgent agent;
     public void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         Initialize("NPC", gameObject.GetComponent<Inventory>(), base.gameObject, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
         movement = gameObject.GetComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
@@ -53,24 +53,24 @@ public class NPC : Character, IAvailableActions
             movement.enabled = true;
         }
     }
-
+    private bool IsGrounded()
+    {
+        
+        
+        // Cast a ray slightly below the agent
+        float rayDistance = agent.height / 2 + 0.2f;
+        return Physics.Raycast(transform.position, Vector3.down, rayDistance);
+    }
     public void FixedUpdate()
     {
 
         animatorSetup.SetFloat("SpeedX", Mathf.Clamp01(movement.GetAgent().velocity.magnitude));
+        animatorSetup.SetBool("Grounded", IsGrounded());
         // facing direction based on where player is (if current quest is controlled by npc).
         if (movement.status == "IDLE") {
             if (player != null && player.GetQuestManager() != null) {
                 if (questHandler?.GetMostRecentQuest()?.data.id == player?.GetQuestManager()?.GetCurrentQuest()?.data.id) {
-                    if (player.transform.position.x < transform.position.x)
-                    {
-                       
-                        holdingItemManager.spriteHolderImage.flipX=true;
-                    } else
-                    {
-
-                        holdingItemManager.spriteHolderImage.flipX=false;
-                    }
+                    
                 }
                  else
                 {
@@ -85,12 +85,25 @@ public class NPC : Character, IAvailableActions
         
         if (movement.status == "QUEST" || movement.status == "MOVING")
         {
-            Vector3 destination = movement.GetAgent().destination;
-            float directionX = destination.x - transform.position.x;
-
-            if (Mathf.Abs(directionX) > 0.01f) // small threshold to avoid jitter
+            NavMeshAgent navAgent = movement.GetAgent();
+            
+            if (navAgent.velocity.sqrMagnitude > 0.1f)
             {
-                // spriteRenderer.flipX = directionX < 0; // flip if destination is left
+                // Get the movement direction
+                Vector3 direction = navAgent.velocity.normalized;
+                direction.y = 0f; // Keep on horizontal plane
+                
+                // Find the metarig (adjust the path to match your NPC's hierarchy)
+                Transform metarig = transform.Find("NPCsprite").Find("metarig");
+                
+                if (metarig != null)
+                {
+                    Quaternion targetRotation = Quaternion.LookRotation(direction);
+                    
+                    // Apply the same offset as the player
+                    metarig.rotation = targetRotation;
+                    metarig.rotation = Quaternion.Euler(-90f, metarig.rotation.eulerAngles.y, metarig.rotation.eulerAngles.z);
+                }
             }
         }
     }
