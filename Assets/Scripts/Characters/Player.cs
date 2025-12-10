@@ -69,9 +69,7 @@ public class Player : Character, Interaction
         {
             Debug.LogWarning("Item is null, maybe it needs assigned?");
         }
-        GameObject a2 = GameObject.Find("DefaultRuntimeQuest");
-        a2.GetComponent<StartingSceneQuest>().RuntimeQuest(); // hell
-        Debug.Log(a2.name);
+
         // UI Image 
         dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
         //!!! --- ! Inventory GUI Section ! --- !!!//

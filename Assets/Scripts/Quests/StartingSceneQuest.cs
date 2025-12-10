@@ -5,22 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class StartingSceneQuest : MonoBehaviour
 {
-    // Start is called before the first frame update
     public QuestManager questManager;
-    void Awake()
+    
+    void Start()  // Changed to Start for better timing
     {
-        questManager = FindObjectOfType<QuestManager>();
-        if (questManager == null)
-            Debug.LogError("QuestManager not found in scene.");
+        questManager = GameObject.Find("RealPlayer").GetComponent<QuestManager>();
         
+        if (questManager == null)
+        {
+            Debug.LogError("QuestManager not found in scene.");
+            return;
+        }
+        
+        Debug.Log($"Found QuestManager on {questManager.gameObject.name}");
+        
+        // Just call it directly - no need to Find ourselves
+        RuntimeQuest();
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void RuntimeQuest()
     {
         if (transform.childCount == 0)
@@ -35,13 +37,26 @@ public class StartingSceneQuest : MonoBehaviour
             return;
         }
 
-        Debug.Log("running test");
+        Debug.Log("Running RuntimeQuest - assigning first quest");
         QuestInstance firstQuest = transform.GetChild(0).GetComponent<QuestInstance>();
-        // Marks current quest as completed if necessary
-        if (questManager.GetCurrentQuest())
+        
+        if (firstQuest == null)
+        {
+            Debug.LogError("First child has no QuestInstance component!");
+            return;
+        }
+        
+        // Mark current quest as completed if it exists
+        if (questManager.GetCurrentQuest() != null)
+        {
             questManager.GetCurrentQuest().IsCompleted = true;
-        // Check ID and assign if appropriate
-            questManager.AddQuestToList(firstQuest);
-            questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        }
+        
+        // Add the new quest
+        questManager.AddQuestToList(firstQuest);
+        CurrentQIDMonitor.Instance.SetCurrentId(firstQuest.data.id);
+        questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        
+        Debug.Log($"Assigned quest: {firstQuest.data.questName}");
     }
 }

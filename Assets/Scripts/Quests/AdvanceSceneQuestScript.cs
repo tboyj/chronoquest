@@ -32,12 +32,13 @@ public class AdvanceSceneQuestScript : QuestInstance
             QuestInstance currentQuest = questManager.GetCurrentQuest();
             if (currentQuest != null && !currentQuest.IsCompleted)
             {
+                Debug.Log("Quest Completed: "+currentQuest.data.name);
                 questManager.SetQuestCompleted(currentQuest);
             }
             
             // Now safe to clear
             questManager.questsAssigned.Clear();
-            
+            questManager.questsCompleted.Clear();
             Debug.Log("Loading next scene...");
             LoadNextScene();
             player.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
@@ -132,6 +133,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         hasTriggered = false; // Reset for next time
         
         Debug.Log("Scene transition complete. AssignNewQuest will handle quest assignment.");
+        
     }
     
     public override void QuestEventTriggered()
@@ -145,10 +147,10 @@ public class AdvanceSceneQuestScript : QuestInstance
         }
         
         // Optional: Visual feedback
-        GameObject exitIndicator = transform.Find("ExitIndicator")?.gameObject;
-        if (exitIndicator != null)
-        {
-            exitIndicator.SetActive(true);
-        }
+        // GameObject exitIndicator = transform.Find("ExitIndicator")?.gameObject;
+        // if (exitIndicator != null)
+        // {
+        //     exitIndicator.SetActive(true);
+        // }
     }
 }
