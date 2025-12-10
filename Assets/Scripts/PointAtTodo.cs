@@ -21,18 +21,31 @@ public class PointAtTodo : MonoBehaviour
 
     void Update()
     {
-        if (qmRedundancySub.GetCurrentQuest() != null)
-        {
-            gameObject.transform.parent.parent.gameObject.SetActive(true);
-            target = qmRedundancySub.GetCurrentQuest().todo[0].GetTodoAp();
-        }
-        else
+        QuestInstance currentQuest = qmRedundancySub?.GetCurrentQuest();
+        
+        if (currentQuest == null || currentQuest.todo == null || currentQuest.todo.Count == 0)
         {
             gameObject.transform.parent.parent.gameObject.SetActive(false);
             return;
         }
         
-        if (target == null || player == null || playerCamera == null) return;
+        // Show the UI element
+        gameObject.transform.parent.parent.gameObject.SetActive(true);
+        
+        // Get the target transform
+        Transform todoTarget = currentQuest.todo[0].GetTodoAp();
+        
+        if (todoTarget != null)
+        {
+            target = todoTarget;
+        }
+        
+        // If we don't have a valid target, hide and return
+        if (target == null || player == null || playerCamera == null)
+        {
+            gameObject.transform.parent.parent.gameObject.SetActive(false);
+            return;
+        }
 
         // Get direction from player to target in world space
         Vector3 directionToTarget = target.position - player.position;

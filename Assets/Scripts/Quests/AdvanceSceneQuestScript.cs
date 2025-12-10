@@ -14,18 +14,31 @@ public class AdvanceSceneQuestScript : QuestInstance
     public Vector3 teleportToPosition;
     public bool isLoading;
     private QuestInstance q;
+    private bool hasTriggered = false; // Prevent multiple triggers
 
     public void OnTriggerEnter(Collider other)
     {   
-        Debug.Log("GO"+other.gameObject);
-        Debug.Log("T"+other.tag);
+        if (hasTriggered) return; // Prevent double-trigger
+        
+        Debug.Log("GO: " + other.gameObject);
+        Debug.Log("Tag: " + other.tag);
+        
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Hello");
+            hasTriggered = true;
+            Debug.Log("Player entered scene transition trigger");
+            
+            // Complete the current quest BEFORE clearing
+            QuestInstance currentQuest = questManager.GetCurrentQuest();
+            if (currentQuest != null && !currentQuest.IsCompleted)
+            {
+                questManager.SetQuestCompleted(currentQuest);
+            }
+            
+            // Now safe to clear
             questManager.questsAssigned.Clear();
-            questManager.SetQuestCompleted(questManager.GetCurrentQuest());
-
-            Debug.Log("Hi again");
+            
+            Debug.Log("Loading next scene...");
             LoadNextScene();
             player.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         }
@@ -34,7 +47,8 @@ public class AdvanceSceneQuestScript : QuestInstance
             other.gameObject.SetActive(false);
         }
     }
-    string utilitiesSceneName = "UtilityScene"; // or build index
+    
+    string utilitiesSceneName = "UtilityScene";
 
     Scene GetRealGameplayScene()
     {
@@ -43,7 +57,7 @@ public class AdvanceSceneQuestScript : QuestInstance
             Scene scene = SceneManager.GetSceneAt(i);
             if (scene.name != utilitiesSceneName)
             {
-                return scene; // This is your real active scene
+                return scene;
             }
         }
         Debug.LogError("No non-utility scene is loaded!");
@@ -66,12 +80,12 @@ public class AdvanceSceneQuestScript : QuestInstance
             Debug.LogWarning("No more scenes in Build Settings.");
         }
     }
+    
     IEnumerator LoadYourAsyncScene(int current, int next)
     {
         isLoading = true;
 
         Scene currentScene = SceneManager.GetSceneByBuildIndex(current);
-        // Start loading in background
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next, LoadSceneMode.Additive);
         asyncLoad.allowSceneActivation = true;
 
@@ -80,19 +94,16 @@ public class AdvanceSceneQuestScript : QuestInstance
             yield return null;
         }
 
-        // Get the new scene reference
         Scene newScene = SceneManager.GetSceneByBuildIndex(next);
         if (!newScene.IsValid())
         {
-            Debug.LogError($"Scene failed to load!");
+            Debug.LogError($"Scene at index {next} failed to load!");
             yield break;
         }
-        // Move persistent objects into the new scene
 
-
+        // Move persistent objects
         SceneManager.MoveGameObjectToScene(canvas, newScene);
         SceneManager.MoveGameObjectToScene(player, newScene);
-        // Wait a frame so scene objects initialize properly
         yield return null;
 
         // Link Day/Night System
@@ -112,49 +123,32 @@ public class AdvanceSceneQuestScript : QuestInstance
             Debug.LogWarning("TimeCube not found in new scene!");
         }
 
-        // Finally unload the old scene
+        // Unload old scene
         SceneManager.UnloadSceneAsync(currentScene);
         SceneManager.SetActiveScene(newScene);
-        isLoading = false;
-
-        // Find the root object named "DefaultRuntimeQuest" in the newly loaded scene
-        GameObject[] roots = newScene.GetRootGameObjects();
-
-        GameObject defaultRuntimeQuest = null;
-        foreach (GameObject go in roots)
-        {
-            if (go.name == "DefaultRuntimeQuest")
-            {
-                defaultRuntimeQuest = go;
-                break;
-            }
-        }
-
-        if (defaultRuntimeQuest != null)
-        {
-            Debug.LogError("DefaultRuntimeQuest not found in scene: " + newScene.name);
-            Transform child = defaultRuntimeQuest.transform.GetChild(0);
-            q = child.GetComponent<QuestInstance>();
-        }
-
-        // Now safely get the first child
-
-
-        Debug.Log(q.data.questName);
-
-        questManager.AddQuestToList(q);
-        CurrentQIDMonitor.Instance.SetCurrentId(questManager.GetCurrentQuest().data.id);
-
-        Debug.Log(CurrentQIDMonitor.Instance.GetCurrentQuestId());
 
         questManager.hasCompletedFirstQuest = false;
-        // reset ^^^
-        //questManager.GetComponent<Player>().
-
-
+        isLoading = false;
+        hasTriggered = false; // Reset for next time
+        
+        Debug.Log("Scene transition complete. AssignNewQuest will handle quest assignment.");
     }
+    
     public override void QuestEventTriggered()
     {
-        Debug.Log("Not Default Lol You Dummy");
+        // Enable the collider to allow scene transition
+        Collider triggerCollider = GetComponent<Collider>();
+        if (triggerCollider != null)
+        {
+            triggerCollider.enabled = true;
+            Debug.Log($"Scene advancement enabled for quest: {data.questName}");
+        }
+        
+        // Optional: Visual feedback
+        GameObject exitIndicator = transform.Find("ExitIndicator")?.gameObject;
+        if (exitIndicator != null)
+        {
+            exitIndicator.SetActive(true);
+        }
     }
 }
