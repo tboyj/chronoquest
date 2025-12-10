@@ -182,38 +182,41 @@ public class QuestManager : MonoBehaviour
                 else
                 {
                     questAssigned = npcQuestHandler.GetMostRecentQuest();
-                    Debug.Log($"Adding quest {questAssigned.data.questName} with id {questAssigned.data.id}");
-                    Debug.Log($"Conditions are {questAssigned.CheckConditions()}.");
-                    if (questAssigned.CheckConditions())
-                    {
-                        Debug.Log("Ignoring conditions |>");
-                        SetQuestCompleted(GetCurrentQuest());
-                        npcQuestHandler.questsInStock.RemoveAt(0);
-                        // Throw here dialog saying good job.
-                        Debug.Log("Dialog for congratulating them");
-                        TryToGiveQuest(interactableNPC, dialogManager);
-                        interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
-                        dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
-                        dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
-                    }
-
-                    else
-                    {
-                        AddQuestToList(questAssigned);
-                        // If conditions are false, add the next quest and throw him into a dialog.
-                        if (GetCurrentQuest().dialogsForQuest.Count > 0)
+                    
+                    if (questAssigned != null) {
+                        Debug.Log($"Adding quest {questAssigned.data.questName} with id {questAssigned.data.id}");
+                        Debug.Log($"Conditions are {questAssigned.CheckConditions()}.");
+                        if (questAssigned.CheckConditions())
                         {
-                            GetCurrentQuest().ShowDialog(true);
-                            SetCurrentlyInDialog(true);
-                            interactableNPC.inDialog = true;
+                            Debug.Log("Ignoring conditions |>");
+                            SetQuestCompleted(GetCurrentQuest());
+                            npcQuestHandler.questsInStock.RemoveAt(0);
+                            // Throw here dialog saying good job.
+                            Debug.Log("Dialog for congratulating them");
+                            TryToGiveQuest(interactableNPC, dialogManager);
+                            interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
                             dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
                             dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                         }
+
                         else
                         {
-                            GetCurrentQuest().ShowDialog(false);
-                            SetCurrentlyInDialog(false);
-                            interactableNPC.inDialog = false;
+                            AddQuestToList(questAssigned);
+                            // If conditions are false, add the next quest and throw him into a dialog.
+                            if (GetCurrentQuest().dialogsForQuest.Count > 0)
+                            {
+                                GetCurrentQuest().ShowDialog(true);
+                                SetCurrentlyInDialog(true);
+                                interactableNPC.inDialog = true;
+                                dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
+                                dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
+                            }
+                            else
+                            {
+                                GetCurrentQuest().ShowDialog(false);
+                                SetCurrentlyInDialog(false);
+                                interactableNPC.inDialog = false;
+                            }
                         }
                     }
                 }

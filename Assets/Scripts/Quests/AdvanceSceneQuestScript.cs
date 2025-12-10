@@ -16,7 +16,9 @@ public class AdvanceSceneQuestScript : QuestInstance
     private QuestInstance q;
 
     public void OnTriggerEnter(Collider other)
-    {
+    {   
+        Debug.Log("GO"+other.gameObject);
+        Debug.Log("T"+other.tag);
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hello");
@@ -150,5 +152,9 @@ public class AdvanceSceneQuestScript : QuestInstance
         //questManager.GetComponent<Player>().
 
 
+    }
+    public override void QuestEventTriggered()
+    {
+        Debug.Log("Not Default Lol You Dummy");
     }
 }

@@ -99,6 +99,6 @@ public class QuestInstance : MonoBehaviour
 
     public virtual void QuestEventTriggered()
     {
-        
+        Debug.Log("Default");
     }
 }
