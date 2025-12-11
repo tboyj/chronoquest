@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: brickretet Variant 2
+  m_Name: brickretet Variant 1 Variant 1
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 2100000, guid: 6cb8212dadd7ad24bb162c3738be1f09, type: 2}
+  m_Parent: {fileID: 2100000, guid: 2cc81086b92ec0647a12559944ba4873, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _NORMALMAP
@@ -28,14 +28,16 @@ Material:
     m_TexEnvs:
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 2.17, y: 2.8}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 0.11, y: -9.8}
+        m_Offset: {x: 0.8, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: d8f552364ec1f824f996c2ad0c9e66c7, type: 3}
-        m_Scale: {x: 2.17, y: 2.8}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 0.11, y: -9.8}
+        m_Offset: {x: 0.8, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 3
-    m_Colors: []
+    - _BumpScale: 2
+    - _Parallax: 0.0326
+    m_Colors:
+    - _Color: {r: 0.78616345, g: 0.5611239, b: 0.29913756, a: 1}
   m_BuildTextureStacks: []

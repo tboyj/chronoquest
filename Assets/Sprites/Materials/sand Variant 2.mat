@@ -7,14 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: brickretet Variant 2
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 2100000, guid: 6cb8212dadd7ad24bb162c3738be1f09, type: 2}
+  m_Name: sand Variant 2
+  m_Shader: {fileID: 4800000, guid: 124bab73e4c991046a8948a728276efe, type: 3}
+  m_Parent: {fileID: 2100000, guid: 28793a3151be3d845964ae3f822f99ce, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _NORMALMAP
   - _PARALLAXMAP
-  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -26,16 +24,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 2.17, y: 2.8}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d8f552364ec1f824f996c2ad0c9e66c7, type: 3}
-        m_Scale: {x: 2.17, y: 2.8}
+        m_Texture: {fileID: 2800000, guid: 990e0eea04f312f46bd2e960cc198af4, type: 3}
+        m_Scale: {x: 55.09, y: -1.9}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _BumpScale: 3
+    m_Floats: []
     m_Colors: []
   m_BuildTextureStacks: []
