@@ -4718,6 +4718,7 @@ MonoBehaviour:
   dialogPanel: {fileID: 1697316497}
   dialogManager: {fileID: 1697316501}
   interactionPanel: {fileID: 151410825}
+  lightDurability: 15
 --- !u!114 &160479111
 MonoBehaviour:
   m_ObjectHideFlags: 0

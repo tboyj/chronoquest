@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using ChronoQuest.Interactions.World;
 using TMPro;
@@ -37,6 +38,8 @@ public class Player : Character, Interaction
     private bool inventoryInteractionPermission;
     public TextMeshProUGUI interactionPanel;
     private Light lightSource;
+    [Range(0,15f)]
+    public float lightDurability = 15f;
     public void Start()
     {
         
@@ -87,6 +90,12 @@ public class Player : Character, Interaction
         if (heldItem != null && heldItem.item != null) {
             if (GetHeldItem().item.id == 11 && isHolding) // torch item id
             {
+                // if (lightDurability > 0)
+                // {
+                //     StartCoroutine(SlowRangeFade());
+                    
+                // }
+                lightSource.range = lightDurability;
                 lightSource.color = new Color(255f/255f, 235f/255f, 169f/255f);
                 lightSource.enabled = true;
             }
@@ -95,6 +104,7 @@ public class Player : Character, Interaction
                 lightSource.color = new Color(0,0,0);
                 lightSource.enabled = false;
             }
+            
         }
         inventory.SetRefresh(true);
         if (!isHolding)
@@ -141,6 +151,17 @@ public class Player : Character, Interaction
             dialogPanel.SetActive(true);
         }
     }
+
+    // IEnumerator SlowRangeFade()
+    // {
+    //     while (lightDurability > 0) // Or use 'while (true)' if you want it to run forever
+    //     {
+    //         lightDurability -= 0.1f;
+    //         yield return new WaitForSeconds(1f);
+    //     }
+        
+    // }
+
     private void CheckKeyInputInteraction()
     {
         if (!manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
