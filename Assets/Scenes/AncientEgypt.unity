@@ -77064,7 +77064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfItemsHere: 1
-  itemInWorld: {fileID: 11400000, guid: cefc262be606206408b8d9a495e9978e, type: 2}
+  itemInWorld: {fileID: 11400000, guid: 30f699fe4a9bd4a4a84b2caa994acbdc, type: 2}
   rend: {fileID: 805995631}
   takeable: 1
   itemRecognizesPlayer: 0

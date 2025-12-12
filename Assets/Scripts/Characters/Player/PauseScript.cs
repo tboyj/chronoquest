@@ -44,6 +44,19 @@ public class PauseScript : MonoBehaviour
             timeIsStopped = !timeIsStopped;
         }
         pauseMenu.SetActive(isPaused);
+        
+        // Manage cursor visibility and lock state
+        if (isPaused)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        
         if (timeIsStopped)
         {
             Time.timeScale = 0;
@@ -66,11 +79,17 @@ public class PauseScript : MonoBehaviour
         {
             inventoryButton.GetComponent<UnityEngine.UI.Image>().sprite = inventorySpriteWhileClosed;
             inventoryPanel.SetActive(false);
+            // Hide cursor when closing inventory
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             inventoryButton.GetComponent<UnityEngine.UI.Image>().sprite = inventorySpriteWhileOpen;
             inventoryPanel.SetActive(true);
+            // Show cursor when opening inventory
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         if (timeIsStopped)
         {

@@ -36,9 +36,10 @@ public class Player : Character, Interaction
     public DialogGUIManager dialogManager;     // Handles dialog GUI logic and flow
     private bool inventoryInteractionPermission;
     public TextMeshProUGUI interactionPanel;
-
+    private Light lightSource;
     public void Start()
     {
+        
         manager = gameObject.GetComponent<QuestManager>();
         Initialize("Player", gameObject.GetComponent<Inventory>(), base.objRendered, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
         inventoryInteractionPermission = true;
@@ -72,6 +73,9 @@ public class Player : Character, Interaction
 
         // UI Image 
         dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
+        lightSource = GetComponent<Light>();
+        lightSource.color = new Color(0,0,0);
+        lightSource.enabled = false; // default off
         //!!! --- ! Inventory GUI Section ! --- !!!//
         InventoryGuiRefresh();
         Physics.IgnoreLayerCollision(0, 8, true);
@@ -80,6 +84,18 @@ public class Player : Character, Interaction
     public void Update()
     {
         // Debug.Log(manager?.GetCurrentQuest()?.name);
+        if (heldItem != null && heldItem.item != null) {
+            if (GetHeldItem().item.id == 11 && isHolding) // torch item id
+            {
+                lightSource.color = new Color(255f/255f, 235f/255f, 169f/255f);
+                lightSource.enabled = true;
+            }
+            else
+            {
+                lightSource.color = new Color(0,0,0);
+                lightSource.enabled = false;
+            }
+        }
         inventory.SetRefresh(true);
         if (!isHolding)
         {
