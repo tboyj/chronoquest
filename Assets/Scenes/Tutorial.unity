@@ -9582,6 +9582,7 @@ GameObject:
   - component: {fileID: 374568066}
   - component: {fileID: 374568065}
   - component: {fileID: 374568064}
+  - component: {fileID: 374568068}
   m_Layer: 0
   m_Name: portal (1)
   m_TagString: LoadNew
@@ -14456,6 +14457,19 @@ Transform:
   - {fileID: 1271375339}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374568068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374568063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7bbd3a70630564eb9c52fda843a2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockAxis: 010001
 --- !u!1 &375257533
 GameObject:
   m_ObjectHideFlags: 0
