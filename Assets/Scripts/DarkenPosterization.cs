@@ -12,7 +12,7 @@ public class DarkenPosterization : MonoBehaviour
     public PixelateEffect posterizationController;
     public GameObject removal;
     public int divideVy;
-    public float moveSpeedPlayer = 1.5f; // If You can find a way to get the player's original speed, that would be better
+    // public float moveSpeedPlayer = 1.0f; // If You can find a way to get the player's original speed, that would be better
     private Material mat;
     void Start()
     {
@@ -45,7 +45,7 @@ public class DarkenPosterization : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             
-            other.gameObject.transform.GetComponent<PlayerMovement>().moveSpeed = 1.0f;
+            // other.gameObject.transform.GetComponent<PlayerMovement>().moveSpeed = 1.0f;
             posterizationController = other.gameObject.transform.Find("MainCamera").GetComponent<PixelateEffect>();
             updatePosterization = true;
         }
@@ -57,7 +57,7 @@ public class DarkenPosterization : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.transform.GetComponent<PlayerMovement>().moveSpeed = moveSpeedPlayer;
+            // other.gameObject.transform.GetComponent<PlayerMovement>().moveSpeed = moveSpeedPlayer;
             posterizationController.colorLevels = ogLevel;
             if (mat != null)
                 mat.color = new Color(0,0,0,200);
