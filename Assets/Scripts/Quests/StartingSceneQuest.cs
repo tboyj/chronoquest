@@ -9,11 +9,11 @@ public class StartingSceneQuest : MonoBehaviour
     
     void Start()  // Changed to Start for better timing
     {
-        questManager = GameObject.Find("RealPlayer").GetComponent<QuestManager>();
+        
         
         if (questManager == null)
         {
-            Debug.LogError("QuestManager not found in scene.");
+            Debug.LogError("QuestManager not set in scene.");
             return;
         }
         

@@ -41,49 +41,49 @@ public class Player : Character, Interaction
     [Range(0,15f)]
     public float lightDurability = 15f;
     public void Start()
+{
+    lightSource = GetComponent<Light>();
+    manager = GetComponent<QuestManager>();
+    movement = GetComponent<PlayerMovement>();
+    guiHandler = GetComponent<InventoryGUI>();
+    
+    Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+    inventoryInteractionPermission = true;
+    
+    if (isInventorySetup == false)
     {
-        
-        manager = gameObject.GetComponent<QuestManager>();
-        Initialize("Player", gameObject.GetComponent<Inventory>(), base.objRendered, 0, gameObject.GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
-        inventoryInteractionPermission = true;
-        
-        movement = gameObject.GetComponent<PlayerMovement>();
-        if (isInventorySetup == false)
-        {
-            InventorySetup(49);
-            isInventorySetup = true;
-        }
-        
-        heldItem = inventory.GetItemUsingIndex(itemHeld);
-        guiHandler = gameObject.GetComponent<InventoryGUI>();
-        if (heldItem.item != null)
-        {
-            Debug.Log(heldItem.item.name);
-            try
-            {
-                holdingItemManager.EnableWithSprite(heldItem.item.sprite);
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Can't gather rendering data for held item. Maybe you have no items?");
-                Debug.LogException(e);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Item is null, maybe it needs assigned?");
-        }
-
-        // UI Image 
-        dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
-        lightSource = GetComponent<Light>();
-        lightSource.color = new Color(0,0,0);
-        lightSource.enabled = false; // default off
-        //!!! --- ! Inventory GUI Section ! --- !!!//
-        InventoryGuiRefresh();
-        Physics.IgnoreLayerCollision(0, 8, true);
-        
+        InventorySetup(49);
+        isInventorySetup = true;
     }
+    
+    heldItem = inventory.GetItemUsingIndex(itemHeld);
+    
+    if (heldItem.item != null)
+    {
+        Debug.Log(heldItem.item.name);
+        try
+        {
+            holdingItemManager.EnableWithSprite(heldItem.item.sprite);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Can't gather rendering data for held item. Maybe you have no items?");
+            Debug.LogException(e);
+        }
+    }
+    else
+    {
+        Debug.LogWarning("Item is null, maybe it needs assigned?");
+    }
+
+    // UI Image 
+    dialogManager = dialogPanel.GetComponent<DialogGUIManager>();
+    lightSource.color = new Color(0,0,0);
+    lightSource.enabled = false; // default off
+    //!!! --- ! Inventory GUI Section ! --- !!!//
+    InventoryGuiRefresh();
+    Physics.IgnoreLayerCollision(0, 8, true);
+}
     public void Update()
     {
         // Debug.Log(manager?.GetCurrentQuest()?.name);

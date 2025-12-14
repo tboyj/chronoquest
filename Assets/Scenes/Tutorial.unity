@@ -1399,7 +1399,7 @@ MonoBehaviour:
   sceneName: Tutorial
   reformattedDate: 00/00/0
   dateText: {fileID: 1924206081}
-  bitsChanger: {fileID: 0}
+  bitsChanger: {fileID: 2138719024}
 --- !u!65 &48323170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4911,18 +4911,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b1f8e6d4aa51348825e4985899f469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  runMultiplier: 1.25
-  gravity: -1.5
+  moveSpeed: 2
+  runMultiplier: 1.5
+  gravity: -2
   rayholder: {fileID: 1995528487}
   flip: 0
   acceleration: 4.75
   deceleration: 4.25
   controller: {fileID: 160479125}
   rawInput: {x: 0, y: 0, z: 0}
-  cameraTransform: {fileID: 0}
-  jumpForce: 1
-  gravityStrength: -1.5
+  cameraTransform: {fileID: 2138719023}
+  jumpForce: 1.5
+  gravityStrength: -8
 --- !u!108 &160479129
 Light:
   m_ObjectHideFlags: 0
@@ -27376,9 +27376,6 @@ MonoBehaviour:
   postQuestList:
   - {fileID: 874054031}
   - {fileID: 874054030}
-  player: {fileID: 160479107}
-  canvas: {fileID: 1776828883}
-  questsHolder: {fileID: 1501469597}
   teleportToPosition: {x: 0, y: 0, z: 0}
   isLoading: 0
 --- !u!135 &874054029

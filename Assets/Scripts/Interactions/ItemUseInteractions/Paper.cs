@@ -46,7 +46,7 @@ public class Paper : BaseUse
             }
             else
             {
-                GetPlayer().movement.moveSpeed = 1; // <-- This is the movement speed of the player. Find another way to do this lol.
+                GetPlayer().movement.moveSpeed = 2f; // <-- This is the movement speed of the player. Find another way to do this lol.
                 GetPlayer().hotbarHolder.Find("OpenInv").GetComponent<Button>().interactable = true;
                 GetPlayer().SetInventoryPermission(true);
             }

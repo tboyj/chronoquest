@@ -6,8 +6,9 @@ public class PlayerMovement : Movement
     public CharacterController controller;
     public Vector3 rawInput;
     [SerializeField] private Transform cameraTransform;
+    private bool jumpRequested = false; // Buffer for jump input
     
-    private void Start()
+    private void Awake()
     {
         if (cameraTransform == null)
             cameraTransform = Camera.main.transform;
@@ -15,7 +16,11 @@ public class PlayerMovement : Movement
     
     private void Update()
     {
-        MoveWithForce();
+        // Only handle input detection in Update to catch it every frame
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            jumpRequested = true;
+        }
     }
 
     public float jumpForce = 7.2f;
@@ -24,6 +29,7 @@ public class PlayerMovement : Movement
 
     public override void MoveWithForce()
     {
+        if (this == null || transform == null || controller == null) return; // Safety check
         isGrounded = controller.isGrounded;
         
         if (isGrounded)
@@ -31,8 +37,11 @@ public class PlayerMovement : Movement
             if (verticalVelocity < 0)
                 verticalVelocity = -1f;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (jumpRequested) // Check the buffered input
+            {
                 verticalVelocity = jumpForce;
+                jumpRequested = false; // Clear the buffer
+            }
         }
         else
         {
@@ -44,6 +53,11 @@ public class PlayerMovement : Movement
 
         rawInput = new Vector3(x, 0, z);
         rawInput = Vector3.ClampMagnitude(rawInput, 1f);
+        
+        if (cameraTransform == null)
+            cameraTransform = Camera.main?.transform;
+            
+        if (cameraTransform == null) return; // Can't move without camera reference
         
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;

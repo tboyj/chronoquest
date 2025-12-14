@@ -39,10 +39,17 @@ public class TimeCube : MonoBehaviour
 
         sceneName = gameObject.scene.name;
         Debug.Log("Scene Name: " + sceneName);
-        GameObject canvas = GameObject.Find("Canvas");
-        GameObject dateObj = canvas.transform.Find("HideForDialogContainer/GameUIHolder/Bg_Date/Date").gameObject;
-        dateText = dateObj.GetComponent<TextMeshProUGUI>();
-        bitsChanger = GameObject.Find("RealPlayer").transform.Find("MainCamera").gameObject.GetComponent<PixelateEffect>();
+
+        // Warn if not assigned in editor
+        if (dateText == null)
+        {
+            Debug.LogWarning("dateText not assigned in inspector for TimeCube!");
+        }
+        
+        if (bitsChanger == null)
+        {
+            Debug.LogWarning("bitsChanger not assigned in inspector for TimeCube!");
+        }
 
 
         switch (sceneName)
