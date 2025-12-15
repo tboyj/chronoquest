@@ -7046,7 +7046,7 @@ MonoBehaviour:
   animatorSetup: {fileID: 828615070}
   inRange: 0
   player: {fileID: 160479110}
-  questHandler: {fileID: 0}
+  questHandler: {fileID: 263861362}
   movement: {fileID: 263861374}
 --- !u!45 &263861366
 Skybox:
@@ -31656,7 +31656,7 @@ MonoBehaviour:
   animatorSetup: {fileID: 1280739327}
   inRange: 0
   player: {fileID: 160479110}
-  questHandler: {fileID: 0}
+  questHandler: {fileID: 1036772513}
   movement: {fileID: 1036772520}
 --- !u!45 &1036772503
 Skybox:
@@ -47546,7 +47546,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3

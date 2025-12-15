@@ -137,7 +137,8 @@ public class NPC : Character, IAvailableActions
         {
             inRange = false;
             ChangeTheUI(""); // reset
-            // player = null;
+            player = null;
+
         }
     }
 
