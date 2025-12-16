@@ -8,6 +8,7 @@ public class CurrentQIDMonitor : MonoBehaviour
     [SerializeField]
     private int currentQuestId;
 
+
     private void Awake()
     {
         // Singleton enforcement
@@ -32,6 +33,7 @@ public class CurrentQIDMonitor : MonoBehaviour
     {
         return currentQuestId;
     }
+
 
     // internal object GetCurrentId()
     // {

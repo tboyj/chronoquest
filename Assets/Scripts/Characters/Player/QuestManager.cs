@@ -24,19 +24,54 @@ public class QuestManager : MonoBehaviour
 
     public void Start()
     {   
-         // replace with savedata
-        
-            if (GetCurrentQuest() != null)
+        if (GetCurrentQuest() != null)
+        {
+            Debug.Log("attempt @ cqidm");
+            CurrentQIDMonitor.Instance.SetCurrentId(GetCurrentQuest().data.id);
+            
+            // ADD: Re-initialize conditions for all assigned quests
+            foreach (var quest in questsAssigned)
             {
-                Debug.Log("attempt @ cqidm");
-                CurrentQIDMonitor.Instance.SetCurrentId(GetCurrentQuest().data.id);
+                if (quest != null)
+                {
+                    quest.ReinitializeConditions();
+                }
             }
-            else
-            {
-                Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
-            }
+            
+            // ADD: Force update all NPCs to sync with current quest state
+            StartCoroutine(SyncNPCsWithQuestState());
+        }
+        else
+        {
+            Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
+        }
         
         hasCompletedFirstQuest = false;
+    }
+
+    // ADD this new method
+    public System.Collections.IEnumerator SyncNPCsWithQuestState()
+    {
+        // Wait one frame for all NPCs to finish their Start()
+        yield return null;
+        
+        // Find all NPCs and remove completed quests from their stock
+        NPC[] allNPCs = FindObjectsOfType<NPC>();
+        foreach (NPC npc in allNPCs)
+        {
+            QuestHandler handler = npc.GetComponent<QuestHandler>();
+            if (handler != null)
+            {
+                handler.questsInStock.RemoveAll(quest => 
+                    quest != null && 
+                    questsCompleted.Exists(completed => 
+                        completed != null && completed.data.id == quest.data.id
+                    )
+                );
+            }
+        }
+        
+        Debug.Log("NPCs synced with quest state");
     }
     public void AddQuestToList(QuestInstance quest)
     {
@@ -54,9 +89,24 @@ public class QuestManager : MonoBehaviour
             return;
         }
         
+        Debug.Log($"Completing quest {quest.data.id}");
+        
         questsCompleted.Add(quest);
         quest.IsCompleted = true;
         questsAssigned.Remove(quest);
+        
+        // Update to next quest
+        QuestInstance newCurrentQuest = GetCurrentQuest();
+        if (newCurrentQuest != null)
+        {
+            CurrentQIDMonitor.Instance.SetCurrentId(newCurrentQuest.data.id);
+            Debug.Log($"New current quest: {newCurrentQuest.data.id}");
+        }
+        else
+        {
+            CurrentQIDMonitor.Instance.SetCurrentId(0);
+            Debug.Log("No more quests");
+        }
         
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
@@ -173,36 +223,38 @@ public class QuestManager : MonoBehaviour
             }
             Debug.Log(dialogManager.GetPrint());
             if (questsAssigned.Count == 0 && npcQuestHandler.questsInStock.Count > 0)
-            { // add since there is none in quest. maybe this is where your skipping error happens logically. :P
-                if (questsCompleted.Contains(GetCurrentQuest()))
+            {
+                if (questsCompleted.Contains(GetCurrentQuest()))  // This will also fail since GetCurrentQuest is null
                 {
                     Debug.Log("You already did this! I'm Ignoring You. BLOCKED!");
-                    // If you completed this quest already it ignores that.
                 }
                 else
                 {
                     questAssigned = npcQuestHandler.GetMostRecentQuest();
                     
-                    if (questAssigned != null) {
+                    if (questAssigned != null)
+                    {
                         Debug.Log($"Adding quest {questAssigned.data.questName} with id {questAssigned.data.id}");
                         Debug.Log($"Conditions are {questAssigned.CheckConditions()}.");
+                        
                         if (questAssigned.CheckConditions())
                         {
                             Debug.Log("Ignoring conditions |>");
-                            SetQuestCompleted(GetCurrentQuest());
+                            
+                            // FIX: Don't try to complete GetCurrentQuest() when questsAssigned is empty!
+                            // Just mark this quest as complete and move on
+                            questAssigned.IsCompleted = true;
+                            questsCompleted.Add(questAssigned);
                             npcQuestHandler.questsInStock.RemoveAt(0);
-                            // Throw here dialog saying good job.
-                            Debug.Log("Dialog for congratulating them");
+                            
+                            Debug.Log("Quest auto-completed, trying next quest");
                             TryToGiveQuest(interactableNPC, dialogManager);
-                            interactableNPC.questHandler.GetMostRecentQuest().QuestEventTriggered();
-                            dialogManager.SetCharName(GetCurrentQuest().dialogsForQuest[0].characterName);
-                            dialogManager.SetDialText(GetCurrentQuest().dialogsForQuest[0].dialogueText);
                         }
-
                         else
                         {
+                            // Normal flow - add the quest
                             AddQuestToList(questAssigned);
-                            // If conditions are false, add the next quest and throw him into a dialog.
+                            
                             if (GetCurrentQuest().dialogsForQuest.Count > 0)
                             {
                                 GetCurrentQuest().ShowDialog(true);

@@ -6,6 +6,7 @@ public class TodoObject : MonoBehaviour
     public List<QuestDialog> dialogsForQuestSections;
     public Transform accessPoint;
     public string todoText;
+    
 
     public void Start()
     {

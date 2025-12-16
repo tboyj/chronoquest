@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ChronoQuest.Quests;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class QuestInstance : MonoBehaviour
@@ -19,6 +20,7 @@ public class QuestInstance : MonoBehaviour
     public Vector3 positionOfQuestGiver;
     [SerializeReference]
     public List<AfterQuestDialog> postQuestList;
+    private SphereCollider parentCollider;
     // public QuestInstance(Quest q, bool i, List<TodoObject> t, List<QuestDialog> d, List<QuestInstance> s)
     // {
     //     data = q;
@@ -31,42 +33,75 @@ public class QuestInstance : MonoBehaviour
     {
         
     }
+
+    public void ReinitializeConditions()
+{
+    if (this is IQuestAction action)
+    {
+        conditions = action;
+    }
+}
     public virtual void Start()
     {
+        parentCollider = gameObject.transform.parent.GetComponent<SphereCollider>();
         questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
         positionOfQuestGiver = gameObject.transform.parent.position;
+        
+        if (SceneManager.GetSceneByName("UtilityScene").isLoaded)
+        {
+            if (CurrentQIDMonitor.Instance.GetCurrentQuestId() > data.id)
+            {
+                parentCollider.enabled = false;
+                gameObject.transform.parent.position = new Vector3(0, -100, 0);
+            }
+        }
+        
+        // ONLY trigger if this is the current quest
+        // if (conditions != null && CurrentQIDMonitor.Instance != null)
+        // {
+        //     if (CurrentQIDMonitor.Instance.GetCurrentQuestId() == data.id)
+        //     {
+        //         conditions.QuestEventTriggered();
+        //     }
+        // }
     }
     public void Update()
     {
-        if (questManager != null)
+        if (questManager != null && CurrentQIDMonitor.Instance != null)
         {
-            if (questManager.GetCurrentQuest() != null)
+            int currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
+            HandlingQuestId(currentQuestId);
+        }
+    }
+    private void HandlingQuestId(int currentQuestId)
+    {
+        if (currentQuestId > 0) // Check if there is a valid current quest ID
+        {
+            // Show only the current quest's NPC, hide all others
+            if (currentQuestId == data.id)
             {
-                // Debug.Log("Current Quest ID: " + questManager.GetCurrentQuest().data.id + " This Quest ID: " + data.id);
-                if (questManager.GetCurrentQuest().data.id < data.id) // checks if the current quest is before this quest in the quest line
-                {
-                    gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
-                    gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc out of sight
-                }
-                else
-                {
-                    gameObject.transform.parent.GetComponent<SphereCollider>().enabled = true;
-                    gameObject.transform.parent.position = positionOfQuestGiver; // moves the quest giver npc back to original position
-                    if (questManager.GetCurrentQuest().data.id == data.id) {
-                    
-                        
-                    }
-                }
+                // This is the active quest - show the NPC
+                parentCollider.enabled = true;
+                gameObject.transform.parent.position = positionOfQuestGiver;
             }
             else
-            { // else SCREW THAT !!! we want the collider to be inactive if there is no current quest
-              // Debug.Log("I couldn't work because i'm just a silly boy: "+questManager.gameObject.name);
-                gameObject.transform.parent.GetComponent<SphereCollider>().enabled = false;
-                gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc back out of sight
+            {
+                // This is not the active quest - hide the NPC
+                parentCollider.enabled = false;
+                gameObject.transform.parent.position = new Vector3(0, -100, 0);
             }
-
         }
-    } 
+        else
+        { 
+            // No current quest - disable collider and hide NPC
+            parentCollider.enabled = false;
+            gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc back out of sight
+        }
+        
+    }
+
+
+
     public void Trigger()
     {
         Debug.Log($"Condition {conditions}");

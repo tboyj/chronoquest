@@ -5,21 +5,36 @@ public class QuestHandler : MonoBehaviour // for npcs
     [SerializeField]
     public List<QuestInstance> questsInStock = new List<QuestInstance>();
 
+     public void Start()
+    {
+        // Remove quests that have already been completed
+        QuestManager questManager = GameObject.FindGameObjectWithTag("Player")?.GetComponent<QuestManager>();
+        
+        if (questManager != null)
+        {
+            // Remove any quest from stock that's already completed
+            questsInStock.RemoveAll(quest => 
+                quest != null && 
+                questManager.questsCompleted.Exists(completed => 
+                    completed != null && completed.data.id == quest.data.id
+                )
+            );
+            
+            Debug.Log($"NPC has {questsInStock.Count} quests remaining in stock");
+        }
+    }
+    
     public QuestInstance GetMostRecentQuest()
     {
         if (questsInStock.Count > 0)
         {
             return questsInStock[0];
         }
-        else
-        {
-            return null;
-        }
+        return null;
     }
 
     public List<QuestInstance> GetQuestList()
     {
         return questsInStock;
     }
-    // NOTE: FOR TALKTOQUESTNPC QUESTS, YOU MUST HAVE AT LEAST 1 QUEST AFTER IT. ENDING QUEST STRUCTURES WITH A TALKTONPCQUEST BREAKS IT.
 }

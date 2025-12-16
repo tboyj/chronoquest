@@ -20,7 +20,11 @@ public class StartingSceneQuest : MonoBehaviour
         Debug.Log($"Found QuestManager on {questManager.gameObject.name}");
         
         // Just call it directly - no need to Find ourselves
-        RuntimeQuest();
+        if (!questManager.hasCompletedFirstQuest && questManager.questsAssigned.Count == 0)
+        {
+            Debug.Log("No quests assigned yet, assigning starting quest.");
+            RuntimeQuest();
+        }
     }
 
     public void RuntimeQuest()

@@ -10,8 +10,6 @@ public class QuestCollectItem : QuestInstance, IQuestAction
     public int currentCount;
     public ItemStorable requiredItem;
     public bool isGiveQuestType;
-
-
     public override void QuestEventTriggered()
     {
         if (IsCompleted)

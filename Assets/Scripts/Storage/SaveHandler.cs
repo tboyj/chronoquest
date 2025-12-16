@@ -8,6 +8,7 @@ public class SaveData
     public List<Item> inventoryItems;
     public List<QuestInstance> questsAssigned;
     public List<QuestInstance> questsCompleted;
+    public List<TodoObject> currentTodo;
     public int currentQuestId;
     public bool hasCompletedFirstQuest;
     public int itemHeld;
@@ -33,22 +34,25 @@ public class SaveHandler : MonoBehaviour
 
     private string saveFilePath;
 
-    void Awake()
+void Awake()
+{
+    if (instance == null)
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+    else if (instance != this)
+    {
+        Destroy(gameObject);
+    }
+    
+    // Move this here from Start()
+    saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
+}
 
     void Start()
     {
-        saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
+        //saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
     }
 
     public void SaveGame(Player player)
@@ -80,6 +84,11 @@ public class SaveHandler : MonoBehaviour
         {
             data.questsAssigned = new List<QuestInstance>(questManager.questsAssigned);
             data.questsCompleted = new List<QuestInstance>(questManager.questsCompleted);
+            var currentQuest = questManager.GetCurrentQuest();
+            if (currentQuest != null && currentQuest.todo != null && currentQuest.todo.Count > 0)
+            {
+                data.currentTodo = currentQuest.todo;
+            }
             data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
             data.hasCompletedFirstQuest = questManager.hasCompletedFirstQuest;
         }
@@ -155,17 +164,36 @@ public class SaveHandler : MonoBehaviour
         // Restore quests
         QuestManager questManager = player.GetComponent<QuestManager>();
         if (questManager != null)
+    {
+        questManager.questsAssigned = new List<QuestInstance>(data.questsAssigned);
+        questManager.questsCompleted = new List<QuestInstance>(data.questsCompleted);
+        
+        // Re-initialize conditions for all quests
+        foreach (var quest in questManager.questsAssigned)
         {
-            questManager.questsAssigned = new List<QuestInstance>(data.questsAssigned);
-            questManager.questsCompleted = new List<QuestInstance>(data.questsCompleted);
-            CurrentQIDMonitor.Instance.SetCurrentId(data.currentQuestId);
-            questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
-            questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            if (quest != null)
+            {
+                quest.ReinitializeConditions();
+            }
         }
-        else
+        
+        var currentQuest = questManager.GetCurrentQuest();
+        if (currentQuest != null)
         {
-            Debug.LogWarning("QuestManager component not found on Player.");
+            CurrentQIDMonitor.Instance.SetCurrentId(currentQuest.data.id);
+            
+            if (data.currentTodo != null)
+            {
+                currentQuest.todo = data.currentTodo;
+            }
         }
+        
+        questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
+        questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        
+        // Force NPC sync after loading
+        questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
+    }
 
         GameObject sunObject = GameObject.Find("Sun");
         if (sunObject != null)
@@ -185,7 +213,21 @@ public class SaveHandler : MonoBehaviour
         {
             Debug.LogWarning("Sun object not found in the scene.");
         }
+        foreach (var quest in questManager.questsAssigned)
+        {
+            if (quest != null)
+            {
+                quest.ReinitializeConditions();
+            }
+        }
 
+        foreach (var quest in questManager.questsCompleted)
+        {
+            if (quest != null)
+            {
+                quest.ReinitializeConditions();
+            }
+        }
         Debug.Log("Game data loaded successfully");
     }
 
