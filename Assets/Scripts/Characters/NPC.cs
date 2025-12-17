@@ -78,7 +78,7 @@ public class NPC : Character, IAvailableActions
                 }
             } else
             {
-                Debug.Log("Definitely not for me!");
+                // Debug.Log("Definitely not for me!");
             }
            
         }

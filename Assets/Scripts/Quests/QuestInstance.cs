@@ -35,12 +35,16 @@ public class QuestInstance : MonoBehaviour
     }
 
     public void ReinitializeConditions()
-{
-    if (this is IQuestAction action)
     {
-        conditions = action;
+        if (this is IQuestAction action)
+        {
+            Debug.Log("Reinitializing conditions for quest: " + data.id);
+            Debug.Log(action);
+            conditions = action;
+            // try to see if you can put a check on isComplete here for your quests, as you need that as well to define the point in the quest.
+        }
+        
     }
-}
     public virtual void Start()
     {
         parentCollider = gameObject.transform.parent.GetComponent<SphereCollider>();

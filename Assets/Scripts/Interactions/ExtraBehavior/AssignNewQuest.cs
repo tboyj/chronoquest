@@ -42,7 +42,8 @@ public class AssignNewQuest : ExtraBase
         {
             Debug.Log("Current quest not completed yet");
         }
-        
+        SaveHandler.Instance.SaveGame(qm.gameObject.GetComponent<Player>());
+        Debug.Log("Saving quest state... (from AssignNewQuest)");
         qm.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
 

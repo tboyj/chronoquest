@@ -5516,7 +5516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 160479110}
   loadOnStart: 1
-  autoSave: 1
+  autoSave: 0
   autoSaveInterval: 10
 --- !u!4 &186646227
 Transform:

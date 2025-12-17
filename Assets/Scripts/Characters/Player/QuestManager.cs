@@ -11,6 +11,7 @@ public class QuestManager : MonoBehaviour
     private NPC currentNPC;
     
     public int generalDialogCounter;
+    private Player player;
 
     public void SetCurrentNPC(NPC npc)
     {
@@ -24,6 +25,7 @@ public class QuestManager : MonoBehaviour
 
     public void Start()
     {   
+        player = gameObject.GetComponent<Player>();
         if (GetCurrentQuest() != null)
         {
             Debug.Log("attempt @ cqidm");
@@ -132,6 +134,7 @@ public class QuestManager : MonoBehaviour
     {
         currentlyInDialog = v;
     }
+    
     public void TryToGiveQuest(NPC interactableNPC, DialogGUIManager dialogManager)
     {
         QuestHandler npcQuestHandler = interactableNPC.GetComponent<QuestHandler>();
@@ -268,6 +271,9 @@ public class QuestManager : MonoBehaviour
                                 GetCurrentQuest().ShowDialog(false);
                                 SetCurrentlyInDialog(false);
                                 interactableNPC.inDialog = false;
+                                SaveHandler.Instance.SaveGame(player);
+                                Debug.Log("Saving quest state...");
+                                // new
                             }
                         }
                     }

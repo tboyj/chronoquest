@@ -184,6 +184,7 @@ public class Player : Character, Interaction
         }
         if (Input.GetKeyDown(Keybinds.continueKeybind) && manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
         { // bummy boy code o-o
+
             if (interactableNPC != null)
             {
                 if (manager.GetCurrentQuest() != null) {
@@ -223,6 +224,8 @@ public class Player : Character, Interaction
                         interactableNPC.inDialog = false;
                         currentQuest.DialogAdvance();
                         manager.ChangeFunction();
+                        SaveHandler.Instance.SaveGame(this);
+                        Debug.Log("Saving quest state...");
                     }
                     else if (manager.GetCurrentQuest().dialogsForQuest.Count == 0)
                     {

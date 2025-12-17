@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class SaveData
@@ -15,6 +17,8 @@ public class SaveData
     public bool isHolding;
     public float timeInDay;
     public Vector3 playerPosition;
+    public Dictionary<string, Vector3> npcPositions = new Dictionary<string, Vector3>();
+    public string currentSceneName;
 }
 
 public class SaveHandler : MonoBehaviour
@@ -70,10 +74,23 @@ void Awake()
         }
 
         SaveData data = new SaveData();
+        // save scene
+        data.currentSceneName = player.gameObject.scene.name;
+        // save player position
+        data.playerPosition = player.gameObject.transform.position;
 
-        data.playerPosition = player.transform.position;
-        
+        foreach (GameObject npc in GameObject.FindGameObjectsWithTag("NPC"))
+        {
+            
+            NPC npcComponent = npc.GetComponent<NPC>();
+            if (npcComponent != null)
+            {
+                data.npcPositions.Add(npcComponent.gameObject.name, npcComponent.gameObject.transform.position);
+            }
+        }
+
         // Save inventory
+
         data.inventoryItems = new List<Item>(player.inventory.items);
         data.itemHeld = player.itemHeld;
         data.isHolding = player.isHolding;
@@ -144,6 +161,33 @@ void Awake()
         {
             Debug.LogError("Player is null, cannot apply loaded data.");
             return;
+        }
+        //checks (for if i need debugging)
+
+
+        // Load UtilityScene additively if not already loaded
+        UnityEngine.SceneManagement.Scene utilityScene = SceneManager.GetSceneByName("UtilityScene");
+        if (!utilityScene.isLoaded)
+        {
+            SceneManager.LoadScene("UtilityScene", LoadSceneMode.Additive);
+        }
+
+        if (SceneManager.GetActiveScene().name != data.currentSceneName)
+        {
+            // Load the saved scene
+            SceneManager.LoadScene(data.currentSceneName);
+        }
+
+        foreach (var npc in data.npcPositions)
+        {
+            GameObject npcObject = GameObject.Find(npc.Key);
+            if (npcObject != null)
+            {
+                npcObject.transform.position = npc.Value;
+            } else
+            {
+                Debug.LogWarning($"NPC with name {npc.Key} not found in the scene.");
+            }
         }
 
         player.isInventorySetup = true;
