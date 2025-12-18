@@ -15,7 +15,8 @@ public class NPC : Character, IAvailableActions
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        Initialize("NPC", gameObject.GetComponent<Inventory>(), base.gameObject, 0, this.GetComponent<HoldingItemScript>(), false, false, null);
+        Initialize("NPC", gameObject.GetComponent<Inventory>(), base.gameObject, 0, 
+        this.GetComponent<HoldingItemScript>(), false, false, null);
         movement = gameObject.GetComponent<NPCMovement>();
         inventory = GetComponent<Inventory>();
         if (gameObject.GetComponent<QuestHandler>() != null)

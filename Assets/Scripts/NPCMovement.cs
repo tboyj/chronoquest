@@ -32,7 +32,7 @@ public class NPCMovement : MonoBehaviour
         agent.stoppingDistance = 0.1f;
         agent.updateRotation = false; // We'll handle flipping manually
     }
-
+    
     private void Update()
     {
 

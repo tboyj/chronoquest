@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-[System.Serializable]
+[Serializable]
 public class SaveData
 {
     public List<Item> inventoryItems;
@@ -16,11 +18,22 @@ public class SaveData
     public int itemHeld;
     public bool isHolding;
     public float timeInDay;
-    public Vector3 playerPosition;
-    public Dictionary<string, Vector3> npcPositions = new Dictionary<string, Vector3>();
+    public SerializableVector3 playerPosition = new SerializableVector3();
+    public List<string> npcNames = new List<string>();
+    public List<SerializableVector3> npcPositions = new List<SerializableVector3>();
     public string currentSceneName;
 }
+[Serializable]
+public struct SerializableVector3
+{
+    public float x, y, z;
 
+    public SerializableVector3(Vector3 v) {
+        x = v.x; y = v.y; z = v.z;
+    }
+
+    public Vector3 ToVector3() => new Vector3(x, y, z);
+}
 public class SaveHandler : MonoBehaviour
 {
     private static SaveHandler instance;
@@ -77,7 +90,7 @@ void Awake()
         // save scene
         data.currentSceneName = player.gameObject.scene.name;
         // save player position
-        data.playerPosition = player.gameObject.transform.position;
+        data.playerPosition = new SerializableVector3(player.gameObject.transform.position);
 
         foreach (GameObject npc in GameObject.FindGameObjectsWithTag("NPC"))
         {
@@ -85,7 +98,8 @@ void Awake()
             NPC npcComponent = npc.GetComponent<NPC>();
             if (npcComponent != null)
             {
-                data.npcPositions.Add(npcComponent.gameObject.name, npcComponent.gameObject.transform.position);
+                data.npcNames.Add(npcComponent.gameObject.name);
+                data.npcPositions.Add(new SerializableVector3(npcComponent.gameObject.transform.position));
             }
         }
 
@@ -178,20 +192,8 @@ void Awake()
             SceneManager.LoadScene(data.currentSceneName);
         }
 
-        foreach (var npc in data.npcPositions)
-        {
-            GameObject npcObject = GameObject.Find(npc.Key);
-            if (npcObject != null)
-            {
-                npcObject.transform.position = npc.Value;
-            } else
-            {
-                Debug.LogWarning($"NPC with name {npc.Key} not found in the scene.");
-            }
-        }
 
-        player.isInventorySetup = true;
-        player.transform.position = data.playerPosition;
+        
 
         Inventory inventory = player.GetComponent<Inventory>();
         if (inventory == null)
@@ -257,6 +259,8 @@ void Awake()
         {
             Debug.LogWarning("Sun object not found in the scene.");
         }
+        
+        Debug.Log($"Capturing Player {player.name} at {data.playerPosition.ToVector3()}");
         foreach (var quest in questManager.questsAssigned)
         {
             if (quest != null)
@@ -265,11 +269,32 @@ void Awake()
             }
         }
 
-        foreach (var quest in questManager.questsCompleted)
+        player.movement.controller.enabled = false;
+        player.transform.position = data.playerPosition.ToVector3();
+        player.movement.controller.enabled = true;
+        
+        foreach (var npc in data.npcPositions)
         {
-            if (quest != null)
+            GameObject npcObject = GameObject.Find(data.npcNames[data.npcPositions.IndexOf(npc)]);
+            if (npcObject != null)
             {
-                quest.ReinitializeConditions();
+                // Disable any components that might block position changes
+                NavMeshAgent agent = npcObject.GetComponent<NavMeshAgent>();
+                CharacterController controller = npcObject.GetComponent<CharacterController>();
+                
+                if (agent != null) agent.enabled = false;
+                if (controller != null) controller.enabled = false;
+                
+                npcObject.transform.position = npc.ToVector3();
+                
+                if (agent != null) agent.enabled = true;
+                if (controller != null) controller.enabled = true;
+                
+                Debug.Log($"Restored NPC {npcObject.name} to {npc.ToVector3()}");
+            } 
+            else
+            {
+                Debug.LogWarning($"NPC with name {data.npcNames[data.npcPositions.IndexOf(npc)]} not found in the scene.");
             }
         }
         Debug.Log("Game data loaded successfully");

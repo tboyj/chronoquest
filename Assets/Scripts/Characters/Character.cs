@@ -17,7 +17,8 @@ public abstract class Character : MonoBehaviour
     public HoldingItemScript holdingItemManager;
     public Animator animatorSetup;
     // Constructor
-    protected virtual Character Initialize(string name, Inventory inv, GameObject objRendered, int itemHeld, HoldingItemScript holdingItemScript, bool isHolding, bool inDialog, Animator animatorSetup)
+    protected virtual Character Initialize(string name, Inventory inv, GameObject objRendered, int itemHeld, 
+    HoldingItemScript holdingItemScript, bool isHolding, bool inDialog, Animator animatorSetup)
     {
         Name = name;
         inventory = inv;
@@ -27,6 +28,7 @@ public abstract class Character : MonoBehaviour
         this.holdingItemManager = holdingItemScript;
         this.isHolding = isHolding;
         this.inDialog = inDialog;
+
         return this;
     }
 

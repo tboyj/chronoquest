@@ -47,7 +47,10 @@ public class Player : Character, Interaction
     movement = GetComponent<PlayerMovement>();
     guiHandler = GetComponent<InventoryGUI>();
     
-    Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(), false, false, transform.GetChild(0).GetComponent<Animator>());
+
+
+    Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(),
+    false, false, transform.GetChild(0).GetComponent<Animator>());
     inventoryInteractionPermission = true;
     
     if (isInventorySetup == false)
