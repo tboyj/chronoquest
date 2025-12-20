@@ -37,13 +37,39 @@ public class PointAtTodo : MonoBehaviour
         gameObject.transform.parent.parent.gameObject.SetActive(true);
         
         // Get the target transform
-        Transform todoTarget = currentQuest.todo[0].GetTodoAp();
-        
-        if (todoTarget != null)
+        Transform todoTarget;
+        if (currentQuest != null && currentQuest.todo.Count > 0)
         {
+            todoTarget = currentQuest.todo[0].GetTodoAp();
             target = todoTarget;
         }
-        
+        if (target != null)
+        {
+            Vector3 directionToTarget = target.position - player.position;
+            directionToTarget.y = 0; // Flatten to horizontal plane
+            
+            // Get camera's forward direction (flattened)
+            Vector3 cameraForward = playerCamera.transform.forward;
+            cameraForward.y = 0;
+            cameraForward.Normalize();
+            
+            // Get camera's right direction (flattened)
+            Vector3 cameraRight = playerCamera.transform.right;
+            cameraRight.y = 0;
+            cameraRight.Normalize();
+            
+            // Project target direction onto camera plane
+            float forwardDot = Vector3.Dot(directionToTarget.normalized, cameraForward);
+            float rightDot = Vector3.Dot(directionToTarget.normalized, cameraRight);
+            
+            // Calculate angle relative to camera's forward direction
+            float angle = Mathf.Atan2(rightDot, forwardDot) * Mathf.Rad2Deg;
+            
+            if (invert) angle += 180f;
+            
+            // Apply rotation to the UI element
+            transform.rotation = Quaternion.Euler(0f, 0f, -angle);
+        }
         // If we don't have a valid target, hide and return
         // if (target == null || player == null || playerCamera == null)
         // {
@@ -52,29 +78,6 @@ public class PointAtTodo : MonoBehaviour
         // }
 
         // Get direction from player to target in world space
-        Vector3 directionToTarget = target.position - player.position;
-        directionToTarget.y = 0; // Flatten to horizontal plane
         
-        // Get camera's forward direction (flattened)
-        Vector3 cameraForward = playerCamera.transform.forward;
-        cameraForward.y = 0;
-        cameraForward.Normalize();
-        
-        // Get camera's right direction (flattened)
-        Vector3 cameraRight = playerCamera.transform.right;
-        cameraRight.y = 0;
-        cameraRight.Normalize();
-        
-        // Project target direction onto camera plane
-        float forwardDot = Vector3.Dot(directionToTarget.normalized, cameraForward);
-        float rightDot = Vector3.Dot(directionToTarget.normalized, cameraRight);
-        
-        // Calculate angle relative to camera's forward direction
-        float angle = Mathf.Atan2(rightDot, forwardDot) * Mathf.Rad2Deg;
-        
-        if (invert) angle += 180f;
-        
-        // Apply rotation to the UI element
-        transform.rotation = Quaternion.Euler(0f, 0f, -angle);
     }
 }

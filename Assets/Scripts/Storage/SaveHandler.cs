@@ -1,18 +1,59 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+// NEW: Serializable item data that stores actual info, not instance IDs
+[Serializable]
+public class SerializableItem
+{
+    public string itemName;
+    public int quantity;
+    
+    public SerializableItem(Item item)
+    {
+        itemName = item.item != null ? item.item.name : "";
+        quantity = item.quantity;
+    }
+}
+
+// NEW: Serializable quest data
+[Serializable]
+public class SerializableQuest
+{
+    public int questId;
+    public string questName;
+    public bool isCompleted;
+    
+    public SerializableQuest(QuestInstance quest)
+    {
+        questId = quest.data.id;
+        questName = quest.data.questName;
+        isCompleted = quest.IsCompleted;
+    }
+}
+
+// NEW: Serializable todo data
+[Serializable]
+public class SerializableTodo
+{
+    public string todoObjectName;
+    
+    public SerializableTodo(TodoObject todo)
+    {
+        todoObjectName = todo != null ? todo.name : "";
+    }
+}
+
 [Serializable]
 public class SaveData
 {
-    public List<Item> inventoryItems;
-    public List<QuestInstance> questsAssigned;
-    public List<QuestInstance> questsCompleted;
-    public List<TodoObject> currentTodo;
+    public List<SerializableItem> inventoryItems = new List<SerializableItem>();
+    public List<SerializableQuest> questsAssigned = new List<SerializableQuest>();
+    public List<SerializableQuest> questsCompleted = new List<SerializableQuest>();
+    public List<SerializableTodo> currentTodo = new List<SerializableTodo>();
     public int currentQuestId;
     public bool hasCompletedFirstQuest;
     public int itemHeld;
@@ -23,6 +64,7 @@ public class SaveData
     public List<SerializableVector3> npcPositions = new List<SerializableVector3>();
     public string currentSceneName;
 }
+
 [Serializable]
 public struct SerializableVector3
 {
@@ -34,6 +76,7 @@ public struct SerializableVector3
 
     public Vector3 ToVector3() => new Vector3(x, y, z);
 }
+
 public class SaveHandler : MonoBehaviour
 {
     private static SaveHandler instance;
@@ -51,25 +94,19 @@ public class SaveHandler : MonoBehaviour
 
     private string saveFilePath;
 
-void Awake()
-{
-    if (instance == null)
+    void Awake()
     {
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-    else if (instance != this)
-    {
-        Destroy(gameObject);
-    }
-    
-    // Move this here from Start()
-    saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
-}
-
-    void Start()
-    {
-        //saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        
+        saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
     }
 
     public void SaveGame(Player player)
@@ -87,14 +124,16 @@ void Awake()
         }
 
         SaveData data = new SaveData();
-        // save scene
+        
+        // Save scene
         data.currentSceneName = player.gameObject.scene.name;
-        // save player position
+        
+        // Save player position
         data.playerPosition = new SerializableVector3(player.gameObject.transform.position);
 
+        // Save NPCs
         foreach (GameObject npc in GameObject.FindGameObjectsWithTag("NPC"))
         {
-            
             NPC npcComponent = npc.GetComponent<NPC>();
             if (npcComponent != null)
             {
@@ -103,27 +142,43 @@ void Awake()
             }
         }
 
-        // Save inventory
-
-        data.inventoryItems = new List<Item>(player.inventory.items);
+        // Save inventory - FIXED to save actual data
+        foreach (Item item in player.inventory.items)
+        {
+            data.inventoryItems.Add(new SerializableItem(item));
+        }
+        
         data.itemHeld = player.itemHeld;
         data.isHolding = player.isHolding;
 
-        // Save quest data
+        // Save quest data - FIXED
         QuestManager questManager = player.GetComponent<QuestManager>();
         if (questManager != null)
         {
-            data.questsAssigned = new List<QuestInstance>(questManager.questsAssigned);
-            data.questsCompleted = new List<QuestInstance>(questManager.questsCompleted);
+            foreach (QuestInstance quest in questManager.questsAssigned)
+            {
+                data.questsAssigned.Add(new SerializableQuest(quest));
+            }
+            
+            foreach (QuestInstance quest in questManager.questsCompleted)
+            {
+                data.questsCompleted.Add(new SerializableQuest(quest));
+            }
+            
             var currentQuest = questManager.GetCurrentQuest();
             if (currentQuest != null && currentQuest.todo != null && currentQuest.todo.Count > 0)
             {
-                data.currentTodo = currentQuest.todo;
+                foreach (TodoObject todo in currentQuest.todo)
+                {
+                    data.currentTodo.Add(new SerializableTodo(todo));
+                }
             }
+            
             data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
             data.hasCompletedFirstQuest = questManager.hasCompletedFirstQuest;
         }
 
+        // Save time
         GameObject sunObject = GameObject.Find("Sun");
         if (sunObject != null)
         {
@@ -132,14 +187,6 @@ void Awake()
             {
                 data.timeInDay = dayNightCycle.timeInDay;
             }
-            else
-            {
-                Debug.LogWarning("DayAndNight component not found on Sun object.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Sun object not found in the scene.");
         }
 
         string json = JsonUtility.ToJson(data, true);
@@ -176,24 +223,13 @@ void Awake()
             Debug.LogError("Player is null, cannot apply loaded data.");
             return;
         }
-        //checks (for if i need debugging)
-
 
         // Load UtilityScene additively if not already loaded
-        UnityEngine.SceneManagement.Scene utilityScene = SceneManager.GetSceneByName("UtilityScene");
+        Scene utilityScene = SceneManager.GetSceneByName("UtilityScene");
         if (!utilityScene.isLoaded)
         {
             SceneManager.LoadScene("UtilityScene", LoadSceneMode.Additive);
         }
-
-        if (SceneManager.GetActiveScene().name != data.currentSceneName)
-        {
-            // Load the saved scene
-            SceneManager.LoadScene(data.currentSceneName);
-        }
-
-
-        
 
         Inventory inventory = player.GetComponent<Inventory>();
         if (inventory == null)
@@ -202,102 +238,154 @@ void Awake()
             return;
         }
 
-        inventory.SetInventory(data.inventoryItems);
+        // Restore inventory - FIXED to load by name
+        List<Item> loadedItems = new List<Item>();
+        foreach (SerializableItem savedItem in data.inventoryItems)
+        {
+            if (!string.IsNullOrEmpty(savedItem.itemName))
+            {
+                // Find the ItemStorable asset by name
+                ItemStorable itemStorable = Resources.Load<ItemStorable>($"Items/{savedItem.itemName}");
+                if (itemStorable == null)
+                {
+                    // Try without path
+                    itemStorable = Resources.Load<ItemStorable>(savedItem.itemName);
+                }
+                
+                if (itemStorable != null)
+                {
+                    Item item = new Item(itemStorable, savedItem.quantity);
+                    loadedItems.Add(item);
+                }
+                else
+                {
+                    Debug.LogWarning($"Could not find ItemStorable: {savedItem.itemName}");
+                    loadedItems.Add(new Item(null, 0)); // Empty slot
+                }
+            }
+            else
+            {
+                loadedItems.Add(new Item(null, 0)); // Empty slot
+            }
+        }
+        
+        inventory.SetInventory(loadedItems);
         player.itemHeld = data.itemHeld;
         player.isHolding = data.isHolding;
         inventory.SetRefresh(true);
 
-        // Restore quests
+        // Restore quests - FIXED to load by ID
         QuestManager questManager = player.GetComponent<QuestManager>();
         if (questManager != null)
-    {
-        questManager.questsAssigned = new List<QuestInstance>(data.questsAssigned);
-        questManager.questsCompleted = new List<QuestInstance>(data.questsCompleted);
-        
-        // Re-initialize conditions for all quests
-        foreach (var quest in questManager.questsAssigned)
         {
-            if (quest != null)
-            {
-                quest.ReinitializeConditions();
-            }
-        }
-        
-        var currentQuest = questManager.GetCurrentQuest();
-        if (currentQuest != null)
-        {
-            CurrentQIDMonitor.Instance.SetCurrentId(currentQuest.data.id);
+            questManager.questsAssigned.Clear();
+            questManager.questsCompleted.Clear();
             
-            if (data.currentTodo != null)
+            // Find and restore assigned quests
+            foreach (SerializableQuest savedQuest in data.questsAssigned)
             {
-                currentQuest.todo = data.currentTodo;
+                QuestInstance quest = FindQuestById(savedQuest.questId);
+                if (quest != null)
+                {
+                    quest.IsCompleted = savedQuest.isCompleted;
+                    questManager.questsAssigned.Add(quest);
+                }
+                else
+                {
+                    Debug.LogWarning($"Could not find quest with ID: {savedQuest.questId}");
+                }
             }
+            
+            // Find and restore completed quests
+            foreach (SerializableQuest savedQuest in data.questsCompleted)
+            {
+                QuestInstance quest = FindQuestById(savedQuest.questId);
+                if (quest != null)
+                {
+                    quest.IsCompleted = true;
+                    questManager.questsCompleted.Add(quest);
+                }
+            }
+            
+            // Re-initialize conditions
+            foreach (var quest in questManager.questsAssigned)
+            {
+                if (quest != null)
+                {
+                    quest.ReinitializeConditions();
+                }
+            }
+            
+            var currentQuest = questManager.GetCurrentQuest();
+            if (currentQuest != null)
+            {
+                CurrentQIDMonitor.Instance.SetCurrentId(currentQuest.data.id);
+                
+                // Restore todos if needed
+                if (data.currentTodo != null && data.currentTodo.Count > 0)
+                {
+                    // This part depends on how your TodoObject system works
+                    // You may need to find todos by name similar to quests
+                }
+            }
+            
+            questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
+            questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            
+            questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
         }
-        
-        questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
-        questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-        
-        // Force NPC sync after loading
-        questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
-    }
 
+        // Restore time
         GameObject sunObject = GameObject.Find("Sun");
         if (sunObject != null)
         {
             DayAndNight dayNightCycle = sunObject.GetComponent<DayAndNight>();
             if (dayNightCycle != null)
             {
-                Debug.Log("Applying time of day from save data: " + data.timeInDay);
                 dayNightCycle.SetTimeOfDay(data.timeInDay);
             }
-            else
-            {
-                Debug.LogWarning("DayAndNight component not found on Sun object.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Sun object not found in the scene.");
         }
         
-        Debug.Log($"Capturing Player {player.name} at {data.playerPosition.ToVector3()}");
-        foreach (var quest in questManager.questsAssigned)
-        {
-            if (quest != null)
-            {
-                quest.ReinitializeConditions();
-            }
-        }
-
+        // Restore player position
         player.movement.controller.enabled = false;
         player.transform.position = data.playerPosition.ToVector3();
         player.movement.controller.enabled = true;
         
-        foreach (var npc in data.npcPositions)
+        // Restore NPC positions
+        for (int i = 0; i < data.npcNames.Count; i++)
         {
-            GameObject npcObject = GameObject.Find(data.npcNames[data.npcPositions.IndexOf(npc)]);
+            GameObject npcObject = GameObject.Find(data.npcNames[i]);
             if (npcObject != null)
             {
-                // Disable any components that might block position changes
                 NavMeshAgent agent = npcObject.GetComponent<NavMeshAgent>();
                 CharacterController controller = npcObject.GetComponent<CharacterController>();
                 
                 if (agent != null) agent.enabled = false;
                 if (controller != null) controller.enabled = false;
                 
-                npcObject.transform.position = npc.ToVector3();
+                npcObject.transform.position = data.npcPositions[i].ToVector3();
                 
                 if (agent != null) agent.enabled = true;
                 if (controller != null) controller.enabled = true;
-                
-                Debug.Log($"Restored NPC {npcObject.name} to {npc.ToVector3()}");
-            } 
-            else
-            {
-                Debug.LogWarning($"NPC with name {data.npcNames[data.npcPositions.IndexOf(npc)]} not found in the scene.");
             }
         }
+        
         Debug.Log("Game data loaded successfully");
+    }
+
+    // Helper method to find quests by ID
+    private QuestInstance FindQuestById(int questId)
+    {
+        // Search all QuestInstance objects in the scene
+        QuestInstance[] allQuests = FindObjectsOfType<QuestInstance>();
+        foreach (QuestInstance quest in allQuests)
+        {
+            if (quest.data != null && quest.data.id == questId)
+            {
+                return quest;
+            }
+        }
+        return null;
     }
 
     public bool SaveExists()

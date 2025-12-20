@@ -55,7 +55,7 @@ public class TalkToNPCQuestConnector : MonoBehaviour, Interaction
         {
             if (qm.GetCurrentQuest() != null)
             {
-                if (quest?.data?.id == qm.GetCurrentQuest()?.data?.id && !inDialog)
+                if (!inDialog) // quest?.data?.id == qm.GetCurrentQuest()?.data?.id (used to be here, but it's not necessary rn lol)
                 {
                     Debug.Log("Moves to here.");
                     quest.QuestEventTriggered();

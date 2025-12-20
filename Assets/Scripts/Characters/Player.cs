@@ -559,6 +559,7 @@ public class Player : Character, Interaction
                 item.ChangeTheUI("");
                 interactableItem = null;
             }
+            item = null;
         }
 
         if (other.CompareTag("NPC"))

@@ -28,6 +28,7 @@ public class TestingScripts : MonoBehaviour
         }
     } // fix. works for now.
 
+
     IEnumerator LoadYourAsyncScene()
     {
         isLoading = true;

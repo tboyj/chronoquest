@@ -8,6 +8,7 @@ using ChronoQuest.Interactions.World;
 public class QuestToggleItem : QuestInstance
 {
     public bool toggled; // List of QuestInstance
+
     public override void QuestEventTriggered()
     {
        

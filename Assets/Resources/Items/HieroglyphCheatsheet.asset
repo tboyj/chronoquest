@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5402f46aa682b4d8e1c1d5d79c2559, type: 3}
+  m_Name: HieroglyphCheatsheet
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  category: 3
+  useConnector: {fileID: 11400000, guid: 4b152c360aef8a24c8a7e7d2697837f4, type: 2}
+  sprite: {fileID: 21300000, guid: 0dd68fa5215d57e439f8800cda0435e4, type: 3}
+  itemName: Hieroglyph Cheatsheet
+  id: 10
+  maxStackSize: 1
+  stackable: 0
+  rarity: 5
+  description: Use this when referring to phrases in Egyptian hieroglyphics.
+  canBeTaken: 0
+  canBeGiven: 0

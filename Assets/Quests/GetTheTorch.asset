@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GetTheTorch
   m_EditorClassIdentifier: 
   questName: Grab the Torch
-  id: 10
+  id: 12

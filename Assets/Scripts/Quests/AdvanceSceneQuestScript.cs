@@ -37,8 +37,10 @@ public class AdvanceSceneQuestScript : QuestInstance
             questManager.questsAssigned.Clear();
             questManager.questsCompleted.Clear();
             Debug.Log("Loading next scene...");
-            // other.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
+            other.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
             LoadNextScene();
+            
+            
             
         }
         else if (other.CompareTag("NPC"))
@@ -81,138 +83,122 @@ public class AdvanceSceneQuestScript : QuestInstance
     }
     
     IEnumerator LoadYourAsyncScene(int current, int next)
-{
-    isLoading = true;
-
-    Scene currentScene = SceneManager.GetSceneByBuildIndex(current);
-    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next, LoadSceneMode.Additive);
-    asyncLoad.allowSceneActivation = true;
-
-    while (!asyncLoad.isDone)
     {
-        yield return null;
-    }
+        isLoading = true;
 
-    Scene newScene = SceneManager.GetSceneByBuildIndex(next);
-    if (!newScene.IsValid())
-    {
-        Debug.LogError($"Scene at index {next} failed to load!");
-        yield break;
-    }
+        Scene currentScene = SceneManager.GetSceneByBuildIndex(current);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next, LoadSceneMode.Additive);
+        asyncLoad.allowSceneActivation = true;
 
-    yield return null;
-    
-    // Set the new scene as active FIRST
-    SceneManager.SetActiveScene(newScene);
-    
-    // Wait one more frame to ensure Start() methods have run
-    yield return null;
-    
-    // NOW find references in the new scene
-    GameObject player = GameObject.FindGameObjectWithTag("Player");
-    GameObject canvas = GameObject.Find("Canvas");
-    
-    if (player == null)
-    {
-        Debug.LogError("Player not found in new scene!");
-    }
-    
-    if (canvas == null)
-    {
-        Debug.LogError("Canvas not found in new scene!");
-    }
-
-    // Link Day/Night System
-    GameObject timeCube = GameObject.Find("TimeCube");
-    if (timeCube != null && canvas != null)
-    {
-        // More reliable path traversal
-        Transform hideForDialog = canvas.transform.Find("HideForDialogContainer");
-        if (hideForDialog != null)
+        while (!asyncLoad.isDone)
         {
-            Transform bgDate = hideForDialog.Find("Bg_Date");
-            if (bgDate != null)
+            yield return null;
+        }
+
+        Scene newScene = SceneManager.GetSceneByBuildIndex(next);
+        if (!newScene.IsValid())
+        {
+            Debug.LogError($"Scene at index {next} failed to load!");
+            yield break;
+        }
+
+        yield return null;
+        
+        // Set the new scene as active FIRST
+        SceneManager.SetActiveScene(newScene);
+        
+        // Wait one more frame to ensure Start() methods have run
+        yield return null;
+        
+        // NOW find references in the new scene
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject canvas = GameObject.Find("Canvas");
+        
+        if (player == null)
+        {
+            Debug.LogError("Player not found in new scene!");
+        }
+        
+        if (canvas == null)
+        {
+            Debug.LogError("Canvas not found in new scene!");
+        }
+
+        // Link Day/Night System
+        GameObject timeCube = GameObject.Find("TimeCube");
+        if (timeCube != null && canvas != null)
+        {
+            Transform hideForDialog = canvas.transform.Find("HideForDialogContainer");
+            if (hideForDialog != null)
             {
-                Transform dateTransform = bgDate.Find("Date");
-                if (dateTransform != null)
+                Transform bgDate = hideForDialog.Find("Bg_Date");
+                if (bgDate != null)
                 {
-                    TextMeshProUGUI dateText = dateTransform.GetComponent<TextMeshProUGUI>();
-                    if (dateText != null)
+                    Transform dateTransform = bgDate.Find("Date");
+                    if (dateTransform != null)
                     {
-                        timeCube.GetComponent<TimeCube>().dateText = dateText;
-                        Debug.Log("Successfully linked TimeCube to Date text!");
-                    }
-                    else
-                    {
-                        Debug.LogWarning("Date GameObject found but no TextMeshProUGUI component!");
+                        TextMeshProUGUI dateText = dateTransform.GetComponent<TextMeshProUGUI>();
+                        if (dateText != null)
+                        {
+                            timeCube.GetComponent<TimeCube>().dateText = dateText;
+                            Debug.Log("Successfully linked TimeCube to Date text!");
+                        }
                     }
                 }
-                else
-                {
-                    Debug.LogWarning("'Date' not found under 'Bg_Date'!");
-                }
+            }
+        }
+
+        // Teleport player to spawn position
+        if (player != null)
+        {
+            CharacterController controller = player.GetComponent<CharacterController>();
+            if (controller != null)
+            {
+                controller.enabled = false;
+                player.transform.position = teleportToPosition;
+                controller.enabled = true;
             }
             else
             {
-                Debug.LogWarning("'Bg_Date' not found under 'HideForDialogContainer'!");
+                player.transform.position = teleportToPosition;
             }
+            
+            // Reset quest manager state
+            QuestManager playerQuestManager = player.GetComponent<QuestManager>();
+            if (playerQuestManager != null)
+            {
+                playerQuestManager.hasCompletedFirstQuest = false;
+            }
+            
+            // Manually trigger the starting quest assignment
+            StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+            if (startingQuest != null)
+            {
+                Debug.Log("Manually triggering RuntimeQuest for new scene");
+                startingQuest.RuntimeQuest();
+            }
+            else
+            {
+                Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            }
+            
+            // **WAIT ONE MORE FRAME** to ensure RuntimeQuest has fully completed
+            yield return null;
+            
+            // **NOW SAVE** - after quest is assigned
+            player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
+            SaveHandler.Instance.SaveGame(player.GetComponent<Player>());
+            Debug.Log("Game saved after scene transition and quest assignment");
         }
-        else
-        {
-            Debug.LogWarning("'HideForDialogContainer' not found in Canvas!");
-        }
-    }
-    else
-    {
-        if (timeCube == null)
-            Debug.LogWarning("TimeCube not found in new scene!");
-        if (canvas == null)
-            Debug.LogWarning("Canvas not found in new scene!");
-    }
 
-    // Teleport player to spawn position
-    if (player != null)
-    {
-        CharacterController controller = player.GetComponent<CharacterController>();
-        if (controller != null)
-        {
-            controller.enabled = false;
-            player.transform.position = teleportToPosition;
-            controller.enabled = true;
-        }
-        else
-        {
-            player.transform.position = teleportToPosition;
-        }
+        // Unload old scene LAST, after everything is set up
+        SceneManager.UnloadSceneAsync(currentScene);
         
-        // Reset quest manager state
-        QuestManager playerQuestManager = player.GetComponent<QuestManager>();
-        if (playerQuestManager != null)
-        {
-            playerQuestManager.hasCompletedFirstQuest = false;
-        }
+        isLoading = false;
+        hasTriggered = false; // Reset for next time
         
-        // Manually trigger the starting quest assignment
-        StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
-        if (startingQuest != null)
-        {
-            Debug.Log("Manually triggering RuntimeQuest for new scene");
-            startingQuest.RuntimeQuest();
-        }
-        else
-        {
-            Debug.LogWarning("No StartingSceneQuest found in new scene!");
-        }
+        Debug.Log("Scene transition complete.");
     }
-
-    // Unload old scene LAST, after everything is set up
-    SceneManager.UnloadSceneAsync(currentScene);
-    
-    isLoading = false;
-    hasTriggered = false; // Reset for next time
-    
-    Debug.Log("Scene transition complete.");
-}
     
     public override void QuestEventTriggered()
     {

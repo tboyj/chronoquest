@@ -58,6 +58,11 @@ public class QuestInstance : MonoBehaviour
                 parentCollider.enabled = false;
                 gameObject.transform.parent.position = new Vector3(0, -100, 0);
             }
+            if (CurrentQIDMonitor.Instance.GetCurrentQuestId() <= data.id)
+            {
+                parentCollider.enabled = true;
+                gameObject.transform.parent.position = positionOfQuestGiver;
+            }
         }
         
         // ONLY trigger if this is the current quest

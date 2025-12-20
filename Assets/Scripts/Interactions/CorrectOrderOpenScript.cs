@@ -77,7 +77,11 @@ public class CorrectOrderOpenScript : MonoBehaviour
 
     void Start()
     {
-        
+        if (quest.data.id < CurrentQIDMonitor.Instance.GetCurrentQuestId())
+        {
+            // quest.QuestEventTriggered();
+            gameObject.transform.position = new Vector3(transform.position.x, (transform.position.y - 3), transform.position.z);
+        }
     }
 
     // Update is called once per frame

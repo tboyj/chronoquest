@@ -1,8 +1,7 @@
-
-
 using UnityEngine;
 using ChronoQuest.Quests;
 using System.Collections.Generic;
+
 [System.Serializable]
 public class QuestCollectItem : QuestInstance, IQuestAction
 {
@@ -10,6 +9,9 @@ public class QuestCollectItem : QuestInstance, IQuestAction
     public int currentCount;
     public ItemStorable requiredItem;
     public bool isGiveQuestType;
+    
+    private bool hasPreChecked = false; // Add this flag
+
     public override void QuestEventTriggered()
     {
         if (IsCompleted)
@@ -30,20 +32,31 @@ public class QuestCollectItem : QuestInstance, IQuestAction
         IsCompleted = CheckConditions();
     }
 
-
     public override bool CheckConditions()
     {
         return currentCount >= requiredCount;
     }
+    
     public void PrecheckInventory()
     {
-        foreach (Item checkedItem in questManager.gameObject.GetComponent<Player>().inventory.items)
+        // Only precheck once
+        if (hasPreChecked)
+            return;
+            
+        hasPreChecked = true;
+        
+        Player player = questManager.gameObject.GetComponent<Player>();
+        
+        foreach (Item checkedItem in player.inventory.items)
         {
-            if (checkedItem.quantity > 0)
+            // Make sure we're checking the RIGHT item
+            if (checkedItem.item == requiredItem && checkedItem.quantity > 0)
             {
                 currentCount += checkedItem.quantity;
             }
         }
+        
+        // Check if already completed after precheck
+        IsCompleted = CheckConditions();
     }
-
 }
