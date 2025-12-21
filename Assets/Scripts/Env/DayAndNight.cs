@@ -19,7 +19,7 @@ public class DayAndNight : MonoBehaviour
     void Start()
     {
         GameObject canvas = GameObject.Find("Canvas");
-        GameObject dateObj = canvas.transform.Find("HideForDialogContainer/GameUIHolder/Bg_Time/Time").gameObject;
+        GameObject dateObj = GameObject.Find("Time"); // Less ideal but works
         timeText = dateObj.GetComponent<TextMeshProUGUI>();
         timeText.text = "06:00";
         gameObject.transform.rotation = Quaternion.Euler(0, -90f, -90f);

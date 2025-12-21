@@ -54,6 +54,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
             player = referencePlayer.GetComponent<Player>();
             itemRecognizesPlayer = true;
             quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as QuestCollectItem;
+            ChangeTheUI("[F] Take " + itemInWorld.itemName);
 
         }
     }
@@ -62,6 +63,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
         if (other.CompareTag("Player"))
         {
             itemRecognizesPlayer = true;
+            ChangeTheUI("[F] Take " + itemInWorld.itemName);
         }
     }
     void OnTriggerExit(Collider other)
@@ -70,6 +72,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
         {
             itemRecognizesPlayer = false;
             referencePlayer = null;
+            ChangeTheUI("");
         }
     }
     private void Startup()

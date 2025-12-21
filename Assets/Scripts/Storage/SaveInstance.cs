@@ -10,6 +10,7 @@ public class SaveInstance : MonoBehaviour
 
     void Start()
     {
+        SaveGame();
         if (loadOnStart && SaveHandler.Instance != null)
         {
             LoadGame();

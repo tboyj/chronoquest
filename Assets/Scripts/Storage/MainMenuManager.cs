@@ -145,6 +145,15 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.UnloadSceneAsync("RealTitleScreen");
     }
 
+        /// <summary>
+        /// Load a new game from the main menu.
+        /// Unloads the main menu scene and loads the first gameplay scene.
+        /// </summary>
+        /// <remarks>
+        /// First loads the UtilityScene additively, then the first gameplay scene.
+        /// Waits for the scene to finish loading, then sets the first gameplay scene as active.
+        /// Waits a frame for Start() methods to run, then unloads the main menu scene.
+        /// </remarks>
     private System.Collections.IEnumerator LoadNewGame()
     {
         // Load UtilityScene first

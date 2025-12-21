@@ -53,7 +53,7 @@ public class Player : Character, Interaction
     false, false, transform.GetChild(0).GetComponent<Animator>());
     inventoryInteractionPermission = true;
     
-    if (isInventorySetup == false)
+    if (isInventorySetup == false || inventory.items.Count <= 0)
     {
         InventorySetup(49);
         isInventorySetup = true;

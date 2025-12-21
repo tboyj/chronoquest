@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using ChronoQuest.UIForInteractions;
 using UnityEngine;
 
-public class AssignNewQuest : ExtraBase
+public class AssignNewQuest : ExtraBase, IAvailableActions
 {
     QuestHandler qh;
     
@@ -45,7 +46,19 @@ public class AssignNewQuest : ExtraBase
         SaveHandler.Instance.SaveGame(qm.gameObject.GetComponent<Player>());
         Debug.Log("Saving quest state... (from AssignNewQuest)");
         qm.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        ChangeTheUI("");
     }
+
+    public void ChangeTheUI(Item heldItem)
+    {
+        ChangeTheUI("");
+    }
+
+    public void ChangeTheUI(string str)
+    {
+        player.interactionPanel.text = str;
+    }
+
 
     public void Start()
     {

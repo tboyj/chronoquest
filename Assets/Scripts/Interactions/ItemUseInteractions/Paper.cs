@@ -9,7 +9,7 @@ public class Paper : BaseUse
     [TextArea]
     public string paperText;
     // public ItemStorable itemPreferred; // will likely change up in future but i need this working. SPEED I NEED THIS MY UI'S KIND OF HOMELESS...
-    public bool isActive = false;
+    public bool isActive;
 
     private void Update()
     {
@@ -17,14 +17,18 @@ public class Paper : BaseUse
         {
             if (GetPlayer().isHolding)
             {
-                if (GetPlayer()?.GetHeldItem()?.item?.id == 0)
+                if (GetPlayer().GetHeldItem().item.id == 0)
                 {
+                    Debug.Log(isActive);
+                    Debug.Log("Paper used!");
                     Debug.Log("Id == 0");
                     // this is the new system, should be migrated to a new class for scalability
                     // item.id == 0 // this is magnifying glass // could change into switch case
                     // ___
                     // avoid this for future ref, this looks as if it could lead down a pirate software code path
                     ChangeTheUI("[E] Inspect Paper");
+                    if (Input.GetKeyDown(Keybinds.useKeybind))
+                        Use();
                 } else
                 {
                     ChangeTheUI("");
@@ -57,6 +61,8 @@ public class Paper : BaseUse
     {
         container.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = paperText;
         isActive = !isActive;
+        Debug.Log("Paper used!");
+        
         container.SetActive(isActive);
         if (GetPlayer() != null)
         {

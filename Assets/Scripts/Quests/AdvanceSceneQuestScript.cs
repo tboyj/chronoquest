@@ -187,7 +187,7 @@ public class AdvanceSceneQuestScript : QuestInstance
             
             // **NOW SAVE** - after quest is assigned
             player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
-            SaveHandler.Instance.SaveGame(player.GetComponent<Player>());
+            
             Debug.Log("Game saved after scene transition and quest assignment");
         }
 
@@ -196,7 +196,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         
         isLoading = false;
         hasTriggered = false; // Reset for next time
-        
+        SaveHandler.Instance.SaveGame(player.GetComponent<Player>());
         Debug.Log("Scene transition complete.");
     }
     
