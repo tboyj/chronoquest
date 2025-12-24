@@ -227,7 +227,7 @@ public class SaveHandler : MonoBehaviour
             Debug.LogError("SaveData is null, cannot apply loaded data.");
             return;
         }
-
+        
         if (player == null)
         {
             Debug.LogError("Player is null, cannot apply loaded data.");
@@ -410,5 +410,129 @@ public class SaveHandler : MonoBehaviour
             File.Delete(saveFilePath);
             Debug.Log("Save file deleted");
         }
+    }
+
+    public void SaveGameAdvancingScene(Player player, int next)
+    {
+        if (player == null)
+        {
+            Debug.LogError("Player is null, cannot save game.");
+            return;
+        }
+
+        if (player.inventory == null)
+        {
+            Debug.LogError("Player inventory is null, cannot save game.");
+            return;
+        }
+        string sceneName = SceneManager.GetSceneByBuildIndex(next).name;
+
+        Scene utilityScene = SceneManager.GetSceneByName("UtilityScene");
+        if (!utilityScene.isLoaded)
+        {
+            SceneManager.LoadScene("UtilityScene", LoadSceneMode.Additive);
+        }
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(next));
+
+        GameObject[] rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+        Debug.Log(SceneManager.GetActiveScene().name);
+        Player newPlayer = null;
+        foreach (GameObject obj in rootObjects)
+        {
+            Debug.Log(obj.name);
+            if (obj.CompareTag("Player"))
+            {
+                newPlayer = obj.GetComponent<Player>();
+                break;
+            }
+        }
+
+        SaveData data = new SaveData();
+        
+        if (newPlayer == null)
+        {
+            Debug.LogError("New Player is null, cannot save game.");
+            return;
+        }
+
+        data.currentSceneName = sceneName;
+        data.playerPosition = new SerializableVector3(newPlayer.gameObject.transform.position); // New Player position
+
+
+        foreach (GameObject npc in rootObjects)
+        {
+            // Check to see if there's any npcs in NEW scene.
+            if (npc.CompareTag("NPC"))
+            {
+                NPC npcComponent = npc.GetComponent<NPC>();
+                if (npcComponent != null)
+                {
+                    data.npcNames.Add(npcComponent.gameObject.name);
+                    data.npcPositions.Add(new SerializableVector3(npcComponent.gameObject.transform.position));
+                }
+            }
+        }
+
+        foreach (Item item in player.inventory.items) // Grab inventory from old player
+        {
+            data.inventoryItems.Add(new SerializableItem(item));
+        }
+
+        data.itemHeld = player.itemHeld;
+        data.isHolding = player.isHolding;
+        data.isInventorySetup = player.isInventorySetup;
+
+        QuestManager questManager = player.GetComponent<QuestManager>(); // Grab quests from old player
+        if (questManager != null)
+        {
+            foreach (QuestInstance quest in questManager.questsAssigned)
+            {
+                
+                data.questsAssigned.Add(new SerializableQuest(quest));
+            }
+            
+            foreach (QuestInstance quest in questManager.questsCompleted)
+            {
+                data.questsCompleted.Add(new SerializableQuest(quest));
+            }
+            questManager.questsAssigned.Clear();
+            questManager.questsCompleted.Clear();
+            
+            
+            data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
+            data.hasCompletedFirstQuest = questManager.hasCompletedFirstQuest;
+        } 
+        foreach (GameObject sun in rootObjects)
+        {
+            if (sun.name == "Sun") {
+                GameObject sunObject = GameObject.Find("Sun");
+                if (sunObject != null)
+                {   
+                    DayAndNight dayNightCycle = sunObject.GetComponent<DayAndNight>();
+                    if (dayNightCycle != null)
+                    {
+                        data.timeInDay = dayNightCycle.timeInDay;
+                    }
+                }
+            }
+        }
+        StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+        if (startingQuest != null)
+        {
+            Debug.Log("Manually triggering RuntimeQuest for new scene");
+            startingQuest.RuntimeQuest();
+        }
+        else
+        {
+            Debug.LogWarning("No StartingSceneQuest found in new scene!");
+        }
+        data.questsAssigned.Add(new SerializableQuest(newPlayer.GetComponent<QuestManager>().GetCurrentQuest()));
+        player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
+
+        Debug.Log("Game saved after scene transition and quest assignment");    
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(saveFilePath, json);
+        Debug.Log($"Game saved to {saveFilePath}");
+        
     }
 }

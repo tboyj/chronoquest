@@ -189,24 +189,12 @@ public class AdvanceSceneQuestScript : QuestInstance
             }
             
             // Manually trigger the starting quest assignment
-            StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
-            if (startingQuest != null)
-            {
-                Debug.Log("Manually triggering RuntimeQuest for new scene");
-                startingQuest.RuntimeQuest();
-            }
-            else
-            {
-                Debug.LogWarning("No StartingSceneQuest found in new scene!");
-            }
+
             
             // **WAIT ONE MORE FRAME** to ensure RuntimeQuest has fully completed
             yield return null;
-            
             // **NOW SAVE** - after quest is assigned
-            player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
-            
-            Debug.Log("Game saved after scene transition and quest assignment");
+
         }
 
         // Unload old scene LAST, after everything is set up
@@ -222,7 +210,8 @@ public class AdvanceSceneQuestScript : QuestInstance
         {
             Debug.Log(player.gameObject.scene.name+" is the active scene.");
         }
-        SaveHandler.Instance.SaveGame(player.GetComponent<Player>());
+        // Add specific save logic for the new scene (save only player inventory, quest from old, save new quest stuff)
+        SaveHandler.Instance.SaveGameAdvancingScene(player.GetComponent<Player>(), next);
         Debug.Log("Scene transition complete.");
     }
     

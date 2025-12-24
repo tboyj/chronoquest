@@ -7011,10 +7011,10 @@ GameObject:
   - component: {fileID: 263861362}
   - component: {fileID: 263861361}
   - component: {fileID: 263861371}
-  - component: {fileID: 263861373}
   - component: {fileID: 263861372}
   - component: {fileID: 263861374}
   - component: {fileID: 263861376}
+  - component: {fileID: 263861377}
   m_Layer: 0
   m_Name: NPC_Sarlah
   m_TagString: NPC
@@ -7193,29 +7193,6 @@ CharacterController:
   m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &263861373
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263861359}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &263861374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7253,6 +7230,29 @@ NavMeshAgent:
   m_BaseOffset: 0.45
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &263861377
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263861359}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &264679419
 GameObject:
   m_ObjectHideFlags: 0
@@ -16600,7 +16600,7 @@ Transform:
   m_GameObject: {fileID: 493458998}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -0.149, y: -0.423, z: -0.5}
+  m_LocalPosition: {x: -0.038, y: -0.423, z: -0.5}
   m_LocalScale: {x: 1.171875, y: 37.5, z: 0.65789473}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17582,7 +17582,7 @@ Transform:
   m_GameObject: {fileID: 504861785}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -0.077, y: -0.38900042, z: 0.6}
+  m_LocalPosition: {x: -0.009, y: -0.38900042, z: 0.6}
   m_LocalScale: {x: 1.171875, y: 37.5, z: 0.65789473}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -31738,12 +31738,12 @@ GameObject:
   - component: {fileID: 1036772513}
   - component: {fileID: 1036772514}
   - component: {fileID: 1036772516}
-  - component: {fileID: 1036772518}
   - component: {fileID: 1036772519}
   - component: {fileID: 1036772520}
   - component: {fileID: 1036772521}
   - component: {fileID: 1036772524}
   - component: {fileID: 1036772522}
+  - component: {fileID: 1036772525}
   m_Layer: 0
   m_Name: NPC_Bossman
   m_TagString: NPC
@@ -31899,29 +31899,6 @@ MonoBehaviour:
   items:
   - item: {fileID: 11400000, guid: f98a466aa60ab2a4a95a87206f9a9909, type: 2}
     quantity: 1
---- !u!136 &1036772518
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036772499}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &1036772519
 CharacterController:
   m_ObjectHideFlags: 0
@@ -32015,6 +31992,29 @@ MonoBehaviour:
   dialogsForQuestSections: []
   accessPoint: {fileID: 1036772508}
   todoText: Talk to Bossman
+--- !u!136 &1036772525
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036772499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1036818363
 GameObject:
   m_ObjectHideFlags: 0
@@ -32630,10 +32630,10 @@ GameObject:
   - component: {fileID: 1064785751}
   - component: {fileID: 1064785749}
   - component: {fileID: 1064785748}
-  - component: {fileID: 1064785747}
   - component: {fileID: 1064785745}
   - component: {fileID: 1064785756}
   - component: {fileID: 1064785757}
+  - component: {fileID: 1064785758}
   m_Layer: 0
   m_Name: NPC_Randy
   m_TagString: NPC
@@ -32656,29 +32656,6 @@ MonoBehaviour:
   endNode: {fileID: 1449890613}
   status: QUEST
   agent: {fileID: 1064785756}
---- !u!136 &1064785747
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064785743}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1064785748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32856,6 +32833,29 @@ CharacterController:
   m_StepOffset: 0.2
   m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1064785758
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064785743}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1065247240
 GameObject:
@@ -36168,7 +36168,7 @@ Transform:
   m_GameObject: {fileID: 1187700405}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -0.021, y: -0.423, z: -0.2}
+  m_LocalPosition: {x: 0.028, y: -0.423, z: -0.2}
   m_LocalScale: {x: 1.171875, y: 37.5, z: 0.65789473}
   m_ConstrainProportionsScale: 1
   m_Children: []

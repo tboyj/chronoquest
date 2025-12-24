@@ -93,6 +93,14 @@ public class QuestManager : MonoBehaviour
         
         Debug.Log($"Completing quest {quest.data.id}");
         
+        // Check if already completed
+        if (questsCompleted.Exists(q => q.data.id == quest.data.id))
+        {
+            Debug.LogWarning($"Quest {quest.data.id} already in completed list");
+            questsAssigned.Remove(quest);
+            return;
+        }
+        
         questsCompleted.Add(quest);
         quest.IsCompleted = true;
         questsAssigned.Remove(quest);
@@ -112,7 +120,6 @@ public class QuestManager : MonoBehaviour
         
         gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
     }
-
     public bool PrecheckQuest(QuestInstance questAssigned)
     {
         return questAssigned.CheckConditions();
