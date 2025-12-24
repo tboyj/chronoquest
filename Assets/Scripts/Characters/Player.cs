@@ -22,7 +22,7 @@ public class Player : Character, Interaction
     protected ItemInWorld interactableItem;    // Item in the world that can be interacted with or picked up
     protected NPC interactableNPC;             // NPC that can be interacted with
     public bool isUsingItem;
-    public bool isInventorySetup = false;
+    public bool isInventorySetup;
     // Inventory UI
     protected InventoryGUI guiHandler;         // Inventory GUI logic handler
     public RectTransform hotbarHolder;         // UI container for hotbar slots
@@ -52,7 +52,10 @@ public class Player : Character, Interaction
     Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(),
     false, false, transform.GetChild(0).GetComponent<Animator>());
     inventoryInteractionPermission = true;
-    
+    Debug.Log("Player Currently In Scene: " + inventory.items.Count);
+    // This is where everything starts to go wrong for your scene loading issues.
+    // Please make a JSON boolean type (I don't know how you wanna do that) to check if the inventory is setup.
+    // If it's not set, then you can call InventorySetup(49); and set isInventorySetup to true.
     if (isInventorySetup == false || inventory.items.Count <= 0)
     {
         InventorySetup(49);
@@ -526,6 +529,7 @@ public class Player : Character, Interaction
         {
             other.GetComponent<TeleportScript>()?.Teleport(gameObject);
         }
+
 
         reciever = other.gameObject;
         Debug.Log(reciever.name);

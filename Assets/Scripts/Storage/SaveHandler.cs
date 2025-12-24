@@ -63,6 +63,7 @@ public class SaveData
     public List<string> npcNames = new List<string>();
     public List<SerializableVector3> npcPositions = new List<SerializableVector3>();
     public string currentSceneName;
+    public bool isInventorySetup;
 }
 
 [Serializable]
@@ -122,7 +123,12 @@ public class SaveHandler : MonoBehaviour
             Debug.LogError("Player inventory is null, cannot save game.");
             return;
         }
-
+        Debug.Log($"=== SAVE GAME DEBUG ===");
+        Debug.Log($"Player GameObject: {player.gameObject.name}");
+        Debug.Log($"Player Scene: {player.gameObject.scene.name}");
+        Debug.Log($"Player Scene IsValid: {player.gameObject.scene.IsValid()}");
+        Debug.Log($"Player Scene IsLoaded: {player.gameObject.scene.isLoaded}");
+        Debug.Log($"Player Position: {player.gameObject.transform.position}");
         SaveData data = new SaveData();
         
         // Save scene
@@ -150,6 +156,10 @@ public class SaveHandler : MonoBehaviour
         
         data.itemHeld = player.itemHeld;
         data.isHolding = player.isHolding;
+
+
+        data.isInventorySetup = player.isInventorySetup;
+
 
         // Save quest data - FIXED
         QuestManager questManager = player.GetComponent<QuestManager>();
@@ -273,7 +283,7 @@ public class SaveHandler : MonoBehaviour
         player.itemHeld = data.itemHeld;
         player.isHolding = data.isHolding;
         inventory.SetRefresh(true);
-
+        player.isInventorySetup = data.isInventorySetup;
         // Restore quests - FIXED to load by ID
         QuestManager questManager = player.GetComponent<QuestManager>();
         if (questManager != null)

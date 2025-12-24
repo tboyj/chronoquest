@@ -10,7 +10,21 @@ public class SaveInstance : MonoBehaviour
 
     void Start()
     {
-        SaveGame();
+        Debug.Log($"=== SaveInstance Start ===");
+        Debug.Log($"SaveInstance GameObject: {gameObject.name}");
+        Debug.Log($"SaveInstance Scene: {gameObject.scene.name}");
+        
+        if (player != null)
+        {
+            Debug.Log($"Assigned Player: {player.gameObject.name}");
+            Debug.Log($"Assigned Player Scene: {player.gameObject.scene.name}");
+        }
+        else
+        {
+            Debug.LogError("Player reference is NULL in SaveInstance!");
+        }
+        
+        // FIXED: Only load on start, don't save immediately!
         if (loadOnStart && SaveHandler.Instance != null)
         {
             LoadGame();

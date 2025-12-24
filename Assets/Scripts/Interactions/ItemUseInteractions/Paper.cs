@@ -20,15 +20,12 @@ public class Paper : BaseUse
                 if (GetPlayer().GetHeldItem().item.id == 0)
                 {
                     Debug.Log(isActive);
-                    Debug.Log("Paper used!");
                     Debug.Log("Id == 0");
                     // this is the new system, should be migrated to a new class for scalability
                     // item.id == 0 // this is magnifying glass // could change into switch case
                     // ___
-                    // avoid this for future ref, this looks as if it could lead down a pirate software code path
+                    // Still not working right now please fix!!!
                     ChangeTheUI("[E] Inspect Paper");
-                    if (Input.GetKeyDown(Keybinds.useKeybind))
-                        Use();
                 } else
                 {
                     ChangeTheUI("");

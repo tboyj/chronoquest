@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -86,6 +87,20 @@ public class AdvanceSceneQuestScript : QuestInstance
     {
         isLoading = true;
 
+        if (SaveHandler.Instance == null)
+        {
+            Debug.LogError("SaveHandler not found!");
+            //return;
+        }
+        
+        SaveData data = SaveHandler.Instance.LoadGame();
+        
+        if (data == null)
+        {
+            Debug.LogError("No save data found!");
+            //return;
+        }
+        
         Scene currentScene = SceneManager.GetSceneByBuildIndex(current);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next, LoadSceneMode.Additive);
         asyncLoad.allowSceneActivation = true;
@@ -123,6 +138,9 @@ public class AdvanceSceneQuestScript : QuestInstance
         {
             Debug.LogError("Canvas not found in new scene!");
         }
+
+        Player realPlayer = player.GetComponent<Player>();
+        SaveHandler.Instance.ApplyLoadedData(data, realPlayer);
 
         // Link Day/Night System
         GameObject timeCube = GameObject.Find("TimeCube");
@@ -196,6 +214,14 @@ public class AdvanceSceneQuestScript : QuestInstance
         
         isLoading = false;
         hasTriggered = false; // Reset for next time
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player not found in new scene!");
+        } else
+        {
+            Debug.Log(player.gameObject.scene.name+" is the active scene.");
+        }
         SaveHandler.Instance.SaveGame(player.GetComponent<Player>());
         Debug.Log("Scene transition complete.");
     }
