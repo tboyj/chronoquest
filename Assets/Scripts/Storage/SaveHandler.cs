@@ -317,20 +317,6 @@ public class SaveHandler : MonoBehaviour
                     questManager.questsCompleted.Add(quest);
                 }
             }
-
-            
-                    
-            StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
-            if (startingQuest != null)
-            {
-                Debug.Log("Manually triggering RuntimeQuest for new scene");
-                startingQuest.RuntimeQuest(questManager);
-            }
-            else
-            {
-                Debug.LogWarning("No StartingSceneQuest found in new scene!");
-            }
-
             foreach (SerializableQuest savedQuest in data.questsAssigned)
             {
                 QuestInstance quest = FindQuestById(savedQuest.questId);
@@ -344,7 +330,22 @@ public class SaveHandler : MonoBehaviour
                     Debug.LogWarning($"Could not find quest with ID: {savedQuest.questId}");
                 }
             }
-            
+            // StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+            // if (startingQuest != null)
+            // {
+            //     Debug.Log("StartingSceneQuest found in new scene "+SceneManager.GetActiveScene().name);
+            //     if (startingQuest.gameObject.scene.name == SceneManager.GetActiveScene().name) {
+            //         Debug.Log("Manually triggering RuntimeQuest for new scene");
+            //         startingQuest.RuntimeQuest();
+            //     } else
+            //     {
+            //         Debug.Log("Not triggering RuntimeQuest for new scene, scene is mismatched");
+            //     }
+            // }
+            // else
+            // {
+            //     Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            // }
             // Re-initialize conditions
             foreach (var quest in questManager.questsAssigned)
             {
@@ -368,8 +369,10 @@ public class SaveHandler : MonoBehaviour
             }
             
             questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
+
+            questManager.CleanupNullQuests();
+        
             questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-            
             questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
         }
 
@@ -523,26 +526,65 @@ public class SaveHandler : MonoBehaviour
                     questManagerOld.SetQuestCompleted(quest);
                 }
             }
-
+            
             foreach (QuestInstance quest in questManagerOld.questsCompleted)
             {
-                Debug.Log($"Saving completed quest: {quest.data.questName} (ID: {quest.data.id})");
-                data.questsCompleted.Add(new SerializableQuest(quest));
+                if (!data.questsCompleted.Exists(q => q.questId == quest.data.id))
+                {
+                    Debug.Log($"Saving completed quest: {quest.data.questName} (ID: {quest.data.id})");
+                    data.questsCompleted.Add(new SerializableQuest(quest));
+                }
             }
-            questManagerNew.questsAssigned.Clear();
-            questManagerNew.questsCompleted.Clear();
+
+            StartingSceneQuest startingQuest = null;
+            foreach (GameObject obj in rootObjects)
+            {
+                if (obj.GetComponent<StartingSceneQuest>() != null)
+                {
+                    startingQuest = obj.GetComponent<StartingSceneQuest>();
+                    break;
+                }
+            }
             
-            StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
-            // if (startingQuest != null)
-            // {
-            //     Debug.Log("Manually triggering RuntimeQuest for new scene");
-            //     startingQuest.RuntimeQuest(questManagerNew);
-            // }
-            // else
-            // {
-            //     Debug.LogWarning("No StartingSceneQuest found in new scene!");
-            // }
-            // for now..
+            if (startingQuest != null)
+            {
+                Debug.Log("StartingSceneQuest found in new scene "+SceneManager.GetActiveScene().name);
+                if (startingQuest.gameObject.scene.name == SceneManager.GetActiveScene().name) {
+                    Debug.Log("Is this touched scene?");
+                    startingQuest.RuntimeQuest(next);
+                } else
+                {
+                    Debug.Log("Not triggering RuntimeQuest for new scene, scene is mismatched");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            }
+            
+            // Save the NEW manager's quests (the current scene's quest that was just assigned)
+            foreach (QuestInstance quest in questManagerNew.questsAssigned)
+            {
+                if (!quest.IsCompleted)
+                {
+                    Debug.Log($"Saving NEW scene quest: {quest.data.questName} (ID: {quest.data.id})");
+                    data.questsAssigned.Add(new SerializableQuest(quest));
+                }
+            }
+            
+            questManagerNew.CleanupNullQuests();
+            
+            // // if (startingQuest != null)
+            // // {
+            // //     Debug.Log("Manually triggering RuntimeQuest for new scene");
+            // //     startingQuest.RuntimeQuest(questManagerNew);
+            // // }
+            // // else
+            // // {
+            // //     Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            // // }
+            // // for now..
+
             data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
             data.hasCompletedFirstQuest = questManagerNew.hasCompletedFirstQuest;
         } 
@@ -565,6 +607,126 @@ public class SaveHandler : MonoBehaviour
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(saveFilePath, json);
         Debug.Log($"Game saved to {saveFilePath}");
-        player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
+        if (questManagerNew.GetCurrentQuest() != null)
+        {
+            Debug.Log("attempt @ cqidm");
+            CurrentQIDMonitor.Instance.SetCurrentId(questManagerNew.GetCurrentQuest().data.id);
+            
+            // ADD: Re-initialize conditions for all assigned quests
+            foreach (var quest in questManagerNew.questsAssigned)
+            {
+                if (quest != null)
+                {
+                    quest.ReinitializeConditions();
+                }
+            }
+            
+            // ADD: Force update all NPCs to sync with current quest state
+            StartCoroutine(questManagerNew.SyncNPCsWithQuestState());
+        }
+        else
+        {
+            Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
+        }
+        
+        questManagerNew.hasCompletedFirstQuest = false;
+
+        ApplyLoadedQuestsData(data, questManagerNew);
+
+        newPlayer.ChangeTheUI("");
+
     }
+    public void ApplyLoadedQuestsData(SaveData data, QuestManager questManager)
+    {
+        
+        if (questManager != null)
+        {
+            questManager.isLoadingFromSave = true;
+
+            foreach (QuestInstance quest in questManager.questsAssigned)
+            {
+                Debug.Log($"assigned quest before load: {quest.data.questName} (ID: {quest.data.id})");
+                
+            }
+            foreach (QuestInstance quest in questManager.questsCompleted)
+            {
+                Debug.Log($"completed quest before load: {quest.data.questName} (ID: {quest.data.id})");
+            }
+            
+            questManager.questsAssigned.Clear();
+            questManager.questsCompleted.Clear();
+            
+             // After clear it bugs. If you have time rewrite this logic so that only one call is needed. Thanks
+            // Find and restore assigned quests
+
+            // Find and restore completed quests
+            foreach (SerializableQuest savedQuest in data.questsCompleted)
+            {
+                QuestInstance quest = FindQuestById(savedQuest.questId);
+                if (quest != null)
+                {
+                    quest.IsCompleted = true;
+                    questManager.questsCompleted.Add(quest);
+                }
+            }
+            foreach (SerializableQuest savedQuest in data.questsAssigned)
+            {
+                QuestInstance quest = FindQuestById(savedQuest.questId);
+                if (quest != null)
+                {
+                    quest.IsCompleted = savedQuest.isCompleted;
+                    questManager.questsAssigned.Add(quest);
+                }
+                else
+                {
+                    Debug.LogWarning($"Could not find quest with ID: {savedQuest.questId}");
+                }
+            }
+            // StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+            // if (startingQuest != null)
+            // {
+            //     Debug.Log("StartingSceneQuest found in new scene "+SceneManager.GetActiveScene().name);
+            //     if (startingQuest.gameObject.scene.name == SceneManager.GetActiveScene().name) {
+            //         Debug.Log("Manually triggering RuntimeQuest for new scene");
+            //         startingQuest.RuntimeQuest();
+            //     } else
+            //     {
+            //         Debug.Log("Not triggering RuntimeQuest for new scene, scene is mismatched");
+            //     }
+            // }
+            // else
+            // {
+            //     Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            // }
+            // Re-initialize conditions
+            foreach (var quest in questManager.questsAssigned)
+            {
+                if (quest != null)
+                {
+                    quest.ReinitializeConditions();
+                }
+            }
+            
+            var currentQuest = questManager.GetCurrentQuest();
+            if (currentQuest != null)
+            {
+                CurrentQIDMonitor.Instance.SetCurrentId(currentQuest.data.id);
+                
+                // Restore todos if needed
+                if (data.currentTodo != null && data.currentTodo.Count > 0)
+                {
+                    // This part depends on how your TodoObject system works
+                    // You may need to find todos by name similar to quests
+                }
+            }
+            
+            questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
+
+            questManager.CleanupNullQuests();
+        
+            questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
+        }
+    }
+
 }

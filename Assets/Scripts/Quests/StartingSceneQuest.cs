@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,49 +29,20 @@ public class StartingSceneQuest : MonoBehaviour
         // }
     }
 
-    public void RuntimeQuest(QuestManager questManager)
+    public void RuntimeQuest(int next)
     {
-        if (transform.childCount == 0)
+        var a = SceneManager.GetSceneByBuildIndex(next);
+        GameObject[] allObjs = a.GetRootGameObjects();
+        
+        foreach (GameObject obj in allObjs)
         {
-            Debug.LogError("No starting quest found. You may be corrupting save data!");
-            return;
+            if (obj.GetComponent<QuestManager>() != null)
+            {
+                questManager = obj.GetComponent<QuestManager>();
+                break;
+            }
         }
 
-        if (questManager == null)
-        {
-            Debug.LogError("QuestManager unassigned (null ex)");
-            return;
-        }
-
-        Debug.Log("Running RuntimeQuest - assigning first quest");
-        QuestInstance firstQuest = transform.GetChild(0).GetComponent<QuestInstance>();
-        
-        if (firstQuest == null)
-        {
-            Debug.LogError("First child has no QuestInstance component!");
-            return;
-        }
-        
-        // Mark current quest as completed if it exists
-        if (questManager.GetCurrentQuest() != null)
-        {
-            questManager.GetCurrentQuest().IsCompleted = true;
-        }
-        
-        // Add the new quest
-        for (int i = 0; i < questManager.questsAssigned.Count; i++)
-        {
-            if (questManager.questsAssigned[i] == null)
-                Debug.Log($"Currently assigned quest at index {i} is null");
-        }
-        questManager.AddQuestToList(firstQuest);
-        CurrentQIDMonitor.Instance.SetCurrentId(firstQuest.data.id);
-        questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-        
-        Debug.Log($"Assigned quest: {firstQuest.data.questName}");
-    }
-    public void RuntimeQuest()
-    {
         if (transform.childCount == 0)
         {
             Debug.LogError("No starting quest found. You may be corrupting save data!");
@@ -108,6 +80,54 @@ public class StartingSceneQuest : MonoBehaviour
         CurrentQIDMonitor.Instance.SetCurrentId(firstQuest.data.id);
         SaveHandler.Instance.SaveGame(questManager.gameObject.GetComponent<Player>());
         questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        
+        Debug.Log($"Assigned quest: {firstQuest.data.questName}");
+    }
+    public void RuntimeQuest()
+    {
+        Debug.Log(gameObject.scene.name+": current scene name");
+        if (transform.childCount == 0)
+        {
+            
+            Debug.LogError("No starting quest found. You may be corrupting save data!");
+            return;
+        }
+
+        if (questManager == null)
+        {
+            Debug.LogError("QuestManager unassigned (null ex)");
+            return;
+        }
+
+        Debug.Log("Running RuntimeQuest - assigning first quest");
+        QuestInstance firstQuest = transform.GetChild(0).GetComponent<QuestInstance>();
+        
+        if (firstQuest == null)
+        {
+            Debug.LogError("First child has no QuestInstance component!");
+            return;
+        } else {
+            
+            // Mark current quest as completed if it exists
+            if (CurrentQIDMonitor.Instance.GetCurrentQuestId() > firstQuest.data.id)
+            {
+                firstQuest.IsCompleted = true;
+            }
+            if (!firstQuest.IsCompleted)
+            {
+                questManager.AddQuestToList(firstQuest);
+                CurrentQIDMonitor.Instance.SetCurrentId(firstQuest.data.id);
+                SaveHandler.Instance.SaveGame(questManager.gameObject.GetComponent<Player>());
+                questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            }
+        }
+        
+        // Add the new quest
+        for (int i = 0; i < questManager.questsAssigned.Count; i++)
+        {
+            if (questManager.questsAssigned[i] == null)
+                Debug.Log($"Currently assigned quest at index {i} is null");
+        }
         
         Debug.Log($"Assigned quest: {firstQuest.data.questName}");
     }

@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ChronoQuest.Interactions.World;
+using ChronoQuest.UIForInteractions;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
-public class Player : Character, Interaction
+public class Player : Character, Interaction, IAvailableActions
 {
     // protected Character player;
     // Item Handling
@@ -633,6 +634,14 @@ public class Player : Character, Interaction
         }
     }
 
-    
+    public void ChangeTheUI(string str)
+    {
+        interactionPanel.text = str;
+    }
+
+    public void ChangeTheUI(Item item)
+    {
+        interactionPanel.text = item.item.itemName;
+    }
 }
 

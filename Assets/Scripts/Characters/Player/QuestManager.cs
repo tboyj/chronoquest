@@ -13,7 +13,11 @@ public class QuestManager : MonoBehaviour
     public int generalDialogCounter;
     private Player player;
     public bool isLoadingFromSave = false;
-
+    public void CleanupNullQuests()
+    {
+        questsAssigned.RemoveAll(q => q == null);
+        questsCompleted.RemoveAll(q => q == null);
+    }
     public void SetCurrentNPC(NPC npc)
     {
         currentNPC = npc;
@@ -27,29 +31,7 @@ public class QuestManager : MonoBehaviour
     public void Start()
     {   
         player = gameObject.GetComponent<Player>();
-        if (GetCurrentQuest() != null)
-        {
-            Debug.Log("attempt @ cqidm");
-            CurrentQIDMonitor.Instance.SetCurrentId(GetCurrentQuest().data.id);
-            
-            // ADD: Re-initialize conditions for all assigned quests
-            foreach (var quest in questsAssigned)
-            {
-                if (quest != null)
-                {
-                    quest.ReinitializeConditions();
-                }
-            }
-            
-            // ADD: Force update all NPCs to sync with current quest state
-            StartCoroutine(SyncNPCsWithQuestState());
-        }
-        else
-        {
-            Debug.Log("Can't tell you yet: [INSERT QUEST ID]");
-        }
         
-        hasCompletedFirstQuest = false;
     }
 
     // ADD this new method

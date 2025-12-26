@@ -20,7 +20,7 @@ public class QuestInstance : MonoBehaviour
     public Vector3 positionOfQuestGiver;
     [SerializeReference]
     public List<AfterQuestDialog> postQuestList;
-    private SphereCollider parentCollider;
+    // private SphereCollider parentCollider;
     // public QuestInstance(Quest q, bool i, List<TodoObject> t, List<QuestDialog> d, List<QuestInstance> s)
     // {
     //     data = q;
@@ -47,7 +47,7 @@ public class QuestInstance : MonoBehaviour
     }
     public virtual void Start()
     {
-        parentCollider = gameObject.transform.parent.GetComponent<SphereCollider>();
+        // parentCollider = gameObject.transform.parent.GetComponent<SphereCollider>();
         questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
         positionOfQuestGiver = gameObject.transform.parent.position;
         
@@ -55,12 +55,10 @@ public class QuestInstance : MonoBehaviour
         {
             if (CurrentQIDMonitor.Instance.GetCurrentQuestId() > data.id)
             {
-                parentCollider.enabled = false;
                 gameObject.transform.parent.position = new Vector3(0, -100, 0);
             }
             if (CurrentQIDMonitor.Instance.GetCurrentQuestId() <= data.id)
             {
-                parentCollider.enabled = true;
                 gameObject.transform.parent.position = positionOfQuestGiver;
             }
         }
@@ -90,20 +88,17 @@ public class QuestInstance : MonoBehaviour
             if (currentQuestId == data.id)
             {
                 // This is the active quest - show the NPC
-                parentCollider.enabled = true;
                 gameObject.transform.parent.position = positionOfQuestGiver;
             }
             else
             {
                 // This is not the active quest - hide the NPC
-                parentCollider.enabled = false;
                 gameObject.transform.parent.position = new Vector3(0, -100, 0);
             }
         }
         else
         { 
             // No current quest - disable collider and hide NPC
-            parentCollider.enabled = false;
             gameObject.transform.parent.position = new Vector3(0, -100, 0); // moves the quest giver npc back out of sight
         }
         

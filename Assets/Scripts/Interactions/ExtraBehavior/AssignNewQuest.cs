@@ -62,7 +62,7 @@ public class AssignNewQuest : ExtraBase, IAvailableActions
 
     public void Start()
     {
-        base.Start();
+        // base.Start();
         qh = gameObject.GetComponent<QuestHandler>();
         
         if (qh == null)
