@@ -8,7 +8,7 @@ public class TeleportScript : QuestInstance
     public Vector3 teleportToPosition;
     public void Start()
     {
-        // base.Start();
+        base.Start();
         teleportToPosition = positionTP.transform.position;
     }
 

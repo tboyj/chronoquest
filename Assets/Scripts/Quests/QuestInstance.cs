@@ -48,7 +48,7 @@ public class QuestInstance : MonoBehaviour
     public virtual void Start()
     {
         // parentCollider = gameObject.transform.parent.GetComponent<SphereCollider>();
-        questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
+        // questManager = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestManager>();
         positionOfQuestGiver = gameObject.transform.parent.position;
         
         if (SceneManager.GetSceneByName("UtilityScene").isLoaded)
