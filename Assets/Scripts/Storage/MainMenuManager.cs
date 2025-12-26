@@ -134,30 +134,41 @@ public class MainMenuManager : MonoBehaviour
     }
 
     private void StartNewGame()
+{
+    // Delete existing save file
+    if (SaveHandler.Instance != null && SaveHandler.Instance.SaveExists())
     {
-        // Reset CurrentQIDMonitor
-        if (CurrentQIDMonitor.Instance != null)
-        {
-            CurrentQIDMonitor.Instance.SetCurrentId(2);
-        }
-        
-        StartCoroutine(LoadNewGame());
-        SceneManager.UnloadSceneAsync("RealTitleScreen");
+        SaveHandler.Instance.DeleteSave();
+        Debug.Log("Deleted existing save file for new game");
     }
+    
+    // Reset CurrentQIDMonitor
+    if (CurrentQIDMonitor.Instance != null)
+    {
+        CurrentQIDMonitor.Instance.SetCurrentId(2);
+    }
+    
+    StartCoroutine(LoadNewGame());
+}
 
-        /// <summary>
-        /// Load a new game from the main menu.
-        /// Unloads the main menu scene and loads the first gameplay scene.
-        /// </summary>
-        /// <remarks>
-        /// First loads the UtilityScene additively, then the first gameplay scene.
-        /// Waits for the scene to finish loading, then sets the first gameplay scene as active.
-        /// Waits a frame for Start() methods to run, then unloads the main menu scene.
-        /// </remarks>
+/// <summary>
+/// Load a new game from the main menu.
+/// Unloads the main menu scene and loads the first gameplay scene.
+/// </summary>
+/// <remarks>
+/// First loads the UtilityScene additively, then the first gameplay scene.
+/// Waits for the scene to finish loading, then sets the first gameplay scene as active.
+/// Waits a frame for Start() methods to run, then unloads the main menu scene.
+/// </remarks>
     private System.Collections.IEnumerator LoadNewGame()
     {
-        // Load UtilityScene first
-        
+        // Load UtilityScene first (if needed)
+        Scene utilityScene = SceneManager.GetSceneByName("UtilityScene");
+        if (!utilityScene.isLoaded)
+        {
+            AsyncOperation utilityLoad = SceneManager.LoadSceneAsync("UtilityScene", LoadSceneMode.Additive);
+            yield return utilityLoad;
+        }
         
         // Then load first gameplay scene
         AsyncOperation gameplayLoad = SceneManager.LoadSceneAsync(firstSceneName, LoadSceneMode.Additive);
@@ -173,6 +184,16 @@ public class MainMenuManager : MonoBehaviour
         // Wait a frame for Start() methods to run
         yield return null;
         
+        StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+        if (startingQuest != null)
+        {
+            Debug.Log("New game - assigning starting quest");
+            startingQuest.RuntimeQuest();
+        }
+        else
+        {
+            Debug.LogError("No StartingSceneQuest found in scene!");
+        }
         // Unload main menu
         SceneManager.UnloadSceneAsync("RealTitleScreen");
         

@@ -286,12 +286,51 @@ public class SaveHandler : MonoBehaviour
         player.isInventorySetup = data.isInventorySetup;
         // Restore quests - FIXED to load by ID
         QuestManager questManager = player.GetComponent<QuestManager>();
+        
         if (questManager != null)
         {
+            questManager.isLoadingFromSave = true;
+
+            foreach (QuestInstance quest in questManager.questsAssigned)
+            {
+                Debug.Log($"assigned quest before load: {quest.data.questName} (ID: {quest.data.id})");
+                
+            }
+            foreach (QuestInstance quest in questManager.questsCompleted)
+            {
+                Debug.Log($"completed quest before load: {quest.data.questName} (ID: {quest.data.id})");
+            }
+            
             questManager.questsAssigned.Clear();
             questManager.questsCompleted.Clear();
             
+             // After clear it bugs. If you have time rewrite this logic so that only one call is needed. Thanks
             // Find and restore assigned quests
+
+            // Find and restore completed quests
+            foreach (SerializableQuest savedQuest in data.questsCompleted)
+            {
+                QuestInstance quest = FindQuestById(savedQuest.questId);
+                if (quest != null)
+                {
+                    quest.IsCompleted = true;
+                    questManager.questsCompleted.Add(quest);
+                }
+            }
+
+            
+                    
+            StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+            if (startingQuest != null)
+            {
+                Debug.Log("Manually triggering RuntimeQuest for new scene");
+                startingQuest.RuntimeQuest(questManager);
+            }
+            else
+            {
+                Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            }
+
             foreach (SerializableQuest savedQuest in data.questsAssigned)
             {
                 QuestInstance quest = FindQuestById(savedQuest.questId);
@@ -303,17 +342,6 @@ public class SaveHandler : MonoBehaviour
                 else
                 {
                     Debug.LogWarning($"Could not find quest with ID: {savedQuest.questId}");
-                }
-            }
-            
-            // Find and restore completed quests
-            foreach (SerializableQuest savedQuest in data.questsCompleted)
-            {
-                QuestInstance quest = FindQuestById(savedQuest.questId);
-                if (quest != null)
-                {
-                    quest.IsCompleted = true;
-                    questManager.questsCompleted.Add(quest);
                 }
             }
             
@@ -381,6 +409,7 @@ public class SaveHandler : MonoBehaviour
         }
         
         Debug.Log("Game data loaded successfully");
+        questManager.isLoadingFromSave = false;
     }
 
     // Helper method to find quests by ID
@@ -445,7 +474,7 @@ public class SaveHandler : MonoBehaviour
                 newPlayer = obj.GetComponent<Player>();
                 break;
             }
-        }
+        } // this finds the new player in the new scene
 
         SaveData data = new SaveData();
         
@@ -482,25 +511,40 @@ public class SaveHandler : MonoBehaviour
         data.isHolding = player.isHolding;
         data.isInventorySetup = player.isInventorySetup;
 
-        QuestManager questManager = player.GetComponent<QuestManager>(); // Grab quests from old player
-        if (questManager != null)
+        QuestManager questManagerOld = player.GetComponent<QuestManager>();
+        QuestManager questManagerNew = newPlayer.GetComponent<QuestManager>(); // Grab quests from old player
+        if (questManagerOld != null)
         {
-            foreach (QuestInstance quest in questManager.questsAssigned)
+            List<QuestInstance> assignedCopy = new List<QuestInstance>(questManagerOld.questsAssigned);
+            foreach (QuestInstance quest in assignedCopy)
             {
-                
-                data.questsAssigned.Add(new SerializableQuest(quest));
+                if (quest != null)
+                {
+                    questManagerOld.SetQuestCompleted(quest);
+                }
             }
-            
-            foreach (QuestInstance quest in questManager.questsCompleted)
+
+            foreach (QuestInstance quest in questManagerOld.questsCompleted)
             {
+                Debug.Log($"Saving completed quest: {quest.data.questName} (ID: {quest.data.id})");
                 data.questsCompleted.Add(new SerializableQuest(quest));
             }
-            questManager.questsAssigned.Clear();
-            questManager.questsCompleted.Clear();
+            questManagerNew.questsAssigned.Clear();
+            questManagerNew.questsCompleted.Clear();
             
-            
+            StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
+            // if (startingQuest != null)
+            // {
+            //     Debug.Log("Manually triggering RuntimeQuest for new scene");
+            //     startingQuest.RuntimeQuest(questManagerNew);
+            // }
+            // else
+            // {
+            //     Debug.LogWarning("No StartingSceneQuest found in new scene!");
+            // }
+            // for now..
             data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
-            data.hasCompletedFirstQuest = questManager.hasCompletedFirstQuest;
+            data.hasCompletedFirstQuest = questManagerNew.hasCompletedFirstQuest;
         } 
         foreach (GameObject sun in rootObjects)
         {
@@ -516,23 +560,11 @@ public class SaveHandler : MonoBehaviour
                 }
             }
         }
-        StartingSceneQuest startingQuest = FindObjectOfType<StartingSceneQuest>();
-        if (startingQuest != null)
-        {
-            Debug.Log("Manually triggering RuntimeQuest for new scene");
-            startingQuest.RuntimeQuest();
-        }
-        else
-        {
-            Debug.LogWarning("No StartingSceneQuest found in new scene!");
-        }
-        data.questsAssigned.Add(new SerializableQuest(newPlayer.GetComponent<QuestManager>().GetCurrentQuest()));
-        player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
 
         Debug.Log("Game saved after scene transition and quest assignment");    
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(saveFilePath, json);
         Debug.Log($"Game saved to {saveFilePath}");
-        
+        player.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
     }
 }

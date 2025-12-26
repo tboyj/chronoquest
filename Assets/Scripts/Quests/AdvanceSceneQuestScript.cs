@@ -27,16 +27,13 @@ public class AdvanceSceneQuestScript : QuestInstance
             Debug.Log("Player entered scene transition trigger");
             
             // Complete the current quest BEFORE clearing
-            QuestInstance currentQuest = questManager.GetCurrentQuest();
-            if (currentQuest != null && !currentQuest.IsCompleted)
+            while (questManager.GetCurrentQuest() != null)
             {
-                Debug.Log("Quest Completed: "+currentQuest.data.name);
-                questManager.SetQuestCompleted(currentQuest);
+                questManager.SetQuestCompleted(questManager.GetCurrentQuest());
+                
             }
-            
             // Now safe to clear
-            questManager.questsAssigned.Clear();
-            questManager.questsCompleted.Clear();
+
             Debug.Log("Loading next scene...");
             other.GetComponent<QuestManagerGUI>()?.RefreshQuestGUI();
             LoadNextScene();
@@ -213,6 +210,7 @@ public class AdvanceSceneQuestScript : QuestInstance
         // Add specific save logic for the new scene (save only player inventory, quest from old, save new quest stuff)
         SaveHandler.Instance.SaveGameAdvancingScene(player.GetComponent<Player>(), next);
         Debug.Log("Scene transition complete.");
+        
     }
     
     public override void QuestEventTriggered()

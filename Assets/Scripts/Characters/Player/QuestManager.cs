@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour
     
     public int generalDialogCounter;
     private Player player;
+    public bool isLoadingFromSave = false;
 
     public void SetCurrentNPC(NPC npc)
     {
