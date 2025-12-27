@@ -4814,6 +4814,7 @@ MonoBehaviour:
   questsCompleted: []
   hasCompletedFirstQuest: 0
   generalDialogCounter: 0
+  isLoadingFromSave: 0
 --- !u!114 &160479122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5954,7 +5955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f368ad016cc746d47990ee28728785c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotIndex: 0
+  slotIndex: 1
   isHovered: 0
   currentHolder: {fileID: 1172368702}
   player: {fileID: 0}

@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
     public Inventory()
     {
         items = new List<Item>();
-
+        
     }
     /**
 We can add a expanding inventory later. Currently fixed size right now!!!!

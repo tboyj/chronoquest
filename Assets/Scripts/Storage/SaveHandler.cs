@@ -270,12 +270,12 @@ public class SaveHandler : MonoBehaviour
                 else
                 {
                     Debug.LogWarning($"Could not find ItemStorable: {savedItem.itemName}");
-                    loadedItems.Add(new Item(null, 0)); // Empty slot
+                    loadedItems.Add(new Item(null, 1)); // Empty slot
                 }
             }
             else
             {
-                loadedItems.Add(new Item(null, 0)); // Empty slot
+                loadedItems.Add(new Item(null, 1)); // Empty slot
             }
         }
         

@@ -359,7 +359,7 @@ public class QuestManager : MonoBehaviour
                         if (item.quantity <= 0)
                         {
                             int index = gameObject.GetComponent<Player>().inventory.items.IndexOf(item);
-                            gameObject.GetComponent<Player>().inventory.items[index] = new Item(null, 0);
+                            gameObject.GetComponent<Player>().inventory.items[index] = new Item(null,1);
                         }
 
                         break; // stop after transferring

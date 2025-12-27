@@ -16,9 +16,24 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Start is called before the first frame update
     void Start()
     {
-
+        
         currentHolder = transform.Find("Holder");
-        player = GameObject.Find("RealPlayer").GetComponent<Player>();
+        GameObject[] rootObjects = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
+        foreach (GameObject obj in rootObjects)
+        {
+            if (obj.name == "RealPlayer")
+            {
+                player = obj.GetComponent<Player>();
+                break;
+            }
+        }
+        
+        if (player == null)
+        {
+            Debug.LogError("RealPlayer not found in current scene!");
+            return;
+        }
+        
         if (currentHolder.transform.parent.parent.name.Equals("Inventory"))
         {
             slotIndex = currentHolder.transform.parent.GetSiblingIndex() + 4;
@@ -27,12 +42,15 @@ public class DropIntoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             slotIndex = currentHolder.transform.parent.GetSiblingIndex();
         }
+        
+        // Don't set refresh here - let the load system handle it
+        // play
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         // do checks on if you can do this within something idk.
         if (isHovered && slotIndex >= 4)
         {
