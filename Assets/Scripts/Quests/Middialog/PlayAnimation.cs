@@ -5,11 +5,8 @@ public class PlayAnimation : MidQuestDialog
 {
     public Animator animPlayback;
     public string animString;
-    public GameObject obj;
-    public void Start()
-    {
-        obj.SetActive(false);
-    }
+    
+
     public override void ActionMidQuest()
     {
         Debug.Log("Playing animation override");
@@ -18,7 +15,6 @@ public class PlayAnimation : MidQuestDialog
             Debug.LogWarning("Animator/object not assigned.");
             return;
         }
-
         // Make sure the clip is in the animation component
         // Play immediately instead of queued, unless you need sequential playback
         obj.SetActive(true);

@@ -29,6 +29,7 @@ public class SaveInstance : MonoBehaviour
         {
             LoadGame();
         }
+        TimerJSON.Instance.StartTimer();
     }
 
     void Update()

@@ -11,6 +11,11 @@ public class Paper : BaseUse
     // public ItemStorable itemPreferred; // will likely change up in future but i need this working. SPEED I NEED THIS MY UI'S KIND OF HOMELESS...
     public bool isActive;
 
+    private void Start()
+    {
+        musicSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (GetPlayer() != null)
@@ -41,8 +46,6 @@ public class Paper : BaseUse
                 GetPlayer().movement.moveSpeed = 0;
                 GetPlayer().SetInventoryPermission(false);
                 GetPlayer().hotbarHolder.Find("OpenInv").GetComponent<Button>().interactable = false;
-
-
                 ChangeTheUI("");
             }
             else
@@ -59,7 +62,7 @@ public class Paper : BaseUse
         container.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = paperText;
         isActive = !isActive;
         Debug.Log("Paper used!");
-        
+        musicSource.Play();
         container.SetActive(isActive);
         if (GetPlayer() != null)
         {

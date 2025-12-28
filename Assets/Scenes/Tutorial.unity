@@ -4895,10 +4895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2b5c3080297b44b0bdf882cf2668e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 160479107}
-  canvas: {fileID: 1776828883}
-  quests: {fileID: 0}
-  nextScene: AncientEgypt
 --- !u!114 &160479128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22735,6 +22731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea6b1d34352b764e8f7c50cc2f8ef0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentQuest: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!1 &701934488
 GameObject:
   m_ObjectHideFlags: 0
@@ -24220,9 +24218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bab0e3cca99027409378db423d02cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentQuest: {fileID: 874054028}
+  obj: {fileID: 7650212133015342480}
   animPlayback: {fileID: 7650212133015342481}
   animString: ufoflyingin
-  obj: {fileID: 7650212133015342480}
 --- !u!1 &748342728
 GameObject:
   m_ObjectHideFlags: 0
@@ -25116,6 +25115,7 @@ GameObject:
   - component: {fileID: 797772310}
   - component: {fileID: 797772312}
   - component: {fileID: 797772313}
+  - component: {fileID: 797772314}
   m_Layer: 0
   m_Name: paper
   m_TagString: Recievable
@@ -25223,12 +25223,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc579e6e62fcf44aa20459bb28d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
   inRange: 0
   container: {fileID: 1119403765}
   paperText: 'I. Around the Red Sea,
 
     Across the Nile River'
   isActive: 0
+--- !u!82 &797772314
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797772309}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2f36b6d99dfe8734ebb83273ed6d7a29, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &803060493
 GameObject:
   m_ObjectHideFlags: 0
@@ -25528,6 +25625,7 @@ GameObject:
   - component: {fileID: 809298911}
   - component: {fileID: 809298910}
   - component: {fileID: 809298913}
+  - component: {fileID: 809298914}
   m_Layer: 3
   m_Name: paper4
   m_TagString: Recievable
@@ -25635,12 +25733,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc579e6e62fcf44aa20459bb28d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
   inRange: 0
   container: {fileID: 1119403765}
   paperText: 'VII. My magenta hue
 
     I kept throughout the land.'
   isActive: 0
+--- !u!82 &809298914
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809298909}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2f36b6d99dfe8734ebb83273ed6d7a29, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &811127967
 GameObject:
   m_ObjectHideFlags: 0
@@ -27481,6 +27676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 874054029}
+  quest: {fileID: 0}
 --- !u!114 &874054031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32870,6 +33066,7 @@ GameObject:
   - component: {fileID: 1065247242}
   - component: {fileID: 1065247241}
   - component: {fileID: 1065247244}
+  - component: {fileID: 1065247245}
   m_Layer: 0
   m_Name: paper3
   m_TagString: Recievable
@@ -32977,12 +33174,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc579e6e62fcf44aa20459bb28d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
   inRange: 0
   container: {fileID: 1119403765}
   paperText: 'V. Beautiful grass,
 
     Sparkling sand.'
   isActive: 0
+--- !u!82 &1065247245
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065247240}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2f36b6d99dfe8734ebb83273ed6d7a29, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1067519952
 GameObject:
   m_ObjectHideFlags: 0
@@ -39154,6 +39448,7 @@ GameObject:
   - component: {fileID: 1319796901}
   - component: {fileID: 1319796900}
   - component: {fileID: 1319796899}
+  - component: {fileID: 1319796903}
   m_Layer: 0
   m_Name: paper (1)
   m_TagString: Recievable
@@ -39173,6 +39468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc579e6e62fcf44aa20459bb28d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
   inRange: 0
   container: {fileID: 1119403765}
   paperText: 'Bossman''s Todo:
@@ -39273,6 +39569,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -7.627}
+--- !u!82 &1319796903
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319796898}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2f36b6d99dfe8734ebb83273ed6d7a29, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1323150790
 GameObject:
   m_ObjectHideFlags: 0
@@ -49676,6 +50068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d759c52ea754d34cb1059c6235d973a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentQuest: {fileID: 874054028}
   obj: {fileID: 374568063}
 --- !u!1 &1744605874
 GameObject:
@@ -50322,6 +50715,7 @@ GameObject:
   - component: {fileID: 1770876793}
   - component: {fileID: 1770876792}
   - component: {fileID: 1770876795}
+  - component: {fileID: 1770876796}
   m_Layer: 0
   m_Name: paper2
   m_TagString: Recievable
@@ -50429,12 +50823,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc579e6e62fcf44aa20459bb28d54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
   inRange: 0
   container: {fileID: 1119403765}
   paperText: 'III. Indigo for me,
 
     My fire has withered.'
   isActive: 0
+--- !u!82 &1770876796
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770876791}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2f36b6d99dfe8734ebb83273ed6d7a29, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1772499839
 GameObject:
   m_ObjectHideFlags: 0
@@ -53523,7 +54014,6 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: ae00d6bdf8cb9154ab70c4f5c523b168, type: 2}
   IsCompleted: 0
   todo:
-  - {fileID: 311886410}
   - {fileID: 311886410}
   dialogsForQuest: []
   questManager: {fileID: 160479121}

@@ -44,6 +44,7 @@ public class PauseScript : MonoBehaviour
             timeIsStopped = !timeIsStopped;
         }
         pauseMenu.SetActive(isPaused);
+        TimerJSON.Instance.SetTimer(isPaused);
         
         // Manage cursor visibility and lock state
         if (isPaused)
@@ -72,7 +73,7 @@ public class PauseScript : MonoBehaviour
         {
             isInventory = !isInventory;
             timeIsStopped = !timeIsStopped;
-
+            
         }
 
         if (!isInventory)
@@ -94,10 +95,12 @@ public class PauseScript : MonoBehaviour
         if (timeIsStopped)
         {
             Time.timeScale = 0;
+            TimerJSON.Instance.SetTimer(false);
         }
         else
         {
             Time.timeScale = 1;
+            TimerJSON.Instance.SetTimer(true);
         }
     }
 
@@ -106,10 +109,12 @@ public class PauseScript : MonoBehaviour
         if (timeIsStopped)
         {
             Time.timeScale = 0;
+            TimerJSON.Instance.SetTimer(false);
         }
         else
         {
             Time.timeScale = 1;
+            TimerJSON.Instance.SetTimer(true);
         }
     }
 }

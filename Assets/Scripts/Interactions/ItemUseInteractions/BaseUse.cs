@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BaseUse : MonoBehaviour, IAvailableActions
 {
     // Called when the script instance is being loaded
+    public AudioSource musicSource;
     public bool inRange = false;
     private Player player;
     // Called before the first frame update

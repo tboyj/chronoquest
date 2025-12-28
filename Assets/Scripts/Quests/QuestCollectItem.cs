@@ -19,9 +19,9 @@ public class QuestCollectItem : QuestInstance, IQuestAction
             Debug.Log("Quest already completed, ignoring trigger: " + data.id);
             return;
         }
-
-        currentCount++;
-        Debug.Log("Current:" + questManager.GetCurrentQuest().data.id + "This:" + data.id);
+        if (currentCount < requiredCount)
+            currentCount++;
+        // Debug.Log("Current:" + questManager.GetCurrentQuest().data.id + "This:" + data.id);
 
         // Only advance if this quest is the current active one
         if (questManager.GetCurrentQuest().data.id == data.id)

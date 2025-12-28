@@ -60,11 +60,15 @@ public class QuestManager : MonoBehaviour
     }
     public void AddQuestToList(QuestInstance quest)
     {
-        questsAssigned.Add(quest);
-        CurrentQIDMonitor.Instance.SetCurrentId(quest.data.id);
-        GetComponent<QuestManagerGUI>().RefreshQuestGUI();
-        // set as false in editor
-        hasCompletedFirstQuest = true;
+        if (quest != null && !questsAssigned.Exists(q => q.data.id == quest.data.id)) {
+            questsAssigned.Add(quest);
+            if (CurrentQIDMonitor.Instance.GetCurrentQuestId() < quest.data.id) {
+                CurrentQIDMonitor.Instance.SetCurrentId(quest.data.id);
+            }
+            GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            // set as false in editor
+            hasCompletedFirstQuest = true;
+        }
     }
     public void SetQuestCompleted(QuestInstance quest)
     {

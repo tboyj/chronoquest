@@ -6,9 +6,20 @@ public class ActivateCollider : AfterQuestDialog
 {
     // Start is called before the first frame update
     public Collider collider;
+    [SerializeField]
+    protected QuestInstance quest;
+
     void Start()
     {
-        collider.enabled = false;
+        quest = GetComponent<QuestInstance>();
+        if (quest.data.id <= CurrentQIDMonitor.Instance.GetCurrentQuestId())
+        {
+            collider.enabled = true;
+        }
+        else
+        {
+            collider.enabled = false;
+        }
     }
 
     // Update is called once per frame

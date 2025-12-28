@@ -9,6 +9,7 @@ public class ReflectionReciever : MonoBehaviour
     private List<RaycastFounder> reflections;
     public GameObject barrier;
     public bool ConditionsMet;
+    public Quest questIdForThis;
     int i = 0;
     public void CheckAllReflections()
     {
@@ -36,8 +37,13 @@ public class ReflectionReciever : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // depends on save data!!!
-        barrier.SetActive(true);
+        if (questIdForThis.id < CurrentQIDMonitor.Instance.GetCurrentQuestId())
+        {
+            barrier.SetActive(false);
+        } else
+        {
+            barrier.SetActive(true);
+        }
     }
 
     // Update is called once per frame
