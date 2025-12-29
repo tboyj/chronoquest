@@ -6,12 +6,16 @@ public class PlayerMovement : Movement
     public CharacterController controller;
     public Vector3 rawInput;
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private AudioSource jumpSFX;
     private bool jumpRequested = false; // Buffer for jump input
     
     private void Awake()
     {
         if (cameraTransform == null)
             cameraTransform = Camera.main.transform;
+
+        if (GameObject.Find("AudioSources/Jump") != null)
+            jumpSFX = GameObject.Find("AudioSources/Jump").GetComponent<AudioSource>();
     }
     
     private void Update()
@@ -20,6 +24,8 @@ public class PlayerMovement : Movement
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             jumpRequested = true;
+            jumpSFX.Play();
+            
         }
     }
 

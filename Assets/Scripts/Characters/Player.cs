@@ -41,6 +41,18 @@ public class Player : Character, Interaction, IAvailableActions
     private Light lightSource;
     [Range(0,15f)]
     public float lightDurability = 15f;
+
+    // Audio
+    [SerializeField]
+    private AudioSource walkSFX;
+    private float footstepTimer = 0f;
+    private float footstepIntervalValue = 0.4f;
+    public float footstepInterval
+    {
+        get { return footstepIntervalValue; }
+        set { footstepIntervalValue = value; }
+    }
+
     public void Start()
 {
     lightSource = GetComponent<Light>();
@@ -48,7 +60,7 @@ public class Player : Character, Interaction, IAvailableActions
     movement = GetComponent<PlayerMovement>();
     guiHandler = GetComponent<InventoryGUI>();
     
-
+    walkSFX = GameObject.Find("AudioSources/Walk").GetComponent<AudioSource>();
 
     Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(),
     false, false, transform.GetChild(0).GetComponent<Animator>());
@@ -410,6 +422,21 @@ public class Player : Character, Interaction, IAvailableActions
             movement.controller.enabled = true;
             animatorSetup.speed = 1;
             movement.MoveWithForce();
+            walkSFX.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+            walkSFX.volume = movement.rawInput.magnitude * 0.5f; 
+            footstepTimer += Time.deltaTime;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                footstepInterval = 0.25f;
+            }
+            else
+            {
+                footstepInterval = 0.4f;
+            }
+            if (movement.controller.isGrounded && footstepTimer >= footstepInterval && movement.rawInput.magnitude > 0f) {
+                walkSFX.Play();
+                footstepTimer = 0f; // Reset timer
+            }
             animatorSetup.SetFloat("SpeedX", movement.rawInput.magnitude);
             animatorSetup.SetBool("Grounded", movement.controller.isGrounded); // Add Z animation to this at a later time.// input.magnitude.
             holdingItemManager.spriteHolderImage.flipX=movement.flip;
