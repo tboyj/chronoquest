@@ -21,10 +21,14 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
     public bool inDialog { get; set; }
     public bool questRequired;
     public Player player;
+
+    [SerializeField]
+    private AudioSource pickupSFX;
+
     //public UnityEvent<GameObject> OnInteractEvent;
     void Start()
     {
-        
+        pickupSFX = transform.Find("AudioSources/Pickup").GetComponent<AudioSource>();
         Startup();
         quest.PrecheckInventory();
     }
@@ -54,7 +58,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
             player = referencePlayer.GetComponent<Player>();
             itemRecognizesPlayer = true;
             quest = referencePlayer.GetComponent<QuestManager>().GetCurrentQuest() as QuestCollectItem;
-            ChangeTheUI("[F] Take " + itemInWorld.itemName);
+            // ChangeTheUI("[F] Take " + itemInWorld.itemName);
 
         }
     }
@@ -63,7 +67,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
         if (other.CompareTag("Player"))
         {
             itemRecognizesPlayer = true;
-            ChangeTheUI("[F] Take " + itemInWorld.itemName);
+            // ChangeTheUI("[F] Take " + itemInWorld.itemName);
         }
     }
     void OnTriggerExit(Collider other)
@@ -100,6 +104,7 @@ public class ItemInWorld : MonoBehaviour, Interaction, IAvailableActions
             
             if (quest != null) { 
                 quest.QuestEventTriggered();
+                pickupSFX.Play();
                 amountOfItemsHere--;
 
             }

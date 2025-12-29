@@ -60,7 +60,7 @@ public class Player : Character, Interaction, IAvailableActions
     movement = GetComponent<PlayerMovement>();
     guiHandler = GetComponent<InventoryGUI>();
     
-    walkSFX = GameObject.Find("AudioSources/Walk").GetComponent<AudioSource>();
+    walkSFX = transform.Find("AudioSources/Walk").GetComponent<AudioSource>();
 
     Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(),
     false, false, transform.GetChild(0).GetComponent<Animator>());

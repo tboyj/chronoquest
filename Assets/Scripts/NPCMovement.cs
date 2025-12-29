@@ -13,12 +13,16 @@ public class NPCMovement : MonoBehaviour
     public string status;
     [SerializeField]
     private NavMeshAgent agent;
+    [SerializeField]
+    private AudioSource walkSFX;
 
+    private float footstepTimer;
+    private float footstepInterval = 0.4f;
     public void Awake()
     {
         
-        
-        
+        walkSFX = transform.Find("AudioSources/Walk").GetComponent<AudioSource>();
+
         if (agent == null)
         {
             Debug.LogError("NavMeshAgent missing on NPC.");
@@ -38,7 +42,20 @@ public class NPCMovement : MonoBehaviour
 
         // Flip NPC based on movement direction
 
-
+        if (!agent.isStopped)
+        {
+            walkSFX.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+            walkSFX.volume = agent.velocity.magnitude * 0.5f; 
+            footstepTimer += Time.deltaTime;
+            if (footstepTimer >= footstepInterval && agent.velocity.magnitude > 0f) {
+                walkSFX.Play();
+                footstepTimer = 0f; // Reset timer
+            }
+        }
+        else
+        {
+            
+        }
 
 
         // Debug.Log("Remaining: " + agent.remainingDistance);

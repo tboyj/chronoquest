@@ -19,8 +19,11 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
     public PauseScript pauseCheck;
     public bool inDialog { get; set; }
     private bool waitingOnInput;
+    [SerializeField]
+    private AudioSource rotateSFX;
     void Start()
     {
+        rotateSFX = transform.Find("AudioSources/Rotate").GetComponent<AudioSource>();
         pauseCheck = GameObject.Find("RealPlayer").GetComponent<PauseScript>();
     }
 
@@ -36,6 +39,7 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
                     { // ew
                         waitingOnInput = true;
                         InteractionFunction();
+
                     }
                     else
                     {
@@ -66,8 +70,18 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
         Debug.Log($"Rotating {rotateIncrement * multiplier} degrees");
         ChangeTheUI("");
         amITurnedOn = true;
+        if (multiplier > 0)
+        {
+            rotateSFX.pitch = 1.2f;
+        }
+        else if (multiplier < 0)
+        {
+            rotateSFX.pitch = 0.8f;
+        }
+        if (!pauseCheck.isInventory && !pauseCheck.isPaused)
+            rotateSFX.Play();
         affectedObject.Rotate(0,rotateIncrement*multiplier,0);
-    
+        
         yield return new WaitForSeconds(duration);
 
         Debug.Log("cooldown off");

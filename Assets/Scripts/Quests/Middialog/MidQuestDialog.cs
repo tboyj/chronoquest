@@ -9,12 +9,14 @@ public class MidQuestDialog : MonoBehaviour
     protected GameObject obj;
     void Start()
     {
-        parentQuest = gameObject.transform.parent.GetComponent<QuestInstance>();
+        obj.SetActive(false);
+        // parentQuest = gameObject.transform.parent.GetComponent<QuestInstance>();
         if (parentQuest != null)
         {
-            obj.SetActive(true);
-            if (parentQuest.data.id <= CurrentQIDMonitor.Instance.GetCurrentQuestId())
+            
+            if (parentQuest.data.id == CurrentQIDMonitor.Instance.GetCurrentQuestId())
             {
+                obj.SetActive(true);
                 ActionMidQuest();
             } else
             {

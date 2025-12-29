@@ -6,7 +6,7 @@ public class PlayAnimation : MidQuestDialog
     public Animator animPlayback;
     public string animString;
     
-
+    
     public override void ActionMidQuest()
     {
         Debug.Log("Playing animation override");

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BillboardSprite : MonoBehaviour
 {
     // Start is called before the first frame update
-    SpriteRenderer sprite;
+    public SpriteRenderer sprite;
     [Tooltip("E1: X axis, E2: Y axis, E3: Z axis")]
     public bool[] lockAxis = new bool[3]; // X, Y, Z
     private float spX;

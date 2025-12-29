@@ -21,7 +21,7 @@ public class PlayerMovement : Movement
     private void Update()
     {
         // Only handle input detection in Update to catch it every frame
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !controller.GetComponent<PauseScript>().isPaused && !controller.GetComponent<PauseScript>().isInventory)
         {
             jumpRequested = true;
             jumpSFX.Play();
