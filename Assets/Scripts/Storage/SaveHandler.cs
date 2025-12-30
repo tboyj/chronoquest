@@ -371,9 +371,13 @@ public class SaveHandler : MonoBehaviour
             questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
 
             questManager.CleanupNullQuests();
-        
-            questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
             questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
+            if (questManager.GetComponent<QuestManagerGUI>() == null)
+            {
+                return;
+            }
+            questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+           
         }
 
         // Restore time
@@ -723,9 +727,10 @@ public class SaveHandler : MonoBehaviour
             questManager.hasCompletedFirstQuest = data.hasCompletedFirstQuest;
 
             questManager.CleanupNullQuests();
-        
-            questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
             questManager.StartCoroutine(questManager.SyncNPCsWithQuestState());
+
+            if (questManager.gameObject.GetComponent<QuestManagerGUI>() != null)
+                questManager.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         }
     }
 

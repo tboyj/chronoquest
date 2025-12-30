@@ -36,7 +36,8 @@ public class TeleportScript : QuestInstance
                 {
                     gameObject.GetComponent<ExtraBase>().Change();
                 }
-            other.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+            if (other.GetComponent<QuestManagerGUI>() != null)
+                other.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         } else if (other.CompareTag("NPC"))
         {
             Teleport(other.gameObject);

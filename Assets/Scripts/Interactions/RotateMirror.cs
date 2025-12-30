@@ -72,11 +72,11 @@ public class RotateMirror : MonoBehaviour, Interaction, IAvailableActions
         amITurnedOn = true;
         if (multiplier > 0)
         {
-            rotateSFX.pitch = 1.2f;
+            rotateSFX.pitch = 1.15f;
         }
         else if (multiplier < 0)
         {
-            rotateSFX.pitch = 0.8f;
+            rotateSFX.pitch = 0.95f;
         }
         if (!pauseCheck.isInventory && !pauseCheck.isPaused)
             rotateSFX.Play();

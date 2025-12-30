@@ -9,10 +9,26 @@ public class HoldingItemScript : MonoBehaviour
     public SpriteRenderer spriteHolderImage;
     public Image spriteTopLeftImage; // UI Image
 
+    public void Awake()
+    {
+        
+    }
     public void Start()
     {
-        spriteHolderImage.gameObject.SetActive(true);
-        spriteTopLeftImage.gameObject.SetActive(true);
+        if (spriteTopLeftImage == null)
+        {
+            spriteHolderImage.gameObject.SetActive(false);
+            
+        }
+        if (spriteHolderImage == null)
+        {
+            spriteTopLeftImage.gameObject.SetActive(false);
+        }
+        if (spriteHolderImage != null && spriteTopLeftImage != null)
+        {
+            spriteHolderImage.gameObject.SetActive(true);
+            spriteTopLeftImage.gameObject.SetActive(true);
+        }
     }
 
     public void Activate(bool v)

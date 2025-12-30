@@ -45,7 +45,12 @@ public class AssignNewQuest : ExtraBase, IAvailableActions
         }
         SaveHandler.Instance.SaveGame(qm.gameObject.GetComponent<Player>());
         Debug.Log("Saving quest state... (from AssignNewQuest)");
+        if (qm.gameObject.GetComponent<QuestManagerGUI>() == null)
+        {
+            return;
+        }
         qm.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
+        
         ChangeTheUI("");
     }
 

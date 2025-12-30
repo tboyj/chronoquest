@@ -7,6 +7,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 public class Player : Character, Interaction, IAvailableActions
@@ -60,7 +61,7 @@ public class Player : Character, Interaction, IAvailableActions
     movement = GetComponent<PlayerMovement>();
     guiHandler = GetComponent<InventoryGUI>();
     
-    walkSFX = transform.Find("AudioSources/Walk").GetComponent<AudioSource>();
+    walkSFX = GetComponent<AudioSource>();
 
     Initialize("Player", GetComponent<Inventory>(), base.objRendered, 0, GetComponent<HoldingItemScript>(),
     false, false, transform.GetChild(0).GetComponent<Animator>());
@@ -102,6 +103,11 @@ public class Player : Character, Interaction, IAvailableActions
     //!!! --- ! Inventory GUI Section ! --- !!!//
     InventoryGuiRefresh();
     Physics.IgnoreLayerCollision(0, 8, true);
+    if (SceneManager.GetSceneByName("SpaceEndScene").isLoaded)
+    {
+        containerHiddenDuringDialog.SetActive(false);
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+    }
 }
     public void Update()
     {
@@ -146,6 +152,10 @@ public class Player : Character, Interaction, IAvailableActions
         CheckKeyInputInteraction();
         if (!manager.CurrentlyInDialog())
         {
+            if (gameObject.GetComponent<PauseScript>() == null)
+            {
+                return;
+            }
             if (gameObject.GetComponent<PauseScript>().isPaused == false)
             {
                 
@@ -183,6 +193,10 @@ public class Player : Character, Interaction, IAvailableActions
 
     private void CheckKeyInputInteraction()
     {
+        if (gameObject.GetComponent<PauseScript>() == null)
+        {
+            return;
+        }
         if (!manager.CurrentlyInDialog() && gameObject.GetComponent<PauseScript>().isPaused == false)
         {
             if (Input.GetKeyDown(Keybinds.actionKeybind))

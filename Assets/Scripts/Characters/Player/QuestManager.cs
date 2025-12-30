@@ -65,9 +65,16 @@ public class QuestManager : MonoBehaviour
             if (CurrentQIDMonitor.Instance.GetCurrentQuestId() < quest.data.id) {
                 CurrentQIDMonitor.Instance.SetCurrentId(quest.data.id);
             }
+            hasCompletedFirstQuest = true;
+
+            if (GetComponent<QuestManagerGUI>() == null)
+            {
+                Debug.LogWarning("QuestManagerGUI is null");
+                return;
+            }
             GetComponent<QuestManagerGUI>().RefreshQuestGUI();
             // set as false in editor
-            hasCompletedFirstQuest = true;
+            
         }
     }
     public void SetQuestCompleted(QuestInstance quest)

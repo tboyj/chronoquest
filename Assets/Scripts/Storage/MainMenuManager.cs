@@ -34,6 +34,7 @@ public class MainMenuManager : MonoBehaviour
         {
             continueButton.interactable = saveExists;
             
+            
             // Optional: Add visual feedback for disabled button
             TextMeshProUGUI buttonText = continueButton.GetComponentInChildren<TextMeshProUGUI>();
             if (buttonText != null && !saveExists)
@@ -140,6 +141,8 @@ public class MainMenuManager : MonoBehaviour
     {
         SaveHandler.Instance.DeleteSave();
         Debug.Log("Deleted existing save file for new game");
+        TimerJSON.Instance.ResetTimer();
+        Debug.Log("Timer reset.");
     }
     
     // Reset CurrentQIDMonitor

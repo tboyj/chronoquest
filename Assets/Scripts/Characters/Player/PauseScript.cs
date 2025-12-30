@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
@@ -47,15 +48,18 @@ public class PauseScript : MonoBehaviour
         TimerJSON.Instance.SetTimer(isPaused);
         
         // Manage cursor visibility and lock state
-        if (isPaused)
+        if (isPaused || isInventory)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            if (!SceneManager.GetSceneByName("SpaceEndScene").isLoaded)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
         
         if (timeIsStopped)
@@ -81,8 +85,11 @@ public class PauseScript : MonoBehaviour
             inventoryButton.GetComponent<UnityEngine.UI.Image>().sprite = inventorySpriteWhileClosed;
             inventoryPanel.SetActive(false);
             // Hide cursor when closing inventory
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            if (!SceneManager.GetSceneByName("SpaceEndScene").isLoaded)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
         else
         {

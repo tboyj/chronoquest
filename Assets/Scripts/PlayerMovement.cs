@@ -14,8 +14,8 @@ public class PlayerMovement : Movement
         if (cameraTransform == null)
             cameraTransform = Camera.main.transform;
 
-        if (GameObject.Find("AudioSources/Jump") != null)
-            jumpSFX = GameObject.Find("AudioSources/Jump").GetComponent<AudioSource>();
+        if (transform.Find("AudioSources/Jump") != null)
+            jumpSFX = transform.Find("AudioSources/Jump").GetComponent<AudioSource>();
     }
     
     private void Update()
@@ -75,6 +75,11 @@ public class PlayerMovement : Movement
         camRight.Normalize();
         
         Vector3 moveDirection = (camForward * z + camRight * x).normalized * rawInput.magnitude;
+
+        if (controller.gameObject.GetComponent<PauseScript>() == null)
+        {
+            return;
+        }
 
         if (!controller.gameObject.GetComponent<PauseScript>().isPaused && 
             !controller.gameObject.GetComponent<PauseScript>().isInventory && 

@@ -79,6 +79,8 @@ public class StartingSceneQuest : MonoBehaviour
         questManager.AddQuestToList(firstQuest);
         CurrentQIDMonitor.Instance.SetCurrentId(firstQuest.data.id);
         SaveHandler.Instance.SaveGame(questManager.gameObject.GetComponent<Player>());
+        
+        if (questManager.gameObject.GetComponent<QuestManagerGUI>() == null) return;
         questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
         
         Debug.Log($"Assigned quest: {firstQuest.data.questName}");
@@ -118,6 +120,7 @@ public class StartingSceneQuest : MonoBehaviour
                 questManager.AddQuestToList(firstQuest);
                 CurrentQIDMonitor.Instance.SetCurrentId(firstQuest.data.id);
                 SaveHandler.Instance.SaveGame(questManager.gameObject.GetComponent<Player>());
+                if (questManager.gameObject.GetComponent<QuestManagerGUI>() == null) return;
                 questManager.gameObject.GetComponent<QuestManagerGUI>().RefreshQuestGUI();
             }
         }
