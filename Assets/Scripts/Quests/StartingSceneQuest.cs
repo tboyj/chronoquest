@@ -7,11 +7,19 @@ using UnityEngine.SceneManagement;
 public class StartingSceneQuest : MonoBehaviour
 {
     public QuestManager questManager;
-    
+    [SerializeField]
+    private bool shallPlay;
+    public AudioSource a;
+
     void Start()  // Changed to Start for better timing
     {
         
-        
+        a = gameObject.GetComponent<AudioSource>();
+        if (a == null) return;
+        if (shallPlay) {
+            Debug.Log("Playing audio");
+            a.Play();
+        }
         // if (questManager == null)
         // {
         //     Debug.LogError("QuestManager not set in scene.");

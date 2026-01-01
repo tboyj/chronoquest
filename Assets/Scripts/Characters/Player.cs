@@ -262,12 +262,16 @@ public class Player : Character, Interaction, IAvailableActions
                     }
                     else if (manager.GetCurrentQuest().dialogsForQuest.Count == 0)
                     {
-                        if (manager.generalDialogCounter < manager.GetCurrentQuest().todo.Count && manager.GetCurrentQuest()?.todo[0]?.dialogsForQuestSections?.Count > 0) {
+                        if (manager.generalDialogCounter < manager.GetCurrentQuest().todo.Count && manager.GetCurrentQuest().todo.Count > 0) {
 
                             Debug.Log(manager.generalDialogCounter);
                             Debug.Log("counter: " + manager.generalDialogCounter);
 
                             // basic talk in between
+                            // buggy mess! if we're doing inbetweens we need to create a new sys... maybe in polish phsae...
+                            // im not happy with the way this is structured.
+                            
+
                             manager.generalDialogCounter++;
                             manager.SetCurrentlyInDialog(true);
                             interactableNPC.inDialog = true;
