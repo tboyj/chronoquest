@@ -102,7 +102,6 @@ public class Player : Character, Interaction, IAvailableActions
     lightSource.enabled = false; // default off
     //!!! --- ! Inventory GUI Section ! --- !!!//
     InventoryGuiRefresh();
-    Physics.IgnoreLayerCollision(0, 8, true);
     if (SceneManager.GetSceneByName("SpaceEndScene").isLoaded)
     {
         containerHiddenDuringDialog.SetActive(false);
@@ -579,6 +578,7 @@ public class Player : Character, Interaction, IAvailableActions
 
         reciever = other.gameObject;
         Debug.Log(reciever.name);
+
     }
 
     void OnTriggerStay(Collider other)
@@ -621,6 +621,7 @@ public class Player : Character, Interaction, IAvailableActions
                 npc.ChangeTheUI("");
                 Debug.Log("Interactable NPC: (false) " + npc.name);
                 interactableNPC = null;
+                
             }
         }
 
@@ -628,8 +629,7 @@ public class Player : Character, Interaction, IAvailableActions
         if (other.gameObject == reciever)
             reciever.GetComponent<BaseUse>()?.ChangeTheUI("");
 
-        if (other.gameObject == reciever)
-            reciever = null;
+        
     }
 
     public Item GetHeldItem()

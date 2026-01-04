@@ -117,6 +117,7 @@ public class NPC : Character, IAvailableActions
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("[TRIGGER EVENT / NPC] Trigger entered by: " + other.name + " Tag: " + other.tag);
+        
         if (!other.CompareTag("Player"))
         {
             return;
