@@ -6,6 +6,8 @@ public class TeleportScript : QuestInstance
 {
     public GameObject positionTP;
     public Vector3 teleportToPosition;
+    public AudioClip changeMusicTo;
+    public AudioSource musicToChange;
     public void Start()
     {
         base.Start();
@@ -31,6 +33,8 @@ public class TeleportScript : QuestInstance
         if (other.CompareTag("Player"))
         {
             questManager.SetQuestCompleted(questManager.GetCurrentQuest());
+            musicToChange.clip = changeMusicTo;
+            musicToChange.Play();
             Teleport(other.gameObject);
             if (gameObject.GetComponent<ExtraBase>() != null) // activate extra behavior if there is any
                 {

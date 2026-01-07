@@ -20,7 +20,7 @@ public class Paper : BaseUse
     {
         if (GetPlayer() != null)
         {
-            if (GetPlayer().isHolding)
+            if (GetPlayer().GetHeldItem().item != null)
             {
                 if (GetPlayer().GetHeldItem().item.id == 0)
                 {
