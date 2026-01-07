@@ -20,6 +20,12 @@ public class StartingSceneQuest : MonoBehaviour
             Debug.Log("Playing audio");
             a.Play();
         }
+
+        if (SceneManager.GetActiveScene().name == "SpaceEndScene")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         // if (questManager == null)
         // {
         //     Debug.LogError("QuestManager not set in scene.");
@@ -36,6 +42,8 @@ public class StartingSceneQuest : MonoBehaviour
         //     RuntimeQuest();
         // }
     }
+
+
 
     public void RuntimeQuest(int next)
     {

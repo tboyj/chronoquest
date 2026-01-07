@@ -110,6 +110,8 @@ public class Player : Character, Interaction, IAvailableActions
 }
     public void Update()
     {
+
+        
         // Debug.Log(manager?.GetCurrentQuest()?.name);
         if (heldItem != null && heldItem.item != null) {
             if (GetHeldItem().item.id == 11 && isHolding) // torch item id
@@ -177,6 +179,15 @@ public class Player : Character, Interaction, IAvailableActions
             inDialog = true;
             interactableNPC.inDialog = true;
             dialogPanel.SetActive(true);
+        }
+        if (SceneManager.GetSceneByName("SpaceEndScene").isLoaded || SceneManager.GetSceneByName("RealTitleScreen").isLoaded || gameObject.GetComponent<PauseScript>().isPaused == true  || gameObject.GetComponent<PauseScript>().isInventory == true)
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
+        } else
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+            UnityEngine.Cursor.visible = false;
         }
     }
 

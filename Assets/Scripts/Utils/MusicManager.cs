@@ -11,6 +11,7 @@ public class MusicManager : MonoBehaviour
     {
         
         pause = GetComponent<PauseScript>();
+        audio = GameObject.Find("SceneSong").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,20 +23,6 @@ public class MusicManager : MonoBehaviour
         } else if (!pause.isPaused && !audio.isPlaying)
         {
             audio.UnPause();
-        }
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (!other.CompareTag("NPC") && !other.CompareTag("Object")) {
-            if (other.CompareTag("MusicBox"))
-            {
-                Debug.Log("MusicBox");
-                audio = other.GetComponent<AudioSource>();
-                audio.loop = true;
-                if (!audio.isPlaying) {
-                    audio.Play();
-                }
-            }
         }
     }
 }

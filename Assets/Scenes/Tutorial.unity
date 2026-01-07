@@ -26678,7 +26678,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 701432267}
-  - component: {fileID: 701432268}
   m_Layer: 0
   m_Name: Middialoghold1
   m_TagString: Untagged
@@ -26701,20 +26700,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2072975162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &701432268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701432266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea6b1d34352b764e8f7c50cc2f8ef0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentQuest: {fileID: 0}
-  obj: {fileID: 0}
 --- !u!1 &701934488
 GameObject:
   m_ObjectHideFlags: 0
@@ -32982,7 +32967,7 @@ MonoBehaviour:
   playerInTrigger: 0
   instanceToWaitFor: {fileID: 950465422}
   instanceFromPlayer: {fileID: 0}
-  questRequired: 1
+  questRequired: 0
   affectedObject: {fileID: 824416521}
   pauseCheck: {fileID: 160479111}
 --- !u!135 &877478273
@@ -33112,7 +33097,7 @@ MonoBehaviour:
   playerInTrigger: 0
   instanceToWaitFor: {fileID: 950465422}
   instanceFromPlayer: {fileID: 0}
-  questRequired: 1
+  questRequired: 0
   affectedObject: {fileID: 510810963}
   pauseCheck: {fileID: 160479111}
 --- !u!135 &878311035
@@ -67007,36 +66992,14 @@ GameObject:
   - component: {fileID: 2034027207}
   - component: {fileID: 2034027206}
   - component: {fileID: 2034027205}
-  - component: {fileID: 2034027204}
   - component: {fileID: 2034027208}
   m_Layer: 13
-  m_Name: Cube
+  m_Name: SceneSong
   m_TagString: MusicBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &2034027204
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034027203}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2034027205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67112,11 +67075,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e69bc3d51d900a04d80aedff2353f670, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: b090be001a5bc6e4e9d222400c93a316, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.35
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -68274,11 +68237,11 @@ MonoBehaviour:
       a little nervous that we're in Egypt...
     characterName: Bossman
     midQuestActions:
-    - {fileID: 701432268}
+    - {fileID: 0}
   - dialogueText: But we're in Egypt.
     characterName: Bossman
     midQuestActions:
-    - {fileID: 701432268}
+    - {fileID: 0}
   - dialogueText: I can tell.
     characterName: Jim
     midQuestActions: []
@@ -76902,7 +76865,6 @@ SceneRoots:
   - {fileID: 824416521}
   - {fileID: 1746828278}
   - {fileID: 824254226}
-  - {fileID: 2034027207}
   - {fileID: 1008602697}
   - {fileID: 8517901156940651658}
   - {fileID: 2106814178}
@@ -76960,3 +76922,4 @@ SceneRoots:
   - {fileID: 376736104}
   - {fileID: 2055753005}
   - {fileID: 1083234330}
+  - {fileID: 2034027207}
