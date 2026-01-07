@@ -11,7 +11,8 @@ public class QuestDialog
     {
         foreach (MidQuestDialog a in midQuestActions)
         {
-            a.ActionMidQuest();
+            if (a != null)
+                a.ActionMidQuest();
         }
     }
 }

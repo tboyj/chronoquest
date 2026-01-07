@@ -5327,7 +5327,6 @@ GameObject:
   - component: {fileID: 160479128}
   - component: {fileID: 160479129}
   - component: {fileID: 160479130}
-  - component: {fileID: 160479131}
   m_Layer: 0
   m_Name: RealPlayer
   m_TagString: Player
@@ -5746,18 +5745,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &160479131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160479107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0055c3ba9ec6d2b4d9a618c705125c0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &164084589
 GameObject:
   m_ObjectHideFlags: 0
@@ -21348,6 +21335,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1764268154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &524785656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524785657}
+  m_Layer: 0
+  m_Name: tempobj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524785657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524785656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 701432267}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525068572
 GameObject:
   m_ObjectHideFlags: 0
@@ -26678,6 +26696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 701432267}
+  - component: {fileID: 701432268}
   m_Layer: 0
   m_Name: Middialoghold1
   m_TagString: Untagged
@@ -26697,9 +26716,24 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 524785657}
   m_Father: {fileID: 2072975162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &701432268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701432266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea6b1d34352b764e8f7c50cc2f8ef0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentQuest: {fileID: 2072975163}
+  obj: {fileID: 524785656}
 --- !u!1 &701934488
 GameObject:
   m_ObjectHideFlags: 0
