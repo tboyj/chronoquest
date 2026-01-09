@@ -15,6 +15,7 @@ public class PauseScript : MonoBehaviour
     public Sprite inventorySpriteWhileClosed;
     public GameObject inventoryButton;
     public bool isInventory = false;
+
     void Start()
     {
         

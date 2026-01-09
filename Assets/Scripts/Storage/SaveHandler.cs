@@ -184,8 +184,7 @@ public class SaveHandler : MonoBehaviour
                 }
             }
             
-            if (currentQuest != null)
-                data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
+            data.currentQuestId = CurrentQIDMonitor.Instance.GetCurrentQuestId();
             data.hasCompletedFirstQuest = questManager.hasCompletedFirstQuest;
         }
 

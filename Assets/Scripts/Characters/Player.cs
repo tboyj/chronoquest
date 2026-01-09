@@ -111,7 +111,10 @@ public class Player : Character, Interaction, IAvailableActions
     public void Update()
     {
 
-        
+        // if (CurrentQIDMonitor.Instance.GetCurrentQuestId() > 10)
+        // {
+            
+        // }
         // Debug.Log(manager?.GetCurrentQuest()?.name);
         if (heldItem != null && heldItem.item != null) {
             if (GetHeldItem().item.id == 11 && isHolding) // torch item id

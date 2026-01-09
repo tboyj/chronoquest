@@ -7,6 +7,8 @@ using TMPro;
 public class SuccessOrFailure : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Sprite imageSuccess;
+    public Sprite imageFailure;
     public Image background;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
@@ -39,7 +41,7 @@ public class SuccessOrFailure : MonoBehaviour
             if (finalTime < timeLimit)
             {
                 // Mission Success
-                background.color = successColor;
+                background.sprite = imageSuccess;
                 titleText.text = "Mission Successful";
                 descriptionText.text = $"You were able to save the universe. Now you can go back to your family...and maybe quit your job as Bossman's henchman.";
                 Debug.Log($"Mission Success! Time: {formattedTime}");
@@ -47,7 +49,7 @@ public class SuccessOrFailure : MonoBehaviour
             else
             {
                 // Mission Failed
-                background.color = failureColor;
+                background.sprite = imageFailure;
                 titleText.text = "Mission Failed";
                 descriptionText.text = $"You end up stuck in space floating around with Grainly floating about. You curse Bossman forever for not going with you...";
                 Debug.Log($"Mission Failed! Time: {formattedTime}");
