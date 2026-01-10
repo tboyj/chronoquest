@@ -17,7 +17,8 @@ public class SuccessOrFailure : MonoBehaviour
     public Color successColor = Color.green;
     public Color failureColor = Color.red;
     public float timeLimit = 600f; // 10 minutes in seconds
-
+    public AudioSource successAudio;
+    public AudioSource failureAudio;
     void Start()
     {
 
@@ -42,6 +43,7 @@ public class SuccessOrFailure : MonoBehaviour
             {
                 // Mission Success
                 background.sprite = imageSuccess;
+                successAudio.Play();
                 titleText.text = "Mission Successful";
                 descriptionText.text = $"You were able to save the universe. Now you can go back to your family...and maybe quit your job as Bossman's henchman.";
                 Debug.Log($"Mission Success! Time: {formattedTime}");
@@ -50,6 +52,7 @@ public class SuccessOrFailure : MonoBehaviour
             {
                 // Mission Failed
                 background.sprite = imageFailure;
+                failureAudio.Play();
                 titleText.text = "Mission Failed";
                 descriptionText.text = $"You end up stuck in space floating around with Grainly floating about. You curse Bossman forever for not going with you...";
                 Debug.Log($"Mission Failed! Time: {formattedTime}");
