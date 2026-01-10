@@ -14,7 +14,8 @@ public class BillboardSprite : MonoBehaviour
 
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        if (sprite == null)
+            sprite = GetComponent<SpriteRenderer>();
         spX = sprite.transform.rotation.eulerAngles.x;
         spY = sprite.transform.rotation.eulerAngles.y;
         spZ = sprite.transform.rotation.eulerAngles.z;
