@@ -421,7 +421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v1.0.2 Cleopatra
+  m_text: v1.0.3 Cleopatra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2171a6eb8aeb1f943a439e1246295f48, type: 2}
   m_sharedMaterial: {fileID: -2270767322209722060, guid: 2171a6eb8aeb1f943a439e1246295f48, type: 2}

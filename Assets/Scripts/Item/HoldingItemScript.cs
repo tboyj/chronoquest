@@ -11,9 +11,21 @@ public class HoldingItemScript : MonoBehaviour
 
     public void Awake()
     {
+
+    }
+/// <summary>
+/// Handles the enabling/disabling of the sprite images based on whether they are null or not.
+/// </summary>
+    public void Start()
+    {
+        if (spriteHolderImage.sprite != null)
+        {
+            SetSprite(spriteHolderImage.sprite);
+            
+        }
         
     }
-    public void Start()
+    public void Update()
     {
         if (spriteTopLeftImage == null)
         {

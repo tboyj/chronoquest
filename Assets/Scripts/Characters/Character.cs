@@ -12,8 +12,8 @@ public abstract class Character : MonoBehaviour
     // public Movement movement;
     protected Item itemTest;
     public bool inDialog { get; set; }
-    public int itemHeld = 0;
-    public bool isHolding = true;
+    public int itemHeld;
+    public bool isHolding;
     public HoldingItemScript holdingItemManager;
     public Animator animatorSetup;
     // Constructor

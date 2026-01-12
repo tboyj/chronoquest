@@ -56,8 +56,6 @@ public class SaveData
     public List<SerializableTodo> currentTodo = new List<SerializableTodo>();
     public int currentQuestId;
     public bool hasCompletedFirstQuest;
-    public int itemHeld;
-    public bool isHolding;
     public float timeInDay;
     public SerializableVector3 playerPosition = new SerializableVector3();
     public List<string> npcNames = new List<string>();
@@ -154,8 +152,6 @@ public class SaveHandler : MonoBehaviour
             data.inventoryItems.Add(new SerializableItem(item));
         }
         
-        data.itemHeld = player.itemHeld;
-        data.isHolding = player.isHolding;
 
 
         data.isInventorySetup = player.isInventorySetup;
@@ -280,8 +276,6 @@ public class SaveHandler : MonoBehaviour
         }
         
         inventory.SetInventory(loadedItems);
-        player.itemHeld = data.itemHeld;
-        player.isHolding = data.isHolding;
         inventory.SetRefresh(true);
         player.isInventorySetup = data.isInventorySetup;
         // Restore quests - FIXED to load by ID
@@ -514,8 +508,6 @@ public class SaveHandler : MonoBehaviour
             data.inventoryItems.Add(new SerializableItem(item));
         }
 
-        data.itemHeld = player.itemHeld;
-        data.isHolding = player.isHolding;
         data.isInventorySetup = player.isInventorySetup;
 
         QuestManager questManagerOld = player.GetComponent<QuestManager>();
@@ -734,4 +726,9 @@ public class SaveHandler : MonoBehaviour
         }
     }
 
+    public SaveData GetData()
+    {
+        return LoadGame();  
+        
+    }
 }
